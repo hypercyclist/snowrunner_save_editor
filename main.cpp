@@ -5,7 +5,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    EditorWindow w;
-    w.show();
+    EditorWindow saveEditor;
+    saveEditor.setWindowTitle("SnowRunner - Save editor");
+    saveEditor.show();
     return a.exec();
 }

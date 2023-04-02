@@ -6,17 +6,287 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1078</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>EditorWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <property name="styleSheet">
+   <string notr="true">QMainWidget { background-color: rgb(180, 180, 180); border: 1px solid black; }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="imageLabel">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resourses.qrc">:/picture.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="userProfileLayout">
+       <attribute name="title">
+        <string>Профиль пользователя</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0,0,0" columnstretch="1,1,3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="5" column="0" colspan="3">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2" rowspan="5">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="experienceCountLabel">
+          <property name="text">
+           <string> Опыт</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="moneyCountSpinBox">
+          <property name="maximum">
+           <number>2147483647</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="moneyCountLabel">
+          <property name="text">
+           <string> Количество денег</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="experienceCountSpinBox">
+          <property name="maximum">
+           <number>2147483647</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="rankLabel">
+          <property name="text">
+           <string> Уровень (ранк)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="rankSpinBox">
+          <property name="maximum">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="missions">
+       <attribute name="title">
+        <string>Миссии и контракты</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="missionsLayout">
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="regionFilterCombobox"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="regionFilterLabel">
+            <property name="text">
+             <string> Регион: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="mapFilterLabel">
+            <property name="text">
+             <string> Карта: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="mapFilterCombobox"/>
+          </item>
+          <item row="1" column="0" colspan="5">
+           <widget class="QTableWidget" name="completeTasksTable">
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>10</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>10</number>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Регион</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Карта</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Задание</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Статус</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="statistics">
+       <attribute name="title">
+        <string>Статистика</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1078</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget { background-color: rgb(180, 180, 180); border: 1px solid black; }</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QWidget { background-color: rgb(180, 180, 180); border: 1px solid black; }</string>
+   </property>
+  </widget>
+  <action name="menuOpen">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="menuSave">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resourses.qrc"/>
+ </resources>
  <connections/>
 </ui>
