@@ -9,11 +9,15 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Localization.cpp \
+    Tasks.cpp \
     main.cpp \
     EditorWindow.cpp
 
 HEADERS += \
     EditorWindow.h \
+    Localization.h \
+    Tasks.h \
     rapidjson/allocators.h \
     rapidjson/cursorstreamwrapper.h \
     rapidjson/document.h \

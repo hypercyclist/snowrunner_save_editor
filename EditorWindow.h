@@ -2,12 +2,12 @@
 #define EDITORWINDOW_H
 
 #include <QMainWindow>
-#include <QMap>
-#include "rapidjson/document.h"
+#include <rapidjson/document.h>
 
-QT_BEGIN_NAMESPACE
+class Localization;
+class Tasks;
+
 namespace Ui { class EditorWindow; }
-QT_END_NAMESPACE
 
 class EditorWindow : public QMainWindow
 {
@@ -23,12 +23,11 @@ private slots:
 
 private:
     Ui::EditorWindow *ui;
+    Localization* m_localization;
+    Tasks* m_tasks;
     rapidjson::Document jsonDocument;
     QString text;
 
-    enum class Language { RUSSIAN, ENGLISH };
-    QMap<Language, QMap<QString, QString>> m_localizations;
-    void loadLocalizations();
-    QString getLocalization(QString _code, Language _language);
+    void updateTasksTable();
 };
 #endif // EDITORWINDOW_H
