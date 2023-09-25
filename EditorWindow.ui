@@ -55,7 +55,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="userProfileLayout">
        <attribute name="title">
@@ -166,13 +166,30 @@
           <property name="topMargin">
            <number>9</number>
           </property>
-          <item row="0" column="3">
-           <widget class="QComboBox" name="mapFilterCombobox"/>
+          <item row="0" column="2">
+           <widget class="QLabel" name="mapFilterLabel">
+            <property name="text">
+             <string> Карта: </string>
+            </property>
+           </widget>
           </item>
           <item row="0" column="0">
            <widget class="QLabel" name="regionFilterLabel">
             <property name="text">
              <string> Регион: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="mapFilterCombobox"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="regionFilterCombobox"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="filterApplyButton">
+            <property name="text">
+             <string>Применить фильтр</string>
             </property>
            </widget>
           </item>
@@ -189,10 +206,14 @@
             </property>
            </spacer>
           </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="regionFilterCombobox"/>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="checkAllFilteredButton">
+            <property name="text">
+             <string>Отметить / Снять все отфильтрованные</string>
+            </property>
+           </widget>
           </item>
-          <item row="1" column="0" colspan="6">
+          <item row="1" column="0" colspan="7">
            <widget class="CompleteTasksTable" name="completeTasksTable">
             <attribute name="horizontalHeaderMinimumSectionSize">
              <number>10</number>
@@ -228,19 +249,19 @@
             </column>
            </widget>
           </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="mapFilterLabel">
-            <property name="text">
-             <string> Карта: </string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="filterApplyButton">
-            <property name="text">
-             <string>Применить фильтр</string>
-            </property>
-           </widget>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="upgrades">
+       <attribute name="title">
+        <string>Улучшения</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QGridLayout" name="upgradesLayout">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="upgradesTable"/>
           </item>
          </layout>
         </item>
@@ -261,7 +282,7 @@
      <x>0</x>
      <y>0</y>
      <width>1078</width>
-     <height>24</height>
+     <height>23</height>
     </rect>
    </property>
    <property name="styleSheet">

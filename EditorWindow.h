@@ -20,8 +20,6 @@ public:
 private slots:
     void on_menuOpen_triggered();
     void on_menuSave_triggered();
-    void filterMaps();
-    void updateTasksTable();
 
 private:
     Ui::EditorWindow *ui;

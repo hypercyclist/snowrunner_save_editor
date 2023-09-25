@@ -9,6 +9,9 @@
 #include "Tasks.h"
 #include <rapidjson/writer.h>
 
+#include <fstream>
+#include <iostream>
+
 EditorWindow::EditorWindow(QWidget *parent)
     : QMainWindow(parent),
     ui(new Ui::EditorWindow),
@@ -24,11 +27,24 @@ EditorWindow::EditorWindow(QWidget *parent)
     m_tasks = new Tasks();
     m_tasks->loadTasksData();
 
+    ui->completeTasksTable->setLocalization(m_localization);
+    ui->completeTasksTable->setTasks(m_tasks);
     ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
     ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
     ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
+    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
     ui->completeTasksTable->filterMaps();
     ui->completeTasksTable->updateTasksTable();
+
+    QString filename = QDir::currentPath() + "/localizations/initial.cache_block";
+    std::ifstream infile(filename.toStdString(), std::ifstream::in);
+    for (int i = 0; i < 10; i++)
+    {
+        unsigned int a;
+        infile >> std::hex >> a;
+        qDebug() << a;
+    }
+    infile.close();
 }
 
 EditorWindow::~EditorWindow()
@@ -45,14 +61,22 @@ void EditorWindow::on_menuOpen_triggered()
     file.close();
     jsonDocument.Parse(text.toUtf8());
 
-    rapidjson::Value& persistentProfileData =
-        jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"];
+    rapidjson::Value& sslValue = jsonDocument["CompleteSave"]["SslValue"];
+    rapidjson::Value& persistentProfileData = sslValue["persistentProfileData"];
 
     ui->moneyCountSpinBox->setValue(persistentProfileData["money"].GetInt());
     ui->rankSpinBox->setValue(persistentProfileData["rank"].GetInt());
     ui->experienceCountSpinBox->setValue(persistentProfileData["experience"].GetInt());
 
-    updateTasksTable();
+    QVector<QString> finishedObjs;
+    rapidjson::Value& finishedObjsArray = sslValue["finishedObjs"].GetArray();
+    for (unsigned int i = 0; i < finishedObjsArray.Size(); i++)
+    {
+        finishedObjs.push_back(finishedObjsArray[i].GetString());
+    }
+    ui->completeTasksTable->setCompleteFromVector(finishedObjs);
+    ui->completeTasksTable->updateTasksTable();
+
 
 //    connect(ui->moneyCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
 //    connect(ui->rankSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
@@ -67,6 +91,15 @@ void EditorWindow::on_menuSave_triggered()
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["money"] = ui->moneyCountSpinBox->value();
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["rank"] = ui->rankSpinBox->value();
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["experience"] = ui->experienceCountSpinBox->value();
+    rapidjson::Value finishedObjsArray;
+    finishedObjsArray.SetArray();
+    for (const QString& taskCode : ui->completeTasksTable->completedTasks())
+    {
+        rapidjson::Value strVal;
+        strVal.SetString(taskCode.toStdString().c_str(), taskCode.length(), jsonDocument.GetAllocator());
+        finishedObjsArray.PushBack(strVal, jsonDocument.GetAllocator());
+    }
+    jsonDocument["CompleteSave"]["SslValue"]["finishedObjs"] = finishedObjsArray;
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);

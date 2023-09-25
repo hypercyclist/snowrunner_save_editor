@@ -1,11 +1,31 @@
 #include "CompleteTasksTable.h"
 #include <QCheckBox>
+#include <Tasks.h>
+#include <Localization.h>
+#include <QHBoxLayout>
+#include <QHeaderView>
 
-CompleteTasksTable::CompleteTasksTable() :
+CompleteTasksTable::CompleteTasksTable(QWidget* _parent) :
+    QTableWidget(_parent),
+    m_localization(nullptr),
+    m_tasks(nullptr),
     m_regionFilterCombobox(nullptr),
     m_mapFilterCombobox(nullptr),
-    m_filterApplyButton(nullptr)
+    m_filterApplyButton(nullptr),
+    m_checkAllFilteredButton(nullptr),
+    m_currentFiltredTasks(),
+    m_checkedTasks()
 { }
+
+void CompleteTasksTable::setLocalization(Localization* _localization)
+{
+    m_localization = _localization;
+}
+
+void CompleteTasksTable::setTasks(Tasks* _tasks)
+{
+    m_tasks = _tasks;
+}
 
 void CompleteTasksTable::setRegionFilterCombobox(QComboBox* _combobox)
 {
@@ -26,6 +46,13 @@ void CompleteTasksTable::setFilterApplyButton(QPushButton* _button)
     m_filterApplyButton = _button;
     connect(m_filterApplyButton, &QPushButton::clicked, this,
         &CompleteTasksTable::updateTasksTable);
+}
+
+void CompleteTasksTable::setCheckAllFilteredButton(QPushButton* _button)
+{
+    m_checkAllFilteredButton = _button;
+    connect(m_checkAllFilteredButton, &QPushButton::clicked, this,
+        &CompleteTasksTable::checkUncheckAllFiltered);
 }
 
 QString cutLongCountryName(QString _countryName)
@@ -94,9 +121,10 @@ void CompleteTasksTable::filterMaps()
 
 void CompleteTasksTable::updateTasksTable()
 {
-    ui->completeTasksTable->setRowCount(0);
+    setRowCount(0);
+    m_currentFiltredTasks.clear();
 
-    QAbstractItemModel* tasksTableModel = ui->completeTasksTable->model();
+    QAbstractItemModel* tasksTableModel = model();
 
     QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
 
@@ -127,10 +155,12 @@ void CompleteTasksTable::updateTasksTable()
                 QString  currentMapFilter = m_mapFilterCombobox->currentText();
                 if (currentMapFilter == "Все" || map == currentMapFilter)
                 {
-                    for (QString taskCode : mapsIt.value())
+                    for (const QString& taskCode : mapsIt.value())
                     {
-                        int rowIndex = ui->completeTasksTable->rowCount();
-                        ui->completeTasksTable->insertRow(rowIndex);
+                        int rowIndex = rowCount();
+                        insertRow(rowIndex);
+
+                        m_currentFiltredTasks.push_back(taskCode);
 
                         QString task = m_localization->getLocalization(taskCode);
 
@@ -144,13 +174,22 @@ void CompleteTasksTable::updateTasksTable()
                         tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), task);
 
                         QCheckBox* statusCheckBox = new QCheckBox();
+                        if (m_checkedTasks.contains(taskCode))
+                        {
+                            statusCheckBox->setChecked(m_checkedTasks[taskCode]);
+                        }
+                        connect(statusCheckBox, &QCheckBox::stateChanged, this, [=](bool _state)
+                        {
+                            m_checkedTasks.insert(taskCode, _state);
+                        });
+
                         QWidget* statusContainer = new QWidget();
                         QHBoxLayout* statusContainerLayout = new QHBoxLayout();
                         statusContainerLayout->setContentsMargins(0, 0, 0, 0);
                         statusContainerLayout->setAlignment( Qt::AlignCenter );
                         statusContainerLayout->addWidget(statusCheckBox);
                         statusContainer->setLayout(statusContainerLayout);
-                        ui->completeTasksTable->setCellWidget(rowIndex, 3, statusContainer);
+                        setCellWidget(rowIndex, 3, statusContainer);
                     }
                 }
                 mapsIt++;
@@ -158,9 +197,58 @@ void CompleteTasksTable::updateTasksTable()
         }
         regionIt++;
     }
-    ui->completeTasksTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
-    ui->completeTasksTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
-    ui->completeTasksTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
-    ui->completeTasksTable->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
-    ui->completeTasksTable->horizontalHeader()->resizeSection(3, 100);
+    horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
+    horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
+    horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
+    horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
+    horizontalHeader()->resizeSection(3, 100);
+}
+
+void CompleteTasksTable::setCompleteFromVector(QVector<QString> _completedTasks)
+{
+    for (const QString& taskCode : _completedTasks)
+    {
+        m_checkedTasks.insert(taskCode, true);
+    }
+}
+
+QVector<QString> CompleteTasksTable::completedTasks()
+{
+    QVector<QString> completedTasks;
+    auto tasksIt = m_checkedTasks.begin();
+    while (tasksIt != m_checkedTasks.end())
+    {
+        if (tasksIt.value())
+        {
+            completedTasks.push_back(tasksIt.key());
+        }
+        tasksIt++;
+    }
+    return completedTasks;
+}
+
+void CompleteTasksTable::checkUncheckAllFiltered()
+{
+    // If no one checked - check all. If one checked - uncheck all.
+    bool checkedAnyone = false;
+    for (int i = 0; i < rowCount(); i++)
+    {
+        if (static_cast<QCheckBox*>(cellWidget(i, 3)->layout()->itemAt(0)->
+            widget())->isChecked())
+        {
+            checkedAnyone = true;
+        }
+    }
+    for (int i = 0; i < rowCount(); i++)
+    {
+        static_cast<QCheckBox*>(cellWidget(i, 3)->layout()->itemAt(0)->
+            widget())->setChecked(!checkedAnyone);
+    }
+    for (int i = 0; i < rowCount(); i++)
+    {
+        QWidget* statusContainer = cellWidget(i, 3);
+        m_checkedTasks.insert(m_currentFiltredTasks[i],
+            static_cast<QCheckBox*>(statusContainer->layout()->itemAt(0)->
+                widget())->isChecked());
+    }
 }
