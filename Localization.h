@@ -15,6 +15,7 @@ public:
     QString getLocalization(QString _code, Language _language = Language::DEFAULT);
 private:
     QMap<Language, QMap<QString, QString>> m_localizations;
+    QMap<Language, QMap<QString, QString>> m_localizationsCache;
     Language m_defaultLanguage;
 };
 

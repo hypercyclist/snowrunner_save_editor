@@ -2,6 +2,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDir>
+#include <iostream>
 
 Localization::Localization() :
     m_localizations(),
@@ -37,7 +38,17 @@ void Localization::setDefaultLanguage(Language _language)
 QString Localization::getLocalization(QString _code, Language _language)
 {
     _language = _language == Language::DEFAULT ? m_defaultLanguage : _language;
-    QString result = m_localizations.value(_language).value(_code.toLower(),
-        "No translation");
+
+    QString result = m_localizationsCache.value(_language).value(_code.toLower(),
+        "---");
+    if (result == "---")
+    {
+        result = m_localizations.value(_language).value(_code.toLower(),
+            "---");
+        if (result != "---")
+        {
+            m_localizationsCache[_language].insert(_code.toLower(), result);
+        }
+    }
     return result;
 }

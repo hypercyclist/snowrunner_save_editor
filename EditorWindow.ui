@@ -55,7 +55,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="userProfileLayout">
        <attribute name="title">
@@ -166,8 +166,8 @@
           <property name="topMargin">
            <number>9</number>
           </property>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="regionFilterCombobox"/>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="mapFilterCombobox"/>
           </item>
           <item row="0" column="0">
            <widget class="QLabel" name="regionFilterLabel">
@@ -176,23 +176,29 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="mapFilterLabel">
-            <property name="text">
-             <string> Карта: </string>
+          <item row="0" column="5">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
-           </widget>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
-          <item row="0" column="3">
-           <widget class="QComboBox" name="mapFilterCombobox"/>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="regionFilterCombobox"/>
           </item>
-          <item row="1" column="0" colspan="5">
-           <widget class="QTableWidget" name="completeTasksTable">
+          <item row="1" column="0" colspan="6">
+           <widget class="CompleteTasksTable" name="completeTasksTable">
             <attribute name="horizontalHeaderMinimumSectionSize">
              <number>10</number>
             </attribute>
             <attribute name="horizontalHeaderStretchLastSection">
-             <bool>true</bool>
+             <bool>false</bool>
             </attribute>
             <attribute name="verticalHeaderVisible">
              <bool>false</bool>
@@ -222,18 +228,19 @@
             </column>
            </widget>
           </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="mapFilterLabel">
+            <property name="text">
+             <string> Карта: </string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="4">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+           <widget class="QPushButton" name="filterApplyButton">
+            <property name="text">
+             <string>Применить фильтр</string>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+           </widget>
           </item>
          </layout>
         </item>
@@ -254,7 +261,7 @@
      <x>0</x>
      <y>0</y>
      <width>1078</width>
-     <height>23</height>
+     <height>24</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -285,6 +292,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CompleteTasksTable</class>
+   <extends>QTableWidget</extends>
+   <header>CompleteTasksTable.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resourses.qrc"/>
  </resources>
