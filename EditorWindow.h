@@ -4,8 +4,7 @@
 #include <QMainWindow>
 #include <rapidjson/document.h>
 
-class Localization;
-class Tasks;
+class Database;
 
 namespace Ui { class EditorWindow; }
 
@@ -23,8 +22,7 @@ private slots:
 
 private:
     Ui::EditorWindow *ui;
-    Localization* m_localization;
-    Tasks* m_tasks;
+    Database* m_database;
     rapidjson::Document jsonDocument;
     QString text;
 };

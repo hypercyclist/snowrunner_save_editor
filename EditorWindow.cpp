@@ -6,7 +6,7 @@
 #include <QFileDialog>
 #include <QAbstractItemModel>
 #include "Localization.h"
-#include "Tasks.h"
+#include "Database.h"
 #include <rapidjson/writer.h>
 
 #include <fstream>
@@ -15,36 +15,23 @@
 EditorWindow::EditorWindow(QWidget *parent)
     : QMainWindow(parent),
     ui(new Ui::EditorWindow),
-    m_localization(nullptr),
-    m_tasks(nullptr),
+    m_database(nullptr),
     text("")
 {
     ui->setupUi(this);
-    m_localization = new Localization();
-    m_localization->loadLocalizations();
-    m_localization->setDefaultLanguage(Language::RUSSIAN);
 
-    m_tasks = new Tasks();
-    m_tasks->loadTasksData();
+    m_database = new Database();
+    m_database->createDatabase();
+    m_database->loadDatabase();
 
-    ui->completeTasksTable->setLocalization(m_localization);
-    ui->completeTasksTable->setTasks(m_tasks);
-    ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
-    ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
-    ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
-    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
-    ui->completeTasksTable->filterMaps();
-    ui->completeTasksTable->updateTasksTable();
-
-    QString filename = QDir::currentPath() + "/localizations/initial.cache_block";
-    std::ifstream infile(filename.toStdString(), std::ifstream::in);
-    for (int i = 0; i < 10; i++)
-    {
-        unsigned int a;
-        infile >> std::hex >> a;
-        qDebug() << a;
-    }
-    infile.close();
+//    ui->completeTasksTable->setLocalization(m_localization);
+//    ui->completeTasksTable->setTasks();
+//    ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
+//    ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
+//    ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
+//    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
+//    ui->completeTasksTable->filterMaps();
+//    ui->completeTasksTable->updateTasksTable();
 }
 
 EditorWindow::~EditorWindow()

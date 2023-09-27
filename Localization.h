@@ -1,10 +1,10 @@
 #ifndef LOCALIZATION_H
 #define LOCALIZATION_H
 
-#include <QString>
-#include <QMap>
+#include <string>
+#include <map>
 
-enum class Language { RUSSIAN, ENGLISH, DEFAULT };
+enum class Language { RUSSIAN, ENGLISH };
 
 class Localization
 {
@@ -12,10 +12,12 @@ public:
     Localization();
     void loadLocalizations();
     void setDefaultLanguage(Language _language);
-    QString getLocalization(QString _code, Language _language = Language::DEFAULT);
+    std::string getLocalization(std::string _code);
+    std::string getLocalization(std::string _code, Language _language);
+    Language defaultLanguage();
 private:
-    QMap<Language, QMap<QString, QString>> m_localizations;
-    QMap<Language, QMap<QString, QString>> m_localizationsCache;
+    std::map<Language, std::map<std::string, std::string>> m_localizations;
+    std::map<Language, std::map<std::string, std::string>> m_localizationsCache;
     Language m_defaultLanguage;
 };
 

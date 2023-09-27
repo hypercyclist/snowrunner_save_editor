@@ -1,6 +1,5 @@
 #include "CompleteTasksTable.h"
 #include <QCheckBox>
-#include <Tasks.h>
 #include <Localization.h>
 #include <QHBoxLayout>
 #include <QHeaderView>
@@ -55,153 +54,135 @@ void CompleteTasksTable::setCheckAllFilteredButton(QPushButton* _button)
         &CompleteTasksTable::checkUncheckAllFiltered);
 }
 
-QString cutLongCountryName(QString _countryName)
-{
-    if (_countryName.contains("Российская Федерация", Qt::CaseInsensitive))
-    {
-        _countryName.replace("Российская Федерация", "РФ", Qt::CaseInsensitive);
-    }
-    return _countryName;
-}
-
-QString cutSlash(QString _string)
-{
-    if (_string.contains("\\"))
-    {
-        _string.remove("\\");
-    }
-    return _string;
-}
-
 void CompleteTasksTable::filterMaps()
 {
-    if (m_regionFilterCombobox->findText("Все") == -1)
-        m_regionFilterCombobox->addItem("Все");
+//    if (m_regionFilterCombobox->findText("Все") == -1)
+//        m_regionFilterCombobox->addItem("Все");
 
-    m_mapFilterCombobox->clear();
+//    m_mapFilterCombobox->clear();
 
-    if (m_mapFilterCombobox->findText("Все") == -1)
-        m_mapFilterCombobox->addItem("Все");
+//    if (m_mapFilterCombobox->findText("Все") == -1)
+//        m_mapFilterCombobox->addItem("Все");
 
-    QString currentRegionFilter = m_regionFilterCombobox->currentText();
+//    QString currentRegionFilter = m_regionFilterCombobox->currentText();
 
-    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
-    auto regionIt = tasks.begin();
-    while(regionIt != tasks.end())
-    {
-        QString region = m_localization->getLocalization(regionIt.key());
-        region = cutLongCountryName(region);
+//    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
+//    auto regionIt = tasks.begin();
+//    while(regionIt != tasks.end())
+//    {
+//        QString region = m_localization->getLocalization(regionIt.key());
+//        region = cutLongCountryName(region);
 
-        if (m_regionFilterCombobox->findText(region) == -1)
-            m_regionFilterCombobox->addItem(region);
+//        if (m_regionFilterCombobox->findText(region) == -1)
+//            m_regionFilterCombobox->addItem(region);
 
-        if (currentRegionFilter == "Все" || region == currentRegionFilter)
-        {
-            QMap<QString, QVector<QString>>& maps = regionIt.value();
-            auto mapsIt = maps.begin();
-            while (mapsIt != maps.end())
-            {
-                QString mapCode = mapsIt.key();
-                QString map = m_localization->getLocalization(mapCode + "_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization(mapCode + "_NEW_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization("LEVEL_" + mapCode);
+//        if (currentRegionFilter == "Все" || region == currentRegionFilter)
+//        {
+//            QMap<QString, QVector<QString>>& maps = regionIt.value();
+//            auto mapsIt = maps.begin();
+//            while (mapsIt != maps.end())
+//            {
+//                QString mapCode = mapsIt.key();
+//                QString map = m_localization->getLocalization(mapCode + "_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization(mapCode + "_NEW_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization("LEVEL_" + mapCode);
 
-                map = cutSlash(map);
-                m_mapFilterCombobox->addItem(map);
-                mapsIt++;
-            }
-        }
-        regionIt++;
-    }
+//                map = cutSlash(map);
+//                m_mapFilterCombobox->addItem(map);
+//                mapsIt++;
+//            }
+//        }
+//        regionIt++;
+//    }
 }
 
 void CompleteTasksTable::updateTasksTable()
 {
-    setRowCount(0);
-    m_currentFiltredTasks.clear();
+//    setRowCount(0);
+//    m_currentFiltredTasks.clear();
 
-    QAbstractItemModel* tasksTableModel = model();
+//    QAbstractItemModel* tasksTableModel = model();
 
-    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
+//    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
 
-    auto regionIt = tasks.begin();
-    while(regionIt != tasks.end())
-    {
-        QString region = m_localization->getLocalization(regionIt.key());
-        region = cutLongCountryName(region);
+//    auto regionIt = tasks.begin();
+//    while(regionIt != tasks.end())
+//    {
+//        QString region = m_localization->getLocalization(regionIt.key());
+//        region = cutLongCountryName(region);
 
-        QString currentRegionFilter = m_regionFilterCombobox->currentText();
-        if (currentRegionFilter == "Все" || region == m_regionFilterCombobox->currentText())
-        {
-            QMap<QString, QVector<QString>>& maps = regionIt.value();
-            auto mapsIt = maps.begin();
-            while (mapsIt != maps.end())
-            {
-                QString mapCode = mapsIt.key();
-                QString map = m_localization->getLocalization(mapCode + "_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization(mapCode + "_NEW_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
-                if (map == "---")
-                    map = m_localization->getLocalization("LEVEL_" + mapCode);
+//        QString currentRegionFilter = m_regionFilterCombobox->currentText();
+//        if (currentRegionFilter == "Все" || region == m_regionFilterCombobox->currentText())
+//        {
+//            QMap<QString, QVector<QString>>& maps = regionIt.value();
+//            auto mapsIt = maps.begin();
+//            while (mapsIt != maps.end())
+//            {
+//                QString mapCode = mapsIt.key();
+//                QString map = m_localization->getLocalization(mapCode + "_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization(mapCode + "_NEW_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
+//                if (map == "---")
+//                    map = m_localization->getLocalization("LEVEL_" + mapCode);
 
-                map = cutSlash(map);
+//                map = cutSlash(map);
 
-                QString  currentMapFilter = m_mapFilterCombobox->currentText();
-                if (currentMapFilter == "Все" || map == currentMapFilter)
-                {
-                    for (const QString& taskCode : mapsIt.value())
-                    {
-                        int rowIndex = rowCount();
-                        insertRow(rowIndex);
+//                QString  currentMapFilter = m_mapFilterCombobox->currentText();
+//                if (currentMapFilter == "Все" || map == currentMapFilter)
+//                {
+//                    for (const QString& taskCode : mapsIt.value())
+//                    {
+//                        int rowIndex = rowCount();
+//                        insertRow(rowIndex);
 
-                        m_currentFiltredTasks.push_back(taskCode);
+//                        m_currentFiltredTasks.push_back(taskCode);
 
-                        QString task = m_localization->getLocalization(taskCode);
+//                        QString task = m_localization->getLocalization(taskCode);
 
-                        if (taskCode.right(4) == "_OBJ")
-                        {
-                            task += " (Контракт)";
-                        }
+//                        if (taskCode.right(4) == "_OBJ")
+//                        {
+//                            task += " (Контракт)";
+//                        }
 
-                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 0), region);
-                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), map);
-                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), task);
+//                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 0), region);
+//                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), map);
+//                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), task);
 
-                        QCheckBox* statusCheckBox = new QCheckBox();
-                        if (m_checkedTasks.contains(taskCode))
-                        {
-                            statusCheckBox->setChecked(m_checkedTasks[taskCode]);
-                        }
-                        connect(statusCheckBox, &QCheckBox::stateChanged, this, [=](bool _state)
-                        {
-                            m_checkedTasks.insert(taskCode, _state);
-                        });
+//                        QCheckBox* statusCheckBox = new QCheckBox();
+//                        if (m_checkedTasks.contains(taskCode))
+//                        {
+//                            statusCheckBox->setChecked(m_checkedTasks[taskCode]);
+//                        }
+//                        connect(statusCheckBox, &QCheckBox::stateChanged, this, [=](bool _state)
+//                        {
+//                            m_checkedTasks.insert(taskCode, _state);
+//                        });
 
-                        QWidget* statusContainer = new QWidget();
-                        QHBoxLayout* statusContainerLayout = new QHBoxLayout();
-                        statusContainerLayout->setContentsMargins(0, 0, 0, 0);
-                        statusContainerLayout->setAlignment( Qt::AlignCenter );
-                        statusContainerLayout->addWidget(statusCheckBox);
-                        statusContainer->setLayout(statusContainerLayout);
-                        setCellWidget(rowIndex, 3, statusContainer);
-                    }
-                }
-                mapsIt++;
-            }
-        }
-        regionIt++;
-    }
-    horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
-    horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
-    horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
-    horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
-    horizontalHeader()->resizeSection(3, 100);
+//                        QWidget* statusContainer = new QWidget();
+//                        QHBoxLayout* statusContainerLayout = new QHBoxLayout();
+//                        statusContainerLayout->setContentsMargins(0, 0, 0, 0);
+//                        statusContainerLayout->setAlignment( Qt::AlignCenter );
+//                        statusContainerLayout->addWidget(statusCheckBox);
+//                        statusContainer->setLayout(statusContainerLayout);
+//                        setCellWidget(rowIndex, 3, statusContainer);
+//                    }
+//                }
+//                mapsIt++;
+//            }
+//        }
+//        regionIt++;
+//    }
+//    horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
+//    horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
+//    horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
+//    horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
+//    horizontalHeader()->resizeSection(3, 100);
 }
 
 void CompleteTasksTable::setCompleteFromVector(QVector<QString> _completedTasks)

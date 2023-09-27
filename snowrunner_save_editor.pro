@@ -10,16 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     CompleteTasksTable.cpp \
+    Database.cpp \
     Localization.cpp \
-    Tasks.cpp \
+    Utils.cpp \
     main.cpp \
     EditorWindow.cpp
 
 HEADERS += \
     CompleteTasksTable.h \
+    Database.h \
     EditorWindow.h \
     Localization.h \
-    Tasks.h \
+    Utils.h \
     rapidjson/allocators.h \
     rapidjson/cursorstreamwrapper.h \
     rapidjson/document.h \
