@@ -1,27 +1,17 @@
 #include "Database.h"
-#include <QFile>
-#include <QSet>
-#include "rapidjson/document.h"
-#include "rapidjson/writer.h"
-#include "Localization.h"
-#include <QDir>
-
 #include <QDir>
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
-
 #include "Localization.h"
-#include <QString>
 #include "Utils.h"
-
 #include "GameAtlas.h"
 #include "Region.h"
 #include "Map.h"
 #include "Task.h"
+#include "Upgrade.h"
 
 Database::Database() :
     m_localization(nullptr),
@@ -37,14 +27,19 @@ Database::Database() :
 
 void Database::createDatabase()
 {
+    std::string currentPath = QDir::currentPath().toStdString();
+    std::string databasePath = currentPath + "/database/database.json";
+
     // Parse file. Search regions, maps, tasks. Add transcription.
-    loadRegionsMapsTasksData(QDir::currentPath().toStdString() +
-        "/database/generator_materials/tasks.json");
+    loadRegionsMapsTasksData(
+        currentPath + "/database/generator_materials/tasks.json");
 
-    saveRegionsMapsTasksData(QDir::currentPath().toStdString() +
-        "/database/database.json");
+    loadUpgradesData(
+        currentPath + "/database/generator_materials/CompleteSave.cfg",
+        currentPath + "/database/generator_materials/initial.cache_block");
 
-
+    saveRegionsMapsTasksData(databasePath);
+    saveLocalizationCache(databasePath);
 
     // Parse save for upgrades list.
     // Parse initial.cache_block for upgrades middle code.
@@ -115,14 +110,13 @@ void Database::loadRegionsMapsTasksData(std::string _filename)
             region->addMap(map);
         }
 
-        std::map<std::string, std::string> taskInfo;
+        Task* task = new Task(taskCode);
 
         // Тут нужно загрузить для всех языков.
-        std::string taskRussianTranslate = m_localization->getLocalization(taskCode);
-        taskInfo.insert(std::pair<std::string, std::string>("rus", taskRussianTranslate));
+        std::string taskTranslate = m_localization->getLocalization(taskCode);
+        task->setName(Language::RUSSIAN, taskTranslate);
 
-        m_tasks[regionCode][mapCode].insert(std::pair<std::string,
-            std::map<std::string, std::string>>(taskCode, taskInfo));
+        map->addTask(task);
     }
 }
 
@@ -144,66 +138,45 @@ void Database::saveRegionsMapsTasksData(std::string _filename)
         databaseJsonDocument.SetObject();
     }
 
-    rapidjson::Value regionsArray;
-    regionsArray.SetObject();
-    for (auto regionIt = m_regions.begin(); regionIt != m_regions.end(); regionIt++)
+    rapidjson::Value gameAtlas;
+    gameAtlas.SetObject();
+    for (const auto& regionPair : m_gameAtlas->regions())
     {
+        Region* region = regionPair.second;
+
         rapidjson::Value regionObject;
         regionObject.SetObject();
 
         rapidjson::Value regionCode;
-        regionCode.SetString(regionIt->first.c_str(), regionIt->first.length(), allocator);
+        regionCode.SetString(region->code().c_str(), region->code().length(), allocator);
 
-        for (std::pair<std::string, std::string> properties : regionIt->second)
+        for (const auto& mapPair : region->maps())
         {
-            rapidjson::Value propertyName;
-            propertyName.SetString(properties.first.c_str(), properties.first.length(), allocator);
+            Map* map = mapPair.second;
 
-            rapidjson::Value propertyValue;
-            propertyValue.SetString(properties.second.c_str(), properties.second.length(), allocator);
-
-            regionObject.AddMember(propertyName, propertyValue, allocator);
-        }
-
-        regionsArray.AddMember(regionCode, regionObject, allocator);
-
-    }
-    databaseJsonDocument.AddMember("regions", regionsArray, allocator);
-
-    rapidjson::Value mapsArray;
-    mapsArray.SetObject();
-    for (auto regionIt = m_maps.begin(); regionIt != m_maps.end(); regionIt++)
-    {
-        rapidjson::Value regionObject;
-        regionObject.SetObject();
-
-        rapidjson::Value regionCode;
-        regionCode.SetString(regionIt->first.c_str(), regionIt->first.length(), allocator);
-
-        for (auto mapsIt = m_maps[regionIt->first].begin(); mapsIt != m_maps[regionIt->first].end(); mapsIt++)
-        {
             rapidjson::Value mapObject;
             mapObject.SetObject();
 
             rapidjson::Value mapCode;
-            mapCode.SetString(mapsIt->first.c_str(), mapsIt->first.length(), allocator);
+            mapCode.SetString(map->code().c_str(), map->code().length(), allocator);
 
-            for (std::pair<std::string, std::string> properties : mapsIt->second)
+            for (const auto& taskPair : map->tasks())
             {
-                rapidjson::Value propertyName;
-                propertyName.SetString(properties.first.c_str(), properties.first.length(), allocator);
+                Task* task = taskPair.second;
 
-                rapidjson::Value propertyValue;
-                propertyValue.SetString(properties.second.c_str(), properties.second.length(), allocator);
+                rapidjson::Value taskObject;
+                taskObject.SetObject();
 
-                mapObject.AddMember(propertyName, propertyValue, allocator);
+                rapidjson::Value taskCode;
+                taskCode.SetString(task->code().c_str(), task->code().length(), allocator);
+
+                mapObject.AddMember(taskCode, taskObject, allocator);
             }
-
             regionObject.AddMember(mapCode, mapObject, allocator);
         }
-        mapsArray.AddMember(regionCode, regionObject, allocator);
+        gameAtlas.AddMember(regionCode, regionObject, allocator);
     }
-    databaseJsonDocument.AddMember("maps", mapsArray, allocator);
+    databaseJsonDocument.AddMember("GameAtlas", gameAtlas, allocator);
 
     rapidjson::StringBuffer writeBuffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(writeBuffer);
@@ -214,58 +187,104 @@ void Database::saveRegionsMapsTasksData(std::string _filename)
     writeStream.close();
 }
 
-std::map<std::string, std::map<std::string, std::map<std::string,
-    std::map<std::string, std::string> > > >& Database::tasks()
+void Database::saveLocalizationCache(std::string _filename)
 {
-    return m_tasks;
+    std::ifstream readStream(_filename);
+    std::stringstream readBuffer;
+    readBuffer << readStream.rdbuf();
+    readStream.close();
+    std::string databaseText = readBuffer.str();
+
+    rapidjson::Document databaseJsonDocument;
+    databaseJsonDocument.Parse(databaseText.c_str());
+    auto allocator = databaseJsonDocument.GetAllocator();
+
+    rapidjson::Value localization;
+    localization.SetObject();
+
+    for (const auto& languagePair : m_localization->getLocalizationCache())
+    {
+        rapidjson::Value languageObject;
+        languageObject.SetObject();
+
+        std::string languageCode = m_localization->languageTextName(languagePair.first);
+        rapidjson::Value languageCodeValue;
+        languageCodeValue.SetString(languageCode.c_str(), languageCode.length(), allocator);
+
+        for (const auto& wordPair : languagePair.second)
+        {
+            rapidjson::Value wordString;
+            wordString.SetString(wordPair.second.c_str(), wordPair.second.length(), allocator);
+
+            rapidjson::Value wordCode;
+            wordCode.SetString(wordPair.first.c_str(), wordPair.first.length(), allocator);
+
+            languageObject.AddMember(wordCode, wordString, allocator);
+
+        }
+        localization.AddMember(languageCodeValue, languageObject, allocator);
+    }
+    databaseJsonDocument.AddMember("Localization", localization, allocator);
+
+    rapidjson::StringBuffer writeBuffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(writeBuffer);
+    databaseJsonDocument.Accept(writer);
+
+    std::ofstream writeStream(_filename);
+    writeStream << writeBuffer.GetString();
+    writeStream.close();
 }
 
-void Database::loadUpgradesData()
+void Database::loadUpgradesData(std::string _saveFileName,
+    std::string _initialCacheBlockFileName)
 {
     // Read initial.cache_block.
-    std::ifstream readStream(QDir::currentPath().toStdString() +
-        "/database/initial.cache_block", std::ios::binary);
+    std::ifstream readStream(_initialCacheBlockFileName, std::ios::binary);
     std::stringstream buffer;
     buffer << readStream.rdbuf();
     readStream.close();
-    std::string initial_cache_block_std = buffer.str();
+    std::string cacheFile = buffer.str();
 
     // Read upgrades.json.
-    QFile file(QDir::currentPath() + "/jsons/upgrades.json");
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    QString text = file.readAll();
-    file.close();
-    rapidjson::Document jsonDocument;
-    jsonDocument.Parse(text.toUtf8());
+    readStream.open(_saveFileName);
+    buffer.str(std::string());
+    buffer << readStream.rdbuf();
+    readStream.close();
+    std::string saveFile = buffer.str();
 
-    rapidjson::Value& persistentProfileData = jsonDocument["upgradesGiverData"];
-    auto array = persistentProfileData.GetArray();
-    for (int i = 0; i < array.Size(); i++)
+    rapidjson::Document jsonDocument;
+    jsonDocument.Parse(saveFile.c_str());
+
+    rapidjson::Value& ppdObject =
+        jsonDocument["CompleteSave"]["SslValue"]["upgradesGiverData"]; // GetObject().
+
+    for (rapidjson::SizeType i = 0; i < ppdObject.MemberCount(); i++)
     {
-        auto levelArray = array[i].GetArray();
-        for (int j = 0; j < levelArray.Size(); j++)
+        for (auto upgradesIt = ppdObject[i].MemberBegin(); upgradesIt != ppdObject[i].MemberEnd(); upgradesIt++)
         {
-            auto indexOfUpgrade = initial_cache_block_std.find(levelArray[j].GetString());
+            std::string upgradeCode = upgradesIt->name.GetString();
+            Map* map = m_gameAtlas->region(upgradeCode.substr(0, 5))->map(upgradeCode.substr(0, 8));
+
+            Upgrade* upgrade = new Upgrade(upgradeCode);
+
+            auto indexOfUpgrade = cacheFile.find(upgradeCode);
             if (indexOfUpgrade != std::string::npos)
             {
-                auto indexOfUpgradeTranslateStart = initial_cache_block_std.find("[", indexOfUpgrade);
-                auto indexOfUpgradeTranslateEnd = initial_cache_block_std.find("]", indexOfUpgradeTranslateStart);
-                std::string upgradeTranslation = initial_cache_block_std.substr(
-                    indexOfUpgradeTranslateStart, indexOfUpgradeTranslateEnd - indexOfUpgradeTranslateStart);
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), ' '), upgradeTranslation.end());
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), '\r'), upgradeTranslation.end());
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), '\n'), upgradeTranslation.end());
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), '['), upgradeTranslation.end());
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), ']'), upgradeTranslation.end());
-                upgradeTranslation.erase(std::remove(upgradeTranslation.begin(), upgradeTranslation.end(), '\"'), upgradeTranslation.end());
-//                std::cout << m_localization->getLocalization(QString::fromStdString(upgradeTranslation)).toStdString() << std::endl;
-                std::cout << levelArray[j].GetString() << " : " << upgradeTranslation << std::endl;
+                auto indexOfUpgradeMiddleCodeStart = cacheFile.find("[", indexOfUpgrade);
+                auto indexOfUpgradeMiddleCodeEnd = cacheFile.find("]", indexOfUpgradeMiddleCodeStart);
+                std::string code = cacheFile.substr(
+                    indexOfUpgradeMiddleCodeStart, indexOfUpgradeMiddleCodeEnd - indexOfUpgradeMiddleCodeStart);
+                code.erase(std::remove(code.begin(), code.end(), ' '), code.end());
+                code.erase(std::remove(code.begin(), code.end(), '\r'), code.end());
+                code.erase(std::remove(code.begin(), code.end(), '\n'), code.end());
+                code.erase(std::remove(code.begin(), code.end(), '['), code.end());
+                code.erase(std::remove(code.begin(), code.end(), ']'), code.end());
+                code.erase(std::remove(code.begin(), code.end(), '\"'), code.end());
+                // std::cout << m_localization->getLocalization(
+                //     QString::fromStdString(code)).toStdString() << std::endl;
+                std::cout << upgradeCode << " : " << code << std::endl;
             }
-            else
-            {
-//                std::cout << levelArray[j].GetString() << " : " << m_localization->getLocalization(levelArray[j].GetString()).toStdString() << std::endl;
-            }
+            map->addUpgrade(upgrade);
         }
     }
-
 }

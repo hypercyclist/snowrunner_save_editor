@@ -20,14 +20,14 @@ public:
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
-    void addMap(Map _map);
-    std::map<std::string, Map>* maps();
+    void addMap(Map* _map);
+    std::map<std::string, Map*> maps();
     Map* map(std::string _mapCode);
 
 private:
     std::string m_code;
     std::map<Language, std::string> m_name;
-    std::map<std::string, Map> m_maps;
+    std::map<std::string, Map*> m_maps;
 };
 
 #endif // REGION_H

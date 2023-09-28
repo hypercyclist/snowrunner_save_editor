@@ -7,8 +7,12 @@
 
 Localization::Localization() :
     m_localizations(),
-    m_defaultLanguage(Language::RUSSIAN)
-{ }
+    m_defaultLanguage(Language::RUSSIAN),
+    m_languageTextNames()
+{
+    m_languageTextNames.insert({Language::RUSSIAN, "russian"});
+    m_languageTextNames.insert({Language::RUSSIAN, "english"});
+}
 
 // Заменить Qt на C++.
 void Localization::loadLocalizations()
@@ -77,4 +81,29 @@ std::string Localization::getLocalization(std::string _code, Language _language)
 Language Localization::defaultLanguage()
 {
     return m_defaultLanguage;
+}
+
+std::map<Language, std::map<std::string, std::string>>& Localization::getLocalization()
+{
+    return m_localizations;
+}
+
+std::map<std::string, std::string>& Localization::getLocalization(Language _language)
+{
+    return m_localizations[_language];
+}
+
+std::map<Language, std::map<std::string, std::string>>& Localization::getLocalizationCache()
+{
+    return m_localizationsCache;
+}
+
+std::map<std::string, std::string>& Localization::getLocalizationCache(Language _language)
+{
+    return m_localizationsCache[_language];
+}
+
+std::string Localization::languageTextName(Language _language)
+{
+    return m_languageTextNames[_language];
 }

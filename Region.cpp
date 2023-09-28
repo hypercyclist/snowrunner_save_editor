@@ -33,17 +33,17 @@ std::string Region::name(Language _language)
     return m_name[_language];
 }
 
-void Region::addMap(Map _map)
+void Region::addMap(Map* _map)
 {
-    m_maps.insert({_map.code(), _map});
+    m_maps.insert({_map->code(), _map});
 }
 
-std::map<std::string, Map>* Region::maps()
+std::map<std::string, Map*> Region::maps()
 {
-    return &m_maps;
+    return m_maps;
 }
 
 Map* Region::map(std::string _mapCode)
 {
-    return m_maps.find(_mapCode) != m_maps.end() ? &m_maps[_mapCode] : nullptr;
+    return m_maps.find(_mapCode) != m_maps.end() ? m_maps[_mapCode] : nullptr;
 }

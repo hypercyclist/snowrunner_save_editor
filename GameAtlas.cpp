@@ -10,9 +10,9 @@ void GameAtlas::addRegion(Region* _region)
     m_regions.insert({_region->code(), _region});
 }
 
-std::map<std::string, Region*>* GameAtlas::regions()
+std::map<std::string, Region*> GameAtlas::regions()
 {
-    return &m_regions;
+    return m_regions;
 }
 
 Region* GameAtlas::region(std::string _regionCode)

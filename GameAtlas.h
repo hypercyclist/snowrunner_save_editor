@@ -9,7 +9,7 @@ class GameAtlas
 public:
     GameAtlas();
     void addRegion(Region* _region);
-    std::map<std::string, Region*>* regions();
+    std::map<std::string, Region*> regions();
     Region* region(std::string _regionCode);
 private:
     std::map<std::string, Region*> m_regions;

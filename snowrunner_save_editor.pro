@@ -16,6 +16,7 @@ SOURCES += \
     Map.cpp \
     Region.cpp \
     Task.cpp \
+    Upgrade.cpp \
     Utils.cpp \
     main.cpp \
     EditorWindow.cpp
@@ -29,6 +30,7 @@ HEADERS += \
     Map.h \
     Region.h \
     Task.h \
+    Upgrade.h \
     Utils.h \
     rapidjson/allocators.h \
     rapidjson/cursorstreamwrapper.h \

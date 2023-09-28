@@ -1,25 +1,29 @@
-#ifndef TASK_H
-#define TASK_H
+#ifndef UPGRADE_H
+#define UPGRADE_H
 
 #include <map>
 
 enum class Language;
 
-class Task
+class Upgrade
 {
 public:
-    Task();
-    Task(std::string _code);
+    Upgrade();
+    Upgrade(std::string _code);
 
     void setCode(std::string _code);
     std::string code();
+
+    void setMiddleCode(std::string _code);
+    std::string middleCode();
 
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
 private:
     std::string m_code;
+    std::string m_middleCode;
     std::map<Language, std::string> m_name;
 };
 
-#endif // TASK_H
+#endif // UPGRADE_H
