@@ -18,13 +18,21 @@
 #include <QString>
 #include "Utils.h"
 
+#include "GameAtlas.h"
+#include "Region.h"
+#include "Map.h"
+#include "Task.h"
+
 Database::Database() :
     m_localization(nullptr),
-    m_tasks()
+    m_gameAtlas(nullptr)
+//    m_tasks()
 {
     m_localization = new Localization();
     m_localization->loadLocalizations();
     m_localization->setDefaultLanguage(Language::RUSSIAN);
+
+    m_gameAtlas = new GameAtlas();
 }
 
 void Database::createDatabase()
@@ -71,51 +79,40 @@ void Database::loadRegionsMapsTasksData(std::string _filename)
         std::string regionCode = taskCode.substr(0, 5);
         std::string mapCode = taskCode.substr(0, 8);
 
-        auto regionIt = m_tasks.find(regionCode);
-        if (regionIt != m_tasks.end())
+        Region* region = m_gameAtlas->region(regionCode);
+        if (!region)
         {
-            m_tasks.insert(std::pair<std::string, std::map<std::string,
-                std::map<std::string, std::map<std::string, std::string>>>>());
-
-            std::map<std::string, std::string> regionInfo;
+            region = new Region(regionCode);
 
             // Тут нужно загрузить для всех языков.
-            std::string regionRussianTranslate = m_localization->getLocalization(regionCode);
-            regionRussianTranslate = Utils::cutLongCountryName(regionRussianTranslate);
-            regionInfo.insert(std::pair<std::string, std::string>("rus", regionRussianTranslate));
+            std::string regionTranslate = m_localization->getLocalization(regionCode);
+            regionTranslate = Utils::cutLongCountryName(regionTranslate);
 
-            m_regions.insert(std::pair<std::string,
-                std::map<std::string, std::string>>(regionCode, regionInfo));
+            region->setName(Language::RUSSIAN, regionTranslate);
+
+            m_gameAtlas->addRegion(region);
         }
-        auto mapIt = m_tasks[regionCode].find(mapCode);
-        if (mapIt != m_tasks[regionCode].end())
+        Map* map = region->map(mapCode);
+        if (!map)
         {
-            m_tasks[regionCode].insert(std::pair<std::string,
-                std::map<std::string, std::map<std::string, std::string>>>());
-
-            std::map<std::string, std::string> mapInfo;
+            map = new Map(mapCode);
 
             // Тут нужно загрузить для всех языков.
-            std::string mapRussianTranslate = m_localization->getLocalization(mapCode);
-            if (mapRussianTranslate == "none")
-                mapRussianTranslate = m_localization->getLocalization(mapCode + "_NAME");
-            if (mapRussianTranslate == "none")
-                mapRussianTranslate = m_localization->getLocalization(mapCode + "_NEW_NAME");
-            if (mapRussianTranslate == "none")
-                mapRussianTranslate = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
-            if (mapRussianTranslate == "none")
-                mapRussianTranslate = m_localization->getLocalization("LEVEL_" + mapCode);
+            std::string mapTranslate = m_localization->getLocalization(mapCode);
+            if (mapTranslate == "none")
+                mapTranslate = m_localization->getLocalization(mapCode + "_NAME");
+            if (mapTranslate == "none")
+                mapTranslate = m_localization->getLocalization(mapCode + "_NEW_NAME");
+            if (mapTranslate == "none")
+                mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
+            if (mapTranslate == "none")
+                mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode);
 
-            mapRussianTranslate = Utils::cutSlash(mapRussianTranslate);
+            mapTranslate = Utils::cutSlash(mapTranslate);
 
-            mapInfo.insert(std::pair<std::string, std::string>("rus", mapRussianTranslate));
+            map->setName(Language::RUSSIAN, mapTranslate);
 
-            m_maps.insert(std::pair<std::string,
-                std::map<std::string, std::map<std::string, std::string>>>(
-                    regionCode, std::map<std::string,
-                        std::map<std::string, std::string>>()));
-            m_maps[regionCode].insert(std::pair<std::string,
-                std::map<std::string, std::string>>(mapCode, mapInfo));
+            region->addMap(map);
         }
 
         std::map<std::string, std::string> taskInfo;

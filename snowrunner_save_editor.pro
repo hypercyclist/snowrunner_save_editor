@@ -11,7 +11,11 @@ CONFIG += c++11
 SOURCES += \
     CompleteTasksTable.cpp \
     Database.cpp \
+    GameAtlas.cpp \
     Localization.cpp \
+    Map.cpp \
+    Region.cpp \
+    Task.cpp \
     Utils.cpp \
     main.cpp \
     EditorWindow.cpp
@@ -20,7 +24,11 @@ HEADERS += \
     CompleteTasksTable.h \
     Database.h \
     EditorWindow.h \
+    GameAtlas.h \
     Localization.h \
+    Map.h \
+    Region.h \
+    Task.h \
     Utils.h \
     rapidjson/allocators.h \
     rapidjson/cursorstreamwrapper.h \

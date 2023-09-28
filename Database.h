@@ -6,6 +6,7 @@
 #include <vector>
 
 class Localization;
+class GameAtlas;
 
 /*
  * Regions: rus, eng
@@ -20,30 +21,31 @@ public:
     Database();
     void createDatabase();
     void loadDatabase();
-    std::map<std::string, std::map<std::string, std::string>>& regions();
+//    std::map<std::string, std::map<std::string, std::string>>& regions();
 
-    std::map<std::string, std::map<std::string,
-        std::map<std::string, std::string>>>& maps();
+//    std::map<std::string, std::map<std::string,
+//        std::map<std::string, std::string>>>& maps();
 
-    std::map<std::string, std::map<std::string, std::map<std::string,
-        std::map<std::string, std::string>>>>& tasks();
+//    std::map<std::string, std::map<std::string, std::map<std::string,
+//        std::map<std::string, std::string>>>>& tasks();
 private:
     Localization* m_localization;
+    GameAtlas* m_gameAtlas;
 
-    // Region - Transcriptions.
-    std::map<std::string,
-        std::map<std::string, std::string>> m_regions;
+//    // Region - Transcriptions.
+//    std::map<std::string,
+//        std::map<std::string, std::string>> m_regions;
 
-    // Region, Map - Transcriptions.
-    std::map<std::string,
-        std::map<std::string,
-            std::map<std::string, std::string>>> m_maps;
+//    // Region, Map - Transcriptions.
+//    std::map<std::string,
+//        std::map<std::string,
+//            std::map<std::string, std::string>>> m_maps;
 
-    // Region, Map, Task - Transcriptions.
-    std::map<std::string,
-        std::map<std::string,
-            std::map<std::string,
-                std::map<std::string, std::string>>>> m_tasks;
+//    // Region, Map, Task - Transcriptions.
+//    std::map<std::string,
+//        std::map<std::string,
+//            std::map<std::string,
+//                std::map<std::string, std::string>>>> m_tasks;
 
     void loadRegionsMapsTasksData(std::string _filename);
     void saveRegionsMapsTasksData(std::string _filename);
