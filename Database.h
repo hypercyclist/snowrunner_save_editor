@@ -10,18 +10,13 @@ class Database
 {
 public:
     Database();
-    void createDatabase();
-    void loadDatabase();
+    void createDatabase(std::string _databasePath, std::string _tasksPath,
+        std::string _initialCacheBlockPath, std::string _savePath);
+    bool loadDatabase(std::string _filename);
 
 private:
     Localization* m_localization;
     GameAtlas* m_gameAtlas;
-
-    void loadRegionsMapsTasksData(std::string _filename);
-    void saveRegionsMapsTasksData(std::string _filename);
-    void saveLocalizationCache(std::string _filename);
-    void loadUpgradesData(std::string _saveFileName,
-        std::string _initialCacheBlockFileName);
 };
 
 #endif // DATABASE_H

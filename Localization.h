@@ -10,22 +10,28 @@ class Localization
 {
 public:
     Localization();
-    void loadLocalizations();
+    void createLocalizations();
+    bool loadLocalizations(std::string _filename);
+    void saveLocalizationCache(std::string _filename);
     void setDefaultLanguage(Language _language);
     std::string getLocalization(std::string _code);
     std::string getLocalization(std::string _code, Language _language);
     Language defaultLanguage();
+    void addLocalizationsTemplate(std::string _code, std::string _value);
 
     std::map<Language, std::map<std::string, std::string>>& getLocalization();
     std::map<std::string, std::string>& getLocalization(Language _language);
     std::map<Language, std::map<std::string, std::string>>& getLocalizationCache();
     std::map<std::string, std::string>& getLocalizationCache(Language _language);
+    std::map<Language, std::map<std::string, std::string>>& getLocalizationTemplates();
 
     std::string languageTextName(Language _language);
+    std::map<Language, std::string>& languageTextNames();
 
 private:
     std::map<Language, std::map<std::string, std::string>> m_localizations;
     std::map<Language, std::map<std::string, std::string>> m_localizationsCache;
+    std::map<Language, std::map<std::string, std::string>> m_localizationsTemplates;
     Language m_defaultLanguage;
     std::map<Language, std::string> m_languageTextNames;
 };

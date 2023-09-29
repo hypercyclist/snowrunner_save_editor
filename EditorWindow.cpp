@@ -20,9 +20,19 @@ EditorWindow::EditorWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    std::string currentPath = QDir::currentPath().toStdString();
+    std::string databasePath = currentPath + "/database/database.json";
+    std::string tasksPath = currentPath + "/database/generator_materials/tasks.json";
+    std::string initialCacheBlockPath = currentPath + "/database/generator_materials/initial.cache_block";
+    std::string savePath = currentPath + "/database/generator_materials/CompleteSave.cfg";
+
     m_database = new Database();
-    m_database->createDatabase();
-    m_database->loadDatabase();
+    bool databaseLoaded = m_database->loadDatabase(databasePath);
+    if (!databaseLoaded)
+    {
+        m_database->createDatabase(databasePath, tasksPath,
+            initialCacheBlockPath, savePath);
+    }
 
 //    ui->completeTasksTable->setLocalization(m_localization);
 //    ui->completeTasksTable->setTasks();
