@@ -98,8 +98,8 @@ bool Localization::loadLocalizations(std::string _filename)
         rapidjson::Value& languageObject = localizationObject[languagePair.second.c_str()];
         for (auto languageIt = languageObject.MemberBegin(); languageIt != languageObject.MemberEnd(); languageIt++)
         {
-            m_localizations[languagePair.first].insert({languageIt->name.GetString(), languageIt->value.GetString()});
-            m_localizationsCache[languagePair.first].insert({languageIt->name.GetString(), languageIt->value.GetString()});
+            m_localizations[languagePair.first][languageIt->name.GetString()] = languageIt->value.GetString();
+            m_localizationsCache[languagePair.first][languageIt->name.GetString()] = languageIt->value.GetString();
         }
     }
     return true;
@@ -219,9 +219,7 @@ std::string Localization::getLocalization(std::string _code, Language _language)
 {
     if (m_localizationsCache.find(_language) == m_localizationsCache.end())
     {
-        m_localizationsCache.insert(std::pair<Language,
-            std::map<std::string, std::string>>(
-                _language, std::map<std::string, std::string>()));
+        m_localizationsCache[_language] = std::map<std::string, std::string>();
     }
 
     auto translationIt = m_localizationsCache[_language].find(Utils::stolower(_code));
@@ -236,8 +234,7 @@ std::string Localization::getLocalization(std::string _code, Language _language)
 
         if (result != "none")
         {
-            m_localizationsCache[_language].insert(
-                std::pair<std::string, std::string>(Utils::stolower(_code), result));
+            m_localizationsCache[_language][Utils::stolower(_code)] = result;
         }
     }
     return result;
@@ -252,7 +249,7 @@ void Localization::addLocalizationsTemplate(std::string _code, std::string _valu
 {
     for (const auto& languagePair : m_languageTextNames)
     {
-        m_localizationsTemplates[languagePair.first].insert({_code, _value});
+        m_localizationsTemplates[languagePair.first][_code] = _value;
     }
 }
 

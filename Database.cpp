@@ -51,3 +51,13 @@ bool Database::loadDatabase(std::string _filename)
 
     return true;
 }
+
+Localization* Database::localization()
+{
+    return m_localization;
+}
+
+GameAtlas* Database::gameAtlas()
+{
+    return m_gameAtlas;
+}

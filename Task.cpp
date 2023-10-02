@@ -23,7 +23,7 @@ std::string Task::code()
 
 void Task::setName(Language _language, std::string _name)
 {
-    m_name.insert({_language, _name});
+    m_name[_language] = _name;
 }
 
 std::string Task::name(Language _language)

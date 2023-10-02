@@ -25,7 +25,7 @@ std::string Region::code()
 
 void Region::setName(Language _language, std::string _name)
 {
-    m_name.insert({_language, _name});
+    m_name[_language] = _name;
 }
 
 std::string Region::name(Language _language)
@@ -35,7 +35,7 @@ std::string Region::name(Language _language)
 
 void Region::addMap(Map* _map)
 {
-    m_maps.insert({_map->code(), _map});
+    m_maps[_map->code()] = _map;
 }
 
 std::map<std::string, Map*> Region::maps()

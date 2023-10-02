@@ -35,13 +35,13 @@ EditorWindow::EditorWindow(QWidget *parent)
     }
 
 //    ui->completeTasksTable->setLocalization(m_localization);
-//    ui->completeTasksTable->setTasks();
-//    ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
-//    ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
-//    ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
-//    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
-//    ui->completeTasksTable->filterMaps();
-//    ui->completeTasksTable->updateTasksTable();
+    ui->completeTasksTable->setGameAtlas(m_database->gameAtlas());
+    ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
+    ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
+    ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
+    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
+    ui->completeTasksTable->filterMaps();
+    ui->completeTasksTable->updateTasksTable();
 }
 
 EditorWindow::~EditorWindow()

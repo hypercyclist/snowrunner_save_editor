@@ -3,11 +3,15 @@
 #include <Localization.h>
 #include <QHBoxLayout>
 #include <QHeaderView>
+#include <GameAtlas.h>
+#include "Region.h"
+#include "Map.h"
+#include "Task.h"
 
 CompleteTasksTable::CompleteTasksTable(QWidget* _parent) :
     QTableWidget(_parent),
     m_localization(nullptr),
-    m_tasks(nullptr),
+    m_gameAtlas(nullptr),
     m_regionFilterCombobox(nullptr),
     m_mapFilterCombobox(nullptr),
     m_filterApplyButton(nullptr),
@@ -21,9 +25,9 @@ void CompleteTasksTable::setLocalization(Localization* _localization)
     m_localization = _localization;
 }
 
-void CompleteTasksTable::setTasks(Tasks* _tasks)
+void CompleteTasksTable::setGameAtlas(GameAtlas* _gameAtlas)
 {
-    m_tasks = _tasks;
+    m_gameAtlas = _gameAtlas;
 }
 
 void CompleteTasksTable::setRegionFilterCombobox(QComboBox* _combobox)
@@ -56,15 +60,30 @@ void CompleteTasksTable::setCheckAllFilteredButton(QPushButton* _button)
 
 void CompleteTasksTable::filterMaps()
 {
-//    if (m_regionFilterCombobox->findText("Все") == -1)
-//        m_regionFilterCombobox->addItem("Все");
+    if (m_regionFilterCombobox->findText("Все") == -1)
+        m_regionFilterCombobox->addItem("Все");
 
-//    m_mapFilterCombobox->clear();
+    m_mapFilterCombobox->clear();
 
-//    if (m_mapFilterCombobox->findText("Все") == -1)
-//        m_mapFilterCombobox->addItem("Все");
+    if (m_mapFilterCombobox->findText("Все") == -1)
+        m_mapFilterCombobox->addItem("Все");
 
-//    QString currentRegionFilter = m_regionFilterCombobox->currentText();
+    QString currentRegionFilter = m_regionFilterCombobox->currentText();
+
+    for (auto regionPair : m_gameAtlas->regions())
+    {
+        std::string regionName = regionPair.second->name(Language::RUSSIAN);
+        if (m_regionFilterCombobox->findText(regionName.c_str()) == -1)
+            m_regionFilterCombobox->addItem(regionName.c_str());
+
+        if (currentRegionFilter == "Все" || regionName.c_str() == currentRegionFilter)
+        {
+            for (auto mapPair : regionPair.second->maps())
+            {
+                m_mapFilterCombobox->addItem(mapPair.second->name(Language::RUSSIAN).c_str());
+            }
+        }
+    }
 
 //    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
 //    auto regionIt = tasks.begin();
@@ -102,10 +121,64 @@ void CompleteTasksTable::filterMaps()
 
 void CompleteTasksTable::updateTasksTable()
 {
-//    setRowCount(0);
-//    m_currentFiltredTasks.clear();
+    setRowCount(0);
+    m_currentFiltredTasks.clear();
 
-//    QAbstractItemModel* tasksTableModel = model();
+    QAbstractItemModel* tasksTableModel = model();
+
+    for (auto regionPair : m_gameAtlas->regions())
+    {
+        std::string regionName = regionPair.second->name(Language::RUSSIAN);
+        QString currentRegionFilter = m_regionFilterCombobox->currentText();
+
+        if (currentRegionFilter == "Все" || regionName.c_str() == m_regionFilterCombobox->currentText())
+        {
+            for (auto mapPair : regionPair.second->maps())
+            {
+                QString  currentMapFilter = m_mapFilterCombobox->currentText();
+                if (currentMapFilter == "Все" || mapPair.second->name(Language::RUSSIAN).c_str() == currentMapFilter)
+                {
+                    for (auto taskPair : mapPair.second->tasks())
+                    {
+                        int rowIndex = rowCount();
+                        insertRow(rowIndex);
+
+                        std::string taskCode = taskPair.first;
+
+                        m_currentFiltredTasks.push_back(taskCode.c_str());
+
+
+//                        if (taskCode.right(4) == "_OBJ")
+//                        {
+//                            task += " (Контракт)";
+//                        }
+
+                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 0), regionName.c_str());
+                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), mapPair.second->name(Language::RUSSIAN).c_str());
+                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), taskPair.second->name(Language::RUSSIAN).c_str());
+
+                        QCheckBox* statusCheckBox = new QCheckBox();
+                        if (m_checkedTasks.contains(taskCode.c_str()))
+                        {
+                            statusCheckBox->setChecked(m_checkedTasks[taskCode.c_str()]);
+                        }
+                        connect(statusCheckBox, &QCheckBox::stateChanged, this, [=](bool _state)
+                        {
+                            m_checkedTasks.insert(taskCode.c_str(), _state);
+                        });
+
+                        QWidget* statusContainer = new QWidget();
+                        QHBoxLayout* statusContainerLayout = new QHBoxLayout();
+                        statusContainerLayout->setContentsMargins(0, 0, 0, 0);
+                        statusContainerLayout->setAlignment( Qt::AlignCenter );
+                        statusContainerLayout->addWidget(statusCheckBox);
+                        statusContainer->setLayout(statusContainerLayout);
+                        setCellWidget(rowIndex, 3, statusContainer);
+                    }
+                }
+            }
+        }
+    }
 
 //    QMap<QString, QMap<QString, QVector<QString>>>& tasks = m_tasks->tasks();
 
@@ -178,11 +251,11 @@ void CompleteTasksTable::updateTasksTable()
 //        }
 //        regionIt++;
 //    }
-//    horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
-//    horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
-//    horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
-//    horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
-//    horizontalHeader()->resizeSection(3, 100);
+    horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::ResizeToContents);
+    horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::ResizeToContents);
+    horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
+    horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
+    horizontalHeader()->resizeSection(3, 100);
 }
 
 void CompleteTasksTable::setCompleteFromVector(QVector<QString> _completedTasks)

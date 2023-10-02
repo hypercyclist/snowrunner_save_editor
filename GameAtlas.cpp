@@ -24,7 +24,7 @@ void GameAtlas::setLocalization(Localization* _localization)
 
 void GameAtlas::addRegion(Region* _region)
 {
-    m_regions.insert({_region->code(), _region});
+    m_regions[_region->code()] = _region;
 }
 
 std::map<std::string, Region*> GameAtlas::regions()
@@ -167,6 +167,18 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
             map->addUpgrade(upgrade);
         }
     }
+
+    for(auto regionIt = m_regions.begin(); regionIt != m_regions.end();)
+    {
+        if (!regionIt->second)
+        {
+            m_regions.erase(regionIt++);
+        }
+        else
+        {
+            regionIt++;
+        }
+    }
 }
 
 // Считаем, что если файл открылся и там JSON, то все хорошо.
@@ -227,7 +239,16 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                map->setName(languagePair.first, m_localization->getLocalization(map->code(), languagePair.first));
+                std::string mapTranslate = m_localization->getLocalization(map->code());
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization(map->code() + "_NAME");
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization(map->code() + "_NEW_NAME");
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code() + "_NAME");
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code());
+                map->setName(languagePair.first, mapTranslate);
             }
 
             region->addMap(map);
@@ -268,6 +289,10 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
     for (const auto& regionPair : m_regions)
     {
         Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
 
         rapidjson::Value regionObject;
         regionObject.SetObject();

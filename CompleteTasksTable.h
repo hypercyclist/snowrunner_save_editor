@@ -6,7 +6,7 @@
 #include <QPushButton>
 
 class Localization;
-class Tasks;
+class GameAtlas;
 
 class CompleteTasksTable : public QTableWidget
 {
@@ -14,7 +14,7 @@ class CompleteTasksTable : public QTableWidget
 public:
     CompleteTasksTable(QWidget* _parent);
     void setLocalization(Localization* _localization);
-    void setTasks(Tasks* _tasks);
+    void setGameAtlas(GameAtlas* _gameAtlas);
     void setRegionFilterCombobox(QComboBox* _combobox);
     void setMapFilterCombobox(QComboBox* _combobox);
     void setFilterApplyButton(QPushButton* _button);
@@ -25,7 +25,7 @@ public:
     QVector<QString> completedTasks();
 private:
     Localization* m_localization;
-    Tasks* m_tasks;
+    GameAtlas* m_gameAtlas;
     QComboBox* m_regionFilterCombobox;
     QComboBox* m_mapFilterCombobox;
     QPushButton* m_filterApplyButton;

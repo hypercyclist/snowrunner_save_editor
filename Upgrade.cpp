@@ -34,7 +34,7 @@ std::string Upgrade::middleCode()
 
 void Upgrade::setName(Language _language, std::string _name)
 {
-    m_name.insert({_language, _name});
+    m_name[_language] = _name;
 }
 
 std::string Upgrade::name(Language _language)

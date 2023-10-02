@@ -27,7 +27,7 @@ std::string Map::code()
 
 void Map::setName(Language _language, std::string _name)
 {
-    m_name.insert({_language, _name});
+    m_name[_language] = _name;
 }
 
 std::string Map::name(Language _language)
@@ -37,7 +37,7 @@ std::string Map::name(Language _language)
 
 void Map::addTask(Task* _task)
 {
-    m_tasks.insert({_task->code(), _task});
+    m_tasks[_task->code()] = _task;
 }
 
 std::map<std::string, Task*> Map::tasks()
@@ -53,7 +53,7 @@ Task* Map::task(std::string _taskCode)
 
 void Map::addUpgrade(Upgrade* _upgrade)
 {
-    m_upgrades.insert({_upgrade->code(), _upgrade});
+    m_upgrades[_upgrade->code()] = _upgrade;
 }
 
 std::map<std::string, Upgrade*> Map::upgrades()
