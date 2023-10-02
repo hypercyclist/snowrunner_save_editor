@@ -97,6 +97,7 @@ void EditorWindow::on_menuSave_triggered()
         finishedObjsArray.PushBack(strVal, jsonDocument.GetAllocator());
     }
     jsonDocument["CompleteSave"]["SslValue"]["finishedObjs"] = finishedObjsArray;
+    jsonDocument["CompleteSave"]["SslValue"]["discoveredObjectives"] = finishedObjsArray;
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
