@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1078</width>
+    <width>1081</width>
     <height>659</height>
    </rect>
   </property>
@@ -48,6 +48,12 @@
        <pixmap resource="resourses.qrc">:/images/picture.jpg</pixmap>
       </property>
       <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
        <bool>false</bool>
       </property>
      </widget>
@@ -55,7 +61,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="userProfileLayout">
        <attribute name="title">
@@ -166,54 +172,10 @@
           <property name="topMargin">
            <number>9</number>
           </property>
-          <item row="0" column="2">
-           <widget class="QLabel" name="mapFilterLabel">
-            <property name="text">
-             <string> Карта: </string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="regionFilterLabel">
-            <property name="text">
-             <string> Регион: </string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QComboBox" name="mapFilterCombobox"/>
-          </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="regionFilterCombobox"/>
-          </item>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="filterApplyButton">
-            <property name="text">
-             <string>Применить фильтр</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="5">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="6">
-           <widget class="QPushButton" name="checkAllFilteredButton">
-            <property name="text">
-             <string>Отметить / Снять все отфильтрованные</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="7">
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="1" column="0">
            <widget class="CompleteTasksTable" name="completeTasksTable">
             <attribute name="horizontalHeaderMinimumSectionSize">
              <number>10</number>
@@ -249,6 +211,16 @@
             </column>
            </widget>
           </item>
+          <item row="0" column="0">
+           <widget class="TableFilterByRegionMap" name="completeTasksTableBar" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
        </layout>
@@ -258,10 +230,59 @@
         <string>Улучшения</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <layout class="QGridLayout" name="upgradesLayout">
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>8</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="upgradesTable">
+            <column>
+             <property name="text">
+              <string>Регион</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Карта</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Улучшение</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Статус</string>
+             </property>
+            </column>
+           </widget>
+          </item>
           <item row="0" column="0">
-           <widget class="QTableWidget" name="upgradesTable"/>
+           <widget class="TableFilterByRegionMap" name="upgradesTableBar" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -281,7 +302,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1078</width>
+     <width>1081</width>
      <height>24</height>
     </rect>
    </property>
@@ -318,6 +339,12 @@
    <class>CompleteTasksTable</class>
    <extends>QTableWidget</extends>
    <header>CompleteTasksTable.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TableFilterByRegionMap</class>
+   <extends>QWidget</extends>
+   <header location="global">TableFilterByRegionMap.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

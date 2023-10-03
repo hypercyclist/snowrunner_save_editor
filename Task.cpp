@@ -2,7 +2,8 @@
 
 Task::Task() :
     m_code(),
-    m_name()
+    m_name(),
+    m_complete(false)
 { }
 
 Task::Task(std::string _code) :
@@ -29,4 +30,14 @@ void Task::setName(Language _language, std::string _name)
 std::string Task::name(Language _language)
 {
     return m_name[_language];
+}
+
+void Task::setComplete(bool _state)
+{
+    m_complete = _state;
+}
+
+bool Task::complete()
+{
+    return m_complete;
 }

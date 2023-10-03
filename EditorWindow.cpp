@@ -8,6 +8,8 @@
 #include "Localization.h"
 #include "Database.h"
 #include <rapidjson/writer.h>
+#include "GameAtlas.h"
+#include "Task.h"
 
 #include <fstream>
 #include <iostream>
@@ -34,14 +36,17 @@ EditorWindow::EditorWindow(QWidget *parent)
             initialCacheBlockPath, savePath);
     }
 
-//    ui->completeTasksTable->setLocalization(m_localization);
     ui->completeTasksTable->setGameAtlas(m_database->gameAtlas());
-    ui->completeTasksTable->setRegionFilterCombobox(ui->regionFilterCombobox);
-    ui->completeTasksTable->setMapFilterCombobox(ui->mapFilterCombobox);
-    ui->completeTasksTable->setFilterApplyButton(ui->filterApplyButton);
-    ui->completeTasksTable->setCheckAllFilteredButton(ui->checkAllFilteredButton);
-    ui->completeTasksTable->filterMaps();
+    ui->completeTasksTable->setFilterBarWidget(ui->completeTasksTableBar);
+    ui->completeTasksTableBar->setGameAtlas(m_database->gameAtlas());
+    ui->completeTasksTableBar->filterMaps();
     ui->completeTasksTable->updateTasksTable();
+
+    ui->upgradesTable->setGameAtlas(m_database->gameAtlas());
+    ui->upgradesTable->setFilterBarWidget(ui->completeTasksTableBar);
+    ui->upgradesTableBar->setGameAtlas(m_database->gameAtlas());
+    ui->upgradesTableBar->filterMaps();
+    ui->upgradesTable->updateTasksTable();
 }
 
 EditorWindow::~EditorWindow()
@@ -65,35 +70,27 @@ void EditorWindow::on_menuOpen_triggered()
     ui->rankSpinBox->setValue(persistentProfileData["rank"].GetInt());
     ui->experienceCountSpinBox->setValue(persistentProfileData["experience"].GetInt());
 
-    QVector<QString> finishedObjs;
+    std::vector<std::string> finishedObjs;
     rapidjson::Value& finishedObjsArray = sslValue["finishedObjs"].GetArray();
     for (unsigned int i = 0; i < finishedObjsArray.Size(); i++)
     {
         finishedObjs.push_back(finishedObjsArray[i].GetString());
     }
-    ui->completeTasksTable->setCompleteFromVector(finishedObjs);
+    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(finishedObjs);
     ui->completeTasksTable->updateTasksTable();
-
-
-//    connect(ui->moneyCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
-//    connect(ui->rankSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
-//    connect(ui->experienceCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
 }
 
 void EditorWindow::on_menuSave_triggered()
 {
-//    rapidjson::GenericObject& persistentProfileData =
-//        jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"].GetObject();
-//    qDebug() << "test";
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["money"] = ui->moneyCountSpinBox->value();
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["rank"] = ui->rankSpinBox->value();
     jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["experience"] = ui->experienceCountSpinBox->value();
     rapidjson::Value finishedObjsArray;
     finishedObjsArray.SetArray();
-    for (const QString& taskCode : ui->completeTasksTable->completedTasks())
+    for (Task* task : m_database->gameAtlas()->completedTasks())
     {
         rapidjson::Value strVal;
-        strVal.SetString(taskCode.toStdString().c_str(), taskCode.length(), jsonDocument.GetAllocator());
+        strVal.SetString(task->code().c_str(), task->code().length(), jsonDocument.GetAllocator());
         finishedObjsArray.PushBack(strVal, jsonDocument.GetAllocator());
     }
     jsonDocument["CompleteSave"]["SslValue"]["finishedObjs"] = finishedObjsArray;
@@ -109,3 +106,7 @@ void EditorWindow::on_menuSave_triggered()
     file.write(buffer.GetString());
     file.close();
 }
+
+//    connect(ui->moneyCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
+//    connect(ui->rankSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });
+//    connect(ui->experienceCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });

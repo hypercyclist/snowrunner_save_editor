@@ -17,9 +17,13 @@ public:
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
+    void setComplete(bool _state);
+    bool complete();
+
 private:
     std::string m_code;
     std::map<Language, std::string> m_name;
+    bool m_complete;
 };
 
 #endif // TASK_H

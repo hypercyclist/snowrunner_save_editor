@@ -7,17 +7,19 @@
 #include "Region.h"
 #include "Map.h"
 #include "Task.h"
+#include "TableFilterByRegionMap.h"
+#include "ui_TableFilterByRegionMap.h"
 
 CompleteTasksTable::CompleteTasksTable(QWidget* _parent) :
     QTableWidget(_parent),
     m_localization(nullptr),
     m_gameAtlas(nullptr),
+    m_filterBar(nullptr),
     m_regionFilterCombobox(nullptr),
     m_mapFilterCombobox(nullptr),
     m_filterApplyButton(nullptr),
     m_checkAllFilteredButton(nullptr),
-    m_currentFiltredTasks(),
-    m_checkedTasks()
+    m_currentFiltredTasks()
 { }
 
 void CompleteTasksTable::setLocalization(Localization* _localization)
@@ -30,60 +32,19 @@ void CompleteTasksTable::setGameAtlas(GameAtlas* _gameAtlas)
     m_gameAtlas = _gameAtlas;
 }
 
-void CompleteTasksTable::setRegionFilterCombobox(QComboBox* _combobox)
+void CompleteTasksTable::setFilterBarWidget(TableFilterByRegionMap* _widget)
 {
-    // unbind old.
-    m_regionFilterCombobox = _combobox;
-    connect(m_regionFilterCombobox, static_cast<void (QComboBox::*)(int)>
-        (&QComboBox::currentIndexChanged), this, &CompleteTasksTable::filterMaps);
-}
+    m_filterBar = _widget;
+    m_regionFilterCombobox = m_filterBar->gui()->regionFilterCombobox;
+    m_mapFilterCombobox = m_filterBar->gui()->mapFilterCombobox;
+    m_filterApplyButton = m_filterBar->gui()->filterApplyButton;
+    m_checkAllFilteredButton = m_filterBar->gui()->checkAllFilteredButton;
 
-void CompleteTasksTable::setMapFilterCombobox(QComboBox* _combobox)
-{
-    m_mapFilterCombobox = _combobox;
-}
-
-void CompleteTasksTable::setFilterApplyButton(QPushButton* _button)
-{
-    //unbind old.
-    m_filterApplyButton = _button;
     connect(m_filterApplyButton, &QPushButton::clicked, this,
         &CompleteTasksTable::updateTasksTable);
-}
 
-void CompleteTasksTable::setCheckAllFilteredButton(QPushButton* _button)
-{
-    m_checkAllFilteredButton = _button;
     connect(m_checkAllFilteredButton, &QPushButton::clicked, this,
         &CompleteTasksTable::checkUncheckAllFiltered);
-}
-
-void CompleteTasksTable::filterMaps()
-{
-    if (m_regionFilterCombobox->findText("Все") == -1)
-        m_regionFilterCombobox->addItem("Все");
-
-    m_mapFilterCombobox->clear();
-
-    if (m_mapFilterCombobox->findText("Все") == -1)
-        m_mapFilterCombobox->addItem("Все");
-
-    QString currentRegionFilter = m_regionFilterCombobox->currentText();
-
-    for (auto regionPair : m_gameAtlas->regions())
-    {
-        std::string regionName = regionPair.second->name(Language::RUSSIAN);
-        if (m_regionFilterCombobox->findText(regionName.c_str()) == -1)
-            m_regionFilterCombobox->addItem(regionName.c_str());
-
-        if (currentRegionFilter == "Все" || regionName.c_str() == currentRegionFilter)
-        {
-            for (auto mapPair : regionPair.second->maps())
-            {
-                m_mapFilterCombobox->addItem(mapPair.second->name(Language::RUSSIAN).c_str());
-            }
-        }
-    }
 }
 
 void CompleteTasksTable::updateTasksTable()
@@ -116,22 +77,14 @@ void CompleteTasksTable::updateTasksTable()
 
                         tasksTableModel->setData(tasksTableModel->index(rowIndex, 0), regionName.c_str());
                         tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), mapPair.second->name(Language::RUSSIAN).c_str());
-
-//                        std::string task = taskPair.second->name(Language::RUSSIAN);
-//                        if (taskCode.substr(taskCode.length() - 4, 4) == "_OBJ")
-//                        {
-//                            task += " (Контракт)";
-//                        }
                         tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), taskPair.second->name(Language::RUSSIAN).c_str());
 
                         QCheckBox* statusCheckBox = new QCheckBox();
-                        if (m_checkedTasks.contains(taskCode.c_str()))
-                        {
-                            statusCheckBox->setChecked(m_checkedTasks[taskCode.c_str()]);
-                        }
+                        statusCheckBox->setChecked(taskPair.second->complete());
+
                         connect(statusCheckBox, &QCheckBox::stateChanged, this, [=](bool _state)
                         {
-                            m_checkedTasks.insert(taskCode.c_str(), _state);
+                            taskPair.second->setComplete(_state);
                         });
 
                         QWidget* statusContainer = new QWidget();
@@ -154,29 +107,6 @@ void CompleteTasksTable::updateTasksTable()
     horizontalHeader()->resizeSection(3, 100);
 }
 
-void CompleteTasksTable::setCompleteFromVector(QVector<QString> _completedTasks)
-{
-    for (const QString& taskCode : _completedTasks)
-    {
-        m_checkedTasks.insert(taskCode, true);
-    }
-}
-
-QVector<QString> CompleteTasksTable::completedTasks()
-{
-    QVector<QString> completedTasks;
-    auto tasksIt = m_checkedTasks.begin();
-    while (tasksIt != m_checkedTasks.end())
-    {
-        if (tasksIt.value())
-        {
-            completedTasks.push_back(tasksIt.key());
-        }
-        tasksIt++;
-    }
-    return completedTasks;
-}
-
 void CompleteTasksTable::checkUncheckAllFiltered()
 {
     // If no one checked - check all. If one checked - uncheck all.
@@ -193,12 +123,5 @@ void CompleteTasksTable::checkUncheckAllFiltered()
     {
         static_cast<QCheckBox*>(cellWidget(i, 3)->layout()->itemAt(0)->
             widget())->setChecked(!checkedAnyone);
-    }
-    for (int i = 0; i < rowCount(); i++)
-    {
-        QWidget* statusContainer = cellWidget(i, 3);
-        m_checkedTasks.insert(m_currentFiltredTasks[i],
-            static_cast<QCheckBox*>(statusContainer->layout()->itemAt(0)->
-                widget())->isChecked());
     }
 }

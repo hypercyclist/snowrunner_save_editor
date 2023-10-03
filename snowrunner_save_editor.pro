@@ -10,11 +10,13 @@ CONFIG += c++11
 
 SOURCES += \
     CompleteTasksTable.cpp \
+    CompleteUpgradesTable.cpp \
     Database.cpp \
     GameAtlas.cpp \
     Localization.cpp \
     Map.cpp \
     Region.cpp \
+    TableFilterByRegionMap.cpp \
     Task.cpp \
     Upgrade.cpp \
     Utils.cpp \
@@ -23,12 +25,14 @@ SOURCES += \
 
 HEADERS += \
     CompleteTasksTable.h \
+    CompleteUpgradesTable.h \
     Database.h \
     EditorWindow.h \
     GameAtlas.h \
     Localization.h \
     Map.h \
     Region.h \
+    TableFilterByRegionMap.h \
     Task.h \
     Upgrade.h \
     Utils.h \
@@ -72,7 +76,8 @@ HEADERS += \
     rapidjson/writer.h
 
 FORMS += \
-    EditorWindow.ui
+    EditorWindow.ui \
+    TableFilterByRegionMap.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

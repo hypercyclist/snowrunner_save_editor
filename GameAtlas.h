@@ -2,8 +2,10 @@
 #define GAMEATLAS_H
 
 #include <map>
+#include <vector>
 
 class Region;
+class Task;
 class Localization;
 
 class GameAtlas
@@ -22,7 +24,9 @@ public:
         std::string _initialCacheBlockFileName);
     bool loadGameAtlas(std::string _filename);
     void saveGameAtlasData(std::string _filename);
-    void saveLocalizationCache(std::string _filename);
+
+    std::vector<Task*> completedTasks();
+    void setTasksCompleteFromVectorCodes(std::vector<std::string> _codes);
 
 private:
     std::map<std::string, Region*> m_regions;

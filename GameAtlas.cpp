@@ -378,3 +378,58 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
     writeStream << writeBuffer.GetString();
     writeStream.close();
 }
+
+std::vector<Task*> GameAtlas::completedTasks()
+{
+    std::vector<Task*> result;
+    for (const auto& regionPair : m_regions)
+    {
+        Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
+
+        for (const auto& mapPair : region->maps())
+        {
+            Map* map = mapPair.second;
+
+            for (const auto& taskPair : map->tasks())
+            {
+                Task* task = taskPair.second;
+                if (task->complete())
+                {
+                    result.push_back(task);
+                }
+            }
+        }
+    }
+    return result;
+}
+
+void GameAtlas::setTasksCompleteFromVectorCodes(std::vector<std::string> _codes)
+{
+    for (const auto& regionPair : m_regions)
+    {
+        Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
+
+        for (const auto& mapPair : region->maps())
+        {
+            Map* map = mapPair.second;
+
+            for (const auto& taskPair : map->tasks())
+            {
+                Task* task = taskPair.second;
+                if (std::find(_codes.begin(), _codes.end(), task->code())
+                    != _codes.end() )
+                {
+                    task->setComplete(true);
+                }
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@
 
 class Localization;
 class GameAtlas;
+class TableFilterByRegionMap;
 
 class CompleteTasksTable : public QTableWidget
 {
@@ -15,24 +16,21 @@ public:
     CompleteTasksTable(QWidget* _parent);
     void setLocalization(Localization* _localization);
     void setGameAtlas(GameAtlas* _gameAtlas);
-    void setRegionFilterCombobox(QComboBox* _combobox);
-    void setMapFilterCombobox(QComboBox* _combobox);
-    void setFilterApplyButton(QPushButton* _button);
-    void setCheckAllFilteredButton(QPushButton* _button);
-    void filterMaps();
+    void setFilterBarWidget(TableFilterByRegionMap* _widget);
+
     void updateTasksTable();
-    void setCompleteFromVector(QVector<QString> _completedTasks);
     QVector<QString> completedTasks();
 private:
     Localization* m_localization;
     GameAtlas* m_gameAtlas;
+
+    TableFilterByRegionMap* m_filterBar;
     QComboBox* m_regionFilterCombobox;
     QComboBox* m_mapFilterCombobox;
     QPushButton* m_filterApplyButton;
     QPushButton* m_checkAllFilteredButton;
 
     QVector<QString> m_currentFiltredTasks;
-    QMap<QString, bool> m_checkedTasks;
 private slots:
     void checkUncheckAllFiltered();
 };
