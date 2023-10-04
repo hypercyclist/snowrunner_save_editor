@@ -1,0 +1,23 @@
+<_parent File="azov_4220_antarctic_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker/>
+			<Shaker Frame="BoneExhaustCover" LimitDirectionY="Positive" MinAngle="(0; 20; 0)" MaxAngle="(0; 70; 0)" MaxFrequency="0.15" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_exhaust_3" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="29"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0; 0.624; -0.781)" Origin="(3; 4.645; -0.693)" />
+</TruckAddon>

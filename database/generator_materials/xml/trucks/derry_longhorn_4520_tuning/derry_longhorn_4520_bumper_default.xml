@@ -1,0 +1,43 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="70"
+			>
+				<Motor Damping="0.1" Spring="2" Type="Spring" />
+			</Constraint>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_bumper_default">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitch1" />
+			<Body _template="Hitch" ModelFrame="BoneHitch2" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn4520Bumper" />
+	</GameData>
+</TruckAddon>

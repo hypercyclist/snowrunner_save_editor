@@ -1,0 +1,56 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_addon_flatbed_2">
+		<Body Mass="400">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameR_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameL_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(2.026; 0.232; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(2.026; 0.232; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-0.307; 0.232; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-0.307; 0.232; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-2.624; 0.232; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-2.624; 0.232; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.846; 0.215; -1.247)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.846; 0.215; 1.247)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.846; 0.215; -0.087)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.846; 0.215; 0.087)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_FLATBED_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_FLATBED_2_NAME"
+		/>
+		<InstallSocket Type="FrameAddon" Offset="(0;-0.05;0)" />
+		<AddonSlots InitialOffset="(0.98; 0.276; 0)" OffsetStep="(-2.478; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

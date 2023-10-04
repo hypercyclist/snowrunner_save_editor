@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_bumper_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.912; 1.64; -0.284)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(3.912; 1.64; 0.284)" Scale="(1; 1; 1.5)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(3.912; 1.64; -0.284)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(3.912; 1.64; 0.284)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<_parent File="derry_longhorn_4520_beacon_default" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="3.5" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="3.5" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.967; 0.254; 0.000)" Org="(0.827; 3.468; -1.011)" ParentFrame="BoneRotator1" />
+			<Light Dir="(-0.967; 0.254; 0.000)" Pos="(0.827; 3.468; -1.011)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(-0.967; 0.254; 0.000)" Pos="(0.827; 3.468; -1.011)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(-0.967; 0.254; 0.000)" Pos="(0.827; 3.468; -1.011)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(0.923; 3.468; -1.011)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.967; 0.254; 0.000)" Org="(1.019; 3.468; 1.011)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0.967; 0.254; 0.000)" Pos="(1.019; 3.468; 1.011)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.967; 0.254; 0.000)" Pos="(1.019; 3.468; 1.011)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.967; 0.254; 0.000)" Pos="(1.019; 3.468; 1.011)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(0.923; 3.468; 1.011)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

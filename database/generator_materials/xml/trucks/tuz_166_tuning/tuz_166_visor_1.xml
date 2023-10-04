@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.443; 1.79; -0.614)" />
+			<Flare _template="MarkerBeacon" Pos="(0.478; 1.808; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(0.443; 1.79; 0.614)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Tuz166Visor" />
+	</GameData>
+</TruckAddon>

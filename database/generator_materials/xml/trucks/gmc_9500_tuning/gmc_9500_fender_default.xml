@@ -1,0 +1,56 @@
+<_templates>
+	<Body>
+		<Mudguard2 Collisions="None" Mass=".5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-20"
+				MaxLimit="20"
+			>
+				<Motor Damping="0.075" Spring=".75" Type="Spring" />
+			</Constraint>
+		</Mudguard2>
+		<Mudguard1 AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="0"
+			/>
+		</Mudguard1>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_fender_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body _template="Mudguard1" ModelFrame="BoneLeftMudguard1_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneRightMudguard1_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneLeftMudguardPart_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneRightMudguardPart_cdt" />
+			<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Fender" />
+	</GameData>
+</TruckAddon>

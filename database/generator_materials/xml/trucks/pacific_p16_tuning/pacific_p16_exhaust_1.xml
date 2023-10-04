@@ -1,0 +1,59 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.4"
+			ColorMultAtDay="0.3"
+			Dir="(0; 0; -1)"
+			DirAngle="90"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MaxAngle="(0.4; 0.4; 0.4)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneExhaustRoot_cdt"
+                MinAngle="(0.1; 0.1; 0.1)"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_exhaust_1">
+		<Body ImpactType="Truck" Mass="100" >
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(0.730; 2.767; -1.335)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.730; 2.618; -1.335)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.730; 2.477; -1.335)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.730; 2.321; -1.335)" />
+		</Ignition>
+	</ModelAttachments>    
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_WEDGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_WEDGED_NAME"
+		/>
+		<InstallSocket Type="PacificP16Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.436; -0.145; -0.888)"
+		IsLight="true"
+		Origin="(0.505; 3.586; -1.637)"
+		Speed="3.82"
+	/>
+</TruckAddon>

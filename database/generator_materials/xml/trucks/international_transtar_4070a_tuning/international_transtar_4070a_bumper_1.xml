@@ -1,0 +1,21 @@
+<_parent File="international_transtar_4070a_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_bumper_1" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_TRAPEZIUM_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_TRAPEZIUM_NAME"
+		/>
+	</GameData>
+</TruckAddon>

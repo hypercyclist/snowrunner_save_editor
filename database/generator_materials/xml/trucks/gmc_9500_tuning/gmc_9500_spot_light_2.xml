@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_spot_light_2">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.962; 2.747; -0.378)" />
+			<Model _template="HeadLightRay" Org="(1.962; 2.747; 0.378)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.30" Pos="(1.962; 2.747; -0.378)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(1.958; 2.778; -0.192)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(1.958; 2.778; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(1.958; 2.778; 0.192)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.30" Pos="(1.962; 2.747; 0.378)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(1.93; 2.812; -0.602)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(1.93; 2.812; -0.602)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(1.93; 2.812; -0.602)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(1.93; 2.812; -0.602)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.902; 2.809; -0.590)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(1.902; 2.813; 0.627)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0; 0.1; 1)" Pos="(1.902; 2.813; 0.627)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.902; 2.813; 0.627)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.902; 2.813; 0.627)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.902; 2.809; 0.590)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Spotlight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,20 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<Snorkel Origin="(2.019; 2.692; -0.978)" />		
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_air_filter2"/>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="VoronGradAirFilter" />
+	</GameData>	
+</TruckAddon>

@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_visor_1" />
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="Azov64131Visor" />
+	</GameData>
+</TruckAddon>

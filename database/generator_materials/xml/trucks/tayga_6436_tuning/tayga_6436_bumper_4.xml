@@ -1,0 +1,91 @@
+<_templates Include="trucks">
+	<Flare>
+		<MarkerBeacon Color="g(117; 94; 72) x 0.7" Size="0.5" />
+		<IgnitionSignalWhiteOuter
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 0.4"
+			ColorMultAtDay="0.5"
+			Dir="(1; 0; 0)"
+			DirAngle="120"
+			Size="0.4"
+		/>
+		<IgnitionSignalWhiteInner
+			AspectRatio="1"
+			Color="g(255; 255; 255) x 0.35"
+			ColorMultAtDay="0.3"
+			Dir="(1; 0; 0)"
+			DirAngle="40"
+			Size="0.3"
+		/>
+		<HeadLight
+			AspectRatio="1.4"
+			AttenEnd="200"
+			AttenStart="170"
+			Color="g(141; 133; 117) x 0.7"
+			ColorMultAtDay="0.7"
+			Dir="(1; 0; 0)"
+			DirAngle="180"
+			Reflections="true"
+			Size="1"
+			SizeMultAtDay="0.5"
+		/>
+	</Flare>
+</_templates>
+<_parent File="tayga_6436_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_bumper_4" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.304; 1.548; -0.291)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.304; 1.548; 0.291)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.14; 1.134; -0.921)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.14; 1.134; 0.921)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.6" Pos="(4.304; 1.548; -0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.6" Pos="(4.304; 1.548; 0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.304; 1.548; -0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.304; 1.548; 0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(4.14; 1.134; -0.921)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(4.14; 1.134; 0.921)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+		<Ignition>
+			<Light
+				_template="IgnitionSignalWhite"
+				Color="g(255; 225; 185) x 1.0"
+				Dir="(1; 0; 0)"
+				Pos="(4.3; 1.2; 0)"
+			/>
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(4.304; 1.548; -0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(4.304; 1.548; 0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.3" Size="0.3" Pos="(4.141; 1.132; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.3" Size="0.3" Pos="(4.141; 1.132; 1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.3" Size="0.3" Pos="(4.141; 1.132; -0.925)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteOuter" Color="g(255; 235; 215) x 0.3" Size="0.3" Pos="(4.141; 1.132; 0.925)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.4" Size="0.4" Pos="(4.304; 1.548; -0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.3" Size="0.4" Pos="(4.304; 1.548; 0.291)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.3" Size="0.3" Pos="(4.141; 1.132; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.3" Size="0.3" Pos="(4.141; 1.132; 1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.3" Size="0.3" Pos="(4.141; 1.132; -0.925)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhiteInner" Color="g(255; 235; 195) x 0.3" Size="0.3" Pos="(4.141; 1.132; 0.925)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Bumper" />
+	</GameData>
+</TruckAddon>

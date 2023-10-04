@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4.3"
+	/>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_beacon_1">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(0.94; 2.33; 0)" ParentFrame="BoneRotator" />
+			<Light Pos="(0.94; 2.33; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(0.94; 2.33; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(0.94; 2.33; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(0.875; 2.33; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="6"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CAGED_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CAGED_BEACON_1_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Flasher" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,57 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_headlamp_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<!--LED-->
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.934)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.884)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.835)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.785)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.736)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; -0.686)" />
+			
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.934)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.884)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.835)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.785)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.736)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; -0.686)" />
+			
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.686)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.736)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.785)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.835)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.884)" />
+			<Flare _template="LED" Pos="(4.583; 3.596; 0.934)" />
+			
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.686)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.736)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.785)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.835)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.884)" />
+			<Flare _template="LED" Pos="(4.583; 3.547; 0.934)" />
+			<!--LED-->
+			<Model _template="HeadLightRay" Org="(4.583; 3.571; -0.81)" />
+			<Model _template="HeadLightRay" Org="(4.583; 3.571; 0.81)" />
+			<Flare _template="BlueStreak" Size=".6" Pos="(4.583; 3.571; -0.81)" />
+			<Flare _template="BlueStreak" Size=".6" Pos="(4.583; 3.571; 0.81)" />
+			<Flare _template="HeadLight" AspectRatio="2" Size=".5" Color="g(255; 235; 200) x 0.7" Pos="(4.593; 3.571; -0.81)" />
+			<Flare _template="HeadLight" AspectRatio="2" Size=".5" Color="g(255; 235; 200) x 0.7" Pos="(4.593; 3.571; 0.81)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KOLOB_74760_HEADLAMP_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KOLOB_74760_HEADLAMP_1_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Headlamp" />
+	</GameData>
+</TruckAddon>

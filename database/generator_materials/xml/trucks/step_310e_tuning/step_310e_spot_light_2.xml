@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_310e_tuning/step_310e_spot_light_2" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.006; 2.773; -0.568)" />
+			<Model _template="HeadLightRay" Org="(3.006; 2.773; 0.543)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(3.006; 2.773; -0.568)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(3.006; 2.773; 0.543)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(3.006; 2.773; -0.285)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(3.006; 2.773; 0.267)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(3.006; 2.773; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="step_310eSpotLight2" />
+	</GameData>
+</TruckAddon>

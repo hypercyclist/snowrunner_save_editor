@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_spot_light_2">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.24; 3.995; -0.535)" />
+			<Model _template="HeadLightRay" Org="(1.24; 3.995; 0.535)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="100" Size=".45" Pos="(1.21; 3.995; -0.535)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="100" Size=".45" Pos="(1.21; 3.995; 0.535)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="100" Size=".45" Pos="(1.21; 3.995; -0.27)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="100" Size=".45" Pos="(1.21; 3.995; 0.27)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="100" Size=".45" Pos="(1.21; 3.995; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="PacificP12WSpotLight" />
+	</GameData>
+</TruckAddon>

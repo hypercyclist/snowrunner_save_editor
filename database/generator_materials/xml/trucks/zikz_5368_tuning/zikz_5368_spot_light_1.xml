@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_spot_light_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.935; 2.970; -0.558)" />
+			<Model _template="HeadLightRay" Org="(1.935; 2.970; 0.544)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.935; 2.970; -0.558)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.935; 2.970; 0.544)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.930; 2.997; -0.275)" />
+			<Flare _template="HeadLight" DirAngle="100" Size=".5" Pos="(1.930; 2.997; 0.271)" />
+			<Flare _template="HeadLight" DirAngle="100" Size=".5" Pos="(1.930; 2.997; -0.001)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="zikz5368SpotLight" />
+	</GameData>
+</TruckAddon>

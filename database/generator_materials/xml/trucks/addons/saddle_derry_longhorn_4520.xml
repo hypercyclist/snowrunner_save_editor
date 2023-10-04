@@ -1,0 +1,21 @@
+<_parent File="saddle_high" />
+<TruckAddon>
+	<PhysicsModel _noinherit="true" Mesh="trucks/addons/saddle_derry_longhorn_4520">
+		<Body Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SADDLE_HIGH_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SADDLE_HIGH_NAME"
+		/>
+		<InstallSocket Type="SaddleDerryLonghorn4520" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_bumper_2" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_bumper_1"/>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_AXLEPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_AXLEPROT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

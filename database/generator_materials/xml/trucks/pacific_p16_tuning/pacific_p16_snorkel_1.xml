@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.818; 3.306; -0.959)" />
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_snorkel_1"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="19"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="PacificP16Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_bumper_3" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SLANTED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SLANTED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

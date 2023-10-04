@@ -1,0 +1,199 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheel
+			SuspensionHeight="0.04"
+			Location="rear"
+			SuspensionStrength="0.04"
+			Torque="default"
+			SuspensionMin="-0.5"
+			ParentFrame="BoneBack_cdt"
+			ConnectedToHandbrake="true"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+	</Flare>
+	<Body>
+		<Leg Mass="500" NoFoliageCollisions="true">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Name="Leg"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="1.1"
+			>
+				<Motor Force="500000" Type="Position" />
+			</Constraint>
+			<Body
+				AngularDamping="10.0"
+				Mass="10"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				/>
+			</Body>
+		</Leg>
+		<Lamp Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-20"
+				PlaneMax="20"
+			>
+				<AllMotor Damping="5" Spring="100" Type="Spring" />
+			</Constraint>
+		</Lamp>
+	</Body>
+</_templates>
+<Truck Type="Trailer" AttachType="Saddle">
+	<TruckData>
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="offroad_1"
+			DefaultWheelType="wheels_heavy_double2"
+		>
+			<Wheel _template="TrailerWheel" Pos="(-5.651; 0.69; 1.195)" />
+			<Wheel _template="TrailerWheel" Pos="(-5.651; 0.69; 1.195)" RightSide="true" />
+			<Wheel _template="TrailerWheel" Pos="(-7.452; 0.69; 1.195)" />
+			<Wheel _template="TrailerWheel" Pos="(-7.452; 0.69; 1.195)" RightSide="true" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="2.4"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-9.877"
+			MaxX="6.574"
+		/>
+		<Constraint _template="TrailerRagdoll" TwistMin="-37" TwistMax="37" />
+		<CompatibleWheels Scale="0.73" Type="wheels_heavy_double2" />
+		<Camera Center="(-3.4; 1.2; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+		<Foot Origin="(5.149; -0.426; 1.094)" />
+		<Foot Origin="(5.149; -0.426; -1.094)" />
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				Tau="0.04"
+				TerminalFix="true"
+				Position="1.15"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_heavy_construction_equipment">
+		<Body
+			CenterOfMassOffset="(0; -1; 0.5)"
+			ImpactType="Truck"
+			Mass="10000"
+		>
+			<Body
+				CenterOfMassOffset="(0; -1; 0.5)"
+				Mass="9000"
+				ModelFrame="BoneBack_cdt"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="Lamp" ModelFrame="BoneLamp1_cdt" />
+				<Body _template="Lamp" Mass="3" ModelFrame="BoneLamp2_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneLegRight_cdt">
+				<Body ModelFrame="BoneFootRight_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneLegLeft_cdt">
+				<Body ModelFrame="BoneFootLeft_cdt" />
+			</Body>
+			<Body _template="Lamp" ModelFrame="BoneLamp3_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-9.685; 0.881; 0)" ParentFrame="BoneBack_cdt" />
+			<Flare _template="StopSignal" Pos="(-8.979; 1.379; -1.258)" ParentFrame="BoneBack_cdt" />
+			<Flare _template="StopSignal" Pos="(-8.979; 1.379; 1.258)" ParentFrame="BoneBack_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="StopSignal" Pos="(-9.785; 1.379; 0)" ParentFrame="BoneBack_cdt" />
+			<Flare _template="StopSignal" Size="0.5" Pos="(-8.979; 1.379; -1.032)" ParentFrame="BoneBack_cdt" />
+			<Flare _template="StopSignal" Size="0.5" Pos="(-8.979; 1.379; 1.032)" ParentFrame="BoneBack_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-10; 1; 0)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-8.973; 1.342; 0.12)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-8.973; 1.342; -0.12)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-8.973; 1.342; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.979; 1.381; 1.263)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.979; 1.381; -1.263)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.979; 1.381; 1.044)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.979; 1.381; -1.044)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-8.99; 1.734; -1.729)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-8.99; 1.734; 1.729)" />
+			<Flare _template="HeadLight" Dir="(0.001; -0.922; -0.387)" DirAngle="100" Size=".8" Pos="(-5.9; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			<Flare _template="HeadLight" Dir="(0.001; -0.922; -0.387)" DirAngle="100" Size=".8" Pos="(-6.1; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			<Flare _template="HeadLight" Dir="(0.001; -0.922; -0.387)" DirAngle="100" Size=".8" Pos="(-6.4; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			<Flare _template="HeadLight" Dir="(0.001; -0.922; -0.387)" DirAngle="100" Size=".8" Pos="(-6.7; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			<Flare _template="HeadLight" Dir="(0.001; -0.922; -0.387)" DirAngle="100" Size=".8" Pos="(-6.9; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			<!--<Light _template="IgnitionSignalWhite" AttenEnd="1" InnerCone="120" OuterCone="160" Dir="(0.001; -0.922; -0.387)"  Pos="(-6.4; 6.726; 0.97)" ParentFrame="BoneLamp1_cdt" />
+			-->
+			<Model
+				_template="HeadLightRay"
+				Scale="(2; 1; 0.5)"
+				Org="(-6.4; 6.726; 0.97)"
+				Dir="(0.001; -0.922; -0.387)"
+				ParentFrame="BoneLamp1_cdt"
+			/>
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/semitrailer_heavy_construction_equipment_01_lmk" MinScale="0.7" MaxScale="1.5" />
+	<GameData Price="7500" IsQuest="true">
+		<WinchSocket Pos="(4.856; 1.497; -1.791)" />
+		<CraneSocket Pos="(4.856; 1.497; -1.791)" />
+		<WinchSocket Pos="(4.856; 1.497; 1.791)" />
+		<CraneSocket Pos="(4.856; 1.497; 1.791)" />
+		<WinchSocket Pos="(-1.165; 1.502; -1.791)" />
+		<CraneSocket Pos="(-1.165; 1.502; -1.791)" />
+		<WinchSocket Pos="(-1.165; 1.502; 1.791)" />
+		<CraneSocket Pos="(-1.165; 1.502; 1.791)" />
+		<WinchSocket Pos="(-9.406; 1.848; -1.781)" />
+		<CraneSocket Pos="(-9.406; 1.848; -1.781)" />
+		<WinchSocket Pos="(-9.406; 1.848; 1.781)" />
+		<CraneSocket Pos="(-9.406; 1.848; 1.781)" />
+		<WinchSocket Pos="(-2.146; 4.484; -3.195)" />
+		<CraneSocket Pos="(-2.146; 4.484; -3.195)" />
+		<WinchSocket Pos="(-2.146; 4.484; 1.844)" />
+		<CraneSocket Pos="(-2.146; 4.484; 1.844)" />
+		<WinchSocket Pos="(8.819; 1.746; 0.008)" />
+		<CraneSocket Pos="(8.819; 1.746; 0.008)" />
+		<RequiredAddon _template="SaddleHigh" />
+		<InstallSocket Offset="(8.819; 1.84; 0.008)" Type="LargeSemitrailer" />
+		<UiDesc
+			UiDesc="UI_SEMITRAILER_HEAVY_CONSTRUCTION_EQUIPMENT_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_SEMITRAILER_HEAVY_CONSTRUCTION_EQUIPMENT_NAME"
+		/>
+	</GameData>
+</Truck>

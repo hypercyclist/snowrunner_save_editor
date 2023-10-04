@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(1.888; 2.864; -0.803)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(1.888; 2.863; 0.799)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(1.887; 2.863; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Visor" />
+	</GameData>
+</TruckAddon>

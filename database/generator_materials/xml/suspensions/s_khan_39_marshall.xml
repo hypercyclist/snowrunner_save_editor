@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="120"
+		Name="khan_39_marshall_suspension_default"
+	>
+		<Suspension
+			BrokenSuspensionMax="0.15"
+			Height="0.15"
+			Strength="0.025"
+			SuspensionMin="-0.28"
+			WheelType="front"
+			Damping=".15"
+		/>
+		<Suspension
+			BrokenSuspensionMax="0.15"
+			Height="0.15"
+			Strength="0.02"
+			SuspensionMin="-0.28"
+			WheelType="rear"
+			Damping=".15"
+		/>
+		<GameData
+			Price="1700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

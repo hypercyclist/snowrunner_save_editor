@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="tayga_6436_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.229; 2.686; -1.043)" />
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_snorkel_2" />
+	<GameData
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

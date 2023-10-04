@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_beacon_default">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.89; 0.162; -0.426)" Org="(4.553; 3.687; -0.855)" ParentFrame="BoneRotator1" />
+			<Light Dir="(0.89; 0.162; -0.426)" Pos="(4.553; 3.687; -0.855)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(4.553; 3.687; -0.855)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(4.553; 3.687; -0.855)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(4.522; 3.681; -0.84)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(4.522; 3.684; 0.874)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0; 0.1; 1)" Pos="(4.522; 3.684; 0.874)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(4.522; 3.684; 0.874)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(4.522; 3.684; 0.874)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(4.522; 3.681; 0.84)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticBeacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_grill_default">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+			<Body ImpactType="Truck" Mass="15" ModelFrame="BoneCabinPrismatic_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="grill"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_GRILL_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_GRILL_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Grill" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<_parent File="ford_clt9000_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_bumper_03" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; -1.02)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; 1.02)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; -0.9)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; 0.9)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; -0.78)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; 0.78)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; -0.66)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; 0.66)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; -0.54)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.235; 0.428; 0.54)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FLATHEAD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FLATHEAD_NAME"
+		/>
+	</GameData>
+</TruckAddon>

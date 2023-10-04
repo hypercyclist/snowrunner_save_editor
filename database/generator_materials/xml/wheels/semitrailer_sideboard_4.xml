@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Heavy"
+	Mesh="wheels/semitrailer_sideboard_4"
+	Radius="0.594"
+	Width = "0.661"
+>
+	<WheelTracks _template="DefaultDouble" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />	
+</TruckWheel>

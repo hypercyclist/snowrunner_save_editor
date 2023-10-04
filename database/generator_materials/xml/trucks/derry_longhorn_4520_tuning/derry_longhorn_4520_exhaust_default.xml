@@ -1,0 +1,42 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(1; 1; 1)" MaxFrequency="1" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustCover" LimitDirectionZ="Negative" MinAngle="(0; 0; 20)" MaxAngle="(0; 0; 130)" MaxFrequency="0.15" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_exhaust_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="50"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn4520Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.819; 0.574; 0)"
+		IsLight="True"
+		Origin="(0.355; 3.545; -0.596)"
+		Speed="3.5"
+	/>
+</TruckAddon>

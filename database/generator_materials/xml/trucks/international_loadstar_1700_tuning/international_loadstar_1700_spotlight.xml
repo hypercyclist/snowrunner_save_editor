@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_spotlight" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.479; 1.693; 0.934)" />
+			<Flare _template="HeadLight" Size=".4" Color="g(245; 215; 170) x 0.5" Pos="(1.479; 1.693; 0.934)" />
+			<Flare _template="BlueStreak" Pos="(1.479; 1.693; 0.934)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 10" Pos="(1.479; 1.693; 0.934)" />
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Searchlight" />
+	</GameData>
+</TruckAddon>

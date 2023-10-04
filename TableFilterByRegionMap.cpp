@@ -8,6 +8,7 @@
 TableFilterByRegionMap::TableFilterByRegionMap(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TableFilterByRegionMap),
+    m_localization(nullptr),
     m_gameAtlas(nullptr)
 {
     ui->setupUi(this);
@@ -19,6 +20,11 @@ TableFilterByRegionMap::TableFilterByRegionMap(QWidget *parent) :
 TableFilterByRegionMap::~TableFilterByRegionMap()
 {
     delete ui;
+}
+
+void TableFilterByRegionMap::setLocalization(Localization* _localization)
+{
+    m_localization = _localization;
 }
 
 Ui::TableFilterByRegionMap* TableFilterByRegionMap::gui()
@@ -33,28 +39,38 @@ void TableFilterByRegionMap::setGameAtlas(GameAtlas* _gameAtlas)
 
 void TableFilterByRegionMap::filterMaps()
 {
-    if (ui->regionFilterCombobox->findText("Все") == -1)
-        ui->regionFilterCombobox->addItem("Все");
+    ui->regionFilterCombobox->blockSignals(true);
 
+    std::string currentRegion = ui->regionFilterCombobox->currentText().toStdString();
+    std::string currentMap = ui->mapFilterCombobox->currentText().toStdString();
+
+    ui->regionFilterCombobox->clear();
     ui->mapFilterCombobox->clear();
 
-    if (ui->mapFilterCombobox->findText("Все") == -1)
-        ui->mapFilterCombobox->addItem("Все");
+    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+
+    if (ui->regionFilterCombobox->findText(allString.c_str()) == -1)
+        ui->regionFilterCombobox->addItem(allString.c_str());
+
+    if (ui->mapFilterCombobox->findText(allString.c_str()) == -1)
+        ui->mapFilterCombobox->addItem(allString.c_str());
 
     QString currentRegionFilter = ui->regionFilterCombobox->currentText();
 
-    for (auto regionPair : m_gameAtlas->regions())
+    for (const auto& regionPair : m_gameAtlas->regions())
     {
-        std::string regionName = regionPair.second->name(Language::RUSSIAN);
+        std::string regionName = regionPair.second->name(m_localization->defaultLanguage());
         if (ui->regionFilterCombobox->findText(regionName.c_str()) == -1)
             ui->regionFilterCombobox->addItem(regionName.c_str());
 
-        if (currentRegionFilter == "Все" || regionName.c_str() == currentRegionFilter)
+        if (currentRegionFilter == allString.c_str() || regionName.c_str() == currentRegionFilter)
         {
-            for (auto mapPair : regionPair.second->maps())
+            for (const auto& mapPair : regionPair.second->maps())
             {
-                ui->mapFilterCombobox->addItem(mapPair.second->name(Language::RUSSIAN).c_str());
+                ui->mapFilterCombobox->addItem(mapPair.second->name(m_localization->defaultLanguage()).c_str());
             }
         }
     }
+
+    ui->regionFilterCombobox->blockSignals(false);
 }

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4" />
+			<Shaker Frame="BoneExhaustRight" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_exhaust_3">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+		<InstallSocket Type="PacificP12wExhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.863; 0.506; 0)" IsLight="true" Origin="(0.174; 4.293; 0.706)" Speed="3.82" />
+	<Exhaust Dir="(-0.863; 0.506; 0)" IsLight="true" Origin="(0.174; 4.293; -0.706)" Speed="3.82" />
+</TruckAddon>

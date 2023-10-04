@@ -1,0 +1,38 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			ParentFrame="BoneExhaust"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<_parent File="tayga_6436_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_exhaust_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(0.546; 2.495; 1.207)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.546; 2.349; 1.207)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.546; 2.205; 1.207)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.546; 2.052; 1.207)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_WEDGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_WEDGED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.696; 0.123; 0.707)" Origin="(0.546; 3.637; 1.343)" />
+</TruckAddon>

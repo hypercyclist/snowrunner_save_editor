@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_beacon_default" />
+<TruckAddon>
+	<Rotator RotationSpeed="6" />
+	<Rotator RotationSpeed="6.3" />
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_beacon_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Model Org="(1.246; 3.8; -0.799)" />
+			<Light Pos="(1.246; 3.8; -0.799)" />
+			<Flare Pos="(1.246; 3.8; -0.799)" />
+			<Flare Pos="(1.246; 3.8; -0.799)" />
+			<Flare Pos="(1.246; 3.8; -0.799)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Org="(1.246; 3.8; 0.799)" />
+			<Light Pos="(1.246; 3.8; 0.799)" />
+			<Flare Pos="(1.246; 3.8; 0.799)" />
+			<Flare Pos="(1.246; 3.8; 0.799)" />
+			<Flare Pos="(1.246; 3.8; 0.799)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+		<InstallSocket Type="Kolob74941Beacon" />
+	</GameData>
+</TruckAddon>

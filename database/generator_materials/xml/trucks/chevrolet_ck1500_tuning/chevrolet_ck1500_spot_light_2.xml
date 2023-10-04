@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_spot_light_2" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.188; 2.081; -0.43)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(0.188; 2.081; 0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.188; 2.081; -0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.188; 2.081; 0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.173; 2.095; -0.211)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.173; 2.095; 0.21)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.173; 2.095; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500SpotLight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData DiffLockInstalled="true" />
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="hoods"
+		Category="diff_lock"
+		Price="4200"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_DIFF_LOCK_SWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_DIFF_LOCK_SWITCHABLE_NAME"
+		/>
+		<InstallSocket Type="GMC9500DiffLock" />
+	</GameData>
+</TruckAddon>

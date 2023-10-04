@@ -1,0 +1,16 @@
+<_parent File="international_scout_800_rear_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_rear_bumper_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

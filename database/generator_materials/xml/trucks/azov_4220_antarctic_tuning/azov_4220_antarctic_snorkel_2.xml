@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.965; 4.166; 0.631)" />
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_snorkel_2" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="5500"
+		UnlockByExploration="false"
+		UnlockByRank="28"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticSnorkel" />
+	</GameData>
+</TruckAddon>

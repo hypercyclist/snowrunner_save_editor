@@ -1,0 +1,55 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="0.75"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.175"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_cabin_protector_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="50"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="25" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.213; 3.322; -0.778)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.213; 2.214; -0.778)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.213; 2.214; 0.778)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.213; 2.214; 0.778)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_PROTECTOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_PROTECTOR_1_NAME"
+		/>
+		<InstallSocket Type="PacificP12WCabinProtector" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_parent File="don_71_rear_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_rear_bumper_1" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_NAME"
+		/>
+		<InstallSocket Type="Don71RearBumper1" />
+	</GameData>
+</TruckAddon>

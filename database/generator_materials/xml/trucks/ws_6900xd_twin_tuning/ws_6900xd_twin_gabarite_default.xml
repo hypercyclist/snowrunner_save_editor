@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(5.204; 3.425; -0.778)" />
+			<Flare _template="MarkerBeacon" Pos="(5.204; 3.425; 0.778)" />
+			<Flare _template="MarkerBeacon" Pos="(5.204; 3.426; -0.178)" />
+			<Flare _template="MarkerBeacon" Pos="(5.204; 3.426; 0.178)" />
+			<Flare _template="MarkerBeacon" Pos="(5.203; 3.426; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinGabarite" />
+	</GameData>
+</TruckAddon>

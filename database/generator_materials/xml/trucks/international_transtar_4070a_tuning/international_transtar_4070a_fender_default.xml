@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_fender_default">
+		<Body Collisions="None" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="10" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="10" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="InternationalTranstar4070Fender" />
+	</GameData>
+</TruckAddon>

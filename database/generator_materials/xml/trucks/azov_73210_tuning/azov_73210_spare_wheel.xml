@@ -1,0 +1,27 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel1" HideThreshold="0.5" />
+		<Mesh Frame="wheel2" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_spare_wheel">
+		<Body ImpactType="Truck" Mass="200">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="wheel_addon"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEELS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEELS_NAME"
+		/>
+		<InstallSocket Type="Azov73210SpareWheel" />
+	</GameData>
+</TruckAddon>

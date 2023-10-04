@@ -1,0 +1,17 @@
+<_parent File="azov_73210_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_exhaust_1" />
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_BACKROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_BACKROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.871; 0.491; 0.000)" Origin="(1.763; 2.703; 1.004)" />
+</TruckAddon>

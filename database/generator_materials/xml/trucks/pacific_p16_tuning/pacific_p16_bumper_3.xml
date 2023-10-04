@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<Antenna Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-7"
+				PlaneMax="7"
+			>
+				<PlaneMotor Damping=".1" Spring="60" Type="Spring" />
+				<ConeMotor Damping=".1" Spring="60" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_bumper_3">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Antenna" ModelFrame="BoneAntennaLeft_cdt" />
+			<Body _template="Antenna" ModelFrame="BoneAntennaRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_NAME"
+		/>
+		<InstallSocket Type="PacificP16Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,14 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_exhaust_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC" UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME" />
+	</GameData>
+	<Exhaust Dir="(-0; 0.47; 0.883)" Origin="(0.268; 3.926; 0.961)" />
+	<Exhaust Dir="(-0; 0.47; -0.883)" Origin="(0.268; 3.919; -0.954)" />
+</TruckAddon>

@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="20">
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="3.8" ParentFrame="BoneExhaustLeft_cdt" />
+			<Shaker Frame="BoneExhaustRight" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="4" ParentFrame="BoneExhaustRight_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneExhaustLeft_cdt" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneExhaustRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Kolob74941Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.948; 0.319; 0)" Origin="(0.093; 3.92; -0.583)" Speed="3.71" />
+	<Exhaust Dir="(-0.948; 0.319; 0)" Origin="(0.093; 3.92; 0.583)" Speed="3.82" />
+</TruckAddon>

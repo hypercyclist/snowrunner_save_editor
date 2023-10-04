@@ -1,0 +1,74 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Size="0.12"
+		/>
+	</Flare>
+	<Body>
+		<ExhaustTemplate
+			CenterOfMassOffset="(0; 0; 0)"
+			Friction="0.001"
+			ImpactType="Truck"
+			Mass="20"
+		>
+			<Constraint
+				LinearLimitsX="(-0.1;0)"
+				LinearLimitsY="(-0.1;0)"
+				LinearLimitsZ="(-0.1;0.1)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<_parent File="international_fleetstar_f2070a_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers _noinherit="True">
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="3.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="3.9" ParentFrame="BoneLeftExhaust_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel _noinherit="True" Mesh="trucks/international_fleetstar_f2070a_tuning/international_fleetstar_f2070a_exhaust_1">
+		<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="20" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="ExhaustTemplate" ModelFrame="BoneRightExhaust_cdt" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneLeftExhaust_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 2.084; -1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.97; -1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.859; -1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.74; -1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 2.084; 1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.97; 1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.859; 1.035)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.945; 1.74; 1.035)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.725; 0.324; -0.608)" IsLight="true" Origin="(1.706; 3.13; -1.141)" Speed="3.82" />
+	<Exhaust Dir="(-0.725; 0.324; 0.608)" IsLight="true" Origin="(1.706; 3.13; 1.141)" Speed="3.82" />
+</TruckAddon>

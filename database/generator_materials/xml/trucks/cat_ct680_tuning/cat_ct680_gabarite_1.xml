@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_gabarite_1">
+		<Body Collisions="None" Mass="8" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="2" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.663; 2.935; -0.861)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(1.663; 2.935; 0.861)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+		<InstallSocket Type="Cat680Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="ws_4964_white_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/ws_4964_white_tuning/ws_4964_white_bumper_3">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

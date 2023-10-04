@@ -1,0 +1,22 @@
+<_parent File="ws_6900xd_twin_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_bumper_3" />
+	<ModelAttachments _noinherit="true" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

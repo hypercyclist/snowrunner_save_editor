@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_visor_2" />
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_NAME"
+		/>
+		<InstallSocket Type="Kolob74941Visor" />
+	</GameData>
+</TruckAddon>

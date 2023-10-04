@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(1.315; 3.603; 0.001)" />
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_snorkel_2" />
+	<GameData
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_NAME"
+		/>
+		<InstallSocket Type="Azov64131Snorkel2" />
+	</GameData>
+</TruckAddon>

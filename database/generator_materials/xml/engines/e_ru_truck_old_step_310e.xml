@@ -1,0 +1,38 @@
+<_templates>
+	<Engine>
+		<RUTruckOldEngine
+			BrakesDelay="0.5"
+			CriticalDamageThreshold="0.7"
+			DamageCapacity="200"
+			DamagedMinTorqueMultiplier="1.0"
+			DamagedMaxTorqueMultiplier="0.5"
+			MaxDeltaAngVel="0.01"
+		/>
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUTruckOldEngine"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="150"
+		DamagedConsumptionModifier="2.0"
+		FuelConsumption="5.0"
+		Name="ru_truck_old_engine_step_310e"
+		Torque="150000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.5"
+	>
+		<GameData
+			Price="2900"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_TRUCK_OLD_STEP_310E_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_TRUCK_OLD_STEP_310E_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

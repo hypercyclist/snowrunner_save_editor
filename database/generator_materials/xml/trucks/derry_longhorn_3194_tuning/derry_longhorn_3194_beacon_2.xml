@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="derry_longhorn_3194_beacon_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_beacon_2" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.863; 0.506; 0)" Org="(1.076; 3.489; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.863; 0.506; 0)" Pos="(1.076; 3.489; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.863; 0.506; 0)" Pos="(1.076; 3.489; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.863; 0.506; 0)" Pos="(1.076; 3.489; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.046; 3.471; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CAGED_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CAGED_BEACON_1_NAME"
+		/>
+	</GameData>
+</TruckAddon>

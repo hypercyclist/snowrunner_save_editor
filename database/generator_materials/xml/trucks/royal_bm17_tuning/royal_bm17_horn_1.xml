@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_horn_1"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Horn" />
+	</GameData>
+</TruckAddon>

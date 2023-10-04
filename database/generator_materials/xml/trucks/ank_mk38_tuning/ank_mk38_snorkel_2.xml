@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(0.655; 3.161; 1.151)" />
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_snorkel_2" />
+	<GameData
+		Price="4600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Size="0.4" Dir="(1; 0; 0)" DirAngle="130" Pos="(1.558; 3.784; -0.74)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Dir="(1; 0; 0)" DirAngle="130" Pos="(1.558; 3.784; 0.74)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Dir="(1; 0; 0)" DirAngle="130" Pos="(1.651; 3.785; -0.155)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Dir="(1; 0; 0)" DirAngle="130" Pos="(1.651; 3.785; 0.155)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Dir="(1; 0; 0)" DirAngle="130" Pos="(1.684; 3.785; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="PacificP12wGabarite" />
+	</GameData>
+</TruckAddon>

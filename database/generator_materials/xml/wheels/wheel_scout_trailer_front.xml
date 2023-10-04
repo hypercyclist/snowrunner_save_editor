@@ -1,0 +1,12 @@
+<_templates Include="trucks" />
+<TruckWheel
+	Mass="30"
+	Mesh="wheels/wheel_scout_trailer_front"
+	Radius="0.165"
+	Width = "0.068"
+>
+	<WheelTracks _template="Default" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />	
+</TruckWheel>
+

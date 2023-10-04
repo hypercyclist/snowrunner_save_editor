@@ -1,0 +1,32 @@
+<_templates>
+	<Engine>
+		<RUSpecialEngine BrakesDelay="0.5" MaxDeltaAngVel="0.01" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUSpecialEngine"
+		CriticalDamageThreshold="0.99"
+		DamageCapacity="300"
+		DamagedConsumptionModifier="1.4"
+		EngineResponsiveness="0.2"
+		FuelConsumption="13.0"
+		Name="ru_tuz_tatarin"
+		Torque="200000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="1.0"
+	>
+		<GameData
+			Price="22500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_TUZ_TATARIN_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_TUZ_TATARIN_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

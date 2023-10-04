@@ -1,0 +1,16 @@
+<_parent File="international_loadstar_1700_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

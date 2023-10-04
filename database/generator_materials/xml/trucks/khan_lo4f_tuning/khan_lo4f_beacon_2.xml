@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_beacon_2">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(1.439; 2.138; 0.000)" ParentFrame="BoneRotator" />
+			<Light Pos="(1.439; 2.138; 0.000)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.439; 2.138; 0.000)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.439; 2.138; 0.000)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.375; 2.138; 0.065)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROUND_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROUND_BEACON_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fBeacon" />
+	</GameData>
+</TruckAddon>

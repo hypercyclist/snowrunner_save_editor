@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_310e_tuning/step_310e_bumper_default">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.806; 1.009; 0.9)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(4.806; 1.009; -0.9)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".2" Pos="(4.806; 1.009; 0.9)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".2" Pos="(4.806; 1.009; -0.9)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="HeadLight" DirAngle="135" Size=".15" Pos="(4.806; 1.009; 0.9)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".15" Pos="(4.806; 1.009; -0.9)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="step_310eBumper" />
+	</GameData>
+</TruckAddon>

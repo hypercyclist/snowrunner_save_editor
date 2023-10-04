@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_gabarite_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_gabarite_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(3.851; 3.232; 0.767)" />
+			<Flare _template="MarkerBeacon" Pos="(3.851; 3.232; -0.767)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+	</GameData>
+</TruckAddon>

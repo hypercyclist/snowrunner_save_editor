@@ -1,0 +1,44 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/cat_745c_water_tank">
+		<Body Mass="1000">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!--<Flare _template="Beacon" Pos="(-6.204; 3.705; -0.394)" Size="1.4" />-->
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.232; 3.461; -0.979)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.232; 3.461; 0.979)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.232; 3.461; -0.78)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.232; 3.461; 0.78)" Size="0.2" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CAT_745C_WATER_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CAT_745C_WATER_TANK_NAME"
+		/>
+		<InstallSocket Type="Cat745CWaterTank" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_exhaust_2" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" Origin="(0.507; 3.598; -0.651)" />
+</TruckAddon>

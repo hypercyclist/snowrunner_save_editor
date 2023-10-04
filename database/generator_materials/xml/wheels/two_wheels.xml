@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Heavy"
+	Mesh="wheels/two_wheels"
+	Radius="0.503"
+	Width="1.023"
+>
+	<WheelTracks _template="TwoWheels" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />
+</TruckWheel>

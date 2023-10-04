@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(4.415; 2.867; -0.094)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(4.415; 2.867; 0.086)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_AZOV_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_AZOV_NAME"
+		/>
+		<InstallSocket Type="Azov5319Visor" />
+	</GameData>
+</TruckAddon>

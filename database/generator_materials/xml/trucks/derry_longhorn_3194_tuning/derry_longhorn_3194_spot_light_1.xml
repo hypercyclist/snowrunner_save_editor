@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_spot_light_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.756; 3.565; -0.422)" />
+			<Model _template="HeadLightRay" Org="(0.756; 3.565; 0.422)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.756; 3.565; -0.187)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.756; 3.565; 0.187)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.756; 3.565; -0.422)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.756; 3.565; 0.422)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 2" Pos="(0.822; 3.574; 0)"  />			
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.525; 0.642)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.525; -0.642)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.565; -0.187)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.565; 0.187)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.565; -0.422)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(0.756; 3.565; 0.422)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x .5" Pos="(0.756; 3.565; 0)"  />			
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Spotlight" />
+	</GameData>
+</TruckAddon>

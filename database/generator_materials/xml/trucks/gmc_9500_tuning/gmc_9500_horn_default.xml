@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_horn_default" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Horn" />
+	</GameData>
+</TruckAddon>

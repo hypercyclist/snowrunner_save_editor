@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_fender_side">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="5"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_FENDER_SIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_FENDER_SIDE_NAME"
+		/>
+		<InstallSocket Type="FordClt9000FenderSide" />
+	</GameData>
+</TruckAddon>

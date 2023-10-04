@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(2.242; 2.553; -0.62)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(2.267; 2.582; -0.172)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(2.277; 2.586; 0)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(2.267; 2.582; 0.172)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(2.242; 2.553; 0.62)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Gabarite" />
+	</GameData>
+</TruckAddon>

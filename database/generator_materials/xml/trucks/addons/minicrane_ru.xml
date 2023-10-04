@@ -1,0 +1,241 @@
+<_templates Include="trucks">
+	<Body>
+		<Anchor Collisions="None" Mass="100">
+			<Constraint
+				Name="AnchorExt"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.6"
+			>
+				<Motor Force="4000" Tau="0.2" Type="Position" />
+			</Constraint>
+			<Body Collisions="None" Mass="60">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="179.9"
+				>
+					<Motor Force="2000" Type="Position" />
+				</Constraint>
+				<Body
+					ForceBodyParams="true"
+					Mass="40"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="Anchor"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.8"
+					>
+						<Motor Force="8000" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Anchor>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PoweredConstraints>
+		<Chain Name="Anchors" ParentBodies="BoneLeftAnchorExt_cdt,BoneRightAnchorExt_cdt">
+			<Group FoldingDelay="0.2" Id="anchors_extend">
+				<Constraint
+					InitialFix="true"
+					Name="AnchorExt"
+					TerminalFix="true"
+					Position="0.6"
+				/>
+			</Group>
+			<Group FoldingDelay="0.2" Id="anchors_position" UnfoldingDelay="0.2">
+				<Constraint Name="RightAnchorBase" TerminalFix="true" Position="179.9" />
+				<Constraint Name="LeftAnchorBase" TerminalFix="true" Position="179.9" />
+			</Group>
+			<Group FoldingDelay="0.2" Id="anchors_push" UnfoldingDelay="0.2">
+				<Constraint Name="Anchor" TerminalFix="true" Position="0.8" />
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/minicrane_ru">
+		<NetSync Legacy="true" />
+		<Body ImpactType="Truck" Mass="400">
+			<Constraint Type="Fixed" />
+			<Body Mass="500" ModelFrame="BoneRotationBase_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Crane"
+					Type="Hinge"
+					MinLimit="-350"
+					MaxLimit="350"
+				>
+					<Motor Force="800000" Tau="0.5" Type="Position" />
+				</Constraint>
+				<Body Collisions="Internal" Mass="450" ModelFrame="BoneArm1_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="Arm1"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="145"
+					>
+						<Motor Force="800000" Tau="0.5" Type="Position" />
+					</Constraint>
+					<Body Collisions="All" Mass="200" ModelFrame="BoneArm2_cdt">
+						<Constraint
+							AxisLocal="(0; 0; -1)"
+							Name="Arm2"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="145"
+						>
+							<Motor Force="800000" Tau="0.4" Type="Position" />
+						</Constraint>
+						<Body Collisions="All" Mass="150" ModelFrame="BoneArmExt1_cdt">
+							<Constraint
+								AxisLocal="(1; 0; 0)"
+								Name="ArmExt"
+								Type="Prismatic"
+								MinLimit="0"
+								MaxLimit="1.4"
+							>
+								<Motor Force="800000" Tau="0.4" Type="Position" />
+							</Constraint>
+							<Body Collisions="All" Mass="150" ModelFrame="BoneArmExt2_cdt">
+								<Constraint
+									AxisLocal="(1; 0; 0)"
+									Name="ArmExt"
+									Type="Prismatic"
+									MinLimit="0"
+									MaxLimit="1.4"
+								>
+									<Motor Force="800000" Tau="0.4" Type="Position" />
+								</Constraint>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneLeftAnchorExt_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" />
+				<Body ModelFrame="BoneLeftAnchorBase_cdt">
+					<Constraint Name="LeftAnchorBase" />
+					<Body ModelFrame="BoneLeftAnchor_cdt" />
+				</Body>
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneRightAnchorExt_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" />
+				<Body ModelFrame="BoneRightAnchorBase_cdt">
+					<Constraint Name="RightAnchorBase" />
+					<Body ModelFrame="BoneRightAnchor_cdt" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_MINICRANE_RU_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_MINICRANE_RU_NAME"
+		/>
+		<InstallSocket Offset="(0; 0.17; 0)" Type="MinicraneRU" />
+		<CraneSourceSocket Pos="(0.074; 1.52; 0.861)" ParentFrame="BoneArmExt2_cdt" />
+		<AddonType Name="Crane" />
+		<SoundPoweredGroupStart Name="addons/common/crane_powergroups_start" Range="20" Volume="1"/>
+		<SoundPoweredGroupLoop Name="addons/common/crane_powergroups_loop" Range="20" Volume="1"/>
+		<SoundPoweredGroupStop Name="addons/common/crane_powergroups_stop" Range="20" Volume="1"/>
+		<SoundIKStart Name="addons/minicrane_us/minicrane_us_turn_start" Range="20" Volume="1"/>
+		<SoundIKLoop Name="addons/minicrane_us/minicrane_us_turn_loop" Range="20" Volume="1"/>
+		<SoundIKStop Name="addons/minicrane_us/minicrane_us_turn_stop" Range="20" Volume="1"/>
+		<SoundOpenStart Name="addons/minicrane_us/minicrane_us_open_start" Range="20" Volume="1"/>
+		<SoundOpenLoop Name="addons/minicrane_us/minicrane_us_open_loop" Range="20" Volume="1"/>
+		<SoundOpenStop Name="addons/minicrane_us/minicrane_us_open_stop" Range="20" Volume="1"/>
+		<SoundClose Name="addons/minicrane_us/minicrane_us_close" Range="20" Volume="1"/>
+	</GameData>
+	<ControlledIK
+		CoeffEndMovementSpeedOY="1.0"
+		CoeffEndMovementSpeedOYWithLoad="0.5"
+		CoeffEndMovementSpeedXZ="1.0"
+		CoeffEndMovementSpeedXZWithLoad="0.5"
+	>
+		<Chain EndOffset="(0.1; 0; 0)" ModelFrames="BoneCrane_cdt,BoneRotationBase_cdt,BoneArm1_cdt,BoneArm2_cdt,BoneArmExt1_cdt,BoneArmExt2_cdt">
+			<ConstraintStartPosition Name="Arm1" SpeedMult="0.5" Value="90" />
+			<ConstraintStartPosition Name="Arm2" SpeedMult="0.5" StartDelay="1" Value="120" />
+		</Chain>
+	</ControlledIK>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneRightAnchorBase" ParentFrame="BoneRightAnchorBase_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRightAnchor_cdt"
+				ModelFrame="BoneRightAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>	
+		<IKBone ModelFrame="BoneLeftAnchorBase" ParentFrame="BoneLeftAnchorBase_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneLeftAnchor_cdt"
+				ModelFrame="BoneLeftAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>	
+		<IKBone ModelFrame="BoneArm2" ParentFrame="BoneArm2_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmExt1_cdt"
+				ModelFrame="BoneArmExt1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneArmExt1_1" ParentFrame="BoneArmExt1_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmExt2_cdt"
+				ModelFrame="BoneArmExt2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBasePistonBase" ParentFrame="BoneRotationBase_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArm1_cdt"
+				ModelFrame="BoneBasePiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneArmPistonBase" ParentFrame="BoneArm1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArm2_cdt"
+				ModelFrame="BoneArmPiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<AddonCamera
+		FirstPersonDir="(1; -0.32; 0)"
+		FirstPersonPos="(0.75; 3.76; 0.8)"
+		ParentFrame="BoneRotationBase_cdt"
+	/>
+</TruckAddon>

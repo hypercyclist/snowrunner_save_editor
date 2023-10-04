@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Flare>
+		<FrontMarker
+			_template="MarkerBeacon"
+			Dir="(1; 0; 0)"
+			DirAngle="140"
+			Size="0.3"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_visor_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="4" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="FrontMarker" Pos="(0.30; 2.968; -0.815)" />
+			<Flare _template="FrontMarker" Size="0.2" Pos="(0.30; 2.968; 0.815)" />
+			<Flare _template="FrontMarker" Pos="(0.30; 2.968; -0.231)" />
+			<Flare _template="FrontMarker" Size="0.2" Pos="(0.30; 2.968; 0.231)" />
+			<Flare _template="FrontMarker" Size="0.2" Pos="(0.30; 2.968; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STOCK_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="Navistar5000mvVisor" />
+	</GameData>
+</TruckAddon>

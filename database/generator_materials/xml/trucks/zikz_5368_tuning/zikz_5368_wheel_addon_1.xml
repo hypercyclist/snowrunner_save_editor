@@ -1,0 +1,38 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_wheel_addon_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="50" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				/>
+			</Body>
+			<Body Mass="50" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="wheel_addon"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="zikz_5368WheelAddon" />
+	</GameData>
+</TruckAddon>

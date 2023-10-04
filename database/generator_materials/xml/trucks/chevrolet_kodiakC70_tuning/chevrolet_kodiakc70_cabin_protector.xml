@@ -1,0 +1,49 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="0.75"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakC70_tuning/chevrolet_kodiakc70_cabin_protector">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.978; 2.473; -0.921)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.978; 2.473; 0.921)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.978; 1.188; -0.921)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.978; 1.188; 0.921)" />
+			<Flare _template="IgnitionSignalRed" Size="0.1" Pos="(0.901; 2.535; -0.767)" />
+			<Flare _template="IgnitionSignalRed" Size="0.1" Pos="(0.901; 2.535; 0.767)" />
+			<Flare _template="IgnitionSignalRed" Size="0.1" Pos="(0.901; 2.535; 0.629)" />
+			<Flare _template="IgnitionSignalRed" Size="0.1" Pos="(0.901; 2.535; -0.629)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_PROTECTOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_PROTECTOR_1_NAME"
+		/>
+		<InstallSocket Type="ChevroletKodiakC70CabinProtector" />
+	</GameData>
+</TruckAddon>

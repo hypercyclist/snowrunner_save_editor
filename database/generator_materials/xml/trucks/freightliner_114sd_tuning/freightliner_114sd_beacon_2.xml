@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_horn_default" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator1"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_beacon_2" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; -1)" Org="(2.415; 3.106; -0.099)" ParentFrame="BoneRotator1" />
+			<Light Dir="(0; 0; -1)" Pos="(2.415; 3.106; -0.099)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0; 0; -1)" Pos="(2.415; 3.106; -0.099)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0; 0; -1)" Pos="(2.415; 3.106; -0.099)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(2.415; 3.106; -0.002)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_RAISED_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_RAISED_BEACON_NAME"
+		/>
+		<InstallSocket Type="Freightliner114SdBeacon2" />
+	</GameData>
+</TruckAddon>

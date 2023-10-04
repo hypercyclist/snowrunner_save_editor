@@ -1,0 +1,39 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<_parent File="ws_4964_white_snorkel_1" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(3.036; 2.898; -0.974)" />
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_snorkel_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(3.118; 1.834; -0.974)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.118; 1.737; -0.974)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.118; 1.638; -0.974)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.118; 1.539; -0.974)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

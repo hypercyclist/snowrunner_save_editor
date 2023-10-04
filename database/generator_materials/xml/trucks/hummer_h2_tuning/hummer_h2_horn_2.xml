@@ -1,0 +1,16 @@
+<_parent File="hummer_h2_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_horn_2" />
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

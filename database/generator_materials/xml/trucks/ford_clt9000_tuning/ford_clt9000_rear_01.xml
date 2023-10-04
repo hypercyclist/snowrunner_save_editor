@@ -1,0 +1,67 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_rear_01">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-15" MaxLimit="30" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-15" MaxLimit="30" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.395; 0.515; 0)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-4.031; 0.574; 0.345)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-4.031; 0.574; -0.345)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-4.031; 0.457; 0.345)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-4.031; 0.457; -0.345)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0) x 1" Pos="(-4.379; 0.555; 0)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; 1.048)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; -1.048)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; 0.919)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; -0.919)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; 0.787)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.031; 0.724; -0.787)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.078; 0.574; 0.345)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.078; 0.574; -0.345)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.078; 0.457; 0.345)" />
+			<Flare _template="IgnitionSignalRedSmall" DirAngle="90" Pos="(-4.078; 0.457; -0.345)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_MUDFLAPS_FORD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_MUDFLAPS_FORD_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Rear" />
+	</GameData>
+</TruckAddon>

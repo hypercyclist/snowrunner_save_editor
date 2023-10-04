@@ -1,0 +1,11 @@
+<_parent File="frame_addon_kung" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/dan_96320_frame_addon_kung" />
+	<GameData
+		Price="5100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="FrameAddonKungDan96320" />
+	</GameData>
+</TruckAddon>

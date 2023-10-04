@@ -1,0 +1,57 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="90"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="hummer_h2_bumper_front_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_bumper_front_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchFrontLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchFrontRight_cdt">
+				<Body _template="Hitch" ModelFrame="BoneHook_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" MinLimit="-45" MaxLimit="45" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.714; 0.998; -0.201)" />
+			<Model _template="HeadLightRay" Org="(2.714; 0.998; 0.201)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.714; 0.998; -0.201)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.714; 0.998; 0.201)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.636; 0.773; -0.543)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.636; 0.773; 0.543)" />
+		</MainHeadLight>
+		<Ignition>
+			
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WINCHPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WINCHPIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

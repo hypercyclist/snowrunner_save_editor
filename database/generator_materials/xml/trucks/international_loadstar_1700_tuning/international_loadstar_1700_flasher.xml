@@ -1,0 +1,55 @@
+<_templates Include="trucks">
+	<Rotator>
+		<Flasher
+			EngineTorqueFactor="0"
+			Frame="BoneRotatorR1"
+			RotationSpeed="15"
+		/>
+	</Rotator>
+	<Flare>
+		<Flasher
+			Color="g(255; 140; 100) x 0.8"
+			Dir="(1; 0.2; 0)"
+			DirAngle="45"
+			Size="0.4"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<Rotator _template="Flasher" Frame="BoneRotatorR1" />
+	<Rotator _template="Flasher" Frame="BoneRotatorR2" />
+	<Rotator _template="Flasher" Frame="BoneRotatorR3" />
+	<Rotator _template="Flasher" Frame="BoneRotatorL1" />
+	<Rotator _template="Flasher" Frame="BoneRotatorL2" />
+	<Rotator _template="Flasher" Frame="BoneRotatorL3" />
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_flasher">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Flasher" Pos="(0.963; 2.327; -0.547)" ParentFrame="BoneRotatorR3" />
+			<Flare _template="Flasher" Pos="(0.963; 2.327; -0.447)" ParentFrame="BoneRotatorR2" />
+			<Flare _template="Flasher" Pos="(0.963; 2.327; -0.347)" ParentFrame="BoneRotatorR1" />
+			<Flare _template="Flasher" Dir="(-1; 0.2; 0)" Pos="(0.743; 2.327; 0.547)" ParentFrame="BoneRotatorL3" />
+			<Flare _template="Flasher" Dir="(-1; 0.2; 0)" Pos="(0.743; 2.327; 0.447)" ParentFrame="BoneRotatorL2" />
+			<Flare _template="Flasher" Dir="(-1; 0.2; 0)" Pos="(0.743; 2.327; 0.347)" ParentFrame="BoneRotatorL1" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FLASHER_BAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FLASHER_BAR_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Flasher" />
+	</GameData>
+</TruckAddon>

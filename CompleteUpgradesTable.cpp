@@ -19,19 +19,21 @@ void CompleteUpgradesTable::updateTable()
 
     QAbstractItemModel* upgradesTableModel = model();
 
+    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+
     for (auto regionPair : m_gameAtlas->regions())
     {
-        std::string regionName = regionPair.second->name(Language::RUSSIAN);
+        std::string regionName = regionPair.second->name(m_localization->defaultLanguage());
         QString currentRegionFilter = m_regionFilterCombobox->currentText();
 
-        if (currentRegionFilter == "Все" || regionName.c_str() == m_regionFilterCombobox->currentText())
+        if (currentRegionFilter == allString.c_str() || regionName.c_str() == m_regionFilterCombobox->currentText())
         {
-            for (auto mapPair : regionPair.second->maps())
+            for (const auto& mapPair : regionPair.second->maps())
             {
                 QString  currentMapFilter = m_mapFilterCombobox->currentText();
-                if (currentMapFilter == "Все" || mapPair.second->name(Language::RUSSIAN).c_str() == currentMapFilter)
+                if (currentMapFilter == allString.c_str() || mapPair.second->name(m_localization->defaultLanguage()).c_str() == currentMapFilter)
                 {
-                    for (auto upgradePair : mapPair.second->upgrades())
+                    for (const auto& upgradePair : mapPair.second->upgrades())
                     {
                         int rowIndex = rowCount();
                         insertRow(rowIndex);
@@ -41,8 +43,8 @@ void CompleteUpgradesTable::updateTable()
                         m_currentFiltredElements.push_back(upgradeCode.c_str());
 
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 0), regionName.c_str());
-                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 1), mapPair.second->name(Language::RUSSIAN).c_str());
-//                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(Language::RUSSIAN).c_str());
+                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 1), mapPair.second->name(m_localization->defaultLanguage()).c_str());
+//                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(m_localization->defaultLanguage()).c_str());
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->middleCode().c_str());
 
                         QCheckBox* statusCheckBox = new QCheckBox();

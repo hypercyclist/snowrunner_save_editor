@@ -1,0 +1,44 @@
+<_parent File="tayga_6436_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.3; 0.3; 0.3)"
+				MaxAngle="(1; 1; 1)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneCabinDamper_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/tayga_6436_tuning/tayga_6436_exhaust_1">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="50" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Mass="50" ModelFrame="BoneChassis_cdt">
+					<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.94; 0.342; 0)"
+		IsLight="false"
+		Origin="(0.534; 3.609; 1.212)"
+		Speed="3.82"
+	/>
+</TruckAddon>

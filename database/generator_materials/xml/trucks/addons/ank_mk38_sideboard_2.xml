@@ -1,0 +1,24 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/ank_mk38_sideboard_2">
+		<Body Mass="600">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_SIDEBOARD_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_SIDEBOARD_2_NAME"
+		/>
+		<InstallSocket Type="ankMk38FrameAddon" />
+		<AddonSlots InitialOffset="(-1.131; 1.419; 0)" OffsetStep="(-2.486; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

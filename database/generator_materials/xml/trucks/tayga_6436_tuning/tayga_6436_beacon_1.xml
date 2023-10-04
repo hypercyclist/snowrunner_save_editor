@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="3.9"
+	/>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_beacon_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="5"
+			ModelFrame="BoneCabinDamper_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.823; 3.18; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(1; 0; 0)" Pos="(1.823; 3.18; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.823; 3.18; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.823; 3.18; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.734; 3.18; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROUND_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROUND_BEACON_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Beacon" />
+	</GameData>
+</TruckAddon>

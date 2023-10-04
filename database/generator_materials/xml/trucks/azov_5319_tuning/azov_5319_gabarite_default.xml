@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_gabarite_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 160; 2) x .3" Dir="(1; 0.2; 0)" Size="0.2" Pos="(4.295; 2.85; -0.946)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 160; 2) x .3" Dir="(1; 0.2; 0)" Size="0.2" Pos="(4.295; 2.85; 0.946)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 160; 2) x .3" Dir="(1; 0.2; 0)" Size="0.2" Pos="(4.367; 2.859; -0.148)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 160; 2) x .3" Dir="(1; 0.2; 0)" Size="0.2" Pos="(4.367; 2.859; 0.148)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 160; 2) x .3" Dir="(1; 0.2; 0)" Size="0.2" Pos="(4.367; 2.859; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_HANDGED_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_HANDGED_CHROME_NAME"
+		/>
+		<InstallSocket Type="Azov5319GabariteDefault" />
+	</GameData>
+</TruckAddon>

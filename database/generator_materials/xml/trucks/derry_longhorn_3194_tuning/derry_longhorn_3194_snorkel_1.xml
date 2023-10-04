@@ -1,0 +1,28 @@
+<_parent File="derry_longhorn_3194_snorkel_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneEngine"
+				LimitDirectionY="Negative"
+				MinAngle="(0.1; 0.05; 0)"
+				MaxAngle="(0.35; 0.25; 0)"
+				MaxFrequency="10"
+			/>
+		</Shakers>
+	</TruckData>
+	<Snorkel Origin="(1.162; 2.522; 1.074)" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_snorkel_1" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

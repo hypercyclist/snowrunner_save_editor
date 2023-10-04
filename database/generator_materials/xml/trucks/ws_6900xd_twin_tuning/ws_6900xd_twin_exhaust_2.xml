@@ -1,0 +1,18 @@
+<_parent File="ws_6900xd_twin_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_exhaust_2" />
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust _noinherit="true" Dir="(0; 1; 0)" IsLight="true" Origin="(4.147; 4.5; -1.097)" Speed="3.82" />
+	<Exhaust _noinherit="true" Dir="(0; 1; 0)" IsLight="true" Origin="(4.147; 4.5; 1.097)" Speed="3.83" />
+</TruckAddon>

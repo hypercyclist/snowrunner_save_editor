@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_arch_expander_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_ARCHFENDERS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_ARCHFENDERS_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallExpander" />
+	</GameData>
+</TruckAddon>

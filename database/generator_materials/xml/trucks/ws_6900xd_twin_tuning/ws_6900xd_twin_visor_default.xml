@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_visor_default" />
+	<GameData
+		CameraPreset="addon_1"
+		Category="fender_front"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STOCK_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinVisor" />
+	</GameData>
+</TruckAddon>

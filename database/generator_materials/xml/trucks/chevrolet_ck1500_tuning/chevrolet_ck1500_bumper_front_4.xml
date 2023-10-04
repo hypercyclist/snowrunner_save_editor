@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="chevrolet_ck1500_bumper_front_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_front_4" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.321; 0.654; -0.683)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(2.321; 0.654; 0.683)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.3" Color="g(141; 133; 117) x 2.6" Pos="(2.321; 0.654; -0.683)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.3" Color="g(141; 133; 117) x 2.6" Pos="(2.321; 0.654; 0.683))" />
+		</MainHeadLight>
+		<Ignition>
+			<!--<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.8" Pos="(2.321; 0.654; -0.683)" Size="0.3" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.8" Pos="(2.321; 0.654; 0.683)" Size="0.3" /> -->
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_CHROMEFANG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CHROMEFANG_NAME"
+		/>
+	</GameData>
+</TruckAddon>

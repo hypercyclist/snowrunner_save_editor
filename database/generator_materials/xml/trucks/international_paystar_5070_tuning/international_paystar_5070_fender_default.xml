@@ -1,0 +1,128 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_fender_default">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneMudguardRoot_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="10"
+				ModelFrame="BoneRightDopMudguard2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="2"
+				>
+					<Motor Damping="110" Spring="9000" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Mass="0.5"
+					ModelFrame="BoneMudRubberRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="20"
+					>
+						<Motor Damping="0.075" Spring="0.75" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="10"
+				ModelFrame="BoneLeftDopMudguard2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="2"
+				>
+					<Motor Damping="110" Spring="9000" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Mass="0.5"
+					ModelFrame="BoneMudRubberLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="20"
+					>
+						<Motor Damping="0.075" Spring="0.75" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="5"
+				ModelFrame="BoneLeftDopMudguard_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="4"
+				>
+					<Motor Damping="100" Spring="3000" Type="Spring" />
+				</Constraint>
+				<Body _template="Mudguard" Mass="1" ModelFrame="BoneLeftBackMudguard_cdt">
+					<Constraint AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="0" />
+					<Body _template="Mudguard" Mass="0.5" ModelFrame="BoneLeftBackMudguardEdge_cdt">
+						<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="40" />
+					</Body>
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="5"
+				ModelFrame="BoneRightDopMudguard_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="4"
+				>
+					<Motor Damping="100" Spring="3000" Type="Spring" />
+				</Constraint>
+				<Body _template="Mudguard" Mass="1" ModelFrame="BoneRightBackMudguard_cdt">
+					<Constraint AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="0" />
+					<Body _template="Mudguard" Mass="0.5" ModelFrame="BoneRightBackMudguardEdge_cdt">
+						<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="40" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="InternationalPaystar5070Fender" />
+	</GameData>
+</TruckAddon>

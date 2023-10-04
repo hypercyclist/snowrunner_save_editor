@@ -1,0 +1,18 @@
+<_parent File="dan_96320_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/dan_96320_tuning/dan_96320_exhaust_3" />
+	<ModelAttachments _noinherit="true" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0.000; 0.528; 0.849)" IsLight="false" Origin="(3.183; 3.057; 1.596)" Speed="2.00" />
+</TruckAddon>

@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_horn_2" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Horn2" />
+	</GameData>
+</TruckAddon>

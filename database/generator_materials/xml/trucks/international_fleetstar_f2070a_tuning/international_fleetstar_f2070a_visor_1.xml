@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_fleetstar_f2070a_tuning/international_fleetstar_f2070a_visor_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="InternationalFleetstarF2070aVisor" />
+	</GameData>
+</TruckAddon>

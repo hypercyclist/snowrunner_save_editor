@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_threshold_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_PIPE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_PIPE_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="InternationalScout800Threshold" />
+	</GameData>
+</TruckAddon>

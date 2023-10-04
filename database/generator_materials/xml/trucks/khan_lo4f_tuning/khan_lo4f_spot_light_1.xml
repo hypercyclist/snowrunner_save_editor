@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.571; 2.225; -0.580)" />
+			<Model _template="HeadLightRay" Org="(1.571; 2.225; 0.584)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.30" Color="g(255; 235; 215) x 0.6" Pos="(1.571; 2.225; -0.580)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.25" Color="g(255; 235; 215) x 0.6" Pos="(1.571; 2.225; 0.584)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.30" Color="g(255; 235; 215) x 0.6" Pos="(1.572; 2.251; -0.305)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.25" Color="g(245; 235; 215) x 0.6" Pos="(1.574; 2.253; 0.308)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.25" Color="g(245; 235; 215) x 0.6" Pos="(1.573; 2.252; -0.000)" />
+			
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fSpotlight" />
+	</GameData>
+</TruckAddon>

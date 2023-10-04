@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakC70_tuning/chevrolet_kodiakc70_visor" />
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="ChevroletKodiakC70Visor" />
+	</GameData>
+</TruckAddon>

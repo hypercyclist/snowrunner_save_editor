@@ -20,9 +20,18 @@ Localization::Localization() :
 {
 // Языки жестко запрограммированы.
     m_languageTextNames.insert({Language::RUSSIAN, "russian"});
-    m_languageTextNames.insert({Language::ENGLISH, "english"});
     m_languageTextNames.insert({Language::CHINESE_TRADITIONAL, "chinese_traditional"});
-    m_languageTextNames.insert({Language::CHINESE_SIMPLE, "chinese_simple"});
+    m_languageTextNames.insert({Language::CHINESE_SIMPLIFIED, "chinese_simple"});
+    m_languageTextNames.insert({Language::BRAZILIAN_PORTUGUESE, "brazilian_portuguese"});
+    m_languageTextNames.insert({Language::KOREAN, "korean"});
+    m_languageTextNames.insert({Language::ENGLISH, "english"});
+    m_languageTextNames.insert({Language::JAPANESE, "japanese"});
+    m_languageTextNames.insert({Language::GERMAN, "german"});
+    m_languageTextNames.insert({Language::SPANISH, "spanish"});
+    m_languageTextNames.insert({Language::FRENCH, "french"});
+    m_languageTextNames.insert({Language::CZECH, "czech"});
+    m_languageTextNames.insert({Language::ITALIAN, "italian"});
+    m_languageTextNames.insert({Language::POLISH, "polish"});
 }
 
 // https://stackoverflow.com/questions/50696864/reading-utf-16-file-in-c
@@ -34,7 +43,7 @@ void Localization::createLocalizations()
     for (const auto& languagePair : m_languageTextNames)
     {
         std::string filePath = QDir::currentPath().toStdString()
-            + "/database/generator_materials/" + languagePair.second + ".str";
+            + "/database/generator_materials/strings/" + languagePair.second + ".str";
 
         std::ifstream readStream(filePath, std::ios::binary);
 

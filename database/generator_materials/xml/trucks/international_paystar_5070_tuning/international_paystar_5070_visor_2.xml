@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(1.236; 2.836; -0.785)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(1.236; 2.836; 0.785)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(1.271; 2.864; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

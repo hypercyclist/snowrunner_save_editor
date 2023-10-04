@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="chevrolet_kodiakc70_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakC70_tuning/chevrolet_kodiakc70_bumper_03" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.785; 1.486; -0.197)" />
+			<Model _template="HeadLightRay" Org="(3.785; 1.486; 0.197)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" Size="0.5" Pos="(3.785; 1.486; -0.197)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" Size="0.5" Pos="(3.785; 1.486; 0.197)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 10" Pos="(4; 1.4; 0)" />
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FOGLIGHTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FOGLIGHTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

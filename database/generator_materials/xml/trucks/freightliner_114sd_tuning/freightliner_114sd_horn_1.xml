@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_horn_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_horn_1" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_TUNING_HORNS_TWIN_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.892; 2.219; 1.062)" />
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_snorkel_1"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="FreightlinerM916A1Snorkel" />
+	</GameData>
+</TruckAddon>

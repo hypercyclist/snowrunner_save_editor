@@ -1,0 +1,61 @@
+<_templates Include="trucks" />
+<_parent File="derry_longhorn_3194_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_bumper_5">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="15" ModelFrame="BoneWiggleR_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-13"
+					MaxLimit="90"
+				>
+					<Motor Damping="0.1" Spring="2" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneWiggleL_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-13"
+					MaxLimit="90"
+				>
+					<Motor Damping="0.2" Spring="3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.343; 1.308; -0.408)" />
+			<Model _template="HeadLightRay" Org="(3.343; 1.308; 0.408)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.6" Size="0.4" Pos="(3.343; 1.308; -0.408)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.6" Size="0.4" Pos="(3.343; 1.308; -0.137)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.6" Size="0.4" Pos="(3.343; 1.308; 0.408)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.6" Size="0.4" Pos="(3.343; 1.308; 0.137)" />
+		</MainHeadLight>
+		<Ignition>
+			<!-- <Flare _template="IgnitionSignalWhite" Pos="(3.505; 1.285; -0.28)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.505; 1.285; 0.28)" /> -->
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="23"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

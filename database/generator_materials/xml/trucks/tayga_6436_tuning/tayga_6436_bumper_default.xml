@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_bumper_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.953; 1.063; -0.816)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(3.953; 1.063; 0.816)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.45" Pos="(3.953; 1.063; -0.816)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.45" Pos="(3.953; 1.063; 0.816)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.953; 1.063; -0.816)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.953; 1.063; 0.816)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+		<Ignition>
+		
+			<Light _template="IgnitionSignalWhite" Pos="(4.309; 1.063; 0.8)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(4.309; 1.063; -0.8)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.953; 1.063; -0.984)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.953; 1.063; 0.984)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.953; 1.063; -0.816)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.953; 1.063; 0.816)" ParentFrame="BoneCabin_cdt" />
+			<!--<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.928; 1.056; -1.122)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.928; 1.056; 1.122)" ParentFrame="BoneCabin_cdt" />-->
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Default" Pos="(4.443; 1.063; 0)" ParentFrame="BoneCabin_cdt" />
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(2.715; 3.161; -1.201)" />
+	<Snorkel Origin="(2.715; 3.161; 1.201)" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_snorkel_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="28"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TWIN_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn4520Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_bumper_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_bumper_3" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.695; 1.416; -0.252)" />
+			<Model _template="HeadLightRay" Org="(4.695; 1.416; 0.252)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.60" Size=".3" Pos="(4.695; 1.416; -0.252)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.60" Size=".3" Pos="(4.695; 1.416; 0.252)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _noinherit="true" ExtraColor="g(255; 240; 230) x 5.5" />
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="25"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FOGLIGHTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FOGLIGHTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

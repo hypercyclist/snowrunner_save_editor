@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.639; 2.951; -0.742)" />
+			<Flare _template="MarkerBeacon" Pos="(1.639; 2.951; 0.739)" />
+			<Flare _template="MarkerBeacon" Pos="(1.68; 2.936; -0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(1.68; 2.936; 0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(1.68; 2.936; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="VoronGradVisor" />
+	</GameData>
+</TruckAddon>

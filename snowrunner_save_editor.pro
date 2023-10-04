@@ -73,7 +73,11 @@ HEADERS += \
     rapidjson/stream.h \
     rapidjson/stringbuffer.h \
     rapidjson/uri.h \
-    rapidjson/writer.h
+    rapidjson/writer.h \
+    rapidxml/rapidxml.hpp \
+    rapidxml/rapidxml_iterators.hpp \
+    rapidxml/rapidxml_print.hpp \
+    rapidxml/rapidxml_utils.hpp
 
 FORMS += \
     EditorWindow.ui \

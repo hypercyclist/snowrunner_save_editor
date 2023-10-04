@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_beacon_2"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Pos="(0.936; 2.286; -0.44)" Size="0.3" />
+			<Flare _template="Beacon" Pos="(0.936; 2.286; 0.44)" Size="0.3" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"    
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_TWOSQUARE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_TWOSQUARE_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Flasher" />
+	</GameData>
+</TruckAddon>

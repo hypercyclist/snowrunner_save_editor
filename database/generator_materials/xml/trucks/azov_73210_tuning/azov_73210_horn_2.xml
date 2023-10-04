@@ -1,0 +1,16 @@
+<_parent File="azov_73210_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="24"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

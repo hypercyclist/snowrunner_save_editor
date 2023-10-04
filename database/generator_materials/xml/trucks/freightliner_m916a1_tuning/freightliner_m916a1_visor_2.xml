@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_m916a1_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.701; 2.874; -0.698)" />
+			<Flare _template="MarkerBeacon" Pos="(1.701; 2.874; 0.698)" />
+			<Flare _template="MarkerBeacon" Pos="(1.725; 2.887; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

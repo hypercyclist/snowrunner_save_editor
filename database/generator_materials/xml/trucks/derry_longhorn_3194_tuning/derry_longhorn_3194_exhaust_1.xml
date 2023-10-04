@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<_parent File="derry_longhorn_3194_exhaust" />
+<TruckAddon>
+	<TruckData>
+		<Shakers _noinherit="True">
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="5" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_exhaust_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-0.399; 2.858; -0.898)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-0.399; 2.692; -0.898)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-0.399; 2.529; -0.898)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-0.399; 2.354; -0.898)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.685; 0.223; -0.693)" Origin="(-0.385; 4.135; -1.038)" />
+</TruckAddon>

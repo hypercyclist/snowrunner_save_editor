@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.879; 1.376; -0.966)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(3.879; 1.376; 0.966)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size=".6" Pos="(3.879; 1.376; -0.966)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size=".6" Pos="(3.879; 1.376; 0.966)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.055; 1.376; -0.472)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.055; 1.376; 0.472)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.055; 1.376; -0.162)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.055; 1.376; 0.162)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Bumper" />
+	</GameData>
+</TruckAddon>

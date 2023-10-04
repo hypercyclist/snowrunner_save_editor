@@ -1,0 +1,33 @@
+<_templates>
+	<Engine>
+		<USScoutOldEngine BrakesDelay="0.5" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USScoutOldEngine"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="100"
+		DamagedConsumptionModifier="1.8"
+		FuelConsumption="3.3"
+		Name="us_scout_old_engine_ck1500"
+		Torque="60000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.6"
+		MaxDeltaAngVel="0.01"
+		EngineResponsiveness="0.25"
+	>
+		<GameData
+			Price="7500"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_SCOUT_OLD_CK1500_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_SCOUT_OLD_CK1500_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

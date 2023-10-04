@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(1.597; 2.369; -1.095)" />
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_snorkel_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+		<InstallSocket Type="InternationalPaystar5070Snorkel" />
+	</GameData>
+</TruckAddon>

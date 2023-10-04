@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="1.5"
+		CriticalDamageThreshold="0.99"
+		DamageCapacity="300"
+		Name="tuz_420_tatarin_suspension_default"
+	>
+		<Suspension 
+			Damping="0.2" 
+			Height="0.15" 
+			Strength="0.05" 
+			WheelType="front" 
+			BrokenSuspensionMax="0.15" 
+			SuspensionMin="-0.2" 
+		/>
+		<Suspension 
+			Damping="0.2" 
+			Height="0.15" 
+			Strength="0.05" 
+			WheelType="rear" 
+			BrokenSuspensionMax="0.15" 
+			SuspensionMin="-0.2" 
+		/>
+		<GameData
+			Price="6000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

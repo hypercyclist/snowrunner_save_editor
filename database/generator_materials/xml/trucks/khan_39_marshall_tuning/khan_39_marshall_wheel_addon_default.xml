@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_wheel_addon_default">
+		<Body ImpactType="Truck" Mass="15" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+			<Body
+				
+				ImpactType="Truck"
+				Mass="15"
+				ModelFrame="boneWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					ExplicitParentFrame="0"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="3"
+				>
+					<Motor Damping="500" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="wheel_addon"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallWheelAddon" />
+	</GameData>
+</TruckAddon>

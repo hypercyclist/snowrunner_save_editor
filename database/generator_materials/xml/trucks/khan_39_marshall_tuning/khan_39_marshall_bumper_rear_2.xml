@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="khan_39_marshall_bumper_rear_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_BUMPER_REAR_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_BUMPER_REAR_2_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallBumperRear2" />
+	</GameData>
+</TruckAddon>

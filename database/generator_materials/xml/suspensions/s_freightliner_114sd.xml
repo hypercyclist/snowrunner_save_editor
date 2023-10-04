@@ -1,0 +1,47 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="140"
+		Name="freightliner_114sd_suspension_default"
+	>
+		<Suspension Damping="0.2" Height="0.15" Strength="0.06" WheelType="front" BrokenSuspensionMax="0.3" SuspensionMin="-0.4" />
+		<Suspension Damping="0.2" Height="0.15" Strength="0.035" WheelType="rear" BrokenSuspensionMax="0.3" SuspensionMin="-0.3" />
+		<GameData
+			Price="4200"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="160"
+		Name="freightliner_114sd_suspension_high"
+	>
+		<Suspension Damping="0.2" Height="0.25" Strength="0.06" WheelType="front" BrokenSuspensionMax="0.3" SuspensionMin="-0.4" />
+		<Suspension Damping="0.2" Height="0.25" Strength="0.035" WheelType="rear" BrokenSuspensionMax="0.3" SuspensionMin="-0.3" />
+		<GameData
+			Price="7700"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

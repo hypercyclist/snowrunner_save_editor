@@ -1,0 +1,33 @@
+<_templates>
+	<Engine>
+		<RUScoutOldEngine BrakesDelay="0.5" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUScoutOldEngine"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="80"
+		DamagedConsumptionModifier="2.0"
+		FuelConsumption="0.4"
+		Name="ru_scout_old_engine_tuz"
+		Torque="20000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.4"
+		MaxDeltaAngVel="0.01"
+		EngineResponsiveness="0.01"
+	>
+		<GameData
+			Price="1700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_SCOUT_OLD_TUZ_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_SCOUT_OLD_TUZ_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

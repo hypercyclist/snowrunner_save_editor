@@ -1,0 +1,47 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="0.75"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_310e_tuning/step_310e_cabin_protector_1">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(1.929; 2.53; 0.743)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(1.929; 2.53; -0.743)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(1.929; 1.469; 0.745)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(1.929; 1.469; -0.745)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_PROTECTOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_PROTECTOR_1_NAME"
+		/>
+		<InstallSocket Type="step_310eCabinProtector" />
+	</GameData>
+</TruckAddon>

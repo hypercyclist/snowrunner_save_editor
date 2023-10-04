@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<_parent File="dan_96320_beacon_default" />
+<TruckAddon>
+	<PhysicsModel _noinherit="true" Mesh="trucks/dan_96320_tuning/dan_96320_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model  Org="(5.191; 2.982; -1.182)"  />
+			<Light  Pos="(5.191; 2.982; -1.182)"  />
+			<Flare  Pos="(5.191; 2.982; -1.182)"  />
+			<Flare  Pos="(5.191; 2.982; -1.182)"  />
+			<Flare Pos="(5.253; 3.007; -1.182)" />
+		</Ignition>    
+		<Ignition _template="Flasher">
+			<Model   Org="(5.313; 2.982; 1.182)"  />
+			<Light   Pos="(5.313; 2.982; 1.182)"  />
+			<Flare   Pos="(5.313; 2.982; 1.182)"  />
+			<Flare   Pos="(5.313; 2.982; 1.182)"  />
+			<Flare Pos="(5.253; 3.007; 1.182)" />
+		</Ignition>    
+	</ModelAttachments>
+    
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

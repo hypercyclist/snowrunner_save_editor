@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.83; 2.832; -0.901)" />
+			<Flare _template="MarkerBeacon" Pos="(2.891; 2.872; -0.188)" />
+			<Flare _template="MarkerBeacon" Pos="(2.891; 2.872; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(2.891; 2.872; 0.188)" />
+			<Flare _template="MarkerBeacon" Pos="(2.83; 2.832; 0.901)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="InternationalTranstar4070Gabarite" />
+	</GameData>
+</TruckAddon>

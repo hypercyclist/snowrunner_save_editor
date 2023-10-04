@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_rear_bumper">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Pos="(-2.667; 0.914; -0.88)" />
+			<Flare _template="StopSignal" Pos="(-2.667; 0.914; 0.88)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-2.667; 0.914; -0.88)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-2.667; 0.914; 0.88)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Yar87RearBumper" />
+	</GameData>
+</TruckAddon>

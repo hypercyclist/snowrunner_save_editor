@@ -1,0 +1,40 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.08"
+		/>
+	</Flare>
+</_templates>
+<_parent File="royal_bm17_horn_1" />
+<TruckAddon>
+	<Snorkel Origin="(3.320; 2.538; -1.060)" />
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_snorkel_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(3.363; 1.559; -1.06)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.363; 1.471; -1.06)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.363; 1.38; -1.06)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(3.363; 1.29; -1.06)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Snorkel" />
+	</GameData>
+</TruckAddon>

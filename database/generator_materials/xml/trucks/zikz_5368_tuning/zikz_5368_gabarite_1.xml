@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="zikz_5368_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.43; 2.66; -0.857)" />
+			<Flare _template="MarkerBeacon" Pos="(2.43; 2.66; 0.857)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+		<InstallSocket Type="zikz5368Gabarite" />
+	</GameData>
+</TruckAddon>

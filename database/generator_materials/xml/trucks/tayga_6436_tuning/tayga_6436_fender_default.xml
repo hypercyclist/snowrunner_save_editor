@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_fender_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.376; 1.028; 0)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-4.151; 1.028; -1.025)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-4.151; 1.028; 1.025)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.151; 1.028; 0.676)" />
+			<Light _template="ReverseSignal" Pos="(-4.151; 1.028; -0.676)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-4.151; 1.028; 0.676)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-4.151; 1.028; -0.676)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.197; 1.063; 0.666)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.197; 1.063; -0.666)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-4.279; 1.028; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.167; 1.028; -1.025)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.167; 1.028; 1.025)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Fender" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_wooden_planks_2">
+		<NetSync Legacy="false" />
+		<Body Mass="500" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="500" ModelFrame="BoneExtra_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_wooden_planks"
+			TransportedSound="load/wood_box/wood_box_rnd"
+			ManualSound="cargo_manual/cargo_manual_wooden_planks"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoWoodenPlanks2"
+			CargoValue="1"
+			Offset="(1.279; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,87 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="1600">
+		<!-- <LimitedFluid -->
+			<!-- Center="(0.626; 1.174; 0)" -->
+			<!-- LengthX="5.222" -->
+			<!-- RadiusY="0.934" -->
+			<!-- RadiusZ="1.167" -->
+			<!-- Type="Cylinder" -->
+		<!-- /> -->
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="3.5" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="3.5" />
+	<PhysicsModel Mesh="trucks/addons/cat_745c_fuel_tank">
+		<Body Mass="1000">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-7.059; 3.426; 0)" />
+			<Flare _template="StopSignal" DirAngle="135" Pos="(-6.228; 3.426; -0.868)" Size="0.5" />
+			<Flare _template="StopSignal" DirAngle="135" Pos="(-6.228; 3.426; 0.868)" Size="0.5" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.139; 3.727; -1.071)" />
+			<Light _template="ReverseSignal" Pos="(-6.139; 3.727; 1.071)" />
+			<Light _template="ReverseSignal" Pos="(-6.32; 3.63; -0.566)" />
+			<Light _template="ReverseSignal" Pos="(-6.32; 3.63; 0.566)" />
+			<Flare _template="ReverseSignal" DirAngle="135" Pos="(-6.139; 3.727; -1.071)" Size="0.5" />
+			<Flare _template="ReverseSignal" DirAngle="135" Pos="(-6.139; 3.727; 1.071)" Size="0.5" />
+			<Flare _template="ReverseSignal" DirAngle="135" Pos="(-6.32; 3.63; -0.566)" Size="0.5" />
+			<Flare _template="ReverseSignal" DirAngle="135" Pos="(-6.32; 3.63; 0.566)" Size="0.5" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-6.139; 3.727; -1.071)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-6.139; 3.727; 1.071)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-6.32; 3.63; -0.566)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-6.32; 3.63; 0.566)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.228; 3.426; -1.065)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.228; 3.426; 1.065)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.228; 3.426; -0.868)" Size="0.2" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-6.228; 3.426; 0.868)" Size="0.2" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.699; 0.184; 0.691)" Org="(-6.051; 3.987; 0.584)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.699; 0.184; 0.691)" Pos="(-6.051; 3.987; 0.584)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.699; 0.184; 0.691)" Pos="(-6.051; 3.987; 0.584)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.699; 0.184; 0.691)" Pos="(-6.051; 3.987; 0.584)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(-6.025; 3.980; 0.558)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.699; 0.184; -0.691)" Org="(-5.994; 3.988; -0.589)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.699; 0.184; -0.691)" Pos="(-5.994; 3.988; -0.589)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.699; 0.184; -0.691)" Pos="(-5.994; 3.988; -0.589)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.699; 0.184; -0.691)" Pos="(-5.994; 3.988; -0.589)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(-6.025; 3.980; -0.558)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="8500"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CAT_745C_FUEL_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CAT_745C_FUEL_TANK_NAME"
+		/>
+		<InstallSocket Type="Cat745CFuelTank" />
+	</GameData>
+</TruckAddon>

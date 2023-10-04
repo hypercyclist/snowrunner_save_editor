@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_beacon_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.996; 0.093; 0)" Org="(0.729; 2.079; -0.707)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.996; 0.093; 0)" Pos="(0.729; 2.079; -0.707)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(0.729; 2.079; -0.707)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(0.729; 2.079; -0.707)" ParentFrame="BoneRotator" />
+			<Flare Pos="(0.696; 2.076; -0.707)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TALL_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TALL_BEACON_1_NAME"
+		/>
+		<InstallSocket Type="HummerH2Beacon" />
+	</GameData>
+</TruckAddon>

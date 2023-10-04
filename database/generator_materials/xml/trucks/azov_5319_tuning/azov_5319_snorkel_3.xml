@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.232; 3.146; 0.097)" />
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_snorkel_3" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

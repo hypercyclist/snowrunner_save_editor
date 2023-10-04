@@ -1,0 +1,18 @@
+<_parent File="cat_ct680_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_exhaust_2" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_SLANTCUT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_SLANTCUT_NAME"
+		/>
+	</GameData>
+	<Exhaust _noinherit="true" Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(0.769; 3.908; -1.112)" Speed="3.82" />
+	<Exhaust _noinherit="true" Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(0.769; 3.908; 1.112)" Speed="3.83" />
+</TruckAddon>

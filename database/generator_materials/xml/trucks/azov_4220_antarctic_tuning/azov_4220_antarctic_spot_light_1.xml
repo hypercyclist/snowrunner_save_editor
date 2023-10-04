@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.991; 3.684; -0.532)" />
+			<Model _template="HeadLightRay" Org="(4.991; 3.684; 0.532)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(4.991; 3.684; -0.532)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(4.991; 3.684; 0.532)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(5.007; 3.684; -0.172)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(5.007; 3.684; 0.172)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BARMOUNTED_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BARMOUNTED_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticSpotLight" />
+	</GameData>
+</TruckAddon>

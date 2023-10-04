@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.25; 3.309; -0.15)" />
+			<Flare _template="MarkerBeacon" Pos="(1.25; 3.309; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(1.25; 3.309; 0.15)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Gabarite1" />
+	</GameData>
+</TruckAddon>

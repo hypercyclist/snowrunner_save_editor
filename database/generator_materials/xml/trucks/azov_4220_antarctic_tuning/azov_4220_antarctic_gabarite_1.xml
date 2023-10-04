@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.644; 3.487; -0.744)" />
+			<Flare _template="MarkerBeacon" Pos="(4.642; 3.516; -0.141)" />
+			<Flare _template="MarkerBeacon" Pos="(4.642; 3.516; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(4.642; 3.516; 0.141)" />
+			<Flare _template="MarkerBeacon" Pos="(4.644; 3.487; 0.744)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticGabarite" />
+	</GameData>
+</TruckAddon>

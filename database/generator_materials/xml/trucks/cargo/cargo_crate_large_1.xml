@@ -1,0 +1,21 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_crate_large_1">
+		<NetSync Legacy="false" />
+		<Body Mass="2500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_consumables"
+			TransportedSound="load/metal_sheet/metal_sheet_rnd"
+			ManualSound="cargo_manual/cargo_manual_consumables"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoCrateLarge"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

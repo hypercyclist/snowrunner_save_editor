@@ -54,19 +54,21 @@ void CompleteTasksTable::updateTable()
 
     QAbstractItemModel* tasksTableModel = model();
 
+    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+
     for (auto regionPair : m_gameAtlas->regions())
     {
         std::string regionName = regionPair.second->name(m_localization->defaultLanguage());
         QString currentRegionFilter = m_regionFilterCombobox->currentText();
 
-        if (currentRegionFilter == "Все" || regionName.c_str() == m_regionFilterCombobox->currentText())
+        if (currentRegionFilter == allString.c_str() || regionName.c_str() == m_regionFilterCombobox->currentText())
         {
-            for (auto mapPair : regionPair.second->maps())
+            for (const auto& mapPair : regionPair.second->maps())
             {
                 QString  currentMapFilter = m_mapFilterCombobox->currentText();
-                if (currentMapFilter == "Все" || mapPair.second->name(m_localization->defaultLanguage()).c_str() == currentMapFilter)
+                if (currentMapFilter == allString.c_str() || mapPair.second->name(m_localization->defaultLanguage()).c_str() == currentMapFilter)
                 {
-                    for (auto taskPair : mapPair.second->tasks())
+                    for (const auto& taskPair : mapPair.second->tasks())
                     {
                         int rowIndex = rowCount();
                         insertRow(rowIndex);

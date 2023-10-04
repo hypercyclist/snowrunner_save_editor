@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_spot_light_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.822; 3.574; -0.512)" />
+			<Model _template="HeadLightRay" Org="(0.822; 3.574; 0.512)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.822; 3.574; -0.512)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.822; 3.574; 0.512)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.822; 3.574; -0.202)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size=".4" Pos="(0.822; 3.574; 0.202)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 2" Pos="(0.822; 3.574; 0)"  />			
+		</MainHeadLight>
+		<Ignition>			
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 1.5" Size=".2" Pos="(0.822; 3.574; 0.512)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 1.5" Size=".2" Pos="(0.822; 3.574; -0.512)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 1.5" Size=".2" Pos="(0.822; 3.574; 0.202)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 1.5" Size=".2" Pos="(0.822; 3.574; -0.202)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x .5" Pos="(0.822; 3.574; 0)"  />			
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Spotlight" />
+	</GameData>
+</TruckAddon>

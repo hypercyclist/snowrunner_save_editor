@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_visor_1" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="InternationalScout800Visor" />
+	</GameData>
+</TruckAddon>

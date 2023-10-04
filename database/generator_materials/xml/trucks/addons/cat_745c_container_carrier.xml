@@ -1,0 +1,28 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/cat_745c_container_carrier">
+		<Body Mass="400">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneAddonFront_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+		IncludedCargoTypes="CargoContainerSmall, CargoContainerSmallSpecial"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CAT_745C_CONTAINER_CARRIER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CAT_745C_CONTAINER_CARRIER_NAME"
+		/>
+		<InstallSocket Type="Cat745CContainerCarrier" />
+		<AddonSlots InitialOffset="(-1.219; 2.076; -0)" OffsetStep="(-3.198; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

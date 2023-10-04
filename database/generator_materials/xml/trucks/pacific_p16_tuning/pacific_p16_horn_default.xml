@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_horn_default"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_ONESIDE_NAME"
+		/>
+		<InstallSocket Type="PacificP16Horn" />
+	</GameData>
+</TruckAddon>

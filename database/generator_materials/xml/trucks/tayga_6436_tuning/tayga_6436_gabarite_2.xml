@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="tayga_6436_gabarite_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_gabarite_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.012; 3.049; -0.728)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.012; 3.049; 0.729)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.01; 3.088; -0.138)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.01; 3.088; 0.138)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.01; 3.09; 0)" ParentFrame="BoneCabinDamper_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+	</GameData>
+</TruckAddon>

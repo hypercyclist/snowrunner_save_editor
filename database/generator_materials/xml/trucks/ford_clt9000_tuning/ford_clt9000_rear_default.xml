@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_rear_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard1_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.508; 0.372; 0)" />
+			<Flare _template="StopSignal" Size="0.6" Pos="(-4.076; 0.55; 0.243)" />
+			<Flare _template="StopSignal" Size="0.6" Pos="(-4.076; 0.55; -0.243)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.074; 0.608; 0)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-4.074; 0.608; 0.244)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-4.074; 0.608; -0.244)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.074; 0.608; 0.244)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.074; 0.608; -0.244)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-4.071; 0.562; 0.244)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.071; 0.562; -0.244)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_MUDFLAPS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_MUDFLAPS_STOCK_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Rear" />
+	</GameData>
+</TruckAddon>

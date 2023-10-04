@@ -1,0 +1,23 @@
+<_templates Include="trucks"/>
+<TruckAddon>	
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_fender_front_01">
+		<Body ImpactType="Truck" Mass="50" >
+			<Constraint Type="Rigid" />			
+		</Body>
+	</PhysicsModel>	
+	<GameData
+		CameraPreset="side_l"
+		Category="fender_front"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_PACIFIC_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_PACIFIC_NAME"
+		/>
+		<InstallSocket Type="PacificP16FenderFront" />
+	</GameData>	
+</TruckAddon>

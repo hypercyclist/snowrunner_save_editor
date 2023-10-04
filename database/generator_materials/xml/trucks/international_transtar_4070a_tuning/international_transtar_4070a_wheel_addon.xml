@@ -1,0 +1,29 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_wheel_addon">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="20" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="wheel_addon"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="InternationalTranstar4070aSpareWheel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 149; 34) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.2"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalYellow" Pos="(2.093; 3.356; 0.676)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(2.093; 3.356; -0.22)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+		<RequiredAddon Types="pacific_p16_fender_front_01" />
+		<InstallSocket _noinherit="true" Type="PacificP16GabariteFenderFront" />
+	</GameData>
+</TruckAddon>

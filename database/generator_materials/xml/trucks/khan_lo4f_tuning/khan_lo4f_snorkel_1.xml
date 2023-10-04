@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(0.709; 1.942; -0.954)" />
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_snorkel_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FORGEDSHEET_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FORGEDSHEET_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fSnorkel" />
+	</GameData>
+</TruckAddon>

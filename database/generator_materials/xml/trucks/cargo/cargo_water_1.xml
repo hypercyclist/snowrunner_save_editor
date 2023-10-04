@@ -1,0 +1,15 @@
+<TruckAddon _noinherit="true">
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_barrels_oil"
+			TransportedSound="load/barrel_oil/barrel_oil_rnd"
+			ManualSound="cargo_manual/cargo_manual_barrels_oil"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoWater"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

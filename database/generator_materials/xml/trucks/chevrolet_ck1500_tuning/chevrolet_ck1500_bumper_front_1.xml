@@ -1,0 +1,47 @@
+<_templates Include="trucks" >
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-18"
+				MaxLimit="115"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="chevrolet_ck1500_bumper_front_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_front_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.387; 0.587; -0.639)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(2.387; 0.587; 0.639)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.387; 0.587; -0.639)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.387; 0.587; 0.639)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Size="0.32" Pos="(2.387; 0.595; -0.701)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.32" Pos="(2.387; 0.595; 0.701)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_TOWLOOPS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,8 @@
+<WinchUiDrawParams
+	Radius="10"
+	HoverRadius="20"
+	SelectionRadius="20"
+	RemoveRadius="15"
+	LineWidth="5"
+	>
+</WinchUiDrawParams>

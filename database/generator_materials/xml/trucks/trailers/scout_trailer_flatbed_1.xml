@@ -1,0 +1,189 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheelRear
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.07"
+			SuspensionStrength="0.33"
+			Torque="default"
+			Type="wheel_scout_trailer_flatbed"
+			SuspensionMin="-0.3"
+		/>
+		<TrailerWheelFront
+			SuspensionHeight="0.01"
+			SuspensionStrength="1"
+			Torque="default"
+			Type="wheel_scout_trailer_front"
+			SuspensionMin="0.01"
+			ParentFrame="BoneRotFrontWheel_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 195; 34) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.6"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="TrailerWheelFront" Pos="(3.821; 0.11; 0)" />
+			<Wheel _template="TrailerWheelRear" Pos="(0.742; 0.411; 1.153)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(0.742; 0.411; 1.153)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-1.5"
+			MaxX="4"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				TerminalFix="true"
+				Position=".324"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/scout_trailer_flatbed_1">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="800"
+		>
+			<Body Collisions="None" Mass="100" ModelFrame="BoneMoveFrontWheel_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.324"
+				>
+					<Motor Force="45000" Type="Position" />
+				</Constraint>
+				<Body
+					AngularDamping="10.0"
+					Collisions="None"
+					Mass="100"
+					ModelFrame="BoneRotFrontWheel_cdt"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-180"
+						MaxLimit="180"
+					/>
+				</Body>
+			</Body>
+			<Body Mass="5" ModelFrame="BoneHandle_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Handle"
+					Type="Hinge"
+					MinLimit="-180"
+					MaxLimit="180"
+				>
+					<Motor Damping=".2" Spring="2" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.272; 0.815; 0)" />
+			<Flare _template="StopSignal" Pos="(-1.211; 0.86; -1.072)" />
+			<Flare _template="StopSignal" Pos="(-1.211; 0.86; 1.072)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.204; 0.86; -0.977)" />
+			<Light _template="ReverseSignal" Pos="(-1.204; 0.86; 0.977)" />
+			<Flare _template="ReverseSignal" Pos="(-1.204; 0.86; -0.977)" />
+			<Flare _template="ReverseSignal" Pos="(-1.204; 0.86; 0.977)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.206; 0.86; -0.977)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.206; 0.86; 0.977)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-1.272; 0.815; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.211; 0.86; -1.072)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.211; 0.86; 1.072)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(2.603; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(2.635; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(2.603; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(2.635; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(1.558; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.59; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(1.558; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.59; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(0.016; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(0.048; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(0.016; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(0.048; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-0.954; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-0.922; 0.942; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-0.954; 0.942; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-0.922; 0.942; 1.318)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/scout_trailer_flatbed_1_lmk" MinScale="1.5" MaxScale="3.5" />
+	<GameData Price="2700">
+		<WinchSocket WinchableWhenAttached="false" Pos="(4.5; 0.75; 0)" />
+		<WinchSocket Pos="(-1.221; 0.815; 0.847)" />
+		<WinchSocket Pos="(-1.221; 0.815; -0.847)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_SCOUT_FLATBED_1_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_TRAILER_SCOUT_FLATBED_1_NAME"
+		/>
+		<InstallSocket Offset="(4.5; 0.75; 0)" Type="ScautTrailer" />
+		<CraneSocket Pos="(4.5; 0.75; 0)" />
+		<CraneSocket Pos="(-1.221; 0.815; 0.847)" />
+		<CraneSocket Pos="(-1.221; 0.815; -0.847)" />
+		<AddonSlots InitialOffset="(0.742; 0.977; 0)" OffsetStep="(-3.198; 0; 0)" Quantity="1" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBaseR" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBaseL" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_420_tatarin_tuning/tuz_420_tatarin_visor_2" />
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="30"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_SHADED_TOP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_SHADED_TOP_NAME"
+		/>
+		<InstallSocket Type="Tuz420TatarinVisor2" />
+	</GameData>
+</TruckAddon>

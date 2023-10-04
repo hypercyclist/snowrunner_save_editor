@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.484; 3.653; -0.888)" />
+			<Flare _template="MarkerBeacon" Pos="(2.484; 3.653; 0.888)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC" UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME" />
+		<InstallSocket Type="Kolob74941Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_parent File="hummer_h2_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.052; 1.904; -1.017)" />
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_snorkel_2" />
+	<GameData
+		Price="3300"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

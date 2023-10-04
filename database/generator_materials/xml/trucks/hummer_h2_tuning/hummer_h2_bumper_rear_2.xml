@@ -1,0 +1,82 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; -1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="90"
+			/>
+		</Hitch>
+	</Body>
+	<Flare>
+		<IgnitionSignalWhite
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 0.65"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+	</Flare>
+</_templates>
+<_parent File="hummer_h2_bumper_rear_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="True" >
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.277; 0.815; -0.752)" />
+			<Flare _template="ReverseSignal" Size="0.2" Pos="(-2.277; 0.815; -0.752)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(-1; 0; 0)" Pos="(-2.277; 0.815; -0.752)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-2.277; 0.815; -0.752)" />
+			<Light _template="ReverseSignal" Pos="(-2.277; 0.815; 0.752)" />
+			<Flare _template="ReverseSignal" Size="0.2" Pos="(-2.277; 0.815; 0.752)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(-1; 0; 0)" Pos="(-2.277; 0.815; 0.752)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-2.277; 0.815; 0.752)" />
+			<!-- -->
+			<Light _template="ReverseSignal" Dir="(0; -0.707; -0.707)" Pos="(-2.121; 0.697; -0.776)" />
+			<Flare _template="ReverseSignal" Size="0.2" Dir="(0; -0.707; -0.707)" Pos="(-2.121; 0.697; -0.776)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(0; -0.707; -0.707)" Pos="(-2.121; 0.697; -0.776)" />
+			<Flare _template="BlueStreak" Dir="(0; -0.707; -0.707)" Pos="(-2.121; 0.697; -0.776)" />
+			<Light _template="ReverseSignal" Dir="(0; -0.707; 0.707)" Pos="(-2.121; 0.697; 0.776)" />
+			<Flare _template="ReverseSignal" Size="0.2" Dir="(0; -0.707; 0.707)" Pos="(-2.121; 0.697; 0.776)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(0; -0.707; 0.707)" Pos="(-2.121; 0.697; 0.776)" />
+			<Flare _template="BlueStreak" Dir="(0; -0.707; 0.707)" Pos="(-2.121; 0.697; 0.776)" />
+			<!-- -->
+			<Light _template="ReverseSignal" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; -0.95)" />
+			<Flare _template="ReverseSignal" Size="0.2" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; -0.95)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; -0.95)" />
+			<Flare _template="BlueStreak" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; -0.95)" />
+			<Light _template="ReverseSignal" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; 0.95)" />
+			<Flare _template="ReverseSignal" Size="0.2" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; 0.95)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.6" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; 0.95)" />
+			<Flare _template="BlueStreak" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; 0.95)" />
+		</ReverseSignals>
+		<!-- <Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(-1; 0; 0)" Pos="(-2.277; 0.815; -0.752)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-1; 0; 0)" Pos="(-2.2977; 0.815; 0.752)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0; -0.707; -0.707)" Pos="(-2.121; 0.697; -0.776)" Size="0.35" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0; -0.707; 0.707)" Pos="(-2.121; 0.697; 0.776)" Size="0.35" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; -0.95)" Size="0.35" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0; -1; 0)" Pos="(-2.078; 0.799; 0.95)" Size="0.35" />
+		</Ignition> -->
+	</ModelAttachments>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_LIGHTPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_LIGHTPROT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

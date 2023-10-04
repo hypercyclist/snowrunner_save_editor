@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.156; 3.057; 0)" />
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_snorkel_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TWIN_NAME"
+		/>
+		<InstallSocket Type="zikz5368Snorkel" />
+	</GameData>
+</TruckAddon>

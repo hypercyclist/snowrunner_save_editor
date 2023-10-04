@@ -1,0 +1,26 @@
+<_parent File="ford_clt9000_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker/>
+			<Shaker/>
+			<Shaker Frame="BoneRightExhaustCover"  LimitDirectionZ="Negative" MinAngle="(0; 0; 60)" MaxAngle="(0; 0; 170)" MaxFrequency="0.17" ParentFrame="BoneRightExhaust" />
+			<Shaker Frame="BoneLeftExhaustCover"  LimitDirectionZ="Negative" MinAngle="(0; 0; 60)" MaxAngle="(0; 0; 170)" MaxFrequency="0.16" ParentFrame="BoneLeftExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_exhaust_02" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust _noinherit="true" Dir="(-0.270; 0.963; 0.000)" IsLight="true" Origin="(1.744; 3.624; 0.941)" Speed="3.82" />
+	<Exhaust _noinherit="true" Dir="(-0.270; 0.963; 0.000)" IsLight="true" Origin="(1.744; 3.624; -0.941)"  Speed="3.83" />
+</TruckAddon>

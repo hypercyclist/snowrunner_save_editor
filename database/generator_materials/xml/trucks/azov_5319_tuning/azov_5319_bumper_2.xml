@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_bumper_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.828; 1.415; -0.362)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(4.828; 1.415; 0.359)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Color="g(255; 235; 215) x 0.70" Pos="(4.828; 1.415; -0.362)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Color="g(255; 235; 215) x 0.70" Pos="(4.828; 1.415; 0.359)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FOGLIGHTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FOGLIGHTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_horn_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500Horn" />
+	</GameData>
+</TruckAddon>

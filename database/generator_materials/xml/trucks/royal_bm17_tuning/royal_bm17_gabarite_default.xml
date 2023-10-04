@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.652; 3.167; -0.578)" />
+			<Flare _template="MarkerBeacon" Pos="(1.652; 3.167; 0.578)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_ae4380_tuning/voron_ae4380_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight _noinherit="true">
+			<Model _template="HeadLightRay" Org="(1.722; 2.987; -0.615)" />
+			<Model _template="HeadLightRay" Org="(1.722; 2.987; 0.615)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.45" Pos="(1.722; 2.987; -0.615)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size="0.3" Pos="(1.756; 3.019; -0.265)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.3" Pos="(1.756; 3.019; 0)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size="0.3" Pos="(1.756; 3.019; 0.265)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.45" Pos="(1.722; 2.987; 0.615)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="VoronAE4380Spotlight1" />
+	</GameData>
+</TruckAddon>

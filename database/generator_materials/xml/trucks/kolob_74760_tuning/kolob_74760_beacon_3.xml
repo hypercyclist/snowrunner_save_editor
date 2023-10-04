@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="5" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="5" />
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_beacon_3">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(4.057; 3.964; 1.15)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0; 1)" Pos="(4.057; 3.964; 1.15)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0; 1)" Pos="(4.057; 3.964; 1.15)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0; 1)" Pos="(4.057; 3.964; 1.15)" ParentFrame="BoneRotatorL" />
+			<Flare AspectRation="2" Size=".6" Pos="(4.057; 3.964; 1.101)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; -1)" Org="(4.057; 3.964; -1.15)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0; 0; -1)" Pos="(4.057; 3.964; -1.15)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0; -1)" Pos="(4.057; 3.964; -1.15)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0; -1)" Pos="(4.057; 3.964; -1.15)" ParentFrame="BoneRotatorR" />
+			<Flare AspectRation="2" Size=".6" Pos="(4.057; 3.964; -1.101)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="25"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_HOVER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_HOVER_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Beacon" />
+	</GameData>
+</TruckAddon>

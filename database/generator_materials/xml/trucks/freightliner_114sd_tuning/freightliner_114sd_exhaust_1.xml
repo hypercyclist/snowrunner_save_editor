@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_exhaust_1" />
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" Origin="(1.584; 3.766; -1.181)" />
+</TruckAddon>

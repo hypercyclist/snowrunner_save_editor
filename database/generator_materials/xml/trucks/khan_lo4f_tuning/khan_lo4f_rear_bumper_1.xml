@@ -1,0 +1,17 @@
+<_parent File="khan_lo4f_rear_bumper" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_rear_bumper_1" />
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fRearBumper1" />
+	</GameData>
+</TruckAddon>

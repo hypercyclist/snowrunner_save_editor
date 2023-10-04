@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="20">
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Rigid"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.1; 0.1; 0.1)"
+				MaxAngle="(0.2; 0.2; 0.2)"
+				MaxFrequency="4"
+				ParentFrame="BoneExhaust_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_exhaust_default">
+		<Body _template="ExhaustTemplate" ModelFrame="BoneExhaust_cdt"/>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Azov64131Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.735; 0.678; 0)"
+		IsLight="true"
+		Origin="(1.493; 3.72; -0.843)"
+		Speed="3.82"
+	/>
+</TruckAddon>

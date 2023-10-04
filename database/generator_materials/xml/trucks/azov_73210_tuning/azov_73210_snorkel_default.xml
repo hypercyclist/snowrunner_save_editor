@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.337; 1.318; -0.754)" />
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_snorkel_default" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="Azov73210Snorkel" />
+	</GameData>
+</TruckAddon>

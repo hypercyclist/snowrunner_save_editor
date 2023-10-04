@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.954; 2.437; -0.940)" />
+	<PhysicsModel Mesh="trucks/step_310e_tuning/step_310e_snorkel_1"/>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3700"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_MUSHROOM_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_MUSHROOM_TALL_NAME"
+		/>
+		<InstallSocket Type="step_310eSnorkel" />
+	</GameData>
+</TruckAddon>

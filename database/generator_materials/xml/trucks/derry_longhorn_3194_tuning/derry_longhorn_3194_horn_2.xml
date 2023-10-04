@@ -1,0 +1,16 @@
+<_parent File="derry_longhorn_3194_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_horn_2" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

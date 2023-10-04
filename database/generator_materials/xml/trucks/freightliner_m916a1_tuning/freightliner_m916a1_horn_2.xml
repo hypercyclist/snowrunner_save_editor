@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_m916a1_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

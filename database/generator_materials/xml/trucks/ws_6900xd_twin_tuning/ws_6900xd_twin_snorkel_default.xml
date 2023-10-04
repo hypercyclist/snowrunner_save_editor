@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(5.757; 2.571; -1.106)" />
+	<Snorkel Origin="(5.757; 2.571; 1.106)" />
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_snorkel_default">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.96; 2.405; -1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.96; 2.405; 1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.958; 2.31; -1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.958; 2.31; 1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.957; 2.215; -1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.957; 2.215; 1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.955; 2.120; -1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.955; 2.120; 1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.953; 2.024; -1.066)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(5.953; 2.024; 1.066)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinSnorkel" />
+	</GameData>
+</TruckAddon>

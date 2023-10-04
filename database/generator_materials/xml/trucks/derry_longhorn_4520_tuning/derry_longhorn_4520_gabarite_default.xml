@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; -0.911)" />
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; 0.911)" />
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; -0.584)" />
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; 0.584)" />
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; -0.264)" />
+			<Flare _template="MarkerBeacon" Pos="(2.516; 3.279; 0.264)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn4520GabariteDefault" />
+	</GameData>
+</TruckAddon>

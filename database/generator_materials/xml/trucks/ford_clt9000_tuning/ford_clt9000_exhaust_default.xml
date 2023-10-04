@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="20">
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="3.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="4.1" ParentFrame="BoneLeftExhaust_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" AngularDamping="10000" ModelFrame="BoneLeftExhaust_cdt" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneRightExhaust_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.046; 0.138; -0.989)" IsLight="true" Origin="(1.781; 3.743; -1.225)" Speed="3.82" />
+	<Exhaust Dir="(-0.046; 0.138; 0.989)" IsLight="true" Origin="(1.781; 3.743; 1.225)" Speed="3.83" />
+</TruckAddon>

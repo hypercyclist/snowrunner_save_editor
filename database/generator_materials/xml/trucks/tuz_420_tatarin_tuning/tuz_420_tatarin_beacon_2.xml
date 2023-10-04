@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/tuz_420_tatarin_tuning/tuz_420_tatarin_beacon_2">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(-1.186; 2.505; -0.936)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(-1.186; 2.505; -0.936)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(-1.186; 2.505; -0.936)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(-1.186; 2.505; -0.936)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(-1.248; 2.5; -0.911)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(-1.248; 2.506; 0.971)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(-1.248; 2.506; 0.971)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-1.248; 2.506; 0.971)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-1.248; 2.506; 0.971)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(-1.248; 2.5; 0.911)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="23"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="Tuz420TatarinBeacon" />
+	</GameData>
+</TruckAddon>

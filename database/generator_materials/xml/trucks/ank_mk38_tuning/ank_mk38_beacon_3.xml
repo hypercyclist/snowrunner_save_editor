@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_beacon_3" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.585; 3.015; -0.911)" />
+			<Flare _template="MarkerBeacon" Pos="(1.586; 3.017; 0.911)" />
+			<Flare _template="MarkerBeacon" Pos="(1.588; 3.034; -0.172)" />
+			<Flare _template="MarkerBeacon" Pos="(1.588; 3.034; 0.172)" />
+			<Flare _template="MarkerBeacon" Pos="(1.588; 3.034; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="AnkMk38BeaconGabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,37 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_winch_addon">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="6"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0.05"
+				>
+					<Motor Damping="100" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="miscellenious"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_YAR_87_WINCH_ADDON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_YAR_87_WINCH_ADDON_NAME"
+		/>
+		<InstallSocket Type="Yar87WinchAddon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="zikz_5368_bumper_2" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_bumper_1"/>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.244; 1.251; -0.279)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(3.244; 1.251; 0.278)" />
+			<Flare _template="HeadLight" Size="0.6" DirAngle="135"  Pos="(3.244; 1.251; -0.279)" />
+			<Flare _template="HeadLight" Size="0.6" DirAngle="135"  Pos="(3.244; 1.251; 0.278)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

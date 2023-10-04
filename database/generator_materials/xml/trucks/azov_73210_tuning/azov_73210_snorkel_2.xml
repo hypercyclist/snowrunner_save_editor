@@ -1,0 +1,17 @@
+<_parent File="azov_73210_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(2.412; 2.700; -0.758)" />
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_snorkel_2" />
+	<GameData
+		Price="2600"
+		UnlockByExploration="false"
+		UnlockByRank="27"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

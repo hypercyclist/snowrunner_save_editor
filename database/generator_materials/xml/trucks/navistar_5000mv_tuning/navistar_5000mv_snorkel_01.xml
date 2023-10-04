@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.039; 3.036; -1.131)" />
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_snorkel_01">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_SQUARECAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_SQUARECAP_TALL_NAME"
+		/>
+		<InstallSocket Type="Navistar5000mvSnorkel" />
+	</GameData>
+</TruckAddon>

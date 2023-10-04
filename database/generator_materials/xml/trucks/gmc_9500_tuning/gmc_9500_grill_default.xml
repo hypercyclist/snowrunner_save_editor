@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_grill_default">
+		<Body
+			CenterOfMassOffset="(0.076; 0.152; 0.198)"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.321; 1.298; -0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Model _template="HeadLightRay" Org="(4.321; 1.298; 0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="1" Pos="(4.321; 1.298; -0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="1" Pos="(4.321; 1.298; 0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.321; 1.298; -0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.321; 1.298; 0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+		</MainHeadLight>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(4.618; 1.127; 0)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(4.321; 1.298; -0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(4.321; 1.298; 0.613)" ParentFrame="BoneCabinRagdoll_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Default" />
+	<GameData
+		CameraPreset="hoods"
+		Category="grill"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GMC_9500_GRILL_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GMC_9500_GRILL_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Grill" />
+	</GameData>
+</TruckAddon>

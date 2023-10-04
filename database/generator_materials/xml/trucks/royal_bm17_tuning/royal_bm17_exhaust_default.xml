@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_exhaust_default" />
+	<ModelAttachments _noinherit="true" />
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 0.638; -0.770)" Origin="(0.389; 3.509; -0.894)" />
+</TruckAddon>

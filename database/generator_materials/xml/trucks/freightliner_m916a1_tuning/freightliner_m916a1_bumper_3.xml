@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_m916a1_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_bumper_3"/>
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SLANTED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SLANTED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.760; 1.604; -0.876)" />
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_snorkel_1">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_MUSHROOM_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_MUSHROOM_TALL_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500Snorkel" />
+	</GameData>
+</TruckAddon>

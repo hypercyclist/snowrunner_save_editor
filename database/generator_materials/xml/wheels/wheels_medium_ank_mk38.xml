@@ -1,0 +1,34 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.706"
+>
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_ank_mk38_1" Name="offroad_ank_nk38_1">
+			<WheelFriction _template="Offroad" SubstanceFriction="1.7"/>
+			<GameData
+				Price="5700"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_ANK_MK38_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_ank_mk38_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_ANK_MK38_1_DESC" UiName="UI_RIM_ANK_MK38_1_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

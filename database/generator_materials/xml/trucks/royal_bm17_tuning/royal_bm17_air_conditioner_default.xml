@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_air_conditioner_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_air_conditioner_default" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROYAL_BM17_AIR_CONDITIONER_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROYAL_BM17_AIR_CONDITIONER_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Conditioner" />
+	</GameData>
+</TruckAddon>

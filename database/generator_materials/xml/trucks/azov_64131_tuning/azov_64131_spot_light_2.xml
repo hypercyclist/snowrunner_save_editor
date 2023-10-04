@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0.4" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0.4" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_spot_light_2"/>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.564; 3.565; -0.505)" />
+			<Model _template="HeadLightRay" Org="(3.564; 3.565; 0.519)" />
+			<Flare _template="HeadLight" Size=".30" Color="g(255; 235; 205) x 0.45" Pos="(3.564; 3.565; -0.505)" />
+			<Flare _template="HeadLight" Size=".30" Color="g(255; 235; 205) x 0.45" Pos="(3.564; 3.565; 0.519)" />
+			<Flare _template="HeadLight" Size=".45" Color="g(255; 235; 205) x 0.55" Pos="(3.567; 3.611; -0.264)" />
+			<Flare _template="HeadLight" Size=".45" Color="g(255; 235; 205) x 0.55" Pos="(3.567; 3.611; 0.267)" />
+			<Flare _template="HeadLight" Size=".45" Color="g(255; 235; 205) x 0.55" Pos="(3.567; 3.611; 0.002)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(3.522; 3.630; 0.765)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(3.522; 3.630; 0.765)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.522; 3.630; 0.765)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.522; 3.630; 0.765)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(3.451; 3.630; 0.765)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(3.451; 3.630; -0.680)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(3.451; 3.630; -0.680)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(3.451; 3.630; -0.680)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(3.451; 3.630; -0.680)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(3.451; 3.630; -0.680)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Azov64131SpotLight2" />
+	</GameData>
+</TruckAddon>

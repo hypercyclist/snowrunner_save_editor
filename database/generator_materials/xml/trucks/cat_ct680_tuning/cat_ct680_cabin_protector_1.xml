@@ -1,0 +1,64 @@
+<_templates Include="trucks" >
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+		<IgnitionSignalOrange
+			AspectRatio="0.7"
+			Color="g(255; 140; 0) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_cabin_protector_1">
+		<Body ImpactType="Truck" Mass="200" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint Type="Fixed" />
+			</Body>
+		</Body>        
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Pos="(0.322; 2.911; 0.703)" />
+			<Flare _template="StopSignal" Pos="(0.322; 2.911; -0.703)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(0.322; 2.911; 0.579)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.322; 2.911; -0.579)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.403; 2.855; 0.852)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.403; 2.855; -0.819)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(0.403; 1.707; 0.852)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(0.403; 1.707; -0.819)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		Price="1000"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_PROTECTOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_PROTECTOR_1_NAME"
+		/>
+		<InstallSocket Type="Cat680CabinProtector" />
+	</GameData>
+</TruckAddon>

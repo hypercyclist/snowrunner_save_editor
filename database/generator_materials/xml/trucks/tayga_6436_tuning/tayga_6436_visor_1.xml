@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_visor_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneCabinDamper_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		_noinherit="true"
+		CameraPreset="side_l"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Visor" />
+	</GameData>
+</TruckAddon>

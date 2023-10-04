@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_front_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Size="0.5" Pos="(4.068; 2.045; -1.282)" />
+			<Flare _template="Beacon" Size="0.5" Pos="(4.068; 2.045; 1.282)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_FRONT_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_FRONT_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Front" />
+	</GameData>
+</TruckAddon>

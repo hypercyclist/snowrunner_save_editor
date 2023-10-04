@@ -1,0 +1,64 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.65">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_1" Name="allterrain_1">
+			<WheelFriction _template="Allterrain" />
+			<GameData
+				Price="3400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_YAR_87_ALLTERRAIN_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_2" Name="offroad_1">
+			<WheelFriction _template="Offroad" />
+			<GameData
+				Price="4700"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_YAR_87_OFFROAD_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_3" Name="mudtires_1">
+			<WheelFriction _template="Mudtires" />
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="12"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_YAR_87_MUDTIRES_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_chains_single_1" Name="chains_1">
+			<WheelFriction _template="Chains" />
+			<GameData
+				Price="6000"
+				UnlockByExploration="false"
+				UnlockByRank="12"
+			>
+				<UiDesc UiDesc="UI_TIRE_CHAINS_DESC" UiName="UI_TIRE_YAR_87_CHAINS_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_1" Name="rim_1" >
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_YAR_87_1_DESC" UiName="UI_RIM_YAR_87_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_2" Name="rim_2" >
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_YAR_87_2_DESC" UiName="UI_RIM_YAR_87_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

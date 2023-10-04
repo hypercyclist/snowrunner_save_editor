@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier=".9" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_bumper_protector_default">
+		<Body Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_NAVISTAR_5000MV_BUMPER_PROTECTOR_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_NAVISTAR_5000MV_BUMPER_PROTECTOR_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Navistar5000mvBumperProtector" />
+		<RequiredAddon Types="navistar_5000mv_bumper_default" />		
+	</GameData>
+</TruckAddon>

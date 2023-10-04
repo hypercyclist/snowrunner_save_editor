@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_ae4380_tuning/voron_ae4380_spotlight" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.877; 2.113; 1.124)" />
+			<Flare _template="HeadLight" Pos="(1.877; 2.113; 1.124)" />
+			<Flare _template="BlueStreak" Pos="(1.916; 2.113; 1.124)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare
+				_template="IgnitionSignalWhite"
+				AspectRatio="1.75"
+				Color="g(165; 149; 130) x 1.2"
+				Pos="(1.877; 2.113; 1.124)"
+			/>
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 12" Pos="(1.916; 2.113; 1.124)" />
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="VoronAE4380Searchlight" />
+	</GameData>
+</TruckAddon>

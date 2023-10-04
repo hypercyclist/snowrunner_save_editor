@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.4"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<_parent File="freightliner_m916a1_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_exhaust_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.755; 1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.607; 1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.464; 1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.311; 1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.755; -1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.607; -1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.464; -1.054)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.423; 2.311; -1.054)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="24"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.685; 0.223; -0.693)" Origin="(0.424; 3.903; -1.187)" />
+	<Exhaust Dir="(-0.685; 0.223; 0.693)" Origin="(0.424; 3.903; 1.187)" />
+</TruckAddon>

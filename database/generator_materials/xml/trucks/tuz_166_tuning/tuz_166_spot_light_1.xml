@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.76; 1.372; 0.692)" />
+			<Flare _template="HeadLight" Pos="(0.76; 1.372; 0.692)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="Tuz166SpotLight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,23 @@
+<WinchVariants>
+	<Winch
+		Name="w_any_default"
+		Length="14"
+		StrengthMult="1"
+		IsEngineIgnitionRequired="true"
+	>
+		<GameData
+			Price="0"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<WinchParams
+			/>
+			<UiDesc
+				UiDesc="UI_WINCH_UPGRADE_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_WINCH_UPGRADE_DEFAULT_NAME"
+			/>
+		</GameData>
+	</Winch>
+</WinchVariants>

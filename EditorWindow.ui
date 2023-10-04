@@ -334,9 +334,18 @@
      <bool>false</bool>
     </property>
     <addaction name="menuRussian"/>
-    <addaction name="menuEnglish"/>
     <addaction name="menuChineseTraditional"/>
     <addaction name="menuChineseSimple"/>
+    <addaction name="menuBrazilian"/>
+    <addaction name="menuKorean"/>
+    <addaction name="menuEnglish"/>
+    <addaction name="menuJapanese"/>
+    <addaction name="menuGerman"/>
+    <addaction name="menuSpanish"/>
+    <addaction name="menuFrench"/>
+    <addaction name="menuCzech"/>
+    <addaction name="menuItalian"/>
+    <addaction name="menuPolish"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menuLanguage"/>
@@ -374,6 +383,51 @@
   <action name="menuChineseSimple">
    <property name="text">
     <string>中国人</string>
+   </property>
+  </action>
+  <action name="menuBrazilian">
+   <property name="text">
+    <string>Português</string>
+   </property>
+  </action>
+  <action name="menuKorean">
+   <property name="text">
+    <string>한국인</string>
+   </property>
+  </action>
+  <action name="menuJapanese">
+   <property name="text">
+    <string>日本語</string>
+   </property>
+  </action>
+  <action name="menuGerman">
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
+  <action name="menuSpanish">
+   <property name="text">
+    <string>Español</string>
+   </property>
+  </action>
+  <action name="menuFrench">
+   <property name="text">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="menuCzech">
+   <property name="text">
+    <string>čeština</string>
+   </property>
+  </action>
+  <action name="menuItalian">
+   <property name="text">
+    <string>Italiano</string>
+   </property>
+  </action>
+  <action name="menuPolish">
+   <property name="text">
+    <string>Polski</string>
    </property>
   </action>
  </widget>

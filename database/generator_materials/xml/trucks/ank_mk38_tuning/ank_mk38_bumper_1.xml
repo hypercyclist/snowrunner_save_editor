@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<Body>
+		<Antenna Collisions="None" Mass="5">
+			<Constraint
+				Cone="20"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-20"
+				PlaneMax="20"
+			>
+				<PlaneMotor Damping="6" Spring="340" Type="Spring" />
+				<ConeMotor Damping="6" Spring="340" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_bumper_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Antenna" ModelFrame="BoneAntenna1_cdt" />
+			<Body _template="Antenna" ModelFrame="BoneAntenna2_cdt" />
+			<Body
+				AngularDamping="30.0"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="4"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.021; 1.353; -0.221)" Scale="(1; 2; 1.5)" />
+			<Model _template="HeadLightRay" Org="(4.021; 1.353; 0.224)" Scale="(1; 2; 1.5)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="1" Pos="(4.021; 1.353; -0.221)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="1" Pos="(4.021; 1.353; 0.224)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Bumper" />
+	</GameData>
+</TruckAddon>

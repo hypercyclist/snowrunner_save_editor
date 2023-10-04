@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<_parent File="international_scout_800_front_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_front_bumper_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.843; 0.517; -0.509)" />
+			<Model _template="HeadLightRay" Org="(1.843; 0.517; 0.509)" />
+			<Flare _template="HeadLight" Pos="(1.843; 0.517; -0.509)" />
+			<Flare _template="HeadLight" Pos="(1.843; 0.517; 0.509)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Color="g(255; 200; 105) x 0.2" Pos="(1.843; 0.517; -0.509)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Color="g(255; 200; 105) x 0.2" Pos="(1.843; 0.517; 0.509)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_ANGLED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

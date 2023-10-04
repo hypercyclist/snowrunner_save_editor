@@ -1,0 +1,30 @@
+<TruckAddon>
+	<Snorkel Origin="(1.98; 3.036; -1.132)" />
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_snorkel">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="25" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="4400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_NAME"
+		/>
+		<RequiredAddon Types="international_transtar_4070a_exhaust" />
+		<InstallSocket Type="InternationalTranstar4070Snorkel" />
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="1" Frame="BoneRightExhaust" />
+	</ExplicitParents>
+</TruckAddon>

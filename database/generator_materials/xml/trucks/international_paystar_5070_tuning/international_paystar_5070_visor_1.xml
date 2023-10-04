@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_visor_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_NAME"
+		/>
+		<InstallSocket Type="InternationalPaystar5070Visor" />
+	</GameData>
+</TruckAddon>

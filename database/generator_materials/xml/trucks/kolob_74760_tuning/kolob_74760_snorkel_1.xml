@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(1.273; 3.799; 0.097)" />
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_snorkel_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Snorkel" />
+	</GameData>
+</TruckAddon>

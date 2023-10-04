@@ -1,0 +1,85 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(0;0)"
+				LinearLimitsY="(0;0.01)"
+				LinearLimitsZ="(0;0)"
+				Type="Fixed"
+			>
+				<Motor Damping="500" Spring="0.5" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="20"
+		RepairsCapacity="300"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid
+			Center="(-0.341; 1.807; 0.346)"
+			SizeX="0.452"
+			SizeY="0.168"
+			SizeZ="0.352"
+			Type="Box"
+			ParentFrame="BoneFuel_cdt"
+		/>
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_roofrack_1">
+		<Body Mass="50">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="5"
+				Mass="20"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.01;0.01)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="10"
+				Mass="25"
+				ModelFrame="BoneRepair1_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.02)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="10"
+				Mass="25"
+				ModelFrame="BoneRepair2_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.01;0.01)" />
+			</Body>
+			<Body _template="Limits" LinearDamping="3" Mass="30" ModelFrame="BoneWheel_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="Don71Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

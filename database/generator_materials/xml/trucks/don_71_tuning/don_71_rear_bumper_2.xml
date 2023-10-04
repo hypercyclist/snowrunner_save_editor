@@ -1,0 +1,16 @@
+<_parent File="don_71_rear_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_rear_bumper_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

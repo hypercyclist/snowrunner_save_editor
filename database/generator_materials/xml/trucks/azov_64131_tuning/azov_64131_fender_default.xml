@@ -1,0 +1,67 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard AngularDamping="3.0" Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				MinLimit="-35"
+				MaxLimit="25"
+				Type="Hinge"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_fender_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="20"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body _template="Mudguard" ModelFrame="MudguardRearLeft_cdt" />
+			<Body _template="Mudguard" ModelFrame="MudguardRearRight_cdt" />
+			<Body Collisions="None" Mass="20" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body _template="Mudguard" ModelFrame="MudguardFrontLeft_cdt" />
+				<Body _template="Mudguard" ModelFrame="MudguardFrontRight_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.293; 0.888; 0)" Size="0.8" />
+			<Flare _template="StopSignal" Pos="(-4.299; 0.885; -0.772)" Size="0.4" DirAngle="180" />
+			<Flare _template="StopSignal" Pos="(-4.299; 0.885; 0.772)" Size="0.4" DirAngle="180" />
+			<Flare _template="StopSignal" Pos="(-4.299; 0.885; -0.93)" Size="0.2" />
+			<Flare _template="StopSignal" Pos="(-4.299; 0.885; 0.93)" Size="0.2" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.293; 0.888; 0)" />
+			<Flare _template="ReverseSignal" Pos="(-4.299; 0.885; -0.826)" Size="0.7" />
+			<Flare _template="ReverseSignal" Pos="(-4.299; 0.885; 0.826)" Size="0.7" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.4" Dir="(-1; 0; 0)" Pos="(-4.299; 0.885; -0.826)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.4" Dir="(-1; 0; 0)" Pos="(-4.299; 0.885; 0.826)" />
+		</ReverseSignals>
+		<Ignition>
+			
+			<Flare _template="IgnitionSignalRed" Pos="(-4.299; 0.885; -0.93)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.299; 0.885; 0.93)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Azov64131Fender" />
+	</GameData>
+</TruckAddon>

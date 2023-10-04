@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="ws_4964_white_horn_1" />
+<TruckAddon>
+	<PhysicsModel _noinherit="true" Mesh="trucks/ws_4964_white_tuning/ws_4964_white_horn_2"/>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

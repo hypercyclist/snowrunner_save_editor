@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_beacon_default" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.983; 0.182; 0.016)" Org="(3.659; 3.402; 0.784)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0.983; 0.182; 0.016)" Pos="(3.659; 3.402; 0.784)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(3.659; 3.402; 0.784)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(3.659; 3.402; 0.784)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(3.597; 3.402; 0.784)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(3.598; 3.402; -0.718)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0.1; 1)" Pos="(3.598; 3.402; -0.718)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(3.598; 3.402; -0.718)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(3.598; 3.402; -0.718)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(3.597; 3.402; -0.784)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Azov64131Beacon" />
+	</GameData>
+</TruckAddon>

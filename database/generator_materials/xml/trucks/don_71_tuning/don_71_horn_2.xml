@@ -1,0 +1,16 @@
+<_parent File="don_71_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

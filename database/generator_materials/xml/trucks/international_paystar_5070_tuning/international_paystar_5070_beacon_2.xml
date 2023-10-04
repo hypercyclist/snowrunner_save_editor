@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_beacon_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_beacon_2" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(0.64; 2.998; 0)" />
+			<Light Pos="(0.64; 2.998; 0)" />
+			<Flare Pos="(0.64; 2.998; 0)" />
+			<Flare Pos="(0.64; 2.998; 0)" />
+			<Flare Pos="(0.595; 2.994; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CAGED_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CAGED_BEACON_1_NAME"
+		/>
+	</GameData>
+</TruckAddon>

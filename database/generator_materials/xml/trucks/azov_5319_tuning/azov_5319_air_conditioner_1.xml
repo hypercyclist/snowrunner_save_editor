@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_air_conditioner_1" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="Azov5319AirConditioner" />
+	</GameData>
+</TruckAddon>

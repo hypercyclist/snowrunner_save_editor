@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_horn_1" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_ONESIDE_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fHorn" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,183 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+		<Highway _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Highway" />
+		</Highway>
+		<Chains _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Chains" />
+		</Chains>
+		<Allterrain _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Allterrain" />
+		</Allterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.58"
+>
+	<TruckTires>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_front_1" Name="highway_1">
+			<WheelFriction _template="Highway" SubstanceFriction="0.4" />
+			<GameData
+				Price="2300"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_HIGHWAY_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_front_2" Name="highway_2">
+			<WheelFriction _template="Highway" BodyFriction="1.2" />
+			<GameData
+				Price="2500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_HIGHWAY_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_front_3" Name="highway_3">
+			<WheelFriction _template="Highway" BodyFrictionAsphalt="3.2" />
+			<GameData
+				Price="2900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_HIGHWAY_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_front_1" Name="allterrain_1">
+			<WheelFriction _template="Allterrain" BodyFrictionAsphalt="1.9" />
+			<GameData
+				Price="3800"
+				UnlockByExploration="false"
+				UnlockByRank="6"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_front_2" Name="allterrain_2">
+			<WheelFriction _template="Allterrain" SubstanceFriction="1.2" />
+			<GameData
+				Price="4200"
+				UnlockByExploration="false"
+				UnlockByRank="6"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_front_3" Name="allterrain_3">
+			<WheelFriction _template="Allterrain" BodyFriction="1.7" />
+			<GameData
+				Price="4500"
+				UnlockByExploration="false"
+				UnlockByRank="6"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_ALLTERRAIN_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_medium_offroad_double_front_1" Name="offroad_1">
+			<WheelFriction _template="Offroad" BodyFrictionAsphalt="1.0" />
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="8"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_medium_offroad_double_front_2" Name="offroad_2">
+			<WheelFriction _template="Offroad" SubstanceFriction="1.9" />
+			<GameData
+				Price="5100"
+				UnlockByExploration="false"
+				UnlockByRank="8"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_medium_offroad_double_front_3" Name="offroad_3">
+			<WheelFriction _template="Offroad" BodyFriction="3.2" />
+			<GameData
+				Price="5700"
+				UnlockByExploration="false"
+				UnlockByRank="8"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Chains" Mesh="wheels/tire_medium_chains_all_double_front" Name="chains_all">
+			<GameData
+				Price="6400"
+				UnlockByExploration="false"
+				UnlockByRank="12"
+			>
+				<UiDesc UiDesc="UI_TIRE_CHAINS_DESC" UiName="UI_TIRE_CHAINS_ALL_DOUBLE_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_3_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_4" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_4_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_5" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_5_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_5_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_front_6" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_6_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_6_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_1" Name="rim_offroad_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_2" Name="rim_offroad_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_3" Name="rim_offroad_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_front_4" Name="rim_offroad_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

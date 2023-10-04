@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_gabarite_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="2"
+			ModelFrame="BoneCabinDamper_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="2" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.097; 3.08; -0.219)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.096; 3.08; 0.218)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.096; 3.086; 0)" ParentFrame="BoneCabinDamper_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="Tayga6436Gabarite" />
+	</GameData>
+</TruckAddon>

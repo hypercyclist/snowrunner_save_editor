@@ -1,0 +1,49 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotatorLeft"
+		RotationSpeed="3.9"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotatorRight"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/step_310e_tuning/step_310e_beacon_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(2.425; 2.593; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(2.425; 2.593; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(2.425; 2.593; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(2.425; 2.593; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(2.372; 2.593; 0.726)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(2.372; 2.593; -0.673)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(2.372; 2.593; -0.673)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(2.372; 2.593; -0.673)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(2.372; 2.593; -0.673)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(2.372; 2.593; -0.726)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TALL_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TALL_BEACON_1_NAME"
+		/>
+		<InstallSocket Type="step_310eBeacon" />
+	</GameData>
+</TruckAddon>

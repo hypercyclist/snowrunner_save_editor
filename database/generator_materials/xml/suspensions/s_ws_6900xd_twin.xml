@@ -1,0 +1,47 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="240"
+		Name="ws_6900xd_twin_suspension_default"
+	>
+		<Suspension Damping="0.2" Height="0.1" Strength="0.025" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.25" />
+		<Suspension Damping="0.2" Height="0.15" Strength="0.025" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.3" />
+		<GameData
+			Price="6600"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="260"
+		Name="ws_6900xd_twin_suspension_high"
+	>
+		<Suspension Damping="0.2" Height="0.25" Strength="0.04" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.4" />
+		<Suspension Damping="0.2" Height="0.3" Strength="0.022" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.45" />
+		<GameData
+			Price="11300"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

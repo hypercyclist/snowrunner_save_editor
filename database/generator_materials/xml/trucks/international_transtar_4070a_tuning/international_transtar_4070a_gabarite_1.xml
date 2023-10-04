@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="international_transtar_4070a_gabarite_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.89; 2.837; -0.8)" />
+			<Flare _template="MarkerBeacon" Pos="(2.938; 2.861; -0.18)" />
+			<Flare _template="MarkerBeacon" Pos="(2.941; 2.865; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(2.938; 2.861; 0.18)" />
+			<Flare _template="MarkerBeacon" Pos="(2.89; 2.837; 0.8)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_CHROME_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -62,11 +62,13 @@ void GameAtlas::createGameAtlasData(std::string _filename)
         {
             region = new Region(regionCode);
 
-            // Тут нужно загрузить для всех языков.
-            std::string regionTranslate = m_localization->getLocalization(regionCode);
-            regionTranslate = Utils::cutLongCountryName(regionTranslate);
+            for (const auto& languagePair : m_localization->languageTextNames())
+            {
+                std::string regionTranslate = m_localization->getLocalization(regionCode, languagePair.first);
+                regionTranslate = Utils::cutLongCountryName(regionTranslate);
 
-            region->setName(Language::RUSSIAN, regionTranslate);
+                region->setName(languagePair.first, regionTranslate);
+            }
 
             addRegion(region);
         }
@@ -75,29 +77,34 @@ void GameAtlas::createGameAtlasData(std::string _filename)
         {
             map = new Map(mapCode);
 
-            // Тут нужно загрузить для всех языков.
-            std::string mapTranslate = m_localization->getLocalization(mapCode);
-            if (mapTranslate == "none")
-                mapTranslate = m_localization->getLocalization(mapCode + "_NAME");
-            if (mapTranslate == "none")
-                mapTranslate = m_localization->getLocalization(mapCode + "_NEW_NAME");
-            if (mapTranslate == "none")
-                mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME");
-            if (mapTranslate == "none")
-                mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode);
+            for (const auto& languagePair : m_localization->languageTextNames())
+            {
+                // Тут нужно загрузить для всех языков.
+                std::string mapTranslate = m_localization->getLocalization(mapCode, languagePair.first);
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization(mapCode + "_NAME", languagePair.first);
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization(mapCode + "_NEW_NAME", languagePair.first);
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME", languagePair.first);
+                if (mapTranslate == "none")
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode, languagePair.first);
 
-            mapTranslate = Utils::cutSlash(mapTranslate);
+                mapTranslate = Utils::cutSlash(mapTranslate);
 
-            map->setName(Language::RUSSIAN, mapTranslate);
+                map->setName(languagePair.first, mapTranslate);
+            }
 
             region->addMap(map);
         }
 
         Task* task = new Task(taskCode);
 
-        // Тут нужно загрузить для всех языков.
-        std::string taskTranslate = m_localization->getLocalization(taskCode);
-        task->setName(Language::RUSSIAN, taskTranslate);
+        for (const auto& languagePair : m_localization->languageTextNames())
+        {
+            std::string taskTranslate = m_localization->getLocalization(taskCode, languagePair.first);
+            task->setName(languagePair.first, taskTranslate);
+        }
 
         map->addTask(task);
     }
@@ -159,9 +166,12 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                 mCode.erase(std::remove(mCode.begin(), mCode.end(), '\"'), mCode.end());
                 upgrade->setMiddleCode(mCode);
                 m_localization->addLocalizationsTemplate(mCode, "none");
-                std::string translation = m_localization->getLocalization(mCode);
-                translation = translation == "none" ? mCode : translation;
-                upgrade->setName(Language::RUSSIAN, translation);
+                for (const auto& languagePair : m_localization->languageTextNames())
+                {
+                    std::string translation = m_localization->getLocalization(mCode, languagePair.first);
+                    translation = translation == "none" ? mCode : translation;
+                    upgrade->setName(languagePair.first, translation);
+                }
             }
 
             map->addUpgrade(upgrade);
@@ -240,15 +250,15 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                std::string mapTranslate = m_localization->getLocalization(map->code());
+                std::string mapTranslate = m_localization->getLocalization(map->code(), languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(map->code() + "_NAME");
+                    mapTranslate = m_localization->getLocalization(map->code() + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(map->code() + "_NEW_NAME");
+                    mapTranslate = m_localization->getLocalization(map->code() + "_NEW_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code() + "_NAME");
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code() + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code());
+                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code(), languagePair.first);
                 map->setName(languagePair.first, mapTranslate);
             }
 

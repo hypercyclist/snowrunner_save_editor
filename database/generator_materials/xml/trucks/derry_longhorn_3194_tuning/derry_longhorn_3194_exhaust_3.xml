@@ -1,0 +1,18 @@
+<_parent File="derry_longhorn_3194_exhaust" />
+<TruckAddon>
+	<TruckData/>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_exhaust_3" />
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.819; 0.574; 0)" Origin="(-0.226; 3.999; -0.898)" />
+</TruckAddon>

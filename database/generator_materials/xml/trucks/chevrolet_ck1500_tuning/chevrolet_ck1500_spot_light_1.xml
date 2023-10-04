@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="6" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="5.9" />
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_spot_light_1" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.373; 2.08; -0.239)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(0.375; 2.082; 0.239)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.14" Pos="(0.373; 2.08; -0.239)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.14" Pos="(0.375; 2.082; 0.239)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.14" Pos="(0.375; 2.081; 0)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(0.367; 2.112; 0.472)" ParentFrame="BoneRotator1" />
+			<Light Dir="(1; 0; 0)" Pos="(0.367; 2.112; 0.472)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.367; 2.112; 0.472)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.367; 2.112; 0.472)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(0.311; 2.112; 0.472)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(0.311; 2.112; -0.425)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0; 0; 1)" Pos="(0.311; 2.112; -0.425)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.311; 2.112; -0.425)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.311; 2.112; -0.425)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(0.311; 2.112; -0.48)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500SpotLight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_beacon_default">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(4.77; 3.533; -0.825)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(4.77; 3.533; -0.825)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(4.77; 3.533; -0.825)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(4.77; 3.533; -0.825)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(4.731; 3.53; -0.809)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(4.731; 3.535; 0.86)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(4.731; 3.535; 0.86)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(4.731; 3.535; 0.86)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(4.731; 3.535; 0.86)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(4.731; 3.53; 0.809)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinBeacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_horn_2" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

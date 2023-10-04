@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.948; 2.462; -1.035)" />
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_snorkel_1" />
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="3500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="Yar87Snorkel" />
+	</GameData>
+</TruckAddon>

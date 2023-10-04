@@ -1,0 +1,21 @@
+<_parent File="international_fleetstar_f2070a_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_fleetstar_f2070a_tuning/international_fleetstar_f2070a_bumper_1" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SLANTED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SLANTED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

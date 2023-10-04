@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.1; 0.1; 0.1)"
+				MaxAngle="(0.2; 0.2; 0.2)"
+				MaxFrequency="4"
+				ParentFrame="BoneExhaust_cdt"
+			/>
+			<Shaker
+				Frame="BoneExhaustValve"
+				LimitDirectionY="Positive"
+				MinAngle="(0; -66; 0)"
+				MaxAngle="(0; 18; 0)"
+				MaxFrequency="0.15"
+				ParentFrame="BoneExhaust"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_exhaust_3" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust
+		Dir="(0; 1; 0)"
+		IsLight="true"
+		Origin="(1.634; 3.625; -0.851)"
+		Speed="3.82"
+	/>
+</TruckAddon>

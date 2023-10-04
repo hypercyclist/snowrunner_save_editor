@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<_parent File="azov_4220_antarctic_beacon_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(4.554; 3.734; -0.865)" />
+			<Light Pos="(4.554; 3.734; -0.865)" />
+			<Flare Pos="(4.554; 3.734; -0.865)" />
+			<Flare Pos="(4.554; 3.734; -0.865)" />
+			<Flare Pos="(4.522; 3.728; -0.85)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Org="(4.522; 3.732; 0.891)" />
+			<Light Pos="(4.522; 3.732; 0.891)" />
+			<Flare Pos="(4.522; 3.732; 0.891)" />
+			<Flare Pos="(4.522; 3.732; 0.891)" />
+			<Flare Pos="(4.522; 3.728; 0.85)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

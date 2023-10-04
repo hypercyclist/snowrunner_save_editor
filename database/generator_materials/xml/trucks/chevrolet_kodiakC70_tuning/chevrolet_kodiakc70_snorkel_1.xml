@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.04; 2.616; -0.783)" />
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakC70_tuning/chevrolet_kodiakC70_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="ChevroletKodiakC70Snorkel" />
+	</GameData>
+</TruckAddon>

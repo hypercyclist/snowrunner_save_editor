@@ -1,0 +1,70 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel1" HideThreshold="0.67" />
+		<Mesh Frame="wheel2" HideThreshold="0.34" />
+		<Mesh Frame="wheel3" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<TruckData
+		FuelCapacity="100"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="3"
+	>
+		<LimitedFluid Center="(-0.815; 1.074; 0.573)" SizeX = "0.164" SizeY = "0.446" SizeZ = "0.372" Type="Box"/>
+		<LimitedFluid Center="(-0.815; 1.074; 0.164)" SizeX = "0.164" SizeY = "0.446" SizeZ = "0.372" Type="Box"/>
+        <LimitedFluid Center="(-0.554; 1.370; -0.542)" SizeX = "0.164" SizeY = "0.446" SizeZ = "0.372" Type="Box"/>		
+	</TruckData>	
+	<PhysicsModel Mesh="trucks/addons/international_loadstar_1700_pickup">
+		<Body ImpactType="Truck" Mass="300" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="20" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="20" />
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneDoor_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="1.5"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.368; 0.755; 0)" />
+			<Flare _template="StopSignal" Pos="(-2.881; 1.189; -0.833)" />
+			<Flare _template="StopSignal" Pos="(-2.881; 1.189; 0.833)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-2.885; 1.189; -0.833)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-2.885; 1.189; 0.833)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		GaragePoints="2"
+		IsCustomizable="true"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_PICKUP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_PICKUP_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Pickup" />
+	</GameData>
+</TruckAddon>

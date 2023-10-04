@@ -1,0 +1,97 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(165; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+	</Flare>
+	<Body>
+		<Hose Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="0"
+			/>
+		</Hose>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData RepairsCapacity="400" />
+	<PhysicsModel Mesh="trucks/addons/international_loadstar_1700_service_body">
+		<Body
+			CenterOfMassOffset="(0; -0.55; 0)"
+			ImpactType="Truck"
+			Mass="1000"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body _template="Hose" ModelFrame="BoneHoseLeft_cdt" />
+			<Body _template="Hose" ModelFrame="BoneHoseRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.636; 0.578; 0)" />
+			<Flare _template="StopSignal" Size="0.30" Pos="(-3.154; 0.91; -1.084)" />
+			<Flare _template="StopSignal" Size="0.30" Pos="(-3.154; 0.91; 1.084)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(240; 225; 210) x 0.8" Pos="(-3.215; 1.937; -0.884)" />
+			<Light _template="ReverseSignal" Color="g(240; 225; 210) x 0.8" Pos="(-3.215; 1.937; 0.884)" />
+			<Flare _template="ReverseSignal" Size="0.40" Color="g(240; 225; 210) x 0.7" Pos="(-3.215; 1.937; -0.884)" />
+			<Flare _template="ReverseSignal" Size="0.40" Color="g(240; 225; 210) x 0.7" Pos="(-3.215; 1.937; 0.884)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.215; 1.937; -0.884)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.215; 1.937; 0.884)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-3.154; 1.087; -1.084)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.154; 1.087; 1.084)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.154; 0.91; -1.084)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.154; 0.91; 1.084)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.162; 0.737; -1.084)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.162; 0.737; 1.084)" />
+			<Flare _template="IgnitionSignalRed" Dir="(0; 0; -1)" Pos="(-2.306; 1.118; -1.232)" />
+			<Flare _template="IgnitionSignalRed" Dir="(0; 0; 1)" Pos="(-2.306; 1.118; 1.232)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-2.370; 0.792; -1.194)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-2.370; 0.792; 1.194)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.083; 2.176; -1.088)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.083; 2.176; 1.088)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-3.261; 0.591; -1.215)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-3.261; 0.591; 1.215)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.17; 1.181; -0.225)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.17; 1.181; 0.225)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.17; 1.181; 0)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.258; 0.732; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		GaragePoints="2"
+		IsCustomizable="true"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_SERVICE_BODY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_INTERNATIONAL_LOADSTAR_1700_SERVICE_BODY_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700ServiceBody" />
+	</GameData>
+</TruckAddon>

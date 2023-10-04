@@ -1,0 +1,17 @@
+<_parent File="voron_ae4380_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_ae4380_tuning/voron_ae4380_exhaust_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" Origin="(0.77; 3.144; -0.982)" />
+</TruckAddon>

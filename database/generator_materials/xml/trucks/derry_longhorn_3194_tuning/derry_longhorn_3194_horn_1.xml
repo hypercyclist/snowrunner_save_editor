@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_horn_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Horn" />
+	</GameData>
+</TruckAddon>

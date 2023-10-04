@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<_parent File="ws_6900xd_twin_snorkel_default" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(5.907; 3.471; -1.103)" />
+	<Snorkel _noinherit="true" Origin="(5.907; 3.471; 1.103)" />
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_snorkel_2" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.34; -1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.237; -1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.131; -1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.027; -1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.34; 1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.237; 1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.131; 1.103)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(5.957; 2.027; 1.103)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

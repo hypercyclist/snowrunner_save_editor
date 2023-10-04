@@ -1,0 +1,21 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_barrels_1">
+		<NetSync Legacy="false" />
+		<Body Mass="1500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_barrels"
+			TransportedSound="load/barrel/barrel_rnd"
+			ManualSound="cargo_manual/cargo_manual_barrels"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoBarrelsMasut"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

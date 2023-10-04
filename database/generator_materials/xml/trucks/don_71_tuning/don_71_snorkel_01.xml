@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.495; 1.337; -0.669)" />
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_snorkel_01" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_NAME"
+		/>
+		<InstallSocket Type="Don71Snorkel" />
+	</GameData>
+</TruckAddon>

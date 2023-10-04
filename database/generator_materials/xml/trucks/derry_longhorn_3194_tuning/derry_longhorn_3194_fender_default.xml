@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_fender_default">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-70" MaxLimit="16" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-70" MaxLimit="16" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_MUDFLAPS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_MUDFLAPS_STOCK_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Fender" />
+	</GameData>
+</TruckAddon>

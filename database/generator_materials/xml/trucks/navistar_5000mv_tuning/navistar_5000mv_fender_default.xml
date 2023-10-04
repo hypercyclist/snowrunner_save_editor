@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_fender_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="20"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardL_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="15" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardR_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="15" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Navistar5000mvFender" />
+	</GameData>
+</TruckAddon>

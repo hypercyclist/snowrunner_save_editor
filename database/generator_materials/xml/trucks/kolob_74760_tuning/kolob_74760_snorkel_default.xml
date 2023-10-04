@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.293; 3.637; -0.480)" />
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_snorkel_default"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Snorkel" />
+	</GameData>
+</TruckAddon>

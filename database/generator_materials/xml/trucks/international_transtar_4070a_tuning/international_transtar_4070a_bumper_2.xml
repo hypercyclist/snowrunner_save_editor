@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="international_transtar_4070a_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_bumper_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="HeadLight" DirAngle="135" Size=".2" Pos="(3.422; 0.676; -0.782)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".2" Pos="(3.422; 0.676; 0.782)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_DEFENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_DEFENDER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

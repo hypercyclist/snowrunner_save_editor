@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.102; 2.666; -0.816)" />
+			<Flare _template="MarkerBeacon" Pos="(0.111; 2.665; -0.154)" />
+			<Flare _template="MarkerBeacon" Pos="(0.108; 2.665; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(0.111; 2.665; 0.154)" />
+			<Flare _template="MarkerBeacon" Pos="(0.103; 2.665; 0.816)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="Yar87Gabarite" />
+	</GameData>
+</TruckAddon>

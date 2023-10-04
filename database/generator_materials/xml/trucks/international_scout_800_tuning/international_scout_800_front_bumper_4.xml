@@ -1,0 +1,39 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-20"
+				MaxLimit="115"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="international_scout_800_front_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_front_bumper_4">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_TOWLOOPS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

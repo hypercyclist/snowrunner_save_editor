@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<Body>
+		<Cable Collisions="None" Mass="2">
+			<Constraint
+				Cone="20"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-2"
+				PlaneMax="2"
+			>
+				<PlaneMotor Damping="10" Spring="150" Type="Spring" />
+				<ConeMotor Damping="10" Spring="150" Type="Spring" />
+			</Constraint>
+		</Cable>
+	</Body>
+</_templates>
+<_parent File="khan_39_marshall_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_bumper_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Cable" ModelFrame="BoneHook1_cdt" />
+			<Body _template="Cable" ModelFrame="BoneHook2_cdt" />
+			<Body
+				AngularDamping="30.0"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook3_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="4"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="1" Pos="(2.162; 1.289; -0.18)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="1" Pos="(2.162; 1.289; 0.179)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallBumperCable" />
+	</GameData>
+</TruckAddon>

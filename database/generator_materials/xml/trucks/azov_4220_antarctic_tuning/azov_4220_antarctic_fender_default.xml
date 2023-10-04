@@ -1,0 +1,36 @@
+<_templates>
+	<Body>
+		<Mudguard AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-80"
+				MaxLimit="45"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_fender_default">
+		<Body Collisions="None" Mass="100" ModelFrame="BoneBack_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticFender" />
+	</GameData>
+</TruckAddon>

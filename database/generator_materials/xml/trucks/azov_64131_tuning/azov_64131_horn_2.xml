@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_TUNING_HORNS_QUAD_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_QUAD_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="Azov64131Horn2" />
+	</GameData>
+</TruckAddon>

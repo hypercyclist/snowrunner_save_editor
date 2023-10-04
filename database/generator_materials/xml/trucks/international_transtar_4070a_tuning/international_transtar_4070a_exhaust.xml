@@ -1,0 +1,46 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneRightExhaustCover"
+				LimitDirectionZ="Negative"
+				MinAngle="(0; 0; 20)"
+				MaxAngle="(0; 0; 90)"
+				MaxFrequency="0.15"
+				ParentFrame="BoneRightExhaust"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_exhaust">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="25" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="InternationalTranstar4070Exhaust" />
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="1" Frame="BoneRightExhaust" />
+	</ExplicitParents>
+	<Exhaust
+		Dir="(-0.707; 0.707; 0)"
+		IsLight="true"
+		Origin="(1.773; 3.682; -0.969)"
+		Speed="4"
+	/>
+</TruckAddon>

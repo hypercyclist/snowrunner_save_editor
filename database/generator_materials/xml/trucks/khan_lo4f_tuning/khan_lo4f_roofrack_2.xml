@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_roofrack_2">
+		<Body Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.689; 2.214; -0.377)" />
+			<Model _template="HeadLightRay" Org="(1.689; 2.214; 0.377)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.30" Pos="(1.689; 2.214; -0.377)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.25" Pos="(1.689; 2.214; 0.377)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.30" Pos="(1.689; 2.214; 0.003)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.25" Pos="(2.288; 1.323; -0.312)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.25" Pos="(2.288; 1.323; 0.312)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_LO4F_FRONT_FOGLIGHTBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_LO4F_FRONT_FOGLIGHTBAR_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fRoofrack2" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.467; 1.796; -0.691)" />
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2800"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="Tuz166Snorkel" />
+	</GameData>
+</TruckAddon>

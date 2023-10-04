@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Size="0.15" Pos="(1.489; 2.191; -0.626)" />
+			<Flare _template="Beacon" Size="0.15" Pos="(1.524; 2.209; 0)" />
+			<Flare _template="Beacon" Size="0.15" Pos="(1.489; 2.191; 0.626)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Visor" />
+	</GameData>
+</TruckAddon>

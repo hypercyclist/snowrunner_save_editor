@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_horn_1" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(1.005; 3.298; 0.64)" ParentFrame="BoneRotatorLeft" />
+			<Light Pos="(1.005; 3.298; 0.64)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.005; 3.298; 0.64)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.005; 3.298; 0.64)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.005; 3.298; 0.64)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Org="(0.924; 3.299; -0.564)" Dir="(-0.103; 0.100; 0.990)" ParentFrame="BoneRotatorRight" />
+			<Light Pos="(0.924; 3.299; -0.564)" Dir="(-0.103; 0.100; 0.990)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(0.924; 3.299; -0.564)" Dir="(-0.103; 0.100; 0.990)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(0.924; 3.299; -0.564)" Dir="(-0.103; 0.100; 0.990)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(0.924; 3.299; -0.564)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Beacon" />
+	</GameData>
+</TruckAddon>

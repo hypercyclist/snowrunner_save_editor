@@ -1,0 +1,64 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalWhite
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 1.1"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Size="0.5"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="5.1" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="5" />
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_spot_light_2">
+		<Body Collisions="None" Mass="8" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="2" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.322; 3.235; -0.532)" />
+			<Model _template="HeadLightRay" Org="(1.322; 3.235; 0.518)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size=".4" Pos="(1.322; 3.235; -0.532)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size=".35" Pos="(1.322; 3.235; 0.518)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size=".3" Pos="(1.322; 3.235; -0.270)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size=".3" Pos="(1.322; 3.235; 0.256)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size=".35" Pos="(1.322; 3.235; -0.004)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.267; 3.268; 0.767)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0.966; 0.26; 0)" Pos="(1.267; 3.268; 0.767)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.966; 0.26; 0)" Pos="(1.267; 3.268; 0.767)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.966; 0.26; 0)" Pos="(1.267; 3.268; 0.767)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(1.197; 3.268; 0.767)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-1; 0; 0)" Org="(1.128; 3.268; -0.784)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(-0.966; 0.26; 0)" Pos="(1.128; 3.268; -0.784)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(-0.966; 0.26; 0)" Pos="(1.128; 3.268; -0.784)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(-0.966; 0.26; 0)" Pos="(1.128; 3.268; -0.784)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(1.197; 3.268; -0.784)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Cat680Spotlight" />
+	</GameData>
+</TruckAddon>

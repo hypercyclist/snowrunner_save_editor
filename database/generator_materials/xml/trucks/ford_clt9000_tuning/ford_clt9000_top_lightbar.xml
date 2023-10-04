@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="5"
+	/>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_top_lightbar">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(3.205; 3.408; 0.000)" ParentFrame="BoneRotator" Scale="(0.3; 0.15; 0.4)" />
+			<Light Pos="(3.339; 3.408; 0.000)" ParentFrame="BoneRotator" />
+			<Flare Pos="(3.218; 3.408; -0.138)" AspectRatio="2" ParentFrame="BoneRotator" />
+			<Flare Pos="(3.218; 3.408; -0.138)" AspectRatio="2" ParentFrame="BoneRotator" />
+			<Flare Pos="(3.200; 3.45; 0)" Color="g(255; 50; 2) x 0.5" ColorMultAtDay="0.5" Size="1" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_RAISED_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_RAISED_BEACON_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Top" />
+	</GameData>
+</TruckAddon>

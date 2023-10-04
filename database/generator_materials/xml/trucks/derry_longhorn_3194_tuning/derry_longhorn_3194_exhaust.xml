@@ -1,0 +1,34 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="5" />
+			<Shaker Frame="BoneRightExhaustCover" LimitDirectionY="Positive" MinAngle="(0; 20; 0)" MaxAngle="(0; 130; 0)" MaxFrequency="0.15" ParentFrame="BoneRightExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_exhaust">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 0.819; -0.574)"
+		IsLight="true"
+		Origin="(-0.226; 3.577; -0.931)"
+		Speed="4"
+	/>
+</TruckAddon>

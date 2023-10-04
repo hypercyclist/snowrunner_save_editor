@@ -1,0 +1,31 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_container_large_4">
+		<NetSync Legacy="false" />
+		<Body Mass="2500" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="2500" ModelFrame="BoneCargo_container_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="2500" ModelFrame="BoneCargo_container_2_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					<Body Mass="2500" ModelFrame="BoneCargo_container_3_cdt">
+						<Constraint ExplicitParentFrame="3" Type="Fixed" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_container_large"
+			TransportedSound="load/metal_large/metal_large_rnd"
+			ManualSound="cargo_manual/cargo_manual_container_large"
+		/>
+		<InstallSlot
+			CargoLength="4"
+			CargoType="CargoContainerLargeDrilling"
+			CargoValue="1"
+			Offset="(3.878; 0; 0)"
+		/>
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_container_large_drilling_4_lmk"/>
+</TruckAddon>

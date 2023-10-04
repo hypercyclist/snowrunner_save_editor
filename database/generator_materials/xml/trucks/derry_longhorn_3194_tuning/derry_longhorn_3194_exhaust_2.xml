@@ -1,0 +1,22 @@
+<_parent File="derry_longhorn_3194_exhaust" />
+<TruckAddon>
+	<TruckData>
+		<Shakers _noinherit="True">
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="5" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_exhaust_2" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" Origin="(-0.170; 3.389; -0.882)" />
+</TruckAddon>

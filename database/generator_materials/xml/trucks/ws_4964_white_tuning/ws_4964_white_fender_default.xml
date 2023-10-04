@@ -1,0 +1,44 @@
+<_templates>
+	<Body>
+		<Mudguard1 AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-7"
+				MaxLimit="40"
+			/>
+		</Mudguard1>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_fender_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body _template="Mudguard1" ModelFrame="BoneLeftMudguard1_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneRightMudguard1_cdt" />
+			<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteFender" />
+	</GameData>
+</TruckAddon>

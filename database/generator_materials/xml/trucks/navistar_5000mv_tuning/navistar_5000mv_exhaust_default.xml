@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExtaustR" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(1; 1; 1)" MaxFrequency="4" />
+			<Shaker Frame="BoneExtaustL" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(1; 1; 1)" MaxFrequency="4" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_exhaust_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="30"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Navistar500mvExhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.817; 0.576; 0)" Origin="(-2.62; 3.493; -1.037)" Speed="3.82" />
+	<Exhaust Dir="(-0.817; 0.576; 0)" Origin="(-2.62; 3.493; 1.037)" Speed="3.82" />	
+</TruckAddon>

@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4.2" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4" />
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_spot_light_2">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.849; 2.372; -0.42)" />
+			<Model _template="HeadLightRay" Org="(0.849; 2.372; 0.42)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.30" Pos="(0.849; 2.372; -0.42)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(0.844; 2.403; -0.214)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(0.844; 2.403; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.45" Pos="(0.844; 2.403; 0.214)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.30" Pos="(0.849; 2.372; 0.42)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(0.829; 2.47; -0.669)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(0.829; 2.47; -0.669)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.829; 2.47; -0.669)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.829; 2.47; -0.669)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(0.789; 2.466; -0.653)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.996; 0.088; 0)" Org="(0.74; 2.47; 0.654)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.996; 0.088; 0)" Pos="(0.74; 2.47; 0.654)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.996; 0.088; 0)" Pos="(0.74; 2.47; 0.654)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.996; 0.088; 0)" Pos="(0.74; 2.47; 0.654)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(0.789; 2.466; 0.653)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="InternationalLoadstar1700Spotlight2" />
+	</GameData>
+</TruckAddon>

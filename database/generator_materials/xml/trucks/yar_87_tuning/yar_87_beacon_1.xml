@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_beacon_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.89; 0.162; -0.426)" Org="(0.094; 2.725; 0.619)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0.89; 0.162; -0.426)" Pos="(0.094; 2.725; 0.619)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(0.094; 2.725; 0.619)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(0.094; 2.725; 0.619)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(0.052; 2.717; 0.639)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(0.052; 2.722; -0.592)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0; 0.1; 1)" Pos="(0.052; 2.722; -0.592)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.052; 2.722; -0.592)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.052; 2.722; -0.592)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(0.052; 2.717; -0.639)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_ROUND_DOUBLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_ROUND_DOUBLE_NAME"
+		/>
+		<InstallSocket Type="Yar87Beacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,50 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard AngularDamping="3.0" Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-35"
+				MaxLimit="35"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_fender_rear_default">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard2_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard2_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard3_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard3_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard4_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard4_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.293; 1.172; -1.184)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.293; 1.172; 1.184)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.33; 1.32; -1.245)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.33; 1.32; 1.245)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-5.379; 1.069; -1.184)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-5.379; 1.069; 1.184)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Azov73210RearFender" />
+	</GameData>
+</TruckAddon>

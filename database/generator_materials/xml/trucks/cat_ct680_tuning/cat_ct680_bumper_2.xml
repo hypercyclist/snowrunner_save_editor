@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct680_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/cat_ct680_tuning/cat_ct680_bumper_2">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.928; 1.678; -0.92)" />
+			<Model _template="HeadLightRay" Org="(3.942; 1.678; 0.927)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(3.928; 1.678; -0.92)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(3.942; 1.678; 0.927)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _noinherit="true" ExtraColor="g(255; 240; 230) x 5.5" />
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="Cat680Bumper" />
+	</GameData>
+</TruckAddon>

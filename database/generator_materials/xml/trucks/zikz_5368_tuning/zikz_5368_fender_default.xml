@@ -1,0 +1,62 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="6"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_fender_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt" />
+			<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-2.875; 0.795; -1.19)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-2.875; 0.795; 1.19)" />
+		</Ignition>
+		<StopSignals>
+			<Light _template="StopSignal" Size="0.8" Pos="(-2.912; 0.795; 0)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-2.872; 0.795; -1.19)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-2.872; 0.795; 1.19)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.912; 0.795; 0)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-2.872; 0.795; -1.19)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-2.872; 0.795; 1.19)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.872; 0.795; -1.19)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.872; 0.795; 1.19)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="zikz_5368Fender" />
+	</GameData>
+</TruckAddon>

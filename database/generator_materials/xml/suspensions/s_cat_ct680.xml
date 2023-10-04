@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="220"
+		Name="cat_ct680_suspension_default"
+	>
+		<Suspension BrokenSuspensionMax="0.2" Height="0.2" Strength="0.06" SuspensionMin="-0.35" WheelType="front" Damping="0.5" />
+		<Suspension BrokenSuspensionMax="0.0" Height="0.0" Strength="0.07" SuspensionMin="0.0" WheelType="rear" Damping="0.5" />
+		<GameData
+			Price="4900"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_spot_light_02">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.218; 1.811; -0.25)" />
+			<Model _template="HeadLightRay" Org="(0.218; 1.811; 0.25)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.35" Pos="(0.218; 1.811; -0.25)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.15" Pos="(0.218; 1.811; -0.083)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.15" Pos="(0.218; 1.811; 0.083)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.35" Pos="(0.218; 1.811; 0.25)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(0.204; 1.858; -0.467)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(0.204; 1.858; -0.467)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.204; 1.858; -0.467)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.204; 1.858; -0.467)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(0.17; 1.855; -0.453)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(0.17; 1.859; 0.493)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(0.17; 1.859; 0.493)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.17; 1.859; 0.493)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.17; 1.859; 0.493)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(0.17; 1.855; 0.453)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Don71Spotlight2" />
+	</GameData>
+</TruckAddon>

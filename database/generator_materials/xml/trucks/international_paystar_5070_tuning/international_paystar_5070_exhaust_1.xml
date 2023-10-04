@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_exhaust_default" />
+<TruckAddon>
+	<TruckData _noinherit="True">
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3.8" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneRightExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 70)" MaxFrequency=".1" ParentFrame="BoneLeftExhaust" />
+			<Shaker Frame="BoneLeftExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.1" ParentFrame="BoneLeftExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 70)" MaxFrequency=".1" ParentFrame="BoneLeftExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_exhaust_1">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneExhaustRoot_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.033; 3.245; -1.038)" Speed="3.82" />
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.033; 3.245; 1.038)" Speed="3.83" />
+</TruckAddon>

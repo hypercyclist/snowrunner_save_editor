@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.225; 2.983; -0.139)" />
+			<Flare _template="MarkerBeacon" Pos="(4.225; 2.983; 0.14)" />
+			<Flare _template="MarkerBeacon" Pos="(4.225; 2.983; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="Azov5319Gabarite" />
+	</GameData>
+</TruckAddon>

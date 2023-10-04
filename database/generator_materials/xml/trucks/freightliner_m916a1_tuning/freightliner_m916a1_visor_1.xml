@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_visor_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_FREIGHTLINER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_FREIGHTLINER_NAME"
+		/>
+		<InstallSocket Type="FreightlinerM916A1Visor" />
+	</GameData>
+</TruckAddon>

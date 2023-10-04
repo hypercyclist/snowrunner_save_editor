@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_snorkel_default" />
+<TruckAddon>
+	<Snorkel _inheritRemove="true" />
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.5; 0.5; 0.5)"
+				MaxAngle="(1; 1; 1)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_exhaust_default" />
+	<GameData
+		_noinherit="true"
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 0.042; -0.999)" Origin="(0.499; 3.085; -1.378)" Speed="3.82" />
+</TruckAddon>

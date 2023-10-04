@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(.1; .1; .1)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3.8"  />
+			<Shaker Frame="BoneExhaustCap" LimitDirectionY="Negative" MinAngle="(0; 50; 0)" MaxAngle="(0; 120; 0)" MaxFrequency=".08" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" >
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 0.952; 0.307)"
+		IsLight="true"
+		Origin="(0.465; 4.126; 0.557)"
+		Speed="3.82"
+	/>
+</TruckAddon>

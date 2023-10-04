@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_horn_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.229; 3.190; 0.818)" />
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_NAME"
+		/>
+		<InstallSocket Type="Azov5319Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_parent File="chevrolet_ck1500_bumper_rear_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_rear_1" />
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_CHROME_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500rearBumper1" />
+	</GameData>
+</TruckAddon>

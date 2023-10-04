@@ -1,0 +1,18 @@
+<_parent File="ford_clt9000_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_exhaust_03" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_SLANTCUT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_SLANTCUT_NAME"
+		/>
+	</GameData>
+	<Exhaust _noinherit="true" Dir="(0; 1; 0)" IsLight="true" Origin="(1.781; 4.228; 0.943)" Speed="3.82" />
+	<Exhaust _noinherit="true" Dir="(0; 1; 0)" IsLight="true" Origin="(1.781; 4.228; -0.943)" Speed="3.83" />
+</TruckAddon>

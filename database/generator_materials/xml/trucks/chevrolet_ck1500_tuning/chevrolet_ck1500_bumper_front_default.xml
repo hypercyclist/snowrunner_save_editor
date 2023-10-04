@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_front_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData 
+		CameraPreset="hoods"
+		Category="bumper"
+		UnlockByExploration="false" 
+		UnlockByRank="1"
+		Price="300"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500frontBumper" />
+	</GameData>
+</TruckAddon>

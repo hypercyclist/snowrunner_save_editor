@@ -1,0 +1,17 @@
+<_parent File="tayga_6436_exhaust_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_exhaust_3" />
+	<GameData
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" Origin="(0.714; 3.553; 1.252)" />
+</TruckAddon>

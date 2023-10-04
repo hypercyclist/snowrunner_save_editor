@@ -1,0 +1,20 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_radioactive_1">
+		<NetSync Legacy="false" />
+		<Body Mass="1000">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_radioactive"
+			ManualSound="cargo_manual/cargo_manual_radioactive"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoRadioactive"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

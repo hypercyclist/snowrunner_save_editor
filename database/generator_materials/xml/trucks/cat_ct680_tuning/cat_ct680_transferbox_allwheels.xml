@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct680_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts _template="AllWheelsTransferbox" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_transferbox_allwheels" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

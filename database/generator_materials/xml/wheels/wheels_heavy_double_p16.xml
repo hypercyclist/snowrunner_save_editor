@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy" RearMassScale="2">
+			<WheelTracks _template="Offroad" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.52"
+	WidthRear="1.213"
+>
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_double_1" Name="offroad_1">
+			<WheelFriction _template="Offroad" SubstanceFriction="3.5" />
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_double_p16" Name="rim_p16">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_DOUBLE_P16_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_P16_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="ws_4964_white_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.352; 2.733; -0.321)" />
+			<Flare _template="MarkerBeacon" Pos="(2.352; 2.733; 0.321)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteGabarite" />
+	</GameData>
+</TruckAddon>

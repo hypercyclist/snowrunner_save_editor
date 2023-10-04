@@ -4,7 +4,21 @@
 #include <string>
 #include <map>
 
-enum class Language { RUSSIAN, ENGLISH, CHINESE_TRADITIONAL, CHINESE_SIMPLE };
+enum class Language {
+    RUSSIAN,
+    CHINESE_TRADITIONAL,
+    CHINESE_SIMPLIFIED,
+    BRAZILIAN_PORTUGUESE,
+    KOREAN,
+    ENGLISH,
+    JAPANESE,
+    GERMAN,
+    SPANISH,
+    FRENCH,
+    CZECH,
+    ITALIAN,
+    POLISH
+};
 
 class Localization
 {

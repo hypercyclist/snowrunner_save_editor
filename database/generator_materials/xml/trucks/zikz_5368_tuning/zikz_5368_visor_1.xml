@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="zikz_5368_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_visor_1" />
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="zikz5368Visor" />
+	</GameData>
+</TruckAddon>

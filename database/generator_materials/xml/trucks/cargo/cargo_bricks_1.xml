@@ -1,0 +1,21 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_bricks_1">
+		<NetSync Legacy="false" />
+		<Body Mass="1000">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_bricks"
+			TransportedSound="load/cargosmallbricks/cargosmallbricks_rnd"
+			ManualSound="cargo_manual/cargo_manual_bricks"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoBricks"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

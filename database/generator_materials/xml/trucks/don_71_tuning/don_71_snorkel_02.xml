@@ -1,0 +1,17 @@
+<_parent File="don_71_snorkel_01" />
+<TruckAddon>
+	<Snorkel Origin="(0.38; 1.553; -0.698)" />
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_snorkel_02" />
+	<GameData
+		Price="2800"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

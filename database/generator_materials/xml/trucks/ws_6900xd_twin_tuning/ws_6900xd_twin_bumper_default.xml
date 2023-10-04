@@ -1,0 +1,67 @@
+<_templates Include="trucks">
+	<Body>
+		<Antenna Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-7"
+				PlaneMax="7"
+			>
+				<PlaneMotor Damping=".1" Spring="60" Type="Spring" />
+				<ConeMotor Damping=".1" Spring="60" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_bumper_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Antenna" ModelFrame="BoneLeftAntenna_cdt" />
+			<Body _template="Antenna" ModelFrame="BoneRightAntenna_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(8.059; 1.362; -0.262)" />
+			<Model _template="HeadLightRay" Org="(8.059; 1.362; 0.262)" />
+			<Light _template="IgnitionSignalWhite" Pos="(8.0; 1.437; 0)" Color="g(255; 225; 225) x 1" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Pos="(8.059; 1.362; -0.262)" Size="0.8" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="HeadLight" Pos="(8.059; 1.362; 0.262)" Size="0.8" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="HeadLight" Dir="(0.707; 0.707; 0)" Pos="(7.754; 1.381; -0.679)" Size="0.3" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="HeadLight" Dir="(0.707; 0.707; 0)" Pos="(7.754; 1.381; 0.679)" Size="0.3" Color="g(235; 225; 215) x 0.5" />
+				
+			<!--<Flare _template="BlueStreak" Pos="(0.808; 2.633; -0.771)" />
+			<Flare _template="BlueStreak" Pos="(0.808; 2.633; 0.771)" /> -->
+		</MainHeadLight>
+		<Ignition>
+		<!-- <Light _template="IgnitionSignalWhite" Pos="(8.0; 1.437; 0)" Color="g(255; 225; 225) x 1" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(8.059; 1.362; -0.262)" Size="0.5" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="IgnitionSignalWhite" Pos="(8.059; 1.362; 0.262)" Size="0.5" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0.707; 0.707; 0)" Pos="(7.754; 1.381; -0.679)" Size="0.2" Color="g(235; 225; 215) x 0.5" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0.707; 0.707; 0)" Pos="(7.754; 1.381; 0.679)" Size="0.2" Color="g(235; 225; 215) x 0.5" /> -->
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinBumper" />
+	</GameData>
+</TruckAddon>

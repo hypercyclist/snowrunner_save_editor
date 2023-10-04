@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="chevrolet_ck1500_bumper_front_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_front_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.518; 0.969; -0.222)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.518; 0.969; 0.213)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

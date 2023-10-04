@@ -1,0 +1,24 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_pipes_medium_2">
+		<NetSync Legacy="false" />
+		<Body Mass="2250" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="2250" ModelFrame="BoneCargo_container_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_pipes_medium"
+			TransportedSound="load/pipe_medium/pipe_medium_rnd"
+			ManualSound="cargo_manual/cargo_manual_pipes_medium"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoPipesMedium"
+			CargoValue="1"
+			Offset="(1.279; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

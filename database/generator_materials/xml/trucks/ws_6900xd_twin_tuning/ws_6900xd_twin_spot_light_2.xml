@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_spot_light_2">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(5.157; 3.624; -0.362)" />
+			<Model _template="HeadLightRay" Org="(5.157; 3.624; 0.383)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" DirAngle="135" Size="0.5" Pos="(5.157; 3.624; -0.362)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" DirAngle="135" Size="0.5" Pos="(5.157; 3.624; 0.383)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.5" DirAngle="135" Size="0.3" Pos="(5.157; 3.624; -0.115)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.5" DirAngle="135" Size="0.3" Pos="(5.157; 3.624; 0.134)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(5.128; 3.671; -0.739)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(5.128; 3.671; -0.739)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(5.128; 3.671; -0.739)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(5.128; 3.671; -0.739)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(5.058; 3.671; -0.739)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(5.058; 3.671; 0.811)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(5.058; 3.671; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(5.058; 3.671; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(5.058; 3.671; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(5.058; 3.671; 0.741)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="addon_1"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinSpotLight2" />
+	</GameData>
+</TruckAddon>

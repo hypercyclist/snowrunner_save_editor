@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_spotlight" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.808; 2.633; -0.771)" />
+			<Model _template="HeadLightRay" Org="(0.808; 2.633; 0.771)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.9" Size="0.2" Pos="(0.766; 2.633; -0.771)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.9" Size="0.2" Pos="(0.766; 2.633; 0.771)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 4" Pos="(0.857; 2.633; 0)" />
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_YAR_87_SPOTLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_YAR_87_SPOTLIGHT_NAME"
+		/>
+		<InstallSocket Type="Yar87SpotlightDefault" />
+	</GameData>
+</TruckAddon>

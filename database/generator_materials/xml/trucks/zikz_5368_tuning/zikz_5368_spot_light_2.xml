@@ -1,0 +1,59 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_spot_light_2">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="1"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.015; 2.968; -0.424)" />
+			<Model _template="HeadLightRay" Org="(2.015; 2.968; 0.433)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(2.015; 2.968; -0.424)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(2.015; 2.968; 0.433)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(2.015; 2.968; -0.214)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(2.016; 2.969; 0.218)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".3" Pos="(2.016; 2.969; 0)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.978; 3.013; 0.684)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.978; 3.013; 0.684)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.978; 3.013; 0.684)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.978; 3.013; 0.684)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.908; 3.013; 0.684)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.908; 3.013; -0.631)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.908; 3.013; -0.631)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.908; 3.013; -0.631)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.908; 3.013; -0.631)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.908; 3.013; -0.701)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="zikz5368SpotLight" />
+	</GameData>
+</TruckAddon>

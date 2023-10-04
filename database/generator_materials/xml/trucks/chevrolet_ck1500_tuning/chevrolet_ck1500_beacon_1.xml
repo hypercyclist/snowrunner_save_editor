@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="6"
+	/>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_beacon_1">
+		<Body Mass="1" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(0.331; 1.965; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(1; 0; 0)" Pos="(0.331; 1.965; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.331; 1.965; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.331; 1.965; 0)" ParentFrame="BoneRotator" />
+			<Flare Size="0.2" Pos="(0.243; 1.965; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROUND_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROUND_BEACON_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500Beacon" />
+	</GameData>
+</TruckAddon>

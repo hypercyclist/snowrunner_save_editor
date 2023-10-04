@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_beacon_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.867; 2.471; -0.245)" />
+			<Flare _template="MarkerBeacon" Pos="(0.867; 2.471; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(0.867; 2.471; 0.245)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_TRISQUARE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_TRISQUARE_NAME"
+		/>
+		<InstallSocket Type="Yar87Beacon2" />
+	</GameData>
+</TruckAddon>

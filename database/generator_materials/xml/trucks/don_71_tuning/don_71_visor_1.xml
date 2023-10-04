@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.366; 1.602; -0.538)" />
+			<Flare _template="MarkerBeacon" Pos="(0.366; 1.602; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(0.366; 1.602; 0.538)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Don71Visor" />
+	</GameData>
+</TruckAddon>

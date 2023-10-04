@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Heavy"
+	Mesh="wheels/trailer_flatbed_2"
+	Radius="0.5"
+	Width = "0.567"
+>
+	<WheelTracks _template="DefaultDouble" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />	
+</TruckWheel>

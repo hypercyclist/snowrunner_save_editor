@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_horn_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_horn_1" />
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_ONESIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

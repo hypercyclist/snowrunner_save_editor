@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_rear_bumper_default">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.763; 0.599; 0.155)" />
+			<Flare _template="ReverseSignal" Size=".4" Color="g(240; 230; 220) x 0.6" DirAngle="135" Pos="(-1.763; 0.599; 0.155)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.4" Dir="(-1; 0; 0)" Pos="(-1.763; 0.599; 0.155)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Tuz166RearBumper" />
+	</GameData>
+</TruckAddon>

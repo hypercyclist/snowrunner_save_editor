@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.291; 1.935; -0.787)" />
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_snorkel_default" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallSnorkel" />
+	</GameData>
+</TruckAddon>

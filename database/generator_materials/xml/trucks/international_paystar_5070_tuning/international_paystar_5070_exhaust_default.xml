@@ -1,0 +1,55 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="2">
+			<Constraint
+				Cone="50"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-30"
+				PlaneMax="30"
+			>
+				<PlaneMotor Damping="999999999" Spring="1000" Type="Spring" />
+				<ConeMotor Damping="999999999" Spring="1000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MaxAngle="(0.7; 0.7; 0.7)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneExhaust_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneExhaustRoot_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="InternationalPaystar5070Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.328; 0.468; -0.821)"
+		IsLight="true"
+		Origin="(0.007; 2.915; -1.098)"
+		Speed="3.82"
+	/>
+</TruckAddon>

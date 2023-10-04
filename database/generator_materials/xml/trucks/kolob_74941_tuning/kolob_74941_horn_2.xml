@@ -1,0 +1,13 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_horn_2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC" UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME" />
+		<InstallSocket Type="Kolob74941Horn" />
+	</GameData>
+</TruckAddon>

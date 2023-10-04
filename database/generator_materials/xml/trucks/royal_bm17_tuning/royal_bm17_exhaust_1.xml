@@ -1,0 +1,72 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.07"
+		/>
+	</Flare>
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="20">
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.2; 0.2; 0.2)"
+				MaxAngle="(0.7; 0.7; 0.7)"
+				MaxFrequency="4"
+				ParentFrame="BoneExhaust_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_exhaust_1">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneExhaust_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(0.239; 2.861; -0.749)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.239; 2.715; -0.749)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.239; 2.572; -0.749)" />
+			<Flare _template="IgnitionSignalRed" Pos="(0.239; 2.418; -0.749)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_WEDGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_WEDGED_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 1; 0)"
+		IsLight="true"
+		Origin="(0.389; 3.567; -0.749)"
+		Speed="3.82"
+	/>
+</TruckAddon>

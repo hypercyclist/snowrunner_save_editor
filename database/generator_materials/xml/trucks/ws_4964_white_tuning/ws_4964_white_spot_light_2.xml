@@ -1,0 +1,46 @@
+<_templates Include="trucks" />
+<_parent File="ws_4964_white_spot_light_1" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_spot_light_2" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.057; 2.878; -0.367)" />
+			<Model _template="HeadLightRay" Org="(2.057; 2.878; 0.367)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(2.057; 2.878; -0.367)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(2.057; 2.878; 0.367)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(2.057; 2.878; -0.184)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(2.057; 2.878; 0.184)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(2.057; 2.878; 0)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(2.009; 2.890; 0.667)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(2.009; 2.890; 0.667)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(2.009; 2.890; 0.667)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(2.009; 2.890; 0.667)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.965; 2.890; 0.667)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.965; 2.890; -0.623)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.965; 2.890; -0.623)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.965; 2.890; -0.623)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.965; 2.890; -0.623)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.965; 2.890; -0.667)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteSpotLight" />
+	</GameData>
+</TruckAddon>

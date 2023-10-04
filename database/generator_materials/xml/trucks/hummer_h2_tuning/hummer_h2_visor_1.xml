@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_visor_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="HummerH2Visor" />
+	</GameData>
+</TruckAddon>

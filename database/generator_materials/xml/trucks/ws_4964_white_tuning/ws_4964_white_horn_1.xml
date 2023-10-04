@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_horn_1"/>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_ONESIDE_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteHorn" />
+	</GameData>
+</TruckAddon>

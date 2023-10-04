@@ -1,0 +1,40 @@
+<_templates Include="trucks">
+	<_parent File="pacific_p12w_bumper_default" />
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/pacific_p12w_tuning/pacific_p12w_bumper_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.368; 1.909; -0.385)" />
+			<Model _template="HeadLightRay" Org="(4.368; 1.909; 0.368)" />
+			<Flare _template="HeadLight" DirAngle="135" Color="g(255; 235; 215) x 0.5" Size=".5" Pos="(4.368; 1.909; -0.385)" />
+			<Flare _template="HeadLight" DirAngle="135" Color="g(255; 235; 215) x 0.5" Size=".5" Pos="(4.368; 1.909; 0.368)" />
+			<Flare _template="HeadLight" DirAngle="135" Color="g(255; 235; 215) x 0.5" Size=".5" Pos="(4.368; 1.909; 0.002)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="PacificP12Bumper" />
+	</GameData>
+</TruckAddon>

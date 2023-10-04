@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(1.969; 3.556; 0.582)" />
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_snorkel_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="FordClt9000Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_spot_light_1"/>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.569; 3.522; -0.617)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(1.569; 3.522; 0.621)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".5" Color="g(245; 235; 215) x 0.5" Pos="(1.569; 3.522; -0.617)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".5" Color="g(245; 235; 215) x 0.5" Pos="(1.569; 3.522; 0.621)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".5" Color="g(245; 235; 215) x 0.5" Pos="(1.569; 3.522; -0.311)" />
+			<Flare _template="HeadLight" DirAngle="100" Size=".5" Color="g(245; 235; 215) x 0.5" Pos="(1.569; 3.522; 0.307)" />
+			<Flare _template="HeadLight" DirAngle="100" Size=".5" Color="g(245; 235; 215) x 0.5" Pos="(1.569; 3.522; -0.001)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17SpotLight" />
+	</GameData>
+</TruckAddon>

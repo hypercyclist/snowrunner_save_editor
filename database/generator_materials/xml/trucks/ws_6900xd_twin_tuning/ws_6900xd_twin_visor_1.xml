@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="ws_6900xd_twin_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(5.429; 3.268; -0.787)" />
+			<Flare _template="MarkerBeacon" Pos="(5.429; 3.268; 0.787)" />
+			<Flare _template="MarkerBeacon" Pos="(5.444; 3.281; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

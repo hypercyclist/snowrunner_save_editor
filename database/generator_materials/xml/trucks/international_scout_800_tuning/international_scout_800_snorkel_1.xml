@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(0.404; 1.799; -0.845)" />
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_snorkel_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="InternationalScout800Snorkel" />
+	</GameData>
+</TruckAddon>

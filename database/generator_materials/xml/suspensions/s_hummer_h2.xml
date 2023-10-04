@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="80"
+		Name="hummer_h2_suspension_default"
+	>
+		<Suspension Damping=".2" Height="0.08" Strength="0.06" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.35" />
+		<Suspension Damping="0.2" Height="0.08" Strength="0.07" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.35" />
+		<GameData
+			Price="2700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="120"
+		Name="hummer_h2_suspension_high"
+	>
+		<Suspension Damping="0.2" Height="0.18" Strength="0.05" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.4" />
+		<Suspension Damping="0.2" Height="0.2" Strength="0.05" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.4" />
+		<GameData
+			Price="5300"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

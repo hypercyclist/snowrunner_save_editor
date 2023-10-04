@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="chevrolet_ck1500_gabarite_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_gabarite_2" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.469; 1.913; -0.218)" />
+			<Flare _template="MarkerBeacon" Pos="(0.469; 1.913; 0.218)" />
+			<Flare _template="MarkerBeacon" Pos="(0.469; 1.913; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+	</GameData>
+</TruckAddon>

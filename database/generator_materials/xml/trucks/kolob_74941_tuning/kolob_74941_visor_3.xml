@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_visor_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_visor_3" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.851; 3.616; -1.151)" />
+			<Flare _template="MarkerBeacon" Pos="(2.851; 3.616; 1.151)" />
+			<Flare _template="MarkerBeacon" Pos="(2.914; 3.627; -0.002)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="19"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Kolob74941Visor" />
+	</GameData>
+</TruckAddon>

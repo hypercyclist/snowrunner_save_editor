@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_tuning/international_transtar_4070a_beacon_1">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.996; 0.093; 0)" Org="(2.382; 2.909; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.996; 0.093; 0)" Pos="(2.382; 2.909; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(2.382; 2.909; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(2.382; 2.909; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(2.341; 2.905; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROUND_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROUND_BEACON_NAME"
+		/>
+		<InstallSocket Type="InternationalTranstar4070Beacon" />
+	</GameData>
+</TruckAddon>

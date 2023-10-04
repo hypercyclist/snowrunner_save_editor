@@ -1,0 +1,18 @@
+<_parent File="tuz_166_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(0.707; 1.314; -0.777)" />
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_snorkel_2" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+		<InstallSocket Type="Tuz166Snorkel2" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="8" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="7.8" />
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_spot_light_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.361; 3.873; -0.766)" />
+			<Model _template="HeadLightRay" Org="(2.361; 3.874; 0.738)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Color="g(245; 235; 215) x 0.5" Pos="(2.361; 3.873; -0.766)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Color="g(245; 235; 215) x 0.5" Pos="(2.361; 3.874; 0.738)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Color="g(245; 235; 215) x 0.5" Pos="(2.368; 3.919; -0.395)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.5" Color="g(245; 235; 215) x 0.5" Pos="(2.368; 3.919; 0.384)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.5" Color="g(245; 235; 215) x 0.5" Pos="(2.368; 3.919; 0.002)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1.000; 0.000; 0.000)" Org="(2.318; 3.938; 1.079)" ParentFrame="BoneRotator1" />
+			<Light Dir="(1.000; 0.000; 0.000)" Pos="(2.318; 3.938; 1.079)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1.000; 0.000; 0.000)" Pos="(2.318; 3.938; 1.079)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1.000; 0.000; 0.000)" Pos="(2.318; 3.938; 1.079)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(2.247; 3.938; 1.148)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(2.247; 3.938; -1.037)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0; 0; 1)" Pos="(2.247; 3.938; -1.037)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(2.247; 3.938; -1.037)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(2.247; 3.938; -1.037)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(2.247; 3.938; -1.107)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Kolob74941Spotlight2" />
+	</GameData>
+</TruckAddon>

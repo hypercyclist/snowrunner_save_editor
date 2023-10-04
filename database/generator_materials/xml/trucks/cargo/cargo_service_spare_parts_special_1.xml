@@ -1,0 +1,22 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_service_spare_parts_special_1">
+		<NetSync Legacy="false" />
+		<Body Mass="1000">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_service_spare_parts"
+			TransportedSound="load/wood_metal_box/wood_metal_box_rnd"
+			ManualSound="cargo_manual/cargo_manual_service_spare_parts"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoServiceSparePartsSpecial"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_service_spare_parts_special_1_lmk" MinScale="1.8" MaxScale="3.8"/>
+</TruckAddon>

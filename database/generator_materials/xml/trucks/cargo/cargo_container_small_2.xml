@@ -1,0 +1,24 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_container_small_2">
+		<NetSync Legacy="false" />
+		<Body Mass="1500" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="1500" ModelFrame="BoneCargo_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_container_small"
+			TransportedSound="load/metal_small/metal_small_rnd"
+			ManualSound="cargo_manual/cargo_manual_container_small"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoContainerSmall"
+			CargoValue="1"
+			Offset="(1.24; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

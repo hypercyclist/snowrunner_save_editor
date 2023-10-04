@@ -1,0 +1,14 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(3.358; 2.54; -1.457)" />
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_snorkel_4" />
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_DESC" UiName="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_NAME" />
+		<InstallSocket Type="Kolob74941Snorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet 		
+		Name="derry_longhorn_4520_suspension_default"
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="280"
+	>
+		<Suspension
+			Damping="0.2"
+			BrokenSuspensionMax="0.2"
+			Height="0.15"
+			Strength="0.06"
+			SuspensionMin="-0.25"
+			WheelType="front"
+		/>
+		<Suspension
+			Damping="0.2"
+			BrokenSuspensionMax="0.15"
+			Height="0.07"
+			Strength="0.05"
+			SuspensionMin="-0.3"
+			WheelType="rear"
+		/>
+		<GameData
+			Price="7500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

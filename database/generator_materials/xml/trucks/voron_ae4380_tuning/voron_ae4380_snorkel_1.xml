@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.902; 2.628; -0.951)" />
+	<PhysicsModel Mesh="trucks/voron_ae4380_tuning/voron_ae4380_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2800"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="VoronAE4380Snorkel" />
+	</GameData>
+</TruckAddon>

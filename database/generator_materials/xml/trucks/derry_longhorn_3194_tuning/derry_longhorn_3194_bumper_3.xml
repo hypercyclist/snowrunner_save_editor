@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<_parent File="derry_longhorn_3194_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_bumper_3">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.301; 1.203; -0.404)" />
+			<Model _template="HeadLightRay" Org="(3.301; 1.203; 0.404)" />
+			<Model _template="HeadLightRay" Org="(3.301; 1.203; -0.133)" />
+			<Model _template="HeadLightRay" Org="(3.301; 1.203; 0.133)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.5" Size="0.35" Pos="(3.301; 1.203; 0.404)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.55" Size="0.4" Pos="(3.301; 1.203; -0.404)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.55" Size="0.4" Pos="(3.301; 1.203; 0.133)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.5" Size="0.35" Pos="(3.301; 1.203; -0.133)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="19"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

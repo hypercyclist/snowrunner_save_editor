@@ -1,0 +1,18 @@
+<_parent File="saddle_low" />
+<TruckAddon>
+	<GameData
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_ADDON_SADDLE_HIGH_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SADDLE_HIGH_NAME"
+		/>
+		<RequiredAddonType Type="SaddleHigh" TypeUiName="UI_REQUIRED_ADDON_TYPE_SADDLE_HIGH" />
+		<InstallSocket _noinherit="true" Type="SaddleHigh1" />
+	</GameData>
+</TruckAddon>

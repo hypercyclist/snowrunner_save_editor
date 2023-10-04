@@ -1,0 +1,21 @@
+<_parent File="khan_lo4f_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(0.700; 2.092; -0.913)" />
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_snorkel_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="3500"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_MUSHROOM_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_MUSHROOM_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_horn_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_visor_default" />
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STOCK_NAME"
+		/>
+		<InstallSocket Type="Freightliner114SdVisor" />
+	</GameData>
+</TruckAddon>

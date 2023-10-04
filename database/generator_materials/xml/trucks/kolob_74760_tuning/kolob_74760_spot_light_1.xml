@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.493; 3.906; -0.371)" />
+			<Model _template="HeadLightRay" Org="(4.493; 3.906; 0.371)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="100" Size="0.18" Pos="(4.493; 3.906; -0.371)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="100" Size="0.18" Pos="(4.493; 3.906; 0.371)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="100" Size="0.18" Pos="(4.493; 3.906; -0.123)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="100" Size="0.18" Pos="(4.493; 3.906; 0.123)" />
+			<Flare _template="BlueStreak" Size=".7" Pos="(4.504; 3.906; -0.242)" />
+			<Flare _template="BlueStreak" Size=".7" Pos="(4.504; 3.906; 0.242)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"	
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Spotlight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,30 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/saddle_high">
+		<Body Mass="40">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMountR_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMountL_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SADDLE_HIGH_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SADDLE_HIGH_NAME"
+		/>
+		<RequiredAddonType Type="SaddleHigh" TypeUiName="UI_REQUIRED_ADDON_TYPE_SADDLE_HIGH" />
+		<InstallSocket Type="SaddleHigh" />
+	</GameData>
+</TruckAddon>

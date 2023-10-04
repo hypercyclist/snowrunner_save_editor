@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="freightliner_114sd_snorkel_1" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(2.890; 2.510; -1.083)" />
+	<PhysicsModel Mesh="trucks/freightliner_114sd_tuning/freightliner_114sd_snorkel_3" />
+	<GameData
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="Freightliner114SdSnorkel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_spotlight_01" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.85; 2.838; -0.393)" />
+			<Model _template="HeadLightRay" Org="(1.85; 2.838; 0.393)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(1.85; 2.838; -0.393)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(1.85; 2.838; 0.393)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(1.85; 2.838; -0.133)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(1.85; 2.838; 0.133)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Spotlight" />
+	</GameData>
+</TruckAddon>

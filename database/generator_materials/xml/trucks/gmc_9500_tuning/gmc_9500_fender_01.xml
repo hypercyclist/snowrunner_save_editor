@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_fender_01">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.555; 0.64; -1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.955; 1.14; -1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.284; 0.861; -1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.644; 1.14; -1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.015; 0.64; -1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.555; 0.64; 1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.955; 1.14; 1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.284; 0.861; 1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.644; 1.14; 1.4)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-1.015; 0.64; 1.4)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GMC_9500_FENDER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GMC_9500_FENDER_01_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Fender" />
+	</GameData>
+</TruckAddon>

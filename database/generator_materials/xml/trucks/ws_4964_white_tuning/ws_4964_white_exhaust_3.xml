@@ -1,0 +1,23 @@
+<_parent File="ws_4964_white_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_exhaust_3" />
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust
+		_noinherit="true"
+		Dir="(0; 0.707; -0.708)"
+		IsLight="true"
+		Origin="(1.206; 3.17; -1.048)"
+		Speed="3.82"
+	/>
+</TruckAddon>

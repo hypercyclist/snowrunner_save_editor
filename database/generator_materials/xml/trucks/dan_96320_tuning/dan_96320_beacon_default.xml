@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="6" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="5.95" />
+	<PhysicsModel Mesh="trucks/dan_96320_tuning/dan_96320_beacon_default">
+		<Body ImpactType="Truck" Mass="1" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.996; 0.091; 0)" Org="(5.308; 2.898; -1.189)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.996; 0.091; 0)" Pos="(5.308; 2.898; -1.189)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.996; 0.091; 0)" Pos="(5.308; 2.898; -1.189)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.996; 0.091; 0)" Pos="(5.308; 2.898; -1.189)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(5.263; 2.912; -1.189)" />
+		</Ignition>    
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.996; 0.091; 0)" Org="(5.219; 2.898; 1.189)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.996; 0.091; 0)" Pos="(5.219; 2.898; 1.189)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.996; 0.091; 0)" Pos="(5.219; 2.898; 1.189)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.996; 0.091; 0)" Pos="(5.219; 2.898; 1.189)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(5.263; 2.912; 1.189)" />
+		</Ignition>
+
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Dan96320Beacon" />
+	</GameData>
+</TruckAddon>

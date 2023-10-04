@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_visor_1">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="1" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.961; 2.904; -0.785)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.039; 2.93; -0.001)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(1.961; 2.904; 0.785)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Cat680Visor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<TruckAddon>
+	<Snorkel Origin="(2.504; 1.979; -1.056)" />
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_snorkel_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteSnorkel" />
+	</GameData>
+</TruckAddon>

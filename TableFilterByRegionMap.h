@@ -3,6 +3,7 @@
 
 #include <QWidget>
 
+class Localization;
 class GameAtlas;
 
 namespace Ui { class TableFilterByRegionMap; }
@@ -14,6 +15,7 @@ public:
     explicit TableFilterByRegionMap(QWidget *parent = nullptr);
     ~TableFilterByRegionMap();
     Ui::TableFilterByRegionMap* gui();
+    void setLocalization(Localization* _localization);
     void setGameAtlas(GameAtlas* _gameAtlas);
 
 public slots:
@@ -21,6 +23,7 @@ public slots:
 
 private:
     Ui::TableFilterByRegionMap *ui;
+    Localization* m_localization;
     GameAtlas* m_gameAtlas;
 };
 

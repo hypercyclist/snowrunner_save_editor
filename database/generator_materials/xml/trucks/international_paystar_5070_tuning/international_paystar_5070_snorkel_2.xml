@@ -1,0 +1,17 @@
+<_parent File="international_paystar_5070_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.593; 1.832; -1.098)" />
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_snorkel_2"/>
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

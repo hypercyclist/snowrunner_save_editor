@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.821; 3.116; -0.781)" />
+			<Flare _template="MarkerBeacon" Pos="(1.821; 3.116; 0.781)" />
+			<Flare _template="MarkerBeacon" Pos="(1.863; 3.129; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="RoyalBM17Visor" />
+	</GameData>
+</TruckAddon>

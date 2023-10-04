@@ -1,0 +1,27 @@
+<_parent File="derry_longhorn_3194_snorkel_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers _noinherit="True" />
+	</TruckData>
+	<Snorkel Origin="(1.674; 3.2; 1.044)" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_snorkel_2">
+		<Body Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneExtra_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

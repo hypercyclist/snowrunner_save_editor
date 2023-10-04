@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<_parent File="azov_5319_horn_1" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/azov_5319_tuning/azov_5319_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(1.877; 3.115; 0.933)" ParentFrame="BoneRotator1" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(1.877; 3.115; 0.933)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(1.877; 3.115; 0.933)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(1.877; 3.115; 0.933)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(1.810; 3.115; 0.933)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(1.810; 3.115; -0.868)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0; 0.1; 1)" Pos="(1.810; 3.115; -0.868)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.810; 3.115; -0.868)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.810; 3.115; -0.868)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(1.810; 3.115; -0.935)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="Azov5319Beacon" />
+	</GameData>
+</TruckAddon>

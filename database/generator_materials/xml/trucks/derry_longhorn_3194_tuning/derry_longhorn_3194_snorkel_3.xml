@@ -1,0 +1,27 @@
+<_parent File="derry_longhorn_3194_snorkel_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneEngine"
+				MinAngle="(0.2; 0.2; 0)"
+				MaxAngle="(0.5; 0.5; 0)"
+				MaxFrequency="10"
+			/>
+		</Shakers>
+	</TruckData>
+	<Snorkel Origin="(1.687; 2.374; 1.008)" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_snorkel_3" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

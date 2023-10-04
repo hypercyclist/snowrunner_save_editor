@@ -1,0 +1,30 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.67">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_scout_btr_1" Name="offroad_btr_1">
+			<WheelFriction _template="Mudtires" BodyFriction="3.0" SubstanceFriction="8.0" />
+			<GameData
+				Price="7200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_BTR_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_btr_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_BTR_1_DESC" UiName="UI_RIM_SCOUT_BTR_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

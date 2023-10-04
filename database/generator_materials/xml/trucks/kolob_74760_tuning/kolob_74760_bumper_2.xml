@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_bumper_2">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData 
+		CameraPreset="hoods"
+		Category="bumper"
+		UnlockByExploration="false" 
+		UnlockByRank="24"
+		Price="1500"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_KOLOB_HEADLIGHTMESH_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_KOLOB_HEADLIGHTMESH_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Bumper" />
+	</GameData>
+</TruckAddon>

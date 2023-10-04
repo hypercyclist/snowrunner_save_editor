@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="zikz_5368_beacon_1" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/zikz_5368_tuning/zikz_5368_beacon_2" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.995; -0.104; 0)" Org="(2.188; 2.791; -0.001)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.995; -0.104; 0)" Pos="(2.188; 2.791; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.995; -0.104; 0)" Pos="(2.188; 2.791; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.995; -0.104; 0)" Pos="(2.188; 2.791; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Pos="(2.139; 2.796; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_TALL_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_TALL_BEACON_1_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,46 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_wheel_addon">		
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body ModelFrame="BoneWheel_cdt" Mass="20">
+				<Constraint 
+					Type="Fixed" 
+					LinearLimitsX="(-0.01;0.01)"
+					LinearLimitsY="(0;0.05)"
+					LinearLimitsZ="(-0.02;0.02)"
+					>
+					<Motor Damping="500" Spring="1" Type="Spring" />
+				</Constraint>
+				<Body ModelFrame="BoneLock_cdt" Mass="20">
+					<Constraint 
+						Type="Fixed" 
+						LinearLimitsX="(0;0)"
+						LinearLimitsY="(0;0.05)"
+						LinearLimitsZ="(0;0)"
+						>
+						<Motor Damping="2" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>			
+			</Body>			
+		</Body>	
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="wheel_addon"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="InternationalScout800SpareWheel" />
+	</GameData>
+</TruckAddon>

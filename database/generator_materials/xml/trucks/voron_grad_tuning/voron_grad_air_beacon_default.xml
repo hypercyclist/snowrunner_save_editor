@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_air_beacon_default"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 80) x 0.35" Size="0.2" Pos="(1.718; 2.931; 0.84)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 80) x 0.35" Size="0.2" Pos="(1.718; 2.931; -0.84)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 80) x 0.35" Size="0.2" Pos="(1.7; 2.924; 0.278)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 80) x 0.35" Size="0.2" Pos="(1.718; 2.931; 0)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 80) x 0.35" Size="0.2" Pos="(1.7; 2.924; -0.278)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_VORON_GRAD_AIR_BEACON_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_VORON_GRAD_AIR_BEACON_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="VoronGradVisor" />
+	</GameData>
+</TruckAddon>

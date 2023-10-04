@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.323; 2.828; -0.777)" />
+			<Model _template="HeadLightRay" Org="(4.323; 2.828; 0.751)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.5" DirAngle="135" Size=".4" Pos="(4.323; 2.828; -0.777)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(4.323; 2.828; 0.751)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.5" DirAngle="135" Size=".35" Pos="(4.331; 2.866; -0.387)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.35" Pos="(4.331; 2.866; 0.373)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.35" Pos="(4.331; 2.866; -0.001)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Azov73210Spotlight" />
+	</GameData>
+</TruckAddon>

@@ -43,6 +43,7 @@ EditorWindow::EditorWindow(QWidget *parent)
     ui->completeTasksTable->setGameAtlas(m_database->gameAtlas());
     ui->completeTasksTable->setLocalization(m_database->localization());
     ui->completeTasksTable->setFilterBarWidget(ui->completeTasksTableBar);
+    ui->completeTasksTableBar->setLocalization(m_database->localization());
     ui->completeTasksTableBar->setGameAtlas(m_database->gameAtlas());
     ui->completeTasksTableBar->filterMaps();
     ui->completeTasksTable->updateTable();
@@ -50,14 +51,24 @@ EditorWindow::EditorWindow(QWidget *parent)
     ui->upgradesTable->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTable->setLocalization(m_database->localization());
     ui->upgradesTable->setFilterBarWidget(ui->completeTasksTableBar);
+    ui->upgradesTableBar->setLocalization(m_database->localization());
     ui->upgradesTableBar->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTableBar->filterMaps();
     ui->upgradesTable->updateTable();
 
     connect(ui->menuRussian, &QAction::triggered, this, [=] { applyLanguage(Language::RUSSIAN); });
-    connect(ui->menuEnglish, &QAction::triggered, this, [=] { applyLanguage(Language::ENGLISH); });
     connect(ui->menuChineseTraditional, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_TRADITIONAL); });
-    connect(ui->menuChineseSimple, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_SIMPLE); });
+    connect(ui->menuChineseSimple, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_SIMPLIFIED); });
+    connect(ui->menuBrazilian, &QAction::triggered, this, [=] { applyLanguage(Language::BRAZILIAN_PORTUGUESE); });
+    connect(ui->menuKorean, &QAction::triggered, this, [=] { applyLanguage(Language::KOREAN); });
+    connect(ui->menuEnglish, &QAction::triggered, this, [=] { applyLanguage(Language::ENGLISH); });
+    connect(ui->menuJapanese, &QAction::triggered, this, [=] { applyLanguage(Language::JAPANESE); });
+    connect(ui->menuGerman, &QAction::triggered, this, [=] { applyLanguage(Language::GERMAN); });
+    connect(ui->menuSpanish, &QAction::triggered, this, [=] { applyLanguage(Language::SPANISH); });
+    connect(ui->menuFrench, &QAction::triggered, this, [=] { applyLanguage(Language::FRENCH); });
+    connect(ui->menuCzech, &QAction::triggered, this, [=] { applyLanguage(Language::CZECH); });
+    connect(ui->menuItalian, &QAction::triggered, this, [=] { applyLanguage(Language::ITALIAN); });
+    connect(ui->menuPolish, &QAction::triggered, this, [=] { applyLanguage(Language::POLISH); });
 }
 
 EditorWindow::~EditorWindow()

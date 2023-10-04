@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Flare>
+		<FrontMarker
+			_template="MarkerBeacon"
+			Dir="(1; 0; 0)"
+			DirAngle="140"
+			Size="0.5"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_visor_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="4" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(0.262; 2.922; -0.792)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(0.262; 2.922; -0.331)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(0.262; 2.922; 0.0)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(0.262; 2.922; 0.331)" />
+			<Flare _template="MarkerBeacon" Size="0.4" Pos="(0.262; 2.922; 0.792)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="Navistar5000mvVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_beacon_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Dir="(1; 0.5; 0)" DirAngle="180" Pos="(4.416; 3.689; -0.151)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0.5; 0)" DirAngle="180" Pos="(4.416; 3.689; 0)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0.5; 0)" DirAngle="180" Pos="(4.416; 3.689; 0.151)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_ROUND_TRIPLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_ROUND_TRIPLE_NAME"
+		/>
+		<InstallSocket Type="Kolob74760BeaconFront" />
+	</GameData>
+</TruckAddon>

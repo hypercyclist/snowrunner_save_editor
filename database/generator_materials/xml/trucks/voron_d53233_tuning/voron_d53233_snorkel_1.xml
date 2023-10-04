@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.075; 2.247; -1.106)" />
+	<PhysicsModel Mesh="trucks/voron_d53233_tuning/voron_d53233_snorkel_1"/>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+		<InstallSocket Type="VoronD53233Snorkel" />
+	</GameData>
+</TruckAddon>

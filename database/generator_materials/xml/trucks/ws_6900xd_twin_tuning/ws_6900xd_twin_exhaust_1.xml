@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<_parent File="ws_6900xd_twin_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_exhaust_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 3.012; -1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.863; -1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.721; -1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.567; -1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 3.012; 1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.863; 1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.721; 1.097)" />
+			<Flare _template="IgnitionSignalRed" Pos="(3.994; 2.567; 1.097)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+	</GameData>
+	<Exhaust _noinherit="true" Dir="(-0.696; 0.123; 0.707)" IsLight="true" Origin="(3.993; 4.144; 1.23)" Speed="3.82" />
+	<Exhaust _noinherit="true" Dir="(-0.696; 0.123; -0.707)" IsLight="true" Origin="(3.993; 4.144; -1.23)" Speed="3.83" />
+</TruckAddon>

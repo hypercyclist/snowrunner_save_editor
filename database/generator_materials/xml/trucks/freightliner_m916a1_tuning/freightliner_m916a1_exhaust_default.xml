@@ -1,0 +1,48 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="20">
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MaxAngle="(1; 1; 1)" MaxFrequency="4.5" ParentFrame="BoneCabinDamper_cdt" />
+			<Shaker Frame="BoneExhaustValve" LimitDirectionZ="Negative" MinAngle="(0; 0; -20)" MaxAngle="(0; 0; -90)" MaxFrequency=".15" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_exhaust_default">
+		<Body Collisions="None" Mass="25" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FreightlinerM916a1Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.622; 0.783; 0)"
+		IsLight="true"
+		Origin="(0.509; 3.285; -1.050)"
+		Speed="3.82"
+	/>
+</TruckAddon>

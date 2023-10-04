@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.449; 2.285; -0.558)" />
+			<Model _template="HeadLightRay" Org="(0.449; 2.285; 0.558)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.45" Pos="(0.449; 2.285; -0.558)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.35" Pos="(0.45; 2.314; -0.33)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.35" Pos="(0.45; 2.314; -0.11)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.35" Pos="(0.45; 2.314; 0.11)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.35" Pos="(0.45; 2.314; 0.33)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.45" Pos="(0.449; 2.285; 0.558)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="HummerH2Spotlight" />
+	</GameData>
+</TruckAddon>

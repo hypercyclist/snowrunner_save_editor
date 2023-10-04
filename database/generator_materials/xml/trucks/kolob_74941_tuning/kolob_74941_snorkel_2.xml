@@ -1,0 +1,13 @@
+<_templates Include="trucks" />
+<_parent File="kolob_74941_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.8; 2.93; -1.493)" />
+	<PhysicsModel Mesh="trucks/kolob_74941_tuning/kolob_74941_snorkel_2" />
+	<GameData
+		Price="2800"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC" UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME" />
+	</GameData>
+</TruckAddon>

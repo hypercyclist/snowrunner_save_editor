@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_scout_800_tuning/international_scout_800_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.194; 1.961; -0.508)" />
+			<Model _template="HeadLightRay" Org="(0.194; 1.961; 0.496)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.30" Color="g(255; 235; 215) x 0.6" Pos="(0.194; 1.961; -0.508)" />
+			<Flare _template="HeadLight" DirAngle="100" Size="0.30" Color="g(255; 235; 215) x 0.6" Pos="(0.194; 1.961; 0.496)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.25" Color="g(255; 235; 215) x 0.6" Pos="(0.196; 1.990; -0.264)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.25" Color="g(245; 235; 215) x 0.6" Pos="(0.196; 1.990; 0.265)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.25" Color="g(245; 235; 215) x 0.6" Pos="(0.196; 1.990; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="InternationalScout800SpotLight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Heavy"
+    Mesh="wheels/ford_clt9000_rear"
+    Radius="0.553"
+    Width = "0.619"
+>
+	<WheelTracks _template="Default" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />	
+</TruckWheel>

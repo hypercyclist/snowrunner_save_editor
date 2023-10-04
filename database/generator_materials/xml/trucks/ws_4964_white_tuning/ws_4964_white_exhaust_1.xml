@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<_parent File="ws_4964_white_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_exhaust_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(1.061; 2.276; -0.905)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.061; 2.13; -0.905)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.061; 1.986; -0.905)" />
+			<Flare _template="IgnitionSignalRed" Pos="(1.061; 1.833; -0.905)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="5"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_WEDGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_WEDGED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.685; 0.223; -0.693)" Origin="(1.047; 3.43; -1.055)" />
+</TruckAddon>

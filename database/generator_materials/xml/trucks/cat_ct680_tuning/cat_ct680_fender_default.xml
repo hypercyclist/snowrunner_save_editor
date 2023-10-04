@@ -1,0 +1,39 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard AngularDamping="3.0" Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-45"
+				MaxLimit="20"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_fender_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRearLeftMudguard_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRearRightMudguard_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_MUDFLAPS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_MUDFLAPS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Cat680Fender" />
+	</GameData>
+</TruckAddon>

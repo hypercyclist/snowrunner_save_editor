@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<Flare>
+		<MarkerBeacon
+			AttenEnd="200"
+			AttenStart="1"
+			Color="g(255; 174; 0) x 0.25"
+			ColorMultAtDay="0.5"
+			Size="0.2"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.817; 3.377; -0.913)" />
+			<Flare _template="MarkerBeacon" Pos="(4.817; 3.377; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(4.817; 3.377; 0.913)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticVisor" />
+	</GameData>
+</TruckAddon>

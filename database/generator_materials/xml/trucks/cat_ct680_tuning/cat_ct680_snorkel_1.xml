@@ -1,0 +1,27 @@
+<TruckAddon>
+	<Snorkel Origin="(1.816; 2.560; -1.057)" />
+	<Snorkel Origin="(1.816; 2.560; 1.066)" />
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_snorkel_1">
+		<Body ImpactType="Truck" Mass="45" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="5" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_TWIN_NAME"
+		/>
+		<InstallSocket Type="Cat680AirFilter" />
+	</GameData>
+</TruckAddon>

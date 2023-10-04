@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_spot_light_1">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.287; 3.872; 0.45)" />
+			<Model _template="HeadLightRay" Org="(1.287; 3.872; -0.438)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="90" Size=".4" Pos="(1.287; 3.872; 0.45)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="90" Size=".4" Pos="(1.287; 3.872; -0.438)" />
+			<Flare _template="HeadLight" AspectRatio="1" Color="g(255; 235; 215) x 0.5" DirAngle="100" Size=".4" Pos="(1.267; 3.912; 0.232)" />
+			<Flare _template="HeadLight" AspectRatio="1" Color="g(255; 235; 215) x 0.5" DirAngle="100" Size=".4" Pos="(1.267; 3.912; -0.23)" />
+			<Flare _template="HeadLight" AspectRatio="1" Color="g(255; 235; 215) x 0.5" DirAngle="100" Size=".4" Pos="(1.267; 3.912; 0.001)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.237; 3.925; 0.664)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.237; 3.925; 0.664)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.237; 3.925; 0.664)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.237; 3.925; 0.664)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.189; 3.945; 0.664)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-1; 0; 0)" Org="(1.138; 3.925; -0.652)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(-1; 0; 0)" Pos="(1.138; 3.925; -0.652)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(-1; 0; 0)" Pos="(1.138; 3.925; -0.652)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(-1; 0; 0)" Pos="(1.138; 3.925; -0.652)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.189; 3.945; -0.652)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="PacificP12WSpotLight" />
+	</GameData>
+</TruckAddon>

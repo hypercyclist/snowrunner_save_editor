@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="0.75"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.15"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_tuning/derry_longhorn_3194_cabin_protector_1">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-0.274; 3.234; -0.7)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-0.274; 3.234; 0.7)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-0.274; 2.219; -0.7)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-0.274; 2.219; 0.7)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_PROTECTOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_PROTECTOR_1_NAME"
+		/>
+		<InstallSocket Type="DerryLonghorn3194CabinProtector" />
+	</GameData>
+</TruckAddon>

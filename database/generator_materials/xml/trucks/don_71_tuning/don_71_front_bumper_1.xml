@@ -1,0 +1,21 @@
+<_parent File="don_71_front_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_front_bumper_1" />
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WINCHPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WINCHPIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

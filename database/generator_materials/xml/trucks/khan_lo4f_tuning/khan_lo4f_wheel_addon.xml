@@ -1,0 +1,22 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_wheel_addon" />
+	<GameData
+		CameraPreset="rear"
+		Category="wheel_addon"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fWheelAddon" />
+	</GameData>
+</TruckAddon>

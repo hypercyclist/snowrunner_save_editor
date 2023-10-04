@@ -1,0 +1,17 @@
+<_parent File="ws_6900xd_twin_horn_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_horn_1" />
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinHorn" />
+	</GameData>
+</TruckAddon>

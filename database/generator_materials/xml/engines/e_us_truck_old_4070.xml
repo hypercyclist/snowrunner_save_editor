@@ -1,0 +1,39 @@
+<_templates>
+	<Engine>
+		<USTruckOldEngine
+			BrakesDelay="0.5"
+			CriticalDamageThreshold="0.2"
+			DamageCapacity="200"
+			EngineResponsiveness="0.035"
+			DamagedMinTorqueMultiplier="1.0"
+			DamagedMaxTorqueMultiplier="0.5"
+			MaxDeltaAngVel="0.01"
+		/>
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USTruckOldEngine"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="200"
+		DamagedConsumptionModifier="1.8"
+		FuelConsumption="7.0"
+		Name="us_truck_old_engine_4070"
+		Torque="160000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.6"
+	>
+		<GameData
+			Price="8500"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_TRUCK_OLD_4070_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_TRUCK_OLD_4070_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

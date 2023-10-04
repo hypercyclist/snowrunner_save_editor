@@ -1,0 +1,30 @@
+<_templates Include="trucks">
+	<_parent File="pacific_p12w_bumper_default" />
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/pacific_p12w_tuning/pacific_p12w_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+		<InstallSocket Type="PacificP12Bumper" />
+	</GameData>
+</TruckAddon>

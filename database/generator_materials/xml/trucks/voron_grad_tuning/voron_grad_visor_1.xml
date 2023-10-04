@@ -1,0 +1,28 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.826; 2.915; -0.785)" />
+			<Flare _template="MarkerBeacon" Pos="(1.825; 2.914; 0.783)" />
+			<Flare _template="MarkerBeacon" Pos="(1.872; 2.93; -0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(1.872; 2.93; 0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(1.872; 2.93; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="VoronGradVisor" />
+	</GameData>
+</TruckAddon>

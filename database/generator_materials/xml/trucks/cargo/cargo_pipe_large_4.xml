@@ -1,0 +1,30 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_pipe_large_4">
+		<NetSync Legacy="false" />
+		<Body Mass="2000" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="2000" ModelFrame="BoneCargo_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="2000" ModelFrame="BoneCargo_2_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					<Body Mass="2000" ModelFrame="BoneCargo_3_cdt">
+						<Constraint ExplicitParentFrame="3" Type="Fixed" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_pipe_large"
+			TransportedSound="load/pipe_large/pipe_large_rnd"
+			ManualSound="cargo_manual/cargo_manual_pipe_large"
+		/>
+		<InstallSlot
+			CargoLength="4"
+			CargoType="CargoPipeLarge"
+			CargoValue="1"
+			Offset="(3.838; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

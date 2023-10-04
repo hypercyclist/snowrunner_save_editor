@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/don_71_tuning/don_71_spot_light_01" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.249; 1.794; -0.44)" />
+			<Model _template="HeadLightRay" Org="(0.249; 1.794; 0.44)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.20" Pos="(0.249; 1.794; -0.44)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.25" Pos="(0.235; 1.802; -0.257)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.2" Pos="(0.235; 1.802; -0.086)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.2" Pos="(0.235; 1.802; 0.086)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.25" Pos="(0.235; 1.802; 0.257)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.20" Pos="(0.249; 1.794; 0.44)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Don71Spotlight" />
+	</GameData>
+</TruckAddon>

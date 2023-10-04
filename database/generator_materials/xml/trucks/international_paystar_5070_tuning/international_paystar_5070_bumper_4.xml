@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_bumper_4" />
+	<GameData
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_PIPEWELDED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_PIPEWELDED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

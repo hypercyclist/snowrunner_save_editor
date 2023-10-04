@@ -1,0 +1,18 @@
+<_parent File="derry_longhorn_4520_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.846; 2.555; -1.358)" />
+	<Snorkel Origin="(2.846; 2.555; 1.358)" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_snorkel_2" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,69 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Superheavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Soft" />
+			<WheelFriction _template="HeavyMudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.78">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_superheavy_mudtires_1" Name="mudtires_1">
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_superheavy_mudtires_2" Name="mudtires_2">
+			<WheelFriction _template="HeavyMudtires" SubstanceFriction="3.2"/>
+			<GameData
+				Price="8100"
+				UnlockByExploration="false"
+				UnlockByRank="15"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_superheavy_mudtires_3" Name="mudtires_3">
+			<WheelFriction _template="HeavyMudtires" BodyFriction="2.0"/>
+			<GameData
+				Price="9000"
+				UnlockByExploration="false"
+				UnlockByRank="15"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_superheavy_mudtires_4_cat745" Name="mudtires_cat745">
+			<WheelFriction _template="HeavyMudtires" BodyFrictionAsphalt="0.7"/>
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SUPERHEAVY_MUDTIRES_4_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_superheavy_mudtires_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_SUPERHEAVY_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_superheavy_mudtires_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_2_DESC" UiName="UI_RIM_SUPERHEAVY_MUDTIRES_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_superheavy_mudtires_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_3_DESC" UiName="UI_RIM_SUPERHEAVY_MUDTIRES_3_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

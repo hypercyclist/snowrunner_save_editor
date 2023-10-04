@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MaxAngle="(0.4; 0.4; 0.4)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneExhaustRoot_cdt"
+                MinAngle="(0.15; 0.15; 0.15)"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneExhaustRoot_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="PacificP16Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 0.411; -0.912)"
+		IsLight="true"
+		Origin="(0.718; 3.57; -1.285)"
+		Speed="3.82"
+	/>
+</TruckAddon>

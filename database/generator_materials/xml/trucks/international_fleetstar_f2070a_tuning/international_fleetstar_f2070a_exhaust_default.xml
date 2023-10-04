@@ -1,0 +1,57 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate
+			CenterOfMassOffset="(0; 0; 0)"
+			Friction="0.001"
+			ImpactType="Truck"
+			Mass="20"
+		>
+			<Constraint
+				LinearLimitsX="(-.5;0)"
+				LinearLimitsY="(-0.5;0)"
+				LinearLimitsZ="(-.5;0.5)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 160)" MaxFrequency=".1" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_fleetstar_f2070a_tuning/international_fleetstar_f2070a_exhaust_default">
+		<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneRightExhaust_cdt" />
+			<Body Collisions="None" Mass="20" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="InternationalFleetstarF2070aExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.489; 0.872; 0)"
+		IsLight="true"
+		Origin="(1.742; 3.139; -0.583)"
+		Speed="3.82"
+	/>
+</TruckAddon>

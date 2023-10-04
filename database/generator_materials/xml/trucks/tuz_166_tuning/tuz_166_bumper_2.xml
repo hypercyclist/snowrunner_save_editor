@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<_parent File="tuz_166_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_bumper_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.954; 0.792; -0.247)" />
+			<Model _template="HeadLightRay" Org="(1.954; 0.792; 0.266)" />
+			<Flare _template="HeadLight" Color="g(245; 240; 225) x 0.45" DirAngle="135" Size="0.30" Pos="(1.954; 0.792; -0.247)" />
+			<Flare _template="HeadLight" Color="g(245; 240; 225) x 0.45" DirAngle="135" Size="0.30" Pos="(1.954; 0.792; 0.266)" />
+			<Flare _template="HeadLight" Color="g(245; 240; 225) x 0.45" DirAngle="135" Size="0.30" Pos="(1.954; 0.792; 0.003)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SLANTED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SLANTED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

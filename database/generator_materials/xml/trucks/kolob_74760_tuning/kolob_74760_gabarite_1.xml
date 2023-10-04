@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74760_tuning/kolob_74760_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Dir="(1; 0.5; 0)" DirAngle="180" Pos="(4.541; 3.747; -1.02)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0.5; 0)" DirAngle="180" Pos="(4.541; 3.747; 1.02)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="Kolob74760Gabarite" />
+	</GameData>
+</TruckAddon>

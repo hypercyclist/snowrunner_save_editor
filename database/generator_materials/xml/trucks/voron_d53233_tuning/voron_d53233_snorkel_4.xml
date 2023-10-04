@@ -1,0 +1,18 @@
+<_parent File="voron_d53233_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.075; 2.259; -1.101)" />
+	<Snorkel Origin="(2.075; 2.259; 1.101)" />
+	<PhysicsModel Mesh="trucks/voron_d53233_tuning/voron_d53233_snorkel_4" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_TWIN_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_TWIN_SHORT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

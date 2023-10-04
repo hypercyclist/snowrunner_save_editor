@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="international_loadstar_1700_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_tuning/international_loadstar_1700_bumper_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.042; 1.232; -0.214)" />
+			<Model _template="HeadLightRay" Org="(3.042; 1.232; 0.214)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.45" DirAngle="135" Size="0.35" Pos="(3.042; 1.232; -0.214)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.45" DirAngle="135" Size="0.35" Pos="(3.042; 1.232; 0.214)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/saddle_low">
+		<Body Mass="40">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMountR_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneMountL_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		SaddleType="low"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SADDLE_LOW_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SADDLE_LOW_NAME"
+		/>
+		<RequiredAddonType Type="SaddleLow" TypeUiName="UI_REQUIRED_ADDON_TYPE_SADDLE_LOW" />
+		<InstallSocket Type="SaddleLow" />
+	</GameData>
+</TruckAddon>

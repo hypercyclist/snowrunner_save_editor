@@ -1,0 +1,21 @@
+<_parent File="minicrane_us" />
+<TruckAddon>
+	<PoweredConstraints>
+		<Group/>
+		<Group>
+			<Constraint Position="0.65" />
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/minicrane_us_loadstar">
+		<NetSync Legacy="true" />
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket
+			_noinherit="true"
+			Price="5700"
+			Type="MinicraneLoadstar"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_visor_1" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_LO4F_VISOR_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_LO4F_VISOR_1_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fVisor" />
+	</GameData>
+</TruckAddon>

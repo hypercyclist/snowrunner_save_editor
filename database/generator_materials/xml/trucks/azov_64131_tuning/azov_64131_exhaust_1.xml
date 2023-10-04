@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<_parent File="azov_64131_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_tuning/azov_64131_exhaust_1" />
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_WEDGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_WEDGED_NAME"
+		/>
+	</GameData>
+	<Exhaust
+		Dir="(-1; 0; 0)"
+		IsLight="true"
+		Origin="(1.500; 3.541; -0.843)"
+		Speed="3.82"
+	/>
+</TruckAddon>

@@ -1,0 +1,15 @@
+<_parent File="saddle_high" />
+<TruckAddon>
+	<PhysicsModel _noinherit="true" Mesh="trucks/addons/saddle_ank_mk38_high">
+		<Body Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="SaddleAnkMk38High" />
+	</GameData>
+</TruckAddon>

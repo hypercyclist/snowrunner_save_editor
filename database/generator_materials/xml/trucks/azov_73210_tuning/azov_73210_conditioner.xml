@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_conditioner" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="Azov73210Conditioner" />
+	</GameData>
+</TruckAddon>

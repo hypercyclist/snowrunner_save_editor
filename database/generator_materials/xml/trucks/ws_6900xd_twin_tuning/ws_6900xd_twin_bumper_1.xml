@@ -1,0 +1,60 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.35"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<_parent File="ws_6900xd_twin_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_bumper_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(7.643; 1.587; -0.374)" />
+			<Model _template="HeadLightRay" Org="(7.643; 1.587; 0.374)" />
+			<Flare _template="HeadLight" Size=".3" Color="g(255; 235; 215) x 0.70" Pos="(7.643; 1.587; -0.374)" />
+			<Flare _template="HeadLight" Size=".3" Color="g(255; 235; 215) x 0.70" Pos="(7.643; 1.587; 0.374)" />
+			<Flare _template="HeadLight" Size=".3" Color="g(255; 235; 215) x 0.60" Pos="(7.643; 1.587; -0.124)" />
+			<Flare _template="HeadLight" Size=".3" Color="g(255; 235; 215) x 0.60" Pos="(7.643; 1.587; 0.124)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; -0.674)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; -0.823)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; -0.973)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; -1.123)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; -1.272)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; 0.674)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; 0.823)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; 0.973)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; 1.123)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(7.618; 0.887; 1.272)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+	</GameData>
+</TruckAddon>

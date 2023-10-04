@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_spot_light1">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.227; 3.228; -0.463)" />
+			<Model _template="HeadLightRay" Org="(1.228; 3.229; 0.461)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(1.227; 3.228; -0.463)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(1.228; 3.229; 0.461)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(1.229; 3.229; -0.231)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(1.227; 3.228; 0.233)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" Size="0.4" Pos="(1.227; 3.228; 0)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.154; 3.251; 0.746)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.154; 3.251; 0.746)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.154; 3.251; 0.746)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.154; 3.251; 0.746)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.086; 3.251; 0.746)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.086; 3.251; -0.674)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.086; 3.251; -0.674)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.086; 3.251; -0.674)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.086; 3.251; -0.674)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.086; 3.251; -0.741)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_BEACONS_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="VoronGradSpotLight1" />
+	</GameData>
+</TruckAddon>

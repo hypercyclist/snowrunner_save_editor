@@ -1,0 +1,29 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="1.118">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires">
+			<WheelFriction _template="Mudtires" SubstanceFriction="2.4"/>
+			<GameData
+				Price="7400"
+				UnlockByExploration="false"
+				UnlockByRank="13"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_single_tayga_1" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_MUDTIRES_SINGLE_TAYGA_1_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_TAYGA_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

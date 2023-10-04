@@ -1,0 +1,57 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="10">
+			<Constraint Type="Hinge">
+				<Motor Damping="1" Spring="10" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p12w_tuning/pacific_p12w_bumper_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			
+			<Body Collisions="None" Mass="2" ModelFrame="BoneStepRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.2" Spring="15" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneStepLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.1" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="PacificP12Bumper" />
+	</GameData>
+</TruckAddon>

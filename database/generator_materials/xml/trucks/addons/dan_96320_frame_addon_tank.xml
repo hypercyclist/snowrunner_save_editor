@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<Body>
+		<Wire Collisions="None" Mass="0.5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.03"
+				MaxLimit="0.03"
+			>
+				<Motor Damping="2" Spring="250" Type="Spring" />
+			</Constraint>
+		</Wire>
+	</Body>
+</_templates>
+<_parent File="frame_addon_tank" />
+<TruckAddon>
+	<!--	<TruckData>
+		<LimitedFluid Center="(-0.014; 1.289; 0)" />
+	</TruckData>-->
+	<PhysicsModel _noinherit="true" Mesh="trucks/addons/dan_96320_frame_addon_tank">
+		<Body CenterOfMassOffset="(1; 0; 0)" Mass="600">
+			<Constraint Type="Rigid" />
+			<Body _template="Wire" ModelFrame="BoneWireLeft_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRight_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRear_cdt">
+				<Constraint AxisLocal="(0; 1; 0)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="FrameAddonTankDan96320" />
+	</GameData>
+</TruckAddon>

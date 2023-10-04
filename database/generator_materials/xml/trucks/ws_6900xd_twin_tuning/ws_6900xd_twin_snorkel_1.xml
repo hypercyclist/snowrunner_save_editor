@@ -1,0 +1,21 @@
+<_parent File="ws_6900xd_twin_snorkel_default" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(5.862; 3.093; -1.098)" />
+	<Snorkel _noinherit="true" Origin="(5.862; 3.093; 1.098)" />
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_snorkel_1" />
+	<ModelAttachments _noinherit="true" />
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_TWIN_NAME"
+		/>
+	</GameData>
+</TruckAddon>

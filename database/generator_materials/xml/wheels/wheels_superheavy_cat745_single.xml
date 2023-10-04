@@ -1,0 +1,16 @@
+<_parent File="wheels_superheavy_single" />
+<TruckWheels>
+	<TruckRims>
+		<TruckRim/>
+		<TruckRim/>
+		<TruckRim/>
+		<TruckRim Mesh="wheels/rim_superheavy_mudtires_4_cat745" Name="rim_cat745">
+			<GameData>
+				<UiDesc
+					UiDesc="UI_RIM_SUPERHEAVY_CAT745C_DESC"
+					UiName="UI_RIM_SUPERHEAVY_CAT745C_NAME"
+				/>
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,40 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/tayga_6436_tuning/tayga_6436_wheel_addon">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Fixed" />
+			<Body Mass="50" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Mass="50" ModelFrame="BoneWheel_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="5"
+					>
+						<!--<Motor Damping=".001" Spring="600000" Type="Spring" />-->
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="wheel_addon"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="Tayga6436WheelAddon" />
+	</GameData>
+</TruckAddon>

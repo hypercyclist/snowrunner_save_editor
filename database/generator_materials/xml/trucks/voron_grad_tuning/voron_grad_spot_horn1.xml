@@ -1,0 +1,19 @@
+<_templates Include="trucks"/>
+<TruckAddon>	
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_spot_horn1"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_ONESIDE_NAME"
+		/>
+		<InstallSocket Type="VoronGradHorn" />
+	</GameData>	
+</TruckAddon>

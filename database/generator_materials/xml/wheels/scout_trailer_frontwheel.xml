@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Light"
+	Mesh="wheels/scout_trailer_flatbed_2_front"
+	Radius="0.165"
+	Width = "0.068"
+>
+	<WheelTracks _template="Default" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="ScoutHighway" />	
+</TruckWheel>

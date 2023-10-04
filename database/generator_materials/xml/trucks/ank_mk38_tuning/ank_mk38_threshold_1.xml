@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_threshold_1" />
+	<GameData
+		_noinherit="true"
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Threshold" />
+	</GameData>
+</TruckAddon>

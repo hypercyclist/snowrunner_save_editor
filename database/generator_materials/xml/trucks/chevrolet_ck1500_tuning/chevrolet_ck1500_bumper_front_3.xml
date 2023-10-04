@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="chevrolet_ck1500_bumper_front_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_bumper_front_3" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_AXLEPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_AXLEPROT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

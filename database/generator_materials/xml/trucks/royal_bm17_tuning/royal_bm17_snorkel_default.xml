@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<_parent File="royal_bm17_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(3.453; 1.731; -1.067)" />
+	<PhysicsModel Mesh="trucks/royal_bm17_tuning/royal_bm17_snorkel_default" />
+	<ModelAttachments _noinherit="true" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

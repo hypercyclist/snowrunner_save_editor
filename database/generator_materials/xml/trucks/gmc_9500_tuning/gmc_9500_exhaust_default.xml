@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="2">
+			<Constraint
+				Cone="50"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-30"
+				PlaneMax="30"
+			>
+				<PlaneMotor Damping="999999999" Spring="1000" Type="Spring" />
+				<ConeMotor Damping="999999999" Spring="1000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.1" ParentFrame="BoneLeftExhaust_cdt" />
+			<Shaker Frame="BoneRightExhaustCover" LimitDirectionY="Positive" MinAngle="(0; -40; 0)" MaxAngle="(0; -120; 0)" MaxFrequency=".08" ParentFrame="BoneRightExhaust" />
+			<Shaker Frame="BoneLeftExhaustCover"  LimitDirectionY="Negative" MinAngle="(0; 40; 0)" MaxAngle="(0; 120; 0)" MaxFrequency=".08" ParentFrame="BoneLeftExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/gmc_9500_tuning/gmc_9500_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneLeftExhaust_cdt" Collisions="None"/> 
+			<Body _template="ExhaustTemplate" ModelFrame="BoneRightExhaust_cdt" Collisions="None"/>			
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+		<InstallSocket Type="Gmc9500Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(1.174; 3.668; -1.019)" Speed="3.82" />
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(1.174; 3.668; 1.019)" Speed="3.83" />
+</TruckAddon>

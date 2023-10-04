@@ -1,0 +1,52 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="30">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="10" Spring="1500" Type="Spring" />
+			</Constraint>
+			<Body AngularDamping="3.0" Collisions="None" Mass="5">
+				<Constraint Type="Hinge" MinLimit="-40" MaxLimit="23" />
+			</Body>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_fender_default">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguardSpring_cdt">
+				<Body ModelFrame="BoneLeftMudguard_cdt">
+					<Constraint AxisLocal="(0; 0; 1)" />
+				</Body>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguardSpring_cdt">
+				<Body Mass="5.3" ModelFrame="BoneRightMudguard_cdt">
+					<Constraint AxisLocal="(0; 0; -1)" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="FreightlinerM916a1Fender" />
+	</GameData>
+</TruckAddon>

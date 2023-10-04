@@ -1,0 +1,19 @@
+<_parent File="ford_clt9000_snorkel_01" />
+<TruckAddon>
+	<Snorkel Origin="(2.009; 3.317; 0.582)" />
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_snorkel_02" />
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

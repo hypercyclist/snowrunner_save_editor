@@ -1,0 +1,55 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(-0.01;0)"
+				LinearLimitsY="(0;0.01)"
+				LinearLimitsZ="(-0.01;0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="10" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Limits>
+		<FuelLimit AngularDamping="5" Collisions="None">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="5"
+			/>
+		</FuelLimit>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="40" RepairsCapacity="150" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_trunk">
+		<Body Mass="50">
+			<Constraint Type="Rigid" />
+			<Body _template="Limits" LinearDamping="10" Mass="50" ModelFrame="BoneRepair_cdt" />
+			<Body _template="FuelLimit" Mass="20" ModelFrame="BoneFuel1_cdt" />
+			<Body _template="FuelLimit" Mass="20" ModelFrame="BoneFuel2_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="HummerH2Trunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

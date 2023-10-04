@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="2"
+		/>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.0" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.2" ParentFrame="BoneLeftExhaust_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_exhaust_1">
+		<Body Collisions="None" Mass="25" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="25" ModelFrame="BoneRightExhaust_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Mass="25" ModelFrame="BoneLeftExhaust_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="exhaust"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+		<InstallSocket Type="FreightlinerM916a1Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 0.707; -0.707)" IsLight="true" Origin="(0.574; 3.253; -1.154)" Speed="3.80" />
+	<Exhaust Dir="(0; 0.707; 0.707)" IsLight="true" Origin="(0.574; 3.253; 1.154)" Speed="3.84" />
+</TruckAddon>

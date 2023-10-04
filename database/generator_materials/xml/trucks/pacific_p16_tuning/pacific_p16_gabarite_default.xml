@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 149; 34) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.2"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p16_tuning/pacific_p16_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalYellow" Pos="(1.829; 3.338; -0.549)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.829; 3.338; 0.994)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.976; 3.341; 0.04)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.976; 3.341; 0.405)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(1.976; 3.341; 0.223)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="PacificP16Gabarite" />
+	</GameData>
+</TruckAddon>

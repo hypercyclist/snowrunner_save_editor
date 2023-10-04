@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData AllWheelDriveInstalled="true">
+		<Shafts _template="AllWheelsTransferbox" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_transferbox_allwheels">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="4400"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+		<InstallSocket Type="Ws4964WhiteTransferBox" />
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="0" Frame="BoneAxle1" />
+	</ExplicitParents>
+</TruckAddon>

@@ -1,0 +1,44 @@
+<_parent File="cat_ct680_snorkel_1" />
+<_templates Include="trucks" >
+	<Flare >
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<Snorkel Origin="(2.280; 2.991; -1.155)" />
+	<Snorkel Origin="(2.280; 2.991; 1.155)" />
+	<PhysicsModel Mesh="trucks/cat_ct680_tuning/cat_ct680_snorkel_2" />
+	<ModelAttachments>
+		<Ignition >
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 2.054; -1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.969; -1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.881; -1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.795; -1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 2.054; 1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.969; 1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.881; 1.155)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.353; 1.795; 1.155)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_TWIN_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/dan_96320_tuning/dan_96320_air_conditioner_1" />
+	<GameData
+		CameraPreset="addon_2"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="Dan96320AirConditioner" />
+	</GameData>
+</TruckAddon>

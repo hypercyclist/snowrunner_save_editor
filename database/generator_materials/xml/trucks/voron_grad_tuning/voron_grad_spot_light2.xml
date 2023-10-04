@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_spot_light2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.482; 3.212; -0.658)" />
+			<Model _template="HeadLightRay" Org="(1.482; 3.212; 0.641)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.5" Pos="(1.482; 3.212; -0.658)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.5" Pos="(1.482; 3.212; 0.641)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.4" Pos="(1.477; 3.243; -0.324)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.4" Pos="(1.478; 3.242; 0.319)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size="0.4" Pos="(1.478; 3.243; -0.001)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="24"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="VoronGradSpotLight2" />
+	</GameData>
+</TruckAddon>

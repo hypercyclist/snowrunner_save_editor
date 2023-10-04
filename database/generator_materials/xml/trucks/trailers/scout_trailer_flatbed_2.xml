@@ -1,0 +1,174 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheelRear
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.1"
+			SuspensionStrength="0.33"
+			Torque="default"
+			Type="wheel_scout_trailer_flatbed"
+			SuspensionMin="-0.3"
+		/>
+		<TrailerWheelFront
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.01"
+			SuspensionStrength="1"
+			Torque="default"
+			Type="wheel_scout_trailer_front"
+			SuspensionMin="0.01"
+			ParentFrame="BoneRotFrontWheel_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 195; 34) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.6"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="TrailerWheelFront" Pos="(3.83; 0.11; 0)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-0.61; 0.601; 1.153)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-0.61; 0.601; 1.153)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-1.583; 0.601; 1.153)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-1.583; 0.601; 1.153)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-4.068"
+			MaxX="4.158"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				TerminalFix="true"
+				Position=".324"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/scout_trailer_flatbed_2">
+		<Body
+			CenterOfMassOffset="(-0.8; 0; 0)"
+			ImpactType="Truck"
+			Mass="800"
+		>
+			<Body Collisions="None" Mass="100" ModelFrame="BoneMoveFrontWheel_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.324"
+				>
+					<Motor Force="45000" Type="Position" />
+				</Constraint>
+				<Body
+					AngularDamping="10.0"
+					Collisions="None"
+					Mass="100"
+					ModelFrame="BoneRotFrontWheel_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-180"
+						MaxLimit="180"
+					/>
+				</Body>
+			</Body>
+			<Body Mass="5" ModelFrame="BoneHandle_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Handle"
+					Type="Hinge"
+					MinLimit="-180"
+					MaxLimit="180"
+				>
+					<Motor Damping=".2" Spring="2" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.98; 0.915; 0)" />
+			<Flare _template="StopSignal" Pos="(-3.839; 0.97; 1.072)" />
+			<Flare _template="StopSignal" Pos="(-3.839; 0.97; -1.072)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3.839; 0.97; -0.978)" />
+			<Light _template="ReverseSignal" Pos="(-3.839; 0.97; 0.978)" />
+			<Flare _template="ReverseSignal" Size="0.5" Pos="(-3.839; 0.97; 0.978)" />
+			<Flare _template="ReverseSignal" Size="0.5" Pos="(-3.839; 0.97; -0.978)" />
+			<Flare _template="BlueStreak" Dir="(-1; 0; 0)" Pos="(-3.839; 0.97; -0.978)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.839; 0.97; 0.978)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-3.98; 0.915; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.839; 0.97; 1.072)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.839; 0.97; -1.072)" />
+			<Flare AspectRatio="1.4" Color="g(165; 149; 130) x 0.6" Dir="(0; 0; -1)" DirAngle="40" Size="0.2" Pos="(-3.847; 0.97; 0.263)" />
+			<Flare AspectRatio="1.4" Color="g(165; 149; 130) x 0.6" Dir="(0; 0; 1)" DirAngle="40" Size="0.2" Pos="(-3.847; 0.97; -0.263)" />
+			<Flare AspectRatio="1.6" Color="g(165; 149; 130) x 0.2" Dir="(-1; 0; 0)" DirAngle="90" Size=".45" Pos="(-3.847; 0.97; 0.1)" />
+			<Flare AspectRatio="1.6" Color="g(165; 149; 130) x 0.2" Dir="(-1; 0; 0)" DirAngle="90" Size=".45" Pos="(-3.847; 0.97; -0.1)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.573; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-3.545; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-1.506; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-1.477; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(0.559; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(0.587; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(2.623; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(2.652; 1.053; 1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-3.573; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-3.545; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-1.506; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(-1.477; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(0.559; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(0.587; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(2.623; 1.053; -1.318)" />
+			<Flare _template="IgnitionSignalYellow" Pos="(2.652; 1.053; -1.318)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/scout_trailer_flatbed_2_lmk" MinScale="1.5" MaxScale="3.5" />
+	<GameData Price="3400">
+		<WinchSocket WinchableWhenAttached="false" Pos="(4.509; 0.72; 0)" />
+		<WinchSocket Pos="(-3.761; 1.111; -1.276)" />
+		<WinchSocket Pos="(-3.761; 1.111; 1.276)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_SCOUT_FLATBED_2_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_TRAILER_SCOUT_FLATBED_2_NAME"
+		/>
+		<InstallSocket Offset="(4.509; 0.72; 0)" Type="ScautTrailer" />
+		<CraneSocket Pos="(4.509; 0.72; 0)" />
+		<CraneSocket Pos="(-3.761; 1.111; -1.276)" />
+		<CraneSocket Pos="(-3.761; 1.111; 1.276)" />
+		<AddonSlots InitialOffset="(0.795; 1.088; 0)" OffsetStep="(-3.198; 0; 0)" Quantity="2" />
+	</GameData>
+</Truck>

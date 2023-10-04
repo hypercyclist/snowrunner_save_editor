@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakc70_tuning/chevrolet_kodiakc70_spot_light_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" Size="0.3" Pos="(1.554; 2.754; -0.476)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" Size="0.3" Pos="(1.554; 2.754; -0.239)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" Size="0.3" Pos="(1.555; 2.755; 0)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" Size="0.3" Pos="(1.556; 2.755; 0.239)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 220) x 0.6" Size="0.3" Pos="(1.554; 2.754; 0.476)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="ChevroletKodiakC70SpotLight2" />
+	</GameData>
+</TruckAddon>

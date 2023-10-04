@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_tuning/derry_longhorn_4520_spot_light_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.278; 3.584; -0.45)" />
+			<Model _template="HeadLightRay" Org="(2.278; 3.584; 0.45)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 195) x 0.6" DirAngle="135" Size="0.4" Pos="(2.278; 3.584; -0.45)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 195) x 0.6" DirAngle="135" Size="0.4" Pos="(2.278; 3.584; 0.45)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 195) x 0.55" DirAngle="135" Size="0.3" Pos="(2.278; 3.584; -0.147)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 195) x 0.55" DirAngle="135" Size="0.3" Pos="(2.278; 3.584; 0.151)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="30"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="DerryLong4520Spotlight" />
+	</GameData>
+</TruckAddon>

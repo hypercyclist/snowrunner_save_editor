@@ -1,0 +1,99 @@
+<_templates Include="trucks">
+	<Flare>
+		<LED01
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.5"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.04"
+		/>
+	</Flare>
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="10" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData
+		FuelCapacity="80"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(0.026; 2.558; -0.382)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<LimitedFluid Center="(0.026; 2.558; 0.224)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<LimitedFluid Center="(-0.868; 2.558; 0.487)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<LimitedFluid Center="(-1.469; 2.558; 0.487)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneChassis_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="khan_39_marshall_repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_tuning/khan_39_marshall_roofrack_1">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.034;0)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.022;0)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="1"
+				Mass="20"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.02; 0)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.403)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.353)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.304)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.254)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.205)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; -0.155)" ParentFrame="BoneChassis_cdt" />
+			
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.158)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.207)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.257)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.307)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.356)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="LED01" Pos="(0.516; 2.362; 0.406)" ParentFrame="BoneChassis_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="KHAN39MarshallRooftopTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="khan_39_marshall_fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

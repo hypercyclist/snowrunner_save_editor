@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="300"
+		Name="cat_745c_suspension_default"
+	>
+		<Suspension BrokenSuspensionMax="0.2" Damping="0.1" Height="0.05" Strength="0.1" SuspensionMin="-0.2" WheelType="front" />
+		<Suspension BrokenSuspensionMax="0.1" Damping="0.4" Height="0.05" Strength="0.7" SuspensionMin="-0.1" WheelType="rear" />
+		<GameData
+			Price="6800"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

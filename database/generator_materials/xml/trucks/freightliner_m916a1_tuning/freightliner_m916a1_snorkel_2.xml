@@ -1,0 +1,17 @@
+<_parent File="freightliner_m916a1_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.854; 2.384; -1.048)" />
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_tuning/freightliner_m916a1_snorkel_2"/>
+	<GameData
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

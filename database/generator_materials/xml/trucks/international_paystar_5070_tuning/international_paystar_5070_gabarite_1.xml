@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="international_paystar_5070_gabarite_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_tuning/international_paystar_5070_gabarite_1" />
+	<ModelAttachments _noinherit="True">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.072; 2.915; -0.896)" />
+			<Flare _template="MarkerBeacon" Pos="(1.072; 2.915; 0.896)" />
+			<Flare _template="MarkerBeacon" Pos="(1.072; 2.924; -0.221)" />
+			<Flare _template="MarkerBeacon" Pos="(1.072; 2.924; 0.221)" />
+			<Flare _template="MarkerBeacon" Pos="(1.072; 2.924; 0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_CHROME_NAME"
+		/>
+	</GameData>
+</TruckAddon>

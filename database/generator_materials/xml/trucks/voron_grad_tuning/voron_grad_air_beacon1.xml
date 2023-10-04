@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/voron_grad_tuning/voron_grad_air_beacon1">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(0.891; 3.114; -0.813)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(0.891; 3.114; -0.813)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.891; 3.114; -0.813)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(0.891; 3.114; -0.813)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(0.824; 3.114; -0.813)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(0.824; 3.114; 0.880)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(0.824; 3.114; 0.880)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.824; 3.114; 0.880)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.824; 3.114; 0.880)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(0.824; 3.114; 0.813)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="VoronGradBeacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,17 @@
+<_parent File="azov_4220_antarctic_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(3.182; 3.964; 0.102)" />
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_snorkel_1" />
+	<GameData
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

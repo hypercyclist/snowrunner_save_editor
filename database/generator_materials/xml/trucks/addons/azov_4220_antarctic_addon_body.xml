@@ -1,0 +1,24 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/azov_4220_antarctic_addon_body">
+		<Body Mass="600">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_AZOV_4220_ANTARCTIC_BODY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_AZOV_4220_ANTARCTIC_BODY_NAME"
+		/>
+		<InstallSocket Type="KamazAddonBody" />
+		<AddonSlots InitialOffset="(-1.382; 2.185; -0)" OffsetStep="(-2.559; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,60 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<TruckData WheelRepairsCapacity="1" RepairsCapacity="50"/>	
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_trunk_stuff">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body ModelFrame="BoneBox_cdt" Mass="20">
+				<Constraint 
+					Type="Fixed" 
+					LinearLimitsX="(-.02;0.02)"
+					LinearLimitsY="(0;0)"
+					LinearLimitsZ="(-.02;0.02)"
+					>
+					<Motor Damping="500" Spring="0.001" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body ModelFrame="BoneWheel_cdt" Mass="15">
+				<Constraint 
+					Type="Fixed" 
+					LinearLimitsX="(-.03;0.03)"
+					LinearLimitsY="(0;0)"
+					LinearLimitsZ="(-.02;0.02)"
+					>
+					<Motor Damping="1500" Spring="1" Type="Spring" />
+				</Constraint>
+				<Body ModelFrame="BoneStrap_cdt" Mass="2">
+					<Constraint 
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="3"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="ChevroletCk1500TrunkStuff" />
+	</GameData>
+</TruckAddon>

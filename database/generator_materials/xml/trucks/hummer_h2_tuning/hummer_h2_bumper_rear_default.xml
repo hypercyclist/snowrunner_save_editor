@@ -1,0 +1,47 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; -1)"
+				Type="Hinge"
+				MinLimit="-34"
+				MaxLimit="90"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_bumper_rear_default">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.5; 0.698; 0)" />
+			<Flare _template="StopSignal" Pos="(-2.273; 0.8; -0.886)" />
+			<Flare _template="StopSignal" Pos="(-2.273; 0.8; 0.886)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-2.273; 0.8; -0.886)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-2.273; 0.8; 0.886)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="HummerH2RearBumper" />
+	</GameData>
+</TruckAddon>

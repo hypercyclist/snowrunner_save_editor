@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_conditioner" />
+	<GameData
+		CameraPreset="side_r"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fConditioner" />
+	</GameData>
+</TruckAddon>

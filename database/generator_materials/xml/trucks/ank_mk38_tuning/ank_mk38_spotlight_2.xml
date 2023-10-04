@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="ank_mk38_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_tuning/ank_mk38_spotlight_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.623; 3.257; -0.669)" />
+			<Model _template="HeadLightRay" Org="(1.623; 3.257; 0.652)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.5" DirAngle="135" Size=".4" Pos="(1.623; 3.257; -0.669)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(1.623; 3.257; 0.652)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.5" DirAngle="100" Size="0.25" Pos="(1.618; 3.289; -0.329)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.25" Pos="(1.618; 3.289; 0.325)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.25" Pos="(1.619; 3.289; -0.001)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="19"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="AnkMk38Spotlight" />
+	</GameData>
+</TruckAddon>

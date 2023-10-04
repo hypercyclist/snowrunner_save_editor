@@ -1,0 +1,117 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Highway _template="Heavy" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Highway" />
+		</Highway>
+		<Allterrain _template="Heavy" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Allterrain" />
+		</Allterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.58"
+	WidthRear="1.132"
+>
+	<TruckTires>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_1" Name="highway_1">
+			<WheelFriction _template="Highway" SubstanceFriction="0.4"/>
+			<GameData
+				Price="3600"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_MEDIUM_HIGHWAY_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_2" Name="highway_2">
+			<WheelFriction _template="Highway" BodyFriction="1.2"/>
+			<GameData
+				Price="4000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_MEDIUM_HIGHWAY_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Highway" Mesh="wheels/tire_medium_highway_double_3" Name="highway_3">
+			<WheelFriction _template="Highway" BodyFrictionAsphalt="3.2"/>
+			<GameData
+				Price="4400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_MEDIUM_HIGHWAY_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_1" Name="allterrain_1">
+			<WheelFriction _template="Allterrain" BodyFrictionAsphalt="1.9"/>
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="9"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_2" Name="allterrain_2">
+			<WheelFriction _template="Allterrain" SubstanceFriction="1.2"/>
+			<GameData
+				Price="5300"
+				UnlockByExploration="false"
+				UnlockByRank="9"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Allterrain" Mesh="wheels/tire_medium_allterrain_double_3" Name="allterrain_3">
+			<WheelFriction _template="Allterrain" BodyFriction="1.7"/>
+			<GameData
+				Price="5700"
+				UnlockByExploration="false"
+				UnlockByRank="9"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_MEDIUM_ALLTERRAIN_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_3" Name="rim_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_3_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_4" Name="rim_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_4_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_5" Name="rim_5">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_5_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_5_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_highway_allterrain_double_6" Name="rim_6">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_6_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_6_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

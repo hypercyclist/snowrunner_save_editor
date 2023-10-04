@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_stairs" />
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_Lo4F_STAIRS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_Lo4F_STAIRS_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fStairs" />
+	</GameData>
+</TruckAddon>

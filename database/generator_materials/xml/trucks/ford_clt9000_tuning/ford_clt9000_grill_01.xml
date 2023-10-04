@@ -1,0 +1,16 @@
+<_parent File="ford_clt9000_grill_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_tuning/ford_clt9000_grill_01" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_GRILL_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_GRILL_01_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.434; 1.868; -0.617)" />
+			<Flare _template="MarkerBeacon" Pos="(0.434; 1.868; 0.617)" />
+			<Flare _template="MarkerBeacon" Pos="(0.432; 1.902; -0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(0.432; 1.902; 0.116)" />
+			<Flare _template="MarkerBeacon" Pos="(0.432; 1.902; 0.000)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="chevrolet_ck1500Gabarite" />
+	</GameData>
+</TruckAddon>

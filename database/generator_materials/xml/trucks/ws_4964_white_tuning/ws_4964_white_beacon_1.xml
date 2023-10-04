@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator" RotationSpeed="4" />
+	<PhysicsModel Mesh="trucks/ws_4964_white_tuning/ws_4964_white_beacon_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.991; 2.801; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(1; 0; 0)" Pos="(1.991; 2.801; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.991; 2.801; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.991; 2.801; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.893; 2.801; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROUND_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROUND_BEACON_NAME"
+		/>
+		<InstallSocket Type="WS4964WhiteBeacon" />
+	</GameData>
+</TruckAddon>

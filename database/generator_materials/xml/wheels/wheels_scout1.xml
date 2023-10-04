@@ -1,0 +1,69 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutHighway _template="Light">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="ScoutHighway" />
+		</ScoutHighway>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.509">
+	<TruckTires>
+		<TruckTire _template="ScoutHighway" Mesh="wheels/tire_scout_default1_1" Name="highway_1">
+			<WheelFriction _template="ScoutHighway" SubstanceFriction="0.4"/>
+			<GameData
+				Price="1000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutHighway" Mesh="wheels/tire_scout_default1_2" Name="highway_2">
+			<WheelFriction _template="ScoutHighway" BodyFriction="1.0"/>
+			<GameData
+				Price="1200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutHighway" Mesh="wheels/tire_scout_default1_3" Name="highway_3">
+			<WheelFriction _template="ScoutHighway" BodyFrictionAsphalt="2.5"/>
+			<GameData
+				Price="1400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_3_NAME" />
+			</GameData>
+		</TruckTire>
+<!--		<TruckTire _template="ScoutHighway" Mesh="wheels/invisible_tire" Name="invisible">
+			<GameData
+				Price="1300"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_3_NAME" />
+			</GameData>
+		</TruckTire> -->       
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_default1_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_1_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_default1_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_2_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_2_NAME" />
+			</GameData>
+		</TruckRim>
+<!--		<TruckRim Mesh="wheels/invisible_rim" Name="invisible">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_2_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_2_NAME" />
+			</GameData>
+		</TruckRim>     -->   
+	</TruckRims>
+</TruckWheels>
