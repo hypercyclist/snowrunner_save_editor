@@ -230,6 +230,7 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
             for (auto upgradeIt = upgradesObject.MemberBegin(); upgradeIt != upgradesObject.MemberEnd(); upgradeIt++)
             {
                 Upgrade* upgrade = new Upgrade(upgradeIt->name.GetString());
+                upgrade->setMiddleCode(upgradeIt->value["middleCode"].GetString());
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
                     upgrade->setName(languagePair.first, m_localization->getLocalization(upgrade->code(), languagePair.first));
@@ -428,6 +429,69 @@ void GameAtlas::setTasksCompleteFromVectorCodes(std::vector<std::string> _codes)
                     != _codes.end() )
                 {
                     task->setComplete(true);
+                }
+                else
+                {
+                    task->setComplete(false);
+                }
+            }
+        }
+    }
+}
+
+std::vector<Upgrade*> GameAtlas::receivedUpgrades()
+{
+    std::vector<Upgrade*> result;
+    for (const auto& regionPair : m_regions)
+    {
+        Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
+
+        for (const auto& mapPair : region->maps())
+        {
+            Map* map = mapPair.second;
+
+            for (const auto& upgradePair : map->upgrades())
+            {
+                Upgrade* upgrade = upgradePair.second;
+                if (upgrade->received())
+                {
+                    result.push_back(upgrade);
+                }
+            }
+        }
+    }
+    return result;
+}
+
+void GameAtlas::setUpgradesReceivedFromVectorCodes(std::vector<std::string> _codes)
+{
+    for (const auto& regionPair : m_regions)
+    {
+        Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
+
+        for (const auto& mapPair : region->maps())
+        {
+            Map* map = mapPair.second;
+
+            for (const auto& upgradePair : map->upgrades())
+            {
+                Upgrade* upgrade = upgradePair.second;
+                if (std::find(_codes.begin(), _codes.end(), upgrade->code())
+                    != _codes.end() )
+                {
+                    upgrade->setReceived(true);
+                }
+                else
+                {
+                    upgrade->setReceived(false);
                 }
             }
         }

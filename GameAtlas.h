@@ -6,6 +6,7 @@
 
 class Region;
 class Task;
+class Upgrade;
 class Localization;
 
 class GameAtlas
@@ -27,6 +28,8 @@ public:
 
     std::vector<Task*> completedTasks();
     void setTasksCompleteFromVectorCodes(std::vector<std::string> _codes);
+    std::vector<Upgrade*> receivedUpgrades();
+    void setUpgradesReceivedFromVectorCodes(std::vector<std::string> _codes);
 
 private:
     std::map<std::string, Region*> m_regions;

@@ -18,9 +18,9 @@ public:
     void setGameAtlas(GameAtlas* _gameAtlas);
     void setFilterBarWidget(TableFilterByRegionMap* _widget);
 
-    void updateTasksTable();
-    QVector<QString> completedTasks();
-private:
+    virtual void updateTable();
+    QVector<QString> checkedElements();
+protected:
     Localization* m_localization;
     GameAtlas* m_gameAtlas;
 
@@ -29,8 +29,8 @@ private:
     QComboBox* m_mapFilterCombobox;
     QPushButton* m_filterApplyButton;
     QPushButton* m_checkAllFilteredButton;
+    QVector<QString> m_currentFiltredElements;
 
-    QVector<QString> m_currentFiltredTasks;
 private slots:
     void checkUncheckAllFiltered();
 };

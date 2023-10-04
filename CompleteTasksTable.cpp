@@ -19,7 +19,7 @@ CompleteTasksTable::CompleteTasksTable(QWidget* _parent) :
     m_mapFilterCombobox(nullptr),
     m_filterApplyButton(nullptr),
     m_checkAllFilteredButton(nullptr),
-    m_currentFiltredTasks()
+    m_currentFiltredElements()
 { }
 
 void CompleteTasksTable::setLocalization(Localization* _localization)
@@ -41,22 +41,22 @@ void CompleteTasksTable::setFilterBarWidget(TableFilterByRegionMap* _widget)
     m_checkAllFilteredButton = m_filterBar->gui()->checkAllFilteredButton;
 
     connect(m_filterApplyButton, &QPushButton::clicked, this,
-        &CompleteTasksTable::updateTasksTable);
+        &CompleteTasksTable::updateTable);
 
     connect(m_checkAllFilteredButton, &QPushButton::clicked, this,
         &CompleteTasksTable::checkUncheckAllFiltered);
 }
 
-void CompleteTasksTable::updateTasksTable()
+void CompleteTasksTable::updateTable()
 {
     setRowCount(0);
-    m_currentFiltredTasks.clear();
+    m_currentFiltredElements.clear();
 
     QAbstractItemModel* tasksTableModel = model();
 
     for (auto regionPair : m_gameAtlas->regions())
     {
-        std::string regionName = regionPair.second->name(Language::RUSSIAN);
+        std::string regionName = regionPair.second->name(m_localization->defaultLanguage());
         QString currentRegionFilter = m_regionFilterCombobox->currentText();
 
         if (currentRegionFilter == "Все" || regionName.c_str() == m_regionFilterCombobox->currentText())
@@ -64,7 +64,7 @@ void CompleteTasksTable::updateTasksTable()
             for (auto mapPair : regionPair.second->maps())
             {
                 QString  currentMapFilter = m_mapFilterCombobox->currentText();
-                if (currentMapFilter == "Все" || mapPair.second->name(Language::RUSSIAN).c_str() == currentMapFilter)
+                if (currentMapFilter == "Все" || mapPair.second->name(m_localization->defaultLanguage()).c_str() == currentMapFilter)
                 {
                     for (auto taskPair : mapPair.second->tasks())
                     {
@@ -73,11 +73,11 @@ void CompleteTasksTable::updateTasksTable()
 
                         std::string taskCode = taskPair.first;
 
-                        m_currentFiltredTasks.push_back(taskCode.c_str());
+                        m_currentFiltredElements.push_back(taskCode.c_str());
 
                         tasksTableModel->setData(tasksTableModel->index(rowIndex, 0), regionName.c_str());
-                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), mapPair.second->name(Language::RUSSIAN).c_str());
-                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), taskPair.second->name(Language::RUSSIAN).c_str());
+                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 1), mapPair.second->name(m_localization->defaultLanguage()).c_str());
+                        tasksTableModel->setData(tasksTableModel->index(rowIndex, 2), taskPair.second->name(m_localization->defaultLanguage()).c_str());
 
                         QCheckBox* statusCheckBox = new QCheckBox();
                         statusCheckBox->setChecked(taskPair.second->complete());

@@ -5,6 +5,7 @@
 #include <rapidjson/document.h>
 
 class Database;
+enum class Language;
 
 namespace Ui { class EditorWindow; }
 
@@ -19,6 +20,7 @@ public:
 private slots:
     void on_menuOpen_triggered();
     void on_menuSave_triggered();
+    void applyLanguage(Language _language);
 
 private:
     Ui::EditorWindow *ui;

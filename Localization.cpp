@@ -18,46 +18,79 @@ Localization::Localization() :
     m_defaultLanguage(Language::RUSSIAN),
     m_languageTextNames()
 {
+// Языки жестко запрограммированы.
     m_languageTextNames.insert({Language::RUSSIAN, "russian"});
-    m_languageTextNames.insert({Language::RUSSIAN, "english"});
+    m_languageTextNames.insert({Language::ENGLISH, "english"});
+    m_languageTextNames.insert({Language::CHINESE_TRADITIONAL, "chinese_traditional"});
+    m_languageTextNames.insert({Language::CHINESE_SIMPLE, "chinese_simple"});
 }
 
 // https://stackoverflow.com/questions/50696864/reading-utf-16-file-in-c
 void Localization::createLocalizations()
 {
-    std::string fileName = QDir::currentPath().toStdString()
-        + "/database/generator_materials/russian.str";
+    std::string error;
 
-    std::ifstream readStream(fileName, std::ios::binary);
-    readStream.seekg(0, std::ios::end);
-    size_t size = (size_t)readStream.tellg();
-
-    readStream.seekg(2, std::ios::beg);
-    size -= 2;
-
-    std::u16string u16((size / 2) + 1, '\0');
-    readStream.read((char*)&u16[0], size);
-
-    std::string localizationText = std::wstring_convert<
-        std::codecvt_utf8_utf16<char16_t>, char16_t>{}.to_bytes(u16);
-
-
-    std::map<std::string, std::string> russianLocalizationMap;
-
-    std::vector<std::string> lines = Utils::split(localizationText, '\n');
-    for (std::string line : lines)
+// Найдем и считаем все файлы локализации.
+    for (const auto& languagePair : m_languageTextNames)
     {
-        line = Utils::simplified(line);
-        std::string::size_type spaceIndex = line.find(' ');
-        std::string code = Utils::stolower(line.substr(0, spaceIndex));
-        std::string value = line.substr(spaceIndex + 1, line.length() - spaceIndex + 1);
-        value = Utils::replace(value, "\"", "");
-        russianLocalizationMap.insert({code, value});
+        std::string filePath = QDir::currentPath().toStdString()
+            + "/database/generator_materials/" + languagePair.second + ".str";
+
+        std::ifstream readStream(filePath, std::ios::binary);
+
+// Если файл открыть не удалось, то словарь будет сгенерирован неполным.
+// Желательно, если по итогу конкретный словарь имеет 0 загруженных слов
+// пресекать переключение программы на этот язык.
+        if (!readStream.is_open())
+        {
+            if (error.size() == 0)
+            {
+                error += "Warning:\n";
+            }
+            error += languagePair.second;
+            error += " localization will not be created because file:\n";
+            error += filePath + " not found.\n";
+            continue;
+        }
+
+// Я скопировал код чтения UTF16LE со stackoverflow.
+// Я понял, что пропускается пару байт BOM. Далее читается текст, где все
+// символы кодируются 2 байтами. Предстоит узнать как китайский символ
+// помещается в 2 байтах.
+        readStream.seekg(0, std::ios::end);
+        size_t size = (size_t)readStream.tellg();
+
+        readStream.seekg(2, std::ios::beg);
+        size -= 2;
+
+        std::u16string u16((size / 2) + 1, '\0');
+        readStream.read((char*)&u16[0], size);
+
+        std::string localizationText = std::wstring_convert<
+            std::codecvt_utf8_utf16<char16_t>, char16_t>{}.to_bytes(u16);
+
+        std::map<std::string, std::string> localizationMap;
+
+// Разбиваем файл на строки. Каждая строка это код + расшифровка.
+// Здесь он также фильтруется от лишних пробелов, табов, кавычек.
+// А также локализационные коды меняют регистр на нижний.
+        std::vector<std::string> lines = Utils::split(localizationText, '\n');
+        for (std::string line : lines)
+        {
+            line = Utils::simplified(line);
+            std::string::size_type spaceIndex = line.find(' ');
+            std::string code = Utils::stolower(line.substr(0, spaceIndex));
+            std::string value = line.substr(spaceIndex + 1, line.length()
+                - spaceIndex + 1);
+            value = Utils::replace(value, "\"", "");
+            localizationMap.insert({code, value});
+        }
+// Вставляем формализованную локализацию в общий map языков.
+        m_localizations.insert({languagePair.first, localizationMap});
     }
 
-    m_localizations.insert(std::pair<Language,
-        std::map<std::string, std::string>>(Language::RUSSIAN,
-            russianLocalizationMap));
+//
+    loadAppLocalization();
 }
 
 bool Localization::loadLocalizations(std::string _filename)
@@ -103,6 +136,45 @@ bool Localization::loadLocalizations(std::string _filename)
         }
     }
     return true;
+}
+
+void Localization::loadAppLocalization()
+{
+    std::vector<std::string> appLocalizationCodes = {
+//        "UI_SETTINGS_LANGUAGE", // "ЯЗЫК"
+//        "UI_OPTION_LANGUAGE_ENG", // "АНГЛИЙСКИЙ"
+//        "UI_OPTION_LANGUAGE_RUS", // "РУССКИЙ"
+//        "UI_OPTION_LANGUAGE_TRDN_CHN", // "КИТАЙСКИЙ (ТРАДИЦИОННЫЙ)"
+//        "UI_OPTION_LANGUAGE_SMPL_CHN", // "КИТАЙСКИЙ (УПРОЩЕННЫЙ)"
+        "UI_INGAME_MENU", // "Меню"
+        "UI_POLYGON_PACKER_DIALOG_OPEN", // "Открыть"
+        "UI_LOG_SAVE_IN_PROGRESS", // "СОХРАНЕНИЕ"
+        "UI_OPEN_PROFILE", // "Профиль игрока"
+        "UI_POPUP_DEPLOY_MONEY", // "Ваши деньги"
+        "UI_NGP_RANK_10", // "Ранг 10"
+        "CODEX_LEVEL_UP_HEADER", // "НАБОР ОПЫТА"
+        "UI_PLAYER_PROFILE_TAB_TASKS_NAME", // "ПОРУЧЕНИЯ"
+        "UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME", // "КОНТРАКТЫ"
+        "UI_MM_SETTINGS_REGION", // "Регион"
+        "UI_MINIMAP", // "КАРТА"
+        "UI_REFRESH", // "Обновить"
+        "UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL", // "Включить все"
+        "UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL", // "Отключить все"
+        "UI_SELECT", // "Выбрать"
+        "UI_GARAGE_MODIFICATIONS_UPGRADES", // "Улучшения"
+        "UI_PLAYER_PROFILE_STATISTICS_HEADER", // "Статистика"
+        "UI_DLC_STORE_ALL_DLCS", // "Все"
+        "UI_HUD_NAV_PANEL_GET_UPGRADE", // "Улучшение"
+        "UI_HUD_NAV_PANEL_SHOW_TASK", // "Поручение"
+        "UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT", // "Контракт"
+    };
+    for (std::string code : appLocalizationCodes)
+    {
+        for (const auto& languagePair : m_languageTextNames)
+        {
+            getLocalization(code, languagePair.first);
+        }
+    }
 }
 
 void Localization::saveLocalizationCache(std::string _filename)

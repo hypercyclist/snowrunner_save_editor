@@ -4,7 +4,7 @@
 #include <string>
 #include <map>
 
-enum class Language { RUSSIAN, ENGLISH };
+enum class Language { RUSSIAN, ENGLISH, CHINESE_TRADITIONAL, CHINESE_SIMPLE };
 
 class Localization
 {
@@ -12,6 +12,7 @@ public:
     Localization();
     void createLocalizations();
     bool loadLocalizations(std::string _filename);
+    void loadAppLocalization();
     void saveLocalizationCache(std::string _filename);
     void setDefaultLanguage(Language _language);
     std::string getLocalization(std::string _code);

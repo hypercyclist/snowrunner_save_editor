@@ -3,7 +3,8 @@
 Upgrade::Upgrade() :
     m_code(),
     m_middleCode(),
-    m_name()
+    m_name(),
+    m_received(false)
 { }
 
 Upgrade::Upgrade(std::string _code) :
@@ -40,4 +41,14 @@ void Upgrade::setName(Language _language, std::string _name)
 std::string Upgrade::name(Language _language)
 {
     return m_name[_language];
+}
+
+void Upgrade::setReceived(bool _state)
+{
+    m_received = _state;
+}
+
+bool Upgrade::received()
+{
+    return m_received;
 }

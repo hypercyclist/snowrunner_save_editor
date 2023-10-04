@@ -20,10 +20,14 @@ public:
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
+    void setReceived(bool _state);
+    bool received();
+
 private:
     std::string m_code;
     std::string m_middleCode;
     std::map<Language, std::string> m_name;
+    bool m_received;
 };
 
 #endif // UPGRADE_H

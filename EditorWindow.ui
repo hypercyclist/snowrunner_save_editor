@@ -251,7 +251,7 @@
            <number>8</number>
           </property>
           <item row="1" column="0">
-           <widget class="QTableWidget" name="upgradesTable">
+           <widget class="CompleteUpgradesTable" name="upgradesTable">
             <column>
              <property name="text">
               <string>Регион</string>
@@ -316,7 +316,30 @@
     <addaction name="menuOpen"/>
     <addaction name="menuSave"/>
    </widget>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resourses.qrc">
+      <normaloff>:/images/language_icon.png</normaloff>:/images/language_icon.png</iconset>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="menuRussian"/>
+    <addaction name="menuEnglish"/>
+    <addaction name="menuChineseTraditional"/>
+    <addaction name="menuChineseSimple"/>
+   </widget>
    <addaction name="menu"/>
+   <addaction name="menuLanguage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="styleSheet">
@@ -333,6 +356,26 @@
     <string>Сохранить</string>
    </property>
   </action>
+  <action name="menuRussian">
+   <property name="text">
+    <string>Русский</string>
+   </property>
+  </action>
+  <action name="menuEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="menuChineseTraditional">
+   <property name="text">
+    <string>中國人</string>
+   </property>
+  </action>
+  <action name="menuChineseSimple">
+   <property name="text">
+    <string>中国人</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -345,6 +388,11 @@
    <extends>QWidget</extends>
    <header location="global">TableFilterByRegionMap.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CompleteUpgradesTable</class>
+   <extends>QTableWidget</extends>
+   <header>CompleteUpgradesTable.h</header>
   </customwidget>
  </customwidgets>
  <resources>
