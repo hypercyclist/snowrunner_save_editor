@@ -11,6 +11,8 @@
 #include "Localization.h"
 #include <string>
 #include <algorithm>
+#include <QDir>
+#include "rapidxml/rapidxml.hpp"
 
 GameAtlas::GameAtlas() :
     m_regions(),
@@ -113,6 +115,67 @@ void GameAtlas::createGameAtlasData(std::string _filename)
 void GameAtlas::createUpgradesData(std::string _saveFileName,
     std::string _initialCacheBlockFileName)
 {
+    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
+    QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
+        QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+
+    for (QFileInfo fileInfo : xmlFolderContent)
+    {
+        if (fileInfo.isDir())
+        {
+            QDir nestedXmlFolder(fileInfo.absoluteFilePath());
+            QFileInfoList nestedXmlFolderContent = nestedXmlFolder.entryInfoList(
+                QStringList(), QDir::Files | QDir::NoDotAndDotDot);
+            for (QFileInfo nestedFileInfo : nestedXmlFolderContent)
+            {
+                std::ifstream readStream(nestedFileInfo.absoluteFilePath().toStdString(), std::ios::binary);
+                std::stringstream buffer;
+                buffer << readStream.rdbuf();
+                readStream.close();
+                std::string xmlFileText = buffer.str();
+
+                rapidxml::xml_document<> xmlDocument;
+                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                rapidxml::xml_node<> *unknownNode = nullptr;
+                rapidxml::xml_node<> *nestedNode = nullptr;
+
+                unknownNode = xmlDocument.first_node("EngineVariants");
+                if (unknownNode) nestedNode = unknownNode->first_node("Engine");
+
+                unknownNode = xmlDocument.first_node("GearboxVariants");
+                if (unknownNode) nestedNode = unknownNode->first_node("Gearbox");
+
+                unknownNode = xmlDocument.first_node("SuspensionSetVariants");
+                if (unknownNode) nestedNode = unknownNode->first_node("SuspensionSet");
+
+                if (nestedNode)
+                {
+                    for (rapidxml::xml_node<> *node = nestedNode; node; node = node->next_sibling())
+                    {
+                        rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                        if (!nameAttribute) {
+                            continue;
+                        }
+                        std::string middleCode = Utils::stolower(nameAttribute->value());
+                        rapidxml::xml_node<> *nodeGameData = node->first_node("GameData");
+                        rapidxml::xml_node<> *nodeUiDesc = nodeGameData->first_node("UiDesc");
+                        std::string translationCode = nodeUiDesc->first_attribute("UiName")->value();
+                        for (const auto& languagePair : m_localization->languageTextNames())
+                        {
+                            std::string translation = m_localization->getLocalization(translationCode, languagePair.first);
+                            m_localization->getLocalization()[languagePair.first][middleCode] = translation;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
     // Read initial.cache_block.
     std::ifstream readStream(_initialCacheBlockFileName, std::ios::binary);
     std::stringstream buffer;
@@ -165,7 +228,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                 mCode.erase(std::remove(mCode.begin(), mCode.end(), ']'), mCode.end());
                 mCode.erase(std::remove(mCode.begin(), mCode.end(), '\"'), mCode.end());
                 upgrade->setMiddleCode(mCode);
-                m_localization->addLocalizationsTemplate(mCode, "none");
+//                m_localization->addLocalizationsTemplate(mCode, "none");
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
                     std::string translation = m_localization->getLocalization(mCode, languagePair.first);
@@ -243,7 +306,9 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
                 upgrade->setMiddleCode(upgradeIt->value["middleCode"].GetString());
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
-                    upgrade->setName(languagePair.first, m_localization->getLocalization(upgrade->code(), languagePair.first));
+                    std::string translation = m_localization->getLocalization(upgrade->middleCode(), languagePair.first);
+                    translation = translation == "none" ? upgrade->middleCode() : translation;
+                    upgrade->setName(languagePair.first, translation);
                 }
                 map->addUpgrade(upgrade);
             }

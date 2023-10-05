@@ -199,8 +199,8 @@ void EditorWindow::applyLanguage(Language _language)
     ui->completeTasksTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
 
     std::string checkAllFilteredString =
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL", _language) + "/" +
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL", _language);
+        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL", _language) + "/" +
+        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL", _language);
     ui->completeTasksTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
 
     ui->completeTasksTable->horizontalHeaderItem(0)->setText(regionString.c_str());

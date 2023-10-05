@@ -45,7 +45,7 @@ void CompleteUpgradesTable::updateTable()
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 0), regionName.c_str());
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 1), mapPair.second->name(m_localization->defaultLanguage()).c_str());
 //                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(m_localization->defaultLanguage()).c_str());
-                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->middleCode().c_str());
+                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(m_localization->defaultLanguage()).c_str());
 
                         QCheckBox* statusCheckBox = new QCheckBox();
                         statusCheckBox->setChecked(upgradePair.second->received());
