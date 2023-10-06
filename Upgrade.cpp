@@ -2,8 +2,10 @@
 
 Upgrade::Upgrade() :
     m_code(),
+    m_type(UpgradeType::UNKNOWN),
     m_middleCode(),
     m_name(),
+    m_trucks(),
     m_received(false)
 { }
 
@@ -11,6 +13,16 @@ Upgrade::Upgrade(std::string _code) :
     Upgrade()
 {
     m_code = _code;
+}
+
+void Upgrade::setType(UpgradeType _type)
+{
+    m_type = _type;
+}
+
+UpgradeType Upgrade::type()
+{
+    return m_type;
 }
 
 void Upgrade::setCode(std::string _code)
@@ -51,4 +63,14 @@ void Upgrade::setReceived(bool _state)
 bool Upgrade::received()
 {
     return m_received;
+}
+
+void Upgrade::addTruck(std::string _truckCode)
+{
+    m_trucks.push_back(_truckCode);
+}
+
+std::vector<std::string> Upgrade::trucks()
+{
+    return m_trucks;
 }

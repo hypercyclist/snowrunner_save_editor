@@ -27,13 +27,12 @@ void Database::createDatabase(std::string _databasePath, std::string _tasksPath,
 
     // Перенести эту функцию в createGameAtlasData?
     m_gameAtlas->createUpgradesData(_savePath, _initialCacheBlockPath);
+    m_gameAtlas->createTrucksData();
+    m_gameAtlas->connectUpgradesWithTrucks();
+
 
     m_gameAtlas->saveGameAtlasData(_databasePath);
     m_localization->saveLocalizationCache(_databasePath);
-
-// Money, Expirience, Rank... POPUP_TRAILER_MONEY, CODEX_LEVEL_UP_HEADER, UI_NGP_RANK_10
-//    UI_MINIMAP_TAB_HEADER_CONTRACTS,
-//    UI_MINIMAP_TAB_HEADER_TASKS
 }
 
 bool Database::loadDatabase(std::string _filename)

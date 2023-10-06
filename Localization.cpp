@@ -176,6 +176,9 @@ void Localization::loadAppLocalization()
         "UI_HUD_NAV_PANEL_GET_UPGRADE", // "Улучшение"
         "UI_HUD_NAV_PANEL_SHOW_TASK", // "Поручение"
         "UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT", // "Контракт"
+        "UI_TRUCK_PART_ENGINE", // "ДВИГАТЕЛЬ"
+        "UI_TRUCK_PART_SUSPENSION",	// "ПОДВЕСКА"
+        "UI_TRUCK_PART_GEARBOX", // "КОРОБКА ПЕРЕДАЧ"
     };
     for (std::string code : appLocalizationCodes)
     {

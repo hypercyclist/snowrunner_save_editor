@@ -13,9 +13,12 @@
 #include <algorithm>
 #include <QDir>
 #include "rapidxml/rapidxml.hpp"
+#include <QDebug>
+#include "Truck.h"
 
 GameAtlas::GameAtlas() :
     m_regions(),
+    m_trucks(),
     m_localization(nullptr)
 { }
 
@@ -115,67 +118,6 @@ void GameAtlas::createGameAtlasData(std::string _filename)
 void GameAtlas::createUpgradesData(std::string _saveFileName,
     std::string _initialCacheBlockFileName)
 {
-    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
-    QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
-        QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
-
-    for (QFileInfo fileInfo : xmlFolderContent)
-    {
-        if (fileInfo.isDir())
-        {
-            QDir nestedXmlFolder(fileInfo.absoluteFilePath());
-            QFileInfoList nestedXmlFolderContent = nestedXmlFolder.entryInfoList(
-                QStringList(), QDir::Files | QDir::NoDotAndDotDot);
-            for (QFileInfo nestedFileInfo : nestedXmlFolderContent)
-            {
-                std::ifstream readStream(nestedFileInfo.absoluteFilePath().toStdString(), std::ios::binary);
-                std::stringstream buffer;
-                buffer << readStream.rdbuf();
-                readStream.close();
-                std::string xmlFileText = buffer.str();
-
-                rapidxml::xml_document<> xmlDocument;
-                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
-
-                rapidxml::xml_node<> *unknownNode = nullptr;
-                rapidxml::xml_node<> *nestedNode = nullptr;
-
-                unknownNode = xmlDocument.first_node("EngineVariants");
-                if (unknownNode) nestedNode = unknownNode->first_node("Engine");
-
-                unknownNode = xmlDocument.first_node("GearboxVariants");
-                if (unknownNode) nestedNode = unknownNode->first_node("Gearbox");
-
-                unknownNode = xmlDocument.first_node("SuspensionSetVariants");
-                if (unknownNode) nestedNode = unknownNode->first_node("SuspensionSet");
-
-                if (nestedNode)
-                {
-                    for (rapidxml::xml_node<> *node = nestedNode; node; node = node->next_sibling())
-                    {
-                        rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
-                        if (!nameAttribute) {
-                            continue;
-                        }
-                        std::string middleCode = Utils::stolower(nameAttribute->value());
-                        rapidxml::xml_node<> *nodeGameData = node->first_node("GameData");
-                        rapidxml::xml_node<> *nodeUiDesc = nodeGameData->first_node("UiDesc");
-                        std::string translationCode = nodeUiDesc->first_attribute("UiName")->value();
-                        for (const auto& languagePair : m_localization->languageTextNames())
-                        {
-                            std::string translation = m_localization->getLocalization(translationCode, languagePair.first);
-                            m_localization->getLocalization()[languagePair.first][middleCode] = translation;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
-
     // Read initial.cache_block.
     std::ifstream readStream(_initialCacheBlockFileName, std::ios::binary);
     std::stringstream buffer;
@@ -252,6 +194,315 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
             regionIt++;
         }
     }
+
+    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
+    QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
+        QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+
+    for (QFileInfo fileInfo : xmlFolderContent)
+    {
+        if (!fileInfo.isDir())
+        {
+            continue;
+        }
+
+        if (fileInfo.fileName() != "engines" && fileInfo.fileName() != "gearbox"
+            && fileInfo.fileName() != "suspensions")
+        {
+            qDebug() << fileInfo.fileName();
+            continue;
+        }
+
+        QDir nestedXmlFolder(fileInfo.absoluteFilePath());
+        QFileInfoList nestedXmlFolderContent = nestedXmlFolder.entryInfoList(
+            QStringList(), QDir::Files | QDir::NoDotAndDotDot);
+        for (QFileInfo nestedFileInfo : nestedXmlFolderContent)
+        {
+
+            std::ifstream readStream(nestedFileInfo.absoluteFilePath().toStdString(), std::ios::binary);
+            std::stringstream buffer;
+            buffer << readStream.rdbuf();
+            readStream.close();
+            std::string xmlFileText = buffer.str();
+
+            rapidxml::xml_document<> xmlDocument;
+            xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+            rapidxml::xml_node<> *unknownNode = nullptr;
+            rapidxml::xml_node<> *nestedNode = nullptr;
+            UpgradeType upgradeType = UpgradeType::UNKNOWN;
+
+            unknownNode = xmlDocument.first_node("EngineVariants");
+            if (unknownNode)
+            {
+                nestedNode = unknownNode->first_node("Engine");
+                upgradeType = UpgradeType::ENGINE;
+            }
+
+            unknownNode = xmlDocument.first_node("GearboxVariants");
+            if (unknownNode)
+            {
+                nestedNode = unknownNode->first_node("Gearbox");
+                upgradeType = UpgradeType::GEARBOX;
+            }
+
+            unknownNode = xmlDocument.first_node("SuspensionSetVariants");
+            if (unknownNode)
+            {
+                nestedNode = unknownNode->first_node("SuspensionSet");
+                upgradeType = UpgradeType::SUSPENSION;
+            }
+
+            if (nestedNode)
+            {
+                for (rapidxml::xml_node<> *node = nestedNode; node; node = node->next_sibling())
+                {
+                    rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                    if (!nameAttribute) {
+                        continue;
+                    }
+                    std::string middleCode = Utils::stolower(nameAttribute->value());
+                    rapidxml::xml_node<> *nodeGameData = node->first_node("GameData");
+                    rapidxml::xml_node<> *nodeUiDesc = nodeGameData->first_node("UiDesc");
+                    std::string translationCode = nodeUiDesc->first_attribute("UiName")->value();
+
+                    Upgrade* upgrade = nullptr;
+                    bool found = false;
+                    for (const auto& regionPair : m_regions)
+                    {
+                        for (const auto& mapPair : regionPair.second->maps())
+                        {
+                            for (const auto& upgradePair : mapPair.second->upgrades())
+                            {
+                                if (upgradePair.second->middleCode() == middleCode)
+                                {
+                                    upgrade = upgradePair.second;
+                                    found = true;
+                                }
+                                if (found) break;
+                            }
+                            if (found) break;
+                        }
+                        if (found) break;
+                    }
+
+                    if (!upgrade) {
+                        continue;
+                    }
+
+                    upgrade->setType(upgradeType);
+
+                    for (const auto& languagePair : m_localization->languageTextNames())
+                    {
+                        std::string translation = m_localization->getLocalization(translationCode, languagePair.first);
+                        upgrade->setName(languagePair.first, translation);
+
+                        m_localization->getLocalization()[languagePair.first][middleCode] = translation;
+                    }
+                }
+            }
+        }
+    }
+}
+
+void GameAtlas::createTrucksData()
+{
+    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
+    QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
+        QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+
+    for (QFileInfo fileInfo : xmlFolderContent)
+    {
+        if (!fileInfo.isDir())
+        {
+            continue;
+        }
+
+        if (fileInfo.fileName() != "trucks")
+        {
+            continue;
+        }
+
+        QDir nestedXmlFolder(fileInfo.absoluteFilePath());
+        QFileInfoList nestedXmlFolderContent = nestedXmlFolder.entryInfoList(
+            QStringList(), QDir::Files | QDir::NoDotAndDotDot);
+        for (QFileInfo nestedFileInfo : nestedXmlFolderContent)
+        {
+            qDebug() << nestedFileInfo.absoluteFilePath();
+
+            std::ifstream readStream(nestedFileInfo.absoluteFilePath().toStdString(), std::ios::binary);
+            std::stringstream buffer;
+            buffer << readStream.rdbuf();
+            readStream.close();
+            std::string xmlFileText = buffer.str();
+
+            rapidxml::xml_document<> xmlDocument;
+            xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+            rapidxml::xml_node<> *node = xmlDocument.first_node("Truck");
+
+            if (!node) {
+                continue;
+            }
+
+            std::string truckCode = "";
+            rapidxml::xml_node<> *gameDataNode = node->first_node("GameData");
+            if (gameDataNode)
+            {
+                truckCode = gameDataNode->first_node("UiDesc")->first_attribute("UiName")->value();
+            }
+
+            Truck* truck = new Truck(truckCode);
+
+            for (const auto& languagePair : m_localization->languageTextNames())
+            {
+                truck->setName(languagePair.first, m_localization->getLocalization(truck->code(), languagePair.first));
+            }
+
+            std::vector<std::string> engineFiles;
+            std::vector<std::string> gearboxFiles;
+            std::vector<std::string> suspensionFiles;
+
+            rapidxml::xml_node<> *truckDataNode = node->first_node("TruckData");
+            if (truckDataNode)
+            {
+                rapidxml::xml_node<> *engineSocketNode = truckDataNode->first_node("EngineSocket");
+                if (engineSocketNode) {
+                    std::string typeText = engineSocketNode->first_attribute("Type")->value();
+                    typeText = Utils::replace(typeText, " ", "");
+                    engineFiles = Utils::split(typeText, ',');
+                }
+
+                rapidxml::xml_node<> *gearboxSocketNode = truckDataNode->first_node("GearboxSocket");
+                if (gearboxSocketNode) {
+                    std::string typeText = gearboxSocketNode->first_attribute("Type")->value();
+                    typeText = Utils::replace(typeText, " ", "");
+                    gearboxFiles = Utils::split(typeText, ',');
+                }
+
+                rapidxml::xml_node<> *suspensionSocketNode = truckDataNode->first_node("SuspensionSocket");
+                if (suspensionSocketNode) {
+                    std::string typeText = suspensionSocketNode->first_attribute("Type")->value();
+                    typeText = Utils::replace(typeText, " ", "");
+                    suspensionFiles = Utils::split(typeText, ',');
+                }
+            }
+
+            for(std::string engineFile : engineFiles)
+            {
+                std::ifstream readStream(QDir::currentPath().toStdString()
+                    + "/database/generator_materials/xml/engines/" + engineFile + ".xml", std::ios::binary);
+                std::stringstream buffer;
+                buffer << readStream.rdbuf();
+                readStream.close();
+                std::string xmlFileText = buffer.str();
+
+                rapidxml::xml_document<> xmlDocument;
+                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                rapidxml::xml_node<> *engineVariantsNode = xmlDocument.first_node("EngineVariants");
+                if (engineVariantsNode)
+                {
+                    rapidxml::xml_node<> *engineNode = engineVariantsNode->first_node("Engine");
+                    for (rapidxml::xml_node<> *node = engineNode; node; node = node->next_sibling())
+                    {
+                        rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                        if (!nameAttribute) {
+                            continue;
+                        }
+                        truck->addUpgrade(nameAttribute->value());
+                    }
+                }
+            }
+
+            for(std::string gearboxFile : gearboxFiles)
+            {
+                std::ifstream readStream(QDir::currentPath().toStdString()
+                    + "/database/generator_materials/xml/gearboxes/" + gearboxFile + ".xml", std::ios::binary);
+                std::stringstream buffer;
+                buffer << readStream.rdbuf();
+                readStream.close();
+                std::string xmlFileText = buffer.str();
+
+                rapidxml::xml_document<> xmlDocument;
+                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                rapidxml::xml_node<> *gearboxVariantsNode = xmlDocument.first_node("GearboxVariants");
+                if (gearboxVariantsNode)
+                {
+                    rapidxml::xml_node<> *gearboxNode = gearboxVariantsNode->first_node("Gearbox");
+                    for (rapidxml::xml_node<> *node = gearboxNode; node; node = node->next_sibling())
+                    {
+                        rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                        if (!nameAttribute) {
+                            continue;
+                        }
+                        truck->addUpgrade(nameAttribute->value());
+                    }
+                }
+            }
+
+            for(std::string suspensionFile : suspensionFiles)
+            {
+                std::ifstream readStream(QDir::currentPath().toStdString()
+                    + "/database/generator_materials/xml/suspensions/" + suspensionFile + ".xml", std::ios::binary);
+                std::stringstream buffer;
+                buffer << readStream.rdbuf();
+                readStream.close();
+                std::string xmlFileText = buffer.str();
+
+                rapidxml::xml_document<> xmlDocument;
+                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                rapidxml::xml_node<> *suspensionVariantsNode = xmlDocument.first_node("SuspensionSetVariants");
+                if (suspensionVariantsNode)
+                {
+                    rapidxml::xml_node<> *suspensionNode = suspensionVariantsNode->first_node("SuspensionSet");
+                    for (rapidxml::xml_node<> *node = suspensionNode; node; node = node->next_sibling())
+                    {
+                        rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                        if (!nameAttribute) {
+                            continue;
+                        }
+                        truck->addUpgrade(nameAttribute->value());
+                    }
+                }
+            }
+
+            m_trucks[truckCode] = truck;
+        }
+    }
+}
+
+void GameAtlas::connectUpgradesWithTrucks()
+{
+    for (const auto& regionPair : m_regions)
+    {
+        Region* region = regionPair.second;
+
+        if (!region) {
+            continue;
+        }
+
+        for (const auto& mapPair : region->maps())
+        {
+            Map* map = mapPair.second;
+
+            for (const auto& upgradePair : map->upgrades())
+            {
+                Upgrade* upgrade = upgradePair.second;
+
+                for (const auto& truckPair : m_trucks)
+                {
+                    std::vector<std::string> truckUpgrades = truckPair.second->upgrades();
+                    if (std::find(truckUpgrades.begin(), truckUpgrades.end(), upgrade->middleCode()) != truckUpgrades.end() )
+                    {
+                        upgrade->addTruck(truckPair.second->code());
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Считаем, что если файл открылся и там JSON, то все хорошо.
@@ -303,7 +554,10 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
             for (auto upgradeIt = upgradesObject.MemberBegin(); upgradeIt != upgradesObject.MemberEnd(); upgradeIt++)
             {
                 Upgrade* upgrade = new Upgrade(upgradeIt->name.GetString());
+
+                upgrade->setType(static_cast<UpgradeType>(upgradeIt->value["type"].GetInt()));
                 upgrade->setMiddleCode(upgradeIt->value["middleCode"].GetString());
+
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
                     std::string translation = m_localization->getLocalization(upgrade->middleCode(), languagePair.first);
@@ -423,6 +677,10 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
 
                 rapidjson::Value upgradeName;
                 upgradeName.SetString(upgrade->code().c_str(), upgrade->code().length(), allocator);
+
+                rapidjson::Value upgradeType;
+                upgradeType.SetInt(static_cast<int>(upgrade->type()));
+                upgradeObject.AddMember("type", upgradeType, allocator);
 
                 rapidjson::Value upgradeMiddleCode;
                 upgradeMiddleCode.SetString(upgrade->middleCode().c_str(), upgrade->middleCode().length(), allocator);

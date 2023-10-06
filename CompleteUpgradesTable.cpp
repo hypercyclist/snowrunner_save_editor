@@ -44,8 +44,18 @@ void CompleteUpgradesTable::updateTable()
 
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 0), regionName.c_str());
                         upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 1), mapPair.second->name(m_localization->defaultLanguage()).c_str());
-//                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(m_localization->defaultLanguage()).c_str());
-                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradePair.second->name(m_localization->defaultLanguage()).c_str());
+
+                        std::string trucksList;
+                        for (std::string truckCode : upgradePair.second->trucks())
+                        {
+                            if (trucksList.size() > 0) trucksList += ", ";
+                            trucksList += m_localization->getLocalization(truckCode, m_localization->defaultLanguage());
+                        }
+
+                        std::string upgradeName = upgradeTypeToText(upgradePair.second, m_localization->defaultLanguage())
+                            + ": " + upgradePair.second->name(m_localization->defaultLanguage()).c_str() + " (" + trucksList + ")";
+
+                        upgradesTableModel->setData(upgradesTableModel->index(rowIndex, 2), upgradeName.c_str());
 
                         QCheckBox* statusCheckBox = new QCheckBox();
                         statusCheckBox->setChecked(upgradePair.second->received());
@@ -73,4 +83,17 @@ void CompleteUpgradesTable::updateTable()
     horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeMode::Stretch);
     horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeMode::Fixed);
     horizontalHeader()->resizeSection(3, 100);
+}
+
+std::string CompleteUpgradesTable::upgradeTypeToText(Upgrade* upgrade,
+    Language _language)
+{
+    UpgradeType upgradeType = upgrade->type();
+    switch (upgradeType)
+    {
+    case UpgradeType::ENGINE: return m_localization->getLocalization("UI_TRUCK_PART_ENGINE", _language); break;
+    case UpgradeType::GEARBOX: return m_localization->getLocalization("UI_TRUCK_PART_GEARBOX", _language); break;
+    case UpgradeType::SUSPENSION: return m_localization->getLocalization("UI_TRUCK_PART_SUSPENSION", _language); break;
+    default: return "Unknown"; break;
+    }
 }

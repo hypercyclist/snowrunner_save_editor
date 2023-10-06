@@ -18,6 +18,7 @@ SOURCES += \
     Region.cpp \
     TableFilterByRegionMap.cpp \
     Task.cpp \
+    Truck.cpp \
     Upgrade.cpp \
     Utils.cpp \
     main.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     Region.h \
     TableFilterByRegionMap.h \
     Task.h \
+    Truck.h \
     Upgrade.h \
     Utils.h \
     rapidjson/allocators.h \
