@@ -170,7 +170,6 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                 mCode.erase(std::remove(mCode.begin(), mCode.end(), ']'), mCode.end());
                 mCode.erase(std::remove(mCode.begin(), mCode.end(), '\"'), mCode.end());
                 upgrade->setMiddleCode(mCode);
-//                m_localization->addLocalizationsTemplate(mCode, "none");
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
                     std::string translation = m_localization->getLocalization(mCode, languagePair.first);
@@ -298,6 +297,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                         upgrade->setName(languagePair.first, translation);
 
                         m_localization->getLocalization()[languagePair.first][middleCode] = translation;
+                        m_localization->getLocalizationCache()[languagePair.first][middleCode] = translation;
                     }
                 }
             }
@@ -558,6 +558,11 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
                 upgrade->setType(static_cast<UpgradeType>(upgradeIt->value["type"].GetInt()));
                 upgrade->setMiddleCode(upgradeIt->value["middleCode"].GetString());
 
+                for (const auto& truck : upgradeIt->value["upgradableTrucks"].GetArray())
+                {
+                    upgrade->addTruck(truck.GetString());
+                }
+
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
                     std::string translation = m_localization->getLocalization(upgrade->middleCode(), languagePair.first);
@@ -590,6 +595,23 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
         }
 
         addRegion(region);
+    }
+    rapidjson::Value& trucksObject = tasksJsonDocument["Trucks"];
+    for (auto trucksIt = trucksObject.MemberBegin(); trucksIt != trucksObject.MemberEnd(); trucksIt++)
+    {
+        Truck* truck = new Truck(trucksIt->name.GetString());
+
+        for (const auto& languagePair : m_localization->languageTextNames())
+        {
+            std::string translation = m_localization->getLocalization(truck->code(), languagePair.first);
+            truck->setName(languagePair.first, translation);
+        }
+
+        for (auto& upgradeCodeObject : trucksIt->value["truckUpgrades"].GetArray())
+        {
+            truck->addUpgrade(upgradeCodeObject.GetString());
+        }
+        m_trucks[truck->code()] = truck;
     }
 
     return true;
@@ -686,6 +708,17 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
                 upgradeMiddleCode.SetString(upgrade->middleCode().c_str(), upgrade->middleCode().length(), allocator);
                 upgradeObject.AddMember("middleCode", upgradeMiddleCode, allocator);
 
+                rapidjson::Value upgradableTrucks;
+                upgradableTrucks.SetArray();
+                for (std::string truckCode : upgrade->trucks())
+                {
+                    rapidjson::Value truckCodeStringObject;
+                    truckCodeStringObject.SetString(truckCode.c_str(), truckCode.length(), allocator);
+
+                    upgradableTrucks.PushBack(truckCodeStringObject, allocator);
+                }
+                upgradeObject.AddMember("upgradableTrucks", upgradableTrucks, allocator);
+
                 upgradesBlockObject.AddMember(upgradeName, upgradeObject, allocator);
             }
             mapObject.AddMember(upgradesBlockName, upgradesBlockObject, allocator);
@@ -702,6 +735,41 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
     else
     {
         databaseJsonDocument.AddMember("GameAtlas", gameAtlas, allocator);
+    }
+
+    rapidjson::Value trucksObject;
+    trucksObject.SetObject();
+    for (const auto& truckPair : m_trucks)
+    {
+        Truck* truck = truckPair.second;
+
+        rapidjson::Value truckObject;
+        truckObject.SetObject();
+
+        rapidjson::Value truckName;
+        truckName.SetString(truck->code().c_str(), truck->code().length(), allocator);
+
+        rapidjson::Value truckUpgrades;
+        truckUpgrades.SetArray();
+        for (std::string upgradeCode : truck->upgrades())
+        {
+            rapidjson::Value upgradeCodeStringObject;
+            upgradeCodeStringObject.SetString(upgradeCode.c_str(), upgradeCode.length(), allocator);
+
+            truckUpgrades.PushBack(upgradeCodeStringObject, allocator);
+        }
+        truckObject.AddMember("truckUpgrades", truckUpgrades, allocator);
+
+        trucksObject.AddMember(truckName, truckObject, allocator);
+    }
+
+    if (databaseJsonDocument.HasMember("Trucks"))
+    {
+        databaseJsonDocument["Trucks"] = trucksObject;
+    }
+    else
+    {
+        databaseJsonDocument.AddMember("Trucks", trucksObject, allocator);
     }
 
     rapidjson::StringBuffer writeBuffer;
