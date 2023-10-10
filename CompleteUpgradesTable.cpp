@@ -94,6 +94,8 @@ std::string CompleteUpgradesTable::upgradeTypeToText(Upgrade* upgrade,
     case UpgradeType::ENGINE: return m_localization->getLocalization("UI_TRUCK_PART_ENGINE", _language); break;
     case UpgradeType::GEARBOX: return m_localization->getLocalization("UI_TRUCK_PART_GEARBOX", _language); break;
     case UpgradeType::SUSPENSION: return m_localization->getLocalization("UI_TRUCK_PART_SUSPENSION", _language); break;
+    case UpgradeType::DIFFLOCK: return m_localization->getLocalization("UI_TRUCK_INFO_DIFF_LOCK", _language); break;
+    case UpgradeType::TRANSFERBOX: return m_localization->getLocalization("UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME", _language); break;
     default: return "Unknown"; break;
     }
 }

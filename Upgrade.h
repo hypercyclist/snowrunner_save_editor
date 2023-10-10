@@ -6,7 +6,7 @@
 
 enum class Language;
 
-enum class UpgradeType { UNKNOWN, ENGINE, SUSPENSION, GEARBOX };
+enum class UpgradeType { UNKNOWN, ENGINE, SUSPENSION, GEARBOX, DIFFLOCK, TRANSFERBOX };
 
 class Upgrade
 {
