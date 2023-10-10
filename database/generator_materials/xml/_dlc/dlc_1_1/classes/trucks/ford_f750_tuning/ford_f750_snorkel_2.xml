@@ -1,0 +1,17 @@
+<_parent File="ford_f750_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.546; 1.773; -0.894)" />
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_snorkel_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

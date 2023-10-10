@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Flare>
+		<LED01
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.5"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.04"
+		/>
+	</Flare>
+</_templates>
+<_parent File="cat_ct681_spot_light_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_spot_light_2" />
+	<ModelAttachments _noinherit="True">
+		<MainHeadLight>
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.573)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.523)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.474)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.424)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.375)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; -0.325)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.325)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.375)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.424)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.474)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.523)" />
+			<Flare _template="LED01" Pos="(0.169; 3.018; 0.573)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HEADLIGHTS_LED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HEADLIGHTS_LED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,59 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_bumper_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabinRagdoll_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.721; 1.339; -0.874)" />
+			<Model _template="HeadLightRay" Org="(4.721; 1.339; 0.874)" />
+			<Model _template="HeadLightRay" Org="(4.831; 2.387; -0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Model _template="HeadLightRay" Org="(4.831; 2.387; 0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.721; 1.339; -0.874)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.721; 1.339; 0.874)" />
+			<Flare _template="BlueStreak" Pos="(4.782; 1.339; -0.874)" />
+			<Flare _template="BlueStreak" Pos="(4.782; 1.339; 0.874)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.831; 2.387; -0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.831; 2.387; 0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+		</MainHeadLight>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(4.985; 0.946; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Pos="(4.721; 1.339; -0.874)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Pos="(4.740; 1.339; -0.756)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Pos="(4.721; 1.339; 0.874)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Pos="(4.740; 1.339; 0.756)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; -0.723)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; -0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; -0.426)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; 0.723)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; 0.575)" ParentFrame="BoneCabinRagdoll_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.5" Pos="(4.831; 2.387; 0.426)" ParentFrame="BoneCabinRagdoll_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LIGHTCAGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LIGHTCAGE_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixBumper2" />
+	</GameData>
+</TruckAddon>

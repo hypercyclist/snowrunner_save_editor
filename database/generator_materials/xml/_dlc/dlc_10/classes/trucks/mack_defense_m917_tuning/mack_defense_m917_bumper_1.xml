@@ -1,0 +1,95 @@
+<_templates Include="trucks" >
+	<Flare>
+		<LED
+			AspectRatio="1.4"
+			Color="g(240; 240; 240) x 1.1"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.02"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.7" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_bumper_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="4"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneCollar_R_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="20"
+				/>
+				 <Motor Damping="0.1" Spring="0.1" Type="Spring" />
+				 
+				 <Body
+					AngularDamping="4"
+					Collisions="None"
+					Mass="5"
+					ModelFrame="BoneRope_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="22"
+					/>
+					 <Motor Damping="0.4" Spring="1" Type="Spring" />
+				</Body>
+			</Body>
+			<Body
+				AngularDamping="4"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneCollar_L_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="2"
+				/>
+				 <Motor Damping="0.1" Spring="0.1" Type="Spring" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(5.46; 1.545; 0.306)" />
+			<Model _template="HeadLightRay" Org="((5.46; 1.545; -0.306)" />
+			<Flare _template="BlueStreak" Pos="(5.46; 1.545; 0.306)" />
+			<Flare _template="BlueStreak" Pos="((5.46; 1.545; -0.306)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(5.46; 1.545; 0.306)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(5.46; 1.545; 0.410)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(5.46; 1.545; -0.306)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(5.46; 1.545; -0.410)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_ba20_add">
+		<NetSync Legacy="false" />
+		<Body Mass="2000" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="1000" ModelFrame="BoneCargo_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_concrete_slab"
+			TransportedSound="load/concrete_blocks/concrete_blocks_rnd"
+			ManualSound="cargo_manual/cargo_manual_concrete_slab"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoBA20Add"
+			CargoValue="1"
+			Offset="(1.279; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

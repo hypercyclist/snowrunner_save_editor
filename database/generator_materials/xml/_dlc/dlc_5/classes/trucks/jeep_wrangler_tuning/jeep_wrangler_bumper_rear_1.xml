@@ -1,0 +1,40 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; -1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="90"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="jeep_wrangler_bumper_rear_default" />
+<TruckAddon>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_bumper_rear_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRearLeft_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-195" MaxLimit="1" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitchRearRight_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-195" MaxLimit="15" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>		
+		<InstallSocket Type="JeepWranglerRearBumper1" />
+	</GameData>
+</TruckAddon>

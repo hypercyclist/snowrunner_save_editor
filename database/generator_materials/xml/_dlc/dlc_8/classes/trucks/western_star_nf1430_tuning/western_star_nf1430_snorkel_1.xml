@@ -1,0 +1,29 @@
+<TruckAddon>
+	<Snorkel Origin="(5.922; 2.698; -1.327)" />
+	<PhysicsModel Mesh="trucks/western_star_nf1430_tuning/western_star_nf1430_snorkel_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.3" Pos="(6.037; 1.839; -1.329)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.3" Pos="(6.037; 1.689; -1.329)" ParentFrame="BoneCabinDamper_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_MUSHROOM_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_MUSHROOM_TALL_NAME"
+		/>
+		<InstallSocket Type="nf1430Snorkel" />
+	</GameData>
+</TruckAddon>

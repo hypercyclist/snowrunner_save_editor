@@ -1,0 +1,66 @@
+<_templates Include="trucks" />
+<_parent File="tuz_16_actaeon_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_bumper_3">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="10"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="12"
+				>
+					<Motor Damping="4" Spring="40" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="10"
+				ModelFrame="BoneRope_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.02"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="100" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.629; 1.551; -0.345)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(2.629; 1.551; 0.342)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.629; 1.551; -0.345)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(2.629; 1.551; 0.342)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_CROSSFOG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CROSSFOG_NAME"
+		/>
+	</GameData>
+</TruckAddon>

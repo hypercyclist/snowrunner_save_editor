@@ -1,0 +1,70 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="zikz_repair_kit_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_repair_kit_addon">
+		<Body Mass="1" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="15" ModelFrame="BoneWheelFrame_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.3"
+					MaxLimit="0.3"
+				>
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Constraint>
+				
+				<Body Collisions="None" Mass="40" ModelFrame="BoneWheel_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-0.5"
+						MaxLimit="0.5"
+					>
+						<Motor Damping="0" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneBox_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.5"
+					MaxLimit="0.5"
+				>
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="spare_wheel_camera"
+		Category="wheel_addon"
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ZIKZ_566A_REPAIR_KIT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ZIKZ_566A_REPAIR_KIT_NAME"
+		/>
+		<InstallSocket Type="ZiKZ566aRepairKit" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneIK_2" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWheelFrame_cdt"
+				ModelFrame="BoneIK_1"
+			>
+				<IKJoint AxisLocal="(0; 1; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

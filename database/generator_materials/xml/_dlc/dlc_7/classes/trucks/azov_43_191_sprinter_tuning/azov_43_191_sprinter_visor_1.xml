@@ -1,0 +1,17 @@
+<_parent File="azov_43_191_sprinter_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_visor_1" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="azovSprinterVisor" />
+	</GameData>
+</TruckAddon>

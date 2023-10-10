@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="crane_cat_th357" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/crane_cat_th357_bigfork"/>
+	<GameData
+		Price="11300"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CRANE_CAT_TH357_BIGFORK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CRANE_CAT_TH357_BIGFORK_NAME"
+		/>
+	</GameData>
+</TruckAddon>

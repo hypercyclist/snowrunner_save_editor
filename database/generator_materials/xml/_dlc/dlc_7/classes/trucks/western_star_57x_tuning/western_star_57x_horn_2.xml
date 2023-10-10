@@ -1,0 +1,17 @@
+<_templates Include="trucks" />
+<_parent File="western_star_57x_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_57x_tuning/western_star_57x_horn_2" />
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_QUAD_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_QUAD_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="western_star_57x_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabin_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_57x_tuning/western_star_57x_exhaust_3">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FUNNEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FUNNEL_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.263; 0.000; 0.965)" IsLight="true" Origin="(-0.997; 0.760; 1.333)" Speed="3.82" />
+	<Exhaust Dir="(-0.263; 0.000; 0.965)" IsLight="true" Origin="(-0.997; 0.548; 1.333)" Speed="3.82" />
+	<Exhaust Dir="(-0.263; 0.000; -0.965)" IsLight="true" Origin="(-0.997; 0.760; -1.333)" Speed="3.82" />
+	<Exhaust Dir="(-0.263; 0.000; -0.965)" IsLight="true" Origin="(-0.997; 0.548; -1.333)" Speed="3.82" />
+</TruckAddon>

@@ -1,0 +1,58 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-45"
+				MaxLimit="10"
+			/>
+		</Mudguard>
+	</Body>
+</_templates>
+<_parent File="chevy_apache_bumper_rear_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_bumper_rear_1">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Pos="(-2.624; 0.994; -0.634)" />
+			<Flare _template="StopSignal" Pos="(-2.624; 0.994; 0.634)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.648; 0.95; 0)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-2.62; 0.988; 0.754)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-2.62; 0.988; -0.754)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.62; 0.988; 0.635)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.62; 0.988; -0.635)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.12" Pos="(-2.624; 0.994; -0.634)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.12" Pos="(-2.624; 0.994; 0.634)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Dir="(0; 0; 1)" Size="0.12" Pos="(-2.539; 1.009; 1.129)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Dir="(0; 0; -1)" Size="0.12" Pos="(-2.539; 1.009; -1.129)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_MUDFLAPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_MUDFLAPS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

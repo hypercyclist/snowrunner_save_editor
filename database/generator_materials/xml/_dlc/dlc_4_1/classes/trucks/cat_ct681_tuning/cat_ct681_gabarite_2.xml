@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct681_horns_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_gabarite_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(-0.188; 2.925; -0.808)" />
+			<Flare _template="MarkerBeacon" Pos="(-0.188; 2.925; 0.808)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_SIDE_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_SIDE_TWO_NAME"
+		/>
+		<InstallSocket Type="CatCT681Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,76 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_spare_wheel_02">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="200" ModelFrame="BoneWheel_cdt">
+				<Constraint LinearLimitsZ="(-0.065; 0.065)" Type="Fixed">
+					<Motor Damping="4500" Spring="0.0" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="10" ModelFrame="BoneWheelRamp_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-0.3"
+						MaxLimit="0.3"
+					>
+						<Motor Damping="0.1" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="3" ModelFrame="BoneWheelRampValve_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="8"
+					>
+						<Motor Damping="0" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="sparewheel2"
+		Category="top"
+		IsCustomizable="true"
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<RequiredAddon Types="zikz_612h_mastodont_outerframe" />
+		<InstallSocket Type="MastodonSpareWheel2" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="IK_BoneHingesR_B" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWheel_cdt"
+				ModelFrame="IK_BoneHingesR_A"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="IK_BoneHingesL_B" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWheel_cdt"
+				ModelFrame="IK_BoneHingesL_A"
+			>
+				<IKJoint AxisLocal="(0; -1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

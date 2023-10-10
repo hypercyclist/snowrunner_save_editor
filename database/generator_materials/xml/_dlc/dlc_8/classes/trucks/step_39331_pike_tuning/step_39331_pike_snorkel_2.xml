@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.474; 2.535; -0.607)" />
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_snorkel_2" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="2600"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_TALL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_TALL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="Step39331PikeSnorkel2" />
+	</GameData>
+</TruckAddon>

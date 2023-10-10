@@ -1,0 +1,29 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Soft" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="1.118">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_mudtires_single_tayga_1" Name="mudtires">
+			<WheelFriction _template="Mudtires" SubstanceFriction="2.4"/>
+			<GameData
+				Price="7000"
+				UnlockByExploration="false"
+				UnlockByRank="12"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MEDIUM_MUDTIRES_SINGLE_ACTAEON_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_single_tayga_1" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_MUDTIRES_SINGLE_ACTAEON_1_DESC" UiName="UI_RIM_MEDIUM_MUDTIRES_SINGLE_ACTAEON_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

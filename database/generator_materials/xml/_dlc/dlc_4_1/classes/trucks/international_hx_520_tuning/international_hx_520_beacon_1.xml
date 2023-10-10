@@ -1,0 +1,36 @@
+<_parent File="international_hx_520_horn_2" />
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_beacon_1"/>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.923; 0.082; -0.375)" Org="(-0.774; 3.101; 0.870)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0.923; 0.082; -0.375)" Pos="(-0.774; 3.101; 0.870)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(-0.774; 3.101; 0.870)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.923; 0.082; -0.375)" Pos="(-0.774; 3.101; 0.870)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(-0.854; 3.101; 0.870)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(-0.854; 3.101; -0.790)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0.1; 1)" Pos="(-0.854; 3.101; -0.790)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-0.854; 3.101; -0.790)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-0.854; 3.101; -0.790)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(-0.854; 3.101; -0.870)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="intHX520Beacon" />
+	</GameData>
+</TruckAddon>

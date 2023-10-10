@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="tuz_108_warthog_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.276; 2.362; -0.910)" />
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_tuning/tuz_108_warthog_snorkel_3"/>
+	<GameData
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

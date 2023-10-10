@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Size="0.5" Pos="(0.805; 2.461; -0.655)" />
+			<Flare _template="MarkerBeacon" Size="0.5" Pos="(0.803; 2.489; -0.15)" />
+			<Flare _template="MarkerBeacon" Size="0.5" Pos="(0.803; 2.491; 0)" />
+			<Flare _template="MarkerBeacon" Size="0.5" Pos="(0.803; 2.489; 0.15)" />
+			<Flare _template="MarkerBeacon" Size="0.5" Pos="(0.805; 2.461; 0.655)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="Gmc8000Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="gmc_8000_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts _template="AllWheelsTransferbox" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_transferbox_allwheels" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

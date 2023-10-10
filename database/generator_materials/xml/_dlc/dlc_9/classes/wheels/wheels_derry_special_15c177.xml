@@ -1,0 +1,33 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.65">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_derry_special_15c177" Name="tire">
+			<WheelFriction
+				_template="Offroad"
+				BodyFrictionAsphalt="1.0"
+				SubstanceFriction="1.7"
+			/>
+			<GameData
+				Price="5500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_DERRY_SPECIAL_15C177_DESC" UiName="UI_TIRE_DERRY_SPECIAL_15C177_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_derry_special_15c177" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_DERRY_SPECIAL_15C177_DESC" UiName="UI_RIM_DERRY_SPECIAL_15C177_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

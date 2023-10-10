@@ -1,0 +1,48 @@
+<_templates Include="trucks" />
+<_parent File="krs_58_bandit_bumper_2" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/krs_58_bandit_tuning/krs_58_bandit_bumper_default">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="30.0"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="1"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="0.3" Pos="(4.558; 1.123; -1.038)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="0.3" Pos="(4.558; 1.123; 1.038)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="0.3" Pos="(4.558; 1.123; -0.925)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1" DirAngle="135" Size="0.3" Pos="(4.558; 1.123; 0.925)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+	</GameData>
+</TruckAddon>

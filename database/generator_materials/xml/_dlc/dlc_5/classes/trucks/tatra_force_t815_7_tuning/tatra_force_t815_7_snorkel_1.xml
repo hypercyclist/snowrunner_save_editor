@@ -1,0 +1,18 @@
+<_parent File="tatra_force_t815_7_snorkel_default" />
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.575; 2.776; 0.711)" />
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_snorkel_1"/>
+	<GameData
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

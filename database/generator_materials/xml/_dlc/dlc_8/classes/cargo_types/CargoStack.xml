@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_STACK_NAME"
+		UiDesc="UI_CARGO_STACK_DESC"
+		UiIcon20x20="cargoTypeHaystack20"
+		UiIcon40x40="cargoTypeHaystack40"
+		UiIcon100x100="cargoTypeHaystack"
+	/>
+</CargoType>

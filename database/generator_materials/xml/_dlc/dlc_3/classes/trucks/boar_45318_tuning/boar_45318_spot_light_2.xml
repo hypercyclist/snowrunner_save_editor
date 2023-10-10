@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_spot_light_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_spot_light_2" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.617; 4.109; -0.811)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(1.617; 4.109; 0.795)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".3" Pos="(1.617; 4.109; -0.811)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".3" Pos="(1.617; 4.109; -0.671)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".3" Pos="(1.617; 4.109; -0.523)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="100" Size=".3" Pos="(1.617; 4.109; 0.508)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".3" Pos="(1.617; 4.109; 0.65)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="100" Size=".3" Pos="(1.617; 4.109; 0.795)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KOLOB_74760_HEADLAMP_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KOLOB_74760_HEADLAMP_1_NAME"
+		/>
+	</GameData>
+</TruckAddon>

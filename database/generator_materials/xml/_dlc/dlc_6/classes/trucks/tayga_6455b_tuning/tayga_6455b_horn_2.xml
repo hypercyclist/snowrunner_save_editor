@@ -1,0 +1,23 @@
+<_parent File="tayga_6455b_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6455b_tuning/tayga_6455b_horn_2">
+		<Body Collisions="None" Mass="5" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="western_star_49x_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_visor_2" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.157; 2.839; -0.559)" />
+			<Flare _template="MarkerBeacon" Pos="(2.194; 2.839; -0.192)" />
+			<Flare _template="MarkerBeacon" Pos="(2.194; 2.839; 0.192)" />
+			<Flare _template="MarkerBeacon" Pos="(2.157; 2.839; 0.559)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

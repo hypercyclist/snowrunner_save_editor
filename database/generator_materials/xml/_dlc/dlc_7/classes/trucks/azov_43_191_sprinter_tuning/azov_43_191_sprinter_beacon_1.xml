@@ -1,0 +1,40 @@
+<_templates Include="trucks" />
+<_parent File="azov_43_191_sprinter_horn_1" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_beacon_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.967; 0.254; 0)" Org="(2.422; 3.043; 0.805)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.967; 0.254; 0)" Pos="(2.422; 3.043; 0.805)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(2.422; 3.043; 0.805)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(2.422; 3.043; 0.805)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(2.480; 3.043; 0.805)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.967; 0.254; 0)" Org="(2.540; 3.043; -0.805)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.967; 0.254; 0)" Pos="(2.540; 3.043; -0.805)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(2.540; 3.043; -0.805)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(2.540; 3.043; -0.805)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(2.480; 3.043; -0.805)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="azovSprinterBeacon" />
+	</GameData>
+</TruckAddon>

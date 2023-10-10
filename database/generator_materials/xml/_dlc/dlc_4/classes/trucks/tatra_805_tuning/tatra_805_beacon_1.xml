@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/tatra_805_tuning/tatra_805_beacon_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.974; -0.219; 0.056)" Org="(1.689; 2.335; -0.736)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.974; -0.219; 0.056)" Pos="(1.689; 2.335; -0.736)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.974; -0.219; 0.056)" Pos="(1.689; 2.335; -0.736)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.974; -0.219; 0.056)" Pos="(1.689; 2.335; -0.736)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(1.666; 2.340; -0.737)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.974; 0.219; 0.056)" Org="(1.644; 2.345; 0.738)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.974; 0.219; 0.056)" Pos="(1.644; 2.345; 0.738)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.974; 0.219; 0.056)" Pos="(1.644; 2.345; 0.738)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.974; 0.219; 0.056)" Pos="(1.644; 2.345; 0.738)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(1.666; 2.340; 0.737)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+		<InstallSocket Type="Tatra805Beacon" />
+	</GameData>
+</TruckAddon>

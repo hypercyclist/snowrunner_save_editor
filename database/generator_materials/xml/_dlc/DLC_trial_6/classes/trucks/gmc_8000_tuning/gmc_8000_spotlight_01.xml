@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_spotlight_01" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.442; 2.794; -0.391)" />
+			<Model _template="HeadLightRay" Org="(0.442; 2.794; 0.391)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.53; 2.794; 0.391)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.53; 2.794; 0.130)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.53; 2.794; -0.130)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.53; 2.794; -0.391)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Gmc8000Spotlight" />
+	</GameData>
+</TruckAddon>

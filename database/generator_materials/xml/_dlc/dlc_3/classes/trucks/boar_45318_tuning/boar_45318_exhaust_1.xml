@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate
+			CenterOfMassOffset="(0; 0; 0)"
+			Friction="0.001"
+			ImpactType="Truck"
+			Mass="20"
+		>
+			<Constraint
+				LinearLimitsX="(-0.1;0)"
+				LinearLimitsY="(-0.1;0)"
+				LinearLimitsZ="(-0.1;0.1)"
+				Type="Fixed"
+			>
+				<Motor Damping="1000" Spring="15000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<_parent File="boar_45318_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers >
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="1.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneRightExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 30)" MaxAngle="(0; 0; 90)" MaxFrequency="0.1" ParentFrame="BoneRightExhaust" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="2.1" ParentFrame="BoneLeftExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 30)" MaxAngle="(0; 0; 90)" MaxFrequency="0.1" ParentFrame="BoneLeftExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_exhaust_1">
+		<Body Collisions="None" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneRightExhaust_cdt" />
+			<Body _template="ExhaustTemplate" ModelFrame="BoneLeftExhaust_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(0.197; 4.380; -1.036)" Speed="3.82" />
+	<Exhaust Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(0.197; 4.380; 1.036)" Speed="3.82" />
+</TruckAddon>

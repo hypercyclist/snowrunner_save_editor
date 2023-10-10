@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_SEQUOIA_NAME"
+		UiDesc="UI_CARGO_SEQUOIA_DESC"
+		UiIcon20x20="cargoTypeLog20"
+		UiIcon40x40="cargoTypeLog40"
+		UiIcon100x100="cargoTypeBigLog"
+	/>
+</CargoType>

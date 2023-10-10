@@ -1,0 +1,26 @@
+<TruckAddon>
+	<Snorkel Origin="(2.348; 2.023; -1.162)" />
+	<PhysicsModel Mesh="trucks/tayga_6455b_tuning/tayga_6455b_snorkel_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+		<InstallSocket Type="Tayga6455bSnorkel" />
+	</GameData>
+</TruckAddon>

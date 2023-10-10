@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1">
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/gor_by4_tuning/gor_by4_defence_frame">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.512; 1.575; -0.293)" />
+			<Model _template="HeadLightRay" Org="(0.512; 1.575; 0.293)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.3" Pos="(0.512; 1.575; -0.293)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.3" Pos="(0.522; 1.591; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.3" Pos="(0.512; 1.575; 0.293)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GOR_BY4_SAFETY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GOR_BY4_SAFETY_NAME"
+		/>
+		<InstallSocket Type="GorBy4DefenceFrame" />
+	</GameData>
+</TruckAddon>

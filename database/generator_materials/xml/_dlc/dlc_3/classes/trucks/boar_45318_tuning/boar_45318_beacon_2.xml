@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_horn_1" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_beacon_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(0.972; 4.109; 0.112)" ParentFrame="BoneRotator" />
+			<Light Dir="(0; 0; 1)" Pos="(0.972; 4.109; 0.112)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.972; 4.109; 0.112)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.972; 4.109; 0.112)" ParentFrame="BoneRotator" />
+			<Flare Pos="(0.972; 4.109; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_RAISED_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_RAISED_BEACON_NAME"
+		/>
+		<InstallSocket Type="boar45318Beacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData AllWheelDriveInstalled="false">
+		<Shafts _template="DefaultTransferbox" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_transferbox_default">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_TRANSFERBOX_NOAWD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_NOAWD_NAME"
+		/>
+		<InstallSocket Type="FordF750TransferBox" />
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="1" Frame="BoneAxle1" />
+		<ExplicitParent ExplicitParentFrame="2" Frame="BoneRack" />
+		<ExplicitParent ExplicitParentFrame="3" Frame="BoneRackL" />
+		<ExplicitParent ExplicitParentFrame="4" Frame="BoneRackR" />
+	</ExplicitParents>
+</TruckAddon>

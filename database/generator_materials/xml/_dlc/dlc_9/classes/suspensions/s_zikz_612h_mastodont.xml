@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.4"
+		DamageCapacity="160"
+		Name="zikz_612h_mastodont_suspension_default"
+	>
+		<Suspension Damping="0.5" Height="0.065" Strength="0.065" WheelType="front" BrokenSuspensionMin="-0.2" BrokenSuspensionMax="0.2" SuspensionMin="-0.25" SuspensionMax="0.1" />
+		<Suspension Damping="0.55" Height="0.07" Strength="0.07" WheelType="front2" BrokenSuspensionMin="-0.25" BrokenSuspensionMax="0.1" SuspensionMin="-0.25" SuspensionMax="0.1" />
+		<Suspension Damping="0.75" Height="0.03" Strength="0.1" WheelType="rear" BrokenSuspensionMin="-0.2" BrokenSuspensionMax="0.1" SuspensionMin="-0.2" SuspensionMax="0.1" />
+		<Suspension Damping="0.85" Height="0.03" Strength="0.12" WheelType="rear2" BrokenSuspensionMin="-0.2" BrokenSuspensionMax="0.1" SuspensionMin="-0.2" SuspensionMax="0.1" />
+		<GameData
+			Price="4000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

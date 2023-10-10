@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_spot_light_default">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" Color="g(255; 190; 100) x 0.8" Size="0.3" Pos="(8.858; 2.947; 0.909)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(9; 2.947; 0.925)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size="0.5" Pos="(8.89; 2.947; 0.925)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(8.858; 2.947; 0.909)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="spotlight2"
+		Category="top"
+		IsCustomizable="true"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KOLOB_74760_HEADLAMP_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KOLOB_74760_HEADLAMP_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="MastodonSpotlight" />
+	</GameData>
+</TruckAddon>

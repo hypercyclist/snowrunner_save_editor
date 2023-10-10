@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="ford_f750_gabarite_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Pos="(2.06; 2.269; -0.692)" />
+			<Flare _template="Beacon" Pos="(2.121; 2.286; -0.188)" />
+			<Flare _template="Beacon" Pos="(2.121; 2.286; 0)" />
+			<Flare _template="Beacon" Pos="(2.121; 2.286; 0.188)" />
+			<Flare _template="Beacon" Pos="(2.06; 2.269; 0.692)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_SIDE_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_SIDE_CHROME_NAME"
+		/>
+	</GameData>
+</TruckAddon>

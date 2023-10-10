@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_fender_01">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(-5.141; 0.631; -1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-4.545; 1.131; -1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.811; 0.852; -1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.109; 1.131; -1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.482; 0.631; -1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-5.141; 0.631; 1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-4.545; 1.131; 1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.811; 0.852; 1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-3.109; 1.131; 1.269)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(-2.482; 0.631; 1.269)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GMC_8000_FENDER_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GMC_8000_FENDER_01_NAME"
+		/>
+		<InstallSocket Type="Gmc8000FenderLarge" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_FORKLIFT_CARAVAN_CONTAINER_2_NAME"
+		UiDesc="UI_CARGO_FORKLIFT_CARAVAN_CONTAINER_2_DESC"
+		UiIcon20x20="cargoTypeChangeHouse20"
+		UiIcon40x40="cargoTypeChangeHouse40"
+		UiIcon100x100="cargoTypeChangeHouse"
+	/>
+</CargoType>

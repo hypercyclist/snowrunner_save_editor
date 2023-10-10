@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_spotlight_03a">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.608; 1.743; 0.747)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(1.608; 1.743; 0.747)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(1.608; 1.743; 0.747)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" OuterCone="70"/>
+	<GameData
+		CameraPreset="spotlight3"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="zikz566Spotlight1" />
+	</GameData>
+</TruckAddon>

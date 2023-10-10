@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="40"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-0.846; 2.035; -1.072)" SizeX="0.333" SizeY="0.425" SizeZ="0.182" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<LimitedFluid Center="(-0.449; 2.035; -1.072)" SizeX="0.333" SizeY="0.425" SizeZ="0.182" Type="Box" ParentFrame="BoneChassis_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_trunk_1">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="100"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="50" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="zikz605rTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckWheels DamageCapacity="50" Radius="1" Width="1">
+	<TruckTires>
+		<TruckTire _template="Medium" Mesh="wheels/invisible_tire" Name="invisible">
+			<!--<WheelTracks _template="Default" />-->
+			<WheelSoftness RadiusOffset="0.001" SoftForceScale="0.32" />
+			<WheelFriction 	
+				BodyFriction=".1"
+				BodyFrictionAsphalt=".1"
+				SubstanceFriction="1"
+				UiName="" 
+			/>
+			<GameData
+				Price="0"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="" UiName="" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/invisible_rim" Name="invisible">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_2_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_spot_light_1" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.695; 2.004; 0.43)" />
+			<Model _template="HeadLightRay" Org="(0.695; 2.004; -0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; 0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; -0.43)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; 0.43)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; -0.43)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.695; 2.004; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerSpotlight" />
+	</GameData>
+</TruckAddon>

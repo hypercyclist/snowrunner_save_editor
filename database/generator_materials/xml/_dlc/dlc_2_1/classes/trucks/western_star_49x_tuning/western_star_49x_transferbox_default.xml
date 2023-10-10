@@ -1,0 +1,65 @@
+<_templates Include="trucks" />
+<TruckAddon>
+  <TruckData AllWheelDriveInstalled="false">
+  <Shafts>
+    <Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftEngine2FrontGimbal" />
+	<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftFrontGimbal2RearGimbal" SocketPointB="ShaftRearGimbal" />
+  </Shafts>
+  </TruckData>
+  <PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_transferbox_default">
+    <Body ImpactType="Truck" Mass="40" ModelFrame="BoneChassis_cdt">
+      <Constraint Type="Rigid" />
+      <Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+        <Constraint ExplicitParentFrame="0" Type="Fixed" />
+        <Body Collisions="None" Mass="1" ModelFrame="BoneTieRodL_cdt">
+          <Constraint ExplicitParentFrame="1" Type="Fixed" />
+        </Body>
+        <Body Collisions="None" Mass="1" ModelFrame="BoneTieRodR_cdt">
+          <Constraint ExplicitParentFrame="2" Type="Fixed" />
+        </Body>
+      </Body>
+    </Body>
+  </PhysicsModel>
+  <GameData
+    CameraPreset="hoods"
+    Category="awd"
+    Price="1200"
+    UnlockByExploration="false"
+    UnlockByRank="1"
+  >
+    <UiDesc
+      UiDesc="UI_UPGRADE_TRANSFERBOX_NOAWD_DESC"
+      UiIcon30x30=""
+      UiIcon40x40=""
+      UiName="UI_UPGRADE_TRANSFERBOX_NOAWD_NAME"
+    />
+    <InstallSocket Type="WesternStar49XTransferBox" />
+  </GameData>
+  <ExplicitParents>
+    <ExplicitParent ExplicitParentFrame="3" Frame="BoneAxleFront" />
+    <ExplicitParent ExplicitParentFrame="4" Frame="BoneRackLeft" />
+    <ExplicitParent ExplicitParentFrame="5" Frame="BoneRackRight" />
+  </ExplicitParents>
+  <AutomaticIK>
+    <IKBone ModelFrame="BonePiston1L" ParentFrame="BoneCabin_cdt">
+      <IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+      <IKBone
+        AttachOffset="(0; 0; 0)"
+        AttachToFrame="BoneAxleFront"
+        ModelFrame="BonePiston1L_2"
+      >
+        <IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+      </IKBone>
+    </IKBone>
+    <IKBone ModelFrame="BonePiston1R" ParentFrame="BoneCabin_cdt">
+      <IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+      <IKBone
+        AttachOffset="(0; 0; 0)"
+        AttachToFrame="BoneAxleFront"
+        ModelFrame="BonePiston1R_2"
+      >
+        <IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+      </IKBone>
+    </IKBone>
+  </AutomaticIK>
+</TruckAddon>

@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="tuz_16_actaeon_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.761; 2.620; -0.983)" />
+			<Flare _template="MarkerBeacon" Pos="(1.761; 2.620; 0.983)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="tuz_16_actaeonGabarite" />
+	</GameData>
+</TruckAddon>

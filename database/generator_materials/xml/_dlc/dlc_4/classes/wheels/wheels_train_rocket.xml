@@ -1,0 +1,32 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Iron Mass="500">
+			<WheelSoftness  RadiusOffset="0" SoftForceScale="1" />
+		</Iron>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="1000" Radius="1" Width="1.17">
+	<TruckTires>
+		<TruckTire _template="Iron" Mesh="wheels/trie_train_rocket" Name="tire">
+            <WheelFriction
+                BodyFriction="0.1"
+                BodyFrictionAsphalt=".1"
+                SubstanceFriction="0.6"
+            />
+			<GameData
+				Price="9400"
+				UnlockByExploration="false"
+				UnlockByRank="12"
+			>
+				<UiDesc UiDesc="UI_TIRE_TRAIN_ROCKET_DESC" UiName="UI_TIRE_TRAIN_ROCKET_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_train_rocket" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_TRAIN_ROCKET_DESC" UiName="UI_RIM_TRAIN_ROCKET_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

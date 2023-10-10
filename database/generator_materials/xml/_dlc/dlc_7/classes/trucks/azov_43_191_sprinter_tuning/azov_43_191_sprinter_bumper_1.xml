@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="azov_43_191_sprinter_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_bumper_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.455; 1.143; -0.866)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.455; 1.143; 0.866)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.513; 1.143; -0.761)" />
+			<Flare _template="HeadLight" Size="0.25" Pos="(3.513; 1.143; 0.761)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REINFORCED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REINFORCED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

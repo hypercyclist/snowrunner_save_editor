@@ -1,0 +1,14 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false" 
+	DynamicModel="true"
+>
+	<PhysicsModel>
+		<Body _template="MediumWeight" ModelFrame="BoneRoot"/>
+	</PhysicsModel>
+	<GameData PackSlotsNumber="1" LoadType="CargoLogsShort" ManualLoadSpawnOffsetY="2">
+		<LoadPoint Pos="(1.365; 0; 0.000)" />
+		<LoadPoint Pos="(-1.365; 0; 0.000)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_log_short_lmk" MinScale="1.8" MaxScale="3.8" />
+</ModelBrand>

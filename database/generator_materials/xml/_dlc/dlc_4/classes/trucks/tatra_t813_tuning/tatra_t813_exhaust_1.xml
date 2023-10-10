@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust1" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="4" />
+			<Shaker Frame="BoneExhaust2" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.3; 0.3; 0.3)" MaxFrequency="3" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_exhaust_1">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+		<InstallSocket Type="TatraT813Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-0; 1; 0)" IsLight="true" Origin="(0.94; 2.934; 0.590)" Speed="3.00" />
+	<Exhaust Dir="(-0; 1; 0)" IsLight="true" Origin="(0.94; 2.934; -0.590)" Speed="3.00" />
+</TruckAddon>

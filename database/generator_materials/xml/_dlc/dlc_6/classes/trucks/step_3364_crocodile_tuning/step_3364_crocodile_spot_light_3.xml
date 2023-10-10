@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_spot_light_3">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.31; 1.748; 0.705)" />
+			<Flare _template="HeadLight" Pos="(1.31; 1.748; 0.705)" />
+			<Flare _template="BlueStreak" Pos="(1.324; 1.748; 0.705)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare
+				_template="IgnitionSignalWhite"
+				AspectRatio="1.75"
+				Color="g(165; 149; 130) x 1.2"
+				Pos="(1.324; 1.748; 0.705)"
+			/>
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight ExtraColor="g(255; 212; 154) x 12" Pos="(1.324; 1.748; 0.705)" />
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiName="UI_TUNING_SIDE_CABIN_FOGLIGHTS_NAME"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiDesc="UI_TUNING_SIDE_CABIN_FOGLIGHTS_DESC"
+		/>
+		<InstallSocket Type="Step3364CrocodileSpotLight2" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.898; 2.691; -0.507)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(0.898; 2.691; 0.506)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.898; 2.691; -0.507)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.898; 2.691; 0.506)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.875; 2.668; -0.244)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.875; 2.668; 0.005)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(0.875; 2.668; 0.256)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="ChevyApacheSpotLight" />
+	</GameData>
+</TruckAddon>

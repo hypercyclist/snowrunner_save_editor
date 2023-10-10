@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData DiffLockInstalled="false" />
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="hoods"
+		Category="diff_lock"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_DIFF_LOCK_NONE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_DIFF_LOCK_NONE_NAME"
+		/>
+		<InstallSocket Type="PacificP512DiffLock" />
+	</GameData>
+</TruckAddon>

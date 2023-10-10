@@ -1,0 +1,87 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks\cargo\cargo_logs_long_trailer_log_pole">
+		<Body
+			CenterOfMassOffset="(1; 0; 0)"
+			Collisions="All"
+			Friction="0.1"
+			ImpactType="Foliage"
+			Mass="3000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Constraint
+				PivotOffset="(0; 0; 0)"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(1; 0; 0)"
+				Type="Ragdoll"
+			/>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="All"
+				Friction="0.1"
+				ImpactType="Foliage"
+				Mass="3000"
+				ModelFrame="BoneTop_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.4; 0.4)"
+					LinearLimitsY="(0; 0.5)"
+					LinearLimitsZ="(-0.5; 0.5)"
+					Type="Fixed"
+				>
+					<Motor Damping="40000" Spring="8000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="All"
+				Friction="0.1"
+				ImpactType="Foliage"
+				Mass="6000"
+				ModelFrame="BoneBottom_cdt"
+				NetSyncUseGravity="True"
+			>
+				<Constraint
+					Cone="10"
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					PlaneMin="-2"
+					TwistMin="-10"
+					TwistMax="10"
+				>
+					<TwistMotor Damping="60000" Spring="200000" Type="Spring" />
+					<PlaneConeMotor Damping="80000" Spring="4000000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<LoadCheckPoint Pos="(-6.7; 1.251; 0)" ParentFrame="BoneBottom_cdt" />
+	<GameData
+		LoadPoints="6"
+		ManualLoads="2"
+		UnpackOnTrailerDetach="True"
+		RecreateOnZoneChange="True"
+	>
+		<SpawnLoadOrigin Position="(-4.502; 1.548; 0)" />
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_logs_long"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_manual_logs_long"
+		/>
+		<RequiredAddon Types="trailer_log_pole" />
+		<RequiredAddon Types="bunk_log_addon" />
+		<InstallSlot
+			CargoAddonSubtype="TrailerPoleLogLong"
+			CargoLength="1"
+			CargoType="CargoLogsLong"
+			ManualLoads="3"
+		/>
+		<LongLogsAlignData
+			TargetOffset="(0.0, 0.0, 0.0)"
+			CargoPivotBody="BoneRoot_cdt"
+			CargoBodiesToAlign="BoneBottom_cdt,BoneTop_cdt,BoneRoot_cdt"
+			TruckAddonBodiesToAlign="BoneFork_cdt"
+			TrailerBodiesToAlign="BoneFork_cdt"
+		/>
+	</GameData>
+</TruckAddon>

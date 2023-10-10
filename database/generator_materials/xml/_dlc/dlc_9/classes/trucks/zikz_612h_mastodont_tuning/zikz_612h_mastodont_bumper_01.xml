@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="400" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_bumper_01">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; -0.1; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneRope_cdt"
+				Collisions="None"
+			>
+				<Constraint _template="TrunkFixed">
+					<TrunkFixed/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BARRIER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BARRIER_NAME"
+		/>
+		<InstallSocket Type="MastodonBumper" />
+	</GameData>
+</TruckAddon>

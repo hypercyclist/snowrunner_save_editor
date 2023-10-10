@@ -1,0 +1,16 @@
+<_parent File="paystar_5600ts_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_horn_3" />
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,59 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+	<Body>
+		<Mudguard AngularDamping="2.0" Collisions="None" Mass="10">
+			<Constraint Type="Hinge" />
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="2000" />
+	<PhysicsModel Mesh="trucks/addons/cat_770g_tank">
+		<Body Mass="1000">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardL_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-2" MaxLimit="10" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardR_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-2" MaxLimit="15" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardL2_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-18" MaxLimit="15" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardR2_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="15" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRedSmall" Size="0.2" Pos="(-3.734; 3.54; -1.543)" />
+			<Flare _template="IgnitionSignalRedSmall" Size="0.2" Pos="(-3.734; 3.54; 1.543)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="8500"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CAT_770G_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CAT_770G_TANK_NAME"
+		/>
+		<InstallSocket Type="Cat770gTank" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,79 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="60"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(1.739; 2.253; -0.426)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(1.736; 2.253; -0.069)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(1.737; 2.253; 0.284)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_roofrack">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="60"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.02"
+					MaxLimit="0.0"
+				>
+					<Motor Damping="800" Spring="1500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="35"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="2"
+				>
+					<Motor Damping="300" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.048; 2.257; -0.473)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Org="(2.048; 2.257; 0.477)" Scale="(0.7; 0.7; 0.4)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size="0.45" Pos="(2.048; 2.257; -0.473)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size="0.45" Pos="(2.048; 2.257; 0.477)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size="0.45" Pos="(2.048; 2.257; -0.148)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size="0.45" Pos="(2.048; 2.257; 0.151)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="khan317sentinelRoofRack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

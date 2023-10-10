@@ -1,0 +1,27 @@
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="500"
+		WheelRepairsCapacity="2"
+	/>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_maintainer_small">
+		<Body CenterOfMassOffset="(0; -0.5; 0)" Mass="1000">		
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_MAINTAINER_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_MAINTAINER_SMALL_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameAddonMaintainerSmall" />
+	</GameData>
+</TruckAddon>

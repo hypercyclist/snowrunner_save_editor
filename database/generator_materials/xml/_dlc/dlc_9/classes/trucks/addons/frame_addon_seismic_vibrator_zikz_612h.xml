@@ -1,0 +1,292 @@
+<_templates Include="trucks">
+	<Lightbar>
+		<Flasher>
+			<Model Dir="(1; 0.1; 0)" Mesh="env/light_ray_cone" Scale="(0.15; 0.15; 0.15)" />
+			<Light
+				AttenEnd="18.0"
+				Color="g(44; 14; 12)"
+				Dir="(1; 0.2; 0)"
+				InnerCone="90"
+				OuterCone="120"
+			/>
+			<Flare Color="g(255; 50; 2) x 0.15" Dir="(1; 0.2; 0)" DirAngle="110" Size="0.6" />
+			<Flare Color="g(255; 255; 5) x 0.6" Dir="(1; 0.2; 0)" DirAngle="70" Size="0.4" />
+			<Flare Color="g(255; 50; 2) x 0.55" ColorMultAtDay="0.5" Dir="(0; -1; 0)" DirAngle="300" Size="1" />
+		</Flasher>
+	</Lightbar>
+	<Body>
+		<Leg AngularDamping="10000.0" Collisions="None" Mass="300">
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Name="Joint1"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="95"
+			>
+				<Motor Force="6000" Tau="0.05" Type="Position" />
+			</Constraint>
+			<Body AngularDamping="10000.0" Collisions="None" Mass="200">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="Joint2"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="20"
+				>
+					<Motor Force="6000" Tau="0.05" Type="Position" />
+				</Constraint>
+				<Body AngularDamping="10000.0" Mass="150">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="Joint1"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="95"
+					>
+						<Motor Force="1000" Tau="0.02" Type="Position" />
+					</Constraint>
+					<Body AngularDamping="10000.0" Mass="30">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Name="Joint2"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="20"
+						>
+							<Motor Force="1000" Tau="0.02" Type="Position" />
+						</Constraint>
+						<Body
+							AngularDamping="10000.0"
+							Collisions="All"
+							Mass="10"
+							NoFoliageCollisions="true"
+						>
+							<Constraint
+								AxisLocal="(0; 1; 0)"
+								Name="Joint4"
+								Type="Prismatic"
+								MinLimit="0"
+								MaxLimit="0.8"
+							>
+								<Motor Force="500" Tau="0.2" Type="Position" />
+							</Constraint>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+			<Body Mass="1">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="Rotator"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="180"
+				>
+					<Motor Force="20" Tau="0.02" Type="Position" />
+				</Constraint>
+			</Body>
+		</Leg>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<Vibrator
+		Amplitude="0.035"
+		Axis="(0; 1; 0)"
+		Duration="2."
+		Frequency="20.0"
+		ModelFrames="BoneVibrator_FR,BoneVibrator_FL,BoneVibrator_RR,BoneVibrator_RL"
+		Name="SeismicVibrator"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		Name="Lightbar"
+		RotationSpeed="8"
+	/>
+	<PoweredConstraints>
+		<Chain Name="Vibrator" ParentBodies="BoneArmHinge1_FR_cdt,BoneArmHinge1_FL_cdt,BoneArmHinge1_RR_cdt,BoneArmHinge1_RL_cdt" ResetOnLoad="true">
+			<Group FoldingDelay="0.5" Id="anchors_extend">
+				<Constraint InitialFix="true" Name="Joint1" TerminalFix="true" Position="95" />
+				<Constraint InitialFix="true" Name="Rotator" TerminalFix="true" Position="90" />
+			</Group>
+			<Group FoldingDelay="1" Id="anchors_position" UnfoldingDelay=".5">
+				<Constraint
+					InitialFix="true"
+					Name="Joint2"
+					TerminalFix="true"
+					Position="20"
+				/>
+			</Group>
+			<Group FoldingDelay="1" Id="anchors_push" UnfoldingDelay="1">
+				<Constraint
+					InitialFix="true"
+					Name="Joint4"
+					TerminalFix="true"
+					Position="0.8"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_seismic_vibrator_zikz_612h">
+		<Body Mass="2000">
+			<Constraint Type="Rigid" />
+			<Body _template="Leg" ModelFrame="BoneArmHinge1_FR_cdt">
+				<Body ModelFrame="BoneArmHinge2_FR_cdt">
+					<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge3_FR_cdt">
+						<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge4_FR_cdt">
+							<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmPrismatic_FR_cdt">
+								<Constraint AxisLocal="(0; -1; 0)" />
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+				<Body ModelFrame="BonePistonRotator_FR_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneArmHinge1_FL_cdt">
+				<Body ModelFrame="BoneArmHinge2_FL_cdt">
+					<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge3_FL_cdt">
+						<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge4_FL_cdt">
+							<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmPrismatic_FL_cdt" />
+						</Body>
+					</Body>
+				</Body>
+				<Body ModelFrame="BonePistonRotator_FL_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneArmHinge1_RR_cdt">
+				<Body ModelFrame="BoneArmHinge2_RR_cdt">
+					<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge3_RR_cdt">
+						<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge4_RR_cdt">
+							<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmPrismatic_RR_cdt" />
+						</Body>
+					</Body>
+				</Body>
+				<Body ModelFrame="BonePistonRotator_RR_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneArmHinge1_RL_cdt">
+				<Body ModelFrame="BoneArmHinge2_RL_cdt">
+					<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge3_RL_cdt">
+						<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmHinge4_RL_cdt">
+							<Body CenterOfMassOffset="(0; 0; 0)" ModelFrame="BoneArmPrismatic_RL_cdt">
+								<Constraint AxisLocal="(0; -1; 0)" />
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+				<Body ModelFrame="BonePistonRotator_RL_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Lightbar _template="Flasher">
+			<Model Org="(-2.409; 2.161; 0.011)" ParentFrame="BoneRotator" />
+			<Light Pos="(-2.409; 2.161; 0.011)" ParentFrame="BoneRotator" />
+			<Flare Pos="(-2.409; 2.161; 0.011)" ParentFrame="BoneRotator" />
+			<Flare Pos="(-2.409; 2.161; 0.011)" ParentFrame="BoneRotator" />
+			<Flare Pos="(-2.467; 2.186; 0.011)" />
+		</Lightbar>
+	</ModelAttachments>
+	<GameData CameraPreset="addon_1" Category="frame_addons" Price="0">
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_SEISMIC_VIBRATOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_SEISMIC_VIBRATOR_NAME"
+		/>
+		<SoundPoweredGroupStop Name="actors/actor_vibro_sensor/actor_vibro_sensor_powergrub_stop" Range="20" Volume="1" />
+		<SoundPoweredGroupStart Name="actors/actor_vibro_sensor/actor_vibro_sensor_powergrub_start" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="actors/actor_vibro_sensor/actor_vibro_sensor_powergrub_loop" Range="20" Volume="1" />
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameAddonSeismicVibratorZikz612" />
+		<AddonType Name="SeismicVibrator" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBase1_FR" ParentFrame="BoneArmHinge1_FR_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmHinge2_FR_cdt"
+				ModelFrame="BonePiston1_FR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase1_FL" ParentFrame="BoneArmHinge1_FL_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmHinge2_FL_cdt"
+				ModelFrame="BonePiston1_FL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase1_RR" ParentFrame="BoneArmHinge1_RR_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmHinge2_RR_cdt"
+				ModelFrame="BonePiston1_RR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase1_RL" ParentFrame="BoneArmHinge1_RL_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArmHinge2_RL_cdt"
+				ModelFrame="BonePiston1_RL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2_FR" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BonePistonRotator_FR_cdt"
+				ModelFrame="BonePiston2_FR"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2_FL" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BonePistonRotator_FL_cdt"
+				ModelFrame="BonePiston2_FL"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2_RR" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BonePistonRotator_RR_cdt"
+				ModelFrame="BonePiston2_RR"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase2_RL" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BonePistonRotator_RL_cdt"
+				ModelFrame="BonePiston2_RL"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<ActionGroups>
+		<Group Id="SeismicVibrator">
+			<Vibrator Name="SeismicVibrator" />
+		</Group>
+		<Group Id="Lightbar">
+			<Rotator Name="Lightbar" />
+			<Attachment Name="Lightbar" />
+		</Group>
+	</ActionGroups>
+</TruckAddon>

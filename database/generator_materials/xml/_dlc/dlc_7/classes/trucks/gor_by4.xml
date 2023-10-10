@@ -1,0 +1,376 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="8"
+			SteeringJointOffset="0.12"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<Sunshield Collisions="None" Mass="4">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="10"
+			>
+				<Motor Damping="0.05" Spring="10" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.06"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_gor_by4"
+		EngineIconScale="1"
+		EngineStartDelay="1.7"
+		ExhaustStartTime="1.6"
+		FuelCapacity="50"
+		Responsiveness="0.6"
+		SteerSpeed="0.03"
+		TruckImage="gorbymchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="tire_1"
+			DefaultWheelType="wheels_gor_by4"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.159; 0.196; 0.75)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.159; 0.196; 0.75)" />
+			<Wheel _template="RearWheel" Pos="(-1.159; 0.196; 0.75)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.159; 0.196; 0.75)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="gor_by4_suspension_default"
+			Type="s_gor_by4"
+			MaxWheelRadiusWithoutSuspension="0.29"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.573"
+		/>
+		<Steam Origin="(-1.73; 0.76; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(-1.2; 0.4; 0)"
+			MinDist="10.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_old" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/gorby4/gorby4_brakes_squeal" />
+			<Handbrake		Sound="trucks/gorby4/gorby4_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/gorby4/gorby4_handbrake_off" />
+			<AWD			Sound="trucks/gorby4/gorby4_awd" />
+			<Gear			Sound="trucks/gorby4/gorby4_gear_shift" />
+			<Honk			Sound="trucks/gorby4/gorby4_honk" />
+			<EngineRev		Sound="trucks/gorby4/gorby4_rev" />
+			<EngineAccel	Sound="trucks/gorby4/gorby4_acc" />
+			<EngineStart	Sound="trucks/gorby4/gorby4_start" />
+			<EngineStop		Sound="trucks/gorby4/gorby4_stop" />
+			<EngineIdle		Sound="trucks/gorby4/gorby4_idle" />
+			<EngineIdle_2d	Sound="trucks/gorby4/gorby4_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/gorby4/gorby4_low" />
+			<EngineLow_2d	Sound="trucks/gorby4/gorby4_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/gorby4/gorby4_high" />
+			<EngineHigh_2d	Sound="trucks/gorby4/gorby4_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_stress_small_rnd_set/truck_stress_small_rnd" />
+			<AbruptStop		Sound="trucks/gorby4/gorby4_swing_and_burst_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.15; 0.15; 0.15)"
+				MaxAngle="(0.3; 0.3; 0.3)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+		<OcclusionMap
+			HalfSizeZ="1.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.3"
+			MaxX="2.3"
+		/>
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust Dir="(-1; 0; 0)" IsLight="false" Origin="(-1.624; 0.319; -0.336)" Speed="2.0" />
+		<Exhaust Dir="(-1; 0; 0)" IsLight="false" Origin="(-1.624; 0.319; 0.336)" Speed="2.0" />
+		<EngineSocket Default="ru_scout_old_engine_0" Type="e_ru_scout_old" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(-0.1; 0.04; 0)"
+			Pos="(-0.041; 0.538; 0.29)"
+			SteeringWheelPos="(0.265; 0.925; 0.284)"
+		/>
+		<Dashboard>
+			<Gauge Dir="(-0.894; 0.449; 0)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/gor_by4_arrow_1" Org="(0.535; 0.905; 0.284)" OutputAngles="(-112; 112)" />
+			<Gauge Damping="0.99" Dir="(-0.549; 0.836; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/gor_by4_arrow_2" Org="(0.466; 0.752; 0)" OutputAngles="(-210; 40)" />
+			<Gauge Damping="0.99" Dir="(-0.893; 0.449; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/gor_by4_arrow_4" Org="(0.537; 0.904; 0.403)" OutputAngles="(-32; 32)" />
+			<Gauge Damping="0.99" Dir="(-0.894; 0.449; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_4" Org="(0.537; 0.904; 0.164)" OutputAngles="(-32; -20)" />
+			<Gauge Damping="0.99" Dir="(-0.893; 0.449; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_5" Org="(0.522; 0.875; 0.164)" OutputAngles="(0; 30)" />
+			<Gauge Damping="0.99" Dir="(-0.981; 0; 0.196)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_3" Org="(0.504; 0.8; 0.081)" OutputAngles="(-64; -14)" />
+			<Gauge Damping="0.99" Dir="(-0.981; 0; 0.196)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_3" Org="(0.504; 0.8; 0.027)" OutputAngles="(-64; 10)" />
+			<Gauge Damping="0.99" Dir="(-0.981; 0; 0.196)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_3" Org="(0.504; 0.8; -0.026)" OutputAngles="(-64; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.981; 0; 0.196)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/gor_by4_arrow_3" Org="(0.504; 0.8; -0.08)" OutputAngles="(-64; -20)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(-1.68; 0.3; -0.4)" Max="(-0.8; 0.9; 0.4)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.7; 0.3; -0.6)" Max="(1.68; 0.8; 0.6)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.37" Type="wheels_gor_by4" />
+		<CompatibleWheels Scale="0.39" Type="wheels_gor_by4" />
+		<CompatibleWheels Scale="0.37" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.39" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.37" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.39" Type="wheels_scout2" />
+		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/gor_by4_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/gor_by4_glass__sh_d.tga"
+				ViewPos="(-0.1; 1.238; 0.289)"
+			>
+				<Mirror ClipDir="(-0.995; 0.087; -0.052)" CurveAngle="10" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.995; 0.087; -0.052)" Size="(0.13; 0.13)" Pos="(1.191; 0.972; 0.635)" />
+				<Mirror ClipDir="(-0.974; 0.017; 0.225)" CurveAngle="10" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.974; 0.017; 0.225)" Size="(0.13; 0.13)" Pos="(1.192; 1.026; -0.626)" />
+				<Mirror ClipDir="(-0.976; -0.068; 0.208)" FOVScale="1" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.976; -0.068; 0.208)" Size="(0.2; 0.08)" Pos="(0.425; 1.28; 0)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleL1" IsIndependent="true" />
+			<Axle Frame="BoneAxleR1" IsIndependent="true" />
+			<Axle Frame="BoneAxleL2" IsIndependent="true" />
+			<Axle Frame="BoneAxleR2" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(-1.73; 0.76; 0)" />
+	<Rotator
+		EngineTorqueFactor="0.5"
+		Frame="BoneEngineFan"
+		RotationSpeed="-20"
+	/>
+	<PhysicsModel Mesh="trucks/gor_by4">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.3; -0.2; 0)"
+			ImpactType="Truck"
+			Mass="700"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.7; -0.5; 0)"
+				ImpactType="Truck"
+				Mass="450"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2; 0.3; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Pos="(-1.619; 0.843; -0.616)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Pos="(-1.619; 0.843; 0.616)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-1.67; 0.75; -0.616)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-1.67; 0.75; 0.616)" ParentFrame="BoneCabin_cdt" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-2; 0.3; 0)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 225) x 0.9" Pos="(1.85; 0.3; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.12" Pos="(-1.619; 0.843; -0.616)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.12" Pos="(-1.619; 0.843; 0.616)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.7" Size="0.3" Pos="(1.56; 0.739; -0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.7" Size="0.3" Pos="(1.56; 0.739; 0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size="0.2" Pos="(1.596; 0.407; -0.509)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size="0.2" Pos="(1.596; 0.407; 0.509)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.56; 0.739; -0.555)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(1.56; 0.739; 0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 0.5" Size="0.6" Pos="(1.56; 0.739; -0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 245; 215) x 0.5" Size="0.6" Pos="(1.56; 0.739; 0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.5" Pos="(1.58; 0.739; -0.555)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.5" Pos="(1.58; 0.739; 0.555)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/gor_by4_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.7; 0.7; 0)" />
+	<GameData
+		Country="RU,CAS"
+		ExcludeAddons="stuff_hula_girl, stuff_masha"
+		Price="3600"
+		Recallable="true"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.5; 0.3; -0.35)" />
+		<WinchSocket Pos="(1.5; 0.3; 0.35)" />
+		<WinchSocket Pos="(-1.75; 0.267; 0)" />
+		<WinchSocket Pos="(0; 0.3; -0.75)" />
+		<WinchSocket Pos="(0; 0.3; 0.75)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_GOR_BY4_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="ShopImgGorBy"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="GorLogo80"
+			UiName="UI_VEHICLE_GOR_BY4_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.9; 0.652; -0.658)" Position="(7.637; 4.708; -0.542)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.036; 1.692; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-6.923; 2.071; 10.147)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.991; 1.77; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.328; 3.173; 3.632)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.7; 1.1; 1.1)" Position="(5.2; 1; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(7.7; 1.1; 1.1)" Position="(5.2; 1; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(7.7; 1.1; 1.1)" Position="(5.2; 1; 0)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.679; 0.759; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.22; 3.041; -2.085)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(5.6; 0.75; -0.95)" Position="(8.400; 2.25; 0.48)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(7.122; 0.455; 0.563)" Position="(4.281; 1.252; 2.56)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.798; 0.713; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.212; 2.243; -3.182)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(7.229; 0.689; -0.829)" Position="(9.359; 3.23; -0.138)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.787; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.091; 1.495; -3.925)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.944; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.22; 3.041; 3.401)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.926; 0.292; -0.046)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.193; 0.885; -3.594)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.787; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.091; 1.495; -3.925)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(5.042; 0.956; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.258; 1.601; 3.76)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.861; 0.675; -0.496)" Position="(4.494; 1.458; -2.563)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(-0.355; 1.487; 0)" />
+		<CraneSocket Pos="(1.5; 0.3; -0.35)" />
+		<CraneSocket Pos="(1.5; 0.3; 0.35)" />
+		<CraneSocket Pos="(-1.855; 0.31; 0)" />
+		<CraneSocket Pos="(0; 0.3; -0.7)" />
+		<CraneSocket Pos="(0; 0.3; 0.7)" />
+		<AddonSockets>
+			<Socket Names="ScautTrailer" Offset="(-1.989; 0.62; 0)" ParentFrame="BoneCabin_cdt">
+				<AddonsShift Offset="(-0.085; 0; 0)" Types="GorBy4RearBumper" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gor_by4_front_bumper_default">
+			<Socket Names="GorBy4FrontBumper" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="GorBy4DefenceFrame" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gor_by4_rear_bumper_default">
+			<Socket Names="GorBy4RearBumperDefault" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="GorBy4RearBumper" NamesBlock="GorBy4DefenceFrame" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gor_by4_threshold_default">
+			<Socket Names="GorBy4Threshold" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4bRoofrack" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="GorBy4bRoofrack2" NamesBlock="GorBy4DefenceFrame, GorBy4Threshold, GorBy4Spotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4bSnorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Spotlight" NamesBlock="GorBy4DefenceFrame" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Visor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Horn" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="gor_by4_diff_lock_default">
+			<Socket Names="gor_by4_DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x1_03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="GorBy4Sticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Sticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Sticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Sticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="GorBy4Sticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.442; 1.283; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(0.622; 1.026; 0.084)"
+				UpDir="(-0.276; 0.961; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBalancerAxleL2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL2"
+				ModelFrame="BoneBalancerAxleL2_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerAxleR2_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR2"
+				ModelFrame="BoneBalancerAxleR2_B"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

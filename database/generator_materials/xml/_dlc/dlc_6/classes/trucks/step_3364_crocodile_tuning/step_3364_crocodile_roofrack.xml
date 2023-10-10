@@ -1,0 +1,49 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="60">
+		<LimitedFluid Center="(0.434; 2.424; 0.003)" SizeX="0.346" SizeY="0.132" SizeZ="0.291" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(0.437; 2.424; -0.354)" SizeX="0.346" SizeY="0.132" SizeZ="0.291" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(0.435; 2.424; 0.355)" SizeX="0.346" SizeY="0.132" SizeZ="0.291" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_roofrack">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="None"
+				LinearDamping="2"
+				Mass="20"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(0; 0.03)"
+					LinearLimitsY="(0; 0)"
+					LinearLimitsZ="(-0.02; 0.02)"
+					Type="Fixed"
+				>
+					<Motor Damping="550" Spring="0.55" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FUEL_RACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FUEL_RACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileRoofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

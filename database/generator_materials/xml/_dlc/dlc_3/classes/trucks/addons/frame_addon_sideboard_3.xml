@@ -1,0 +1,24 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_addon_sideboard_3">
+		<Body Mass="600">
+			<Constraint Type="Rigid" />			
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_SIDEBOARD_3_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_SIDEBOARD_3_NAME"
+		/>
+		<InstallSocket Type="FrameAddonSideboard3" />
+		<AddonSlots InitialOffset="(2.559; 0.327; 0.000)" OffsetStep="(-2.559; 0; 0)" Quantity="3" />
+	</GameData>
+</TruckAddon>

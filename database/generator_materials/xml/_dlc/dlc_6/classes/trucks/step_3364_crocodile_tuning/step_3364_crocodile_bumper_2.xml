@@ -1,0 +1,54 @@
+<_templates Include="trucks" />
+<_parent File="step_3364_crocodile_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_bumper_2">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="7"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.823; 1.189; -0.257)" />
+			<Model _template="HeadLightRay" Org="(2.823; 1.189; 0.257)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.823; 1.189; -0.257)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(2.823; 1.189; 0.257)" />
+			<Flare _template="BlueStreak" Pos="(2.833; 1.189; -0.257)" />
+			<Flare _template="BlueStreak" Pos="(2.833; 1.189; 0.257)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(2.833; 1.189; -0.257)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(2.833; 1.189; 0.257)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

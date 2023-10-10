@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Color="g(220; 220; 220) x 0.3" Pos="(4.535; 3.332; -0.832)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Color="g(220; 220; 220) x 0.3" Pos="(4.535; 3.332; 0.832)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_BELUGA_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_BELUGA_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixVisor" />
+	</GameData>
+</TruckAddon>

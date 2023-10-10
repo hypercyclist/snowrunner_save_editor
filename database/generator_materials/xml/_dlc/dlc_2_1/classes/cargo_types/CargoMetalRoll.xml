@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_METAL_ROLL_NAME"
+		UiDesc="UI_CARGO_METAL_ROLL_DESC"
+		UiIcon20x20="cargoTypeSteelRoll20"
+		UiIcon40x40="cargoTypeSteelRoll40"
+		UiIcon100x100="cargoTypeSteelRoll"
+	/>
+</CargoType>

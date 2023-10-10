@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="3.5" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="3.5" />
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_beacon_2">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.967; 0.254; 0)" Org="(3.447; 3.146; 0.871)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.967; 0.254; 0)" Pos="(3.447; 3.146; 0.871)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(3.447; 3.146; 0.871)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(3.447; 3.146; 0.871)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(3.495; 3.133; 0.871)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.967; 0.254; 0)" Org="(3.539; 3.145; -0.873)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.967; 0.254; 0)" Pos="(3.539; 3.145; -0.873)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(3.539; 3.145; -0.873)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(3.539; 3.145; -0.873)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(3.495; 3.133; -0.873)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="paystar5600TsBeacon2" />
+	</GameData>
+</TruckAddon>

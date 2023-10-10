@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_vizor_01a" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.29; 2.566; 0.79)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.25; 2.566; 0.21)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.25; 2.566; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.25; 2.566; -0.21)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.29; 2.566; -0.79)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="vizors"
+		Category="top"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177Visor" />
+	</GameData>
+</TruckAddon>

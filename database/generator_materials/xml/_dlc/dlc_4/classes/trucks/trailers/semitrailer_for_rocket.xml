@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<_parent File="semitrailer_oil_refinery" />
+<Truck>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_for_rocket" />
+	<Landmark
+		_noinherit="true"
+		Mesh="landmarks/semitrailer_for_rocket_lmk"
+		MinScale="1.8"
+		MaxScale="3.8"
+	/>
+	<GameData IsQuest="true" Price="18800">
+		<WinchSocket Pos="(-17.4; 1.742; 1.55)" />
+		<WinchSocket Pos="(-17.4; 1.742; -1.55)" />
+		<WinchSocket Pos="(-8.62; 1.742; 1.55)" />
+		<WinchSocket Pos="(-8.62; 1.742; -1.55)" />
+		<WinchSocket Pos="(-4.200; 1.742; -1.55)" />
+		<WinchSocket Pos="(-4.200; 1.742; 1.55)" />
+		<WinchSocket Pos="(-0.16; 1.742; 1.55)" />
+		<WinchSocket Pos="(-0.16; 1.742; -1.55)" />
+		<WinchSocket Pos="(8.709; 1.863; 0.000)" />
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_SEMITRAILER_FOR_ROCKET_DESC"
+			UiIcon30x30="trailerImgRocketEmpty30"
+			UiIcon40x40="trailerImgRocketEmpty"
+			UiName="UI_SEMITRAILER_FOR_ROCKET_NAME"
+		/>
+		<InstallSocket Offset="(8.719; 1.895; 0)" />
+		<CraneSocket Pos="(-17.4; 1.742; 1.55)" />
+		<CraneSocket Pos="(-17.4; 1.742; -1.55)" />
+		<CraneSocket Pos="(-8.62; 1.742; 1.55)" />
+		<CraneSocket Pos="(-8.62; 1.742; -1.55)" />
+		<CraneSocket Pos="(-4.200; 1.742; -1.55)" />
+		<CraneSocket Pos="(-4.200; 1.742; 1.55)" />
+		<CraneSocket Pos="(-0.16; 1.742; 1.55)" />
+		<CraneSocket Pos="(-0.16; 1.742; -1.55)" />
+		<CraneSocket Pos="(8.709; 1.863; 0.000)" />
+	</GameData>
+</Truck>

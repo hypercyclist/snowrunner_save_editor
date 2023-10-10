@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.721; 3.939; -0.252)" />
+			<Flare _template="MarkerBeacon" Pos="(1.722; 3.939; 0.249)" />
+			<Flare _template="MarkerBeacon" Pos="(1.729; 3.939; -0.002)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_CHROME_NAME"
+		/>
+		<InstallSocket Type="boar45318Gabarite1" />
+	</GameData>
+</TruckAddon>

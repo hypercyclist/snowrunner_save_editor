@@ -1,0 +1,271 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RollerWheel
+			Location="front"
+			SuspensionDamping=".9"
+			SuspensionHeight="0.0"
+			SuspensionStrength=".9"
+			Torque="default"
+			SuspensionMin="-0.3"
+			SuspensionMax=".6"
+		/>
+		<RearWheel
+			Location="rear"
+			SuspensionDamping=".9"
+			SuspensionHeight="0.0"
+			SuspensionStrength=".9"
+			Torque="default"
+			Type="wheels_cultivator"
+			SuspensionMin="-0.3"
+			SuspensionMax=".6"
+			ParentFrame="BoneSuspension_cdt"
+		/>
+		<FrontWheel
+			Location="front"
+			SuspensionDamping=".9"
+			SuspensionHeight="0.0"
+			SuspensionStrength=".9"
+			Torque="default"
+			Type="wheels_cultivator_front"
+			SuspensionMin="-0.3"
+			SuspensionMax=".6"
+		/>
+	</Wheel>
+</_templates>
+<Truck Type="Trailer" FarmingTrailerType="Cultivator">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="RearWheel" Pos="(-3.542; 0.471; 1.275)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.542; 0.471; 1.275)" />
+		</Wheels>
+		<ExtraWheels>
+			<Wheel _template="FrontWheel" SkipPlacement="true" Pos="(0.437; -0.483; 2.284)" PosInLocalFrame="true" ParentFrame="BoneWingFrontLeft_cdt" />
+			<Wheel _template="FrontWheel" RightSide="true" SkipPlacement="true" Pos="(0.437; -0.483; 2.284)" PosInLocalFrame="true" ParentFrame="BoneWingFrontRight_cdt" />
+		</ExtraWheels>
+		<Constraint
+			AxisLocal="(0; 0; 1)"
+			Name="LiftCoupler"
+			PivotOffset="(3.5; -0.35; 0)"
+			Type="Hinge"
+			MinLimit="0"
+			MaxLimit="7.8"
+		>
+			<Motor Force="150000" Type="Position" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				Tau="0.04"
+				TerminalFix="true"
+				Position="0.4"
+			/>
+		</Group>
+		<Group Id="trailer_lift" LocaleUid="UI_TRAILER_LIFT">
+			<Constraint InitialFix="true" Name="LiftCoupler" SpeedMult=".1" TerminalFix="true" Position="7.8" />
+		</Group>
+		<Group Id="side_lift" LocaleUid="UI_SIDE_LIFT">
+			<Constraint InitialFix="true" Name="LiftSuspension" SpeedMult=".35" TerminalFix="true" Position="30" />
+			<Constraint InitialFix="true" Name="SideRotate" SpeedMult=".35" TerminalFix="true" Position="90" />
+		</Group>		
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/trailer_cultivator">
+		<NetSync Legacy="true" />
+		<FarmingBoundingBox1 BaseBone="BoneTrailer_cdt" Min="(-5.23; -0.6; -2.81)" Max="(-1.97; 0.6; -0.14)" />
+		<FarmingBoundingBox2 BaseBone="BoneTrailer_cdt" Min="(-5.23; -0.6; 0.14)" Max="(-1.97; 0.6; 2.81)" />
+		<FarmingBoundingBox3 BaseBone="BoneTrailer_cdt" Min="(-9.15; -0.6; 0.14)" Max="(-5.66; 0.6; 2.81)" />
+		<FarmingBoundingBox4 BaseBone="BoneTrailer_cdt" Min="(-9.15; -0.6; -2.81)" Max="(-5.66; 0.6; -0.14)" />
+		<Body
+			Collisions="None"
+			ExplicitParentFrame="0"
+			ImpactType="Truck"
+			Mass="500"
+			ModelFrame="BoneCoupler_cdt"
+		>
+			<Body
+				CenterOfMassOffset="(-0.5; -1; 0)"
+				ImpactType="Truck"
+				Mass="2000"
+				ModelFrame="BoneTrailer_cdt"
+			>
+				<Constraint _template="TrailerRagdoll" />
+				<Body
+					ForceBodyParams="true"
+					Mass="300"
+					ModelFrame="BoneLeg_cdt"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="Leg"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.4"
+					>
+						<Motor Force="150000" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; -1)"
+					ImpactType="Truck"
+					Mass="500"
+					ModelFrame="BoneWingFrontRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="SideRotate"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="150000" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 1)"
+					ImpactType="Truck"
+					Mass="500"
+					ModelFrame="BoneWingFrontLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="SideRotate"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="150000" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; -1)"
+					ImpactType="Truck"
+					Mass="500"
+					ModelFrame="BoneWingRearRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="SideRotate"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="150000" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 1)"
+					ImpactType="Truck"
+					Mass="500"
+					ModelFrame="BoneWingRearLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="SideRotate"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="150000" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(-0.5; 0; 0)"
+					Mass="1000"
+					ModelFrame="BoneSuspension_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="LiftSuspension"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="29.38"
+					>
+						<Motor Force="350000" Tau="0.8" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/trailer_cultivator_lmk" MinScale="1.8" MaxScale="2.8" />
+	<GameData Price="4200">
+		<!--<WinchSocket WinchableWhenAttached="false" Pos="(4.509; 0.72; 0)" />-->
+		<WinchSocket Pos="(0.461; 1.107; -0.485)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(0.461; 1.107; 0.485)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(-4.125; 1.331; -0.479)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(-4.125; 1.331; 0.479)" ParentFrame="BoneTrailer_cdt" />
+		<UiDesc
+			UiDesc="UI_TRAILER_CULTIVATOR_DESC"
+			UiIcon30x30="trailerPlow30"
+			UiIcon40x40="trailerPlow40"
+			UiName="UI_TRAILER_CULTIVATOR_NAME"
+		/>
+		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler" />
+		<InstallSocket Offset="(2.561; 0.88; -0)" Type="TrailerFarm" ParentFrame="BoneCoupler_cdt" />
+		<!--		<InstallSocket Offset="(2.561; 0.661; 0)" Type="TrailerPlanter" ParentFrame="BoneTruck_cdt" /> -->
+		<CraneSocket Pos="(0.461; 1.107; -0.485)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(0.461; 1.107; 0.485)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(-4.125; 1.331; -0.479)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(-4.125; 1.331; 0.479)" ParentFrame="BoneTrailer_cdt" />
+
+		<SoundPoweredGroupStart Name="addons/trailer_cultivator/trailer_cultivator_start" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/trailer_cultivator/trailer_cultivator_loop" Range="20" Volume="1" />
+		<SoundPoweredGroupStop Name="addons/trailer_cultivator/trailer_cultivator_stop" Range="20" Volume="1" />
+
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneSuspensionPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneSuspension_cdt"
+				ModelFrame="BoneSuspensionPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneWingFrontLeftPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingFrontLeft_cdt"
+				ModelFrame="BoneWingFrontLeftPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneWingFrontRightPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingFrontRight_cdt"
+				ModelFrame="BoneWingFrontRightPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneWingRearLeftPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingRearLeft_cdt"
+				ModelFrame="BoneWingRearLeftPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneWingRearRightPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingRearRight_cdt"
+				ModelFrame="BoneWingRearRightPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

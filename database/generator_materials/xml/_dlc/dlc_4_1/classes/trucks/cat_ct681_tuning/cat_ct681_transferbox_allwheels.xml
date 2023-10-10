@@ -1,0 +1,66 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct681_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts>			
+			<Shaft 
+			PointAConnectedToAddon="true"
+			PointBConnectedToAddon="true"
+			SocketPointA="Shaft1A" 
+			SocketPointB="Shaft1B" 
+			/>
+			<Shaft 
+			PointAConnectedToAddon="true"
+			PointBConnectedToAddon="true"			
+			SocketPointA="Shaft2A" 
+			SocketPointB="Shaft2B" 
+			/>
+		</Shafts>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_transferbox_allwheels">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneTieRodAWD_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="0" Frame="BoneTieRodRWD_extra_cdt" />
+		<ExplicitParent ExplicitParentFrame="2" Frame="BoneAxleFront" />
+		<ExplicitParent ExplicitParentFrame="3" Frame="BoneRackLeft" />
+		<ExplicitParent ExplicitParentFrame="4" Frame="BoneRackRight" />
+		<ExplicitParent ExplicitParentFrame="5" Frame="BoneRackRWD_extra" />
+		<ExplicitParent ExplicitParentFrame="6" Frame="BoneRackAWD" />
+	</ExplicitParents>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodAWD_IK1" ParentFrame="BoneTieRodAWD_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneTieRodAWD_IK2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

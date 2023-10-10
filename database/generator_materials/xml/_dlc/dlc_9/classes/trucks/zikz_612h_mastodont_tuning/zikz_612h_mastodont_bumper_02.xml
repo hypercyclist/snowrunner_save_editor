@@ -1,0 +1,82 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="400" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_bumper_02">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; -0.1; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneRope_cdt"
+				Collisions="None"
+			>
+				<Constraint _template="TrunkFixed">
+					<TrunkFixed/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; 0.210	)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; 0.297)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; 0.384)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; 0.210)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; 0.297)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; 0.384)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; -0.210	)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; -0.297)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(9.312; 1.769; -0.384)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; -0.210)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; -0.297)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(9.312; 1.769; -0.384)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; 0.210)" />
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; 0.297)" />
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; 0.384)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; 0.210)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; 0.297)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; 0.384)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; 0.210)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; 0.297)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; 0.384)" />
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; -0.210)" />
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; -0.297)" />
+			<Model _template="HeadLightRay" Org="(9.312; 1.769; -0.384)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; -0.210)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; -0.297)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(9.312; 1.769; -0.384)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; -0.210)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; -0.297)" />
+			<Flare _template="BlueStreak" Pos="(9.312; 1.769; -0.384)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LATTICE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LATTICE_NAME"
+		/>
+		<InstallSocket Type="MastodonBumper" />
+	</GameData>
+</TruckAddon>

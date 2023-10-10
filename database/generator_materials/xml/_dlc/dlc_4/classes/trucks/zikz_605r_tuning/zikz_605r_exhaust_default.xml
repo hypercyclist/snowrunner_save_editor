@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="3.8"  />
+			<Shaker Frame="BoneExhaustRight" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="3.8"  />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_exhaust_default"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="zikz605rExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0.000; 0.000; -1.000)"
+		IsLight="false"
+		Origin="(1.414; 1.599; -1.418)"
+		Speed="3.82"
+	/>
+	<Exhaust
+		Dir="(0.000; 0.000; 1.000)"
+		IsLight="false"
+		Origin="(1.414; 1.599; 1.418)"
+		Speed="3.82"
+	/>
+</TruckAddon>

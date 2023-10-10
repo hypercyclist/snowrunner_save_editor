@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="western_star_49x_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts>
+			<Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftBox2Engine" />
+			<Shaft PointAConnectedToAddon="true" PointBConnectedToAddon="true" SocketPointA="ShaftBox2FrontWheel" SocketPointB="ShaftFrontWheel" />
+			<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftBox2RearGimbal" SocketPointB="ShaftRearGimbal" />
+		</Shafts>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_transferbox_allwheels" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

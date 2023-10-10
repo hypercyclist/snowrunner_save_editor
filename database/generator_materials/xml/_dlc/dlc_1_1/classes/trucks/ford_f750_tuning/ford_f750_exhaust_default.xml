@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_exhaust_default" />
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="FordF750ExhaustDefault" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.908; -0.418; 0)"
+		IsLight="true"
+		Origin="(0.159; 0.445; 0.328)"
+		Speed="3.5"
+	/>
+</TruckAddon>

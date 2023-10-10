@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.117; 2.521; -0.764)" />
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_snorkel_1"/>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="ChevyApacheSnorkel" />
+	</GameData>
+</TruckAddon>

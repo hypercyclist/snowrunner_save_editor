@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.4; 0.7; 0.4)" MaxFrequency="0.2" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_exhaust_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="50"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="exhaust"
+		Category="exhaust"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<RequiredAddonType Type="MastodonExhaust" />
+		<InstallSocket Type="MastodonExhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.5; -1; -1.3)" IsLight="false" Origin="(5.913; 1.57; -1.7)" Speed="1.8" ParentFrame="BoneAddon_cdt"/>
+	<Exhaust Dir="(-0.5; -1; 1.3)" IsLight="false" Origin="(5.913; 1.57; 1.7)" Speed="1.6" ParentFrame="BoneAddon_cdt"/>
+</TruckAddon>

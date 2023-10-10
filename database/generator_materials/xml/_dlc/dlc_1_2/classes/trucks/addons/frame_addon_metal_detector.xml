@@ -1,0 +1,128 @@
+<TruckAddon>
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_SCAN_METAL_DETECTOR"
+			Name="Metal_Detector_Addon"
+			ParentBodies="BoneWingL_cdt, BoneWingR_cdt"
+			ResetOnLoad="true"
+		>
+			<Group Id="anchors_position">
+				<Constraint
+					InitialFix="true"
+					Name="Runner"
+					SpeedMult="0.5"
+					Position="90"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_metal_detector">
+		<Body Mass="200">
+			<Constraint Type="Rigid" />
+			<Body
+				Friction="2.0"
+				Mass="50"
+				ModelFrame="BoneWingL_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Name="Runner"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="90"
+				>
+					<Motor
+						Damping="1.0"
+						Force="1000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+			</Body>
+			<Body
+				Friction="2.0"
+				Mass="50"
+				ModelFrame="BoneWingR_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="Runner"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="90"
+				>
+					<Motor
+						Damping="1.0"
+						Force="1000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+			</Body>
+			<Body ImpactType="Truck" Mass="20" ModelFrame="BoneWiggleR_cdt">
+				<Constraint
+					LinearLimitsX="(-0.3; 0.3)"
+					LinearLimitsY="(-0.2; 0.3)"
+					LinearLimitsZ="(-0.3; 0.3)"
+					Type="Fixed"
+				>
+					<Motor Damping="90" Spring="10000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body ImpactType="Truck" Mass="30" ModelFrame="BoneWiggleL_cdt">
+				<Constraint
+					LinearLimitsX="(-0.3; 0.3)"
+					LinearLimitsY="(-0.2; 0.3)"
+					LinearLimitsZ="(-0.3; 0.3)"
+					Type="Fixed"
+				>
+					<Motor Damping="70" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_METAL_DETECTOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_METAL_DETECTOR_NAME"
+		/>
+		<SoundPoweredGroupStart Name="addons/metal_detector/metal_detector_open" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/metal_detector/metal_detector_scan" Range="20" Volume="1" />
+		<SoundPoweredGroupStop Name="addons/metal_detector/metal_detector_close" Range="20" Volume="1" />
+		<InstallSocket Type="MetalDetector" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonLHinge" ParentFrame="BoneBase_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingL_cdt"
+				ModelFrame="BonePistonLSlider"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRHinge" ParentFrame="BoneBase_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingR_cdt"
+				ModelFrame="BonePistonRSlider"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

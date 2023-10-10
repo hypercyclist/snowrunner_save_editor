@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.365; 2.065; -1.153)" />
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_snorkel_1"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(0.520; 1.938; -1.153)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.520; 1.830; -1.153)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.520; 1.726; -1.153)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.520; 1.612; -1.153)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="CatCT681Snorkel" />
+	</GameData>
+</TruckAddon>

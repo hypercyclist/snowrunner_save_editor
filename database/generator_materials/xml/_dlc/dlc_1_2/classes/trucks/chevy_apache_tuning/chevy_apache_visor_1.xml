@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="chevy_apache_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_visor_1" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="ChevyApacheVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.457; 3.45; 0)" />
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_snorkel_2">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.638; 1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.556; 1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.472; 1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.389; 1.424)" ParentFrame="snorkel_2_cdt" />
+			
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.638; -1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.556; -1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.472; -1.424)" ParentFrame="snorkel_2_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.2" Size="0.2" Pos="(2.5; 2.389; -1.424)" ParentFrame="snorkel_2_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="2600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Snorkel" />
+	</GameData>
+</TruckAddon>

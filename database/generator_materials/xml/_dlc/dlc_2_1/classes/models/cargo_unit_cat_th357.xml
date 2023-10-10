@@ -1,0 +1,23 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="200.0"
+			NoSoftContacts="true"
+		>
+			<Body Collisions="Dynamic" Mass="150" ModelFrame="BonePart1_cdt" NoSoftContacts="true">
+				<Constraint BreakOffThreshold="450" Type="Fixed" />
+				<Body Collisions="Dynamic" Mass="100" ModelFrame="BonePart2_cdt" NoSoftContacts="true">
+					<Constraint BreakOffThreshold="300" Type="Fixed" />
+				</Body>
+				<Body Collisions="Dynamic" Mass="80" ModelFrame="BonePart3_cdt" NoSoftContacts="true">
+					<Constraint BreakOffThreshold="500" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<!--	<GameData LoadType="CargoBarrels" PackSlotsNumber="1">
+		<CraneSocket Pos="(-0.015; 1.165; 0.01)" />
+	</GameData>-->
+</ModelBrand>

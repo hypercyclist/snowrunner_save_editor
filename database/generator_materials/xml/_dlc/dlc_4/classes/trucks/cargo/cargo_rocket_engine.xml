@@ -1,0 +1,22 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_rocket_engine">
+		<NetSync Legacy="false" />
+		<Body Mass="2500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_rocket_engine"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_rocket_engine"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoRocketEngine"
+			CargoValue="1"
+			Offset="(0; 0.000; 0.000)"
+		/>
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_rocket_engine_lmk"/>
+</TruckAddon>

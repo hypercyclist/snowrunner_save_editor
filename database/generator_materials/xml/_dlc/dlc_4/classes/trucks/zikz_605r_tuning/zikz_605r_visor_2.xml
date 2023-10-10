@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="zikz_605r_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_visor_2"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(3.950; 2.913; -0.859)" />
+			<Flare _template="MarkerBeacon" Pos="(3.950; 2.913; 0.859)" />
+			<Flare _template="MarkerBeacon" Pos="(3.989; 2.924; -0.195)" />
+			<Flare _template="MarkerBeacon" Pos="(3.988; 2.924; 0.195)" />
+			<Flare _template="MarkerBeacon" Pos="(3.992; 2.926; 0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

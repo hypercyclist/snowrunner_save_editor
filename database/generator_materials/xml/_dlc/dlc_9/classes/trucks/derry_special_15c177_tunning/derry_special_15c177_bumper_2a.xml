@@ -1,0 +1,29 @@
+<_templates Include="trucks"/>
+
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_bumper_2a">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LATTICE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LATTICE_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177BumperA" />
+	</GameData>
+</TruckAddon>

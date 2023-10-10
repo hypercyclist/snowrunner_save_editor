@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+<CollarF AngularDamping="3.0" Collisions="Default" Mass="10">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="30"
+			>
+				<Motor Damping="0.1" Spring="0.1" Type="Spring" />
+			</Constraint>
+		</CollarF>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_bumper_1a"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177BumperA" />
+	</GameData>
+</TruckAddon>

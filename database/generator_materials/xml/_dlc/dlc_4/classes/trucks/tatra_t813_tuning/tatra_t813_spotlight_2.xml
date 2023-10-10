@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_spotlight_2">
+		<Body Collisions="None" Mass="8">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.56; 3.013; 0.691)" />
+			<Model _template="HeadLightRay" Org="(3.56; 3.013; 0.235)" />
+			<Model _template="HeadLightRay" Org="(3.56; 3.013; -0.235)" />
+			<Model _template="HeadLightRay" Org="(3.56; 3.013; -0.691)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(3.56; 3.013; 0.691)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(3.56; 3.013; 0.235)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(3.56; 3.013; -0.235)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(3.56; 3.013; -0.691)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_NAME"
+		/>
+		<InstallSocket Type="TatraT813Spotlight" />
+	</GameData>
+</TruckAddon>

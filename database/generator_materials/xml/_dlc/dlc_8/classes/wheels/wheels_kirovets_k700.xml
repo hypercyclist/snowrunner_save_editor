@@ -1,0 +1,33 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Superheavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Soft" />
+			<WheelFriction _template="HeavyMudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.731">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_kirovets_k700" Name="tire">
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_KIROVETS_SUPERHEAVY_MUDTIRES_NAME" />
+			</GameData>
+			<WheelTracks
+                TextureAlpha="tracks/kirovets_k7m_base_alpha__s_d.tga"
+                TextureHeight="tracks/kirovets_k7m_base_height__s_d.tga"
+			/>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_kirovets_k700" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_SUPERHEAVY_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

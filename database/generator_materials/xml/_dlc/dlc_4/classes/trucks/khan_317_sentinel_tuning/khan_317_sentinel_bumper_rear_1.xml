@@ -1,0 +1,40 @@
+<_templates Include="trucks">
+	<Body>
+		<Hook AngularDamping="3" Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-75"
+				MaxLimit="75"
+			/>
+		</Hook>
+	</Body>
+</_templates>
+<_parent File="khan_317_sentinel_bumper_rear_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_bumper_rear_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hook" ModelFrame="BoneHookL_cdt" />
+			<Body _template="Hook" ModelFrame="BoneHookR_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+		<InstallSocket Type="khan317sentinelRearBumper1" />
+	</GameData>
+</TruckAddon>

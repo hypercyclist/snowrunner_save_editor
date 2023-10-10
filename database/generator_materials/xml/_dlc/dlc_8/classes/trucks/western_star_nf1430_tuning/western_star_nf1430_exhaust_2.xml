@@ -1,0 +1,24 @@
+<_parent File="western_star_nf1430_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabinDamper_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabinDamper_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_nf1430_tuning/western_star_nf1430_exhaust_2"/>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_SNUB_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_SNUB_HEATSHIELD_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.535; 0.672; -0.512)" IsLight="true" Origin="(4.220; 3.707; -1.283)" Speed="3.82" />
+	<Exhaust Dir="(-0.535; 0.672; 0.512)" IsLight="true" Origin="(4.220; 3.707; 1.283)" Speed="3.82" />
+</TruckAddon>

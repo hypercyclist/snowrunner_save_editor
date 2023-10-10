@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_addon_log_short">
+		<Body ImpactType="Truck" Mass="400">
+			<Constraint Type="Rigid" />
+			<Body
+				NoCameraCollision="True"
+				ImpactType="Truck"
+				Mass="300"
+				ModelFrame="BoneFork_cdt"
+			>
+				<Constraint Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments/>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_LOG_SHORT_ADDON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_LOG_SHORT_ADDON_NAME"
+		/>
+		<LoadArea Subtype="FrameAddonLog" TrailerLoad="true" Type="CargoLogsShort" Min="(-3.038; 0.182; -1.198)" Max="(-0.178; 2.145; 1.198)" ParentFrame="BoneRoot_cdt" />
+		<LoadArea Subtype="FrameAddonLog" TrailerLoad="true" Type="CargoLogsShort" Min="(-5.897; 0.182; -1.198)" Max="(-3.038; 2.145; 1.198)" ParentFrame="BoneRoot_cdt" />
+		<!--<LoadArea TrailerLoad="true" Type="CargoLogsShort" Min="(-3.038; 0.182; -1.198)" Max="(-0.178; 2.145; 1.198)" ParentFrame="BoneRoot_cdt" />
+		<LoadArea TrailerLoad="true" Type="CargoLogsShort" Min="(-5.897; 0.182; -1.198)" Max="(-3.038; 2.145; 1.198)" ParentFrame="BoneRoot_cdt" />-->        
+		<InstallSocket Offset="(-2.351; 0; 0)" Type="FrameAddonLogShort" ParentFrame="BoneRoot_cdt" />
+		<AddonSlots
+			InitialOffset="(0; 0; 0)"
+			ParentFrames="BoneRoot_cdt"
+			Quantity="1"
+		/>
+	</GameData>
+</TruckAddon>

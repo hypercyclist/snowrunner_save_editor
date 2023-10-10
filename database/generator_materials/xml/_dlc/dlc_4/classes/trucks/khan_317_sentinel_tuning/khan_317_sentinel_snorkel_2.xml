@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.292; 2.033; -0.720)" />
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_snorkel_default"/>
+	<GameData
+		CameraPreset="roof"
+		Category="snorkel"
+		Price="3500"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="Khan317Snorkel" />
+	</GameData>
+</TruckAddon>

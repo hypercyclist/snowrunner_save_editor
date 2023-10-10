@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="pacific512_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(2.811; 2.948; 0)" />
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_snorkel_2" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.233; -1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.153; -1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.072; -1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 1.993; -1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.233; 1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.153; 1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 2.072; 1.027)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(3.042; 1.993; 1.027)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

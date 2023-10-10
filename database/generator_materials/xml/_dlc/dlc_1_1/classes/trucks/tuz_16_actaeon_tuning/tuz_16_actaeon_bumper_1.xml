@@ -1,0 +1,89 @@
+<_templates Include="trucks" >
+	<Flare>
+		<LED01
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.5"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.04"
+		/>
+	</Flare>
+</_templates>
+<_parent File="tuz_16_actaeon_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_bumper_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="10"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="12"
+				>
+					<Motor Damping="4" Spring="40" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="10"
+				ModelFrame="BoneRope_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.04"
+					MaxLimit="0.05"
+				>
+					<Motor Damping="100" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.310)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.261)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.211)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.162)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.112)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; -0.063)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.059)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.109)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.158)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.208)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.257)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Pos="(2.532; 1.773; 0.307)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_NAME"
+		/>
+	</GameData>
+</TruckAddon>

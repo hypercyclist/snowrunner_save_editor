@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.3; 0.3; 0.3)"
+				MaxAngle="(1; 1; 1)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_exhaust_default">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Step39331PikeExhaustDefault" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.605; -0.518; -0.605)"
+		IsLight="false"
+		Origin="(-1.02; 0.638; -0.361)"
+		Speed="3.8"
+	/>
+</TruckAddon>

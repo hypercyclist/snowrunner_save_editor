@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="paystar_5600ts_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts>
+			<Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftBoxEngine" />
+			<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftBoxRearWheel" SocketPointB="ShaftRearWheel1" />
+			<Shaft PointAConnectedToAddon="true" PointBConnectedToAddon="true" SocketPointB="ShaftFront2WheelBox" SocketPointA="ShaftBoxFront2Wheel" />    
+			<Shaft PointAConnectedToAddon="true" PointBConnectedToAddon="true" SocketPointA="ShaftFront2WheelFront1Wheel" SocketPointB="ShaftFront1Wheel" />   
+		</Shafts>
+ 	</TruckData>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_transferbox_allwheels" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

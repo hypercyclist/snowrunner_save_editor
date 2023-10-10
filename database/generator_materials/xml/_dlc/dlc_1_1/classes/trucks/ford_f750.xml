@@ -1,0 +1,454 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="0"
+			SteeringJointOffset="0.23"
+			Torque="connectable"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<Beacon
+			AspectRatio="1.4"
+			Color="g(169; 99; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			DirAngle="180"
+			Size="0.2"
+			SizeMultAtDay="0.5"
+		/>
+	</Flare>
+	<Body>
+		<Sunshield Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="0.05" Spring="10" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<Mirror Collisions="None" Mass="1">
+			<Constraint
+				LinearLimitsX="(-0.01; 0.01)"
+				LinearLimitsY="(-0.01; 0.01)"
+				LinearLimitsZ="(-0.01; 0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="100" Spring="1000" Type="Spring" />
+			</Constraint>
+		</Mirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.06"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1"
+		EngineStartDelay="1.7"
+		ExhaustStartTime="1.6"
+		FuelCapacity="140"
+		Responsiveness="0.6"
+		SteerSpeed="0.03"
+		TruckImage="ford750mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_ford_f750"
+			DefaultWheelType="wheels_ford_f750"
+		>
+			<Wheel _template="FrontWheel" Pos="(3.044; 0.48; 1.023)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.044; 0.48; 1.023)" />
+			<Wheel _template="RearWheel" Pos="(-1.881; 0.48; 0.98)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.881; 0.48; 0.98)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="ford_f750_suspension_default"
+			Type="s_ford_f750"
+			MaxWheelRadiusWithoutSuspension="0.32"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.823"
+		/>
+		<Steam Origin="(3; 1.1; 0)" Scale="0.5" ParentFrame="BoneChassis_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			MinDist="8.0"
+			Origin="(3; 1.205; 0)"
+		>
+			<GearFail		Sound="trucks/ford_f750/ford_f750_gear_wrong" />
+			<Gear			Sound="trucks/common/truck_gear_shift_heavy_rnd_set/truck_gear_shift_heavy_rnd" />
+			<Handbrake		Sound="trucks/ford_f750/ford_f750_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/ford_f750/ford_f750_handbrake_off" />
+			<BrakeRelease	Sound="trucks/ford_f750/ford_f750_brake_release" />
+			<BrakesSqueal	Sound="trucks/ford_f750/ford_f750_brakes_squeal" />
+			<Reverse		Sound="trucks/ford_f750/ford_f750_reverse" />
+			<Honk			Sound="trucks/ford_f750/ford_f750_honk" />
+			<EngineRev		Sound="trucks/ford_f750/ford_f750_rev" />
+			<EngineAccel	Sound="trucks/ford_f750/ford_f750_acc" />
+			<EngineStart	Sound="trucks/ford_f750/ford_f750_start" />
+			<EngineStop		Sound="trucks/ford_f750/ford_f750_stop" />
+			<EngineIdle		Sound="trucks/ford_f750/ford_f750_idle" />
+			<EngineIdle_2d	Sound="trucks/ford_f750/ford_f750_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ford_f750/ford_f750_low" />
+			<EngineLow_2d	Sound="trucks/ford_f750/ford_f750_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ford_f750/ford_f750_high" />
+			<EngineHigh_2d	Sound="trucks/ford_f750/ford_f750_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+		</Sounds>
+		<!--		<Shakers/>-->
+		<OcclusionMap
+			HalfSizeZ="2"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-4.5"
+			MaxX="4.5"
+		/>
+		<LimitedFluid Center="(0.899; 0.555; -0.809)" SizeX="0.904" SizeY="0.388" SizeZ="0.573" Type="Box" />
+		<LimitedFluid Center="(1.823; 0.555; -0.809)" SizeX="0.904" SizeY="0.388" SizeZ="0.573" Type="Box" />
+		<GearboxSocket Default="g_scout_f750" Type="gearboxes_scouts_f750" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="us_scout_old_engine_0" Type="e_us_scout_old, e_us_scout_old_f750" />
+		<Driver Pos="(1.585; 1.342; 0.457)" SteeringWheelPos="(1.967; 1.67; 0.45)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.997; 0.076; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_f750_arrow_01" Org="(2.345; 1.567; 0.617)" OutputAngles="(-130; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.076; 0)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/ford_f750_arrow_01" Org="(2.345; 1.567; 0.431)" OutputAngles="(-135; 135)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.076; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/ford_f750_arrow_01" Org="(2.345; 1.567; 0.246)" OutputAngles="(-135; 135)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.074; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/ford_f750_arrow_02" Org="(2.351; 1.593; 0.52)" OutputAngles="(-32; 32)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.074; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_f750_arrow_02" Org="(2.347; 1.53; 0.52)" OutputAngles="(-34; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.074; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_f750_arrow_02" Org="(2.352; 1.593; 0.343)" OutputAngles="(-32; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.997; 0.074; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_f750_arrow_02" Org="(2.347; 1.53; 0.343)" OutputAngles="(-32; -5)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2.4; 0.7; -1)" Max="(3.9; 1.7; 1)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.43; 0.35; 1.12)" Max="(2.29; 0.765; -1.12)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.47" Type="wheels_ford_f750" />
+		<CompatibleWheels Scale="0.52" Type="wheels_ford_f750" />
+		<CompatibleWheels Scale="0.57" Type="wheels_ford_f750" />
+		<Camera Center="(-1; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/ford_f750_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/ford_f750_glass__sh_d.tga"
+				ViewPos="(1.585; 1.98; 0.457)"
+			>
+				<Mirror ClipDir="(-0.899; 0; -0.438)" ClipOffset="0.05" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.899; 0; -0.438)" Size="(0.15; 0.22)" Pos="(2.026; 2.029; 1.094)" />
+				<Mirror ClipDir="(-0.777; 0; 0.629)" ClipOffset="0.05" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.777; 0; 0.629)" Size="(0.15; 0.22)" Pos="(2.029; 2.029; -1.089)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(3.854; 1.172; 0)" />
+	<PhysicsModel Mesh="trucks/ford_f750">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-1.7; 0; 0)"
+			ImpactType="Truck"
+			Mass="3000"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(1; -0.8; 0)"
+				ImpactType="Truck"
+				Mass="3500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping="20000" Spring="400000" Type="Spring" />
+				</Constraint>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRodSteer"
+						MinLimit="-30"
+						MaxLimit="30"
+					/>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="Mirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="Mirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body Mass="0.2" ModelFrame="BoneKeyFob_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-50"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneBelt_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="20"
+					>
+						<Motor Damping="10" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneBeltBack_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="10"
+					>
+						<Motor Damping="5" Spring="0.5" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-3.93; 0.682; 0)" />
+			<Flare _template="StopSignal" Pos="(-3.774; 0.76; -0.549)" />
+			<Flare _template="StopSignal" Pos="(-3.774; 0.76; 0.549)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3.93; 0.682; 0)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-3.774; 0.815; -0.549)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-3.774; 0.815; 0.549)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.774; 0.815; -0.549)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.774; 0.815; 0.549)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 0.8" Pos="(4.3; 1.170; -0.8)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 0.8" Pos="(4.3; 1.170; 0.8)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Pos="(-3.8; 0.65; 0)" />
+			<Flare _template="IgnitionSignalRed" Size="0.3" Pos="(-3.774; 0.76; -0.549)" />
+			<Flare _template="IgnitionSignalRed" Size="0.3" Pos="(-3.774; 0.76; 0.549)" />
+			<Flare _template="Beacon" Color="g(169; 115; 0) x 0.5" Pos="(3.769; 1.536; -1.053)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="Beacon" Color="g(169; 115; 0) x 0.5" Pos="(3.769; 1.536; 1.053)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Size="0.4" Pos="(3.759; 1.536; -1.053)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Size="0.4" Pos="(3.759; 1.536; 1.053)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(3.659; 1.195; -1.171)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Size="0.2" Pos="(3.659; 1.195; 1.171)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(235; 210; 190) x 0.6" Size="0.4" Pos="(3.85; 1.176; -0.846)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(235; 210; 190) x 0.6" Size="0.4" Pos="(3.85; 1.176; 0.846)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.871; 1.174; -0.85)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(3.871; 1.174; 0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.4" Pos="(3.871; 1.174; -0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.4" Pos="(3.871; 1.174; 0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.871; 1.174; -0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.871; 1.174; 0.85)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/ford_f750_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4; 1; 0)" />
+	<GameData
+		Country="US"
+		Price="43600"
+		Recallable="true"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+		ExcludeAddons="trailer_log_pole"
+	>
+		<WinchSocket Pos="(3.865; 0.781; -0.454)" />
+		<WinchSocket Pos="(3.865; 0.781; 0.454)" />
+		<WinchSocket Pos="(-0.104; 0.795; -0.46)" />
+		<WinchSocket Pos="(-0.104; 0.795; 0.46)" />
+		<WinchSocket Pos="(-3.879; 0.761; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_FORD_F750_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgFord750"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="FordLogoAlt80"
+			UiName="UI_VEHICLE_FORD_F750_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.817; 1.467; -0.675)" Position="(7.835; 6.121; -0.306)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(3.657; 1.22; 2.219)" Position="(5.217; 2.16; -0.195)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.649; 1.299; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.173; 3.381; 3.097)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.953; 1.465; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.849; 3.507; 4.205)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.729; 1.873; 0.931)" Position="(4.657; 2.061; 0.125)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.093; 1.271; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.312; 3.02; -4.508)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.729; 0.962; 0.551)" Position="(4.985; 2.295; 0.093)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.271; 1.748; -0.735)" Position="(7.989; 3.28; 0.571)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.828; 0.877; 0.354)" Position="(4.057; 1.712; 3.354)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.126; 1.454; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.636; 3.373; -2.89)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.593; 0.662; -0.657)" Position="(9.445; 5.72; -0.329)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.818; 1.419; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.462; 1.324; -3.341)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.729; 0.484; 1.968)" Position="(5.103; 2.036; -0.009)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.863; 1.485; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.887; 3.347; 4.56)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.729; 1.207; 0.931)" Position="(5.008; 2.08; 0.091)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(4.732; 1.133; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-1.928; 1.987; -5.171)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.818; 1.419; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.462; 1.324; -3.341)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(3.417; 0.52; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(2.172; 2.662; -3.629)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.842; 1.033; -0.302)" Position="(4.211; 1.714; -3.375)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.506; 1.658; -1.037)" Position="(8.8; 2.034; -0.771)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(3.865; 0.781; -0.454)" />
+		<CraneSocket Pos="(3.865; 0.781; 0.454)" />
+		<CraneSocket Pos="(1; 2.25; 0)" />
+		<CraneSocket Pos="(-0.104; 0.795; -0.46)" />
+		<CraneSocket Pos="(-0.104; 0.795; 0.46)" />
+		<CraneSocket Pos="(-3.879; 0.761; 0)" />
+		<AddonSockets>
+			<Socket Names="Trailer" Offset="(-3.89; 0.776; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_f750_bumper_default">
+			<Socket Names="FordF750Bumper" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_f750_exhaust_default">
+			<Socket Names="FordF750ExhaustDefault" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="FordF750Exhaust" NamesBlock="MinicraneLoadstar" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_f750_gabarite_default">
+			<Socket Names="FordF750Gabarite" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Trunk" />
+			<Socket Names="MinicraneLoadstar" Offset="(-0.23; 0.91; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Rooftrunk" NamesBlock="FordF750Spotlight, FordF750Beacon, FordF750Beacon2" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Pickup" />
+			<Socket Names="FordF750PickupRooftrunk" NamesBlock="MinicraneLoadstar" />
+			<Socket Names="FrameAddonFlatbed1" Offset="(-2; 0.911; 0)">
+				<AddonsShift Offset="(-0.3; 0; 0)" Types="FordF750Trunk" />
+				<AddonsShift Offset="(-0.35; 0; 0)" Types="MinicraneLoadstar" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_f750_transferbox_default">
+			<Socket Names="FordF750TransferBox" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+				<ExtraParent Frame="BoneAxle1" />
+				<ExtraParent Frame="BoneRack" />
+				<ExtraParent Frame="BoneRackL" />
+				<ExtraParent Frame="BoneRackR" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Snorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Spotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Beacon" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="FordF750Beacon2" NamesBlock="FordF750Horn1" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Visor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Horn1" NamesBlock="FordF750Rooftrunk" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="FordF750Horn2" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x1_03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(2.192; 2.14; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(2.225; 1.764; -0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Sticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordF750Sticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="FordF750Sticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffHoodFordF750" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodHinge2" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="BoneTieRodPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

@@ -1,0 +1,35 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="2000">
+		<LimitedFluid
+			Center="(-0.391; 2.554; 0)"
+			LengthX="5.144"
+			RadiusY="1.270"
+			RadiusZ="1.270"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/tatra_frame_addon_tank">
+		<Body Mass="600">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_TATRA_FRAME_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_TATRA_FRAME_TANK_NAME"
+		/>
+		<InstallSocket Type="TatraFrameAddonTank" />
+	</GameData>
+	<FuelMass>
+		<Body Mass="12000" />
+	</FuelMass>
+</TruckAddon>

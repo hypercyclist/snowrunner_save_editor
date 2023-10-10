@@ -1,0 +1,1202 @@
+<_templates Include="trucks">
+	<Wheel>
+		<FirstAxle
+			CamberAngleRender="2"
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="35"
+			SteeringJointOffset="0.36"
+			Torque="default"
+		/>
+		<SecondAxle
+			CamberAngleRender="1"
+			ConnectedToHandbrake="true"
+			Location="front2"
+			SteeringAngle="29.7"
+			SteeringJointOffset="0.36"
+			Torque="default"
+		/>
+		<ThirdAxle
+			CamberAngleRender="0"
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FourthAxle
+			CamberAngleRender="0"
+			ConnectedToHandbrake="true"
+			Location="rear2"
+			Torque="default"
+		/>
+	</Wheel>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint	Type="Fixed" />
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Always"
+		EngineIconMesh="env/engnie_zikz_612h_mastodon"
+		EngineIconScale="0.8"
+		EngineStartDelay="3.2"
+		ExhaustStartTime="2.8"
+		FuelCapacity="500"
+		Responsiveness="0.2"
+		SteerSpeed="0.016"
+		TruckImage="zikz612mchr"
+		TruckType="HEAVY"
+
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="mudtires_zikz605r_1"
+			DefaultWheelType="wheels_zikz_612h_mastodont"
+		>
+			<!-- First Axle -->
+			<Wheel _template="FirstAxle" Pos="(6.539; 0.758; 1.069)" ParentFrame="BoneCabin_cdt" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(6.539; 0.758; 1.069)" ParentFrame="BoneCabin_cdt" />
+			<!-- Second Axle -->
+			<Wheel _template="SecondAxle" Pos="(4.334; 0.758; 1.069)" ParentFrame="BoneCabin_cdt" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(4.334; 0.758; 1.069)" ParentFrame="BoneCabin_cdt" />
+			<!-- Third Axle-->
+			<Wheel _template="ThirdAxle" Pos="(1.122; 0.758; 1.069)" ParentFrame="BoneChassis_cdt" />
+			<Wheel _template="ThirdAxle" RightSide="true" Pos="(1.122; 0.758; 1.069)" ParentFrame="BoneChassis_cdt" />
+			<!-- Fourth Axle-->
+			<Wheel _template="FourthAxle" Pos="(-1.084; 0.758; 1.069)" ParentFrame="BoneChassis_cdt" />
+			<Wheel _template="FourthAxle" RightSide="true" Pos="(-1.084; 0.758; 1.069)" ParentFrame="BoneChassis_cdt" />
+		</Wheels>
+		<SuspensionSocket
+			Default="zikz_612h_mastodont_suspension_default"
+			Type="s_zikz_612h_mastodont"
+			MaxWheelRadiusWithoutSuspension="1.8"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRack1" FrameSteerLeft="BoneRackL1" FrameSteerRight="BoneRackR1" RackHalfSizeZ="1.01" />
+		<SteeringRack Frame="BoneRack" FrameSteerLeft="BoneRackL2" FrameSteerRight="BoneRackR2" RackHalfSizeZ="1.01" />
+		<Steam Origin="(2.101; 1.884; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			Origin="(2; 0.33; 0)"
+			MinDist="15.0"
+		>
+			<Reverse		Sound="" />
+			<BrakePull		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_brake_pull" />
+			<BrakesSqueal	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_brake_release" />
+			<Handbrake		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_handbrake_off" />
+			<Honk			Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_honk" />
+			<EngineRev		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_rev" />
+			<EngineAccel	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_acc" />
+			<EngineStart	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_start" />
+			<EngineStop		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_stop" />
+			<EngineIdle		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_idle" />
+			<EngineIdle_2d	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_low" />
+			<EngineLow_2d	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_high" />
+			<EngineHigh_2d	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_heavy" />
+			<EngineHeavy_2d	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_heavy_2d"	IsSound2D="true" />
+			<EngineTurbo	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_turbo" />
+			<EngineTrans	Sound="trucks/zikz_612h_mastodont/zikz_612h_mastodont_trans" />
+			<ChassisStress	Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="BoneEngine_Shaker"
+				MinAngle="(0; 0.3; 0)"
+				MaxAngle="(0; 1; 0)"
+				MaxFrequency="2.5"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</Shakers>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="3" MinX="-3.5" MaxX="10" />
+		<Messages Pos="(8.417; 2.922; 0.034)" ParentFrame="BoneCabin_cdt"/>
+		<CompatibleWheels OffsetZ="0.36" Scale="0.78" Type="wheels_zikz_612h_mastodont" />
+		<CompatibleWheels OffsetZ="0.34" Scale="0.77" Type="wheels_heavy_single_zikz_612h" />
+		<CompatibleWheels OffsetZ="0.34" Scale="0.77" Type="wheels_heavy_single2_zikz_612h" />
+		<!--<LimitedFluid
+			Center="(5.483; 1.498; 1.235)"
+			SizeX="0.773"
+			SizeY="0.57"
+			SizeZ="0.873"
+			Type="Box"
+		/>
+		<LimitedFluid
+			Center="(5.483; 1.498; -1.235)"
+			SizeX="0.773"
+			SizeY="0.57"
+			SizeZ="0.873"
+			Type="Box"
+		/>-->
+		<Snorkel Origin="(7.926; 2.39; 0)" />
+		<Intake Dir="(0.475; 0; 0)" Origin="(8.81; 1.832; 0.016)" Size="0.75" />
+		<GearboxSocket Default="g_special_zikz_612h_default" Type="gearboxes_special_zikz_612h" />
+		<FuelTank DamageCapacity="180" />
+		<EngineSocket Default="ru_special_mastodont_0" Type="e_ru_special_zikz_mastodont" />
+		<Driver
+			AnimationSet="HeavyTruck"
+			LegsOffset="(0.1; 0; 0)"
+			Pos="(8; 1.769; 1.050)"
+			SteeringWheelPos="(8.34; 2.07; 1.045)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.6; 0.45; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.655; 1.878; 1.173)" OutputAngles="(-62; 14)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.66; 1.873; 1.272)" OutputAngles="(-68; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.659; 1.872; 1.383)" OutputAngles="(-68; 5)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.728; 1.93; 1.272)" OutputAngles="(-68; -1)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.728; 1.93; 1.371)" OutputAngles="(-68; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.42; 0.45; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.678; 1.895; 1.091)" OutputAngles="(-68; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.42; 0.45; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.679; 1.895; 1.005)" OutputAngles="(-68; 60)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.659; 1.873; 0.822)" OutputAngles="(-68; -40)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.728; 1.93; 0.822)" OutputAngles="(-68; -21)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.66; 1.873; 0.711)" OutputAngles="(-68; -10)" />
+			<Gauge Damping="0.99" Dir="(-0.83; 0.558; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_01" Org="(8.729; 1.93; 0.723)" OutputAngles="(-68; -3)" />
+			<Gauge Damping="0.99" Dir="(0.045; 0.558; 1.4)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_02" Org="(8.562; 2.241; 0.694)" OutputAngles="(-68; -3)" Scale="1.6" />
+			<Gauge Damping="0.99" Dir="(-0.46; 0.558; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_02" Org="(8.733; 1.952; 0.926)" OutputAngles="(-165; 165)" />
+			<Gauge Dir="(-0.46; 0.558; 0)" InputRange="(0;100)" InputType="speed" Mesh="trucks/arrows/zikz_612h_mastodont_arrow_02" Org="(8.733; 1.952; 1.170)" OutputAngles="(-119; 106)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(6; 1.175; -1.2)" Max="(9.150; 2.392; 1.2)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(5.82; 1.169; 1.671)" Max="(5.15; 1.739; -1.671)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(2.686; 0.85; -0.26)" Max="(6.15; 1.4; 0.26)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<Camera Center="(2; 0; 0)" RadiusMultiplier="1.3" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				LimitsHor="(-2.4; 1.5)"
+				WindshieldDiffuseTexture="trucks/zikz_612h_mastodon_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/zikz_612h_mastodon_glass__sh_d.tga"
+				ViewPos="(7.9; 2.4; 1.050)"
+				
+			>
+				<Rear
+					HorTransitionEnd="-1.5"
+					HorTransitionStart="-0.95"
+					ViewPosOffset="(0.65; -0.1; 0.7)"
+					RollAngle="-15"
+					ViewDir="(1; -0.05; 0.5)"
+				/>
+				<Mirror
+					ClipDir="(-1; 0; -0.22)"
+					ClipOffset="0.01"
+					CurveAngle="90"
+					FOVScale="2.5"
+					MeshFrame="mirror_left"
+					ReflectionDir="(-1; 0; -0.22)"
+					Size="(0.2; 0.3)"
+					Pos="(8.772; 2.407; 1.718)"
+				/>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2L" IsIndependent="true" />
+			<Axle Frame="BoneAxle2R" IsIndependent="true" />
+			<Axle Frame="BoneAxle3L" IsIndependent="true" />
+			<Axle Frame="BoneAxle3R" IsIndependent="true" />
+			<Axle Frame="BoneAxle4L" IsIndependent="true" />
+			<Axle Frame="BoneAxle4R" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="15000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				ImpactType="Truck"
+				Mass="9000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					CenterOfMassOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="2"
+				>
+					<Motor Damping="100000" Spring="150000" Type="Spring" />
+				</Constraint>
+				
+				<Body Collisions="None" Mass="1.5" ModelFrame="BoneSunshieldL_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-3"
+						MaxLimit="3"
+					>
+						<Motor Damping="0.1" Spring="3" Type="Spring" />
+					</Constraint>
+				</Body>
+				<!--<Body Collisions="None" Mass="0.5" ModelFrame="BoneInteriorArm_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="10"
+					>
+						<Motor Damping="0.2" Spring="0.3" Type="Spring" />
+					</Constraint>
+				</Body>-->
+				<Body Collisions="None" Mass="2.5" ModelFrame="BoneCurtainHank01_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="35"
+					>
+						<Motor Damping="0.1" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneCurtainHank02_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-25"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.05" Spring="0.5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneCurtainHank03_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="35"
+					>
+						<Motor Damping="0.05" Spring="0.8" Type="Spring" />
+					</Constraint>
+				</Body>
+				
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer1"
+						Type="Hinge"
+						MinLimit="-36"
+						MaxLimit="36"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod02_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer2"
+						Type="Hinge"
+						MinLimit="-36"
+						MaxLimit="36"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod03_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer3"
+						Type="Hinge"
+						MinLimit="-36"
+						MaxLimit="36"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod04_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer4"
+						Type="Hinge"
+						MinLimit="-21"
+						MaxLimit="21"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod05_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer5"
+						Type="Hinge"
+						MinLimit="-21"
+						MaxLimit="21"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod06_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer6"
+						Type="Hinge"
+						MinLimit="-21"
+						MaxLimit="21"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod07_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer7"
+						Type="Hinge"
+						MinLimit="-21"
+						MaxLimit="21"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneTieRod08_cdt"
+					NetSync="pv"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="TieRodSteer8"
+						Type="Hinge"
+						MinLimit="-36"
+						MaxLimit="36"
+					>
+						<Motor
+							Damping="1.0"
+							Force="6000"
+							Tau="1"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorL_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorR_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light
+				_template="StopSignal"
+				Color="g(102; 1; 1) x 4"
+				Pos="(-2.199; 1.189; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+			<Flare _template="StopSignal" Size="0.4" Pos="(-2.199; 1.189; 0.99)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-2.199; 1.189; -0.99)" ParentFrame="BoneChassis_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light
+				AttenEnd="2.0"
+				Color="(80; 80; 80)"
+				Dir="(-1; -0.2; 0)"
+				InnerCone="120"
+				OuterCone="160"
+				Pos="(-2.199; 1.189; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+			<Flare AspectRatio="1.4" Color="g(200; 200; 200) x 0.4" ColorMultAtDay="0.6" Dir="(-1; 0; 0)" DirAngle="90" Reflections="true" Size="0.5" Pos="(-2.2; 1.189; -1.035)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.1" Pos="(-2.2; 1.189; -0.99)" ParentFrame="BoneChassis_cdt" />
+			<Flare AspectRatio="1.4" Color="g(200; 200; 200) x 0.4" ColorMultAtDay="0.6" Dir="(-1; 0; 0)" DirAngle="90" Reflections="true" Size="0.5" Pos="(-2.2; 1.189; 1.035)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.2" Dir="(-1; 0; 0)" Size="0.1" Pos="(-2.2; 1.189; 0.99)" ParentFrame="BoneChassis_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.7" Dir="(1; 0; 0)" Size="2" Pos="(9.025; 1.551; 1.3)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.7" Dir="(1; 0; 0)" Size="2" Pos="(9.025; 1.551; -1.3)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Color="g(102; 1; 1) x 2" Pos="(-2.2; 1.189; 0.99)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Color="g(102; 1; 1) x 2" Pos="(-2.2; 1.189; -0.99)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.7" Dir="(-1; 0; 0)" Size="0.7" Pos="(-2.2; 1.189; 0.93)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.7" Dir="(-1; 0; 0)" Size="0.7" Pos="(-2.2; 1.189; -0.93)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.7" Dir="(-1; 0; 0)" Size="0.7" Pos="(-2.2; 1.189; -1.11)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.7" Dir="(-1; 0; 0)" Size="0.7" Pos="(-2.2; 1.189; 1.11)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(0; 0; 0.5)" Size="0.33" Pos="(8.924; 1.836; 1.525)" ParentFrame="BoneCabin_cdt" />
+		    <Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(0; 0; -0.5)" Size="0.33" Pos="(8.924; 1.836; -1.525)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(0; 0; 0.5)" Size="0.25" Pos="(9.08; 1.18; 1.53)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(0; 0; -0.5)" Size="0.25" Pos="(9.08; 1.18; -1.53)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" Color="g(255; 190; 100) x 0.4" Size="0.5" Pos="(9.025; 1.551; 1.29)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" Color="g(255; 190; 100) x 0.4" Size="0.5" Pos="(9.025; 1.551; -1.29)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(9.12; 1.551; 1.306)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(9.12; 1.551; -1.306)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 190; 100) x 0.5" Size="0.4" Pos="(9.1; 1.24; 1.15)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 190; 100) x 0.5" Size="0.4" Pos="(9.1; 1.24; -1.15)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.5" Size="1" Pos="(9; 1.547; 1.292)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.5" Size="1" Pos="(9; 1.547; -1.292)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(9.025; 1.551; 1.306)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.3" Pos="(9.025; 1.551; -1.306)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/zikz_612h_mastodont_lmk" MinScale="1.8" MaxScale="2.8" />
+	<HeadLight _template="Default" Pos="(9.025; 1.551; 0)" />
+	<GameData
+		Country="RU,CAS"
+		ExcludeAddons="trailer_log_pole"
+		Price="191300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(9.212; 1.165; 0)" />
+		<WinchSocket Pos="(-2.261; 0.934; 0.02)" />
+		<WinchSocket Pos="(2.5; 1.15; 0.55)" />
+		<WinchSocket Pos="(2.5; 1.15; -0.55)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_ZIKZ_612H_MASTODONT_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgZikz612H"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="ZiKZLogo80"
+			UiName="UI_VEHICLE_ZIKZ_612H_MASTODONT_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="roof_sticker" InterestPosition="(7.011; 2.167; -0.956)" Position="(9.7; 5.925; -0.553)" />
+			<CameraPos FOV="32.0" Name="roofrack" InterestPosition="(5.83; 3.213; -1.424)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.545; 4.16; -3.338)" />
+			<CameraPos FOV="32.0" Name="exhaust" InterestPosition="(3.027; 1.493; -1.424)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.495; 1.478; -3.338)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(8.595; 0.767; 1.237)" Position="(6; 2.868; -0.533)" />
+			<CameraPos FOV="32.0" Name="snorkels" InterestPosition="(4.027; 0.947; -1)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.440; 4.039; 0)" />
+			<CameraPos FOV="32.0" Name="sparewheel2" InterestPosition="(4.027; 3.463; -1.058)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.798; 4.039; -2.456)" />
+			<CameraPos FOV="32.0" Name="beacon1" InterestPosition="(4.027; 2.15; -0.245)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.063; 4.339; -2.456)" />
+			<CameraPos FOV="32.0" Name="beacon2" InterestPosition="(5.73; 2.429; -0.839)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.649; 4.039; -2.848)" />
+			<CameraPos FOV="32.0" Name="spotlight1" InterestPosition="(6.868; 2.765; -1.5)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.036; 3.486; -2.129)" />
+			<CameraPos FOV="32.0" Name="spotlight2" InterestPosition="(6.4; 2.765; -1.8)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.036; 3.486; -2.129)" />
+			<CameraPos FOV="32.0" Name="outerframe" InterestPosition="(6.193; 2.053; -2.008)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.132; 2.689; -4.48)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(-2.0; 2.2; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-12.55; 5.273; 9.315)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.917; 2.341; -1.149)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.628; 4.331; 1.437)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.439; 2.221; 1.066)" Position="(5.714; 2.661; -0.37)" />
+			<CameraPos FOV="32.0" Name="roofs" InterestPosition="(7.013; 2.118; -0.523)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.239; 4.145; 2.722)" />
+			<CameraPos FOV="32.0" Name="hood_ornament" InterestPosition="(6.727; 2.16; -0.851)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.918; 2.816; -1.653)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(8.595; 1.207; 2.389)" Position="(6.062; 2.498; -0.015)" />
+			<CameraPos FOV="32.0" Interior="true" Name="ins_sticker01" InterestPosition="(7.85; 0.87; -0.85)" MaxZoom="2" Position="(6.5; 2.4; -0.9)" />
+			<CameraPos FOV="32.0" Interior="true" Name="ins_sticker02" InterestPosition="(7.5; 0.9; 0.8)" MaxZoom="2" Position="(6.4; 2.4; -1.2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="ins_sticker03" InterestPosition="(7.5; 1.5; 0.8)" MaxZoom="2" Position="(6.4; 2.4; -1.2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="ins_sticker04" InterestPosition="(7.8; 0.92; -1.2)" MaxZoom="2" Position="(6.5; 2.4; -0.95)" />
+			<CameraPos FOV="32.0" Interior="true" Name="ins_sticker05" InterestPosition="(6; 0.8; 2.5)" MaxZoom="2" Position="(6.4; 2.4; -1.2)" />
+			<CameraPos FOV="32.0" Name="out_sticker01" InterestPosition="(7.076; 1.95; -0.8)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.531; 3.782; 0.7)" />
+			<CameraPos FOV="32.0" Name="out_sticker02" InterestPosition="(5.6; 1.665; -1.464)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.5; 1.779; -3.042)" />
+			<CameraPos FOV="32.0" Name="out_sticker03" InterestPosition="(7.7; 1.665; 1.536)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.467; 1.615; 3.162)" />
+			<CameraPos FOV="32.0" Name="out_sticker04" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.011; 1.722; -3.158)" InterestPosition="(4.6; 1.68; -1.015)" />
+			<CameraPos FOV="32.0" Name="out_sticker05" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.454; 1.722; 3)" InterestPosition="(6.493; 1.68; 1.505)" />
+			<CameraPos FOV="32.0" Name="out_sticker06" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.286; 4.15; -0.9)" InterestPosition="(4.6; 1.9; -1.9)" />
+			<CameraPos FOV="32.0" Name="out_sticker07" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.286; 4.15; 1.3)" InterestPosition="(4.6; 1.9; 0.1)" />
+			<CameraPos FOV="32.0" Name="out_sticker08" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6; 4.75; -0.5)" InterestPosition="(4.6; 1.9; -1.4)" />
+			<CameraPos FOV="32.0" Name="out_sticker09" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.5; 4.75; 1.1)" InterestPosition="(4.6; 2.2; -0.1)" />
+			<CameraPos FOV="32.0" Name="horns2" InterestPosition="(5.81; 2.695; -1.532)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.736; 3.787; -2.302)" />
+			<CameraPos FOV="32.0" Name="horns" InterestPosition="(4.849; 2.695; -1.937)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.005; 3.108; -3.039)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.461; 1.397; -0.216)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.151; 2.641; -2.289)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(5.96; 1.482; 2.389)" Position="(6.401; 2.473; -0.527)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.103; 1.419; -0.471)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.101; 4.011; -3.352)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(8.074; 1.2; 0)" MaxZoom="2" Position="(6; 2.4; -1.1)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(8.074; 3.1; 0.15)" MaxZoom="2" Position="(6.35; 2.2; -1)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(2.813; 0.409; 0.126)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.853; 1.52; -5.155)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.432; 1.554; 1.822)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.74; 2.387; 4.944)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.197; 1.735; -0.23)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.641; 2.738; -4.536)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.479; 0.992; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.767; 1.805; 2.899)" />
+			<CameraPos FOV="32.0" Name="glass_sticker" InterestPosition="(6.954; 1.85; -0.725)" Position="(11.7; 2.977; 1.399)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(9.212; 1.165; 0)" />
+		<CraneSocket Pos="(-2.261; 0.934; 0.02)" />
+		<CraneSocket Pos="(2.5; 1.15; 0.55)" />
+		<CraneSocket Pos="(2.5; 1.15; -0.55)" />
+		<AddonSockets>
+			<Socket Names="Trailer, MastodonLogPoleTrailer" NamesBlock="MastodonSideboard, MastodonWatertank, FrameAddonSeismicVibratorZikz, FrameAddonLogMediumMastodon" Offset="(-2.33; 0.93; 0)" />
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-0.4; 1.85; 0)" />
+			<Socket Names="Semitrailer, SemitrailerOiltank" NamesBlock="SaddleHigh" Offset="(-1; 1.65; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				AddonShift="(1; 0; 0)"
+				Names="ZikzFrameAddon"
+				Offset="(3.35; -0.08; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<AddonsShift Offset="(1.2; 0; 0)" Types="MinicraneRU" />
+			</Socket>
+			<Socket Names="MastodonSideboard" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="MastodonWatertank" ParentFrame="BoneChassis_cdt" Offset="(-0.17; 0; 0)" />
+			<Socket Names="MastodonBigCrane" Offset="(3; 0.08; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="MastodonLongBigCrane" Offset="(0.5; 1.54; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="Trailer, MastodonLogPoleTrailer, LargeSemitrailer, LargeSemitrailerOiltank, Semitrailer, SemitrailerOiltank"/>
+			<Socket Names="SaddleHigh" Offset="(-0.4; 1.3; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.149)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.149)" />
+			</Socket>
+			<Socket Names="SaddleLow" Offset="(-1; 1.3; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.149)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.149)" />
+			</Socket>
+			<Socket Names="FrameAddonKungZikz" NamesBlock="MinicraneRU" Offset="(3.8; -0.08; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibratorZikz" Offset="(2; -0.07; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonTankZikz" Offset="(2.95; -0.08; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonLogShortMastodon" Offset="(1; 1.7; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonLogMediumMastodon" Offset="(1; 1.7; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="MastodonBunkLog" Offset="(-4.5; 1.5; 0)" />
+			<Socket Names="MastodonFrameAddonTowPlatform" NamesBlock="MinicraneRU, ZikzLogLift" Offset="(1.5; 1.55; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="MinicraneRU"
+				NamesBlock="MastodonSideboard, MastodonWatertank, MastodonBigCrane, MastodonLongBigCrane, FrameAddonSeismicVibratorZikz, FrameAddonTankZikz, FrameAddonLogShortMastodon, FrameAddonLogMediumMastodon"
+				Offset="(2.22; 1.29; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<AddonsShift Offset="(-4; 0; 0)" Types="ZikzFrameAddon" />
+			</Socket>
+			<Socket Names="ZikzLogLift" NamesBlock="MastodonSideboard, MastodonWatertank, MastodonBigCrane, MastodonLongBigCrane, FrameAddonSeismicVibratorZikz, FrameAddonTankZikz, FrameAddonLogShortMastodon, FrameAddonLogMediumMastodon, FrameAddonKungZikz, ZikzFrameAddon, SaddleHigh" Offset="(4.4; -0.05; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_612h_mastodont_electricbox" RequiredAddonIfNoConflicts="zikz_612h_mastodont_electricbox">
+			<Socket Names="MastodonElectricbox" Offset="(0; 0; 0)" NamesBlock="MastodonWatertank, FrameAddonKungZikz" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_612h_mastodont_spare_wheel">
+			<Socket Names="MastodonSpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonSpareWheel2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonBeacon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" NamesBlock="zikz_612h_mastodont_roofrack"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonOuterframe" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonRoofrack"  ParentFrame="BoneCabin_cdt" Offset="(0.1; 0; 0)"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_612h_mastodont_exhaust_default">
+			<Socket Names="MastodonExhaust" Offset="(0; -0.02; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_612h_mastodont_bumper_default">
+			<Socket Names="MastodonBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_612h_mastodont_spot_light_default">
+			<Socket Names="MastodonSpotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonVisor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonAirFilter" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MastodonHorns" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- stuff -->
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(8.81; 2.005; 1.12)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<!--<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffCurtainZikz612h"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>-->
+		<AddonSockets>
+			<Socket
+				InCockpit="false"
+				Names="StuffGlassStickerZikz612h"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612h_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612h_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612h_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612h_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612h_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hCapote_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hDoorL_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hDoorR_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hDoorR_1x1_2"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hDoorL_1x1_2"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hRoof_1x1_1"
+				Offset="(0.15; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hRoof_1x1_2"
+				Offset="(0.15; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hRoof_1x1_3"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffZikz612hRoof_1x1_4"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer1" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer2" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer3" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer4" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer5" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer6" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer7" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer8" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!-- First Right Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle1R_IK_ArmBottomA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="BoneAxle1R_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1R_IK_ArmTopA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="BoneAxle1R_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- First Right Axel Damper -->
+		<IKBone ModelFrame="BoneDamper1R_IK_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1R"
+				ModelFrame="BoneDamper1R_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- First Left Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle1L_IK_ArmBottomA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="BoneAxle1L_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle1L_IK_ArmTopA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="BoneAxle1L_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- First Left Axel Damper -->
+		<IKBone ModelFrame="BoneDamper1L_IK_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1L"
+				ModelFrame="BoneDamper1L_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Second Right Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle2R_IK_ArmBottomA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="BoneAxle2R_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle2R_IK_ArmTopA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="BoneAxle2R_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Second Right Axel Damper -->
+		<IKBone ModelFrame="BoneDamper2R_IK_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="BoneDamper2R_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Second Left Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle2L_IK_ArmBottomA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="BoneAxle2L_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle2L_IK_ArmTopA" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="BoneAxle2L_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Second Left Axel Damper -->
+		<IKBone ModelFrame="BoneDamper2L_IK_A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="BoneDamper2L_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Third Right Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle3R_IK_ArmBottomA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3R"
+				ModelFrame="BoneAxle3R_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle3R_IK_ArmTopA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3R"
+				ModelFrame="BoneAxle3R_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Third Right Axel Damper -->
+		<IKBone ModelFrame="BoneDamper3R_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3R"
+				ModelFrame="BoneDamper3R_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Third Left Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle3L_IK_ArmBottomA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3L"
+				ModelFrame="BoneAxle3L_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle3L_IK_ArmTopA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3L"
+				ModelFrame="BoneAxle3L_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Third Left Axel Damper -->
+		<IKBone ModelFrame="BoneDamper3L_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3L"
+				ModelFrame="BoneDamper3L_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Fourth Right Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle4R_IK_ArmBottomA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4R"
+				ModelFrame="BoneAxle4R_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle4R_IK_ArmTopA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4R"
+				ModelFrame="BoneAxle4R_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Fourth Right Axel Damper -->
+		<IKBone ModelFrame="BoneDamper4R_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4R"
+				ModelFrame="BoneDamper4R_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Fourth Left Axel Wishbones -->
+		<IKBone ModelFrame="BoneAxle4L_IK_ArmBottomA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4L"
+				ModelFrame="BoneAxle4L_IK_ArmBottomB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle4L_IK_ArmTopA" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4L"
+				ModelFrame="BoneAxle4L_IK_ArmTopB"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Fourth Left Axel Damper -->
+		<IKBone ModelFrame="BoneDamper4L_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4L"
+				ModelFrame="BoneDamper4L_IK_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- STEERING IK -->
+		<!-- Bone Steer Left Hook -->
+		<!--
+		<IKBone ModelFrame="IK_BoneSteerLeftHookA_L" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL1"
+				ModelFrame="IK_BoneSteerLeftHookB_L"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		-->
+		<!-- Bone Steer Rod -->
+		<!--
+		<IKBone ModelFrame="IK_BoneSteerRodA_L" ParentFrame="IK_BoneSteerLeftHookA_L">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL1"
+				ModelFrame="IK_BoneSteerRodB_L"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		-->
+		<!-- Tie Rod Cyl -->
+		<IKBone ModelFrame="IK_TieRodCylB" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod02_cdt"
+				ModelFrame="IK_TieRodCylA"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 02 -->
+		<IKBone ModelFrame="IK_TieRodCyl02A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod03_cdt"
+				ModelFrame="IK_TieRodCyl02B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 03 -->
+		<IKBone ModelFrame="IK_TieRodCyl03A" ParentFrame="BoneTieRod02_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="IK_TieRodCyl02B"
+				ModelFrame="IK_TieRodCyl03B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 04 -->
+		<IKBone ModelFrame="IK_TieRodCyl04A" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod04_cdt"
+				ModelFrame="IK_TieRodCyl04B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 05 -->
+		<IKBone ModelFrame="IK_TieRodCyl05A" ParentFrame="BoneTieRod04_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod06_cdt"
+				ModelFrame="IK_TieRodCyl05B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 06 -->
+		<IKBone ModelFrame="IK_TieRodCyl06A" ParentFrame="BoneTieRod06_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod07_cdt"
+				ModelFrame="IK_TieRodCyl06B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- Tie Rod Cyl 07 -->
+		<IKBone ModelFrame="IK_TieRodCyl07A" ParentFrame="BoneTieRod07_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod02_cdt"
+				ModelFrame="IK_TieRodCyl07B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<!-- BoneTieRod05IK -->
+		<IKBone ModelFrame="BoneTieRod05Rack" ParentFrame="BoneTieRod05_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTieRod04_cdt"
+				ModelFrame="BoneTieRod05Rack1_2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

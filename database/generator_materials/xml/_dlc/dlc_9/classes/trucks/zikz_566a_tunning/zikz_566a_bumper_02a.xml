@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_bumper_02a">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; -0.1; 0)"
+				ImpactType="Truck"
+				Mass="6"
+				ModelFrame="BoneRope_cdt"
+				Collisions="None"
+			>
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-15" MaxLimit="18">
+					<Motor Damping="1" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.242; 1.059; -0.28)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(3.242; 1.059; -0.28)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(3.242; 1.059; -0.28)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(3.242; 1.059; 0.28)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(3.242; 1.059; 0.28)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(3.242; 1.059; 0.28)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" AttenEnd="75"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LIGHTCAGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LIGHTCAGE_NAME"
+		/>
+		<InstallSocket Type="zikz566Bumper" />
+	</GameData>
+</TruckAddon>

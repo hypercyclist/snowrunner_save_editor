@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="khan_317_sentinel_spotlight_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_spotlight_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.951; 2.242; -0.470)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(1.951; 2.242; 0.448)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; -0.470)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; 0.448)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; -0.351)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; 0.321)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; -0.226)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.12" Pos="(1.951; 2.242; 0.201)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HEADLIGHTS_LED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HEADLIGHTS_LED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

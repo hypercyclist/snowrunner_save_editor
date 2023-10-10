@@ -1,0 +1,68 @@
+<_templates Include="trucks" />
+<_parent File="tatra_force_t815_7_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_bumper_3">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneHook_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="25"
+				>
+					<Motor Damping="2" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneRope_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-20"
+					MaxLimit="30"
+				>
+					<Motor Damping="1" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.807; 1.475; -0.928)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.807; 1.475; 0.925)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.807; 1.475; -0.928)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.807; 1.475; 0.925)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.807; 1.475; -0.678)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.807; 1.475; 0.675)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.807; 1.475; -0.678)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.807; 1.475; 0.675)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.807; 1.475; -0.928)" />
+			<Model _template="HeadLightRay" Org="(4.807; 1.475; 0.925)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.807; 1.475; -0.928)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.807; 1.475; 0.925)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.807; 1.475; -0.678)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.807; 1.475; 0.675)" />
+			<Flare _template="BlueStreak" Pos="(4.807; 1.475; -0.928)" />
+			<Flare _template="BlueStreak" Pos="(4.807; 1.475; 0.925)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_CROSSFOG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CROSSFOG_NAME"
+		/>
+	</GameData>
+</TruckAddon>

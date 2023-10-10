@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_WING_NAME"
+		UiDesc="UI_CARGO_WING_DESC"
+		UiIcon20x20="cargoTypePlane20"
+		UiIcon40x40="cargoTypePlane40"
+		UiIcon100x100="cargoTypePlane"
+	/>
+</CargoType>

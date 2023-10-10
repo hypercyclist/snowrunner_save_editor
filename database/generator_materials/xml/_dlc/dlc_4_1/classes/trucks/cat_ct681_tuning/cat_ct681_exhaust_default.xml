@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(.5; .05; .05)"
+				MaxAngle="(2; .2; .2)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_exhaust_default">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="CatCT681Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.892; 0.451; 0.000)"
+		IsLight="true"
+		Origin="(-1.106; 3.498; -1.114)"
+		Speed="3.82"
+	/>
+</TruckAddon>

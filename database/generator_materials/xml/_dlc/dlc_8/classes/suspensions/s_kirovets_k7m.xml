@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="280"
+		Name="kirovets_k7m_suspension_default"
+	>
+		<Suspension Damping="0.5" Height="0" SuspensionMin="-0.13" Strength="0.1" WheelType="front" BrokenSuspensionMax="0.13" SuspensionMax="0.13"  />
+		<Suspension Damping="0" Height="0" SuspensionMin="0" Strength="0" WheelType="rear" BrokenSuspensionMax="0" SuspensionMax="0" />
+		<GameData
+			Price="7500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

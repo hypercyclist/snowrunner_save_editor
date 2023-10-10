@@ -1,0 +1,49 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator1" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotator2" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_beacon_1">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.103; 2.792; 1.019)" ParentFrame="BoneRotator1" />
+			<Light Dir="(1; 0; 0)" Pos="(1.103; 2.792; 1.019)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.103; 2.792; 1.019)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.103; 2.792; 1.019)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(1.055; 2.746; 1.019)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.061; 2.794; -0.979)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0; 0; 1)" Pos="(1.061; 2.794; -0.979)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.061; 2.794; -0.979)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.061; 2.794; -0.979)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(1.061; 2.794; -1.021)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_TALL_NAME"
+		/>
+		<InstallSocket Type="tuz_16_actaeonBeacon" />
+	</GameData>
+</TruckAddon>

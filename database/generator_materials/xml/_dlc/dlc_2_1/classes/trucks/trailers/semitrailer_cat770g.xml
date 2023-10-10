@@ -1,0 +1,264 @@
+<_templates Include="trucks">
+	<Wheel>
+		<Rear
+			ConnectedToHandbrake="true"
+			Location="rear"
+			SuspensionHeight="0.0244"
+			SuspensionStrength="0.0422"
+			Torque="default"
+			SuspensionMin="-0.1"
+		/>
+	</Wheel>
+	<Body>
+		<Rocks Collisions="None" Mass="100">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="1"
+			>
+				<Motor Damping="1750" Spring="17500" Type="Spring" />
+			</Constraint>
+		</Rocks>
+		<Mudguard2 Collisions="None" Mass="30">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="18"
+			>
+				<Motor Damping="1" Spring="100" Type="Spring" />
+			</Constraint>
+		</Mudguard2>
+		<Mudguard1 Collisions="None" Mass="30">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="40"
+			>
+				<Motor Damping="1" Spring="100" Type="Spring" />
+			</Constraint>
+		</Mudguard1>
+	</Body>
+</_templates>
+<Truck Type="Trailer" AttachType="Saddle">
+	<TruckData>
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="mudtires_1"
+			DefaultWheelType="wheels_superheavy_cat770g_double"
+		>
+			<Wheel _template="Rear" Pos="(-6.26; 0.948; 1.36)" />
+			<Wheel _template="Rear" RightSide="true" Pos="(-6.26; 0.948; 1.36)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.842"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-15"
+			MaxX="-2"
+		/>
+		<Foot Origin="(2.618; 0.009; -0.961)" />
+		<Foot Origin="(2.618; 0.009; 0.961)" />
+		<Constraint _template="TrailerRagdoll" />
+		<CompatibleWheels Scale="0.94" Type="wheels_superheavy_cat770g_double" />
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				Tau="0.04"
+				TerminalFix="true"
+				Position="0.7"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_cat770g">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="20000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Body
+				ForceBodyParams="true"
+				Mass="500"
+				ModelFrame="BoneLegRight_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.78"
+				>
+					<Motor Force="120000" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				ForceBodyParams="true"
+				Mass="500"
+				ModelFrame="BoneLegLeft_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.78"
+				>
+					<Motor Force="120000" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body _template="Mudguard1" ModelFrame="BoneMudguardL11_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneMudguardL12_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneMudguardL21_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneMudguardL22_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneMudguardR11_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneMudguardR12_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneMudguardR21_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneMudguardR22_cdt" />
+			<Body _template="Rocks" ModelFrame="BoneRocks1_cdt" />
+			<Body _template="Rocks" ModelFrame="BoneRocks2_cdt" />
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneTent1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0.025"
+				>
+					<Motor Damping="10" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneTent2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0.025"
+				>
+					<Motor Damping="10" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneWiresSpring_cdt">
+				<Constraint
+					Cone="7"
+					PlaneAxisLocal="(0; 0; 1)"
+					TwistAxisLocal="(0; 1; 0)"
+					Type="Ragdoll"
+					PlaneMin="-50"
+					PlaneMax="50"
+				>
+					<AllMotor Damping="2.5" Spring="25" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneWires_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="40"
+				>
+					<Motor Damping="2" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneHandle1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-6"
+					MaxLimit="6"
+				>
+					<Motor Damping="5" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneHandle2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-6"
+					MaxLimit="6"
+				>
+					<Motor Damping="5" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneRope1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0.15"
+				>
+					<Motor Damping="5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneRope2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.15"
+					MaxLimit="0.15"
+				>
+					<Motor Damping="10" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.879; 2.389; 0)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-6.751; 2.395; 1.338)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-6.751; 2.395; -1.338)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(3.14; 3.794; -1.947)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(3.14; 3.794; 1.947)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-2.135; 3.794; -1.947)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-2.135; 3.794; 1.947)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-6.751; 2.395; -1.338)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-6.751; 2.395; 1.338)" />
+			<!-- <Flare _template="Beacon" Size="0.4" Pos="(-6.751; 2.395; -1.596)" />
+			<Flare _template="Beacon" Size="0.4" Pos="(-6.751; 2.395; 1.596)" /> -->
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/semitrailer_cat_770g_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData IsQuest="true" Price="10400">
+		<WinchSocket Pos="(-8.268; 0.661; 0.637)" />
+		<WinchSocket Pos="(-8.268; 0.661; -0.637)" />
+		<WinchSocket Pos="(2.387; 1.826; 1.912)" />
+		<WinchSocket Pos="(2.387; 1.826; -1.912)" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(5.507; 2.073; 0)" />
+		<UiDesc
+			UiDesc="UI_SEMITRAILER_CAT770G_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_SEMITRAILER_CAT770G_NAME"
+		/>
+		<RequiredAddon _template="SaddleLow" />
+		<InstallSocket Offset="(5.507; 2.073; 0)" Type="SemitrailerCat770g" ParentFrame="BoneRoot_cdt" />
+		<CraneSocket Pos="(-8.268; 0.661; 0.637)" />
+		<CraneSocket Pos="(-8.268; 0.661; -0.637)" />
+		<CraneSocket Pos="(2.387; 1.826; 1.912)" />
+		<CraneSocket Pos="(2.387; 1.826; -1.912)" />
+		<CraneSocket Pos="(5.507; 2.073; 0)" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="IKFork1" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle"
+				ModelFrame="IKFork2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

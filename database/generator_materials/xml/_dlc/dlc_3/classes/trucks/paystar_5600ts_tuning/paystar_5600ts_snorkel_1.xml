@@ -1,0 +1,23 @@
+<TruckAddon>
+	<Snorkel Origin="(4.514; 2.296; -1.114)" />
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_snorkel_1">
+		<Body Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="paystar5600TsSnorkel" />
+	</GameData>
+</TruckAddon>

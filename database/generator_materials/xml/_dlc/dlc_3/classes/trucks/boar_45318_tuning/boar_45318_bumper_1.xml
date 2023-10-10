@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_bumper_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.877; 2.120; -0.594)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(4.877; 2.120; 0.585)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size=".2" Pos="(4.877; 2.120; -0.590)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size=".2" Pos="(4.877; 2.120; -0.450)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".2" Pos="(4.877; 2.120; -0.301)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".2" Pos="(4.877; 2.120; 0.585)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".2" Pos="(4.877; 2.120; 0.441)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".2" Pos="(4.877; 2.120; 0.297)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.739; 1.502; -0.611)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.739; 1.502; -0.262)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.739; 1.502; 0.254)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.739; 1.502; 0.609)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_CROSSFOG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CROSSFOG_NAME"
+		/>
+		<InstallSocket Type="boar45318Bumper" />
+	</GameData>
+</TruckAddon>

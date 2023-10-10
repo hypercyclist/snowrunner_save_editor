@@ -1,0 +1,75 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData AllWheelDriveInstalled="false">
+		<Shafts>
+			<Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftKneeEngine" />
+			<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftKneeRearWheel1" SocketPointB="ShaftRearWheel1" />
+		</Shafts>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_transferbox_default">
+		<Body Collisions="None" Mass="20" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Collisions="None" Mass="0.01" ModelFrame="BoneTieRodL1_cdt">
+					<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				</Body>
+				<Body Collisions="None" Mass=".01" ModelFrame="BoneTieRodR1_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+				</Body>
+				<Body Collisions="None" Mass=".01" ModelFrame="BoneTieRodL2_cdt">
+					<Constraint ExplicitParentFrame="3" Type="Fixed" />
+				</Body>
+				<Body Collisions="None" Mass=".01" ModelFrame="BoneTieRodR2_cdt">
+					<Constraint ExplicitParentFrame="4" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_TRANSFERBOX_NOAWD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_NOAWD_NAME"
+		/>
+		<InstallSocket Type="Paystar5600TsTransferBox" />
+	</GameData>
+	<ExplicitParents>
+		<!--		<ExplicitParent ExplicitParentFrame="0" Frame="BoneCabin_cdt" />
+		<ExplicitParent ExplicitParentFrame="1" Frame="BoneTieRodL1_cdt" />
+		<ExplicitParent ExplicitParentFrame="2" Frame="BoneTieRodR1_cdt" />
+		<ExplicitParent ExplicitParentFrame="3" Frame="BoneTieRodL2_cdt" />
+		<ExplicitParent ExplicitParentFrame="4" Frame="BoneTieRodR2_cdt" />-->
+		<ExplicitParent ExplicitParentFrame="5" Frame="BoneTieRodL1_IK1" />
+		<ExplicitParent ExplicitParentFrame="6" Frame="BoneTieRodL1_IK1b" />
+		<ExplicitParent ExplicitParentFrame="7" Frame="BoneTieRod_L2_IK1" />
+		<ExplicitParent ExplicitParentFrame="8" Frame="BoneTieRod_L2_IK1b" />
+		<ExplicitParent ExplicitParentFrame="9" Frame="BoneTieRod_L2_IK2" />
+		<ExplicitParent ExplicitParentFrame="10" Frame="BoneTieRod_L2_IK2b" />
+		<ExplicitParent ExplicitParentFrame="11" Frame="BoneIKPistonFrontLa" />
+		<ExplicitParent ExplicitParentFrame="12" Frame="BoneIKPistonFrontLb" />
+		<ExplicitParent ExplicitParentFrame="13" Frame="BoneTieRod_R2_IK1" />
+		<ExplicitParent ExplicitParentFrame="14" Frame="BoneTieRod_R2_IK1b" />
+		<ExplicitParent ExplicitParentFrame="15" Frame="BoneTieRod_R2_IK2" />
+		<ExplicitParent ExplicitParentFrame="16" Frame="BoneTieRod_R2_IK2b" />
+		<ExplicitParent ExplicitParentFrame="17" Frame="BoneIKPistonFrontRa" />
+		<ExplicitParent ExplicitParentFrame="18" Frame="BoneIKPistonFrontRb" />
+		<ExplicitParent ExplicitParentFrame="19" Frame="BoneTieRodR1_IK1" />
+		<ExplicitParent ExplicitParentFrame="20" Frame="BoneTieRodR1_IK1b" />
+		<ExplicitParent ExplicitParentFrame="21" Frame="BoneAxleFront1" />
+		<ExplicitParent ExplicitParentFrame="22" Frame="BoneRackL1" />
+		<ExplicitParent ExplicitParentFrame="23" Frame="BoneRackR1" />
+		<ExplicitParent ExplicitParentFrame="24" Frame="BoneRack1" />
+		<ExplicitParent ExplicitParentFrame="25" Frame="BoneAxleFront2" />
+		<ExplicitParent ExplicitParentFrame="26" Frame="BoneRackL2" />
+		<ExplicitParent ExplicitParentFrame="27" Frame="BoneRackR2" />
+		<ExplicitParent ExplicitParentFrame="28" Frame="BoneRack2" />
+	</ExplicitParents>
+</TruckAddon>

@@ -1,0 +1,229 @@
+<_templates Include="trucks">
+	<Flare>
+		<LED
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.1"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.05"
+		/>
+	</Flare>
+	<Body>
+		<Hitch AngularDamping="10" Collisions="None" Mass="8">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-8"
+				MaxLimit="60"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="western_star_nf1430_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4.1" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.2" />
+	<PhysicsModel Mesh="trucks/western_star_nf1424_tuning/western_star_nf1424_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabinDamper_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHook1_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHook2_cdt">
+				<Constraint  MinLimit="-4" MaxLimit="60" />
+				<Body
+					AngularDamping="7"
+					Collisions="None"
+					Mass="5"
+					ModelFrame="BoneRope1_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="4"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(5.51; 3.141; -0.536)" ParentFrame="BoneCabinDamper_cdt" />
+			<Model _template="HeadLightRay" Org="(5.51; 3.141; 0.536)" ParentFrame="BoneCabinDamper_cdt" />
+			<Model _template="HeadLightRay" Org="(7.231; 1.292; -0.342)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(7.231; 1.292; 0.34)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(6.948; 0.668; -0.835)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(6.948; 0.668; 0.835)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".25" Pos="(6.948; 0.668; -0.835)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".25" Pos="(6.948; 0.668; 0.835)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.417)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.387)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.357)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.328)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.298)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; -0.269)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.417)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.387)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.357)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.328)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.298)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; -0.269)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.417)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.387)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.357)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.328)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.298)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; -0.269)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.417)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.387)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.357)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.328)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.298)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; -0.269)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.266)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.294)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.323)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.353)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.382)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.331; 0.411)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.266)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.294)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.323)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.353)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.382)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.305; 0.411)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.266)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.294)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.323)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.353)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.382)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.279; 0.411)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.266)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.294)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.323)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.353)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.382)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(7.231; 1.254; 0.411)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; -0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; -0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; -0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; -0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.18; 0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.154; 0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.128; 0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.611)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.581)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.552)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.522)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.492)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.51; 3.103; 0.463)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; -0.073)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; -0.043)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; -0.014)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; 0.016)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; 0.046)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.18; 0.076)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; -0.073)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; -0.043)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; -0.014)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; 0.016)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; 0.046)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.154; 0.076)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; -0.073)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; -0.043)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; -0.014)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; 0.016)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; 0.046)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.128; 0.076)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; -0.073)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; -0.043)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; -0.014)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; 0.016)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; 0.046)" ParentFrame="BoneCabinDamper_cdt" />
+			<Flare _template="LED" Pos="(5.533; 3.103; 0.076)" ParentFrame="BoneCabinDamper_cdt" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.967; 0.254; 0)" Org="(3.403; 3.178; 1.197)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-0.967; 0.254; 0)" Pos="(3.403; 3.178; 1.197)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(3.403; 3.178; 1.197)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(3.403; 3.178; 1.197)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(3.486; 3.178; 1.197)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.967; 0.254; 0)" Org="(3.569; 3.178; -1.197)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0.967; 0.254; 0)" Pos="(3.569; 3.178; -1.197)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(3.569; 3.178; -1.197)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(3.569; 3.178; -1.197)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(3.486; 3.178; -1.197)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BARRIER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BARRIER_NAME"
+		/>
+		<InstallSocket Type="nf1424Bumper2" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneRopeIK1" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneHook1_cdt"
+				ModelFrame="BoneRopeIK2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

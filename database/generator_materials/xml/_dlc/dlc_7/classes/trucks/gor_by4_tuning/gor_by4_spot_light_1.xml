@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gor_by4_tuning/gor_by4_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.519; 1.541; -0.396)" />
+			<Model _template="HeadLightRay" Org="(0.519; 1.541; 0.396)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.3" Pos="(0.519; 1.541; -0.396)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.3" Pos="(0.535; 1.567; -0.126)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.55" Size="0.3" Pos="(0.535; 1.567; 0.126)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" Size="0.3" Pos="(0.519; 1.541; 0.396)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="GorBy4Spotlight" />
+	</GameData>
+</TruckAddon>

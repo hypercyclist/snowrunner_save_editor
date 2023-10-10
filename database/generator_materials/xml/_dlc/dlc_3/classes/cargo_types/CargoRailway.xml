@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_RAILWAY_NAME"
+		UiDesc="UI_CARGO_RAILWAY_DESC"
+		UiIcon20x20="cargoTypeRails20"
+		UiIcon40x40="cargoTypeRails40"
+		UiIcon100x100="cargoTypeRails"
+	/>
+</CargoType>

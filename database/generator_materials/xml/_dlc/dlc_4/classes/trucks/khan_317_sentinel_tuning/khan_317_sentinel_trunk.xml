@@ -1,0 +1,101 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="40"
+		RepairsCapacity="300"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-0.795; 1.03; 0.677)" SizeX="0.333" SizeY="0.425" SizeZ="0.182" Type="Box" ParentFrame="BoneFuelLeft_cdt" />
+		<LimitedFluid Center="(-0.794; 1.03; -0.676)" SizeX="0.333" SizeY="0.425" SizeZ="0.182" Type="Box" ParentFrame="BoneFuelRight_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_trunk">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="60"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.02"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="3500" Spring="3500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="35"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="3"
+				>
+					<Motor Damping="300" Spring="750" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="20"
+				ModelFrame="BoneFuelLeft_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="0"
+				>
+					<Motor Damping="25" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="20"
+				ModelFrame="BoneFuelRight_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="2"
+				>
+					<Motor Damping="25" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="khan317sentinelTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

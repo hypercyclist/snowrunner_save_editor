@@ -1,0 +1,15 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0,-2,0)"
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="2000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoPlane" PackSlotsNumber="5">
+		<CraneSocket Pos="(-1.8; 2 0)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_plane_01_lmk" MinScale="1.8" MaxScale="3.8"/>
+</ModelBrand>

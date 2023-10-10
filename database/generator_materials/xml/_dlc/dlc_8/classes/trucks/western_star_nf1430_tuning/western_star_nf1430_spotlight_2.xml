@@ -1,0 +1,32 @@
+<_parent File="western_star_nf1430_spotlight_1" />
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_nf1430_tuning/western_star_nf1430_spotlight_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(5.732; 3.031; -0.457)" />
+			<Model _template="HeadLightRay" Org="(5.732; 3.031; 0.457)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(5.732; 3.031; -0.457)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(5.732; 3.031; 0.457)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(5.746; 3.031; -0.169)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(5.746; 3.031; 0.158)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOF_FRAME_LONG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOF_FRAME_LONG_NAME"
+		/>
+	</GameData>
+</TruckAddon>

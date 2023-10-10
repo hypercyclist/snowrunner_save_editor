@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_bumper_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 225; 190) x .5" Size=".2" Pos="(4.181; 1.250; -1.058)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 225; 190) x .5" Size=".2" Pos="(4.181; 1.250; 1.058)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.181; 1.250; -0.877)" />
+			<Model _template="HeadLightRay" Org="(4.181; 1.250; 0.877)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(4.181; 1.250; -0.877)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(4.181; 1.250; 0.877)" />
+			<Flare _template="BlueStreak" Pos="(4.181; 1.250; -0.877)" />
+			<Flare _template="BlueStreak" Pos="(4.181; 1.250; 0.877)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="zikz605rBumper" />
+	</GameData>
+</TruckAddon>

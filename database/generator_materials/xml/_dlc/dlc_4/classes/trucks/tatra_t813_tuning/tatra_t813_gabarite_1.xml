@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(3.684; 2.737; -0.959)" />
+			<Flare _template="MarkerBeacon" Pos="(3.684; 2.754; -0.243)" />
+			<Flare _template="MarkerBeacon" Pos="(3.685; 2.754; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(3.684; 2.754; 0.243)" />
+			<Flare _template="MarkerBeacon" Pos="(3.684; 2.737; 0.959)" />			
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="TatraT813Gabarite" />
+	</GameData>
+</TruckAddon>

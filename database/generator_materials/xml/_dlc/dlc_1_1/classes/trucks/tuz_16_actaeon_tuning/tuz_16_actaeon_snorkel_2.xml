@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="tuz_16_actaeon_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.957; 2.06; -1.025)" />
+	<PhysicsModel Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_snorkel_2" />
+	<GameData
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

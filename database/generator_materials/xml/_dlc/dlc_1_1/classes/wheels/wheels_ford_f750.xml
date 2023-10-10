@@ -1,0 +1,93 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+		<Highway _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Highway" />
+		</Highway>
+		<Chains _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Chains" />
+		</Chains>
+		<Allterrain _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Allterrain" />
+		</Allterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.546"
+	WidthRear="1.158"
+>
+	<TruckTires>
+		<TruckTire _template="Highway" Mesh="wheels/tire_ford_f750_1" Name="highway_ford_f750">
+			<WheelFriction _template="Highway" SubstanceFriction="0.4" />
+			<GameData
+				Price="2300"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_FORD_F750_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_ford_f750_offroad_1" Name="offroad_1">
+			<WheelFriction _template="Offroad" BodyFrictionAsphalt="1.0" />
+			<GameData
+				Price="4400"
+				UnlockByExploration="false"
+				UnlockByRank="5"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_ford_f750_offroad_2" Name="offroad_2">
+			<WheelFriction _template="Offroad" SubstanceFriction="1.9" />
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="7"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_ford_f750_offroad_3" Name="offroad_3">
+			<WheelFriction _template="Offroad" BodyFriction="3.2" />
+			<GameData
+				Price="5700"
+				UnlockByExploration="false"
+				UnlockByRank="10"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Chains" Mesh="wheels/tire_ford_f750_chains" Name="chains_all">
+			<GameData
+				Price="6000"
+				UnlockByExploration="false"
+				UnlockByRank="10"
+			>
+				<UiDesc UiDesc="UI_TIRE_CHAINS_DESC" UiName="UI_TIRE_CHAINS_ALL_DOUBLE_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_ford_f750_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_FORD_F750_1_DESC" UiName="UI_RIM_FORD_F750_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

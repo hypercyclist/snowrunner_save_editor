@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_fender">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard1_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-7" MaxLimit="7" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard1_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="0" MaxLimit="7" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard2_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-60" MaxLimit="10" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard2_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-60" MaxLimit="10" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="fender_rear"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixFender" />
+	</GameData>
+</TruckAddon>

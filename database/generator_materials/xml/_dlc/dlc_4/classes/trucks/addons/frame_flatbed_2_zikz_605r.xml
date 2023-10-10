@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_flatbed_2_zikz_605r">
+		<Body Mass="400">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-1; 1.924; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-1.0; 1.924; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-3.333; 1.924; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-3.333; 1.924; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-5.65; 1.924; -1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-5.65; 1.924; 1.351)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.872; 1.907; -1.247)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.872; 1.907; 1.247)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.872; 1.907; -0.087)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.872; 1.907; 0.087)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		OriginalAddon="frame_addon_flatbed_2"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_FLATBED_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_FLATBED_2_NAME"
+		/>
+		<InstallSocket Type="ZikzFrameAddon" />
+		<AddonSlots InitialOffset="(-2.046; 1.968; 0.0)" OffsetStep="(-2.478; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

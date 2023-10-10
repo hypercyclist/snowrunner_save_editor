@@ -1,0 +1,70 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1"	/>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_spare_wheel">
+		<Body Mass="80" ModelFrame="BoneAddon_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="40"
+				ModelFrame="BoneWheelMount_cdt"
+				Collisions="None"
+			>
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="3"
+				>
+					<Motor Damping="1.5" Spring="0.8" Type="Spring" />
+				</Constraint>
+				<Body
+					Mass="200"
+					ModelFrame="BoneWheel_cdt"
+					Collisions="None"
+				>
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-1.5"
+						MaxLimit="2.5"
+					>
+						<Motor Damping="3" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="wheel_addon"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="MastodonSpareWheel" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="IK_BoneDamper_A" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(-1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWheelMount_cdt"
+				ModelFrame="IK_BoneDamper_B"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

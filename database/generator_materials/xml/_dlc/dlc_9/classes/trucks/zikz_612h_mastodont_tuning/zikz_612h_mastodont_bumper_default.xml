@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_bumper_default">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="21"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="MastodonBumper" />
+	</GameData>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Dir="(1; 0; 0)" Size="0.3" Pos="(9.121; 1.278; 1.34)" ParentFrame="BoneAddon_cdt"/>
+			<Flare _template="IgnitionSignalRed" Dir="(1; 0; 0)" Size="0.3" Pos="(9.121; 1.278; -1.34)" ParentFrame="BoneAddon_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(9.129; 1.249; 1.163)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(9.129; 1.249; -1.163)" ParentFrame="BoneAddon_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(9.061; 1.163; 1.513)" ParentFrame="BoneAddon_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(9.061; 1.163; -1.513)" ParentFrame="BoneAddon_cdt"/>
+		</Ignition>
+	</ModelAttachments>
+</TruckAddon>

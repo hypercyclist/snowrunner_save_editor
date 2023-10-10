@@ -1,0 +1,7 @@
+<_templates Include="models" />
+<ModelBrand Instanced="true" InstancedAsModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(5; 5)" Texture="occlusion_logs_04.tga" />
+</ModelBrand>

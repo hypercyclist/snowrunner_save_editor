@@ -1,0 +1,31 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData/>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_visor_01">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(8.996; 2.758; 1.132)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Size="0.25" Pos="(8.996; 2.758; -1.132)" />	
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="spotlight1"
+		Category="fender_front"
+		IsCustomizable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="MastodonVisor" />
+	</GameData>
+</TruckAddon>

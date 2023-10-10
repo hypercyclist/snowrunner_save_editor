@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.513; 1.848; -0.552)" />
+			<Flare _template="MarkerBeacon" Pos="(0.513; 1.868; -0.115)" />
+			<Flare _template="MarkerBeacon" Pos="(0.513; 1.868; 0.115)" />
+			<Flare _template="MarkerBeacon" Pos="(0.513; 1.848; 0.552)" />
+			<Flare _template="MarkerBeacon" Pos="(0.513; 1.8868; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerBeacon" />
+	</GameData>
+</TruckAddon>

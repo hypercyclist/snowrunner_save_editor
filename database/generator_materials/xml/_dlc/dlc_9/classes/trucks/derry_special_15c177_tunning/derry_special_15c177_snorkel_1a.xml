@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.922; 2.772; 0.44)" />
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_snorkel_1a"/>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177Snorkel" />
+	</GameData>
+</TruckAddon>

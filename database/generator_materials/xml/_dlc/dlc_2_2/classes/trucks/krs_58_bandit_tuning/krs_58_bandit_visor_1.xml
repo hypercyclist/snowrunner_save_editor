@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="krs_58_bandit_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/krs_58_bandit_tuning/krs_58_bandit_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.190; 3.116; -0.882)" />
+			<Flare _template="MarkerBeacon" Pos="(4.190; 3.116; 0.882)" />
+			<Flare _template="MarkerBeacon" Pos="(4.229; 3.155; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="krs58banditVisor" />
+	</GameData>
+</TruckAddon>

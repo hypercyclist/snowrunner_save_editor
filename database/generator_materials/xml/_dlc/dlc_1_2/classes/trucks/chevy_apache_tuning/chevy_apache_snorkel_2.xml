@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="chevy_apache_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.240; 2.162; -0.871)" />
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_snorkel_2"/>
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

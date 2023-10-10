@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Color="g(220; 220; 220) x 0.3" Pos="(4.5; 3.3; -0.936)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Color="g(220; 220; 220) x 0.3" Pos="(4.5; 3.3; 0.936)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_POLYMER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_POLYMER_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixVisor2" />
+	</GameData>
+</TruckAddon>

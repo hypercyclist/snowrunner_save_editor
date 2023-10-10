@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="zikz_605r_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_visor_1"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.019; 2.824; -0.745)" />
+			<Flare _template="MarkerBeacon" Pos="(4.019; 2.826; 0.751)" />
+			<Flare _template="MarkerBeacon" Pos="(4.075; 2.834; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_NAME"
+		/>
+		<InstallSocket Type="zikz605rVisor" />
+	</GameData>
+</TruckAddon>

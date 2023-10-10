@@ -1,0 +1,561 @@
+﻿<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="27"
+			SteeringCastor="8"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+	</Flare>
+	<Body>
+		<Sunshield Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="50" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<Wipers Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="3"
+			>
+				<Motor Damping="1" Spring="50" Type="Spring" />
+			</Constraint>
+		</Wipers>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Gearstick Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 1; 1)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="1"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</Gearstick>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.3"
+		EngineStartDelay="3"
+		ExhaustStartTime="3.2"
+		FuelCapacity="150"
+		Responsiveness="0.12"
+		SteerSpeed="0.022"
+		TruckImage="zikz566amchr"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="zikz_566_rim"
+			DefaultTire="zikz_566_tire"
+			DefaultWheelType="wheels_zikz_566a"
+		>
+			<Wheel _template="FrontWheel" Pos="(2.145; 0.339; 0.6)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(2.145; 0.339; 0.6)" />
+			<Wheel _template="RearWheel" Pos="(-2.349; 0.339; 0.6)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.349; 0.339; 0.6)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="zikz_566a_suspension_default"
+			Type="s_zikz_566a"
+			MaxWheelRadiusWithoutSuspension="0.55"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.696"
+		/>
+		<Steam Origin="(3.744; 1.325; 0)" ParentFrame="BoneCabin_cdt" />
+		<Steam Origin="(2.065; 1.029; 0)" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			Origin="(1.8; 1.2; 0)"
+			MinDist="10.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="" />
+			<BrakePull		Sound="trucks/zikz_566a/zikz_566a_brake_pull" />
+			<BrakesSqueal	Sound="trucks/zikz_566a/zikz_566a_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<Handbrake		Sound="trucks/zikz_566a/zikz_566a_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/zikz_566a/zikz_566a_handbrake_off" />
+			<Gear			Sound="trucks/zikz_566a/zikz_566a_gear_shift" />
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_big_old" />
+			<Honk			Sound="trucks/zikz_566a/zikz_566a_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/zikz_566a/zikz_566a_acc" />
+			<EngineStart	Sound="trucks/zikz_566a/zikz_566a_start" />
+			<EngineStop		Sound="trucks/zikz_566a/zikz_566a_stop" />
+			<EngineIdle		Sound="trucks/zikz_566a/zikz_566a_idle" />
+			<EngineIdle_2d	Sound="trucks/zikz_566a/zikz_566a_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/zikz_566a/zikz_566a_low" />
+			<EngineLow_2d	Sound="trucks/zikz_566a/zikz_566a_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/zikz_566a/zikz_566a_high" />
+			<EngineHigh_2d	Sound="trucks/zikz_566a/zikz_566a_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+			<ChassisStress	Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Snorkel Origin="(2.438; 1.251; 0)" />
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="4" />
+			<Shaker Frame="BoneGearStick1" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(1; 1.5; 1.2)" MaxFrequency="6" />
+			<Shaker Frame="BoneGearStick2" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.9; 0.6; 0.5)" MaxFrequency="4" />
+			<Shaker Frame="BoneGearStick3" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(2.9; 2.9; 2.9)" MaxFrequency="10" />
+			<Shaker Frame="BoneMirror" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.9; 0.9; 0.9)" MaxFrequency="40" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="1.8" MinX="-3.400" MaxX="4.000" />
+		<LimitedFluid
+			Center="(-0.749; 0.683; -0.653)"
+			SizeX="1"
+			SizeY="0.382"
+			SizeZ="0.444"
+			Type="Box"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Intake Dir="(1; 0; 0)" Origin="(3.086; 1.119; 0)" Size="1.219" />
+		<GearboxSocket Default="g_truck_default" Type="gearboxes_zikz_566a" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust
+			Dir="(-0.55; -0.998; 0.5)"
+			IsLight="false"
+			Origin="(-2.905; 0.523; 0.299)"
+			Speed="3.82"
+		/>
+		<EngineSocket Default="ru_truck_old_engine_0" Type="e_ru_truck_old, e_ru_truck_old_zikz_566a" />
+		<Driver
+			AnimationSet="Truck"
+			Pos="(0.68; 1.37; 0.35)"
+			SteeringWheelPos="(1.094; 1.681; 0.342)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/zikz_566a_arrow_02" Org="(1.332; 1.564; 0.074)" OutputAngles="(-115; 115)" Scale="0.9" />
+			<Gauge Damping="0.5" Dir="(-1; 0.25; 0)" InputRange="(0;99)" InputType="speed" Mesh="trucks/arrows/zikz_566a_arrow_02" Org="(1.323; 1.607; 0.34)" OutputAngles="(-100; 90)" Scale="1" />
+			<Gauge Damping="1" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/zikz_566a_arrow_01" Org="(1.314; 1.558; 0.428)" OutputAngles="(-40; 32)"  Scale="1"/>
+			<Gauge Damping="1" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_566a_arrow_01" Org="(1.326; 1.61; 0.473)" OutputAngles="(-150; -210)" Scale="1" />
+			<Gauge Damping="1" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_566a_arrow_01" Org="(1.314; 1.558; 0.252)" OutputAngles="(-35; 25)" Scale="1" />
+			<Gauge Damping="1" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_566a_arrow_01" Org="(1.326; 1.61; 0.208)" OutputAngles="(-180; -210)" Scale="1" />
+			<Gauge Damping="1" Dir="(-1; 0.25; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/zikz_566a_arrow_02" Org="(1.332; 1.563; -0.045)" OutputAngles="(-115; 45)" Scale="0.9" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.441; 0.652; -0.55)" Max="(2.982; 1.688; 0.584)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.291; 0.502; -0.412)" Max="(-1.238; 0.881; -0.9)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.42" Scale="0.6" Type="wheels_zikz_566a" />
+		<CompatibleWheels OffsetZ="0.45" Scale="0.6" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.52" Scale="0.55" Type="wheels_heavy_mudtires_tayga" />
+		<!-- <CompatibleWheels OffsetZ="0.49" Scale="0.65" Type="wheels_heavy_single3" /> -->
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<Camera Center="(-0.9; 0; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/maz_502_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/maz_502_glass__sh_d.tga"
+				ViewPos="(0.56; 2.05; 0.35)"
+			>
+				<Rear ViewPosOffset="(0.3; -0.15; 0.7)" />
+				<Mirror
+					ClipDir="(-0.5; 0.05; -0.1)"
+					FOVScale="2"
+					MeshFrame="mirror_r"
+					ReflectionDir="(-1; 0.1; -0.3)"
+					Size="(0.8; 0.8)"
+					Pos="(1.495; 1.779; 1.044)"
+				/>
+			</Cockpit>
+		</Camera>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_566a">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.2; 0)"
+			ImpactType="Truck"
+			Mass="3150"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; -0.2; 0)"
+				ImpactType="Truck"
+				Mass="3350"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="4"
+				>
+					<Motor Damping="40000" Spring="80000" Type="Spring" />
+				</Constraint>
+				<Body ModelFrame="BoneWipersR_cdt" Mass="0.5" Collisions="None">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-3"
+						MaxLimit="8"
+					>
+						<Motor Damping="0.3" Spring="15" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body ModelFrame="BoneWipersL_cdt" Mass="0.5" Collisions="None">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-1"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.1" Spring="10" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body ModelFrame="BoneSunshieldRight_cdt" Mass="1" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-3"
+						MaxLimit="25"
+					>
+						<Motor Damping="0.1" Spring="3" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body ModelFrame="BoneSunshieldLeft_cdt" Mass="1" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-1"
+						MaxLimit="15"
+					>
+						<Motor Damping="0.8" Spring="5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="1" ModelFrame="BoneMap_cdt" Collisions="None" CenterOfMassOffset="(0; 0; 0.015)">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="16"
+					>
+						<Motor Damping="0" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="1" ModelFrame="BoneCable_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="15"
+					>
+						<Motor Damping="0.1" Spring="0.1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="5" ModelFrame="FireExtinguisher_cdt" Collisions="None">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="0"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 0.4" Pos="(-3.8; 0.774; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.5" Pos="(-3.471; 0.774; 0.65)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.45" Size="0.5" Pos="(-3.471; 0.774; -0.65)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 0.7" Pos="(3.2; 1.065; 0)" />
+			<Light _template="IgnitionSignalRed" Pos="(-3.8; 0.774; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 185) x 0.6" Size="0.4" Pos="(2.8; 1.065; 0.727)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 185) x 0.6" Size="0.4" Pos="(2.8; 1.065; -0.727)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 185) x 0.4" Size="0.1" Pos="(2.693; 1.2; 0.982)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 185) x 0.4" Size="0.1" Pos="(2.693; 1.2; -0.982)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.35" Pos="(-3.45; 0.777; 0.53)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.35" Pos="(-3.45; 0.777; -0.53)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.9; 1.038; 0.729)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(2.9; 1.038; -0.729)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="1" Color="g(255; 235; 185) x 0.6" Size="0.4" Pos="(2.828; 1.060; 0.729)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" AspectRatio="1" Color="g(255; 235; 185) x 0.6" Size="0.4" Pos="(2.828; 1.060; -0.729)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Size="0.5" Pos="(2.828; 1.060; 0.729)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Size="0.5" Pos="(2.828; 1.060; -0.729)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/zikz_566a_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight
+		_template="Default"
+		AttenEnd="35"
+		Color="g(255; 212; 154) x 3"
+		OuterCone="90`	"
+		Pos="(4.299; 1.241; 0)"
+		ParentFrame="BoneCabin_cdt"
+	/>
+	<GameData
+		Country="RU,CAS"
+		Price="80900"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.05; 0.926; -0.46)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(3.05; 0.926; 0.46)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-3.74; 0.577; 0)" ParentFrame="BoneChassis_cdt" />
+
+		<UiDesc
+			UiDesc="UI_VEHICLE_ZiKZ_566A_DESC"
+			UiIcon30x30="heavyDutyVehicleImg30"
+			UiIcon328x458="shopImgZikz566a"
+			UiIcon40x40="heavyDutyVehicleImg30"
+			UiIconLogo="ZiKZLogo80"
+			UiName="UI_VEHICLE_ZiKZ_566A_NAME"
+		/>
+		<CustomizationCameras>
+			
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(3; 1.5; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5; 2.5; 7)" />
+			<CameraPos FOV="32.0" Name="spare_wheel_camera" InterestPosition="(5.6; 1.3; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.4; 2; 4)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.75; 1.606; 1.9)" Position="(4.636; 2.429; -0.651)" />
+			<CameraPos FOV="32.0" Name="side_r" Position="(1.8; 2.8; -4)" InterestPosition="(3; 1.8; -0.9)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="misc_horn" Position="(9; 2.8; -2.5)" InterestPosition="(6.5; 1.35; -2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="snorkels" Position="(10.5; 2.8; 2.5)" InterestPosition="(6.5; 1.55; -0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="roof" Position="(8.5; 4.4; -2.954)" InterestPosition="(3.6; 1.559; 0.7)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2"  />
+			<CameraPos FOV="32.0" Name="spotlight3" InterestPosition="(4.737; 1.2; -1)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8; 3; -2)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.275; 1.2; 0.25)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.5; 1.44; -5)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.849; 1.484; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.708; 3.536; 3.318)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.662; 1.05; 1.5)" Position="(4.971; 2; -0.173)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.5; 0.65; -0.9)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11; 0.3; -4)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.275; 1.2; 0.25)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.5; 1.44; -5)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(5.126; 2.013; -0.96)" Position="(8.85; 1.83; -2)" />
+			<CameraPos FOV="32.0" Name="sticker_back" Position="(3.65; 1.9; -2)" InterestPosition="(3.24; 1.02; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(5.950; 0.9; 1.912)" Position="(4.815; 2.25; -0.371)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(5.7; 1.2; 1.912)" Position="(4.815; 1.9; -0.371)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(7.8; 1.15; -2.175)" Position="(4.938; 2.05; 0.45)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.6; 1; 0)" Position="(4.276; 1.6; 2.785)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.4; 1.15; 0)" Position="(4.276; 1.6; -2.785)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_roof" InterestPosition="(4.7; 2.2; -0.8)" Position="(6.950; 4.308; -1.875)" />
+			
+			<CameraPos FOV="32.0" Interior="true" Name="hood_figure" InterestPosition="(6; 1.85; -0.2)" Position="(8.4; 1.5; -0.9)" />
+		</CustomizationCameras>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<CraneSocket Pos="(3.05; 0.926; -0.46)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(3.05; 0.926; 0.46)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-3.74; 0.577; 0)" ParentFrame="BoneChassis_cdt" />
+
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<AddonSockets>
+			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-2.6; 1.4; 0)" />
+			<Socket Names="Trailer" Offset="(-3.747; 0.604; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_566a_repair_kit_addon" >
+			<Socket	Names="MinicraneRU"	Offset="(-0.15; 0.862; 0)" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="ZiKZ566aRepairKit" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>	
+			<Socket Names="ZiKZ566aFirefighterAddon" NamesBlock="zikz566Exhaust, zikz566Roofrack, MinicraneRU, ZiKZ566aRepairKit, SaddleLow1"  Offset="(-2.35; -0.28; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="SaddleLow1" Offset="(-2.6; 0.87; 0)" ParentFrame="BoneChassis_cdt"/>
+			<Socket Names="FrameAddonMaintainerSmall" NamesBlock="MinicraneRU" Offset="(-1.76; 0.83; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSideboard1" Offset="(-2.2; 0.8; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="Step3364CrocodileTank" NamesBlock="MinicraneRU" Offset="(-0.33; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- NamesBlock="Step3364CrocodileTank, FrameAddonSideboard1, FrameAddonMaintainerSmall, SaddleLow1, MinicraneRU, Trailer, SemitrailerOiltank, Semitrailer" -->
+		
+		<AddonSockets DefaultAddon="zikz_566a_diff_lock_default">
+			<Socket Names="zikz566DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Spotlight1" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Spotlight2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Visor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Roofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="zikz_566a_bumper_default">
+			<Socket Names="zikz566Bumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Horn" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="zikz566Beacon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Capote_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_DoorL_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_DoorR_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Roof_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Inside_01_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Inside_02_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Inside_03_1x1"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodZikz566a" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Inside_01_1x4"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Glass_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Zikz566ASticker_Glass_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(1.385; 1.693; -0.052)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneSuspPistonL1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneSuspPistonL2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspPistonR1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneSuspPistonR2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

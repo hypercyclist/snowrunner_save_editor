@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<_parent File="western_star_57x_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_57x_tuning/western_star_57x_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.273; 4.06; -0.89)" />
+			<Flare _template="MarkerBeacon" Pos="(0.273; 4.060; 0.890)" />
+			<Flare _template="MarkerBeacon" Pos="(0.272; 4.100; -0.242)" />
+			<Flare _template="MarkerBeacon" Pos="(0.272; 4.100; 0.243)" />
+			<Flare _template="MarkerBeacon" Pos="(0.273; 4.105; 0)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; -1)" Pos="(-0.046; 1.266; -1.195)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; -1)" Pos="(0.634; 1.266; -1.195)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; -1)" Pos="(1.326; 1.266; -1.195)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; 1)" Pos="(-0.046; 1.266; 1.195)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; 1)" Pos="(0.634; 1.266; 1.195)" />
+			<Flare _template="MarkerBeacon" Dir="(0; 0; 1)" Pos="(1.326; 1.266; 1.195)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="ws57xGabarite" />
+	</GameData>
+</TruckAddon>

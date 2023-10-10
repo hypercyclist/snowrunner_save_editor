@@ -1,0 +1,18 @@
+<_parent File="pacific512_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_exhaust_1"/>
+	<GameData
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0.000; 0.581; -0.814)" IsLight="true" Origin="(1.390; 3.347; -1.070)" Speed="3.82" />
+	<Exhaust Dir="(0.000; 0.581; 0.814)" IsLight="true" Origin="(1.390; 3.347; 1.070)" Speed="3.8" />
+</TruckAddon>

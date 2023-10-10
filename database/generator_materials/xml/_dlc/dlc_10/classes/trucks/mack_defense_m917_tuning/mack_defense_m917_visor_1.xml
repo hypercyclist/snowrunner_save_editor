@@ -1,0 +1,27 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.311; 2.954; -0.786)" DirAngle="110" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.470; 2.954; -0.259)" DirAngle="110" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.470; 2.954; 0.259)" DirAngle="110" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.311; 2.954; 0.786)" DirAngle="110" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="visor"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Visor" />
+	</GameData>
+</TruckAddon>

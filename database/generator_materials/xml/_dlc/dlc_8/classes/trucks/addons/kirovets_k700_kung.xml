@@ -1,0 +1,48 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		RepairsCapacity="800"
+		WheelRepairsCapacity="6"
+	/>
+	<PhysicsModel Mesh="trucks/addons/kirovets_k700_kung">
+		<Body Mass="2000">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="3" ModelFrame="BoneBucketHandle_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneBucket_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="30"
+					>
+						<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="6"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_KIROVETS_K700_KUNG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_KIROVETS_K700_KUNG_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="KirovetsK700Kung" />
+	</GameData>
+</TruckAddon>

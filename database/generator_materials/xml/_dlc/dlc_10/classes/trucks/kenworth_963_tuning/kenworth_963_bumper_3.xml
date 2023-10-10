@@ -1,0 +1,49 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.7" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_bumper_3">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneBumper3_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.434; 1.676; -0.903)" />
+			<Model _template="HeadLightRay" Org="(4.434; 1.676; 0.903)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.434; 1.676; -0.903)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.434; 1.676; 0.903)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; 0.243)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; 0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; 0.386)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; -0.243)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; -0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; -0.386)" />
+		</HeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; 0.903)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="2400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Bumper" />
+	</GameData>
+</TruckAddon>

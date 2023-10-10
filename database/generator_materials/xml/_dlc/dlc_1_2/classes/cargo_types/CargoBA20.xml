@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_BA20_NAME"
+		UiDesc="UI_CARGO_BA20_DESC"
+		UiIcon20x20="cargoTypeTankBody20"
+		UiIcon40x40="cargoTypeTankBody40"
+		UiIcon100x100="cargoTypeTankBody"
+	/>
+</CargoType>

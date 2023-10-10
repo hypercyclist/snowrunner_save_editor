@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_spot_light_2" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.381; 3.109; -0.668)" />
+			<Model _template="HeadLightRay" Org="(4.381; 3.109; 0.668)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.832; -0.555)" Org="(3.719; 2.907; -1.151)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.832; 0.555)" Org="(3.719; 2.907; 1.151)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; -1)" InnerCone="80" OuterCone="180" Pos="(3.719; 0.189; -1.5)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; 1)" InnerCone="80" OuterCone="180" Pos="(3.719; 0.189; 1.5)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.3" Pos="(4.381; 3.109; -0.668)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.2" Pos="(4.428; 3.136; -0.323)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.2" Pos="(4.437; 3.136; 0)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="100" Size="0.2" Pos="(4.428; 3.136; 0.323)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.3" Pos="(4.381; 3.109; 0.668)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" Dir="(0; -0.832; -0.555)" DirAngle="135" Size="0.3" Pos="(3.719; 2.907; -1.151)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" Dir="(0; -0.832; 0.555)" DirAngle="135" Size="0.3" Pos="(3.719; 2.907; 1.151)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="paystar5600TsSpotlight" />
+	</GameData>
+</TruckAddon>

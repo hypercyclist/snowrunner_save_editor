@@ -1,0 +1,28 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_rocket_part1">
+		<NetSync Legacy="false" />
+		<Body Mass="700" ModelFrame="BoneRoot_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="700" ModelFrame="BoneCargo2_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="700" ModelFrame="BoneCargo3_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_rocket_part1"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_rocket_part1"
+		/>
+		<InstallSlot
+			CargoLength="3"
+			CargoType="CargoRocketPart1"
+			CargoValue="1"
+			Offset="(2.559; 0.000; 0.000)"
+		/>
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_rocket_part1_lmk"/>
+</TruckAddon>

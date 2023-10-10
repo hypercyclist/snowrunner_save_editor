@@ -1,0 +1,40 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_beacon_2">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(-0.967; 0.254; 0)" Org="(1.394; 3.119; 0)" ParentFrame="BoneRotator" />
+			<Light Dir="(-0.967; 0.254; 0)" Pos="(1.394; 3.119; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(1.394; 3.119; 0)" ParentFrame="BoneRotator" />
+			<Flare Dir="(-0.967; 0.254; 0)" Pos="(1.394; 3.119; 0)" ParentFrame="BoneRotator" />
+			<Flare Pos="(1.465; 3.1; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_RAISED_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_RAISED_BEACON_NAME"
+		/>
+		<InstallSocket Type="WS49XBeacon2" />
+	</GameData>
+</TruckAddon>

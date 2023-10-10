@@ -1,0 +1,25 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData/>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_horns_02">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="horns2"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_QUAD_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_QUAD_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="MastodonHorns" />
+	</GameData>
+</TruckAddon>

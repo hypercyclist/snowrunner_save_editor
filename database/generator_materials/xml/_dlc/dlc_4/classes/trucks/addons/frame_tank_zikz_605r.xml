@@ -1,0 +1,115 @@
+<_templates Include="trucks">
+	<Body>
+		<Wire Collisions="None" Mass="0.5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.03"
+				MaxLimit="0.03"
+			>
+				<Motor Damping="2" Spring="250" Type="Spring" />
+			</Constraint>
+		</Wire>
+	</Body>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 195; 34) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="1800">
+		<LimitedFluid
+			Center="(-2.912; 2.815; 0.0)"
+			LengthX="5.222"
+			RadiusY="0.934"
+			RadiusZ="1.167"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/frame_tank_zikz_605r">
+		<Body CenterOfMassOffset="(1; 0; 0)" Mass="600">
+			<Constraint Type="Rigid" />
+			<Body _template="Wire" ModelFrame="BoneWireLeft_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRight_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRear_cdt">
+				<Constraint AxisLocal="(0; 1; 0)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Dir="(-0.766; 0; 0.643)" Pos="(-5.571; 2.421; 1.164)" />
+			<Light _template="StopSignal" Dir="(-0.766; 0; -0.643)" Pos="(-5.571; 2.421; -1.164)" />
+			<Flare _template="StopSignal" Dir="(-0.766; 0; 0.643)" Pos="(-5.485; 2.602; 1.091)" />
+			<Flare _template="StopSignal" Dir="(-0.766; 0; -0.643)" Pos="(-5.485; 2.602; -1.091)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-5.559; 2.405; 0.978)" />
+			<Light _template="ReverseSignal" Pos="(-5.559; 2.405; 0.978)" />
+			<Flare _template="ReverseSignal" Dir="(-0.901; -0.4; -0.167)" Pos="(-5.559; 2.405; 0.978)" />
+			<Flare _template="ReverseSignal" Dir="(-0.901; -0.4; 0.167)" Pos="(-5.559; 2.405; -0.978)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-5.559; 2.405; 0.978)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-5.559; 2.405; -0.978)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Dir="(-0.910; -0.383; -0.160)" Pos="(-6.631; 2.43; 1.02)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Dir="(-0.905; -0.389; 0.174)" Pos="(-6.631; 2.43; -1.02)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-0.910; -0.383; -0.160)" Size=".25" Pos="(-5.633; 2.855; 1.138)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-0.905; -0.389; 0.174)" Size=".25" Pos="(-5.633; 2.855; -1.138)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Pos="(-2.5; 0.2; 0)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; 1)" Pos="(-0.636; 2.711; 1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; -1)" Pos="(-0.636; 2.711; -1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; 1)" Pos="(-0.748; 2.711; 1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; -1)" Pos="(-0.748; 2.711; -1.323)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-5.226; 2.748; 1.212)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-5.226; 2.748; -1.212)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.562; 3.923; 0.154)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.562; 3.923; 0.0)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-5.562; 3.923; -0.154)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-0.766; 0; 0.643)" Pos="(-5.485; 2.602; 1.091)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-0.766; 0; -0.643)" Pos="(-5.485; 2.602; -1.091)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+		OriginalAddon="frame_addon_tank"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_TANK_NAME"
+		/>
+		<InstallSocket Type="FrameAddonTankZikz" />
+	</GameData>
+	<FuelMass>
+		<Body Mass="12000" />
+	</FuelMass>
+</TruckAddon>

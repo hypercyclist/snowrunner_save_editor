@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="pacific512_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_bumper_1"/>
+    <ModelAttachments _inheritRemove="true"/>
+    <MainHeadLight _inheritRemove="true"/>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HINGED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HINGED_NAME"
+		/>
+	</GameData>    
+</TruckAddon>    

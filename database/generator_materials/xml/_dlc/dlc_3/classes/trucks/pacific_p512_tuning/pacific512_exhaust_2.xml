@@ -1,0 +1,26 @@
+<_parent File="pacific512_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker/>
+			<Shaker/>
+			<Shaker Frame="BoneExhaustCapL" LimitDirectionZ="Negative" MinAngle="(0; 0; -20)" MaxAngle="(0; 0; -130)" MaxFrequency="0.15" ParentFrame="BoneExhaustL" />
+			<Shaker Frame="BoneExhaustCapR" LimitDirectionZ="Negative" MinAngle="(0; 0; -20;)" MaxAngle="(0; 0; -130)" MaxFrequency="0.15" ParentFrame="BoneExhaustR" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_exhaust_2"/>
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.877; 0.478; 0.050)" IsLight="true" Origin="(1.322; 3.837; 0.954)" Speed="3.82" ParentFrame="BoneExhaustL" />
+	<Exhaust Dir="(-0.877; 0.478; -0.050)" IsLight="true" Origin="(1.322; 3.837; -0.954)" Speed="3.8" ParentFrame="BoneExhaustR" />
+</TruckAddon>

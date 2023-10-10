@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/tayga_6455b_tuning/tayga_6455b_roofrack">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Collisions="None" Mass="50" ModelFrame="BoneChassis_cdt">
+					<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.944; 3.196; -0.814)" />
+			<Model _template="HeadLightRay" Org="(1.944; 3.196; 0.814)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(1.944; 3.196; -0.814)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(1.944; 3.196; 0.814)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; -1)" Org="(1.272; 3.183; -0.8)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0; 0.1; -1)" Pos="(1.272; 3.183; -0.8)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; -1)" Pos="(1.272; 3.183; -0.8)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; -1)" Pos="(1.272; 3.183; -0.8)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(1.272; 3.183; -0.777)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(1.272; 3.183; 0.8)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0; 0.1; 1)" Pos="(1.272; 3.183; 0.8)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.272; 3.183; 0.8)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.272; 3.183; 0.8)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(1.272; 3.183; 0.777)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="frame_addons"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_ROOF_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_ROOF_NAME"
+		/>
+		<InstallSocket Type="Tayga6455bRoofrack" />
+	</GameData>
+</TruckAddon>

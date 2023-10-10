@@ -1,0 +1,158 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="200"
+		RepairsCapacity="600"
+	>
+		<LimitedFluid Center="(3.020; 3.164; 0.779)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.568; 3.164; 0.779)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.642; 3.164; 0.427)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.646; 3.164; 0.069)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.107; 3.164; 0.427)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.097; 3.164; 0.069)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(0.869; 3.164; -0.433)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(0.897; 3.164; -0.785)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(0.373; 3.164; -0.785)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(0.322; 3.164; -0.433)" SizeX="0.425" SizeY="0.182" SizeZ="0.333" Type="Box" ParentFrame="BoneFuel2_cdt" />
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="3.9" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_roofrack_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="120"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="80"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.010"
+					MaxLimit="0.015"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="40"
+				ModelFrame="BoneRepair1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.035"
+					MaxLimit="0"
+				>
+					<Motor Damping="500" Spring="700" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="40"
+				ModelFrame="BoneRepair2_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.035"
+				>
+					<Motor Damping="300" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneShovel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping=".3" Spring=".3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.976; 3.116; -0.474)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Org="(3.976; 3.116; 0.474)" Scale="(0.7; 0.7; 0.4)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.976; 3.116; -0.474)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.976; 3.116; 0.474)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.976; 3.116; -0.371)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.976; 3.116; 0.371)" />
+			<Flare _template="BlueStreak" Pos="(3.976; 3.116; -0.474)" />
+			<Flare _template="BlueStreak" Pos="(3.976; 3.116; 0.474)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(3.976; 3.116; -0.474)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(3.976; 3.116; 0.474)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(3.976; 3.116; -0.371)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(3.976; 3.116; 0.371)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(0.474; 3.408; 1.096)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(0.474; 3.408; 1.096)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.474; 3.408; 1.096)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(0.474; 3.408; 1.096)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(0.408; 3.408; 1.096)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(0.408; 3.408; -1.031)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(0.408; 3.408; -1.031)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.408; 3.408; -1.031)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(0.408; 3.408; -1.031)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(0.408; 3.408; -1.096)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roofs"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="zikz605rRoofRack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

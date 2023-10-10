@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator01"
+		RotationSpeed="3.8"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator02"
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_beacon_01"/>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Color="g(255; 50; 5) x 0.55"  Scale="(0.17; 0.17; 0.17)" Dir="(-0.796; 0.222; 0.563)" Org="(6.841; 2.931; 1.344)" ParentFrame="BoneRotator01" />
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(6.841; 2.931; 1.344)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; 0.563)" Size="1" Pos="(6.841; 2.931; 1.344)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.6" Pos="(6.841; 2.931; 1.344)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(6.841; 2.931; 1.344)" ParentFrame="BoneRotator01" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Color="g(255; 50; 5) x 0.55"  Scale="(0.17; 0.17; 0.17)" Dir="(-0.796; 0.222; 0.563)" Org="(6.841; 2.931; -1.344)" ParentFrame="BoneRotator02" />
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(6.841; 2.931; -1.344)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; -0.563)" Size="1" Pos="(6.841; 2.931; -1.344)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.6" Pos="(6.841; 2.931; -1.344)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(6.841; 2.931; -1.344)" ParentFrame="BoneRotator02" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="beacon1"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="MastodonBeacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_ROCKET_PART_1_NAME"
+		UiDesc="UI_CARGO_ROCKET_PART_1_DESC"
+		UiIcon20x20="cargoTypeRocketModule20"
+		UiIcon40x40="cargoTypeRocketModule40"
+		UiIcon100x100="cargoTypeRocketModule"
+	/>
+</CargoType>

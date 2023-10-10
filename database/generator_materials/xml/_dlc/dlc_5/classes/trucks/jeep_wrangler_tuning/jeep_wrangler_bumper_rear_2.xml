@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<_parent File="jeep_wrangler_bumper_rear_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt" />
+	</PhysicsModel>
+	<GameData
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_DOUBLEPIPE_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerRearBumper2" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_bumper_default">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.835; 1; -0.788)" />
+			<Model _template="HeadLightRay" Org="(4.835; 1; 0.788)" />
+			<Flare _template="HeadLight" Size="0.43" Pos="(4.835; 0.982; -0.788)" />
+			<Flare _template="HeadLight" Size="0.43" Pos="(4.835; 0.982; 0.788)" />
+			<Flare _template="BlueStreak" Pos="(4.835; 0.982; -0.788)" />
+			<Flare _template="BlueStreak" Pos="(4.835; 0.982; 0.788)" />
+		</MainHeadLight>
+		<Ignition>
+			<!-- <Light _template="IgnitionSignalWhite" Pos="(4.835; 0.982; -0.788)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(4.835; 0.982; 0.788)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(4.835; 0.982; -0.788)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(4.835; 0.982; 0.788)" ParentFrame="BoneCabin_cdt" /> -->
+		</Ignition>        
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Pacific512Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,401 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			Torque="default"
+		/>
+	</Wheel>
+	<Light>
+		<WhiteLight
+			AttenEnd="12"
+			Color="g(255; 196; 152) x 1"
+			InnerCone="120"
+			OuterCone="180"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Light>
+	<Flare>
+		<WhiteFlare
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 1"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Size="0.30"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Flare>
+	<Body>
+		<Suspension AngularDamping="10" Mass="1000">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-20"
+				MaxLimit="20"
+			>
+				<Motor Damping="800.0" Spring="400" Type="Spring" />
+			</Constraint>
+		</Suspension>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.015"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.5"
+		EngineStartDelay="0.6"
+		ExhaustStartTime="0.6"
+		FuelCapacity="340"
+		Responsiveness="0.05"
+		SteerSpeed="0.017"
+		TruckImage="aramatsuforestermchr"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="mudtires_2"
+			DefaultWheelType="wheels_heavy_single2"
+		>
+			<Wheel _template="FrontWheel" Pos="(3.88; 0.666; 1.33)" ParentFrame="BoneSuspensionFL_cdt" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.88; 0.666; 1.33)" ParentFrame="BoneSuspensionFR_cdt" />
+			<Wheel _template="FrontWheel" Pos="(2.327; 0.666; 1.33)" ParentFrame="BoneSuspensionFL_cdt" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(2.327; 0.666; 1.33)" ParentFrame="BoneSuspensionFR_cdt" />
+			<Wheel _template="RearWheel" Pos="(-2.016; 0.666; 1.33)" ParentFrame="BoneSuspensionRL_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.016; 0.666; 1.33)" ParentFrame="BoneSuspensionRR_cdt" />
+			<Wheel _template="RearWheel" Pos="(-3.569; 0.666; 1.33)" ParentFrame="BoneSuspensionRL_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.569; 0.666; 1.33)" ParentFrame="BoneSuspensionRR_cdt" />
+		</Wheels>
+		<SuspensionSocket
+			Default="aramatsu_forester_suspension_default"
+			Type="s_aramatsu_forester"
+			MaxWheelRadiusWithoutSuspension=".7"
+		/>
+		<Steam Origin="(4.233; 1.725; -0)" ParentFrame="BoneFront_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			MinDist="10.0"
+			Origin="(4.450; 1.65; 0)"
+			ParentFrame="BoneFront_cdt"
+		>
+			<Reverse		_inheritRemove="true" />
+			<EngineTrans	Sound="" />
+			<BrakesSqueal	Sound="" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt3_rnd_set/truck_brake_release_alt3_rnd" />
+			<Gear			Sound="trucks/common/truck_gear_shift_light_rnd_set/truck_gear_shift_light_rnd" />
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Handbrake		Sound="trucks/aramatsu_forester/aramatsu_forester_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/aramatsu_forester/aramatsu_forester_handbrake_off" />
+			<Reverse		Sound="trucks/aramatsu_forester/aramatsu_forester_back_beeper" />
+			<Honk			Sound="trucks/aramatsu_forester/aramatsu_forester_honk" />
+			<EngineRev		Sound="trucks/aramatsu_forester/aramatsu_forester_rev" />
+			<EngineAccel	Sound="trucks/aramatsu_forester/aramatsu_forester_acc" />
+			<EngineStart	Sound="trucks/aramatsu_forester/aramatsu_forester_start" />
+			<EngineStop		Sound="trucks/aramatsu_forester/aramatsu_forester_stop" />
+			<EngineIdle		Sound="trucks/aramatsu_forester/aramatsu_forester_idle" />
+			<EngineIdle_2d	Sound="trucks/aramatsu_forester/aramatsu_forester_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/aramatsu_forester/aramatsu_forester_low" />
+			<EngineLow_2d	Sound="trucks/aramatsu_forester/aramatsu_forester_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/aramatsu_forester/aramatsu_forester_high" />
+			<EngineHigh_2d	Sound="trucks/aramatsu_forester/aramatsu_forester_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="1.901" MinX="-5.2" MaxX="5.946" />
+		<Intake Dir="(1; 0; 0)" Origin="(5.723; 1.73; 0)" Size="0.8" />
+		<GearboxSocket Default="g_special_default" Type="gearboxes_special" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust
+			Dir="(-0; 0.369; -0.929)"
+			IsLight="true"
+			Origin="(4.656; 2.576; -0.486)"
+			Speed="3.00"
+            ParentFrame="BoneFront_cdt"
+		/>
+		<EngineSocket Default="us_truck_modern_engine_0" Type="e_us_truck_modern" />
+		<Driver
+			AnimationSet="Forwarder"
+			DriverCharacter="driver_forester_m"
+			Pos="(2.78; 2.131; 0)"
+			SteeringWheelPos="(2.78; 2.131; 0)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/aramatsu_forester_arrows_1" Org="(3.588; 2.355; 0.062)" OutputAngles="(-142; 142)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;30)" InputType="speed" Mesh="trucks/arrows/aramatsu_forester_arrows_1" Org="(3.588; 2.355; -0.065)" OutputAngles="(-142; 142)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aramatsu_forester_arrows_2" Org="(3.545; 2.3; 0.052)" OutputAngles="(-50; 20)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aramatsu_forester_arrows_2" Org="(3.544; 2.3; 0.001)" OutputAngles="(-50; -5)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aramatsu_forester_arrows_2" Org="(3.545; 2.3; -0.049)" OutputAngles="(-50; 8)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/aramatsu_forester_arrows_3" Org="(3.55; 2.306; -0.084)" OutputAngles="(133; 42)" />
+			<Gauge Dir="(-0.790; 0.613; 0.000)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aramatsu_forester_arrows_3" Org="(3.55; 2.306; -0.105)" OutputAngles="(133; 74)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(4.405; 0.878; -0.43)" Max="(5.681; 2.155; 0.43)" />
+			<DamageArea Type="FuelTank" Min="(2.362; 0.548; -0.5)" Max="(3.862; 1.048; 0.5)" />
+		</Damage>
+		<CompatibleWheels Scale=".66" Type="wheels_heavy_single2" />
+		<Camera
+			Center="(-1.5; 0; 0)"
+			RadiusMultiplier="1.1"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/aramatsu_forester_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/aramatsu_forester_glass__sh_d.tga"
+				ViewPos="(2.675; 2.865; 0)"
+			/>
+		</Camera>
+	</TruckData>
+	<Snorkel Origin="(4.745; 2.218; 0)" />
+	<PhysicsModel Mesh="trucks/aramatsu_forester">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.5; 0)"
+			ImpactType="Truck"
+			Mass="6000"
+			NetSync="pv"
+		>
+			<Body Mass="2000" ModelFrame="BoneSteering_cdt" NetSync="pv">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="ChassisSteer"
+					Type="Hinge"
+					MinLimit="-30"
+					MaxLimit="30"
+				>
+					<Motor
+						Damping="1.0"
+						Force="135000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body Mass="4000" ModelFrame="BoneFront_cdt" NetSync="pv">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="15"
+					>
+						<Motor Damping="800.0" Spring="1400" Type="Spring" />
+					</Constraint>
+					<Body
+						AngularDamping="100"
+						CenterOfMassOffset="(0.18; 0.3; 0)"
+						Mass="800"
+						ModelFrame="BoneCabinStabilizer_cdt"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-5"
+							MaxLimit="5"
+						>
+							<Motor Damping="2500.0" Spring="500" Type="Spring" />
+						</Constraint>
+						<Body AngularDamping="10" Mass="200" ModelFrame="BoneCabin_cdt">
+							<Constraint
+								AxisLocal="(0; -1; 0)"
+								Name="TieRodSteer"
+								Type="Hinge"
+								MinLimit="-360"
+								MaxLimit="360"
+							>
+								<Motor
+									Damping="1.0"
+									Force="200000"
+									Tau=".05"
+									Type="Position"
+								/>
+							</Constraint>
+						</Body>
+					</Body>
+					<Body _template="Suspension" ModelFrame="BoneSuspensionFL_cdt" />
+					<Body _template="Suspension" ModelFrame="BoneSuspensionFR_cdt" />
+				</Body>
+			</Body>
+			<Body _template="Suspension" ModelFrame="BoneSuspensionRL_cdt" />
+			<Body _template="Suspension" ModelFrame="BoneSuspensionRR_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" PrentFrame="BoneFront_cdt" Pos="(5.766; 1.189; -0.569)" />
+			<Light _template="IgnitionSignalWhite" Pos="(5.766; 1.189; 0.569)" ParentFrame="BoneFront_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".50" Pos="(5.766; 1.189; -0.569)" ParentFrame="BoneFront_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".50" Pos="(5.766; 1.189; 0.569)" ParentFrame="BoneFront_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Dir="(0.997; -0.073; -0)" Org="(3.32; 3.495; -0.295)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Dir="(0.997; -0.073; -0)" Org="(3.32; 3.495; 0.295)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="WhiteLight" Dir="(0; -0.139; -0.99)" Pos="(2.8; 3.348; -0.515)" />
+			<Light _template="WhiteLight" Dir="(0; -0.139; 0.99)" Pos="(2.8; 3.348; 0.515)" />
+			<Light _template="WhiteLight" Dir="(-0.864; -0.059; -0.501)" Pos="(2.271; 3.351; -0.413)" />
+			<Light _template="WhiteLight" Dir="(-0.864; -0.059; 0.501)" Pos="(2.271; 3.351; 0.413)" />
+			<Light _template="WhiteLight" Dir="(0; -0.139; -0.99)" Pos="(3.32; 3.495; -0.295)" />
+			<Light _template="WhiteLight" Dir="(0; -0.139; 0.99)" Pos="(3.32; 3.495; 0.295)" />
+			<Flare _template="WhiteFlare" Dir="(0; 0; -1)" Pos="(2.8; 3.348; -0.515)" />
+			<Flare _template="WhiteFlare" Dir="(0; 0; -1)" Pos="(2.677; 3.348; -0.515)" />
+			<Flare _template="WhiteFlare" Dir="(0; 0; 1)" Pos="(2.8; 3.348; 0.515)" />
+			<Flare _template="WhiteFlare" Dir="(0; 0; 1)" Pos="(2.677; 3.348; 0.515)" />
+			<Flare _template="WhiteFlare" Dir="(-0.864; -0.059; -0.501)" Pos="(2.271; 3.351; -0.413)" />
+			<Flare _template="WhiteFlare" Dir="(-0.864; -0.059; 0.501)" Pos="(2.271; 3.351; 0.413)" />
+			<Flare _template="WhiteFlare" Dir="(-0.864; -0.059; -0.501)" Pos="(2.213; 3.351; -0.313)" />
+			<Flare _template="WhiteFlare" Dir="(-0.864; -0.059; 0.501)" Pos="(2.213; 3.351; 0.313)" />
+			<Flare _template="HeadLight" Dir="(0.965; 0; -0.263)" DirAngle="135" Size="0.20" Pos="(3.32; 3.495; -0.295)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Dir="(0.965; 0; -0.263)" DirAngle="135" Size="0.20" Pos="(3.32; 3.495; 0.295)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.20" Pos="(3.358; 3.494; -0.112)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.2" Pos="(3.358; 3.494; 0.112)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.32; 3.495; -0.295)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.32; 3.495; -0.295)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.358; 3.494; -0.112)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.358; 3.494; 0.112)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/aramatsu_forester_lmk" MinScale="1.8" MaxScale="3.5" />
+	<HeadLight
+		_template="Default"
+		OuterCone="100"
+		Pos="(6; 3.494; 0)"
+		ParentFrame="BoneCabin_cdt"
+	/>
+	<GameData
+		Country="US"
+		Price="3500"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(5.814; 1.162; 0)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(5.617; 1.196; -0.809)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(5.617; 1.196; 0.809)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(0.447; 1.051; -0.593)" ParentFrame="BoneRear_cdt" />
+		<WinchSocket Pos="(0.447; 1.051; 0.593)" ParentFrame="BoneRear_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_ARAMATSU_FORESTER_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgAramatsuForester"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="AramatsuLogo80"
+			UiName="UI_VEHICLE_ARAMATSU_FORESTER__NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(2.7; 0; -0.56)" Position="(5.7; 6; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.8; 1.5; -0.63)" Position="(9.8; 5.2; -0.42)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(2.5; 1.5; -1)" Position="(7.5; 3.9; 0.7)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.8; 0.7; 0.9)" Position="(4.200; 3; 0.3)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.8; 0.7; 0.5)" Position="(4.200; 3; -0.1)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.8; 0.7; 0.9)" Position="(4.200; 3; 0.3)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.814; 1.692; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.113; 4.445; 8.243)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.194; 1.807; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.093; 2.337; -6.718)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.764; 1.97; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.226; 4.969; -4.508)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.758; 2.358; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.787; 4.806; -3.717)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.997; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.57; 1.44; -3.425)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.27; 2.278; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.866; 5.284; -4.55)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(3.7; 0.4; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.4; 1.5; -6.3)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.197; 1.735; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.641; 1.384; -4.536)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.479; 0.992; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.767; 1.805; 2.899)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(5.814; 1.162; 0)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(5.617; 1.196; -0.809)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(5.617; 1.196; 0.809)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(0.447; 1.051; -0.593)" ParentFrame="BoneRear_cdt" />
+		<CraneSocket Pos="(0.447; 1.051; 0.593)" ParentFrame="BoneRear_cdt" />
+		<AddonSockets DefaultAddon="crane_aramatsu_forester">
+			<Socket Names="CraneAramatsuForester" Offset="(0; 0; 0)" ParentFrame="BoneRear_cdt" />
+		</AddonSockets>
+		<AddonSockets
+			DefaultAddon="frame_addon_log_short_aramatsu"
+			RequiredAddonIfNoConflicts="frame_addon_log_short_aramatsu"
+		>
+			<Socket Names="FrameAddonLogsShortAramatsu" Offset="(0; 0; 0)" />
+			<Socket Names="FrameAddonLogsMediumAramatsu" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Trailer" Offset="(-5.282; 1.047; 0)">
+				<AddonsShift Offset="(-1.038; 0; 0)" Types="FrameAddonLogsMediumAramatsu" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(3.276; 2.326; -0.444)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x1_03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AramatsuForesterSticker_Capote" ParentFrame="BoneFront_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AramatsuForesterSticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="AramatsuForesterSticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="aramatsu_forester_diff_lock_default">
+			<Socket Names="Aramatsu_Forester_diff_lock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint BoneToAlign="BoneFront_cdt" FollowIKBone="BoneArm3_cdt" Id="CabinRotation" Name="TieRodSteer" SpeedMult="0.01" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="ChassisSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBaseR" ParentFrame="BoneRear_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFront_cdt"
+				ModelFrame="BonePistonR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBaseL" ParentFrame="BoneRear_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFront_cdt"
+				ModelFrame="BonePistonL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

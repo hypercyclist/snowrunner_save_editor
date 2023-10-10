@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_visor_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.202; 2.889; -0.796)" />
+			<Flare _template="MarkerBeacon" Pos="(0.274; 2.912; -0.183)" />
+			<Flare _template="MarkerBeacon" Pos="(0.275; 2.915; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(0.274; 2.912; 0.183)" />
+			<Flare _template="MarkerBeacon" Pos="(0.202; 2.889; 0.796)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STOCK_NAME"
+		/>
+		<InstallSocket Type="CatCT681Visor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,18 @@
+<_parent File="pacific512_exhaust_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_exhaust_3"/>
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(1.357; 3.698; 0.922)" Speed="3.82" />
+	<Exhaust Dir="(0.000; 1.000; 0.000)" IsLight="true" Origin="(1.357; 3.698; -0.922)" Speed="3.8" />
+</TruckAddon>

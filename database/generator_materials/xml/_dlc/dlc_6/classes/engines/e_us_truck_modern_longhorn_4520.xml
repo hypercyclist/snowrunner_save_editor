@@ -1,0 +1,32 @@
+<_templates>
+	<Engine>
+		<USTruckModernEngine BrakesDelay="0.5" MaxDeltaAngVel="0.05" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USTruckModernEngine"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="190"
+		DamagedConsumptionModifier="1.2"
+		EngineResponsiveness="0.25"
+		FuelConsumption="8.0"
+		Name="us_truck_modern_engine_longhorn_4520"
+		Torque="230000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="14700"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_TRUCK_MODERN_LONGHORN_4520_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_TRUCK_MODERN_LONGHORN_4520_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

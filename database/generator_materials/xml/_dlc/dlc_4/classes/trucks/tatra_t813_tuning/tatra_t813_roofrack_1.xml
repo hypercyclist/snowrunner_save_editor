@@ -1,0 +1,143 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="160" RepairsCapacity="450">
+		<LimitedFluid Center="(1.636; 3.035; 0.744)" SizeX="0.363" SizeY="0.169" SizeZ="0.494" Type="Box" />
+		<LimitedFluid Center="(2.048; 3.031; 0.069)" SizeX="0.363" SizeY="0.193" SizeZ="0.484" Type="Box" />
+		<LimitedFluid Center="(2.05; 3.031; 0.768)" SizeX="0.363" SizeY="0.193" SizeZ="0.449" Type="Box" />
+		<LimitedFluid Center="(1.631; 3.031; 0.082)" SizeX="0.363" SizeY="0.193" SizeZ="0.449" Type="Box" />
+		<LimitedFluid Center="(2.864; 3.031; -0.403)" SizeX="0.449" SizeY="0.193" SizeZ="0.363" Type="Box" />
+		<LimitedFluid Center="(2.864; 3.031; -0.808)" SizeX="0.449" SizeY="0.193" SizeZ="0.363" Type="Box" />
+		<LimitedFluid Center="(3.544; 3.031; -0.808)" SizeX="0.449" SizeY="0.193" SizeZ="0.363" Type="Box" />
+		<LimitedFluid Center="(3.544; 3.031; -0.399)" SizeX="0.449" SizeY="0.193" SizeZ="0.363" Type="Box" />
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_roofrack_1">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="3" ModelFrame="BoneWiggle1_cdt">
+				<Constraint
+					LinearLimitsX="(0;0.1)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(0;0.15)"
+					Type="Fixed"
+				>
+					<Motor Damping="120" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="4" ModelFrame="BoneWiggle6_cdt">
+				<Constraint
+					LinearLimitsX="(0;0.1)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.15;0)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="40" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="4" ModelFrame="BoneWiggle2_cdt">
+				<Constraint
+					LinearLimitsX="(-0.15;0)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.05;0)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="40" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneWiggle3_cdt">
+				<Constraint
+					LinearLimitsX="(0;0)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.25;0)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneWiggle4_cdt">
+				<Constraint
+					LinearLimitsX="(0;0)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(0;0.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="180" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneWiggle5_cdt">
+				<Constraint
+					LinearLimitsX="(-0.15;0)"
+					LinearLimitsY="(0;0.15)"
+					LinearLimitsZ="(0;0.05)"
+					Type="Fixed"
+				>
+					<Motor Damping="125" Spring="15" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneShovel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-35"
+					MaxLimit="35"
+				>
+					<Motor Damping=".1" Spring="4" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(4.162; 2.909; 0.489)" Scale="(0.6; 0.6; 1)" />
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(4.162; 2.909; -0.489)" Scale="(0.6; 0.6; 1)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.5" Dir="(-0.926; -0.377; 0)" DirAngle="120" Size="0.5" Pos="(1.275; 2.864; -0.816)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.5" Dir="(-0.926; -0.377; 0)" DirAngle="120" Size="0.5" Pos="(1.275; 2.864; 0.816)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.5" Dir="(-0; -0.423; 0.906)" DirAngle="120" Size="0.5" Pos="(1.787; 2.868; 1.213)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.5" Dir="(-0; -0.423; -0.906)" DirAngle="120" Size="0.5" Pos="(1.787; 2.868; -1.213)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(1; 0; 0)" DirAngle="120" Size="0.5" Pos="(4.162; 2.909; 0.591)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(1; 0; 0)" DirAngle="120" Size="0.5" Pos="(4.162; 2.909; 0.378)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(1; 0; 0)" DirAngle="120" Size="0.5" Pos="(4.162; 2.909; -0.591)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(1; 0; 0)" DirAngle="120" Size="0.5" Pos="(4.162; 2.909; -0.378)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(4.089; 2.926; -0.811)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(1; 0; 0)" Pos="(4.089; 2.926; -0.811)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(1; 0; 0)" Pos="(4.089; 2.926; -0.811)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(1; 0; 0)" Pos="(4.089; 2.926; -0.811)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(4.059; 2.926; -0.811)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-1; 0; 0)" Org="(4.027; 2.926; 0.811)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-1; 0; 0)" Pos="(4.027; 2.926; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-1; 0; 0)" Pos="(4.027; 2.926; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-1; 0; 0)" Pos="(4.027; 2.926; 0.811)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(4.059; 2.926; 0.811)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<HeadLightRay Dir="(1; -0.1; 0)" Mesh="env/light_ray" />
+	<GameData
+		CameraPreset="side_l"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="TatraT813RooftopTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

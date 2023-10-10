@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<_parent File="ws_6900xd_twin_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts>
+			<Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftBoxEngine" />
+			<Shaft PointAConnectedToAddon="true" PointBConnectedToAddon="true" SocketPointA="ShaftBoxFrontWheel" SocketPointB="ShaftFrontWheel" />
+			<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftBoxRearWheel" SocketPointB="ShaftRearWheel" />
+			<Shaft PointAConnectedToAddon="true" PointBConnectedToAddon="true" SocketPointA="ShaftFrontWheel2WheelA" SocketPointB="ShaftFrontWheel2WheelB" />
+		</Shafts>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_transferbox_allwheels" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="5300"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

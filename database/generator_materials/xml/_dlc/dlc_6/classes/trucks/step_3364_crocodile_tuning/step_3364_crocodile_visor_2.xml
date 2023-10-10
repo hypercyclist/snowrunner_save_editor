@@ -1,0 +1,16 @@
+<_parent File="step_3364_crocodile_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_visor_2" />
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-40"
+				MaxLimit="40"
+			>
+				<Motor Damping="0.25" Spring="2.5" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_fender_default">
+		<Body Collisions="None" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardL2_cdt" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardR2_cdt" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+		<Flare _template="IgnitionSignalOrange" Size="0.15" Dir="(0; 0; 1)" Pos="(0.014; 1.248; 1.21)" />
+		<Flare _template="IgnitionSignalOrange" Size="0.15" Dir="(0; 0; -1)" Pos="(0.014; 1.248; -1.21)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="fender_rear"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Fender" />
+	</GameData>
+</TruckAddon>

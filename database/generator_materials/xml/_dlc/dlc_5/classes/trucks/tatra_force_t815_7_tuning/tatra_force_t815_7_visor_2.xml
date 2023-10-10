@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="tatra_force_t815_7_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_visor_2">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.323; 2.594; -0.876)" />
+			<Flare _template="MarkerBeacon" Pos="(4.321; 2.598; 0.880)" />
+			<Flare _template="MarkerBeacon" Pos="(4.350; 2.598; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_NAME"
+		/>
+	</GameData>
+</TruckAddon>

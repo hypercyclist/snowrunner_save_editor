@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.07; 0.07; 0.07)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.07; 0.07; 0.07)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_exhaust_default">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.789; 4.089; 1.044)" Speed="3.82" ParentFrame="BoneExhaustL" />
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.789; 4.089; -1.044)" Speed="3.8" ParentFrame="BoneExhaustR" />
+</TruckAddon>

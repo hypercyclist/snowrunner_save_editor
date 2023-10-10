@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<_parent File="western_star_nf1424_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(5.861; 2.554; 0)" />
+	<PhysicsModel Mesh="trucks/western_star_nf1424_tuning/western_star_nf1424_snorkel_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,39 @@
+<_templates>
+	<Engine>
+		<USTruckOldEngine
+			BrakesDelay="0.5"
+			CriticalDamageThreshold="0.2"
+			DamageCapacity="200"
+			EngineResponsiveness="0.035"
+			DamagedMinTorqueMultiplier="1.0"
+			DamagedMaxTorqueMultiplier="0.5"
+			MaxDeltaAngVel="0.01"
+		/>
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USTruckOldEngine"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="230"
+		DamagedConsumptionModifier="1.9"
+		FuelConsumption="9.5"
+		Name="us_truck_old_engine_gmc8000"
+		Torque="170000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="11300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_TRUCK_OLD_GMC8000_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_TRUCK_OLD_GMC8000_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

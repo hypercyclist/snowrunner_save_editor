@@ -1,0 +1,65 @@
+<_templates Include="trucks"/>
+<_parent File="zikz_605r_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="50"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				/>
+			</Body>
+			<Body
+				AngularDamping="1"
+				Collisions="None"
+				Mass="8"
+				ModelFrame="BoneRope_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="50"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(4.315; 1.861; -0.301)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(4.315; 1.861; 0.306)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(4.315; 1.861; -0.348)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(4.315; 1.861; 0.359)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(4.315; 1.861; -0.249)" />
+			<Flare _template="IgnitionSignalWhite" Size=".3" Pos="(4.315; 1.861; 0.255)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LIGHTCAGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LIGHTCAGE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

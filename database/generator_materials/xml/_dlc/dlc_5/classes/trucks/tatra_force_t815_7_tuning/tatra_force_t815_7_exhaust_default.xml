@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneShaker"
+				MinAngle="(0.3; 0.3; 0.3)"
+				MaxAngle="(0.8; 0.8; 0.8)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.387; 0.104; 0.916)"
+		IsLight="true"
+		Origin="(1.351; 2.94; -0.166)"
+		Speed="2.0"
+	/>
+</TruckAddon>

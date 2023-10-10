@@ -1,0 +1,106 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="160"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(0.345; 1.215; 0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(-0.003; 1.215; 0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(0.345; 1.215; -0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-0.003; 1.215; -0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-0.46; 1.215; 0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel3_cdt" />
+		<LimitedFluid Center="(-0.808; 1.215; 0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel3_cdt" />
+		<LimitedFluid Center="(-0.46; 1.215; -0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel4_cdt" />
+		<LimitedFluid Center="(-0.808; 1.215; -0.619)" SizeX="0.319" SizeY="0.382" SizeZ="0.141" Type="Box" ParentFrame="BoneRepairFuel4_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_tuning/rezvani_hercules_6x6_trunk_1">
+		<Body Collisions="None" Mass="80">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="50" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.02"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="2100" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.02"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="2700" Spring="4000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="4"
+				>
+					<Motor Damping="5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="0"
+				>
+					<Motor Damping="5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel3_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="4"
+				>
+					<Motor Damping="5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel4_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-4"
+					MaxLimit="0"
+				>
+					<Motor Damping="5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="Rezvani6x6Trunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

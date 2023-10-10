@@ -1,0 +1,17 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="500.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/cargo_unit_stack_1_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData LoadType="CargoStack" PackSlotsNumber="1">
+		<CraneSocket Pos="(0; 1.807; 0.036)" />
+		<CraneSocket Pos="(0; 0.87; 0.901)" />
+		<CraneSocket Pos="(0; 0.004; -0.036)" />
+		<CraneSocket Pos="(0; 0.942; -0.901)" />
+	</GameData>
+</ModelBrand>

@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="pacific512_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.674; 3.038; -0.633)" />
+			<Flare _template="MarkerBeacon" Pos="(2.810; 3.042; 0.001)" />
+			<Flare _template="MarkerBeacon" Pos="(2.674; 3.038; 0.633)" />
+		</Ignition>
+	</ModelAttachments>    
+	<GameData
+		_noinherit="true"
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Pacific512Visor" />
+	</GameData>
+</TruckAddon>

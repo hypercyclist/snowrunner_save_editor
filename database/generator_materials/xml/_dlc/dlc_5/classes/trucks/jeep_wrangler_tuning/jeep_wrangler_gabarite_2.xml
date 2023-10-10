@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="jeep_wrangler_gabarite_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_gabarite_2" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.519; 1.896; -0.220)" />
+			<Flare _template="MarkerBeacon" Pos="(0.519; 1.896; 0.220)" />
+			<Flare _template="MarkerBeacon" Pos="(0.519; 1.896; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_ROUND_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_ROUND_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerBeacon2" />
+	</GameData>
+</TruckAddon>

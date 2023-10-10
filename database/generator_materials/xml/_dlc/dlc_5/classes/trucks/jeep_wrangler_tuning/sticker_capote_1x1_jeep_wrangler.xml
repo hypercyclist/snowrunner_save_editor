@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/sticker_capote_1x1_jeep_wrangler" />
+	<GameData>
+			<InstallSocket Type="JeepWranglerSticker_Capote" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,84 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_0_for_anim" />
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2_rocket" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2_platform_01" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2_platform_02" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2_platform_03" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<Mesh Name="stage_2_rocket" />
+		<CdtMesh Name="stage_2_rocket" />
+		<Mesh Name="stage_2_platform_01" />
+		<CdtMesh Name="stage_2_platform_01" />
+		<Mesh Name="stage_2_platform_02" />
+		<CdtMesh Name="stage_2_platform_02" />
+		<Mesh Name="stage_2_platform_03" />
+		<CdtMesh Name="stage_2_platform_03" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_1_anim"/>
+	</Subset>
+	<Subset Name="build_stage_2">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+		<Mesh Name="stage_2_platform_01" />
+		<CdtMesh Name="stage_2_platform_01" />
+		<Mesh Name="stage_2_platform_02" />
+		<CdtMesh Name="stage_2_platform_02" />
+		<Mesh Name="stage_2_platform_03" />
+		<CdtMesh Name="stage_2_platform_03" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_2_anim"/>
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="stage_0_for_anim" />
+		<CdtMesh Name="stage_0_for_anim" />
+		<Mesh Name="animated_mesh_01" />
+		<Mesh Name="animated_mesh_02" />
+		<Mesh Name="animated_mesh_03" />
+		<Mesh Name="animated_mesh_05" />
+		<Mesh Name="animated_mesh_04" />
+	</AnimSubset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_rocket/actor_rocket_transportation" Range="200" Volume="1"/>
+		</AnimEvent>
+        <AnimEvent Key="155">
+            <Fade Time="0.5" />
+        </AnimEvent>
+        <AnimEvent Key="425">
+            <Fade Time="0.5" />
+        </AnimEvent>
+	</TrackEvents>
+	<TrackEvents TrackName="stage_2_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_rocket/actor_rocket_launch" Range="200" Volume="1"/>
+		</AnimEvent>
+		<AnimEvent Key="5" ForceDaytimePreset="true" />
+		<AnimEvent Key="374">
+			<SFX Name="rocket_fly"  Pos="(0; 0; 0)"   Dir="(0.0; -1.0; 0.0)" Frame="joint_start" />
+		</AnimEvent>
+		<AnimEvent Key="72">
+			<SFX Name="rocket_start_01"  Pos="(0; -11.559; 22.511)"   Dir="(0.0; -1.0; 0.0)" />
+		</AnimEvent>
+		<AnimEvent Key="10">
+			<SFX Name="rocket_start_02"  Pos="(0; -11.559; 22.511)"   Dir="(0.0; -1.0; 0.0)" />
+		</AnimEvent>
+        <AnimEvent Key="155">
+            <Fade Time="0.5" />
+        </AnimEvent>
+        <AnimEvent Key="415">
+            <Fade Time="0.5" />
+        </AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/trailer_train_rocket_01_objective_lmk" />
+</ModelBrand>

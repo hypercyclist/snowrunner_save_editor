@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="zikz_605r_spot_light_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_spot_light_1"/>
+	<ModelAttachments _noinherit="True">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.699; 3.168; -0.699)" />
+			<Model _template="HeadLightRay" Org="(3.697; 3.168; 0.698)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".3" Pos="(3.699; 3.168; -0.699)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".3" Pos="(3.697; 3.168; 0.698)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".3" Pos="(3.723; 3.168; -0.240)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".3" Pos="(3.723; 3.168; 0.241)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

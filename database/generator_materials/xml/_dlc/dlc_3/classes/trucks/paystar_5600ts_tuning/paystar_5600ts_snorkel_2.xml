@@ -1,0 +1,42 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<_parent File="paystar_5600ts_snorkel_1" />
+<TruckAddon>
+	<Snorkel _noinherit="true" Origin="(4.533; 2.639; -1.172)" />
+	<Snorkel _noinherit="true" Origin="(4.533; 2.639; 1.172)" />
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_snorkel_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 2.025; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.963; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.901; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.838; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 2.025; 1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.963; 1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.901; 1.166)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(4.682; 1.838; 1.166)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_TWIN_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

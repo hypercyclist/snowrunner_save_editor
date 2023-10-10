@@ -1,0 +1,121 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/bunk_log_addon">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneExtra_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body
+				Friction="2.0"
+				ImpactType="Truck"
+				Mass="800"
+				ModelFrame="BoneFork_cdt"
+				NoCameraCollision="True"
+				NetSyncUseGravity="True"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-120"
+					MaxLimit="120"
+				>
+					<Motor Damping="500" Spring="1000" Type="Spring" />
+				</Constraint>
+				<Body
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="10"
+					ModelFrame="BoneLeftSupport_cdt"
+					NoCameraCollision="True"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="10"
+					>
+						<Motor Damping="200" Spring="1500" Type="Spring" />
+					</Constraint>
+					<Body
+						Collisions="None"
+						ImpactType="Truck"
+						Mass="1"
+						ModelFrame="BoneLeftFoot_cdt"
+						NoCameraCollision="True"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-100"
+							MaxLimit="5"
+						>
+							<Motor Damping=".01" Spring="0.02" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="10"
+					ModelFrame="BoneRightSupport_cdt"
+					NoCameraCollision="True"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="12"
+					>
+						<Motor Damping="200" Spring="2000" Type="Spring" />
+					</Constraint>
+					<Body
+						Collisions="None"
+						ImpactType="Truck"
+						Mass="1"
+						ModelFrame="BoneRightFoot_cdt"
+						NoCameraCollision="True"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-100"
+							MaxLimit="5"
+						>
+							<Motor Damping=".02" Spring="0.04" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments/>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_BUNK_LOG_ADDON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_BUNK_LOG_ADDON_NAME"
+		/>
+		<LoadArea
+			Subtype="TrailerPoleLogLong"
+			Type="CargoLogsLong"
+			Min="(-3.058; -0.007; -2.475)"
+			Max="(3.801; 1.763; 2.475)"
+		/>
+		<InstallSocket Offset="(-3.5; 0; 0)" Type="BunkLog" />
+		<AddonSlots
+			InitialOffset="(0; 0; 0)"
+			OffsetStep="(-4.0; 0; 0)"
+			ParentFrames="BoneFront_cdt"
+			UseTrailerFrame="true"			
+			Quantity="1"
+		/>
+	</GameData>
+</TruckAddon>

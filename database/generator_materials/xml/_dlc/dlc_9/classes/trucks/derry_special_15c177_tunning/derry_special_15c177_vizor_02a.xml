@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_vizor_02a" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.24; 2.57; 0.67)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(3.24; 2.57; -0.67)" ParentFrame="BoneAddon_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="vizors"
+		Category="top"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177Visor" />
+	</GameData>
+</TruckAddon>

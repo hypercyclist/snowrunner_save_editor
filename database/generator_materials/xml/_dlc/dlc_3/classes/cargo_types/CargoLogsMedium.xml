@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_LOGS_MEDIUM_NAME"
+		UiDesc="UI_CARGO_LOGS_MEDIUM_DESC"
+		UiIcon20x20="cargoTypeLogMid20"
+		UiIcon40x40="cargoTypeLogMid40"
+		UiIcon100x100="cargoTypeMediumLogs"
+	/>
+</CargoType>

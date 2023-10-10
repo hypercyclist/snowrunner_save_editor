@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(2.969; 1.829; 0)" />
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_tuning/rezvani_hercules_6x6_snorkel_1" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TWIN_NAME"
+		/>
+		<InstallSocket Type="Rezvani6x6Snorkel1" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabin_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_57x_tuning/western_star_57x_exhaust_default">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="ws57xExhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.543; 0.84; 0)" IsLight="true" Origin="(-0.51; 3.926; 0.742)" Speed="3.82" />
+	<Exhaust Dir="(-0.543; 0.84; 0)" IsLight="true" Origin="(-0.51; 3.926; -0.742)" Speed="3.82" />
+</TruckAddon>

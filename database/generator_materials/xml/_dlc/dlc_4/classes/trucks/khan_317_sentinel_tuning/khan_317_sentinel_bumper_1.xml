@@ -1,0 +1,63 @@
+<_templates Include="trucks">
+	<Body>
+		<Cable Collisions="None" Mass="1">
+			<Constraint
+				Cone="20"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-2"
+				PlaneMax="2"
+			>
+				<PlaneMotor Damping="5" Spring="50" Type="Spring" />
+				<ConeMotor Damping="5" Spring="50" Type="Spring" />
+			</Constraint>
+		</Cable>
+	</Body>
+</_templates>
+<_parent File="khan_317_sentinel_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_bumper_1">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Cable" ModelFrame="BoneCableL_cdt" />
+			<Body _template="Cable" ModelFrame="BoneCableR_cdt" />
+			<Body Collisions="None" Mass="15" ModelFrame="BoneHook_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="7.5" Spring="75" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.808; 0.884; -0.628)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(3.808; 0.884; 0.628)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(3.808; 0.884; -0.628)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(3.808; 0.884; 0.628)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KHAN_39_MARSHALL_BUMPER_2_NAME"
+		/>
+	</GameData>
+</TruckAddon>

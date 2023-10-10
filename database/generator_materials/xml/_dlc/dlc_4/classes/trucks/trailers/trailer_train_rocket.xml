@@ -1,0 +1,188 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrainWheel
+			ConnectedToHandbrake="true"
+			SuspensionDamping="0.9"
+			SuspensionHeight="0.01"
+			SuspensionStrength="0.6"
+			Torque="default"
+			SuspensionMin="0"
+		/>
+	</Wheel>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_train_rocket"
+		>
+			<Wheel _template="TrainWheel" Pos="(23.379; 0.875; 0.718)" ParentFrame="BoneTrolley1_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(23.379; 0.875; 0.718)" ParentFrame="BoneTrolley1_cdt" />
+			<Wheel _template="TrainWheel" Pos="(21.002; 0.875; 0.718)" ParentFrame="BoneTrolley1_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(21.002; 0.875; 0.718)" ParentFrame="BoneTrolley1_cdt" />
+			<Wheel _template="TrainWheel" Pos="(5.639; 0.875; 0.718)" ParentFrame="BoneTrolley2_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(5.639; 0.875; 0.718)" ParentFrame="BoneTrolley2_cdt" />
+			<Wheel _template="TrainWheel" Pos="(3.262; 0.875; 0.718)" ParentFrame="BoneTrolley2_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(3.262; 0.875; 0.718)" ParentFrame="BoneTrolley2_cdt" />
+			<Wheel _template="TrainWheel" Pos="(0.233; 0.875; 0.718)" ParentFrame="BoneTrolley3_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(0.233; 0.875; 0.718)" ParentFrame="BoneTrolley3_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-2.144; 0.875; 0.718)" ParentFrame="BoneTrolley3_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-2.144; 0.875; 0.718)" ParentFrame="BoneTrolley3_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-3.824; 0.875; 0.718)" ParentFrame="BoneTrolley4_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-3.824; 0.875; 0.718)" ParentFrame="BoneTrolley4_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-6.202; 0.875; 0.718)" ParentFrame="BoneTrolley4_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-6.202; 0.875; 0.718)" ParentFrame="BoneTrolley4_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-12.95; 0.875; 0.718)" ParentFrame="BoneTrolley5_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-12.95; 0.875; 0.718)" ParentFrame="BoneTrolley5_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-15.327; 0.875; 0.718)" ParentFrame="BoneTrolley5_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-15.327; 0.875; 0.718)" ParentFrame="BoneTrolley5_cdt" />
+		</Wheels>
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			MinDist="15.0"
+			Origin="(2.5; 1.25; 0)"
+		>
+			<SpecialMove	Sound="actors/actor_train/actor_train_move_loop" />
+		</Sounds>
+		<OcclusionMap
+			HalfSizeZ="3.566"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-27.5"
+			MaxX="26"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<CompatibleWheels Scale="0.6" Type="wheels_train_rocket" />
+		<Camera Center="(-2.2; 0; 0)" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/trailers/trailer_train_rocket">
+		<Body CenterOfMassOffset="(0; 1; 0)" Mass="120000">
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="5000"
+				ModelFrame="BoneTrolley1_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="999999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="50000"
+				ModelFrame="BoneTrolley2_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="999999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="50000"
+				ModelFrame="BoneTrolley3_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="999999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="50000"
+				ModelFrame="BoneTrolley4_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="999999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="50000"
+				ModelFrame="BoneTrolley5_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="999999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/train_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData Price="18800">
+		<WinchSocket Pos="(24.806; 1.111; 0.000)" />
+        <WinchSocket Pos="(-11.737; 1.467; 1.785)" />
+		<WinchSocket Pos="(-11.737; 1.467; -1.785)" />
+		<WinchSocket Pos="(7.026; 1.128; 1.735)" />
+		<WinchSocket Pos="(7.026; 1.128; -1.735)" />
+		<WinchSocket Pos="(-23.995; 2.369; -1.867)" />
+		<WinchSocket Pos="(-23.995; 2.369; 1.867)" />
+		<UiDesc
+			UiDesc="UI_ROCKET_TRAIN_DESC"
+			UiIcon30x30="trailerImgRocketRailsFull"
+			UiIcon40x40="trailerImgRocketRailsFull30"
+			UiName="UI_ROCKET_TRAIN_NAME"
+		/>
+		<InstallSocket Offset="(10.294; 1.063; 0)" Type="TrailerTrainRocket" />
+	</GameData>
+	<Landmark Mesh="landmarks/trailer_train_rocket_lmk" MinScale="1.8" MaxScale="3.8" />
+</Truck>

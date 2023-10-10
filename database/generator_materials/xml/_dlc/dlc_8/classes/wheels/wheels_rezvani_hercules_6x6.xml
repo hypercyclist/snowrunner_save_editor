@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.66">
+	<TruckTires>
+		<TruckTire _template="Light" Mesh="wheels/tire_rezvani_hercules_6x6" Name="tire">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutDefault" />
+			<WheelFriction _template="ScoutOffroad" BodyFrictionAsphalt="3.0"/>
+			<GameData
+				Price="4500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_REZVANI_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_rezvani_hercules_6x6" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_LAND_ROVER_DESC" UiName="UI_RIM_REZVANI_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

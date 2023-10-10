@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="pacific512_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(2.811; 2.400; 0.000)" />
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_snorkel_1"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>    
+</TruckAddon>

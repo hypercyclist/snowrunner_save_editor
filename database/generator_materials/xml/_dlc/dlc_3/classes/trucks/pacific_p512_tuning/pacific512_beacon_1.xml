@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; -0.017; -0)" Org="(1.717; 3.352; -0.803)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(1; -0.017; -0)" Pos="(1.717; 3.352; -0.803)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(1; -0.017; -0)" Pos="(1.717; 3.352; -0.803)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(1; -0.017; -0)" Pos="(1.717; 3.352; -0.803)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(1.67; 3.348; -0.803)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-1; 0.017; 0)" Org="(1.626; 3.354; 0.803)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(-1; 0.017; 0)" Pos="(1.626; 3.354; 0.803)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-1; 0.017; 0)" Pos="(1.626; 3.354; 0.803)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(-1; 0.017; 0)" Pos="(1.626; 3.354; 0.803)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(1.67; 3.348; 0.803)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_DOUBLE_RAISED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_DOUBLE_RAISED_NAME"
+		/>
+		<InstallSocket Type="Pacific512Beacon" />
+	</GameData>
+</TruckAddon>

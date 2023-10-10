@@ -1,0 +1,55 @@
+<_templates Include="trucks" />
+<_parent File="rezvani_hercules_6x6_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_tuning/rezvani_hercules_6x6_bumper_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="40.0"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="LED" Pos="(4.963; 1.063; -0.078)" />
+			<Flare _template="LED" Pos="(4.963; 1.063; -0.048)" />
+			<Flare _template="LED" Pos="(4.963; 1.063; -0.017)" />
+			<Flare _template="LED" Pos="(4.963; 1.063; 0.014)" />
+			<Flare _template="LED" Pos="(4.963; 1.063; 0.045)" />
+			<Flare _template="LED" Pos="(4.963; 1.063; 0.075)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; -0.078)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; -0.048)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; -0.017)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; 0.014)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; 0.045)" />
+			<Flare _template="LED" Pos="(4.963; 1.036; 0.075)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UUI_TUNING_BUMPER_AXLEPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_AXLEPROT_NAME"
+		/>
+	</GameData>
+</TruckAddon>

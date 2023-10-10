@@ -1,0 +1,33 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabinDamper_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabinDamper_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_nf1430_tuning/western_star_nf1430_exhaust_default">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="nf1430Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.561; 0.827; 0)" IsLight="true" Origin="(4.385; 3.553; 1.224)" Speed="3.82" />
+	<Exhaust Dir="(-0.561; 0.827; 0)" IsLight="true" Origin="(4.385; 3.553; -1.224)" Speed="3.82" />
+</TruckAddon>

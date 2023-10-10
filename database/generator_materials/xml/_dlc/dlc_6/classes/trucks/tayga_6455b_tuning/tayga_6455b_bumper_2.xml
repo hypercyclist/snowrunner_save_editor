@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<_parent File="tayga_6455b_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tayga_6455b_tuning/tayga_6455b_bumper_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.465; 1.537; -0.247)" />
+			<Model _template="HeadLightRay" Org="(4.465; 1.537; 0.247)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(4.465; 1.537; -0.247)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(4.465; 1.537; 0.247)" />
+			<Flare _template="BlueStreak" Pos="(4.465; 1.537; -0.247)" />
+			<Flare _template="BlueStreak" Pos="(4.465; 1.537; 0.247)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(4.268; 1.036; -0.763)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(4.268; 1.036; 0.763)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

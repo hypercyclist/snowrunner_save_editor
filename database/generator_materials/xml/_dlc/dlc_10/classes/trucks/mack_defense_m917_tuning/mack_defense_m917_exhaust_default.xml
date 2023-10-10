@@ -1,0 +1,40 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.9" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_exhaust_default">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="10"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="exhaust"
+		Category="exhaust"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.029; 0.057; -0.998)"
+		IsLight="true"
+		Origin="(1.948; 3.111; -1.095)"
+		Speed="3.82"
+		ParentFrame="BoneChassis_cdt"
+	/>
+</TruckAddon>

@@ -1,0 +1,480 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			SuspensionDamping=".9"
+			SuspensionHeight="0.05"
+			SuspensionStrength="0.1"
+			Torque="default"
+			SuspensionMin="-0.3"
+			ParentFrame="BoneRoot_cdt"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			SuspensionDamping=".9"
+			SuspensionHeight="0.05"
+			SuspensionStrength="0.1"
+			Torque="default"
+			SuspensionMin="-0.3"
+			ParentFrame="BoneFrontCart_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+	<Body>
+		<Padlock Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-50"
+				MaxLimit="0"
+			>
+				<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+			</Constraint>
+		</Padlock>
+		<Leg ImpactType="Truck" Mass="200">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Name="Leg"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.467"
+			>
+				<Motor
+					Damping="1"
+					Force="10000"
+					Tau=".99"
+					Type="Position"
+				/>
+			</Constraint>
+			<Body ImpactType="Truck" Mass="100">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="Foot"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.394"
+				>
+					<Motor
+						Damping="1"
+						Force="10000"
+						Tau=".99"
+						Type="Position"
+					/>
+				</Constraint>
+			</Body>
+		</Leg>
+	</Body>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData FuelCapacity="120">
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.59; 0.449; 0.775)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.59; 0.449; 0.775)" />
+			<Wheel _template="RearWheel" Pos="(-1.012; 0.449; 0.775)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.012; 0.449; 0.775)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.2"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.1"
+			MaxX="2.5"
+		/>
+		<LimitedFluid
+			Center="(1.2; 1.45; -0)"
+			SizeX="0.444"
+			SizeY="0.559"
+			SizeZ="1.407"
+			Type="Box"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<CompatibleWheels Scale="0.394" Type="wheels_medium_double" />
+		<Camera Center="(-0.1; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_SCAN_WATCHPOINT"
+			Name="Watchpoint_Trailer"
+			ParentBodies="BoneLegL_cdt,BoneAnchorExtL_cdt, BoneAnchorL_cdt, BoneLegR_cdt,BoneAnchorExtR_cdt, BoneAnchorR_cdt, BoneCapDown1_cdt, BoneCapUp1_cdt, BoneCapUp2_cdt, BoneAntennaMainPrismatic_cdt, BoneAntennaMainHinge_cdt, BoneAntennaMainExt_cdt, BoneAntennaArmFirst_1_cdt, BoneAntennaArmFirst_2_cdt, BoneAntennaArmSecond_1_cdt, BoneAntennaArmSecond_2_cdt, BoneAntennaMainRotator_cdt"
+			ResetOnLoad="true"
+		>
+			<Group FoldingDelay="0.2" Id="anchors_position">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_legs_on" Range="20" Type="Start" />
+				<Constraint
+					InitialFix="true"
+					Name="Leg"
+					SpeedMult=".4"
+					TerminalFix="true"
+					Position="0.467"
+				/>
+			</Group>
+			<Group FoldingDelay="0.3" Id="anchors_push" UnfoldingDelay="0.3">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_legs_off" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="Foot"
+					SpeedMult=".4"
+					TerminalFix="true"
+					Position="0.394"
+				/>
+			</Group>
+			<Group FoldingDelay=".1" Id="activate_watchpoint_trailer" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase01" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase14" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="CapDown"
+					SpeedMultFolding="6"
+					SpeedMultUnfolding="3"
+					Position="231.792"
+				/>
+			</Group>
+			<Group FoldingDelay="0.05" Id="activate_watchpoint_trailer1" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase02" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase13" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="CapUp2"
+					SpeedMultFolding="6"
+					SpeedMultUnfolding="4"
+					Position="212.680"
+				/>
+			</Group>
+			<Group FoldingDelay="0.1" Id="activate_watchpoint_trailer2" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase03" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase12" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="CapUp1"
+					SpeedMultFolding="6"
+					SpeedMultUnfolding="3"
+					Position="180"
+				/>
+			</Group>
+			<Group FoldingDelay=".3" Id="activate_watchpoint_trailer3" UnfoldingDelay=".3">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase04" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase11" Range="20" Type="Stop" />
+				<Constraint InitialFix="true" Name="AntennaMainHinge" SpeedMultFolding="1" SpeedMultUnfolding=".3" Position="89" />
+				<Constraint InitialFix="true" Name="AntennaMainPrismatic" SpeedMultFolding=".3" SpeedMultUnfolding=".3" Position="0.843" />
+				<Constraint InitialFix="true" Name="AntennaMainExt" SpeedMultFolding=".2" SpeedMultUnfolding=".3" Position="0.321" />
+				<Constraint InitialFix="true" Name="AntennaArmFirst1" SpeedMultFolding=".574" SpeedMultUnfolding=".3" Position="51.67" />
+			</Group>
+			<Group FoldingDelay=".1" Id="activate_watchpoint_trailer4" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase05" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase10" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="AntennaArmSecond1"
+					SpeedMult="1.2"
+					Position="142.720"
+				/>
+			</Group>
+			<Group FoldingDelay="1.5" Id="activate_watchpoint_trailer5" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase06" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase09" Range="20" Type="Stop" />
+				<Constraint InitialFix="true" Name="AntennaArmFirst2" SpeedMult="2" Position="161.342" />
+				<Constraint InitialFix="true" Name="AntennaArmSecond2" SpeedMult="2" Position="155.278" />
+			</Group>
+			<Group FoldingDelay=".5" Id="activate_watchpoint_trailer6" UnfoldingDelay=".1">
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase07" Range="20" Type="Start" />
+				<SoundBrand Name="addons/scout_trailer_radar/radar_scan_phase08" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="AntennaMainRotator"
+					SpeedMult="1.2"
+					Position="360"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/scout_trailer_radar">
+		<Body
+			CenterOfMassOffset="(-0.5; -0.7; 0)"
+			ImpactType="Truck"
+			Mass="600"
+		>
+			<Body Mass="300" ModelFrame="BoneFrontCart_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="50"
+				>
+					<Motor Damping="8000" Spring="40" Type="Spring" />
+				</Constraint>
+				<Body ForceBodyParams="true" Mass="200" ModelFrame="BoneHandle_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-60"
+						MaxLimit="60"
+					/>
+				</Body>
+			</Body>
+			<Body _template="Padlock" ModelFrame="BonePadlockLeft_cdt" />
+			<Body _template="Padlock" ModelFrame="BonePadlockRight_cdt" />
+			<!--			<Body _template="Leg" ModelFrame="BoneLegL_cdt">
+				<Constraint AxisLocal="(0; -1; 0)" />
+				<Body ModelFrame="BoneAnchorExtL_cdt">
+					<Body ModelFrame="BoneAnchorL_cdt" />
+				</Body>
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneLegR_cdt">
+				<Constraint AxisLocal="(0; 1; 0)" />
+				<Body ModelFrame="BoneAnchorExtR_cdt">
+					<Body ModelFrame="BoneAnchorR_cdt" />
+				</Body>
+			</Body>-->
+			<Body _template="Leg" ModelFrame="BoneLegL_cdt">
+				<Body ModelFrame="BoneFootL_cdt" />
+			</Body>
+			<Body _template="Leg" ModelFrame="BoneLegR_cdt">
+				<Body ModelFrame="BoneFootR_cdt" />
+			</Body>
+			<Body Mass="10" ModelFrame="BoneCapUp1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Name="CapUp1"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="180"
+				>
+					<Motor Damping="1" Force="500" Type="Position" />
+				</Constraint>
+				<Body Mass="5" ModelFrame="BoneCapUp2_cdt">
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="CapUp2"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="212.680"
+					>
+						<Motor Damping="1" Force="300" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="5" ModelFrame="BoneCapDown1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="CapDown"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="231.792"
+				>
+					<Motor Damping="1" Force="300" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body Mass="200" ModelFrame="BoneAntennaMainPrismatic_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Name="AntennaMainPrismatic"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.843"
+				>
+					<Motor Damping="1" Force="60000" Type="Position" />
+				</Constraint>
+				<Body Mass="150" ModelFrame="BoneAntennaMainHinge_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="AntennaMainHinge"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Damping="1" Force="60000" Type="Position" />
+					</Constraint>
+					<Body Mass="100" ModelFrame="BoneAntennaMainExt_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Name="AntennaMainExt"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="0.321"
+						>
+							<Motor Damping="1" Force="20000" Type="Position" />
+						</Constraint>
+						<Body Mass="80" ModelFrame="BoneAntennaMainRotator_cdt">
+							<Constraint
+								AxisLocal="(0; 1; 0)"
+								Name="AntennaMainRotator"
+								Type="Hinge"
+								MinLimit="0"
+								MaxLimit="360"
+							>
+								<Motor
+									Damping="1"
+									Force="2000"
+									Tau=".99"
+									Type="Position"
+								/>
+							</Constraint>
+							<Body Mass="50" ModelFrame="BoneAntennaArmFirst_1_cdt">
+								<Constraint
+									AxisLocal="(0; 0; 1)"
+									Name="AntennaArmFirst1"
+									Type="Hinge"
+									MinLimit="0"
+									MaxLimit="51.67"
+								>
+									<Motor Damping="1" Force="2000" Type="Position" />
+								</Constraint>
+								<Body Mass="10" ModelFrame="BoneAntennaArmFirst_2_cdt">
+									<Constraint
+										AxisLocal="(0; 0; -1)"
+										Name="AntennaArmFirst2"
+										Type="Hinge"
+										MinLimit="0"
+										MaxLimit="161.342"
+									>
+										<Motor Damping="1" Force="800" Type="Position" />
+									</Constraint>
+								</Body>
+								<Body Mass="30" ModelFrame="BoneAntennaArmSecond_1_cdt">
+									<Constraint
+										AxisLocal="(0; 0; 1)"
+										Name="AntennaArmSecond1"
+										Type="Hinge"
+										MinLimit="0"
+										MaxLimit="142.720"
+									>
+										<Motor Damping="1" Force="1000" Type="Position" />
+									</Constraint>
+									<Body Mass="10" ModelFrame="BoneAntennaArmSecond_2_cdt">
+										<Constraint
+											AxisLocal="(0; 0; 1)"
+											Name="AntennaArmSecond2"
+											Type="Hinge"
+											MinLimit="0"
+											MaxLimit="155.278"
+										>
+											<Motor Damping="1" Force="800" Type="Position" />
+										</Constraint>
+									</Body>
+								</Body>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.66; 1.275; 0)" />
+			<Flare _template="StopSignal" Pos="(-1.66; 1.275; 0.851)" />
+			<Flare _template="StopSignal" Pos="(-1.66; 1.275; -0.851)" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-1.66; 1.275; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.66; 1.275; 0.851)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.66; 1.275; -0.851)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/scout_trailer_radar_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData
+		Price="5800"
+		SoundByGroups="true"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket WinchableWhenAttached="false" Pos="(3.869; 0.76; 0)" ParentFrame="BoneHandle_cdt" />
+		<WinchSocket Pos="(0.349; 2.18; -0.794)" />
+		<WinchSocket Pos="(0.349; 2.18; -0.794)" />
+		<WinchSocket Pos="(0.349; 0.765; 0.884)" />
+		<WinchSocket Pos="(0.349; 0.765; -0.884)" />
+		<WinchSocket Pos="(-1.892; 0.78; 0)" />
+		<UiDesc
+			UiDesc="UI_SCOUT_TRAILER_RADAR_DESC"
+			UiIcon30x30="trailerImg30"
+			UiIcon40x40="trailerImg"
+			UiName="UI_SCOUT_TRAILER_RADAR_NAME"
+		/>
+		<SoundPoweredGroupStop Name="addons/scout_trailer_radar/radar_legs_off" Range="20" Volume="1" />
+		<SoundPoweredGroupStart Name="addons/scout_trailer_radar/radar_legs_on" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="" Range="20" Volume="1" />
+		<InstallSocket Offset="(3.869; 0.76; 0)" Type="ScautTrailer" ParentFrame="BoneHandle_cdt" />
+		<CraneSocket Pos="(3.869; 0.76; 0)" ParentFrame="BoneHandle_cdt" />
+		<CraneSocket Pos="(0.349; 2.18; -0.794)" />
+		<CraneSocket Pos="(0.349; 2.18; -0.794)" />
+		<CraneSocket Pos="(0.349; 0.765; 0.884)" />
+		<CraneSocket Pos="(0.349; 0.765; -0.884)" />
+		<CraneSocket Pos="(-1.892; 0.78; 0)" />
+		<AddonType Name="Watchtower" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonSlider_1" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAntennaMainHinge_cdt"
+				ModelFrame="BonePistonHinge_1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonHinge_2" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0.626; 0; 0)"
+				AttachToFrame="BoneAntennaMainHinge_cdt"
+				ModelFrame="BonePistonSlider_2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneLegL" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone ModelFrame="BoneAnchorExtL">
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+				<IKBone
+					AttachOffset="(0; 0; 0)"
+					AttachToFrame="BoneFootL_cdt"
+					ModelFrame="BoneAnchorL"
+				>
+					<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+				</IKBone>
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneLegR" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone ModelFrame="BoneAnchorExtR">
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+				<IKBone
+					AttachOffset="(0; 0; 0)"
+					AttachToFrame="BoneFootR_cdt"
+					ModelFrame="BoneAnchorR"
+				>
+					<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+				</IKBone>
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="3.9"
+	/>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_beacon_01a"/>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Scale="(0.17; 0.17; 0.17)" Dir="(-0.796; 0.222; 0.563)" Org="(0.276; 2.496; -0)" ParentFrame="BoneRotator" />
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(2.495; 2.496; 0)" ParentFrame="BoneRotator" />
+			<Flare Color="g(255; 50; 2) x 0.45" Dir="(-0.796; 0.222; 0.563)" Size="1" Pos="(0.276; 2.496; -0)" ParentFrame="BoneRotator" />
+			<Flare Color="g(255; 255; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.6" Pos="(0.276; 2.496; -0)" ParentFrame="BoneRotator" />
+			<Flare Color="g(255; 50; 2) x 0.55" Size="2" Pos="(0.276; 2.496; -0)" ParentFrame="BoneRotator" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CAGED_BEACON_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CAGED_BEACON_1_NAME"
+		/>
+		<InstallSocket Type="zikz566Beacon" />
+	</GameData>
+</TruckAddon>

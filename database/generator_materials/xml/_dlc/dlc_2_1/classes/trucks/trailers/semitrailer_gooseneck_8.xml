@@ -1,0 +1,270 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheelExtra
+			Location="rear"
+			SuspensionHeight="0.0244"
+			SuspensionStrength="0.1"
+			Torque="default"
+			Type="ford_clt9000_rear"
+			SuspensionMin="-0.1"
+			ConnectedToHandbrake="true"
+		/>
+		<TrailerWheel
+			Location="rear"
+			SuspensionHeight="0.0244"
+			SuspensionStrength="0.1"
+			Torque="default"
+			Type="ford_clt9000_rear"
+			SuspensionMin="-0.1"
+			ConnectedToHandbrake="true"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<Truck Type="Trailer" AttachType="Saddle">
+	<TruckData>
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_2"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="TrailerWheel" Pos="(-10.706; 0.565; 1.25)" ParentFrame="BoneCargo_3_cdt" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-10.706; 0.565; 1.25)" ParentFrame="BoneCargo_3_cdt" />
+			<Wheel _template="TrailerWheel" Pos="(-12.606; 0.565; 1.25)" ParentFrame="BoneCargo_2_cdt" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-12.606; 0.565; 1.25)" ParentFrame="BoneCargo_2_cdt" />
+			<Wheel _template="TrailerWheel" Pos="(-14.406; 0.565; 1.25)" ParentFrame="BoneCargo_1_cdt" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-14.406; 0.565; 1.25)" ParentFrame="BoneCargo_1_cdt" />
+			<Wheel _template="TrailerWheel" Pos="(-16.206; 0.565; 1.25)" ParentFrame="BoneCargo_1_cdt" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-16.206; 0.565; 1.25)" ParentFrame="BoneCargo_1_cdt" />
+			<Wheel _template="TrailerWheelExtra" Pos="(-7.512; 0.694; 1.25)" ParentFrame="BoneCargo_4_cdt" />
+			<Wheel _template="TrailerWheelExtra" RightSide="true" Pos="(-7.512; 0.694; 1.25)" ParentFrame="BoneCargo_4_cdt" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="2.4"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-19"
+			MaxX="5"
+		/>
+		<Foot Origin="(1.995; -0.371; -1.175)" />
+		<Foot Origin="(1.995; -0.371; 1.175)" />
+		<Constraint _template="TrailerRagdoll" />
+		<CompatibleWheels Scale="0.673" Type="wheels_medium_double" />
+		<Camera Center="(-7; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+			<Axle Frame="BoneAxle4" />
+			<Axle Frame="BoneAxleExtra" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				Tau="0.9"
+				TerminalFix="true"
+				Position="1"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_gooseneck_8">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="750"
+			ModelFrame="BoneCargo_1_cdt"
+		>
+			<Body Mass="750" ModelFrame="BoneCargo_2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+				</Constraint>
+				<Body Mass="750" ModelFrame="BoneCargo_3_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="5"
+					>
+						<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+					</Constraint>
+					<Body Mass="750" ModelFrame="BoneCargo_4_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Type="Hinge"
+							MinLimit="-5"
+							MaxLimit="5"
+						>
+							<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+						</Constraint>
+						<Body Mass="750" ModelFrame="BoneCargo_5_cdt">
+							<Constraint
+								AxisLocal="(1; 0; 0)"
+								Type="Hinge"
+								MinLimit="-5"
+								MaxLimit="5"
+							>
+								<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+							</Constraint>
+							<Body Mass="750" ModelFrame="BoneCargo_6_cdt">
+								<Constraint
+									AxisLocal="(1; 0; 0)"
+									Type="Hinge"
+									MinLimit="-5"
+									MaxLimit="5"
+								>
+									<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+								</Constraint>
+								<Body Mass="750" ModelFrame="BoneCargo_7_cdt">
+									<Constraint
+										AxisLocal="(1; 0; 0)"
+										Type="Hinge"
+										MinLimit="-5"
+										MaxLimit="5"
+									>
+										<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+									</Constraint>
+									<Body Mass="750" ModelFrame="BoneCargo_8_cdt">
+										<Constraint
+											AxisLocal="(1; 0; 0)"
+											Type="Hinge"
+											MinLimit="-5"
+											MaxLimit="5"
+										>
+											<Motor Damping="1000000" Spring="1600000" Type="Spring" />
+										</Constraint>
+										<Body
+											Mass="100"
+											ModelFrame="BoneLeftFoot_cdt"
+											NoFoliageCollisions="true"
+										>
+											<Constraint
+												AxisLocal="(0; 1; 0)"
+												Name="Leg"
+												Type="Prismatic"
+												MinLimit="0"
+												MaxLimit="1"
+											>
+												<Motor Force="95000" Type="Position" />
+											</Constraint>
+										</Body>
+										<Body
+											Mass="100"
+											ModelFrame="BoneRightFoot_cdt"
+											NoFoliageCollisions="true"
+										>
+											<Constraint
+												AxisLocal="(0; 1; 0)"
+												Name="Leg"
+												Type="Prismatic"
+												MinLimit="0"
+												MaxLimit="1"
+											>
+												<Motor Force="95000" Type="Position" />
+											</Constraint>
+										</Body>
+									</Body>
+								</Body>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Size="0.8" Pos="(-17.386; 1.516; 0)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-17.386; 1.516; 1.325)" />
+			<Flare _template="StopSignal" Size="0.8" Pos="(-17.386; 1.516; -1.325)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-17.386; 1.516; 0)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-17.386; 1.516; 0.96)" />
+			<Flare _template="ReverseSignal" Size="0.7" Pos="(-17.386; 1.516; -0.96)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-17.386; 1.516; 0.96)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-17.386; 1.516; -0.96)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-18; 1.1; 1)" />
+			<Light _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Pos="(-18; 1.1; -1)" />
+			<Flare _template="Beacon" Size="0.3" Pos="(-17.308; 1.524; 1.565)" />
+			<Flare _template="Beacon" Size="0.3" Pos="(-17.308; 1.524; -1.565)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; 0.778)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; -0.778)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; 0.96)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; -0.96)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; 1.142)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; -1.142)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; 1.325)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-17.386; 1.516; -1.325)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-17.114; 1.744; -1.551)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-17.114; 1.744; 1.551)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-13.335; 1.744; -1.551)" ParentFrame="BoneCargo_2_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-13.335; 1.744; 1.551)" ParentFrame="BoneCargo_2_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-8.211; 1.744; -1.551)" ParentFrame="BoneCargo_4_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-8.211; 1.744; 1.551)" ParentFrame="BoneCargo_4_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-3.011; 1.744; -1.551)" ParentFrame="BoneCargo_6_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-3.011; 1.744; 1.551)" ParentFrame="BoneCargo_6_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(2.999; 1.744; -1.551)" ParentFrame="BoneCargo_8_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(2.999; 1.744; 1.551)" ParentFrame="BoneCargo_8_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(5.835; 2.327; -1.551)" ParentFrame="BoneCargo_8_cdt" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(5.835; 2.327; 1.551)" ParentFrame="BoneCargo_8_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/semitrailer_gooseneck_8_lmk" MinScale="0.7" MaxScale="1.5" />
+	<GameData ExcludedCargoTypes="CargoPlane, CargoWing1, CargoWing2" Price="9400">
+		<WinchSocket Pos="(4.244; 1.744; -1.544)" ParentFrame="BoneCargo_8_cdt" />
+		<WinchSocket Pos="(4.244; 1.744; 1.544)" ParentFrame="BoneCargo_8_cdt" />
+		<WinchSocket Pos="(-2.644; 1.744; -1.544)" ParentFrame="BoneCargo_6_cdt" />
+		<WinchSocket Pos="(-2.644; 1.744; 1.544)" ParentFrame="BoneCargo_6_cdt" />
+		<WinchSocket Pos="(-9.544; 1.744; -1.544)" ParentFrame="BoneCargo_3_cdt" />
+		<WinchSocket Pos="(-9.544; 1.744; 1.544)" ParentFrame="BoneCargo_3_cdt" />
+		<WinchSocket Pos="(-16.7; 1.744; -1.544)" />
+		<WinchSocket Pos="(-16.7; 1.744; 1.544)" />
+		<WinchSocket Pos="(-17.439; 1.744; -1.1)" />
+		<WinchSocket Pos="(-17.439; 1.744; 1.1)" />
+		<WinchSocket Pos="(-17.136; 0.924; 0)" />
+		<WinchSocket Pos="(8.709; 1.859; 0.000)" ParentFrame="BoneCargo_8_cdt" />
+		<UiDesc
+			UiDesc="UI_SEMITRAILER_GOOSENECK_8_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_SEMITRAILER_GOOSENECK_8_NAME"
+		/>
+		<RequiredAddon _template="SaddleHigh" />
+		<InstallSocket Offset="(8.719; 1.895; 0)" Type="LargeSemitrailer" ParentFrame="BoneCargo_8_cdt" />
+		<CraneSocket Pos="(4.244; 1.744; -1.544)" ParentFrame="BoneCargo_8_cdt" />
+		<CraneSocket Pos="(4.244; 1.744; 1.544)" ParentFrame="BoneCargo_8_cdt" />
+		<CraneSocket Pos="(-2.644; 1.744; -1.544)" ParentFrame="BoneCargo_6_cdt" />
+		<CraneSocket Pos="(-2.644; 1.744; 1.544)" ParentFrame="BoneCargo_6_cdt" />
+		<CraneSocket Pos="(-9.544; 1.744; -1.544)" ParentFrame="BoneCargo_3_cdt" />
+		<CraneSocket Pos="(-9.544; 1.744; 1.544)" ParentFrame="BoneCargo_3_cdt" />
+		<CraneSocket Pos="(-16.7; 1.744; -1.544)" />
+		<CraneSocket Pos="(-16.7; 1.744; 1.544)" />
+		<CraneSocket Pos="(-17.439; 1.744; -1.1)" />
+		<CraneSocket Pos="(-17.439; 1.744; 1.1)" />
+		<CraneSocket Pos="(8.709; 1.859; 0.000)" ParentFrame="BoneCargo_8_cdt" />
+		<AddonSlots
+			InitialOffset="(2.4; 1.779; 0)"
+			OffsetStep="(-2.559; 0; 0)"
+			ParentFrames="BoneCargo_8_cdt, BoneCargo_7_cdt, BoneCargo_6_cdt, BoneCargo_5_cdt, BoneCargo_4_cdt, BoneCargo_3_cdt, BoneCargo_2_cdt, BoneCargo_1_cdt"
+			Quantity="8"
+		/>
+	</GameData>
+</Truck>

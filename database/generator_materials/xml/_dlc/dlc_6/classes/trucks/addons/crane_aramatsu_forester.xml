@@ -1,0 +1,246 @@
+<_templates Include="trucks">
+	<Body>
+		<Grappler
+			ForceBodyParams="true"
+			Friction="2.0"
+			Mass="100"
+			NoClientCollisions="true"
+		>
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="125"
+			>
+				<Motor
+					Damping="1.0"
+					Force="50000"
+					Tau="0.04"
+					Type="Position"
+				/>
+			</Constraint>
+		</Grappler>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PoweredConstraints>
+		<Group Action="2" Id="crane_grab" LocaleUid="UI_CRANE_GRAB">
+			<Constraint Name="RightGrappler" SpeedMult="2" Position="125" />
+			<Constraint Name="LeftGrappler" SpeedMult="2" Position="125" />
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/crane_aramatsu_forester">
+		<NetSync Legacy="true" />
+		<Body ImpactType="Truck" Mass="900">
+			<Constraint Type="Fixed" />
+			<Body Mass="600" ModelFrame="BoneRotationBase_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Crane"
+					Type="Hinge"
+					MinLimit="-350"
+					MaxLimit="350"
+				>
+					<Motor Force="80000" Tau="0.5" Type="Position" />
+				</Constraint>
+				<Body Collisions="All" Mass="550" ModelFrame="BoneArm1_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="Arm1"
+						Type="Hinge"
+						MinLimit="-80"
+						MaxLimit="40"
+					>
+						<Motor Force="800000" Tau="0.5" Type="Position" />
+					</Constraint>
+					<Body Collisions="All" Mass="300" ModelFrame="BoneArm2_cdt">
+						<Constraint
+							AxisLocal="(0; 0; -1)"
+							Name="Arm2"
+							Type="Hinge"
+							MinLimit="0"
+							MaxLimit="170"
+						>
+							<Motor Force="800000" Tau="0.2" Type="Position" />
+						</Constraint>
+						<Body Collisions="All" Mass="200" ModelFrame="BoneArm3_cdt">
+							<Constraint
+								AxisLocal="(1; 0; 0)"
+								Name="Arm3"
+								Type="Prismatic"
+								MinLimit="0"
+								MaxLimit="3"
+							>
+								<Motor Force="800000" Tau="0.4" Type="Position" />
+							</Constraint>
+							<Body
+								AngularDamping="1"
+								Collisions="None"
+								Mass="40"
+								ModelFrame="BoneGrabberHingeOZ_cdt"
+							>
+								<Constraint
+									AxisLocal="(0; 0; 1)"
+									Type="Hinge"
+									MinLimit="-360"
+									MaxLimit="360"
+								>
+									<Motor Damping="50" Spring="0" Type="Spring" />
+								</Constraint>
+								<Body
+									AngularDamping="1"
+									Collisions="All"
+									Mass="40"
+									ModelFrame="BoneGrabberHingeOX_cdt"
+								>
+									<Constraint
+										AxisLocal="(1; 0; 0)"
+										Type="Hinge"
+										MinLimit="-360"
+										MaxLimit="360"
+									>
+										<Motor Damping="50" Spring="0" Type="Spring" />
+									</Constraint>
+									<Body ForceBodyParams="true" Mass="40" ModelFrame="BoneGrabberHingeOY_cdt">
+										<Constraint
+											AxisLocal="(0; 1; 0)"
+											Name="GrapplerBase"
+											Type="Hinge"
+											MinLimit="-360"
+											MaxLimit="360"
+										>
+											<Motor Force="120000" Tau="0.4" Type="Position" />
+										</Constraint>
+										<Body _template="Grappler" ModelFrame="BoneGrabberL_cdt">
+											<Constraint Name="LeftGrappler" />
+										</Body>
+										<Body _template="Grappler" ModelFrame="BoneGrabberR_cdt">
+											<Constraint Name="RightGrappler" />
+										</Body>
+									</Body>
+								</Body>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="7900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CRANE_ARAMATSU_FORESTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CRANE_ARAMATSU_FORESTER_NAME"
+		/>
+		<SoundPoweredGroupStart Name="" Range="10" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/crane_loglift/crane_loglift_legs_loop" Range="10" Volume="1" />
+		<SoundPoweredGroupStop Name="addons/crane_loglift/crane_loglift_legs_stop" Range="10" Volume="1" />
+
+		<SoundOpenStart Name="addons/crane_loglift/crane_loglift_cabin_start" Range="10" Volume="1" />
+		<SoundOpenLoop Name="addons/crane_loglift/crane_loglift_cabin_loop" Range="10" Volume="1" />
+		<SoundOpenStop Name="addons/crane_loglift/crane_loglift_cabin_stop" Range="10" Volume="1" />
+
+		<SoundIKStart Name="addons/crane_loglift/crane_loglift_crane_start" Range="10" Volume="1" />
+		<SoundIKLoop Name="addons/crane_loglift/crane_loglift_crane_loop" Range="10" Volume="1" />
+		<SoundIKStop Name="addons/crane_loglift/crane_loglift_crane_stop" Range="10" Volume="1" />
+
+		<SoundGrabberMoveStart Name="addons/crane_loglift/crane_loglift_grabber_start" Range="10" Volume="1" />
+		<SoundGrabberMoveLoop Name="addons/crane_loglift/crane_loglift_grabber_loop" Range="10" Volume="1" />
+		<SoundGrabberMoveStop Name="addons/crane_loglift/crane_loglift_grabber_stop" Range="10" Volume="1" />
+
+		<SoundGrabberAction Name="trucks/aramatsu_forester/aramatsu_forester_grabber_action" Range="10" Volume="1" />
+
+		<SoundClose Name="addons/crane_loglift/crane_loglift_restore" Range="10" Volume="1" />
+
+		<SoundCraneCabin Name="trucks/aramatsu_forester/aramatsu_forester_cabin_rotate_loop" Range="10" Volume="1" />
+
+		<InstallSocket Offset="(0; 0; 0)" Type="CraneAramatsuForester" />
+		<AddonType Name="LogCrane" />
+	</GameData>
+	<ControlledIK
+		CoeffEndMovementSpeedOY=".8"
+		CoeffEndMovementSpeedOYWithLoad=".8"
+		CoeffEndMovementSpeedXZ=".8"
+		CoeffEndMovementSpeedXZWithLoad=".8"
+	>
+		<Chain EndOffset="(0.1; 0; 0)" ModelFrames="BoneRoot_cdt,BoneRotationBase_cdt,BoneArm1_cdt,BoneArm2_cdt,BoneArm3_cdt">
+			<!--<ConstraintStartPosition Name="Arm3" SpeedMult=".8" Value="-.2" />
+			<ConstraintStartPosition Name="Cabin" SpeedMult=".8" StartDelay=".3" Value="2.234" />-->
+		</Chain>
+	</ControlledIK>
+	<ControlledConstraints>
+		<Constraint
+			Action="9"
+			ActionId="fork_crane"
+			Id="fork_crane"
+			LocaleUid="UI_FORK_CRANE"
+			Name="GrapplerBase"
+			SpeedMult=".02"
+		/>
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBase" ParentFrame="BoneArm1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRotationBase_cdt"
+				ModelFrame="BonePiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneLever1" ParentFrame="BoneArm1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0.516; 0; 0)"
+				AttachToFrame="BoneArm2_cdt"
+				ModelFrame="BoneLever2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneArmPistonBase" ParentFrame="BoneArm1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneLever1"
+				ModelFrame="BoneArmPiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBaseGrabberR" ParentFrame="BoneGrabberHingeOY_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneGrabberR_cdt"
+				ModelFrame="BonePistonGrabberR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBaseGrabberL" ParentFrame="BoneGrabberHingeOY_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneGrabberL_cdt"
+				ModelFrame="BonePistonGrabberL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<AddonCamera
+		FirstPersonDir="(0.653; -0.757; 0)"
+		FirstPersonPos="(-2.025; 4.856; 0.585)"
+		ParentFrame="BoneArm1_cdt"
+	/>
+</TruckAddon>

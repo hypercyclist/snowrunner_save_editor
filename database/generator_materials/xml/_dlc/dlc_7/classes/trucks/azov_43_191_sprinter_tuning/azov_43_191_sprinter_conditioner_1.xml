@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="azov_43_191_sprinter_horn_1" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="BoneFan"
+		RotationAxis="(0; 1; 0)"
+		RotationSpeed="8"
+	/>
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_conditioner_1" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="azovSprinterAirConditioner" />
+	</GameData>
+</TruckAddon>

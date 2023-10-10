@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />            
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Offroad" />            
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.459"
+	WidthRear="1.092"
+>
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_pacific_p512_double" Name="offroad">
+			<WheelFriction _template="Offroad" SubstanceFriction="3.5" />
+			<GameData
+				Price="6800"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_pacific_p512_double" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

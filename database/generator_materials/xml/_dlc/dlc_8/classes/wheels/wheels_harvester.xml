@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Light"
+	Mesh="wheels/wheels_harvester"
+	Radius="0.352"
+	Width="0.1"
+>
+	<WheelTracks _template="Default" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />
+</TruckWheel>

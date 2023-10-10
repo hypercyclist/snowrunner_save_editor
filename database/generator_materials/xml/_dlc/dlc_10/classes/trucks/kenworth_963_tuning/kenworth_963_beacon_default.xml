@@ -1,0 +1,57 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorBeaconL" RotationSpeed="4" RotationAxis="(0; -1; 0)" /> 
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorBeaconR" RotationSpeed="3.85"  RotationAxis="(0; 1; 0)"  />
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_beacon_default">
+		<NetSync Legacy="false" />
+		<Body Mass="30" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model
+				Color="g(255; 50; 5) x 0.55"
+				Dir="(1; 0.222; 0.563)"
+				Org="(1.487; 3.811; -0.706)"
+				Scale="(0.19; 0.19; 0.19)"
+				ParentFrame="BoneRotatorBeaconR"
+				Reflections="false"
+			/>
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(1.487; 3.811; -0.706)" ParentFrame="BoneRotatorBeaconR" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; 0.563)" Size="1" Pos="(1.487; 3.811; -0.706)" ParentFrame="BoneRotatorBeaconR" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.7" Pos="(1.487; 3.811; -0.706)" ParentFrame="BoneRotatorBeaconR" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(1.487; 3.811; -0.706)" ParentFrame="BoneRotatorBeaconR" />
+
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model
+				Color="g(255; 50; 5) x 0.55"
+				Dir="(1; 0.222; 0.563)"
+				Org="(1.487; 3.811; 0.706)"
+				Scale="(0.19; 0.19; 0.19)"
+				ParentFrame="BoneRotatorBeaconL"
+			/>
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(1.487; 3.811; 0.706)" ParentFrame="BoneRotatorBeaconL" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; 0.563)" Size="1" Pos="(1.487; 3.811; 0.706)" ParentFrame="BoneRotatorBeaconL" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.7" Pos="(1.487; 3.811; 0.706)" ParentFrame="BoneRotatorBeaconL" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(1.487; 3.811; 0.706)" ParentFrame="BoneRotatorBeaconL" />
+
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Roofrack" />
+	</GameData>
+</TruckAddon>

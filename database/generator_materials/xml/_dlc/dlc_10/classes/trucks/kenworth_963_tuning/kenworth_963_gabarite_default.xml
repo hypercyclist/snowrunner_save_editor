@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.854; 3.56; 0.652)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.853; 3.577; 0.145)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.853; 3.577; 0)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.854; 3.56; -0.652)" />
+			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.853; 3.577; -0.145)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Gabarite" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,45 @@
+<_templates Include="environment" />
+<PlantBrand _template="LyingTree">
+	<PhysicsModel>
+		<Body _template="FallingTreeRoot" ModelFrame="BoneRoot" DamageMult="0.3">
+			<Constraint _template="FallingTreeRoot" />
+			<Body _template="BranchSoft" ModelFrame="BoneBranch1" DamageMult="0.0">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch2" DamageMult="0.0">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch3" DamageMult="0.0">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch4" DamageMult="0.0">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="TrunkHeadLying" ModelFrame="BoneEnd" DamageMult="0.0">
+				<Constraint _template="TrunkHeadLying" />
+				<Body _template="BranchSoft" ModelFrame="BoneBranch5" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+				<Body _template="BranchSoft" ModelFrame="BoneBranch6" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+				<Body _template="BranchSoft" ModelFrame="BoneBranch7" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+				<Body _template="BranchSoft" ModelFrame="BoneBranch8" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+				<Body _template="BranchSoft" ModelFrame="BoneBranch9" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+				<Body _template="BranchSoft" ModelFrame="BoneBranch10" DamageMult="0.0">
+					<Constraint _template="BranchSoft" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(4.0; 10.0)" Texture="occlusion_vertical.tga" />
+	<GameData>
+		<WinchSocket Pos="(-0.117; 0.055; 0.012)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

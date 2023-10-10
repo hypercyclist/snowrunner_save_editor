@@ -1,0 +1,24 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/tatra_sideboard_2">
+		<Body Mass="600">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_TATRA_SIDEBOARD_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_TATRA_SIDEBOARD_2_NAME"
+		/>
+		<InstallSocket Type="TatraSideboard" />
+		<AddonSlots InitialOffset="(-0.297; 1.513; 0)" OffsetStep="(-2.559; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

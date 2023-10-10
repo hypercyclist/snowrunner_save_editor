@@ -1,0 +1,130 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrainWheel
+			SuspensionDamping="0.9"
+			SuspensionHeight="0"
+			SuspensionStrength="0.6"
+			Torque="default"
+			Type="train_wheel"
+			SuspensionMin="0"
+			ConnectedToHandbrake="true"
+		/>
+	</Wheel>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+    
+		<Wheels>
+        
+<!--			<Wheel _template="TrainWheel" Pos="(-4.427; 0.787; 0)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-6.559; 0.787; 0)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-8.691; 0.787; 0)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(4.411; 0.787; 0)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(6.542; 0.787; 0)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(8.675; 0.787; 0)" ParentFrame="BoneFrontWheels_cdt" />       --> 
+        
+			<Wheel _template="TrainWheel" Pos="(-4.427; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-6.559; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(-8.691; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(4.411; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(6.542; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" Pos="(8.675; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-4.427; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-6.559; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(-8.691; 0.787; 0.694)" ParentFrame="BoneRearWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(4.411; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(6.542; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+			<Wheel _template="TrainWheel" RightSide="true" Pos="(8.675; 0.787; 0.694)" ParentFrame="BoneFrontWheels_cdt" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="2.12"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-11"
+			MaxX="11"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(-2.2; 0; 0)" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			MinDist="15.0"
+			Origin="(2.5; 1.25; 0)"
+		>
+			<SpecialMove	Sound="actors/actor_train/actor_train_move_loop" />
+		</Sounds>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/trailers/train">
+		<Body CenterOfMassOffset="(0; 1; 0)" Mass="140000">
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="30000"
+				ModelFrame="BoneFrontWheels_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="9999" Spring="99999" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Friction="0.0001"
+				ImpactType="Truck"
+				Mass="30000"
+				ModelFrame="BoneRearWheels_cdt"
+			>
+				<Constraint
+					PlaneAxisLocal="(0; 1; 0)"
+					TwistAxisLocal="(1; 0; 0)"
+					Type="Ragdoll"
+					ConeMin="-5"
+					ConeMax="5"
+					PlaneMin="-2"
+					TwistMin="-1"
+					PlaneMax="2"
+					TwistMax="1"
+				>
+					<AllMotor Damping="99999999" Spring="999999999" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/train_lmk" MinScale="1.2" MaxScale="2.2" /> 
+	<GameData Price="18800">
+		<WinchSocket Pos="(-10.688; 1.11; 0)" />
+		<WinchSocket Pos="(-8.842; 1.861; -1.576)" />
+		<WinchSocket Pos="(-8.842; 1.861; 1.576)" />
+		<WinchSocket Pos="(0.102; 1.861; -1.576)" />
+		<WinchSocket Pos="(0.102; 1.861; 1.576)" />
+		<WinchSocket Pos="(8.657; 1.861; -1.576)" />
+		<WinchSocket Pos="(8.657; 1.861; 1.576)" />
+		<WinchSocket Pos="(10.621; 1.11; 0)" />
+		<UiDesc
+			UiDesc="UI_TRAIN_DESC"
+			UiIcon30x30="cargoTypeLoco30"
+			UiIcon40x40="cargoTypeLoco40"
+			UiName="UI_TRAIN_NAME"
+		/>
+		<InstallSocket Offset="(10.294; 1.063; 0)" Type="Train" />
+		<CraneSocket Pos="(-10.688; 1.11; 0)" />
+		<CraneSocket Pos="(-8.842; 1.861; -1.576)" />
+		<CraneSocket Pos="(-8.842; 1.861; 1.576)" />
+		<CraneSocket Pos="(0.102; 1.861; -1.576)" />
+		<CraneSocket Pos="(0.102; 1.861; 1.576)" />
+		<CraneSocket Pos="(8.657; 1.861; -1.576)" />
+		<CraneSocket Pos="(8.657; 1.861; 1.576)" />
+		<CraneSocket Pos="(10.621; 1.11; 0)" />
+	</GameData>
+</Truck>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="krs_58_bandit_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/krs_58_bandit_tuning/krs_58_bandit_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(3.985; 3.182; -0.164)" />
+			<Flare _template="MarkerBeacon" Pos="(3.985; 3.182; 0.164)" />
+			<Flare _template="MarkerBeacon" Pos="(3.985; 3.182; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="krs58banditGabarite" />
+	</GameData>
+</TruckAddon>

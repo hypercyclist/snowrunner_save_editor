@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_spot_light_1">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.338; 3.197; -0.44)" />
+			<Model _template="HeadLightRay" Org="(3.338; 3.197; 0.438)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(3.338; 3.197; -0.44)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(3.338; 3.197; -0.336)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.5" DirAngle="100" Size=".25" Pos="(3.338; 3.197; -0.056)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="100" Size="0.25" Pos="(3.338; 3.197; 0.048)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="100" Size="0.25" Pos="(3.338; 3.197; 0.334)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="100" Size="0.25" Pos="(3.338; 3.197; 0.438)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Spotlight" />
+	</GameData>
+</TruckAddon>

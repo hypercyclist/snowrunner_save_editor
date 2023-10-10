@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.350; 1.466; -0.665)" />
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_tuning/jeep_cj7_renegade_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+		<InstallSocket Type="CJ7RenegadeSnorkel" />
+	</GameData>
+</TruckAddon>

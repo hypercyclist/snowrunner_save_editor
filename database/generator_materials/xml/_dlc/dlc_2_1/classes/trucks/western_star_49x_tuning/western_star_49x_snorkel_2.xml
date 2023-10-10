@@ -1,0 +1,37 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+<_parent File="western_star_49x_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(2.398; 2.816; -1.285)" />
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_snorkel_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(2.54; 1.825; -1.285)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.54; 1.754; -1.285)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.54; 1.682; -1.285)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(2.54; 1.61; -1.285)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_spotlight_01a">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.32; 2.77; -0.504)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(3.32; 2.77; 0)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(3.32; 2.77; 0.492)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(3.32; 2.77; -0.504)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(3.32; 2.77; -0.504)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(3.32; 2.77; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(3.32; 2.77; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(3.32; 2.77; 0.492)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(3.32; 2.77; 0.492)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="vizors"
+		Category="top"
+		IsCustomizable="true"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177SpotlightA" />
+	</GameData>
+</TruckAddon>

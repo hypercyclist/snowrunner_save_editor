@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(3.44; 3.366; 0.985)" />
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_snorkel_1" />
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_SIDESWEPT_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_SIDESWEPT_TALL_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixSnorkel" />
+	</GameData>
+</TruckAddon>

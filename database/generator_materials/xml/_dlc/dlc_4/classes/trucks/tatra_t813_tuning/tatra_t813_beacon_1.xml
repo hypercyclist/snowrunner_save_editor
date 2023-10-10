@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_beacon_1" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(3.676; 2.817; -0.522)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(1; 0; 0)" Pos="(3.676; 2.817; -0.522)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.676; 2.817; -0.522)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.676; 2.817; -0.522)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(3.64; 2.817; -0.522)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(-1; 0; 0)" Org="(3.608; 2.817; 0.522)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(-1; 0; 0)" Pos="(3.608; 2.817; 0.522)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(-1; 0; 0)" Pos="(3.608; 2.817; 0.522)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(-1; 0; 0)" Pos="(3.608; 2.817; 0.522)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(3.64; 2.817; 0.522)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="TatraT813Beacon" />
+	</GameData>
+</TruckAddon>

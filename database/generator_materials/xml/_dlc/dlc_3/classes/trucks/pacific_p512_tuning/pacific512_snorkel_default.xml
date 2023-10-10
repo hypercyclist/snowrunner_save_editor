@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.757; 2.332; 0.000)" />
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_snorkel_default"/>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="Pacific512Snorkel" />
+	</GameData>
+</TruckAddon>
+

@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(0.702; 1.865; -0.750)" />
+	<PhysicsModel Mesh="trucks/land_rover_defender_90_tuning/land_rover_defender_90_snorkel_1"/>
+	<GameData
+		CameraPreset="side_r"
+		Category="snorkel"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_SHORT_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef90Snorkel" />
+	</GameData>
+</TruckAddon>

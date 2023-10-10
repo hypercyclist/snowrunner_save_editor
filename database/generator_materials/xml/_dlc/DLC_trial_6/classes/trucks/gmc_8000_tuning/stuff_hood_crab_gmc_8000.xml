@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_crab_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/stuff_hood_crab_gmc_8000" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodGmc8000" />
+	</GameData>
+</TruckAddon>

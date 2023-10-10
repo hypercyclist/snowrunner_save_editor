@@ -1,0 +1,55 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_bumper_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneBumper1_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="2" ModelFrame="BoneHinge_cdt">
+				<Constraint
+					Type="Hinge"
+					AxisLocal="(0; 0; -1)"
+					MinLimit="-40"
+					MaxLimit="7"
+				>
+					<Motor Damping="0.32" Spring="0.5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.428; 1.687; -0.903)" />
+			<Model _template="HeadLightRay" Org="(4.428; 1.687; 0.903)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.428; 1.687; -0.903)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.428; 1.687; 0.903)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".35" Pos="(4.648; 2.142; -0.346)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".35" Pos="(4.648; 2.142; 0.346)" />
+		</HeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.428; 1.687; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.648; 2.142; -0.346)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.428; 1.687; 0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.648; 2.142; 0.346)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Bumper" />
+	</GameData>
+</TruckAddon>

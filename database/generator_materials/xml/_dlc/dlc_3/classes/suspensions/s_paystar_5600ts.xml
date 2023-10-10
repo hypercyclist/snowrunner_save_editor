@@ -1,0 +1,47 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="200"
+		Name="paystar_5600ts_suspension_default"
+	>
+		<Suspension Damping="0.3" Height="0.08" Strength="0.08" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.25" />
+		<Suspension Damping="0.2" Height="0.08" Strength="0.025" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.3" />
+		<GameData
+			Price="4500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="240"
+		Name="paystar_5600ts_suspension_high"
+	>
+		<Suspension Damping="0.3" Height="0.18" Strength="0.07" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.4" />
+		<Suspension Damping="0.2" Height="0.2" Strength="0.022" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.45" />
+		<GameData
+			Price="9400"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

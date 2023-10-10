@@ -1,0 +1,38 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.2; 0.2; 0.2)"
+				MaxAngle="(0.7; 0.7; 0.7)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_exhaust_default">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="paystar5600TsExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.981; 0.193; 0)"
+		IsLight="true"
+		Origin="(2.795; 3.596; -0.844)"
+		Speed="3.81"
+	/>
+</TruckAddon>

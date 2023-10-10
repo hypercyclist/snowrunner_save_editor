@@ -1,0 +1,105 @@
+<_templates Include="trucks">
+	<Flare>
+		<LED01
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.5"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.04"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="60" RepairsCapacity="150">
+		<LimitedFluid Center="(-0.599; 1.857; 0.42)" SizeX="0.330" SizeY="0.140" SizeZ="0.402" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(-0.781; 1.857; -0.457)" SizeX="0.402" SizeY="0.182" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(-1.253; 1.857; -0.446)" SizeX="0.402" SizeY="0.182" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_tuning/jeep_cj7_renegade_roofrack">
+		<Body ImpactType="Truck" Mass="120" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.03"
+					MaxLimit="0"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.03"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.025"
+				>
+					<Motor Damping="1800" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.562)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.532)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.501)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.471)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.440)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; -0.409)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.562)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.532)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.501)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.471)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.440)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; -0.409)"/>
+			
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.409)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.439)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.469)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.501)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.531)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.598; 0.562)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.409)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.439)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.469)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.501)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.531)"/>
+			<Flare _template="LED01" Pos="(0.266; 1.574; 0.562)"/>
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="CJ7RenegadeRoofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

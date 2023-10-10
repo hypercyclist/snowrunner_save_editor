@@ -1,0 +1,18 @@
+<TruckAddon>	
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_horn_default"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Pacific512Horns" />
+	</GameData>	
+</TruckAddon>

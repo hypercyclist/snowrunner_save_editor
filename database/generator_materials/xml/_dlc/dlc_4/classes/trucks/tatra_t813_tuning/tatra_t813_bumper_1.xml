@@ -1,0 +1,67 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_bumper_1">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneRope1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="70"
+				>
+					<Motor Damping=".1" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneRope2_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-35"
+					MaxLimit="30"
+				>
+					<Motor Damping=".1" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.293; 1.508; -0.652)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.293; 1.508; 0.652)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.293; 1.508; -0.652)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.293; 1.508; 0.652)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.293; 1.508; -0.652)" />
+			<Model _template="HeadLightRay" Org="(4.293; 1.508; 0.652)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.293; 1.508; -0.652)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.293; 1.508; 0.652)" />			
+			<Flare _template="BlueStreak" Pos="(4.293; 1.508; -0.652)" />
+			<Flare _template="BlueStreak" Pos="(4.293; 1.508; 0.652)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/> 
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LATTICE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LATTICE_NAME"
+		/>
+		<InstallSocket Type="TatraT813Bumper" />
+	</GameData>
+</TruckAddon>

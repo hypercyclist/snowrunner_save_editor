@@ -1,0 +1,52 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="spare_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_wheel_addon">
+		<Body Mass="15" ModelFrame="BoneChassis_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="18" ModelFrame="BoneWheelHolder_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.4"
+					MaxLimit="0.4"
+				>
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Constraint>
+				
+				<Body Collisions="None" Mass="40" ModelFrame="BoneWheel_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-0.5"
+						MaxLimit="0.5"
+					>
+						<Motor Damping="0" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="spare_wheel_camera"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEELS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEELS_NAME"
+		/>
+		<RequiredAddonType Type="MackDefenseM917SpareWheel" />
+		<InstallSocket Offset="(0; 0; 0)" Type="MackDefenseM917SpareWheel" />
+	</GameData>
+</TruckAddon>

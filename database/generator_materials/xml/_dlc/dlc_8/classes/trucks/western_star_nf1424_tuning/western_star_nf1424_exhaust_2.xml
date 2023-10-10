@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="western_star_nf1424_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabinDamper_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabinDamper_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_tuning/western_star_nf1424_exhaust_2"/>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_MUZZLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_MUZZLE_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-1.000; 0.000; 0.000)" IsLight="true" Origin="(4.143; 3.250; -1.273)" Speed="3.82" />
+	<Exhaust Dir="(-1.000; 0.000; 0.000)" IsLight="true" Origin="(4.143; 3.250; 1.273)" Speed="3.82" />
+</TruckAddon>

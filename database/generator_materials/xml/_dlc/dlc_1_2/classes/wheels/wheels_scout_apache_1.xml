@@ -1,0 +1,107 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Mudtires" />
+		</Mudtires>
+		<ScoutOffroad _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutDefault" />
+			<WheelFriction _template="ScoutOffroad" />
+		</ScoutOffroad>
+		<ScoutMudtires _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutSoft" />
+			<WheelFriction _template="ScoutMudtires" />
+		</ScoutMudtires>
+		<ScoutChains _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutSoft" />
+			<WheelFriction _template="ScoutChains" />
+		</ScoutChains>
+		<ScoutAllterrain _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="ScoutAllterrain" />
+		</ScoutAllterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.67">
+	<TruckTires>
+		<TruckTire _template="ScoutOffroad" Mesh="wheels/tire_scout_apache_1" Name="offroad_apache_1">
+			<GameData
+				Price="4700"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_BTR_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_apache_offroad_1" Name="allterrain_1">
+			<WheelFriction _template="ScoutAllterrain" BodyFriction="1.4" />
+			<GameData
+				Price="2700"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_apache_offroad_2" Name="allterrain_2">
+			<WheelFriction _template="ScoutAllterrain" SubstanceFriction="1.2" />
+			<GameData
+				Price="3000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_2_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_apache_offroad_3" Name="allterrain_3">
+			<WheelFriction _template="ScoutAllterrain" BodyFrictionAsphalt="1.2" />
+			<GameData
+				Price="3400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ALLTERRAIN_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_3_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire
+			_template="ScoutMudtires"
+			Mesh="wheels/tire_scout_apache_mudtires_1"
+			Name="mudtires_1"
+			Width="0.797"
+		>
+			<GameData
+				Price="5300"
+				UnlockByExploration="false"
+				UnlockByRank="7"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_1_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire
+			_template="ScoutChains"
+			Mesh="wheels/tire_scout_apache_chain_1"
+			Name="chain_1"
+			Width="0.72"
+		>
+			<GameData
+				Price="6000"
+				UnlockByExploration="false"
+				UnlockByRank="10"
+			>
+				<UiDesc UiDesc="UI_TIRE_CHAINS_DESC" UiName="UI_TIRE_SCOUT_CHAIN_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_apache_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_APACHE_1_DESC" UiName="UI_RIM_SCOUT_APACHE_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

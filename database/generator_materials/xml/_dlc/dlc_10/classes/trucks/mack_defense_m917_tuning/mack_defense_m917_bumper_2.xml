@@ -1,0 +1,71 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="4"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneCollar_R_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="20"
+				/>
+				 <Motor Damping="0.1" Spring="3" Type="Spring" />
+				 
+				<Body
+					AngularDamping="4"
+					Collisions="None"
+					Mass="5"
+					ModelFrame="BoneRope_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="22"
+					/>
+					 <Motor Damping="0.1" Spring="3" Type="Spring" />
+				</Body>
+			</Body>
+			<Body
+				AngularDamping="4"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneCollar_L_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-2"
+					MaxLimit="2"
+				/>
+				 <Motor Damping="0.1" Spring="0.1" Type="Spring" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_DEFENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_DEFENDER_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Bumper" />
+	</GameData>
+</TruckAddon>

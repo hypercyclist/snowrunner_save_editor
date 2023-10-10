@@ -1,0 +1,34 @@
+<_templates>
+	<Engine>
+		<RUTruckOldEngine
+			BrakesDelay="1"
+			MaxDeltaAngVel="0.01"
+		/>
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUTruckOldEngine"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="100"
+		DamagedConsumptionModifier="1.7"
+		FuelConsumption="8.5"
+		Name="ru_truck_old_engine_zikz_566a"
+		Torque="200000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.4"
+	>
+		<GameData
+			Price="16200"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_TRUCK_OLD_ZIKZ_566A_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_TRUCK_OLD_ZIKZ_566A_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

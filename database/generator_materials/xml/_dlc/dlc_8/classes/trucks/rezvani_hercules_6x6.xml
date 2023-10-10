@@ -1,0 +1,417 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			SteeringJointOffset="0.22"
+			Torque="full"
+		/>
+	</Wheel>
+	<Body>
+		<Sunshield Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-7"
+				MaxLimit="7"
+			>
+				<Motor Damping="0.7" Spring="15" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<SideMirror Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="0.8" Spring="90" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.15"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="80"
+		Responsiveness="0.6"
+		SteerSpeed="0.03"
+		TruckImage="rezvanimchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_rezvani_hercules_6x6"
+		>
+			<Wheel _template="FrontWheel" Pos="(3.935; 0.468; 0.89)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.935; 0.468; 0.89)" />
+			<Wheel _template="RearWheel" Pos="(0.514; 0.468; 0.89)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(0.514; 0.468; 0.89)" />
+			<Wheel _template="RearWheel" Pos="(-0.481; 0.468; 0.89)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-0.481; 0.468; 0.89)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="rezvani_hercules_6x6_suspension_default"
+			Type="s_rezvani_hercules_6x6"
+			MaxWheelRadiusWithoutSuspension="0.41"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.769"
+		/>
+		<Steam Origin="(3.952; 0.651; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(3.505; 1.054; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/rezvani/rezvani_brakes_squeal" />
+			<Gear			Sound="trucks/rezvani/rezvani_gear_shift" />
+			<Handbrake		Sound="trucks/rezvani/rezvani_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/rezvani/rezvani_handbrake_off" />
+			<AWD			Sound="trucks/rezvani/rezvani_awd" />
+			<Honk			Sound="trucks/rezvani/rezvani_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/rezvani/rezvani_acc" />
+			<EngineStart	Sound="trucks/rezvani/rezvani_start" />
+			<EngineStop		Sound="trucks/rezvani/rezvani_stop" />
+			<EngineIdle		Sound="trucks/rezvani/rezvani_idle" />
+			<EngineIdle_2d	Sound="trucks/rezvani/rezvani_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/rezvani/rezvani_low" />
+			<EngineLow_2d	Sound="trucks/rezvani/rezvani_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/rezvani/rezvani_high" />
+			<EngineHigh_2d	Sound="trucks/rezvani/rezvani_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneStick1" MinAngle="(0.6; 0.6; 0.6)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency=".8" />
+			<Shaker Frame="BoneStick2" MinAngle="(0.6; 0.6; 0.6)" MaxAngle="(0.9; 0.9; 0.9)" MaxFrequency=".9" />
+			<Shaker Frame="BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(2.100; 2.100; 2.100)" MaxFrequency="3.4" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.0"
+			MaxX="5.5"
+		/>
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-0.846; -0.533; 0)"
+			IsLight="true"
+			Origin="(-0.988; 0.574; -0.368)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="us_scout_modern_engine_0" Type="e_us_scout_modern" />
+		<Driver AnimationSet="Scout" Pos="(2.309; 1.047; 0.364)" SteeringWheelPos="(2.653; 1.434; 0.371)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.981; 0.195; -0.002)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_1" Org="(2.873; 1.443; 0.461)" OutputAngles="(-134; 0)" />
+			<Gauge Dir="(-0.979; 0.204; 0.002)" InputRange="(0;200)" InputType="speed" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_1" Org="(2.876; 1.442; 0.283)" OutputAngles="(-130; 128)" />
+			<Gauge Damping="0.99" Dir="(-0.96; 0.279; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_2" Org="(2.86; 1.496; 0.427)" OutputAngles="(142; 106)" />
+			<Gauge Damping="0.99" Dir="(-0.96; 0.279; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_2" Org="(2.86; 1.496; 0.316)" OutputAngles="(-142; -91)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(3.077; 0.715; -0.878)" Max="(4.645; 1.408; 0.882)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.672; 0.592; -1.032)" Max="(1.452; 1.375; 1.037)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.47" Type="wheels_rezvani_hercules_6x6" />
+		<CompatibleWheels Scale="0.49" Type="wheels_rezvani_hercules_6x6" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout2" />
+		<Camera Center="(0.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/rezvani_hercules_6x6_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/rezvani_hercules_6x6_glass__sh_d.tga"
+				ViewPos="(2.275; 1.72; 0.364)"
+			>
+				<Mirror ClipDir="(-0.949; 0.118; -0.293)" ClipOffset="0.1" FOVScale="1.2" MeshFrame="mirror_left" ReflectionDir="(-0.949; 0.118; -0.293)" Size="(0.16; 0.16)" Pos="(2.813; 1.513; 0.922)" />
+				<Mirror ClipDir="(-0.879; 0.073; 0.472)" ClipOffset="0.1" FOVScale="1.4" MeshFrame="mirror_right" ReflectionDir="(-0.879; 0.073; 0.472)" Size="(0.16; 0.16)" Pos="(2.796; 1.513; -0.912)" />
+				<Mirror ClipDir="(-0.97; -0.009; 0.244)" ClipOffset="0.15" FOVScale="1.1" MeshFrame="mirror_cab" ReflectionDir="(-0.97; -0.009; 0.244)" Size="(0.22; 0.06)" Pos="(2.689; 1.738; 0.001)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(4.656; 1.198; 0)" />
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.3; 0)"
+			ImpactType="Truck"
+			Mass="2600"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.3; -0.1; 0)"
+				ImpactType="Truck"
+				Mass="1400"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="18500" Spring="185000" Type="Spring" />
+				</Constraint>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorR_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorL_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldL_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldR_cdt" />
+				<Body Collisions="None" Mass="1" ModelFrame="BoneBelt_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="10"
+					>
+						<Motor Damping="3" Spring="30" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Name="TieRodSteer"
+						MinLimit="-18"
+						MaxLimit="18"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.429; 1.126; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" AspectRatio="3" Size=".4" Pos="(-1.279; 1.395; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Dir="(-1; 0; 1)" Size=".4" Pos="(-1.222; 1.201; 1.003)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Dir="(-1; 0; 1)" Size=".4" Pos="(-1.222; 1.079; 1.003)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Dir="(-1; 0; -1)" Size=".4" Pos="(-1.222; 1.201; -1.003)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Dir="(-1; 0; -1)" Size=".4" Pos="(-1.222; 1.079; -1.003)" ParentFrame="BoneCabin_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.668; 1.147; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Size="0.3" Pos="(-1.268; 1.147; -0.944)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Size="0.3" Pos="(-1.268; 1.147; 0.944)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.15" Dir="(-1; 0; 0)" Size="0.2" Pos="(-1.268; 1.147; -0.944)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.15" Dir="(-1; 0; 0)" Size="0.2" Pos="(-1.268; 1.147; 0.944)" ParentFrame="BoneCabin_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 225) x 0.9" Pos="(4.397; 1.159; -0.718)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 225) x 0.9" Pos="(4.397; 1.159; 0.718)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size=".2" Pos="(4.404; 1.162; -0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size=".2" Pos="(4.404; 1.162; 0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size=".2" Pos="(4.465; 1.15; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.4" Size=".2" Pos="(4.465; 1.15; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<!--LED-->
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.34)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.289)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.239)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.164)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.113)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; -0.012)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.34)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.289)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.239)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.164)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.113)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(2.674; 1.98; 0.012)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.487; 1.15; -0.67)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.487; 1.15; 0.67)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 253; 246) x 0.37" Size="0.2" Pos="(4.465; 1.15; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 253; 246) x 0.37" Size="0.2" Pos="(4.465; 1.15; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 253; 246) x 0.37" Size="0.2" Pos="(4.404; 1.162; -0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 253; 246) x 0.37" Size="0.2" Pos="(4.404; 1.162; 0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(4.465; 1.15; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(4.465; 1.15; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(4.404; 1.162; -0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(4.404; 1.162; 0.717)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/rezvani_hercules_6x6_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(2.842; 1.041; 0)" />
+	<GameData Country="US" Price="25800" UnlockByRank="1">
+		<WinchSocket Pos="(4.657; 0.605; 0)" />
+		<WinchSocket Pos="(2.051; 0.589; -0.901)" />
+		<WinchSocket Pos="(2.051; 0.589; 0.901)" />
+		<WinchSocket Pos="(-1.189; 0.489; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_REZVANI_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgActeonRezvani"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="RezvaniLogo80"
+			UiName="UI_VEHICLE_REZVANI_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(3.926; 0.199; -0.752)" Position="(8.265; 5.7; -0.572)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.069; 1.207; 1.403)" Position="(4.724; 1.649; 0.038)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.977; 1.692; -0.304)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.812; 4.052; -4.545)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.522; 0.235; -0.903)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.276; 3.817; 4.319)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.227; 0.962; 1.41)" Position="(4.677; 1.682; -0.12)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(7.126; 1.143; -0.167)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.6; 2.343; 2.594)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(5.439; 0.327; 2.169)" Position="(7.506; 1.983; -1.708)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(4.478; 1.558; 1.615)" Position="(5.111; 1.67; -0.636)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.641; 0.845; 0.614)" Position="(3.531; 1.748; 3.705)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.734; 0.47; -0.697)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.594; 4.878; 2.539)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.106; 1.125; -0.684)" Position="(10.72; 2.827; 1.399)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(4.917; 0.875; 0.042)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.66; 1.899; -2.348)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.892; 0.953; -1.034)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.138; 1.941; -2.869)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(8.227; 0.596; 0.538)" Position="(4.793; 1.785; -0.119)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(4.392; 0.233; 0.06)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.898; 0.872; -3.258)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(3.576; 0.484; 0.792)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.506; 1.838; -3.094)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.056; 0.443; 0.067)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.78; 1.955; 2.004)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.682; 0.991; -0.206)" Position="(3.897; 1.535; -3.738)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.657; 0.605; 0)" />
+		<CraneSocket Pos="(2.051; 0.589; -0.901)" />
+		<CraneSocket Pos="(2.051; 0.589; 0.901)" />
+		<CraneSocket Pos="(-1.189; 0.489; 0)" />
+		<AddonSockets DefaultAddon="rezvani_hercules_6x6_bumper_default">
+			<Socket Names="Rezvani6x6Bumper" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="rezvani_hercules_6x6_bumper_rear_default">
+			<Socket Names="Rezvani6x6BumperRear" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Visor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Snorkel1" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="Rezvani6x6Snorkel2" NamesBlock="Rezvani6x6Visor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Fender" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Threshold" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6RoofRrack1" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6RoofRrack2" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Trunk" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Rezvani6x6Protector" ParentFrame="BoneCabin_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_1x4_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="rezvaniHercules6X6Sticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="rezvaniHercules6X6Sticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="rezvaniHercules6X6Sticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="rezvaniHercules6X6Sticker_GlassBot" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodRezvani6x6" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(2.727; 1.749; 0.001)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRod2" ParentFrame="BoneTieRod1_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneTieRod3"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

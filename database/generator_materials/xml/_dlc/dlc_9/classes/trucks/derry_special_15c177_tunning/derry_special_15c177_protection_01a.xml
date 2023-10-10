@@ -1,0 +1,56 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="400" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotatorLeft"
+		RotationSpeed="3.9"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotatorRight"
+		RotationSpeed="4"
+	/>	
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_protection_01a">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.987; 2.85; 1.022)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.987; 2.85; 1.022)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.987; 2.85; 1.022)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.987; 2.85; 1.022)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.987; 2.85; 1.022)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.987; 2.85; -1.023)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.987; 2.85; -1.023)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.987; 2.85; -1.023)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.987; 2.85; -1.023)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.987; 2.85; -1.023)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods"
+		Category="top"
+		IsCustomizable="true"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SAVIOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SAVIOR_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177Protection" />
+	</GameData>
+</TruckAddon>

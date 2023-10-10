@@ -1,0 +1,52 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_bumper_default">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.6; 1.2; -1)" />
+			<Model _template="HeadLightRay" Org="(4.6; 1.2; 1)" />
+			<!-- <Flare _template="IgnitionSignalWhite" DirAngle="135" Color="g(165; 155; 145) x 0.85" Pos="(4.570; 1.275; -1.037)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="135" Color="g(165; 155; 145) x 0.85" Pos="(4.570; 1.275; 1.037)" /> -->
+			<Flare _template="HeadLight" Color="g(165; 145; 140) x 1.2" Dir="(0.5; 0; -1)" Size="0.2" Pos="(4.544; 1.277; -1.037)" />
+			<Flare _template="HeadLight" Color="g(165; 145; 140) x 1.2" Dir="(0.5; 0; 1)" Size="0.2" Pos="(4.544; 1.277; 1.037)" />
+			<Flare _template="HeadLight" Color="g(165; 145; 140) x 1.2" Dir="(1; 0; -1)" Size="0.2" Pos="(4.578; 1.182; -1)" />
+			<Flare _template="HeadLight" Color="g(165; 145; 140) x 1.2" Dir="(1; 0; 1)" Size="0.2" Pos="(4.578; 1.182; 1)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.598; 1.182; -1)" />
+			<Flare _template="HeadLight" DirAngle="135" Size="0.5" Pos="(4.598; 1.182; 1)" />
+			<Flare _template="BlueStreak" Pos="(4.6; 1.2; -1)" />
+			<Flare _template="BlueStreak" Pos="(4.6; 1.2; 1)" />
+		</MainHeadLight>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(165; 145; 140) x 2.2" Pos="(4.985; 0.946; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 155; 145) x 0.85" Pos="(4.570; 1.275; -1.037)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 155; 145) x 0.85" Pos="(4.570; 1.275; 1.037)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.25" Color="g(220; 220; 220) x 0.7" Pos="(4.677; 1.099; -0.841)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.25" Color="g(220; 220; 220) x 0.7" Pos="(4.677; 1.099; 0.841)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixBumper" />
+	</GameData>
+</TruckAddon>

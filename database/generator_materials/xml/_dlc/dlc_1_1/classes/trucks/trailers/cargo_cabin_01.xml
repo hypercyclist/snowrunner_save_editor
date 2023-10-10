@@ -1,0 +1,59 @@
+<_templates Include="trucks">
+	<Wheel>
+		<WheelNarrow
+			Location="front"
+			SuspensionHeight="0.0"
+			SuspensionStrength="0.01"
+			Torque="default"
+			SuspensionMin="0.0"
+			ParentFrame="BoneSledge_cdt"
+			ConnectedToHandbrake="true"
+		/>
+	</Wheel>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels
+			DefaultRim="invisible"
+			DefaultTire="invisible"
+			DefaultWheelType="wheel_cargo_cabin_01_narrow"
+		>
+			<Wheel _template="WheelNarrow" RightSide="true" Pos="(-2.974; 0.239; 1.151)" />
+			<Wheel _template="WheelNarrow" Pos="(-2.974; 0.239; 1.151)" />
+			<Wheel _template="WheelNarrow" RightSide="true" Pos="(2.974; 0.239; 1.151)" />
+			<Wheel _template="WheelNarrow" Pos="(2.974; 0.239; 1.151)" />			
+		</Wheels>
+		<Constraint _template="TrailerRagdoll" />		
+		<CompatibleWheels Scale="0.247" Type="wheel_cargo_cabin_01_narrow" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/trailers/cargo_cabin_01">
+		<Body Mass="1700" ModelFrame="BoneRoot_cdt" NoSoftContacts="true" CenterOfMassOffset="(0; -0.837; 0)">
+			<Body
+				Friction="0.1"
+				Mass="500"
+				ModelFrame="BoneSledge_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsY="(-.1;.1)">
+					<Motor Type="Spring" Damping="500000" Spring="2000000" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/cargo_cabin_01_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData>
+		<WinchSocket Pos="(3.214; 0.166; -0.016)" />
+		<WinchSocket Pos="(-3.214; 0.166; -0.016)" />
+		<WinchSocket Pos="(-0.014; 2.765; 1.194)" />
+		<WinchSocket Pos="(-0.014; 2.765; -1.194)" />
+		<WinchSocket Pos="(-0.014; 0.317; 1.194)" />
+		<WinchSocket Pos="(-0.014; 0.317; -1.194)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_CARGO_CABIN_01_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_TRAILER_CARGO_CABIN_01_NAME"
+		/>
+		<CraneSocket Pos="(0; 2.848; 0)" />
+		<InstallSocket Offset="(0; 0; 0)" Type="CargoCabin" />
+	</GameData>
+</Truck>

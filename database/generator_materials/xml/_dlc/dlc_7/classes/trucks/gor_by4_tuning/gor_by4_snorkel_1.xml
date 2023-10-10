@@ -1,0 +1,20 @@
+<TruckAddon>
+	<Snorkel Origin="(-1.136; 1.01; -0.639)" />
+	<Snorkel Origin="(-1.136; 1.01; 0.639)" />
+	<PhysicsModel Mesh="trucks/gor_by4_tuning/gor_by4_snorkel_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+		<InstallSocket Type="GorBy4bSnorkel" />
+	</GameData>
+</TruckAddon>

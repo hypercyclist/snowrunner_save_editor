@@ -1,0 +1,17 @@
+<_parent File="krs_58_bandit_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(4.069; 2.758; -1.238)" />
+	<PhysicsModel Mesh="trucks/krs_58_bandit_tuning/krs_58_bandit_snorkel_2"/>
+	<GameData
+		Price="3700"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

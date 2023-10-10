@@ -1,0 +1,85 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.75" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData
+		FuelCapacity="140"
+		RepairsCapacity="300"
+	>
+		<LimitedFluid Center="(1.85; 3.843; -0.36)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(1.51; 3.843; -0.65)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(1.509; 3.843; -0.083)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(1.169; 3.843; -0.65)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(1.168; 3.843; -0.083)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(0.824; 3.843; -0.65)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(0.824; 3.843; -0.083)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="3.9" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_roofrack_1">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="30"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.086;0.008)" LinearLimitsY="(-0.0055;0.035)" LinearLimitsZ="(0;0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="4"
+				Mass="30"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005;0.03)" LinearLimitsZ="(0;0.006)" LinearLimitsY="(0;0)"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.925; 4.032; 0.764)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.925; 4.032; 0.764)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.925; 4.032; 0.764)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.925; 4.032; 0.764)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.925; 4.032; 0.764)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			
+			<Model Dir="(0; 0; 1)" Org="(1.925; 4.032; -0.760)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.925; 4.032; -0.760)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.925; 4.032; -0.760)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.925; 4.032; -0.760)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.925; 4.032; -0.764)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="4400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Roofrack" />
+	</GameData>
+</TruckAddon>

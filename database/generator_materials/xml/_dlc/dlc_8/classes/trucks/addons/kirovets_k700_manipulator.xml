@@ -1,0 +1,131 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/kirovets_k700_manipulator">
+		<NetSync Legacy="true" />
+		<Body ImpactType="Truck" Mass="300" ModelFrame="BoneBack_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0.7; 0; 0)"
+				Mass="300"
+				ModelFrame="BoneArm_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="Crane"
+					Type="Hinge"
+					MinLimit="-58"
+					MaxLimit="45"
+				>
+					<Motor Force="80000" Tau="0.1" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0.3; -0.6; 0)"
+					Collisions="All"
+					Mass="300"
+					ModelFrame="BoneGrabber1_cdt"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="Shaft"
+						Type="Hinge"
+						MinLimit="-44"
+						MaxLimit="80"
+					>
+						<Motor Force="60000" Tau="0.1" Type="Position" />
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0.9; -0.3; 0)"
+						Collisions="All"
+						ForceBodyParams="true"
+						Mass="200"
+						ModelFrame="BoneGrabber2_cdt"
+						NoFoliageCollisions="true"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Name="Fork"
+							Type="Hinge"
+							MinLimit="-30"
+							MaxLimit="99"
+						>
+							<Motor Force="20000" Tau="0.1" Type="Position" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="6600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_KIROVETS_K700_MANIPULATOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_KIROVETS_K700_MANIPULATOR_NAME"
+		/>
+		<SoundIKStart Name="addons/minicrane_us/minicrane_us_turn_start" Range="20" Volume="1" />
+		<SoundIKLoop Name="addons/minicrane_us/minicrane_us_turn_loop" Range="20" Volume="1" />
+		<SoundIKStop Name="addons/minicrane_us/minicrane_us_turn_stop" Range="20" Volume="1" />
+		<InstallSocket Offset="(0; 0; 0)" Type="KirovetsK700Manipulator" />
+		<AddonType Name="Fork" />
+	</GameData>
+	<ActionCategories>
+		<ActionCategory Action="1" Id="crane_control" LocaleUid="UI_FORK_CONTROL" AvailableForFastMode="true" RemoveChildActionsFromCustomPanelShowCounter = "true"/>
+	</ActionCategories>
+	<ControlledConstraints>
+		<Constraint Action="9" BelongToCategorie="crane_control" Id="crane" LocaleUid="UI_FORK_CRANE" Name="Crane" SpeedMult="2.5" />
+		<Constraint Action="10" BelongToCategorie="crane_control" Id="crane_shaft" LocaleUid="UI_FORK_Shaft" Name="Shaft" SpeedMult="2.5" />
+		<Constraint Action="11" BelongToCategorie="crane_control" Id="crane_grappler" LocaleUid="UI_FORK_GRAPPLER" Name="Fork" SpeedMult="2.5" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneArmPistonBase" ParentFrame="BoneArm_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArm_IK_B"
+				ModelFrame="BoneArmPiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneGrabber_IK_End" ParentFrame="BoneGrabber1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0.35; 0)"
+				AttachToFrame="BoneGrabber2_cdt"
+				ModelFrame="BoneGrabber_IK_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneGrabberPistonBase" ParentFrame="BoneGrabber1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneGrabber_IK_End"
+				ModelFrame="BoneGrabberPiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneArm_IK_B" ParentFrame="BoneArm_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneGrabber1_cdt"
+				ModelFrame="BoneArm_IK_A"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<AddonCamera FirstPersonDir="(1; 0; 0)" FirstPersonPos="(-0.138; 2; 0.702)" />
+</TruckAddon>

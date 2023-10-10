@@ -1,0 +1,222 @@
+<_templates Include="trucks">
+	<Body>
+		<Anchor Mass="200">
+			<Constraint
+				Name="AnchorExt"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit=".94"
+			>
+				<Motor Force="5000" Type="Position" />
+			</Constraint>
+			<Body
+				ForceBodyParams="true"
+				Mass="150"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="Anchor"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="1.2"
+				>
+					<Motor Force="4000" Type="Position" />
+				</Constraint>
+			</Body>
+		</Anchor>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PoweredConstraints>
+		<Chain Name="Anchors" ParentBodies="BoneLegL_cdt,BoneLegR_cdt">
+			<Group FoldingDelay="0.2" Id="anchors_position">
+				<Constraint
+					InitialFix="true"
+					Name="AnchorExt"
+					TerminalFix="true"
+					Position=".94"
+				/>
+			</Group>
+			<Group FoldingDelay="0.2" Id="anchors_push" UnfoldingDelay="0.2">
+				<Constraint
+					InitialFix="true"
+					Name="Anchor"
+					TerminalFix="true"
+					Position="1.2"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks\addons\crane_krs_58_bandit">
+		<NetSync Legacy="true" />
+		<Body
+			CenterOfMassOffset="(0; -0.4; 0)"
+			Mass="1000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body
+				CenterOfMassOffset="(0.2; -0.5; 0)"
+				Mass="700"
+				ModelFrame="BoneRotationBase_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-350"
+					MaxLimit="350"
+				>
+					<Motor Force="80000" Tau="0.5" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Mass="550"
+					ModelFrame="BoneArm1_cdt"
+					Collisions="All"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-7"
+						MaxLimit="80"
+					>
+						<Motor Force="400000" Tau="0.5" Type="Position" />
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Mass="400"
+						ModelFrame="BoneArm2_cdt"
+                        Collisions="All"
+					>
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="1.812"
+						>
+							<Motor Force="60000" Tau=".9" Type="Position" />
+						</Constraint>
+						<Body
+							CenterOfMassOffset="(0; 0; 0)"
+							Mass="350"
+							ModelFrame="BoneArm3_cdt"
+                            Collisions="All"
+						>
+							<Constraint
+								AxisLocal="(1; 0; 0)"
+								Type="Prismatic"
+								MinLimit="0"
+								MaxLimit="1.812"
+							>
+								<Motor Force="60000" Tau=".9" Type="Position" />
+							</Constraint>
+							<Body
+								CenterOfMassOffset="(0; 0; 0)"
+								Mass="250"
+								ModelFrame="BoneArm4_cdt"
+                                Collisions="All"
+							>
+								<Constraint
+									AxisLocal="(1; 0; 0)"
+									Type="Prismatic"
+									MinLimit="0"
+									MaxLimit="1.812"
+								>
+									<Motor Force="60000" Tau="0.8" Type="Position" />
+								</Constraint>
+							</Body>
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneLegL_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" />
+				<Body ModelFrame="BoneFootL_cdt" />
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneLegR_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" />
+				<Body ModelFrame="BoneFootR_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="7500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CRANE_KRS_58_BANDIT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CRANE_KRS_58_BANDIT_NAME"
+		/>
+		<SoundPoweredGroupStop Name="trucks/krs_58_bandit/krs_58_bandit_crane_legs_move_stop" Range="20" Volume="1" />
+		<SoundPoweredGroupStart Name="" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="trucks/krs_58_bandit/krs_58_bandit_crane_legs_move_loop" Range="20" Volume="1" />
+		<SoundIKStop Name="trucks/krs_58_bandit/krs_58_bandit_crane_move_stop" Range="20" Volume="1" />
+		<SoundIKStart Name="trucks/krs_58_bandit/krs_58_bandit_crane_move_start" Range="20" Volume="1" />
+		<SoundIKLoop Name="trucks/krs_58_bandit/krs_58_bandit_crane_move_loop" Range="20" Volume="1" />
+		<InstallSocket Type="CraneKrs58Bandit" />
+		<CraneSourceSocket Pos="(3.845; 3.600; 0.000)" ParentFrame="BoneArm4_cdt" />
+		<AddonType Name="Crane" />
+	</GameData>
+	<ControlledIK
+		CoeffEndMovementSpeedOY=".65"
+		CoeffEndMovementSpeedOYWithLoad=".5"
+		CoeffEndMovementSpeedXZ=".8"
+		CoeffEndMovementSpeedXZWithLoad=".6"
+	>
+		<Chain EndOffset="(2.348; 0; 0)" ModelFrames="BoneRoot_cdt,BoneRotationBase_cdt,BoneArm1_cdt, BoneArm2_cdt, BoneArm3_cdt, BoneArm4_cdt" />
+	</ControlledIK>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneLegL" ParentFrame="BoneLegL_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFootL_cdt"
+				ModelFrame="BoneFootL"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneLegR" ParentFrame="BoneLegR_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFootR_cdt"
+				ModelFrame="BoneFootR"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneArmHinge" ParentFrame="BoneArm1_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArm4_cdt"
+				ModelFrame="BoneArmPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase" ParentFrame="BoneRotationBase_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneArm1_cdt"
+				ModelFrame="BonePiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<AddonCamera
+		FirstPersonDir="(-0.952; -0.305; 0)"
+		FirstPersonPos="(1.935; 4.909; 0.598)"
+		ParentFrame="BoneRotationBase_cdt"
+	/>
+</TruckAddon>

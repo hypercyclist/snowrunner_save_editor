@@ -1,0 +1,53 @@
+<_templates Include="trucks">
+	<Body>
+		<Antenna Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-7"
+				PlaneMax="7"
+			>
+				<PlaneMotor Damping="0.1" Spring="60" Type="Spring" />
+				<ConeMotor Damping="0.1" Spring="60" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<_parent File="paystar_5600ts_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_bumper_1">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Antenna" ModelFrame="BoneLeftAntenna_cdt" />
+			<Body _template="Antenna" ModelFrame="BoneRightAntenna_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(6.416; 1.295; -0.301)" />
+			<Model _template="HeadLightRay" Org="(6.416; 1.295; 0.329)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.5" Size="0.8" Pos="(6.416; 1.295; -0.301)" />
+			<Flare _template="HeadLight" Color="g(235; 225; 215) x 0.5" Size="0.8" Pos="(6.416; 1.295; 0.329)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_NAME"
+		/>
+	</GameData>
+</TruckAddon>

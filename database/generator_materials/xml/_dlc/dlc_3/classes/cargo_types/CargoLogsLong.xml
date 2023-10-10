@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_LOGS_LONG_NAME"
+		UiDesc="UI_CARGO_LOGS_LONG_DESC"
+		UiIcon20x20="cargoTypeLogLong20"
+		UiIcon40x40="cargoTypeLogLong40"
+		UiIcon100x100="cargoTypeLongLogs"
+	/>
+</CargoType>

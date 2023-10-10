@@ -1,0 +1,29 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_sideboard_1">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="500"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		GaragePoints="2"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FRAME_ADDON_SIDEBOARD_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRAME_ADDON_SIDEBOARD_1_NAME"
+		/>
+		<InstallSocket Type="FrameAddonSideboard1" />
+		<AddonSlots InitialOffset="(-0.044; 0.281; 0)" OffsetStep="(-2.559; 0; 0)" Quantity="1" />
+	</GameData>
+</TruckAddon>

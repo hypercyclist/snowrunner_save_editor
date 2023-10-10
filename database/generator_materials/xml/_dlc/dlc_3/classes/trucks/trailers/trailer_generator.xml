@@ -1,0 +1,338 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheelRear
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.07"
+			SuspensionStrength="0.33"
+			Torque="default"
+			Type="trailer_flatbed_2"
+			SuspensionMin="-0.3"
+			ParentFrame="BoneTrailerRear_cdt"
+		/>
+		<TrailerWheelFront
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.075"
+			SuspensionStrength="0.33"
+			Torque="default"
+			Type="trailer_flatbed_2"
+			SuspensionMin="-0.3"
+			ParentFrame="BoneFrontCart_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData FuelCapacity="1500">
+		<Wheels>
+			<Wheel _template="TrailerWheelFront" Pos="(3.172; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelFront" RightSide="true" Pos="(3.172; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelFront" Pos="(1.859; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelFront" RightSide="true" Pos="(1.859; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-1.3; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-1.3; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-2.613; 0.473; 0.955)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-2.613; 0.473; 0.955)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.842"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-4"
+			MaxX="5.5"
+		/>
+		<Exhaust Dir="(0.5; 0.866; 0)" Origin="(4.275; 3.934; -0.488)" />
+		<Exhaust Dir="(0.5; 0.866; 0)" Origin="(4.275; 3.934; 0.488)" />
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+			<Axle Frame="BoneAxle4" />
+		</Axles>
+	</TruckData>
+	<Shaker
+		Frame="BoneShaker"
+		Name="Engine"
+		MinAngle="(0.2; 0.2; 0.2)"
+		MaxAngle="(0.5; 0.5; 0.5)"
+		MaxFrequency="8"
+	/>
+	<SFX ActionGroupName="Engine" Dir="(0.15; 0.96; 0)" Name="trailer_generator_smoke" Speed="3" Pos="(5.44; 2.5; 0.498)" />
+	<SFX ActionGroupName="Engine" Dir="(0.15; 0.96; 0)" Name="trailer_generator_smoke" Speed="3" Pos="(5.44; 2.5; -0.498)" />
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		Name="Engine"
+		RotationAxis="(1; 0; 0)"
+		RotationSpeed="8"
+	/>
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_GENERATOR"
+			Name="Trailer_Generator"
+			ParentBodies="BoneDoorRight2_cdt, BoneDoorLeft2_cdt, BoneDoorRight3_cdt, BoneDoorLeft3_cdt, BoneLatchR_cdt, BoneLatchL_cdt"
+			ResetOnLoad="true"
+		>
+			<Group FoldingDelay=".2" Id="activate_door1" UnfoldingDelay=".2">
+				<Constraint
+					InitialFix="true"
+					Name="Door1"
+					SpeedMult="1.5"
+					Position="170"
+				/>
+			</Group>
+			<Group FoldingDelay=".2" Id="activate_latch" UnfoldingDelay=".2">
+				<Constraint InitialFix="true" Name="LatchL" SpeedMult=".4" Position="0.069" />
+				<Constraint InitialFix="true" Name="LatchR" SpeedMult=".4" Position="0.191" />
+			</Group>
+			<Group Id="activate_door23" UnfoldingDelay=".5">
+				<Constraint InitialFix="true" Name="Door2_L" SpeedMult="1" Position="140" />
+				<Constraint InitialFix="true" Name="Door2_R" SpeedMult="1.2" Position="160" />
+				<Constraint InitialFix="true" Name="Door3" SpeedMult=".8" Position="160" />
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/trailer_generator">
+		<Body ImpactType="Truck" Mass="2000" ModelFrame="BoneTrailerRear_cdt">
+			<Body Mass="1200" ModelFrame="BoneTrailerFront_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="800000" Spring="1200000" Type="Spring" />
+				</Constraint>
+				<Body Mass="800" ModelFrame="BoneFrontCart_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-50"
+						MaxLimit="50"
+					>
+						<Motor Damping="8000" Spring="40000" Type="Spring" />
+					</Constraint>
+					<Body ForceBodyParams="true" Mass="400" ModelFrame="BoneHandle_cdt">
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-60"
+							MaxLimit="60"
+						/>
+					</Body>
+					<Body _template="Mudguard" ModelFrame="BoneLeftMudguard1_cdt">
+						<Constraint AxisLocal="(0; 0; 1)" MinLimit="-25" MaxLimit="45" />
+					</Body>
+					<Body _template="Mudguard" ModelFrame="BoneRightMudguard1_cdt">
+						<Constraint AxisLocal="(0; 0; 1)" MinLimit="-25" MaxLimit="45" />
+					</Body>
+				</Body>
+				<Body Mass="5" ModelFrame="BoneDoorLeft1_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Name="Door1"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="170"
+					>
+						<Motor
+							Damping="1.0"
+							Force="1000"
+							Tau="0.04"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+				<Body Mass="5" ModelFrame="BoneDoorRight1_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="Door1"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="170"
+					>
+						<Motor
+							Damping="1.0"
+							Force="1000"
+							Tau="0.04"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="BoneDoorRight2_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="Door2_R"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="160"
+				>
+					<Motor
+						Damping="1.0"
+						Force="9000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+			</Body>
+			<Body Mass="10" ModelFrame="BoneDoorRight3_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Door3"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="160"
+				>
+					<Motor
+						Damping="1.0"
+						Force="9000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body Mass="1" ModelFrame="BoneLatchR_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="LatchR"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.191"
+					>
+						<Motor Damping="1.0" Force="200" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="BoneDoorLeft2_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Door2_L"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="140"
+				>
+					<Motor
+						Damping="1.0"
+						Force="9000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+			</Body>
+			<Body Mass="10" ModelFrame="BoneDoorLeft3_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="Door3"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="160"
+				>
+					<Motor
+						Damping="1.0"
+						Force="9000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body Mass="1" ModelFrame="BoneLatchL_cdt">
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="LatchL"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.069"
+					>
+						<Motor Damping="1.0" Force="200" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-25" MaxLimit="45" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-25" MaxLimit="45" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.639; 0.915; 0)" />
+			<Flare _template="StopSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.915; -1.043)" />
+			<Flare _template="StopSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.915; 1.043)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.405; 0.96; 0.921)" />
+			<Light _template="ReverseSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.405; 0.96; -0.921)" />
+			<Flare _template="ReverseSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.405; 0.96; 0.921)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" ParentFrames="BoneTrailerRear_cdt" Size="0.4" Pos="(-3.405; 0.96; 0.921)" />
+			<Flare _template="ReverseSignal" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.405; 0.96; -0.921)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" ParentFrames="BoneTrailerRear_cdt" Size="0.4" Pos="(-3.405; 0.96; -0.921)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.639; 0.915; 0)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" ParentFrames="BoneTrailerRear_cdt" Pos="(-2.913; 1.226; -1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" ParentFrames="BoneTrailerRear_cdt" Pos="(-2.913; 1.226; 1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" ParentFrames="BoneTrailerRear_cdt" Pos="(-0.966; 1.226; -1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" ParentFrames="BoneTrailerRear_cdt" Pos="(-0.966; 1.226; 1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" ParentFrames="BoneTrailerFront_cdt" Pos="(0.966; 1.226; -1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" ParentFrames="BoneTrailerFront_cdt" Pos="(0.966; 1.226; 1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" ParentFrames="BoneTrailerFront_cdt" Pos="(2.913; 1.226; -1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" ParentFrames="BoneTrailerFront_cdt" Pos="(2.913; 1.226; 1.283)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.388; 0.857; -1.323)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.388; 0.857; 1.323)" />
+			<Flare _template="IgnitionSignalRedSmall" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.915; -1.043)" />
+			<Flare _template="IgnitionSignalRedSmall" ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.915; 1.043)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/trailer_flatbed_special_2_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData Price="13200">
+		<WinchSocket ParentFrames="BoneTrailerFront_cdt" Pos="(1.133; 1.123; 1.249)" />
+		<WinchSocket ParentFrames="BoneTrailerFront_cdt" Pos="(1.133; 1.123; -1.249)" />
+		<WinchSocket ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.934; 0.498)" />
+		<WinchSocket ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.934; -0.498)" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(6.352; 0.694; 0)" ParentFrame="BoneHandle_cdt" />
+		<UiDesc
+			UiDesc="UI_TRAILER_GENERATOR_DESC"
+			UiIcon30x30="trailerGenerator30"
+			UiIcon40x40="trailerGenerator"
+			UiName="UI_TRAILER_GENERATOR_NAME"
+		/>
+		<SoundPoweredGroupStop Name="addons/trailer_generator/trailer_generator_stop" Range="10" Volume="1" />
+		<SoundPoweredGroupStart Name="addons/trailer_generator/trailer_generator_start" Range="10" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/trailer_generator/trailer_generator_loop" Range="10" Volume="1" />
+		<InstallSocket Offset="(6.373; 0.692; 0)" Type="Trailer" ParentFrame="BoneHandle_cdt" />
+		<CraneSocket ParentFrames="BoneTrailerFront_cdt" Pos="(1.133; 1.123; 1.249)" />
+		<CraneSocket ParentFrames="BoneTrailerFront_cdt" Pos="(1.133; 1.123; -1.249)" />
+		<CraneSocket ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.934; 0.498)" />
+		<CraneSocket ParentFrames="BoneTrailerRear_cdt" Pos="(-3.385; 0.934; -0.498)" />
+		<CraneSocket Pos="(6.352; 0.694; 0)" ParentFrame="BoneHandle_cdt" />
+		<AddonType Name="Generator" />
+	</GameData>
+	<ActionGroups>
+		<Group Id="Engine">
+			<Shaker Name="Engine" />
+			<SFX Name="Engine" />
+			<Rotator Name="Engine" />
+		</Group>
+	</ActionGroups>
+</Truck>

@@ -1,0 +1,190 @@
+<_templates Include="trucks">
+	<Body>
+		<Anchor Collisions="None" Mass="500">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Name="AnchorExt"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="1.5"
+			>
+				<Motor Force="4000" Type="Position" />
+			</Constraint>
+			<Body
+				ForceBodyParams="true"
+				Mass="500"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="Anchor"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.8"
+				>
+					<Motor Force="10000" Type="Position" />
+				</Constraint>
+			</Body>
+		</Anchor>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PoweredConstraints>
+		<Chain Name="Anchors" ParentBodies="BoneFrontLeftBase_cdt,BoneRearLeftBase_cdt,BoneFrontRightBase_cdt,BoneRearRightBase_cdt">
+			<Group Id="anchors_extend">
+				<Constraint
+					InitialFix="true"
+					Name="AnchorExt"
+					TerminalFix="true"
+					Position="2.0"
+				/>
+			</Group>
+			<Group Id="anchors_push">
+				<Constraint Name="Anchor" TerminalFix="true" Position="0.8" />
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/big_crane_zikz_612h">
+		<NetSync Legacy="true" />
+		<Body Mass="3800">
+			<Constraint Type="Fixed" />
+			<Body _template="Anchor" ModelFrame="BoneFrontLeftBase_cdt">
+				<Body ModelFrame="BoneFrontLeftAnchor_cdt" />
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneRearLeftBase_cdt">
+				<Body ModelFrame="BoneRearLeftAnchor_cdt" />
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneFrontRightBase_cdt">
+				<Body ModelFrame="BoneFrontRightAnchor_cdt" />
+			</Body>
+			<Body _template="Anchor" ModelFrame="BoneRearRightBase_cdt">
+				<Body ModelFrame="BoneRearRightAnchor_cdt" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(-0.5; 0; 0)"
+				Mass="2000"
+				ModelFrame="BoneCabin_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Crane"
+					Type="Hinge"
+					MinLimit="-355"
+					MaxLimit="355"
+				>
+					<Motor Force="500000" Tau="0.1" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="400"
+					ModelFrame="BoneShaft_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="Crane"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="55"
+					>
+						<Motor Force="800000" Tau="0.1" Type="Position" />
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="Internal"
+						Mass="100"
+						ModelFrame="BoneShaft2_cdt"
+					>
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Name="Crane"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="5"
+						>
+							<Motor Force="100000" Tau="0.2" Type="Position" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model
+				_template="HeadLightRay"
+				Dir="(0.975; -0.221; 0)"
+				Org="(-2.196; 2.923; 0.45)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size=".4" Pos="(-2.196; 2.923; 0.45)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(-2.196; 2.923; 0.45)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight
+		_template="Default"
+		AttenEnd="32"
+		Color="g(255; 212; 154) x 3.2"
+		Pos="(-0.110; 2.923; 0.450)"
+		ParentFrame="BoneCabin_cdt"
+	/>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="7500"
+		UnlockByExploration="false"
+		UnlockByRank="6"
+		OriginalAddon="big_crane_ru"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_BIG_CRANE_RU_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_BIG_CRANE_RU_NAME"
+		/>
+		<SoundPoweredGroupStop Name="addons/common/crane_powergroups_stop" Range="20" Volume="1" />
+		<SoundPoweredGroupStart Name="addons/common/crane_powergroups_start" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/common/crane_powergroups_loop" Range="20" Volume="1" />
+		<SoundIKStop Name="addons/bigcrane_ru/bigcrane_ru_turn_stop" Range="20" Volume="1" />
+		<SoundIKStart Name="addons/bigcrane_ru/bigcrane_ru_turn_start" Range="20" Volume="1" />
+		<SoundIKLoop Name="addons/bigcrane_ru/bigcrane_ru_turn_loop" Range="20" Volume="1" />
+		<InstallSocket Type="MastodonBigCrane" />
+		<CraneSourceSocket Pos="(4.542; 3.990; -0.097)" ParentFrame="BoneShaft2_cdt" />
+		<AddonType Name="Crane" />
+	</GameData>
+	<ControlledIK
+		CoeffEndMovementSpeedOY="2"
+		CoeffEndMovementSpeedOYWithLoad="1.0"
+		CoeffEndMovementSpeedXZ="2"
+		CoeffEndMovementSpeedXZWithLoad="1.0"
+	>
+		<Chain EndOffset="(1; 0; 0)" ModelFrames="BoneRoot_cdt,BoneCabin_cdt,BoneShaft_cdt,BoneShaft2_cdt" />
+	</ControlledIK>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBase" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneShaft_cdt"
+				ModelFrame="BonePiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKShaft" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneShaft2_cdt"
+				ModelFrame="BoneIKShaft2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<AddonCamera
+		FirstPersonDir="(1; 0; 0)"
+		FirstPersonPos="(-10.120; 3.760; -3.800)"
+		ParentFrame="BoneCabin_cdt"
+	/>
+</TruckAddon>

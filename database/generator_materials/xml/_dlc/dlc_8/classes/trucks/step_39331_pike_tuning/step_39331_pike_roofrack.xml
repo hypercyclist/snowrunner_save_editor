@@ -1,0 +1,75 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="80" RepairsCapacity="150">
+		<LimitedFluid Center="(0.877; 2.765; 0.537)" SizeX="0.319" SizeY="0.116" SizeZ="0.347" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(0.878; 2.765; 0.148)" SizeX="0.319" SizeY="0.116" SizeZ="0.347" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(1.396; 2.765; -0.649)" SizeX="0.347" SizeY="0.116" SizeZ="0.319" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(1.008; 2.765; -0.649)" SizeX="0.347" SizeY="0.116" SizeZ="0.319" Type="Box" ParentFrame="BoneFuel2_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_roofrack">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.08"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0"
+				>
+					<Motor Damping="1800" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.793; 2.784; -0.381)" />
+			<Model _template="HeadLightRay" Org="(1.793; 2.784; 0.381)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(1.793; 2.784; -0.381)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(1.793; 2.784; 0.381)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2600"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="Step39331PikeRoofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

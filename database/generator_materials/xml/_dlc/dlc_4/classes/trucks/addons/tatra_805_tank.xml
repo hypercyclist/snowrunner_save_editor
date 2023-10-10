@@ -1,0 +1,57 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="900">
+		<LimitedFluid
+			Center="(-0.664; 1.504; 0)"
+			LengthX="2.899"
+			RadiusY="0.477"
+			RadiusZ="0.676"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/tatra_805_tank">
+		<Body CenterOfMassOffset="(0; 0; 0)" Mass="600">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.729; 0.794; -0.883)" />
+			<Light _template="StopSignal" Pos="(-2.729; 0.794; 0.883)" />
+			<Flare _template="StopSignal" Pos="(-2.397; 0.845; -0.883)" />
+			<Flare _template="StopSignal" Pos="(-2.397; 0.845; 0.883)" />
+		</StopSignals>
+		<!-- <ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.6; 0.589; -0.792)" />
+			<Light _template="ReverseSignal" Pos="(-2.6; 0.589; 0.792)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-2.397; 0.845; -0.883)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-2.397; 0.845; 0.883)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.397; 0.845; -0.883)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.397; 0.845; 0.883)" />
+		</ReverseSignals> -->
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0)x 0.4" Pos="(-2.6; 0.589; 0)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.397; 0.845; -0.883)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.397; 0.845; 0.883)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_TANK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_TANK_SMALL_NAME"
+		/>
+		<InstallSocket Type="Tatra805Tank" />
+	</GameData>
+	<FuelMass>
+		<Body Mass="4000" />
+	</FuelMass>
+</TruckAddon>

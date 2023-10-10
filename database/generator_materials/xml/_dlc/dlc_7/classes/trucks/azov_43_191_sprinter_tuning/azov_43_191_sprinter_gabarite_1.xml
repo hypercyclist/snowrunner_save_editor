@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<_parent File="azov_43_191_sprinter_gabarite_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(2.801; 2.901; -0.826)" />
+			<Flare _template="MarkerBeacon" Pos="(2.801; 2.901; 0.826)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKINGLIGHTS_TRI_TWO_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKINGLIGHTS_TRI_TWO_NAME"
+		/>
+	</GameData>
+</TruckAddon>

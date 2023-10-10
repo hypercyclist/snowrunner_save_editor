@@ -1,0 +1,89 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(-0.032;0.012)"
+				LinearLimitsZ="(-0.01;0.01)"
+				Type="Fixed"
+			>
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData
+		FuelCapacity="80"
+		RepairsCapacity="150"
+	>
+		<LimitedFluid Center="(1.411; 2.887; 0.624)" SizeX="0.361" SizeY="0.179" SizeZ="0.516" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(1.021; 2.884; 0.617)" SizeX="0.361" SizeY="0.179" SizeZ="0.516" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(1.038; 2.884; -0.628)" SizeX="0.361" SizeY="0.179" SizeZ="0.516" Type="Box" ParentFrame="BoneFuel3_cdt" />
+		<LimitedFluid Center="(1.428; 2.884; -0.621)" SizeX="0.361" SizeY="0.179" SizeZ="0.516" Type="Box" ParentFrame="BoneFuel4_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/tuz_16_actaeon_tuning/tuz_16_actaeon_roofrack_1">
+		<Body Mass="100">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.045;0.031)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="4.1"
+				Mass="40"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.029; 0.032)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="3"
+				Mass="30"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.02; 0.02)" LinearLimitsZ="(-0.025;0.025)" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.849; 2.807; -0.482)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(1.849; 2.807; 0.490)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".6" Pos="(1.849; 2.807; -0.482)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".6" Pos="(1.849; 2.807; 0.490)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.872; 2.817; -0.207)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.872; 2.817; -0.001)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".4" Pos="(1.872; 2.817; 0.206)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="tuz_16_actaeonRooftopTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

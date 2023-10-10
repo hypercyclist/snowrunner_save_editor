@@ -1,0 +1,79 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData WaterCapacity="1800">
+	<LimitedFluid
+			Color="(86; 186; 255; 255)"
+			Center="(0.4; 1.75; 0)"
+			LengthX="4.1"
+			RadiusY="0.65"
+			RadiusZ="1.05"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_firefighter_addon">
+		<Body CenterOfMassOffset="(-0.5; 0; 0)" Mass="1000" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid"/>
+			<Body ModelFrame="BoneMudguard_cdt" Collisions="None" Mass="10">
+				<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="30"
+			>
+				<Motor Damping="2" Spring="0" Type="Spring" />
+			</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+	<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-1.9; 0.88; 0)" />
+			<Flare _template="IgnitionSignalRed" Size="0.7" Pos="(-1.8; 1.35; 1.04)" />
+			<Flare _template="IgnitionSignalRed" Size="0.7" Pos="(-1.8; 1.35; -1.04)" />
+		</Ignition>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.9; 0.88; 0)" />
+			<Flare _template="StopSignal" Pos="(-1.8; 1.35; 1.04)" />
+			<Flare _template="StopSignal" Pos="(-1.8; 1.35; -1.04)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-1.9; 0.88; 0)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.8; 1.17; 1.04)" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.8; 1.17; -1.04)" />
+			<Flare _template="ReverseSignal" Size="0.5" Pos="(-1.95; 2.95; -0.73)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.8; 1.17; 1.04)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.8; 1.17; -1.04)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.95; 2.95; -0.73)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="6450"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_ZIKZ_566A_FIREFIGHTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_ZIKZ_566A_FIREFIGHTER_NAME"
+		/>
+		<InstallSocket Type="ZiKZ566aFirefighterAddon" />
+	</GameData>
+	<WaterMass>
+		<Body Mass="1800" />
+	</WaterMass>
+</TruckAddon>

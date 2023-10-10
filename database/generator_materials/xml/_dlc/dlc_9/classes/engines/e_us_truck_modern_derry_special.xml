@@ -1,0 +1,31 @@
+<_templates>
+	<Engine>
+		<USSpecialEngine BrakesDelay="0.3" MaxDeltaAngVel="0.05" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USSpecialEngine"
+		CriticalDamageThreshold="0.4"
+		DamageCapacity="300"
+		DamagedConsumptionModifier="1.5"
+		FuelConsumption="12"
+		Name="us_truck_modern_engine_derry_special"
+		Torque="280000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.7"
+	>
+		<GameData
+			Price="25000"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_TRUCK_MODERN_DERRY_SPECIAL_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_TRUCK_MODERN_DERRY_SPECIAL_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

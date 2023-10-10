@@ -1,0 +1,44 @@
+<_templates Include="trucks">
+	<Body>
+		<Hook
+			AngularDamping="3"
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="5"
+		>
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-150"
+				MaxLimit="8"
+			/>
+		</Hook>
+	</Body>
+</_templates>
+<_parent File="chevy_apache_bumper_rear_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Hook" ModelFrame="BoneHook1_cdt" />
+			<Body _template="Hook" ModelFrame="BoneHook2_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

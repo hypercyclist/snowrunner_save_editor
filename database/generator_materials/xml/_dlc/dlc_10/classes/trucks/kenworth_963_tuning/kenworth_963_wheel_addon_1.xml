@@ -1,0 +1,87 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="spare_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_wheel_addon_1">
+		<Body Mass="15" ModelFrame="BoneWheelAddon1_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+			<!-- <Body Collisions="None" Mass="18" ModelFrame="BoneWheelHolder_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.4"
+					MaxLimit="0.4"
+				>
+					<Motor Damping="0" Spring="0" Type="Spring" />
+				</Constraint> -->
+				
+				<Body Collisions="None" Mass="5" ModelFrame="BoneWheelAddonHingeR_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-1"
+						MaxLimit="3"
+					>
+						<Motor Damping="10" Spring="1000" Type="Spring" />
+					</Constraint>
+					<Body Collisions="None" Mass="2" ModelFrame="BoneHook2_cdt">
+						<Constraint
+							Cone="20"
+							PlaneAxisLocal="(0; 0; 1)"
+							TwistAxisLocal="(0; -1; 0)"
+							Type="Ragdoll"
+							PlaneMin="-15"
+							PlaneMax="15"
+						>
+							<PlaneMotor Damping=".5" Spring="4" Type="Spring" />
+							<ConeMotor Damping=".5" Spring="4" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneWheelAddonHingeL_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-0.5"
+						MaxLimit="1.7"
+					>
+						<Motor Damping="2" Spring="1200" Type="Spring" />
+					</Constraint>
+					<Body Collisions="None" Mass="2" ModelFrame="BoneHook1_cdt">
+						<Constraint
+							Cone="20"
+							PlaneAxisLocal="(0; 0; 1)"
+							TwistAxisLocal="(0; -1; 0)"
+							Type="Ragdoll"
+							PlaneMin="-15"
+							PlaneMax="15"
+						>
+							<PlaneMotor Damping=".5" Spring="2" Type="Spring" />
+							<ConeMotor Damping=".5" Spring="2" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="wheel_addon"
+		IsCustomizable="true"
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<RequiredAddonType Type="Kenworth963SpareWheel" />
+		<InstallSocket Offset="(0; 0; 0)" Type="Kenworth963SpareWheel" />
+	</GameData>
+</TruckAddon>

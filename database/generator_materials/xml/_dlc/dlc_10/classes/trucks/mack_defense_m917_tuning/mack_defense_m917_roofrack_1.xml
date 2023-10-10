@@ -1,0 +1,112 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		FuelCapacity="80"
+		RepairsCapacity="150"
+	>
+		<LimitedFluid Center="(2.787; 3.321; 0.697)" SizeX="0.355" SizeY="0.158" SizeZ="0.43" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(2.375; 3.321; 0.697)" SizeX="0.355" SizeY="0.158" SizeZ="0.43" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(2.787; 3.321; -0.011)" SizeX="0.355" SizeY="0.158" SizeZ="0.43" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+		<LimitedFluid Center="(2.375; 3.321; -0.010)" SizeX="0.355" SizeY="0.158" SizeZ="0.43" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="3.9" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_roofrack_1">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="40"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.015"
+					MaxLimit="0.032"
+				>
+					<Motor Damping="1" Spring="200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.031"
+					MaxLimit="0.015"
+				>
+					<Motor Damping="1" Spring="125" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="80"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.009"
+					MaxLimit="0.0012"
+				>
+					<Motor Damping="1" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.482; 3.283; -0.482)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Org="(3.482; 3.283; 0.472)" Scale="(0.7; 0.7; 0.4)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; -0.533)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; -0.429)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; -0.058)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; 0.046)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; 0.42)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(3.465; 3.282; 0.524)" />
+		</HeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(3.154; 3.505; 0.843)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(3.154; 3.505; 0.843)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.154; 3.505; 0.843)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(3.154; 3.505; 0.843)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(3.215; 3.495; 0.843)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(3.154; 3.505; -0.843)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(3.154; 3.505; -0.843)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(3.154; 3.505; -0.843)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(3.154; 3.505; -0.843)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(3.215; 3.495; -0.843)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Roofrack" />
+	</GameData>
+</TruckAddon>

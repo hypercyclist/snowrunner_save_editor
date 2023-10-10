@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<_parent File="western_star_49x_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_bumper_1" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.035; 1.608; -0.935)" />
+			<Model _template="HeadLightRay" Org="(4.035; 1.608; 0.935)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.70" DirAngle="135" Size="0.25" Pos="(4.035; 1.608; -0.935)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.70" DirAngle="135" Size="0.25" Pos="(4.035; 1.608; 0.935)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.70" DirAngle="135" Size="0.2" Pos="(3.954; 1.187; -0.37)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.70" DirAngle="135" Size="0.2" Pos="(3.954; 1.187; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.70" DirAngle="135" Size="0.2" Pos="(3.954; 1.187; 0.37)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+	</GameData>
+</TruckAddon>

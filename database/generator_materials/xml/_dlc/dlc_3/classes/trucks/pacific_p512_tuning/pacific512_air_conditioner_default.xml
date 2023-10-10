@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="boneVent"
+		RotationAxis="(0; 1; 0)"
+		RotationSpeed="8"
+	/>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_air_conditioner_default"/>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="roof"
+		Category="miscellenious"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Pacific512AirConditioner" />
+	</GameData>
+</TruckAddon>

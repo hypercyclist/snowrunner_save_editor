@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_visor_1" />
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(1.811; 3.843; -0.755)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(1.811; 3.843; 0.755)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

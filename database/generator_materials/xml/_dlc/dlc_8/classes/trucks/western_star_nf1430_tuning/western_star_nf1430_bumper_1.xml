@@ -1,0 +1,92 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="10" Collisions="None" Mass="8">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-22"
+				MaxLimit="60"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<_parent File="western_star_nf1430_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_nf1430_tuning/western_star_nf1430_bumper_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="15"
+				_template="Hitch"
+				AngularDamping="1"
+				ModelFrame="BoneHook3_cdt"
+			>
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="0" MaxLimit="50" />
+			</Body>
+			<Body
+				Mass="15"
+				_template="Hitch"
+				AngularDamping="1"
+				ModelFrame="BoneHook4_cdt"
+			>
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-50" MaxLimit="0" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHook1_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHook2_cdt">
+				<Body
+					AngularDamping="7"
+					Collisions="None"
+					Mass="5"
+					ModelFrame="BoneRope1_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="25"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(7.388; 1.448; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(7.388; 1.448; 0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".25" Pos="(7.388; 1.448; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".25" Pos="(7.388; 1.448; 0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(7.388; 1.448; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(7.388; 1.448; 0.265)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WINCHPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WINCHPIPE_NAME"
+		/>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneRopeIK1" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneHook1_cdt"
+				ModelFrame="BoneRopeIK2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

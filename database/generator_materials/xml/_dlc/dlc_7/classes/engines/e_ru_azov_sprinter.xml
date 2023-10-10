@@ -1,0 +1,32 @@
+<_templates>
+	<Engine>
+		<RUTruckModernEngine BrakesDelay="0.5" MaxDeltaAngVel="0.1" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUTruckModernEngine"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="210"
+		DamagedConsumptionModifier="1.2"
+		EngineResponsiveness="0.042"
+		FuelConsumption="6.0"
+		Name="ru_azov_sprinter_custom_engine"
+		Torque="250000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="10900"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_SPORT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_SPORT_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

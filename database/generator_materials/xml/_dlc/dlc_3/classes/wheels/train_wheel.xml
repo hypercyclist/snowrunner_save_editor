@@ -1,0 +1,14 @@
+<_templates Include="trucks" />
+<TruckWheel
+	Mass="500"
+	Mesh="wheels/train_wheel"
+	Radius="0.54"
+	Width=".5"
+>
+	<WheelSoftness RadiusOffset="0" SoftForceScale="1" />
+	<WheelFriction
+		BodyFriction="0.1"
+		BodyFrictionAsphalt=".1"
+		SubstanceFriction="0.6"
+	/>
+</TruckWheel>

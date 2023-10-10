@@ -1,0 +1,21 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_metal_roll_1">
+		<NetSync Legacy="false" />
+		<Body Mass="1000">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_metal_roll"
+			TransportedSound="load/pipe_small/pipe_small_rnd"
+			ManualSound="cargo_manual/cargo_manual_metal_roll"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoMetalRoll"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

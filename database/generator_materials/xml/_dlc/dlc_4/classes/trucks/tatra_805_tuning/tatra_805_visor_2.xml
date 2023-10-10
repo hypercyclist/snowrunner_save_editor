@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="tatra_805_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_805_tuning/tatra_805_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.91; 2.081; -0.681)" />
+			<Flare _template="MarkerBeacon" Pos="(1.934; 2.107; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(1.91; 2.081; 0.681)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Tatra805Visor" />
+	</GameData>
+</TruckAddon>

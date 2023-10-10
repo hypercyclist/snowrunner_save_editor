@@ -1,0 +1,162 @@
+<_templates Include="trucks">
+	<Wheel>
+		<WheelWing
+			Location="front"
+			SkipPlacement="true"
+			SuspensionDamping=".6"
+			SuspensionHeight="0.02"
+			SuspensionStrength=".3"
+			Torque="default"
+			Type="wheels_harvester"
+			PosInLocalFrame="true"
+			SuspensionMin="0"
+			SuspensionMax=".02"
+		/>
+		<WheelRoot
+			Location="front"
+			SuspensionDamping=".6"
+			SuspensionHeight="0.02"
+			SuspensionStrength=".3"
+			Torque="default"
+			Type="wheels_harvester"
+			SuspensionMin="0"
+			SuspensionMax=".02"
+		/>
+	</Wheel>
+</_templates>
+<Truck Type="Trailer" FarmingTrailerType="Harvester">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="WheelRoot" Pos="(3.009; 0.358; 0.951)" ParentFrame="BoneTrailer_cdt" />
+			<Wheel _template="WheelRoot" RightSide="true" Pos="(3.009; 0.358; 0.951)" ParentFrame="BoneTrailer_cdt" />
+			<Wheel _template="WheelRoot" Pos="(-1.626; 0.358; 1.026)" ParentFrame="BoneTrailer_cdt" />
+			<Wheel _template="WheelRoot" RightSide="true" Pos="(-1.626; 0.358; 1.026)" ParentFrame="BoneTrailer_cdt" />
+			<Wheel _template="WheelWing" Pos="(2.421; -0.848; 1.777)" ParentFrame="BoneWingLeft_cdt" />
+			<Wheel _template="WheelWing" Pos="(-2.129; -0.846; 1.917)" ParentFrame="BoneWingLeft_cdt" />
+			<Wheel _template="WheelWing" RightSide="true" Pos="(2.421; -0.848; 1.777)" ParentFrame="BoneWingRight_cdt" />
+			<Wheel _template="WheelWing" RightSide="true" Pos="(-2.129; -0.846; 1.917)" ParentFrame="BoneWingRight_cdt" />
+		</Wheels>
+		<Constraint
+			AxisLocal="(0; 0; -1)"
+			Name="LiftCoupler"
+			PivotOffset="(3.5; -0.35; 0)"
+			Type="Hinge"
+			MinLimit="0"
+			MaxLimit="7.8"
+		>
+			<Motor Force="400000" Tau="0.99" Type="Position" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="trailer_lift" LocaleUid="UI_TRAILER_LIFT">
+			<Constraint
+				InitialFix="false"
+				Name="LiftCoupler"
+				SpeedMult=".1"
+				TerminalFix="false"
+				Position="7.8"
+			/>
+		</Group>
+		<Group Id="side_lift" LocaleUid="UI_RAKE_LIFT">
+			<Constraint
+				InitialFix="false"
+				Name="LiftRake"
+				SpeedMult=".35"
+				TerminalFix="false"
+				Position="90"
+			/>
+			<!--<Constraint InitialFix="true" Name="PushDown" SpeedMult=".35" TerminalFix="false" Position="30" />-->
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/trailer_harvester">
+		<NetSync Legacy="true" />
+		<FarmingBoundingBox1 BaseBone="BoneTrailer_cdt" Min="(-2.4; -2; -3.3)" Max="(-0.4; 1; -1.5)" />
+		<FarmingBoundingBox2 BaseBone="BoneTrailer_cdt" Min="(-2.4; -2; -1.55)" Max="(-0.4; 1; 0)" />
+		<FarmingBoundingBox3 BaseBone="BoneTrailer_cdt" Min="(-2.4; -2; 0)" Max="(-0.4; 1; 1.55)" />
+		<FarmingBoundingBox4 BaseBone="BoneTrailer_cdt" Min="(-2.4; -2; 1.55)" Max="(-0.4; 1; 3.34)" />
+		<FarmingBoundingBox5 BaseBone="BoneTrailer_cdt" Min="(-4.6; -2; -3.34)" Max="(-2.6; 1; -1.55)" />
+		<FarmingBoundingBox6 BaseBone="BoneTrailer_cdt" Min="(-4.6; -2; -1.55)" Max="(-2.6; 1; 0)" />
+		<FarmingBoundingBox7 BaseBone="BoneTrailer_cdt" Min="(-4.6; -2; 0)" Max="(-2.6; 1; 1.55)" />
+		<FarmingBoundingBox8 BaseBone="BoneTrailer_cdt" Min="(-4.6; -2; 1.55)" Max="(-2.6; 1; 3.34)" />
+		<Body
+			Collisions="None"
+			ExplicitParentFrame="0"
+			ImpactType="Truck"
+			Mass="1000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Body Mass="800" ModelFrame="BoneTrailer_cdt">
+				<Constraint Type="Fixed" />
+				<Body Mass="300" ModelFrame="BoneWingRight_cdt">
+					<Constraint
+						AxisLocal="(-1; 0; 0)"
+						Name="LiftRake"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="50000" Tau="0.7" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body Mass="300" ModelFrame="BoneWingLeft_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="LiftRake"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="50000" Tau="0.7" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/trailer_harvester_lmk" MinScale="1.8" MaxScale="2.8" />
+	<GameData Price="2900">
+		<!--<WinchSocket WinchableWhenAttached="false" Pos="(4.509; 0.72; 0)" />-->
+		<WinchSocket Pos="(-0.928; 0.777; 0)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(2.091; 0.964; 0.972)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(2.091; 0.964; -0.972)" ParentFrame="BoneTrailer_cdt" />
+		<UiDesc
+			UiDesc="UI_TRAILER_HARVESTER_DESC"
+			UiIcon30x30="trailerPotatoDigger30"
+			UiIcon40x40="trailerPotatoDigger40"
+			UiName="UI_TRAILER_HARVESTER_NAME"
+		/>
+		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler" />
+		<InstallSocket Offset="(2.6; 1; 0)" Type="TrailerFarm" ParentFrame="BoneRoot_cdt" />
+		<!--		<InstallSocket Offset="(2.561; 0.661; 0)" Type="TrailerPlanter" ParentFrame="BoneTruck_cdt" /> -->
+		<CraneSocket Pos="(-0.928; 0.777; 0)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(2.091; 0.964; 0.972)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(2.091; 0.964; -0.972)" ParentFrame="BoneTrailer_cdt" />
+
+		<SoundPoweredGroupStart Name="addons/trailer_harvester/trailer_harvester_start" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/trailer_harvester/trailer_harvester_loop" Range="20" Volume="1" />
+		<SoundPoweredGroupStop Name="addons/trailer_harvester/trailer_harvester_stop" Range="20" Volume="1" />
+
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneWingLeftPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingLeft_cdt"
+				ModelFrame="BoneWingLeftPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneWingRightPistonBase" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneWingRight_cdt"
+				ModelFrame="BoneWingRightPiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

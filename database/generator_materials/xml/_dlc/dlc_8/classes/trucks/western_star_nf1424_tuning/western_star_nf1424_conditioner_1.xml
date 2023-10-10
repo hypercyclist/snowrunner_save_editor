@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="western_star_nf1424_horns_default" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="BoneRotator"
+		RotationAxis="(0; 1; 0)"
+		RotationSpeed="8"
+	/>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_tuning/western_star_nf1424_conditioner_1">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="nf1424AirConditioner" />
+	</GameData>
+</TruckAddon>

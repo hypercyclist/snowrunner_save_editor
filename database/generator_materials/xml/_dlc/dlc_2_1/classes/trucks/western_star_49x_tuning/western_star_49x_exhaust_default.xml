@@ -1,0 +1,33 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.2" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_exhaust_default">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="exhaust"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="WS49XExhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.966; 0.259; 0)" IsLight="true" Origin="(0.7; 3.592; -1.223)" Speed="3.81" />
+	<Exhaust Dir="(-0.966; 0.259; 0)" IsLight="true" Origin="(0.7; 3.592; 1.223)" Speed="3.82" />
+</TruckAddon>

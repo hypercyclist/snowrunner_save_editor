@@ -1,0 +1,169 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="3"
+	/>
+	<TruckData
+		FuelCapacity="2000"
+		RepairsCapacity="350"
+		WheelRepairsCapacity="6"
+	/>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_maintainer_big_kenworth_963">
+		<Body ImpactType="Truck" Mass="5000" ModelFrame="BoneRoot_cdt">
+			<Constraint Type="Fixed" />
+			<Body Collisions="None" Mass="3" ModelFrame="cord1_cdt">
+				<Constraint
+					LinearLimitsX="(-0.05;0.1)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.1;0.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="10" Spring="400" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="cord2_cdt">
+				<Constraint
+					LinearLimitsX="(-0.05;0.1)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.1;0.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="20" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="cord3_cdt">
+				<Constraint
+					LinearLimitsX="(-0.05;0.1)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.1;0.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="20" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<!--				<Body Collisions="None" Mass="2" ModelFrame="cord4_cdt">
+					<Constraint
+						LinearLimitsX="(-0.05;0.1)"
+						LinearLimitsY="(-0.1;0.1)"
+						LinearLimitsZ="(-0.1;0.1)"
+						Type="Fixed"
+					>
+						<Motor Damping="20" Spring="500" Type="Spring" />
+					</Constraint>
+				</Body>-->
+			<Body Collisions="None" Mass="2" ModelFrame="LeftHose_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.3" Spring="3" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="RightHose_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.38" Spring="3.8" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneLid_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="60"
+				>
+					<Motor Damping="1" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="15" ModelFrame="BoneLadder_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				>
+					<Motor Damping="4" Spring="400" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-8.033; -0.442; 0)" />
+			<Flare _template="StopSignal" Pos="(-8.033; -0.442; 1.063)" />
+			<Flare _template="StopSignal" Pos="(-8.033; -0.442; -1.063)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-8.034; -0.446; 0)" />
+			<Flare _template="ReverseSignal" Pos="(-8.034; -0.446; 0.707)" />
+			<Flare _template="ReverseSignal" Pos="(-8.034; -0.446; -0.707)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-8.034; -0.446; 0.707)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-8.034; -0.446; -0.707)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-8.1; -0.443; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.034; -0.443; 0.885)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.034; -0.443; -0.885)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.034; -0.422; 1.063)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-8.034; -0.422; -1.063)" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.3" Size="0.25" Pos="(-8.010; -0.128; 1.227)" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="0.3" Size="0.25" Pos="(-8.010; -0.128; -1.227)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.12" Pos="(-8.022; 1.460; 1.105)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.12" Pos="(-8.022; 1.460; -1.105)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.12" Pos="(-8.022; 1.460; 0.979)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(-1; 0; 0)" Size="0.12" Pos="(-8.022; 1.460; -0.979)" />
+			<Flare _template="IgnitionSignalRed" Dir="(0; 0; 1)" Size="0.12" Pos="(-7.812; 1.460; 1.331)" />
+			<Flare _template="IgnitionSignalRed" Dir="(0; 0; -1)" Size="0.12" Pos="(-7.812; 1.460; -1.331)" />
+		</Ignition>
+        <Ignition _template="Flasher">
+			<Model Dir="(0.967; 0.254; 0)" Org="(-7.736; 1.822; -0.001)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.967; 0.254; 0)" Pos="(-7.736; 1.822; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(-7.736; 1.822; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.967; 0.254; 0)" Pos="(-7.736; 1.822; -0.001)" ParentFrame="BoneRotator" />
+			<Flare Pos="(-7.813; 1.822; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="6800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_MAINTAINER_BIG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_MAINTAINER_BIG_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="KenworthFrameAddonMaintainerBig" />
+	</GameData>
+</TruckAddon>

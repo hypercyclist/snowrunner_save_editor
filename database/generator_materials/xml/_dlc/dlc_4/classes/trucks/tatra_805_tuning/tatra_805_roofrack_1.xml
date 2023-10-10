@@ -1,0 +1,89 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="80" RepairsCapacity="200">
+		<LimitedFluid Center="(1.588; 2.467; 0.307)" SizeX="0.371" SizeY="0.117" SizeZ="0.312" Type="Box" />
+		<LimitedFluid Center="(1.588; 2.467; 0.664)" SizeX="0.371" SizeY="0.117" SizeZ="0.312" Type="Box" />
+		<LimitedFluid Center="(1.138; 2.467; 0.151)" SizeX="0.312" SizeY="0.117" SizeZ="0.371" Type="Box" />
+		<LimitedFluid Center="(1.137; 2.467; 0.578)" SizeX="0.312" SizeY="0.117" SizeZ="0.371" Type="Box" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/tatra_805_tuning/tatra_805_roofrack_1">
+		<Body ImpactType="Truck" Mass="200">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="30"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.01;0)"
+					LinearLimitsY="(0;0.05)"
+					LinearLimitsZ="(0;0.01)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="20"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(0;0)"
+					LinearLimitsY="(0;0.05)"
+					LinearLimitsZ="(-0.01;0)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="20"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(0;0)"
+					LinearLimitsY="(0;0.05)"
+					LinearLimitsZ="(-0.01;0)"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.908; 2.463; -0.365)" />
+			<Model _template="HeadLightRay" Org="(1.908; 2.463; 0.365)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.2" Pos="(1.908; 2.463; -0.365)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.2" Pos="(1.908; 2.463; 0.365)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="Tatra805Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,21 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(1.168; 2.766; -0.558)" />
+	<Snorkel Origin="(1.168; 2.766; 0.558)" />
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_airfilter_1" />
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TWIN_NAME"
+		/>
+		<InstallSocket Type="TatraT813Airfilter" />
+	</GameData>
+</TruckAddon>

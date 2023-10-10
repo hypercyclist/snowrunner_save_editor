@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.458; 2.926; -0.834)" />
+			<Flare _template="MarkerBeacon" Pos="(4.509; 2.964; -0.115)" />
+			<Flare _template="MarkerBeacon" Pos="(4.509; 2.964; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(4.509; 2.964; 0.115)" />
+			<Flare _template="MarkerBeacon" Pos="(4.458; 2.926; 0.834)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="paystar5600TsVisor1" />
+	</GameData>
+</TruckAddon>

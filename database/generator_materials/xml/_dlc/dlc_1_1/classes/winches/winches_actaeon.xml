@@ -1,0 +1,23 @@
+<WinchVariants>
+	<Winch
+		Name="w_actaeon_offline"
+		Length="14"
+		StrengthMult="0.8"
+		IsEngineIgnitionRequired="false"
+	>
+		<GameData
+			Price="15000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<WinchParams
+			/>
+			<UiDesc
+				UiDesc="UI_WINCH_UPGRADE_MEDIUM_OFFLINE_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_WINCH_UPGRADE_MEDIUM_OFFLINE_NAME"
+			/>
+		</GameData>
+	</Winch>
+</WinchVariants>

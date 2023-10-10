@@ -1,0 +1,27 @@
+<_parent File="tuz_108_warthog_exhaust_1" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.1; 0.1; 0.1)"
+				MaxAngle="(0.4; 0.4; 0.4)"
+				MaxFrequency="9"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_tuning/tuz_108_warthog_exhaust_2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_HEATSHIELD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_HEATSHIELD_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.000; 0.776; -0.631)" Origin="(-0.693; 2.707; -1.035)" Speed="2.0" />
+</TruckAddon>

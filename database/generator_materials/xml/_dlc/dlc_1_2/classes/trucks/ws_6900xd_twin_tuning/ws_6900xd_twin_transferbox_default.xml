@@ -1,0 +1,44 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData AllWheelDriveInstalled="false">
+		<Shafts>
+			<Shaft PointBConnectedToAddon="true" SocketPointA="ShaftEngine" SocketPointB="ShaftBendEngine" />
+			<Shaft PointAConnectedToAddon="true" SocketPointA="ShaftBendRearWheel" SocketPointB="ShaftRearWheel" />
+		</Shafts>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_tuning/ws_6900xd_twin_transferbox_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis1_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis2_cdt">
+					<Constraint ExplicitParentFrame="1" Type="Fixed" />
+					<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+						<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_TRANSFERBOX_NOAWD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_NOAWD_NAME"
+		/>
+		<InstallSocket Type="WS6900XDTwinTransferBox" />
+	</GameData>
+	<ExplicitParents>
+		<ExplicitParent ExplicitParentFrame="3" Frame="BoneAxle1" />
+		<ExplicitParent ExplicitParentFrame="4" Frame="BoneAxle2" />
+		<ExplicitParent ExplicitParentFrame="5" Frame="BoneRack1" />
+		<ExplicitParent ExplicitParentFrame="6" Frame="BoneRack2" />
+	</ExplicitParents>
+</TruckAddon>

@@ -1,0 +1,162 @@
+<AmbientSounds>
+	<Volume Min="0.6" Max="0.6" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_loop">
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_birds1/amb_us_autumn_day_forest_birds1_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "30"
+			MaxInterval = "50"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_birds2/amb_us_autumn_day_forest_birds2_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_summer/amb_ru_summer_day_forest_magpie/amb_ru_summer_day_forest_magpie_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "35"
+			MaxInterval = "55"
+			MinVolume = "0.5"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_winter/amb_us_winter_day_woodpecker_rnd_set/amb_us_winter_day_woodpecker_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "55"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_crow/amb_us_autumn_day_forest_crow_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_tree/amb_us_autumn_day_forest_tree_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_gust/amb_us_autumn_day_forest_gust_rnd"
+			MinRadius = "7"
+			MaxRadius = "35"
+			MinInterval = "20"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayForest>
+	<DayWind Sound="amb/amb_us_autumn/amb_us_autumn_day_wind_loop">
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_wind_birds1/amb_us_autumn_day_wind_birds1_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "50"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_wind_birds2/amb_us_autumn_day_wind_birds2_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "30"
+			MaxInterval = "50"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_summer/amb_ru_summer_day_forest_magpie/amb_ru_summer_day_forest_magpie_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "35"
+			MaxInterval = "55"
+			MinVolume = "0.5"
+			MaxVolume = "1.0"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/amb_us_autumn/amb_us_autumn_night_forest_loop">
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_night_forest_birds/amb_us_autumn_night_forest_birds_rnd"
+			MinRadius = "18"
+			MaxRadius = "55"
+			MinInterval = "15"
+			MaxInterval = "40"
+			MinVolume = "0.5"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_autumn_owl/amb_ru_autumn_owl_rnd"
+			MinRadius = "10"
+			MaxRadius = "40"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_night_forest_tree/amb_us_autumn_night_forest_tree_rnd"
+			MinRadius = "8"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_night_forest_gust/amb_us_autumn_night_forest_gust_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "20"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_night_forest_wolf/amb_us_autumn_night_forest_wolf_rnd"
+			MinRadius = "20"
+			MaxRadius = "55"
+			MinInterval = "25"
+			MaxInterval = "55"
+			MinVolume = "0.5"
+			MaxVolume = "0.8"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/amb_us_autumn/amb_us_autumn_night_wind_loop">
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="150"
+		Dist2D="0"
+		Dist3D="30"
+	/>
+</AmbientSounds>

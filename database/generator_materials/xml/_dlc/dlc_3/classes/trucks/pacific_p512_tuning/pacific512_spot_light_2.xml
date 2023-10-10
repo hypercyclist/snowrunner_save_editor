@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_spot_light_2">
+		<Body ImpactType="Truck" Mass="5">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.455; 3.482; -0.457)" />
+			<Model _template="HeadLightRay" Org="(2.455; 3.482; 0.457)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; -0.686)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; 0.686)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; -0.567)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; 0.567)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; -0.442)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.4" DirAngle="90" Size=".4" Pos="(2.45; 3.397; 0.442)" />
+			<Flare _template="BlueStreak" Pos="(2.45; 3.397; -0.567)" />
+			<Flare _template="BlueStreak" Pos="(2.45; 3.397; -0.567)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KOLOB_74760_HEADLAMP_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KOLOB_74760_HEADLAMP_1_NAME"
+		/>
+		<InstallSocket Type="Pacific512SpotLight" />
+	</GameData>
+</TruckAddon>

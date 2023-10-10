@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_horn_1"/>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_STOCK_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef110Horn" />
+	</GameData>
+</TruckAddon>

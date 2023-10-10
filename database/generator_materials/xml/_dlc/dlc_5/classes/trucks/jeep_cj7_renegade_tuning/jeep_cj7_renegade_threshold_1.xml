@@ -1,0 +1,16 @@
+<_parent File="jeep_cj7_renegade_threshold_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_tuning/jeep_cj7_renegade_threshold_1"/>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_PIPE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_PIPE_THRESHOLDS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

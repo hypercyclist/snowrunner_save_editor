@@ -1,0 +1,404 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="35"
+			SteeringCastor="8"
+			Torque="full"
+		/>
+	</Wheel>
+	<Body>
+		<SunShield Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="3"
+			>
+				<Motor Damping="0.1" Spring="5" Type="Spring" />
+			</Constraint>
+		</SunShield>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+			>
+				<Motor Damping="7.5" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Antenna Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-7"
+				PlaneMax="7"
+			>
+				<PlaneMotor Damping=".1" Spring="60" Type="Spring" />
+				<ConeMotor Damping=".1" Spring="60" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.06"
+		DiffLockType="Uninstalled"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="75"
+		Responsiveness="0.6"
+		SteerSpeed="0.032"
+		TruckImage="jeeprenegatemchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_scout1"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.187; 0.297; 0.655)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.187; 0.297; 0.655)" />
+			<Wheel _template="RearWheel" Pos="(-1.186; 0.299; 0.655)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.186; 0.299; 0.655)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="jeep_cj7_renegade_suspension_default"
+			Type="s_jeep_cj7_renegade"
+			MaxWheelRadiusWithoutSuspension="0.27"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.589"
+		/>
+		<Steam Origin="(0.83; 0.91; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(0.81; 0.779; -0.2)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/jeep_cj7/jeep_cj7_brakes_squeal" />
+			<Gear			Sound="trucks/jeep_cj7/jeep_cj7_gear_shift" />
+			<Handbrake		Sound="trucks/jeep_cj7/jeep_cj7_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/jeep_cj7/jeep_cj7_handbrake_off" />
+			<Honk			Sound="trucks/jeep_cj7/jeep_cj7_honk" />
+			<EngineRev		Sound="trucks/jeep_cj7/jeep_cj7_rev" />
+			<EngineAccel	Sound="trucks/jeep_cj7/jeep_cj7_acc" />
+			<EngineStart	Sound="trucks/jeep_cj7/jeep_cj7_start" />
+			<EngineStop		Sound="trucks/jeep_cj7/jeep_cj7_stop" />
+			<EngineIdle		Sound="trucks/jeep_cj7/jeep_cj7_idle" />
+			<EngineIdle_2d	Sound="trucks/jeep_cj7/jeep_cj7_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/jeep_cj7/jeep_cj7_low" />
+			<EngineLow_2d	Sound="trucks/jeep_cj7/jeep_cj7_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/jeep_cj7/jeep_cj7_high" />
+			<EngineHigh_2d	Sound="trucks/jeep_cj7/jeep_cj7_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/jeep_cj7/jeep_cj7_heavy" />
+			<EngineHeavy_2d	Sound="trucks/jeep_cj7/jeep_cj7_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(1.2; 1.2; 1.2)" MaxFrequency="6" />
+			<Shaker Frame="BoneGearbox" MinAngle="(0.6; 0.6; 0.6)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="0.6" />
+			<Shaker Frame="BoneShaker1" MinAngle="(0.5; 0.5; 0.5)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="0.6" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.5"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.4"
+			MaxX="2.5"
+		/>
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-0.711; 0; 0.703)"
+			IsLight="true"
+			Origin="(-1.745; 0.376; 0.644)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="us_scout_old_engine_0" Type="e_us_scout_old" />
+		<Driver AnimationSet="Scout" Pos="(-0.38; 0.737; 0.31)" SteeringWheelPos="(-0.074; 1.124; 0.369)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_01" Org="(0.216; 0.972; 0.038)" OutputAngles="(-95; 95)" />
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_02" Org="(0.222; 1.002; 0.231)" OutputAngles="(-135; 135)" />
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_04" Org="(0.216; 0.95; 0.02)" OutputAngles="(165; 125)" />
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_03" Org="(0.217; 0.955; -0.074)" OutputAngles="(-32; -12)" />
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_03" Org="(0.217; 0.955; -0.145)" OutputAngles="(-32; 5)" />
+			<Gauge Damping="0.99" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_cj7_renegade_arrow_04" Org="(0.216; 0.948; 0.056)" OutputAngles="(-120; -145)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.75; 0.512; -0.471)" Max="(1.491; 0.963; 0.471)" />
+			<DamageArea Type="FuelTank" Min="(-0.8; 0.34; -0.6)" Max="(0.7; 0.64; 0.6)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.02" Scale="0.35" Type="wheels_scout_offroad2_jeep_wrangler" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout1" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout2" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.4" Type="wheels_scout2" />
+		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/jeep_cj7_renegade_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/jeep_cj7_renegade_glass__sh_d.tga"
+				ViewPos="(-0.439; 1.416; 0.389)"
+			>
+				<Mirror ClipDir="(-0.926; 0.012; -0.377)" ClipOffset="0.1" FOVScale="1" MeshFrame="mirror_left" ReflectionDir="(-0.926; 0.012; -0.377)" Size="(0.22; 0.22)" Pos="(0.181; 1.289; 0.942)" />
+				<Mirror ClipDir="(-0.826; 0.098; 0.555)" ClipOffset="0.1" FOVScale="1" MeshFrame="mirror_right" ReflectionDir="(-0.826; 0.098; 0.555)" Size="(0.22; 0.22)" Pos="(0.162; 1.261; -0.898)" />
+				<Mirror ClipDir="(-0.946; -0.094; 0.311)" ClipOffset="0.1" FOVScale="1.5" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.946; -0.094; 0.311)" Size="(0.20; 0.06)" Pos="(0.028; 1.443; 0.017)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(1.491; 0.839; 0)" />
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="1000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="700"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Antenna" ModelFrame="BoneAntenna_cdt" />
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="TieRodSteer"
+					MinLimit="-30"
+					MaxLimit="30"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.929; 0.628; 0)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-1.877; 0.77; -0.594)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-1.877; 0.77; 0.594)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(255; 230; 215) x 0.8" Pos="(-1.877; 0.628; 0)" />
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-1.877; 0.825; -0.594)" />
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-1.877; 0.825; 0.594)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.0" Pos="(1.513; 0.853; -0.317)" />
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.0" Pos="(1.513; 0.853; 0.317)" />
+			<Light _template="IgnitionSignalRed" Pos="(-1.877; 0.77; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.877; 0.77; -0.594)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-1.877; 0.77; 0.594)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" Size=".3" Pos="(1.513; 0.853; -0.317)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" Size=".3" Pos="(1.513; 0.853; 0.317)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 215; 105) x 0.3" Size=".3" Pos="(1.513; 0.67; -0.281)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 215; 105) x 0.3" Size=".3" Pos="(1.513; 0.67; 0.281)" />
+			<Flare _template="IgnitionSignalOrange" Size=".2" Pos="(1.451; 0.787; -0.723)" />
+			<Flare _template="IgnitionSignalOrange" Size=".2" Pos="(1.451; 0.787; 0.723)" />
+			<Flare _template="IgnitionSignalOrange" Size=".2" Pos="(-1.702; 0.787; -0.723)" />
+			<Flare _template="IgnitionSignalOrange" Size=".2" Pos="(-1.702; 0.787; 0.723)" />
+			<!-- <Flare _template="Beacon" Dir="(0; 0; -1)" Pos="(1.408; 0.787; -0.726)" />
+			<Flare _template="Beacon" Dir="(0; 0; 1)" Pos="(1.408; 0.787; 0.726)" /> -->
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.513; 0.853; -0.317)" />
+			<Model _template="HeadLightRay" Org="(1.513; 0.853; 0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.4" Pos="(1.513; 0.853; -0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.4" Pos="(1.513; 0.853; 0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(1.513; 0.853; -0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(1.513; 0.853; 0.317)" />
+			<!-- <Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.37"  Pos="(1.514; 0.672; -0.28)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.37" Pos="(1.514; 0.672; 0.28)" /> -->
+			<!-- <Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(1.514; 0.672; -0.28)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(1.514; 0.672; 0.28)" /> -->
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(1.513; 0.853; -0.317)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(1.513; 0.853; 0.317)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/jeep_cj7_renegade_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.49; 0.853; 0)" />
+	<GameData
+		Country="US"
+		Price="2500"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.786; 0.464; 0.373)" />
+		<WinchSocket Pos="(1.786; 0.464; -0.373)" />
+		<WinchSocket Pos="(-0.072; 0.499; 0.814)" />
+		<WinchSocket Pos="(-0.072; 0.499; -0.814)" />
+		<WinchSocket Pos="(-1.9; 0.568; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_JEEP_CJ7_RENEGADE_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgJeepRenegade"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="JeepLogo80"
+			UiName="UI_VEHICLE_JEEP_CJ7_RENEGADE_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.6; 0.2; 1.1)" Position="(5.4; 1.5; -0.5)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.6; 0.2; 1.7)" Position="(5.25; 1.55; -0.4)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(3.896; 0.774; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.912; 4.08; 2.215)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.5; 1.5; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0; 3; -4)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.1; 0.7; 1.2)" Position="(5; 1.5; -0.4)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.679; 0.759; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.22; 3; -2.085)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.5; 1; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.5; 3; 4)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5; 1; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10; 3.473; -2.51)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.517; 1.5; -0.706)" Position="(8.821; 2.615; 0.877)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.569; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.332; 1.526; -4.276)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(7.1; 0.7; 1.2)" Position="(5; 1.5; -0.4)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.421; 0.413; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.421; 0.885; -3.51)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.569; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.332; 1.526; -4.276)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(5; 0.956; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(1; 1.683; 3.899)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.708; 0.662; -0.826)" Position="(9.299; 3.937; -0.485)" />
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.34; 0.363; -0.479)" Position="(7.692; 4.063; -0.578)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.582; 0.793; 1.174)" Position="(4.358; 1.478; 2.92)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(5.384; 0.765; 0.362)" Position="(4.296; 1.361; -2.777)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(6.9; 0.95; -0.812)" Position="(8; 1.3; -0.812)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(1.786; 0.464; 0.373)" />
+		<CraneSocket Pos="(1.786; 0.464; -0.373)" />
+		<CraneSocket Pos="(-0.5; 1.65; 0)" />
+		<CraneSocket Pos="(-0.072; 0.499; 0.814)" />
+		<CraneSocket Pos="(-0.072; 0.499; -0.814)" />
+		<CraneSocket Pos="(-1.9; 0.568; 0)" />
+		<AddonSockets DefaultAddon="jeep_cj7_renegade_bumper_default">
+			<Socket Names="CJ7FrontBumper" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="jeep_cj7_renegade_rear_bumper_default">
+			<Socket Names="CJ7RearBumper" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="jeep_cj7_renegade_threshold_default">
+			<Socket Names="CJ7Threshold" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="jeep_cj7_renegade_diff_lock_default">
+			<Socket Names="JeepCJ7RenegadeDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="JeepCJ7RenegadeSpotlight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="JeepCJ7RenegadeFlasher" NamesBlock="JeepCJ7RenegadeHorn1" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="JeepCJ7RenegadeVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CJ7RenegadeRoofrack" NamesBlock="JeepCJ7RenegadeVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="JeepCJ7RenegadeHorn1" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="JeepCJ7RenegadeHorn2" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="CJ7RenegadeSnorkel" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.069; 1.470; 0.014)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(0.14; 1.211; 0.157)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffHoodJeepCJ7Renegade" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x1_03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="JeepCJ7RenegadeSticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRod2" ParentFrame="BoneTieRod1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneTieRod3"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

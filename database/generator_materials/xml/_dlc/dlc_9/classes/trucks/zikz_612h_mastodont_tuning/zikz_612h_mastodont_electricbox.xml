@@ -1,0 +1,65 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<TruckData
+		FuelCapacity="50"
+		RepairsCapacity="300"
+	>
+		<LimitedFluid Center="(4.361; 2.032; 1.139)" SizeX="0.154" SizeY="0.331" SizeZ="0.301" Type="Box" ParentFrame="BoneFuel01_cdt"/>
+		<LimitedFluid Center="(4.361; 2.032; 0.676)" SizeX="0.155" SizeY="0.331" SizeZ="0.301" Type="Box" ParentFrame="BoneFuel02_cdt"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_electricbox">
+		<Body ModelFrame="BoneAddon_cdt" Mass="15" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="100"
+				ModelFrame="BoneBox_cdt"
+				Collisions="None"
+			>
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="0" MaxLimit="2.5" >
+					<Motor Type="Spring" Damping="2" Spring="0" />
+				</Constraint>
+			</Body>
+			<Body
+				Mass="25"
+				ModelFrame="BoneFuel01_cdt"
+				Collisions="None"
+			>
+				<Constraint Type="Hinge" AxisLocal="(-1; 0; 0)" MinLimit="0" MaxLimit="5.5" >
+					<Motor Type="Spring" Damping="1" Spring="0" />
+				</Constraint>
+			</Body>
+			<Body
+				Mass="25"
+				ModelFrame="BoneFuel02_cdt"
+				Collisions="None"
+			>
+				<Constraint Type="Hinge" AxisLocal="(-1; 0; 0)" MinLimit="0" MaxLimit="4" >
+					<Motor Type="Spring" Damping="0.2" Spring="0" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ELECTRICBOX_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ELECTRICBOX_NAME"
+		/>
+		<RequiredAddonType Type="MastodonElectricbox" />
+		<InstallSocket Type="MastodonElectricbox" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+		<Mesh Frame="fuel2" HideThreshold="0.5" />
+	</FuelHide>
+</TruckAddon>

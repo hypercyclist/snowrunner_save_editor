@@ -1,0 +1,89 @@
+<_templates Include="trucks">
+	<Body>
+		<LimitsZ Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="200" Spring="2" Type="Spring" />
+			</Constraint>
+		</LimitsZ>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="60"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-0.429; 2.989; -0.563)" SizeX="0.182" SizeY="0.495" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-0.428; 2.989; -0.148)" SizeX="0.182" SizeY="0.495" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-0.429; 2.915; 0.507)" SizeX="0.182" SizeY="0.363" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel1_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_tuning/tuz_108_warthog_trunk">
+		<Body Collisions="None" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="LimitsZ"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.028;0.018)" LinearLimitsZ="(-0.017;0.032)" />
+			</Body>
+			<Body Mass="40" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-8"
+					MaxLimit="0"
+				>
+					<Motor Damping="1" Spring="2" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="60" ModelFrame="BoneFuel_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-6"
+					MaxLimit="0"
+				>
+					<Motor Damping="10" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.948; 2.781; -0.397)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(0.948; 2.781; 0.397)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.2" Pos="(0.948; 2.781; -0.397)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.2" Pos="(0.948; 2.781; 0.397)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.2" Pos="(0.948; 2.781; -0.158)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.2" Pos="(0.948; 2.781; 0.158)" ParentFrame="BoneCabin_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="tuz108warthogTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

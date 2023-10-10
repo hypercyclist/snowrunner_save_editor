@@ -1,0 +1,24 @@
+<_parent File="western_star_49x_exhaust_default" />
+<TruckAddon>
+	<TruckData _noinherit="True">
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.2" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_exhaust_2" />
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.256; 0.156; 0.954)" IsLight="true" Origin="(0.622; 3.598; 1.347)" Speed="3.81" />
+	<Exhaust Dir="(-0.256; 0.156; -0.954)" IsLight="true" Origin="(0.622; 3.598; -1.347)" Speed="3.82" />
+</TruckAddon>

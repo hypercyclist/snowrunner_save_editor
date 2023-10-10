@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Superheavy" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Soft" />
+			<WheelFriction _template="Mudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.549"
+	WidthRear="1.2"
+>
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_double_cat_770g" Name="mudtires_1">
+			<WheelFriction _template="Mudtires" SubstanceFriction="3.5" />
+			<GameData
+				Price="7900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MUDTIRES_SUPERHEAVY_CAT770G_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_double_cat_770g" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MUDTIRES_DESC" UiName="UI_RIM_MUDTIRES_SUPERHEAVY_CAT770G_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

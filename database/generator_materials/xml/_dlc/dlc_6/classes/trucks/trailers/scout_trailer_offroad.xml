@@ -1,0 +1,117 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheel
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.1"
+			SuspensionStrength="0.33"
+			Torque="default"
+			Type="wheels_scout_trailer_prototype"
+			SuspensionMin="-0.3"
+		/>
+	</Wheel>
+	<Body>
+		<AnchorRotate Mass="150" NoFoliageCollisions="true">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Name="LegRotate"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="90"
+			>
+				<Motor Force="15000" Type="Position" />
+			</Constraint>
+		</AnchorRotate>
+		<AnchorExt Mass="100" NoFoliageCollisions="true">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Name="LegExt"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.2"
+			>
+				<Motor Force="10000" Type="Position" />
+			</Constraint>
+		</AnchorExt>
+	</Body>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-0.728; 0.42; 1.5)" />
+			<Wheel _template="TrailerWheel" Pos="(-0.728; 0.42; 1.5)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-1.868; 0.42; 1.5)" />
+			<Wheel _template="TrailerWheel" Pos="(-1.868; 0.42; 1.5)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="2.2"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-5"
+			MaxX="4.5"
+		/>
+		<Foot Origin="(1.502; -0.18; -1.226)" />
+		<Foot Origin="(1.502; -0.18; 1.226)" />
+		<Foot Origin="(-4.098; -0.18; -1.226)" />
+		<Foot Origin="(-4.098; -0.18; 1.226)" />
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint InitialFix="true" Name="LegRotate" TerminalFix="true" Position="90" />
+			<Constraint InitialFix="true" Name="LegExt" TerminalFix="true" Position="0.2" />
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/scout_trailer_offroad">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="600"
+		>
+			<Body _template="AnchorRotate" ModelFrame="BoneAnchorFront_L_Rotate_cdt">
+				<Body _template="AnchorExt" ModelFrame="BoneAnchorFront_L_Ext_cdt" />
+			</Body>
+			<Body _template="AnchorRotate" ModelFrame="BoneAnchorFront_R_Rotate_cdt">
+				<Body _template="AnchorExt" ModelFrame="BoneAnchorFront_R_Ext_cdt" />
+			</Body>
+			<Body _template="AnchorRotate" ModelFrame="BoneAnchorBack_L_Rotate_cdt">
+				<Body _template="AnchorExt" ModelFrame="BoneAnchorBack_L_Ext_cdt" />
+			</Body>
+			<Body _template="AnchorRotate" ModelFrame="BoneAnchorBack_R_Rotate_cdt">
+				<Body _template="AnchorExt" ModelFrame="BoneAnchorBack_R_Ext_cdt" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguard_L_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="0" MaxLimit="30" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguard_R_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="0" MaxLimit="30" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/scout_trailer_offroad_lmk" MinScale="1.5" MaxScale="3.5" />
+	<GameData Price="3400">
+		<WinchSocket WinchableWhenAttached="false" Pos="(3.995; 0.865; 0)" />
+		<WinchSocket Pos="(2.024; 0.874; -1.247)" />
+		<WinchSocket Pos="(2.024; 0.874; 1.247)" />
+		<WinchSocket Pos="(-4.652; 0.874; -1.247)" />
+		<WinchSocket Pos="(-4.652; 0.874; 1.247)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_SCOUT_OFFROAD_DESC"
+			UiIcon30x30="trailerSemiImg30"
+			UiIcon40x40="trailerSemiImg"
+			UiName="UI_TRAILER_SCOUT_OFFROAD_NAME"
+		/>
+		<InstallSocket Offset="(3.995; 0.865; 0)" Type="ScautTrailer" />
+		<CraneSocket Pos="(3.995; 0.865; 0)" />
+		<CraneSocket Pos="(2.024; 0.874; -1.247)" />
+		<CraneSocket Pos="(2.024; 0.874; 1.247)" />
+		<CraneSocket Pos="(-4.652; 0.874; -1.247)" />
+		<CraneSocket Pos="(-4.652; 0.874; 1.247)" />
+		<AddonSlots InitialOffset="(-0.019; 1.063; 0)" OffsetStep="(-2.559; 0; 0)" Quantity="2" />
+	</GameData>
+</Truck>

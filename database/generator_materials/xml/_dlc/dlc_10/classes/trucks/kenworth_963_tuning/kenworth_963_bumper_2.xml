@@ -1,0 +1,68 @@
+<_templates Include="trucks">
+	<Body>
+		<Rope Collisions="None" Mass="0.001">
+				<Constraint
+					Type="Hinge"
+					AxisLocal="(0; 1; 0)"
+					MinLimit="-50"
+					MaxLimit="50"
+				>
+					<Motor Damping="0.1" Spring="3" Type="Spring" />
+				</Constraint>
+		</Rope>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_bumper_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneBumper2_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="2" ModelFrame="BoneBumper2Hinge_cdt">
+				<Constraint
+					Type="Hinge"
+					AxisLocal="(0; 0; -1)"
+					MinLimit="-32"
+					MaxLimit="27"
+				>
+					<Motor Damping="0.52" Spring="0.5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.559; 1.31; -1.1)" />
+			<Model _template="HeadLightRay" Org="(4.559; 1.31; 1.1)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.559; 1.31; -1.1)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".4" Pos="(4.559; 1.31; 1.1)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".35" Pos="(4.707; 1.789; -0.41)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" Size=".35" Pos="(4.707; 1.789; 0.41)" />
+		</HeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.559; 1.31; -1.1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.559; 1.31; 1.1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.707; 1.789; 0.41)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.707; 1.789; -0.41)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CROSSFOG_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Bumper" />
+	</GameData>
+</TruckAddon>

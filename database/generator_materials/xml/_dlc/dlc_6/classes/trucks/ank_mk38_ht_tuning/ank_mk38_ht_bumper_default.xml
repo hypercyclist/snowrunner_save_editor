@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<Collar
+			AngularDamping="1"
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="3"
+		>
+			<Constraint AxisLocal="(0; 0; 1)" Type="Hinge" MaxLimit="120" />
+		</Collar>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_ht_tuning/ank_mk38_ht_bumper_default">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Collar" ModelFrame="BoneCollarR1_cdt">
+				<Constraint MinLimit="-7" />
+			</Body>
+			<Body _template="Collar" ModelFrame="BoneCollarR2_cdt">
+				<Constraint MinLimit="0" />
+			</Body>
+			<Body _template="Collar" ModelFrame="BoneCollarL1_cdt">
+				<Constraint MinLimit="-16" />
+			</Body>
+			<Body _template="Collar" ModelFrame="BoneCollarL2_cdt">
+				<Constraint MinLimit="0" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="AnkMk38HTBumper" />
+	</GameData>
+</TruckAddon>

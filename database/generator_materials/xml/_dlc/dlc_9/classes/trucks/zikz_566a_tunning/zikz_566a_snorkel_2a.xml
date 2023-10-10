@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.32; 2.239; -0.855)" />
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_snorkel_2a"/>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="zikz566Snorkel" />
+	</GameData>
+</TruckAddon>

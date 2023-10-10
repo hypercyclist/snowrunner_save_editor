@@ -1,0 +1,30 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust_L" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="3.7" />
+			<Shaker Frame="BoneExhaust_R" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="3.9" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_exhaust_1">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+		<InstallSocket Type="FordF750Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 0.524; 0.852)" IsLight="true" Origin="(0.262; 2.258; 1.094)" Speed="3.82" />
+	<Exhaust Dir="(-0; 0.524; -0.852)" IsLight="true" Origin="(0.261; 2.258; -1.094)" Speed="3.82" />
+</TruckAddon>

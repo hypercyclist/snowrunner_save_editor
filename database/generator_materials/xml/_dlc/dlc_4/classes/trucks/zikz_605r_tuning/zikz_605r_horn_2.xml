@@ -1,0 +1,17 @@
+<_parent File="zikz_605r_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_horn_2" />
+	<GameData
+		CameraPreset="side_l"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

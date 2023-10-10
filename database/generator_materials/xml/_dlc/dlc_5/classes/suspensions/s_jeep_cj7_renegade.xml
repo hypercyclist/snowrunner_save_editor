@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="80"
+		Name="jeep_cj7_renegade_suspension_default"
+	>
+		<Suspension Damping="0.2" Height="0.08" Strength="0.03" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.27" />
+		<Suspension Damping="0.2" Height="0.12" Strength="0.03" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.27" />
+		<GameData
+			Price="2700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="100"
+		Name="jeep_cj7_renegade_suspension_high"
+	>
+		<Suspension Damping="0.2" Height="0.18" Strength="0.03" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.3" />
+		<Suspension Damping="0.2" Height="0.22" Strength="0.03" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.3" />
+		<GameData
+			Price="5300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

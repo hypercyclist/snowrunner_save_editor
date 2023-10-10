@@ -1,0 +1,16 @@
+<_parent File="western_star_49x_horn_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_horn_1" />
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TRIPLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TRIPLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,109 @@
+<_templates Include="trucks">
+	<Body>
+		<LimitsZ Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="50" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</LimitsZ>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="1000" Spring="10" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel1" HideThreshold="0.5" />
+		<Mesh Frame="wheel2" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="120"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(-1.288; 2.671; -0.57)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(-1.286; 2.671; -0.162)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(-0.624; 2.671; -0.16)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(-0.626; 2.671; -0.57)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneRepairFuel1_cdt" />
+		<LimitedFluid Center="(-0.183; 2.671; 0.573)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneWheelFuel1_cdt" />
+		<LimitedFluid Center="(0.479; 2.647; 0.575)" SizeX="0.495" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneWheelFuel1_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_roofrack_1">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body
+				_template="LimitsZ"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneWheel1_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.032;0.008)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="100"
+				ModelFrame="BoneRepairFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.008;0.032)" />
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="120"
+				ModelFrame="BoneWheelFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.032;0.015)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<HeadLightRay Dir="(1; -0.1; 0)" Mesh="env/light_ray" /><ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(-0.966; 2.650; 0.970)" Dir="(-0.000; -0.771; 0.637)" Scale="(.7; .7; .4)" />
+			<Model _template="HeadLightRay" Org="(-0.966; 2.650; -0.970)" Dir="(-0.000; -0.771; -0.637)" Scale="(.7; .7; .4)" />
+			<Model _template="HeadLightRay" Org="(-2.830; 2.656; 0.438)" Dir="(-0.676; -0.737; 0.000)" Scale="(.7; .7; .4)" />
+			
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; 1)" InnerCone="80" OuterCone="180" Pos="(-0.966; 2.650; 1.3)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; -1)" InnerCone="80" OuterCone="180" Pos="(-0.966; 1.650; -1.3)"/>
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(-1; 0; 0)" InnerCone="80" OuterCone="180" Pos="(-2.830; 2.656; 0.438)"/>
+			
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0; -0.452; 0.892)" DirAngle="135" Size="0.5" Pos="(-0.966; 2.650; 0.970)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0; -0.452; -0.892)" DirAngle="135" Size="0.5" Pos="(-0.966; 2.650; -0.970)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0.676; -0.737; 0.000)" DirAngle="135" Size="0.5" Pos="(-2.830; 2.656; 0.438)" />
+			
+			<Model _template="HeadLightRay" Org="(1.09; 2.673; -0.347)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(1.09; 2.673; 0.347)" />
+			
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(1.09; 2.673; -0.347)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(1.09; 2.673; 0.347)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(1.109; 2.674; -0.112)" />
+			<Flare _template="HeadLight" Color="g(141; 133; 117) x 2.6" Size="0.18" Pos="(1.109; 2.674; 0.118)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="ChevyApacheRooftopTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

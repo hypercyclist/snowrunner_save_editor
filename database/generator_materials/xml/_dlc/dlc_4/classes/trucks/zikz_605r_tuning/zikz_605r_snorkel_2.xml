@@ -1,0 +1,18 @@
+<_parent File="zikz_605r_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.330; 3.011; -0.778)" />
+	<Snorkel Origin="(1.330; 3.011; 0.778)" />
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_snorkel_2"/>
+	<GameData
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

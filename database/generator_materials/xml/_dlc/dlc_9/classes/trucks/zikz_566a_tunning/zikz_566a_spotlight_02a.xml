@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_spotlight_02a">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.448; 2.589; -0.462)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(1.448; 2.589; -0.462)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(1.448; 2.589; -0.462)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(1.485; 2.589; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(1.485; 2.589; 0)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(1.485; 2.589; 0)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(1.448; 2.589; 0.462)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(1.448; 2.589; 0.462)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(1.448; 2.589; 0.462)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="zikz566Spotlight2" />
+	</GameData>
+</TruckAddon>

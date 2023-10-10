@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.459"
+	WidthRear="0.974"
+>
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_step_3364_crocodile" Name="tire_1">
+			<WheelFriction _template="Allterrain" SubstanceFriction="1.5" BodyFriction="1.4" />
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_STEP_3364_CROCODILE_DESC" UiName="UI_TIRE_STEP_3364_CROCODILE_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_step_3364_crocodile" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_STEP_3364_CROCODILE_DESC" UiName="UI_RIM_STEP_3364_CROCODILE_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

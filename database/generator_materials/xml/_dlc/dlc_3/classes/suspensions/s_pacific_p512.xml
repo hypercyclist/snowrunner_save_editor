@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.4"
+		DamageCapacity="200"
+		Name="pacific_p512_suspension_default"
+	>
+		<Suspension 
+			Height="0.09" 
+			Strength="0.06" 
+			WheelType="front" 
+			BrokenSuspensionMax=".25" 
+			SuspensionMin="-0.3" 
+			Damping="0.3"
+		/>
+		<Suspension 
+			Height="0.11" 
+			Strength="0.04" 
+			WheelType="rear" 
+			BrokenSuspensionMax=".25" 
+			SuspensionMin="-0.3" 
+			Damping="0.3"
+		/>
+		<GameData
+			Price="6400"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

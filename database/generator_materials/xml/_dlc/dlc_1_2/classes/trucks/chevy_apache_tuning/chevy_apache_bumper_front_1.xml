@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<_parent File="chevy_apache_bumper_front_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_bumper_front_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.023; 0.967; -0.515)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(3.023; 0.967; 0.515)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 0.5" DirAngle="135" Size="0.3" Pos="(3.023; 0.967; -0.515)" />
+			<Flare _template="HeadLight" Color="g(235; 230; 220) x 0.5" DirAngle="135" Size="0.3" Pos="(3.023; 0.967; 0.515)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 206; 162) x 0.4" Size="0.3" Pos="(3.026; 0.969; -0.516)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 206; 162) x 0.4" Size="0.3" Pos="(3.026; 0.969; 0.516)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.18" Pos="(3.013; 0.967; -0.667)" />
+			<Flare _template="IgnitionSignalOrange" Size="0.18" Pos="(3.013; 0.967; 0.667)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="7"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_ANGLED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

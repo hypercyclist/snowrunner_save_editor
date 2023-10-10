@@ -1,0 +1,144 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="140"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(2.603; 3.321; 0.813)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.009; 3.317; 0.815)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(3.421; 3.317; 0.817)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(1.554; 3.371; -0.14)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(1.964; 3.366; -0.147)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(1.965; 3.35; -0.81)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(1.556; 3.371; -0.805)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneFuel2_cdt" />
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="3.9" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/krs_58_bandit_tuning/krs_58_bandit_roofrack_1">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="30"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.015"
+					MaxLimit="0.032"
+				>
+					<Motor Damping="1" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="40"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.015"
+					MaxLimit="0.032"
+				>
+					<Motor Damping="1" Spring="200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.031"
+					MaxLimit="0.015"
+				>
+					<Motor Damping="1" Spring="125" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="80"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.015"
+					MaxLimit="0.032"
+				>
+					<Motor Damping="1" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.099; 3.251; -0.695)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Org="(4.099; 3.251; 0.705)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.336; -0.942)" Org="(2.511; 3.29; -1.224)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.336; 0.942)" Org="(2.511; 3.29; 1.224)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Dir="(-0.945; -0.327; 0)" Org="(1.212; 3.288; -0.948)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Dir="(-0.945; -0.327; 0)" Org="(1.212; 3.288; 0.952)" Scale="(0.7; 0.7; 0.4)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; -1)" InnerCone="80" OuterCone="180" Pos="(2.511; 3.121; -1.555)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; 1)" InnerCone="80" OuterCone="180" Pos="(2.511; 3.121; 1.555)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(-1; 0; 0)" InnerCone="80" OuterCone="180" Pos="(0.771; 3.036; -0.948)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(-1; 0; 0)" InnerCone="80" OuterCone="180" Pos="(0.771; 3.036; 0.948)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(4.099; 3.251; -0.695)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(4.099; 3.251; 0.705)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" DirAngle="135" Size="0.5" Pos="(4.123; 3.251; -0.029)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(0; -0.336; -0.942)" DirAngle="135" Size="0.5" Pos="(2.511; 3.29; -1.224)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(0; -0.308; 0.951)" DirAngle="135" Size="0.5" Pos="(2.511; 3.29; 1.224)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0.945; -0.327; 0)" DirAngle="135" Size="0.5" Pos="(1.212; 3.288; -0.948)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0.945; -0.327; 0)" DirAngle="135" Size="0.5" Pos="(1.212; 3.288; 0.952)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(1; 0; 0)" Org="(1.994; 3.372; 1.303)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(1; 0; 0)" Pos="(1.994; 3.372; 1.303)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.994; 3.372; 1.303)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(1; 0; 0)" Pos="(1.994; 3.372; 1.303)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.925; 3.372; 1.303)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0; 1)" Org="(1.925; 3.372; -1.234)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0; 1)" Pos="(1.925; 3.372; -1.234)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.925; 3.372; -1.234)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0; 1)" Pos="(1.925; 3.372; -1.234)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.925; 3.372; -1.303)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="krs58banditRoofRack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

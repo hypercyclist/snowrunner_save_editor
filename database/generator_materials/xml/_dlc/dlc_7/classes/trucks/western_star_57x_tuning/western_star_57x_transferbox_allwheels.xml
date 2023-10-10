@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="western_star_57x_transferbox_default" />
+<TruckAddon>
+	<TruckData
+		_noinherit="true"
+		AllWheelDriveInstalled="true"
+	>
+		<Shafts _template="AllWheelsTransferbox" />
+	</TruckData>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="4400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

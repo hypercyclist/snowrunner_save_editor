@@ -1,0 +1,19 @@
+<_parent File="tatra_805_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(0.906; 2.249; -0.664)" />
+	<Snorkel Origin="(0.906; 2.249; 0.664)" />
+	<PhysicsModel Mesh="trucks/tatra_805_tuning/tatra_805_snorkel_2" />
+	<GameData
+		Price="2600"
+		UnlockByExploration="false"
+		UnlockByRank="20"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_TALL_TWIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_TALL_TWIN_NAME"
+		/>
+		<InstallSocket Type="Tatra805Snorkel" />
+	</GameData>
+</TruckAddon>

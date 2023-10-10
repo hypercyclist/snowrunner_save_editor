@@ -1,0 +1,50 @@
+<_templates>
+	<Body>
+		<Mudguard2 Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Prismatic"
+				MinLimit="-0.2"
+				MaxLimit="0.2"
+			>
+				<Motor Damping="200" Spring="1200" Type="Spring" />
+			</Constraint>
+		</Mudguard2>
+		<Mudguard1 Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-10"
+				MaxLimit="6"
+			>
+				<Motor Damping="10" Spring="30" Type="Spring" />
+			</Constraint>
+		</Mudguard1>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_fender_02">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Fixed" />
+			<Body _template="Mudguard1" ModelFrame="BoneLeftMudguard1_cdt" />
+			<Body _template="Mudguard1" ModelFrame="BoneRightMudguard1_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneLeftMudguard2_cdt" />
+			<Body _template="Mudguard2" ModelFrame="BoneRightMudguard2_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="6"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_GMC_8000_FENDER_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_GMC_8000_FENDER_02_NAME"
+		/>
+		<InstallSocket Type="Gmc8000FenderSmall" />
+	</GameData>
+</TruckAddon>

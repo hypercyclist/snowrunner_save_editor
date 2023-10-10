@@ -1,0 +1,139 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<WheelRepairsHide>
+		<Mesh Frame="wheel1" HideThreshold="0.5" />
+		<Mesh Frame="wheel2" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="180"
+		RepairsCapacity="600"
+		WheelRepairsCapacity="2"
+		>
+		<LimitedFluid Center="(-3.64; 4.025; 0.15)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+		<LimitedFluid Center="(-3.629; 4.012; 0.565)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+		<LimitedFluid Center="(-4.343; 4.015; 0.15)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+		<LimitedFluid Center="(-3.629; 3.802; 0.565	)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+		<LimitedFluid Center="(-3.631; 3.802; 0.15)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+		<LimitedFluid Center="(-4.343; 3.802; 0.15)" SizeX="0.39" SizeY="0.14" SizeZ="0.38" Type="Box" />
+	</TruckData>
+		<RepairsHide>
+		<Mesh Frame="repair1" HideThreshold="0.5" />
+		<Mesh Frame="repair2" HideThreshold="0.25" />
+		<Mesh Frame="repair3" HideThreshold="0.0" />
+		</RepairsHide>
+	<PhysicsModel Mesh="trucks/addons/kirovets_k7m_kung">
+		<Body ImpactType="Truck" Mass="2000" ModelFrame="BoneBack_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				Mass="30"
+				ModelFrame="Bonewheel1_cdt"
+				LinearDamping="4"
+			>
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX="(-0.0015;0)"
+					LinearLimitsY="(0;0.0015)"
+					LinearLimitsZ="(-0.008;0)"
+				/>
+			</Body>
+			<Body
+				Mass="30"
+				ModelFrame="Bonewheel2_cdt"
+				LinearDamping="4"
+			>
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX="(-0.001;0)"
+					LinearLimitsY="(0;0.0015)"
+					LinearLimitsZ="(-0.008;0)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="4"
+				Mass="20"
+				ModelFrame="Bonefuel1_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.02;0)"
+					LinearLimitsY="(0;0.035)"
+					LinearLimitsZ="(0;0.015)"
+				/>
+			</Body>
+				<Body
+				_template="Limits"
+				LinearDamping="4"
+				Mass="20"
+				ModelFrame="Bonefuel2_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.001;0)"
+					LinearLimitsY="(0;0.009)"
+					LinearLimitsZ="(0;0.015)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="4"
+				Mass="30"
+				ModelFrame="Bonerepair1_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.008;0.006)"
+					LinearLimitsY="(0;0.035)"
+					LinearLimitsZ="(-0.008;0.005)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="4"
+				Mass="30"
+				ModelFrame="Bonerepair2_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.02;0.03)"
+					LinearLimitsY="(0;0.035)"
+					LinearLimitsZ="(-0.0;0.0)"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Pos="(-4.737; 3.145; -1.247)" />
+			<Flare _template="StopSignal" Pos="(-4.737; 3.145; 1.244)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Color="g(255; 0; 0) x 0.3" Size="0.25" Pos="(-4.737; 3.145; -1.152)" />
+			<Flare _template="ReverseSignal" Color="g(255; 0; 0) x 0.3" Size="0.25" Pos="(-4.737; 3.145; 1.151)" />
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5900"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_KIROVETS_K7M_KUNG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_KIROVETS_K7M_KUNG_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="KirovetsK7MKung" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+		<Mesh Frame="fuel2" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

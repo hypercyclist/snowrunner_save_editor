@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_gabarite_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(1.622; 2.589; -0.155)" />
+			<Flare _template="MarkerBeacon" Pos="(1.622; 2.589; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(1.622; 2.589; 0.155)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_ROUND_TRIPLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_ROUND_TRIPLE_NAME"
+		/>
+		<InstallSocket Type="Step39331PikeGabarite" />
+	</GameData>
+</TruckAddon>

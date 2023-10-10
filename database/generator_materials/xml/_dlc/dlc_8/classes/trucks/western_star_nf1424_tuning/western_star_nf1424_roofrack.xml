@@ -1,0 +1,82 @@
+<_templates Include="trucks">
+</_templates>
+<TruckAddon >
+	<TruckData FuelCapacity="120" RepairsCapacity="150" WheelRepairsCapacity="4">
+		<LimitedFluid Center="(4.979; 3.306; -0.888)" SizeX="0.488" SizeY="0.165" SizeZ="0.358" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(4.979; 3.306; -0.481)" SizeX="0.488" SizeY="0.165" SizeZ="0.358" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(4.979; 3.306; -0.072)" SizeX="0.488" SizeY="0.165" SizeZ="0.358" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(3.803; 3.306; 0.304)" SizeX="0.488" SizeY="0.165" SizeZ="0.358" Type="Box" ParentFrame="BoneFue2_cdt" />
+		<LimitedFluid Center="(3.743; 3.306; 0.832)" SizeX="0.358" SizeY="0.165" SizeZ="0.488" Type="Box" ParentFrame="BoneFue2_cdt" />
+		<LimitedFluid Center="(4.154; 3.307; 0.833)" SizeX="0.358" SizeY="0.165" SizeZ="0.488" Type="Box" ParentFrame="BoneFue2_cdt" />
+	</TruckData>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_tuning/western_star_nf1424_roofrack">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.035"
+					MaxLimit="0.001"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.035"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.03"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="1800" Spring="3500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.04"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="1400" Spring="2700" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="nf1424Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

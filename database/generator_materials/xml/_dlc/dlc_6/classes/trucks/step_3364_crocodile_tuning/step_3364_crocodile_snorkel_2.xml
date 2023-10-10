@@ -1,0 +1,24 @@
+<_parent File="step_3364_crocodile_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(1.025; 1.982; -0.759)" />
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_snorkel_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="4400"
+		UnlockByExploration="false"
+		UnlockByRank="18"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

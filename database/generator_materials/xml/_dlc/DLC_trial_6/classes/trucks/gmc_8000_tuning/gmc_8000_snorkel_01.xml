@@ -1,0 +1,28 @@
+<TruckAddon>
+	<Snorkel Origin="(0.977; 2.111; -1.222)" />
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_snorkel_01">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="100"
+			ModelFrame="BoneCabin_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="snorkel"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_ROUNDCAP_FILTER_NAME"
+		/>
+		<InstallSocket Type="Gmc8000Snorkel" />
+	</GameData>
+</TruckAddon>

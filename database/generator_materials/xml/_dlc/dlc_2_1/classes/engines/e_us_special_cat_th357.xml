@@ -1,0 +1,33 @@
+<_templates>
+	<Engine>
+		<USSpecialSmallEngine BrakesDelay="0.5" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USSpecialSmallEngine"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="90"
+		DamagedConsumptionModifier="1.2"
+		EngineResponsiveness="0.01"
+		FuelConsumption="1.1"
+		Name="us_special_cat_th357_engine_0"
+		Torque="90000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.7"
+		MaxDeltaAngVel="0.01"
+	>
+		<GameData
+			Price="11300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_SPECIAL_CAT_TH357_0_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_SPECIAL_CAT_TH357_0_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

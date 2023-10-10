@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="300"
+		Name="tatra_phoenix_suspension_default"
+	>
+		<Suspension Damping="0.3" Height="0.2" Strength="0.035" WheelType="front" SuspensionMin="-0.35" SuspensionMax="0.3" BrokenSuspensionMax=".3"/>
+		<Suspension Damping="0.3" Height="0.12" Strength="0.065" WheelType="rear" BrokenSuspensionMax=".3" SuspensionMin="-0.25" SuspensionMax="0.3" />
+		<GameData
+			Price="6000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

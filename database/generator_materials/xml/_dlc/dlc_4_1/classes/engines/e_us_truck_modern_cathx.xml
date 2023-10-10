@@ -1,0 +1,32 @@
+<_templates>
+	<Engine>
+		<USTruckModernEngine BrakesDelay="0.5" MaxDeltaAngVel="0.01" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USTruckModernEngine"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="200"
+		DamagedConsumptionModifier="1.1"
+		EngineResponsiveness="0.1"
+		FuelConsumption="6.5"
+		Name="us_truck_modern_engine_cathx"
+		Torque="210000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="11300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_TRUCK_MODERN_CATHX_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_TRUCK_MODERN_CATHX_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

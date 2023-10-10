@@ -1,0 +1,125 @@
+<_templates Include="trucks">
+	<Body>
+		<Wire Collisions="None" Mass="0.5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.03"
+				MaxLimit="0.03"
+			>
+				<Motor Damping="2" Spring="250" Type="Spring" />
+			</Constraint>
+		</Wire>
+	</Body>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRed
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Size="0.2"
+		/>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 195; 34) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.12"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData WaterCapacity="1800">
+		<LimitedFluid
+			Color="(86; 186; 255; 255)"
+			Center="(0.636; 1.174; 0)"
+			LengthX="4.693"
+			RadiusY="0.934"
+			RadiusZ="1.167"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_watertank">
+		<Body CenterOfMassOffset="(1; 0; 0)" Mass="1500">
+			<Constraint Type="Rigid" />
+			<Body _template="Wire" ModelFrame="BoneWireLeft_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRight_cdt" />
+			<Body _template="Wire" ModelFrame="BoneWireRear_cdt">
+				<Constraint AxisLocal="(0; 1; 0)" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameR_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameL_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Dir="(-0.766; 0; 0.643)" Pos="(-2.033; 0.780; 1.164)" />
+			<Light _template="StopSignal" Dir="(-0.766; 0; -0.643)" Pos="(-2.033; 0.780; -1.164)" />
+			<Flare _template="StopSignal" Dir="(-0.766; 0; 0.643)" Pos="(-1.947; 0.961; 1.091)" />
+			<Flare _template="StopSignal" Dir="(-0.766; 0; -0.643)" Pos="(-1.947; 0.961; -1.091)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.021; 0.764; 0.978)" />
+			<Light _template="ReverseSignal" Pos="(-2.021; 0.764; -0.978)" />
+			<Flare _template="ReverseSignal" Dir="(-0.901; -0.4; -0.167)" Pos="(-2.021; 0.764; 0.978)" />
+			<Flare _template="ReverseSignal" Dir="(-0.901; -0.4; 0.167)" Pos="(-2.021; 0.764; -0.978)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.021; 0.764; 0.978)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.021; 0.764; -0.978)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Dir="(-0.910; -0.383; -0.160)" Pos="(-3.093; 0.789; 1.020)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Dir="(-0.905; -0.389; 0.174)" Pos="(-3.093; 0.789; -1.020)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-0.910; -0.383; -0.160)" Size=".25" Pos="(-2.095; 1.214; 1.138)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-0.905; -0.389; 0.174)" Size=".25" Pos="(-2.095; 1.214; -1.138)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Pos="(-2.5; 0.2; 0)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; 1)" Pos="(2.902; 1.07; 1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; -1)" Pos="(2.902; 1.07; -1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; 1)" Pos="(2.79; 1.07; 1.323)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(0; 0; -1)" Pos="(2.79; 1.07; -1.323)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; 1)" Pos="(-1.688; 1.107; 1.212)" />
+			<Flare _template="IgnitionSignalRedSmall" Dir="(0; 0; -1)" Pos="(-1.688; 1.107; -1.212)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.024; 2.282; 0.154)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.024; 2.282; 0)" />
+			<Flare _template="IgnitionSignalRedSmall" Pos="(-2.024; 2.282; -0.154)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-0.766; 0; 0.643)" Pos="(-1.947; 0.961; 1.091)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-0.766; 0; -0.643)" Pos="(-1.947; 0.961; -1.091)" />
+			<!--<Flare _template="IgnitionSignalWhite" Dir="(-0.94; 0; 0.342)" Pos="(-2.02; 0.764; 0.977)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-0.94; 0; -0.342)" Pos="(-2.02; 0.764; -0.977)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(-0.966; 0; 0.259)" Pos="(-2.071; 0.667; 0.823)" />
+			<Flare _template="IgnitionSignalYellow" Dir="(-0.966; 0; -0.259)" Pos="(-2.071; 0.667; -0.823)" />-->
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5300"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_WATER_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_WATER_TANK_NAME"
+		/>
+		<InstallSocket Type="FrameAddonTank" />
+	</GameData>
+	<WaterMass>
+		<Body Mass="1800" />
+	</WaterMass>
+</TruckAddon>

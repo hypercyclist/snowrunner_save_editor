@@ -1,0 +1,27 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cargo/cargo_logs_cat_745c_log_bunk" >
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.3; 0)"
+			Friction="0.1"
+			ImpactType="Foliage"
+			Mass="2000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="2000" ModelFrame="BonePrismaticShift_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_logs_medium"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_manual_logs_medium"
+		/>    
+		<SpawnLoadOrigin Position="(0; 0; 0)" />
+		<RequiredAddon _noinherit="true" Types="cat_745c_log_bunk" />
+		<InstallSlot CargoLength="1" CargoType="CargoLogsShort" CargoAddonSubtype="Cat745LogBunk" ManualLoads="3" />        
+    </GameData>
+ </TruckAddon>

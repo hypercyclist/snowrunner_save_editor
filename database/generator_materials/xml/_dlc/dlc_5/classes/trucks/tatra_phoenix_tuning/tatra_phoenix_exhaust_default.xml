@@ -1,0 +1,38 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(1; 1; 1)"
+				MaxAngle="(3; 3; 3)"
+				MaxFrequency="4"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_phoenix_tuning/tatra_phoenix_exhaust_default">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="TatraPhoenixExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 0; -1)"
+		IsLight="true"
+		Origin="(1.745; 0.644; -1.145)"
+		Speed="3.00"
+	/>
+</TruckAddon>

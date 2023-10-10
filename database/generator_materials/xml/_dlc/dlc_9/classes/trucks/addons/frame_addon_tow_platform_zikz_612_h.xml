@@ -1,0 +1,151 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_addon_tow_platform_zikz_612h">
+		<NetSync Legacy="true" />
+		<Body Mass="400">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneHook_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="65"
+				>
+					<Motor Damping="20" Spring="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameR_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneFrameL_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Mass="200"
+				ModelFrame="BoneRamp1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="ramp_lower"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="130"
+				>
+					<Motor Force="300000" Tau="0.1" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Mass="200"
+					ModelFrame="BoneRamp2_cdt"
+					NoPackWheels="true"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="ramp_extend"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="2"
+					>
+						<Motor Force="100000" Tau="0.2" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Mass="20"
+					ModelFrame="BoneBacklights_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="lights_turn"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="130"
+					>
+						<Motor Force="100" Tau="0.1" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.7" Size="0.2" Pos="(-4.637; 3.019; -1.137)" ParentFrame="BoneBacklights_cdt" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.7" Size="0.2" Pos="(-4.637; 3.019; 1.137)" ParentFrame="BoneBacklights_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-4.637; 3.019; -0.881)" ParentFrame="BoneBacklights_cdt" />
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-4.637; 3.019; 0.881)" ParentFrame="BoneBacklights_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-4.637; 3.019; -1.137)" ParentFrame="BoneBacklights_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-4.637; 3.019; 1.137)" ParentFrame="BoneBacklights_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.2" Pos="(-4.516; 3.126; -1.504)" ParentFrame="BoneRamp1_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.2" Pos="(-4.516; 3.126; 1.504)" ParentFrame="BoneRamp1_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3800"
+		SoundForEachConstraint="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+        <AddonType Name="TowingPlatform" />
+		<WinchSocket Pos="(1.563; 0.467; 0)" ParentFrame="BoneRoot_cdt" />
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_TOW_PLATFORM_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_TOW_PLATFORM_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="MastodonFrameAddonTowPlatform" />
+		<ConstraintSounds>
+			<SoundIKStop ConstraintName="ramp_lower" Name="addons/addon_tow_platform/addon_tow_platform_ramp_lower_stop" Range="20" Volume="1" />
+			<SoundIKStop ConstraintName="ramp_extend" Name="addons/addon_tow_platform/addon_tow_platform_ramp_extend_stop" Range="20" Volume="1" />
+			<SoundIKStart ConstraintName="ramp_lower" Name="addons/addon_tow_platform/addon_tow_platform_ramp_lower_start" Range="20" Volume="1" />
+			<SoundIKStart ConstraintName="ramp_extend" Name="addons/addon_tow_platform/addon_tow_platform_ramp_extend_start" Range="20" Volume="1" />
+			<SoundIKLoop ConstraintName="ramp_lower" Name="addons/addon_tow_platform/addon_tow_platform_ramp_lower_loop" Range="20" Volume="1" />
+			<SoundIKLoop ConstraintName="ramp_extend" Name="addons/addon_tow_platform/addon_tow_platform_ramp_extend_loop" Range="20" Volume="1" />
+		</ConstraintSounds>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Action="9" BelongToCategorie="tow_control" Id="ramp_lower" LocaleUid="UI_RAMP_LOWER" Name="ramp_lower" SpeedMult="1.5" />
+		<Constraint Action="9" BelongToCategorie="tow_control" Id="lights_turn" IgnoreUiButtons="true" LocaleUid="UI_LIGHTS_TURN" Name="lights_turn" SpeedMult="1.5" />
+		<Constraint Action="10" BelongToCategorie="tow_control" Id="ramp_extend" LocaleUid="UI_RAMP_EXTEND" Name="ramp_extend" SpeedMult="3" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="IK_1a" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRamp1_cdt"
+				ModelFrame="IK_1b"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+	<ActionCategories>
+		<ActionCategory
+			Action="1"
+			AvailableForFastMode="true"
+			Id="tow_control"
+			LocaleUid="UI_TOW_CONTROL"
+			RemoveChildActionsFromCustomPanelShowCounter="true"
+		/>
+	</ActionCategories>
+</TruckAddon>

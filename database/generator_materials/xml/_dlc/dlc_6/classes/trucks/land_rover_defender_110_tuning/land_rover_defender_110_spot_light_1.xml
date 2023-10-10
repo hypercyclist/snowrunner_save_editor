@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.565; 1.987; -0.317)" />
+			<Model _template="HeadLightRay" Org="(0.565; 1.987; 0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.565; 1.987; -0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.565; 1.987; 0.317)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.591; 1.987; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef110VisorSpotLight" />
+	</GameData>
+</TruckAddon>

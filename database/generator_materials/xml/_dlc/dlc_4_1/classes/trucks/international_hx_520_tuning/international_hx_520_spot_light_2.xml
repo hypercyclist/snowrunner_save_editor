@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="international_hx_520_spot_light_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_spot_light_2" />
+	<ModelAttachments _noinherit="True">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.134; 3.267; -0.788)" />
+			<Model _template="HeadLightRay" Org="(0.134; 3.267; 0.777)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.134; 3.267; -0.788)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.4" Pos="(0.134; 3.267; 0.777)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.176; 3.267; -0.261)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.176; 3.267; 0.257)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

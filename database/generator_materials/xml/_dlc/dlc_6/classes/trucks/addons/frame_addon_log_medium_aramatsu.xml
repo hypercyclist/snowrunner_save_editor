@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/frame_addon_log_medium_aramatsu">
+		<Body ImpactType="Truck" Mass="1500">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.226; 1.02; 0.227)" />
+			<Flare _template="StopSignal" Size="1" Pos="(-6.226; 1.02; 0.227)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.226; 1.02; -0.227)" />
+			<Flare _template="ReverseSignal" Size="0.2" Pos="(-6.226; 1.02; -0.227)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.226; 1.02; -0.227)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-6.226; 1.02; 0.227)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="6000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-6.319; 1.046; 0)" />
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_LOG_MEDIUM_ARAMATSU_ADDON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_LOG_MEDIUM_ARAMATSU_ADDON_NAME"
+		/>
+		<LoadArea Subtype="AramatsuMedium" TrailerLoad="true" Type="CargoLogsMedium" Min="(-6.293; 1.877; -1.379)" Max="(0.175; 3.252; 1.379)" />
+		<LoadArea Subtype="AramatsuMedium" TrailerLoad="true" Type="CargoLogsMedium" Min="(-6.294; 1.347; -0.382)" Max="(0.176; 2.004; 0.382)" />
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameAddonLogsMediumAramatsu" />
+		<CraneSocket Pos="(-6.319; 1.046; 0)" />
+		<AddonSlots InitialOffset="(-2.65; 1.509; 0)" Quantity="1" />
+	</GameData>
+</TruckAddon>

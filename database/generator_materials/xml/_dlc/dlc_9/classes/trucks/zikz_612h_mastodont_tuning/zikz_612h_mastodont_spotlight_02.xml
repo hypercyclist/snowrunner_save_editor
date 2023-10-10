@@ -1,0 +1,43 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_spotlight_02">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(9.007; 2.977; 0.922)" ParentFrame="BoneAddon_cdt" />
+			<Model _template="HeadLightRay" Org="(9.007; 2.977; -0.922)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; 0.817)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; 0.922)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; 1.028)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; 0.817)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; 0.922)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; 1.028)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; -0.817)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; -0.922)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="HeadLight" Size="0.6" Pos="(9.007; 2.977; -1.028)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; -0.817)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; -0.922)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="BlueStreak" Size="0.6" Pos="(9.007; 2.977; -1.028)" ParentFrame="BoneAddon_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="spotlight1"
+		Category="top"
+		IsCustomizable="true"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="MastodonSpotlight" />
+	</GameData>
+</TruckAddon>

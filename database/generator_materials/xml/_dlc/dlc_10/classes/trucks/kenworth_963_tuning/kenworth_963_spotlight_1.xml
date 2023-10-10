@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_spotlight_1">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneSpotlight1_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.997; 3.642; 0.407)" />
+			<Model _template="HeadLightRay" Org="(1.997; 3.642; 0)" />
+			<Model _template="HeadLightRay" Org="(1.997; 3.642; -0.407)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0.407)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".25" Pos="(1.997; 3.642; -0.407)" />
+		</HeadLight>	
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HEADLIGHTS_LED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HEADLIGHTS_LED_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Spotlight" />
+	</GameData>
+</TruckAddon>

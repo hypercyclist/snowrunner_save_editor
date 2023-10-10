@@ -1,0 +1,49 @@
+<_templates Include="trucks">
+	<Body>
+		<ExhaustTemplate ImpactType="Truck" Mass="2">
+			<Constraint
+				Cone="50"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-30"
+				PlaneMax="30"
+			>
+				<PlaneMotor Damping="999999999" Spring="1000" Type="Spring" />
+				<ConeMotor Damping="999999999" Spring="1000" Type="Spring" />
+			</Constraint>
+		</ExhaustTemplate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="3.9" ParentFrame="BoneRightExhaust_cdt" />
+			<Shaker Frame="BoneLeftExhaust" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.1" ParentFrame="BoneLeftExhaust_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/gmc_8000_exhaust_01">
+		<Body ImpactType="Truck" Mass="100" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="ExhaustTemplate" Collisions="None" ModelFrame="BoneLeftExhaust_cdt" />
+			<Body _template="ExhaustTemplate" Collisions="None" ModelFrame="BoneRightExhaust_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+		<InstallSocket Type="Gmc8000Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-0.707; 0; -0.707)" IsLight="true" Origin="(-0.54; 3.066; -1.21)" Speed="3.82" />
+	<Exhaust Dir="(-0.707; 0; 0.707)" IsLight="true" Origin="(-0.54; 3.066; 1.21)" Speed="3.83" />
+</TruckAddon>

@@ -1,0 +1,52 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="400" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="140">
+		<LimitedFluid Center="(0.629; 2.608; 0.03)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(0.951; 2.608; 0.482)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />	
+		<LimitedFluid Center="(0.955; 2.608; 0.03)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />	
+		<LimitedFluid Center="(0.955; 2.608; -0.533)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />		
+		<LimitedFluid Center="(0.629; 2.608; 0.482)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(0.629; 2.608; -0.482)" SizeX="0.292" SizeY="0.134" SizeZ="0.42" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_roofrack_01a" >
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint _template="TrunkFixed">
+					<TrunkFixed/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="2400"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="zikz566Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+		<Mesh Frame="fuel2" HideThreshold="0.0" />
+		<Mesh Frame="fuel3" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

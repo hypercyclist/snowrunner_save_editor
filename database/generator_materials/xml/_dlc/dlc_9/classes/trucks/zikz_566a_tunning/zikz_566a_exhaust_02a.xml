@@ -1,0 +1,35 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.4; 0.7; 0.4)" MaxFrequency="0.2" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_566a_tunning/zikz_566a_exhaust_02a">
+		<Body
+			Collisions="None"
+			ImpactType="Truck"
+			Mass="50"
+			ModelFrame="BoneAddon_cdt"
+		>
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+		<InstallSocket Type="zikz566Exhaust" />
+	</GameData>
+	<Exhaust Dir="(-2; 0.3; 0)" Origin="(-0.01; 2.561; -0.945)" Speed="2.0" IsLight="true"/>
+	<Exhaust Dir="(-2; 0.3; 0)" Origin="(-0.01; 2.561; 0.945)" Speed="2.0" IsLight="true" />
+</TruckAddon>

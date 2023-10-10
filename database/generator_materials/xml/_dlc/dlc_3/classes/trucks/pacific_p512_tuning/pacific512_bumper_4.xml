@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<_parent File="pacific512_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_bumper_4">
+		<Body
+			AngularDamping="30.0"
+			Collisions="None"
+			Mass="15"
+			ModelFrame="boneHook_cdt"
+		>
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="3"
+			/>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(5.061; 1.6; -0.468)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(5.061; 1.6; 0.468)" Scale="(1; 1; 1.5)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".7" Pos="(5.061; 1.6; -0.468)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".7" Pos="(5.061; 1.6; 0.468)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="16"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REINFORCED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REINFORCED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

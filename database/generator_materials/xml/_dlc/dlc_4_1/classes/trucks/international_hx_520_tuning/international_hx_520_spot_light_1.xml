@@ -1,0 +1,30 @@
+<_templates Include="trucks" />
+<_parent File="international_hx_520_horn_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.171; 3.178; -0.685)" />
+			<Model _template="HeadLightRay" Org="(0.171; 3.178; 0.689)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.171; 3.178; -0.685)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.55" DirAngle="135" Size="0.35" Pos="(0.171; 3.178; 0.689)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.3" Pos="(0.171; 3.178; -0.348)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.3" Pos="(0.171; 3.178; 0.353)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.3" Pos="(0.171; 3.178; 0)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HEADLIGHTS_LED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HEADLIGHTS_LED_NAME"
+		/>
+		<InstallSocket Type="intHX520SpotLight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,39 @@
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="1.0"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="220"
+		DamagedConsumptionModifier="1.5"
+		FuelConsumption="1.9"
+		IdleFuelModifier="0.2"
+		Name="g_special_kolob"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="15.0"
+	>
+		<ReverseGear AngVel="0.5" FuelModifier="0.9" />
+		<HighGear AngVel="3.0" FuelModifier="1.5" />
+		<Gear AngVel="1.5" FuelModifier="1.6" />
+		<Gear AngVel="3.0" FuelModifier="1.4" />
+		<Gear AngVel="4.7" FuelModifier="1.2" />
+		<Gear AngVel="6.2" FuelModifier="1.1" />
+		<Gear AngVel="8.2" FuelModifier="0.9" />
+		<GameData
+			Price="7900"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="false" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="false" 
+				IsLowerMinusGearExists="false"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SPECIAL_KOLOB_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SPECIAL_KOLOB_NAME"
+			/>
+		</GameData>
+	</Gearbox>
+</GearboxVariants>

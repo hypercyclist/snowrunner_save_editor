@@ -1,0 +1,63 @@
+<_templates Include="trucks">
+	<Constraint>
+		<Locks Type="Hinge" MinLimit="-10" MaxLimit="60">
+			<Motor Damping="0.3" Spring="0" Type="Spring" />
+		</Locks>
+		<Boards
+			AxisLocal="(1; 0; 0)"
+			Type="Hinge"
+			MinLimit="-1.5"
+			MaxLimit="1.5"
+		>
+			<Motor Damping="20" Spring="0" Type="Spring" />
+		</Boards>
+	</Constraint>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="60">
+		<!-- gasoline in jerrycans -->
+		<LimitedFluid Center="(-1.924; 0.06; 0.862)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(-1.699; 0.06; 0.862)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(-1.485; 0.06; 0.862)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+	</TruckData>
+	<FuelHide>
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_sideboard">
+		<Body Mass="600">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint LinearLimitsX="(-0.01;0.01)" Type="Fixed" />
+			</Body>
+			<Body Collisions="Default" Mass="30" ModelFrame="BoneSide_L_cdt">
+				<Constraint _template="Boards" />
+				<Body Collisions="None" Mass="2" ModelFrame="BoneLockMid_L">
+					<Constraint _template="Locks" AxisLocal="(0; 1; 0)" />
+				</Body>
+			</Body>
+			<Body Collisions="Default" Mass="30" ModelFrame="BoneSide_R_cdt">
+				<Constraint _template="Boards" />
+				<Body Collisions="None" Mass="2" ModelFrame="BoneLockMid_R">
+					<Constraint _template="Locks" AxisLocal="(0; -1; 0)" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_FRAME_STEP_39331_PIKE_SIDEBOARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FRAME_ADDON_SIDEBOARD_1_NAME"
+		/>
+		<InstallSocket Type="Step39331PikeSideboard" />
+		<AddonSlots InitialOffset="(1.09; 0.327; 0)" OffsetStep="(-2.486; 0; 0)" Quantity="2" />
+	</GameData>
+</TruckAddon>

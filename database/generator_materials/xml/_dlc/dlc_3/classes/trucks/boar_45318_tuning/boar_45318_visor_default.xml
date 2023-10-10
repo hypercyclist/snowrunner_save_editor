@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_visor_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.8" Size="0.2" Pos="(1.800; 3.845; -0.648)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.8" Size="0.2" Pos="(1.800; 3.845; 0.648)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(1.64; 3.9; 0.789)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(1.64; 3.9; -0.789)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Category="fender_front"
+		Price="600"
+		IsCustomizable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STOCK_NAME"
+		/>
+		<InstallSocket Type="boar45318Visor" />
+	</GameData>
+</TruckAddon>

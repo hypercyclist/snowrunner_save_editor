@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6455b_tuning/tayga_6455b_spot_light_2">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(1.983; 3.15; -0.753)" />
+			<Model _template="HeadLightRay" Org="(1.983; 3.15; 0.753)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.4" Pos="(1.983; 3.15; -0.753)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.4" Pos="(1.983; 3.15; 0.753)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.4" Pos="(1.983; 3.15; -0.404)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.5" DirAngle="135" Size="0.4" Pos="(1.983; 3.15; 0.404)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="side_l"
+		Category="top"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_LARGE_NAME"
+		/>
+		<InstallSocket Type="Tayga6455bSpotLight" />
+	</GameData>
+</TruckAddon>

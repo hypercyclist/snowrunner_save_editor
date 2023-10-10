@@ -1,0 +1,763 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="8"
+			Torque="full"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<TieRod Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-32"
+				MaxLimit="50"
+			>
+				<Motor
+					Damping="1.0"
+					Force="6000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</TieRod>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-25"
+				MaxLimit="25"
+			>
+				<Motor Damping="0.65" Spring="1.5" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<SteeringShaft Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-180"
+				MaxLimit="180"
+			>
+				<Motor
+					Damping="1.0"
+					Force="60000"
+					Tau="1"
+					Type="Position"
+				/>
+			</Constraint>
+		</SteeringShaft>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-12"
+				MaxLimit="7"
+			>
+				<Motor Damping="12" Spring="5" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+		<Mirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+			>
+				<Motor Damping="1" Spring="200" Type="Spring" />
+			</Constraint>
+		</Mirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_kenworth_963"
+		EngineIconScale="0.978"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.5"
+		FuelCapacity="510"
+		Responsiveness="0.15"
+		SteerSpeed="0.02"
+		TruckImage="kenworth963mchr"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="allterrain_1"
+			DefaultWheelType="wheels_kenworth_963"
+		>
+			<Wheel _template="FrontWheel" SteeringJointOffset="0.366" Pos="(3.212; 0.786; 1.421)" />
+			<Wheel _template="FrontWheel" RightSide="true" SteeringJointOffset="0.366" Pos="(3.195; 0.786; 1.421)" />
+			<Wheel _template="RearWheel" Pos="(-4.764; 0.786; 1.3)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-4.769; 0.786; 1.3)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" Pos="(-6.635; 0.786; 1.3)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-6.636; 0.786; 1.3)" ParentFrame="BoneSuspension_cdt" />
+		</Wheels>
+		<SuspensionSocket
+			Default="kenworth_963_suspension_default"
+			Type="s_kenworth_963"
+			MaxWheelRadiusWithoutSuspension="0.8"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.9159"
+		/>
+		<Steam Origin="(0.215; 1.934; 0)" ParentFrame="BoneCabin_cdt" />
+		<Steam Origin="(3.973; 2.221; 0)" Scale="0.5" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			MinDist="15.0"
+			DisableReversePitch="true"
+			Origin="(1.278; 2.114; -0.09)"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Reverse		Sound="trucks/kenworth_963/kenworth_963_back_beeper" />
+			<BrakesSqueal	Sound="trucks/kenworth_963/kenworth_963_brakes_squeal" />
+			<BrakePull		Sound="trucks/kenworth_963/kenworth_963_brake_pull" />
+			<BrakeRelease	Sound="trucks/kenworth_963/kenworth_963_brake_release" />
+			<Honk			Sound="trucks/kenworth_963/kenworth_963_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/kenworth_963/kenworth_963_acc" />
+			<EngineStart	Sound="trucks/kenworth_963/kenworth_963_start" />
+			<EngineStop		Sound="trucks/kenworth_963/kenworth_963_stop" />
+			<EngineIdle		Sound="trucks/kenworth_963/kenworth_963_idle" />
+			<EngineIdle_2d	Sound="trucks/kenworth_963/kenworth_963_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/kenworth_963/kenworth_963_low" />
+			<EngineLow_2d	Sound="trucks/kenworth_963/kenworth_963_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/kenworth_963/kenworth_963_high" />
+			<EngineHigh_2d	Sound="trucks/kenworth_963/kenworth_963_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<EngineTurbo	Sound="trucks/kenworth_963/kenworth_963_turbo" />
+			<ChassisStress	Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+			<Shaft SocketPointA="Shaft6a" SocketPointB="Shaft6b" />
+			<Shaft SocketPointA="Shaft7a" SocketPointB="Shaft7b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2.5" MinX="-8.5" MaxX="5" />
+		<LimitedFluid Center="(-0.201; 1.092; 1.060)" SizeX="2.355" SizeY="0.393" SizeZ="0.847" Type="Box" />
+		<LimitedFluid Center="(-0.201; 1.092; -1.060)" SizeX="2.355" SizeY="0.393" SizeZ="0.847" Type="Box" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.419; 2.13; 0)" Size="1.2" />
+		<GearboxSocket Default="g_special_kenworth_963" Type="gearboxes_special_kenworth_963" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="us_truck_old_heavy_engine_0" Type="e_us_truck_old_kenworth_963" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0; 0.03; 0)"
+			Pos="(1.284; 2.524; 0.411)"
+			SteeringWheelPos="(1.643; 2.78; 0.408)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Dir="(-0.966; 0.2; 0)" InputRange="(0;130)" InputType="speed" Mesh="trucks/arrows/kenworth_963_arrow_1" Org="(1.936; 2.792; 0.343)" OutputAngles="(-120; 120)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.2; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/kenworth_963_arrow_1" Org="(1.936; 2.792; 0.476)" OutputAngles="(-120; 120)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.23; 0.1)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.935; 2.809; 0.138)" OutputAngles="(-57; 54)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.23; 0.1)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.946; 2.806; 0.206)" OutputAngles="(-130; -50)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.23; 0.1)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.919; 2.813; 0.069)" OutputAngles="(-132; -90)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.255; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.907; 2.815; 0.002)" OutputAngles="(-114; 16)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.893; 2.817; -0.065)" OutputAngles="(-149; 34)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.878; 2.818; -0.133)" OutputAngles="(-133; 10)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.863; 2.82; -0.2)" OutputAngles="(-133; 15)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.933; 2.735; 0.206)" OutputAngles="(-152; -44)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.917; 2.739; 0.138)" OutputAngles="(-152; -127)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.903; 2.742; 0.069)" OutputAngles="(-153; -101)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.89; 2.745; 0.001)" OutputAngles="(-153; -15)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.877; 2.747; -0.067)" OutputAngles="(-152; -50)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_3" Org="(1.859; 2.749; -0.133)" OutputAngles="(-132; 20)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.252; 0.15)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.845; 2.75; -0.201)" OutputAngles="(-114; -7)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.255; -0.09)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.93; 2.81; 0.676)" OutputAngles="(-133; 15)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.255; -0.09)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.934; 2.81; 0.606)" OutputAngles="(-152; -127)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.255; -0.09)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.912; 2.739; 0.677)" OutputAngles="(-152; -50)" />
+			<Gauge Damping="0.99" Dir="(-0.966; 0.255; -0.09)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kenworth_963_arrow_2" Org="(1.918; 2.739; 0.606)" OutputAngles="(-149; 34)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2.257; 1.613; -0.701)" Max="(4.52; 2.691; 0.701)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.416; 0.885; -1.513)" Max="(1; 1.561; 1.513)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="Gearbox" Min="(1.125; 1.146; -0.292)" Max="(2.756; 1.813; 0.292)" ParentFrame="BoneCabin_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="-0.02" Scale="0.9" Type="wheels_kenworth_963" />
+		<CompatibleWheels OffsetZ="0" Scale="0.87" Type="wheels_superheavy_single" />
+		<Camera
+			Center="(-3.5; 0; 0)"
+			RadiusMultiplier="1.5"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Cockpit
+				_template="Default"
+				LimitsVer="(-0.545; 0.2)"
+				WindshieldDiffuseTexture="trucks/kenworth_963_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/kenworth_963_glass__sh_d.tga"
+				ViewPos="(1.242; 3.145; 0.411)"
+			>
+				<Mirror
+					ClipDir="(-1.15; 0; -0.51)"
+					ClipOffset="0.08"
+					FOVScale="3.8"
+					MeshFrame="mirror_left"
+					Size="(0.23; 0.43)"
+					Pos="(1.704; 3.079; 2.02)"
+				>
+					<SecondaryView
+						ClipDir="(-0.97; 0.01; -0.4)"
+						ClipOffset="0.1"
+						CurveAngle="20"
+						FOVScale="4"
+						MeshFrame="mirror_left_convex"
+						Size="(0.19; 0.24)"
+						Pos="(1.745; 2.762; 1.925)"
+					/>
+				</Mirror>
+				<Mirror
+					ClipDir="(-1.050; 0; 0.63)"
+					ClipOffset="0.3"
+					FOVScale="5"
+					MeshFrame="mirror_right"
+					Size="(0.18; 0.43)"
+					Pos="(1.704; 3.079; -2.02)"
+				>
+					<SecondaryView
+						ClipDir="(-0.73; 0; 0.5)"
+						CurveAngle="20"
+						FOVScale="5"
+						MeshFrame="mirror_right_convex"
+						Size="(0.19; 0.24)"
+						Pos="(1.745; 2.762; -1.925)"
+					/>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleFront" ParentFrame="BoneCabin_cdt" />
+			<Axle Frame="BoneAxleRear1" ParentFrame="BoneSuspension_cdt" />
+			<Axle Frame="BoneAxleRear2" ParentFrame="BoneSuspension_cdt" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(4.496; 2.248; 0)" />
+	<PhysicsModel Mesh="trucks/kenworth_963">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="13000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="13000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5.2"
+					MaxLimit="5.2"
+				>
+					<Motor Damping="150000" Spring="150000" Type="Spring" />
+				</Constraint>
+				<Body Mass="1" ModelFrame="BoneWiperL_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-2"
+						MaxLimit="1"
+					>
+						<Motor Damping="10" Spring="6" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="1" ModelFrame="BoneWiperR_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-1"
+						MaxLimit="5"
+					>
+						<Motor Damping="1" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Mirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="Mirror" Mass="4.8" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunShield_cdt">
+					<Constraint>
+						<Motor Damping="0.03" Spring="10" />
+					</Constraint>
+				</Body>
+				<Body _template="Sunshield" ModelFrame="BoneCabinHinge_cdt">
+					<Constraint MinLimit="-3" MaxLimit="3">
+						<Motor Damping="0.3" Spring="35" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneBelt_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Prismatic"
+						MinLimit="-0.02"
+						MaxLimit="0.02"
+					>
+						<Motor Damping="0.5" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="Mudguard" Collisions="None" ModelFrame="BoneMudguardR_cdt">
+					<Constraint MinLimit="-10" MaxLimit="6" />
+				</Body>
+				<Body _template="Mudguard" Collisions="None" ModelFrame="BoneMudguardL_cdt">
+					<Constraint MinLimit="-15" MaxLimit="6" />
+				</Body>
+				<Body ModelFrame="BoneRadio_cdt" Collisions="None" Mass="5">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-25"
+						MaxLimit="25"
+					>
+						<Motor Damping="0.2" Spring="1.5" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint Name="TieRodSteer" />
+				</Body>
+				<Body _template="SteeringShaft" ModelFrame="BoneSteeringShaft_cdt">
+					<Constraint AxisLocal="(1; 0; 0)" Name="SteeringShaft" />
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="3000"
+				ModelFrame="BoneSuspension_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="12"
+				>
+					<Motor Damping="100" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-8.333; 1.14; 0)" />
+			<Flare _template="StopSignal" Size="0.5" Pos="(-7.73; 1.151; -0.302)" />
+			<Flare _template="StopSignal" Size="0.5" Pos="(-7.73; 1.151; 0.302)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-8.333; 1.142; 0)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-7.727; 1.2; -0.302)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-7.727; 1.2; 0.302)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.727; 1.2; -0.302)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.727; 1.2; 0.302)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Size="0.1" Pos="(5.012; 1.013; 0.992)" />
+			<Light _template="IgnitionSignalWhite" Size="0.1" Pos="(5.012; 1.013; -0.992)" />
+			<Light _template="IgnitionSignalRed" Size="2" Pos="(-8; 1.14; -0)" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0.13)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; -0.13)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0.65)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; -0.65)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.66; 2.15; -1.41)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.66; 2.15; 1.41)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.12" Pos="(3.56; 2.15; -1.41)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.12" Pos="(3.56; 2.15; 1.41)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="Beacon" Color="g(255; 174; 0) x 0.22" Dir="(-1; 0; 0)" Size="0.5" Pos="(3.623; 2.131; -1.407)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="Beacon" Color="g(255; 174; 0) x 0.22" Dir="(-1; 0; 0)" Size="0.5" Pos="(3.623; 2.131; 1.407)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.33" Pos="(-7.73; 1.14; -0.302)" />
+			<Flare _template="IgnitionSignalRed" Color="g(169; 0; 0) x 0.8" Size="0.33" Pos="(-7.73; 1.14; 0.302)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.343 1.661; 0.903)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.343 1.661; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(4.343 1.661; 0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(4.343 1.661; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.8" Pos="(4.343 1.661; 0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.8" Pos="(4.343 1.661; -0.903)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(4.9; 1.709; 0)" ParentFrame="BoneCabin_cdt" />
+	<Landmark Mesh="landmarks/kenworth_963_lmk" MinScale="1.7" MaxScale="3.5" />
+	<GameData
+		Country="US"
+		Price="121200"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-7.827; 1.406; 0)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-1.9; 1.3; -0.47)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-1.9; 1.3; 0.47)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(4.423; 1.407; 0.484)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(4.423; 1.407; -0.484)" ParentFrame="BoneCabin_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_KENWORTH_963_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgKenworth963"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="KenworthLogo80"
+			UiName="UI_VEHICLE_KENWORTH_963_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.27; 2.278; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.866; 5; -4.55)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(3.312; 2.55; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.969; 5; -5.795)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.909; 1.953; 2.5)" Position="(3.65; 3.4; -0.485)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.3; 0.853; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.3; 1.5; -8.5)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.5; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.57; 1.65; -3.425)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.997; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.57; 1.44; -3.425)" />
+			<CameraPos FOV="32.0" Name="snorkels" InterestPosition="(5; 2.2; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.900; 4.3; 5)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(2.85; 2.45; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.114; 4.5; 4)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.35; 3.3; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8; 5; -4.700)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(-1.3; 2.325; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-11.545; 3.873; 8.427)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.194; 1.807; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.093; 2.337; -6.718)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(3.756; 2.364; -0.058)" Position="(3.199; 3.144; -2.926)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(8.111; 3.237; -2.051)" Position="(9.162; 3.553; -2.051)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(5.363; 2.982; -0.33)" Position="(1.723; 4.225; 2.141)" />
+			<CameraPos FOV="32.0" Interior="true" Name="fuel_l_sticker" InterestPosition="(1.284; 3.59; -3.171)" Position="(2.468; 7.637; -5.933)" />
+			<CameraPos FOV="32.0" Interior="true" Name="fuel_r_sticker" InterestPosition="(2.75; 3.59; 3.171)" Position="(1.566; 7.637; 5.933)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(6.219; 3.612; 1.552)" Position="(3.61; 3.011; -0.704)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_4" InterestPosition="(7.224; 4.068; -0.295)" Position="(4.019; 3.259; -0.24)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_5" InterestPosition="(7.224; 4; 2.542)" Position="(4.019; 3.259; 0.24)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_6" InterestPosition="(0.476; 3.943; 0.541)" Position="(4.928; 3.259; 0.318)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_7" InterestPosition="(0.476; 3.597; 0)" Position="(4.928; 3.259; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_8" InterestPosition="(2.529; 3.624; 1.31)" Position="(4.237; 3.259; -0.574)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_04_1" InterestPosition="(6.813; 0.368; 2.484)" Position="(4.019; 3.259; 0.24)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_04_2" InterestPosition="(6.507; 3.764; -1.347)" Position="(3.736; 3.07; 0.059)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_04_3" InterestPosition="(6.096; 4.613; 4.062)" Position="(3.736; 3.07; 0.059)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_04_4" InterestPosition="(1.91; 3.534; -0.530)" Position="(4.888; 3.093; -0.577)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_02_1" InterestPosition="(3.022; 0.28; 4.062)" Position="(4.326; 3.07; 0.059)" />
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.198; 3.026; -0.711)" Position="(6.864; 6.697; -0.206)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(5.837; 1.41; -0.13)" Position="(4.272; 3.475; -0.306)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.662; 0.61; 1.935)" Position="(5.221; 1.595; 0.03)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.909; 3.307; 1.585)" Position="(3.793; 3.494; -0.589)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.813; 1.148; 2.343)" Position="(4.019; 3.259; 0.24)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(4.751; 3.289; -0.899)" Position="(7.967; 3.966; 0.691)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(5.718; 2.217; 0.353)" Position="(3.192; 3.123; 2.922)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.381; 2.539; -0.773)" Position="(9.121; 5.87; -0.304)" />
+			<CameraPos FOV="32.0" Name="hood_figure" InterestPosition="(5.35; 2.6; 0.639)" MaxXRotation="0" MaxYRotation="0" MaxZoom="0" Position="(8.75; 3.2; -1.65)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.423; 1.407; 0.484)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(4.423; 1.407; -0.484)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-7.827; 1.406; 0)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-1.9; 1.3; -0.47)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-1.9; 1.3; 0.47)" ParentFrame="BoneCabin_cdt" />
+		<AddonSockets DefaultAddon="kenworth_963_snorkel_default">
+			<Socket Names="Kenworth963Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Horn" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Spotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="Kenworth963Roofrack"
+				NamesBlock="Kenworth963Horn"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963SpareWheel" Offset="(0; 0.08; 0)" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="Kenworth963SpareWheel2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kenworth_963_exhaust_default">
+			<Socket Names="Kenworth963Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kenworth_963_bumper_default">
+			<Socket Names="Kenworth963Bumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kenworth_963_visor_default">
+			<Socket Names="Kenworth963Visor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kenworth_963_beacon_default">
+			<Socket Names="Kenworth963Roofrack" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kenworth_963_gabarite_default">
+			<Socket Names="Kenworth963Gabarite" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Door_L" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Door_R" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Hood_L_T" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Hood_L_B" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Hood_R_T" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x4_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x4_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x4_04"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_06"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_07"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof3" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof4" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof5" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof6" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof7" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Roof8" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_GlassTop" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_GlassBottom" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_04"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Kenworth963Sticker_1x1_05"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<!-- FRAME/TRAILER SOCKETS -->
+		<AddonSockets>
+			<Socket Names="SaddleHigh" Offset="(-6.2; 1.827; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BigCrane" NamesBlock="SaddleHigh, FrameAddonSideboard3, FrameAddon3, FrameAddonTankLong, Kenworth963SpareWheel2, MinicraneKenworth, LogLiftKenworth, FrameAddonTank" Offset="(-3.7; 1.927; 0)">
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0; 0.002; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0.007; 0)" />
+			</Socket>
+			<Socket Names="FrameAddon" NamesBlock="SaddleHigh, FrameAddonTankLong, FrameAddonTank" Offset="(-4.9; 1.824; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="BunkLog" NamesBlock="SaddleHigh, FrameAddonSideboard3, FrameAddon3, FrameAddonTankLong, FrameAddonTank, MinicraneKenworth" Offset="(-9.16; 1.827; 0)" />
+			<Socket Names="FrameAddonLogShort" NamesBlock="SaddleHigh,FrameAddon3,FrameAddonSideboard3, FrameAddonTankLong, FrameAddonTank, MinicraneKenworth" Offset="(-4.700; 1.82; 0)" />
+			<Socket Names="FrameAddonLogMediumHighKenworth" NamesBlock="SaddleHigh, FrameAddon3,FrameAddonSideboard3,FrameAddonTankLong, FrameAddonTank, MinicraneKenworth, Kenworth963SpareWheel" Offset="(-3.807; 1.827; 0)">
+				<AddonsShift Offset="(-0.45; 0; 0)" Types="LogLiftKenworth" />
+			</Socket>
+			<Socket Names="FrameAddonTowPlatform" NamesBlock="SaddleHigh, Trailer,FrameAddon3, FrameAddonSideboard3, FrameAddonTankLong, FrameAddonTank, LogLiftKenworth" Offset="(-3.85; 1.9; 0)">
+				<AddonsShift Offset="(-0.22; 0; 0)" Types="MinicraneKenworth" />
+				<AddonsShift Offset="(-0.22; 0; 0)" Types="Kenworth963SpareWheel2" />
+			</Socket>
+			<Socket Names="KenworthFrameAddonMaintainerBig" NamesBlock="FrameAddonTankLong, Trailer, SaddleHigh, FrameAddonSideboard3, FrameAddon3, Kenworth963SpareWheel2, LogLiftKenworth, FrameAddonTank, MinicraneKenworth" Offset="(-0.4; 1.94; 0)" />
+			<Socket Names="FrameAddonTank" Offset="(-5.453; 1.827; 0)" NamesBlock="FrameAddonTankLong, FrameAddonSideboard3, FrameAddon3, LogLiftKenworth, FrameAddonTank, MinicraneKenworth">
+				<AddonsShift Offset="(2.7; 0; 0)" TrailerNamesBlock="LargeSemitrailerOiltank, LogLiftKenworth, Kenworth963SpareWheel, Kenworth963SpareWheel2, MinicraneKenworth" Types="SaddleHigh" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="FrameAddonSideboard3"
+				NamesBlock="SaddleHigh, FrameAddon, FrameAddonTankLong, FrameAddonTank, Kenworth963SpareWheel2"
+				Offset="(-3.8; 1.827; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<AddonsShift Offset="(-0.8; 0; 0)" Types="MinicraneKenworth" />
+				<AddonsShift Offset="(-0.7; 0; 0)" Types="Kenworth963SpareWheel" />
+			</Socket>
+			<Socket
+				Names="FrameAddonTankLong"
+				NamesBlock=" Kenworth963SpareWheel2, SaddleHigh, LogLiftKenworth, FrameAddonSideboard3, FrameAddonTank, MinicraneKenworth"
+				Offset="(-3.75; 1.827; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<AddonsShift Offset="(-1; 0; 0)" Types="Kenworth963SpareWheel" />
+			</Socket>
+			<Socket
+				Names="FrameAddon3"
+				NamesBlock="SaddleHigh, FrameAddon, FrameAddonTank, FrameAddonTankLong, Kenworth963SpareWheel2"
+				Offset="(-3.9; 1.827; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<AddonsShift Offset="(-0.45 ; 0; 0)" Types="MinicraneKenworth" />
+				<AddonsShift Offset="(-0.85; 0; 0)" Types="Kenworth963SpareWheel" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="MinicraneKenworth"
+				Offset="(0; 1.856; 0)"
+				ParentFrame="BoneCabin_cdt"
+			>
+				<AddonsShift Offset="(-0.85; -0.028; 0)" Types="Kenworth963SpareWheel" />
+				<AddonsShift Offset="(-1.9; -0.028; 0)" Types="Kenworth963SpareWheel2" />
+			</Socket>
+			<Socket
+				Names="LogLiftKenworth"
+				NamesBlock="Kenworth963SpareWheel2, FrameAddonSideboard3, FrameAddon3"
+				Offset="(-1.05; 2.02; 0)"
+				ParentFrame="BoneCabin_cdt"
+			>
+				<AddonsShift Offset="(-0.85; 0; 0)" Types="Kenworth963SpareWheel" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names=" LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="BunkLog, FrameAddon, FrameAddonLogShort, FrameAddonLogMedium, FrameAddonSeismicVibrator, FrameAddonTankLong, FrameAddonTowPlatform, FrameAddonKung" Offset="(-6.2; 2.33; 0)" />
+			<Socket Names="Trailer" Offset="(-7.852; 1.405; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kenworth963Sticker_Hood_R_B" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffCurtainKenworth963"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Dir="(0.4; -0.003; 0.871)"
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(1.948; 2.967; -0.136)"
+				UpDir="(0.11; 1; -0.05)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodKenworth963" ParentFrame="BoneCabin_cdt" Offset="(-0.05; 0; 0)"/>
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="SteeringShaft" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodHinge2" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneTieRodPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

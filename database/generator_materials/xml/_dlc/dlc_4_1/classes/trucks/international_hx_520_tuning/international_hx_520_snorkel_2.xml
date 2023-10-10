@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<_parent File="international_hx_520_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(0.210; 2.428; -1.154)" />
+	<Snorkel Origin="(0.210; 2.428; 1.154)" />
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_snorkel_2"/>
+	<ModelAttachments _noinherit="True">
+		<Ignition>
+			<Flare _template="MarkerBeacon" Dir="(0.920; 0.000; -0.392)" Pos="(0.424; 1.959; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Dir="(0.920; 0.000; 0.392)" Pos="(0.424; 1.959; 1.074)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

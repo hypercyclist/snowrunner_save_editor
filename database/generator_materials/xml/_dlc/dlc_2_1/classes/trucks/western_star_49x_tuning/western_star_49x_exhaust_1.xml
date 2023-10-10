@@ -1,0 +1,26 @@
+<_parent File="western_star_49x_exhaust_default" />
+<TruckAddon>
+	<TruckData _noinherit="True">
+		<Shakers>
+			<Shaker Frame="BoneRightExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4" />
+			<Shaker Frame="BoneRightExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 70)" MaxFrequency="0.1" ParentFrame="BoneLeftExhaust" />
+			<Shaker Frame="BoneLeftExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4.2" />
+			<Shaker Frame="BoneLeftExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 70)" MaxFrequency="0.1" ParentFrame="BoneLeftExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/western_star_49x_tuning/western_star_49x_exhaust_1" />
+	<GameData
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.966; 0.259; 0)" IsLight="true" Origin="(0.683; 3.399; -1.207)" Speed="3.81" />
+	<Exhaust Dir="(-0.966; 0.259; 0)" IsLight="true" Origin="(0.683; 3.399; 1.207)" Speed="3.82" />
+</TruckAddon>

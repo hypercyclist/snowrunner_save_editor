@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="land_rover_defender_110_visor_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_visor_2"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef110Visor2" />
+	</GameData>
+</TruckAddon>

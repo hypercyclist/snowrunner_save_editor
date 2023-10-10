@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData DiffLockInstalled="true" />
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		Category="diff_lock"
+		CameraPreset="hoods"
+		Price="6800"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_DIFF_LOCK_SWITCHABLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_DIFF_LOCK_SWITCHABLE_NAME"
+		/>
+		<InstallSocket Type="WesternStarNF1424DiffLock" />
+	</GameData>
+</TruckAddon>

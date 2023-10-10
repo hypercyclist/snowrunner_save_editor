@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="land_rover_defender_110_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_horn_2"/>
+	<GameData
+		CameraPreset="roof"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_ROOF_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_ROOF_NAME"
+		/>
+	</GameData>
+</TruckAddon>

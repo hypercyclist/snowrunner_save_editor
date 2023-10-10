@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_air_conditioner_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="true"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_STOCK_NAME"
+		/>
+		<InstallSocket Type="boar45318AirConditioner" />
+	</GameData>
+</TruckAddon>

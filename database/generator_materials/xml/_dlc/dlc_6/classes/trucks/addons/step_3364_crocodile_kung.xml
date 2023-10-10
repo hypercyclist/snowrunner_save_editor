@@ -1,0 +1,35 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		FuelCapacity="60"
+		RepairsCapacity="500"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-2.735; 1.026; 0.989)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" />
+		<LimitedFluid Center="(-2.939; 1.026; 0.989)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" />
+		<LimitedFluid Center="(-3.279; 1.026; 0.989)" SizeX="0.128" SizeY="0.305" SizeZ="0.360" Type="Box" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/step_3364_crocodile_kung">
+		<Body Mass="700">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_STEP_3364_CROCODILE_KUNG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_KUNG_NAME"
+		/>
+		<InstallSocket Type="Step3364CrocodileKung" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

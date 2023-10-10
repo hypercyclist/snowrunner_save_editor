@@ -1,0 +1,145 @@
+<AmbientSounds>
+	<Volume Min="0.5" Max="0.5" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_ru_winter/amb_ru_winter_day_forest_loop">
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_forest_tree_rnd_set/amb_ru_winter_forest_tree_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "8"
+			MaxInterval = "17"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_day_forest_crow_rnd_set/amb_ru_winter_day_forest_crow_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "45"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_day_forest_wind_med_rnd_set/amb_ru_winter_day_forest_wind_med_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "25"
+			MaxInterval = "65"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayForest>
+	<DayWind Sound="amb/amb_ru_winter/amb_ru_winter_day_open_loop">
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_day_forest_crow_rnd_set/amb_ru_winter_day_forest_crow_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "25"
+			MaxInterval = "55"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_day_open_wind_short_rnd_set/amb_ru_winter_day_open_wind_short_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "55"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_day_open_wind_snow_rnd_set/amb_ru_winter_day_open_wind_snow_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "35"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/amb_ru_winter/amb_ru_winter_night_forest_loop">
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_forest_tiger/amb_ru_winter_forest_tiger_rnd"
+			MinRadius = "7"
+			MaxRadius = "25"
+			MinInterval = "35"
+			MaxInterval = "75"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_forest_tree_rnd_set/amb_ru_winter_forest_tree_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "7"
+			MaxInterval = "13"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_forest_owl_rnd_set/amb_ru_winter_night_forest_owl_rnd"
+			MinRadius = "10"
+			MaxRadius = "30"
+			MinInterval = "20"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_forest_wind_long_rnd_set/amb_ru_winter_night_forest_wind_long_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "35"
+			MaxInterval = "70"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_forest_wolf_rnd_set/amb_ru_winter_night_forest_wolf_rnd"
+			MinRadius = "10"
+			MaxRadius = "30"
+			MinInterval = "25"
+			MaxInterval = "50"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/amb_ru_winter/amb_ru_winter_night_open_loop">
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_open_wind_short_rnd_set/amb_ru_winter_night_open_wind_short_rnd"
+			MinRadius = "10"
+			MaxRadius = "35"
+			MinInterval = "15"
+			MaxInterval = "55"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_open_wind_snow_rnd_set/amb_ru_winter_night_open_wind_snow_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "25"
+			MaxInterval = "65"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_open_wolf_rnd_set/amb_ru_winter_night_open_wolf_rnd"
+			MinRadius = "10"
+			MaxRadius = "30"
+			MinInterval = "35"
+			MaxInterval = "65"
+			MinVolume = "0.7"
+			MaxVolume = "1.0"
+		/>
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="130"
+		Dist2D="0"
+		Dist3D="40"
+	/>
+</AmbientSounds>

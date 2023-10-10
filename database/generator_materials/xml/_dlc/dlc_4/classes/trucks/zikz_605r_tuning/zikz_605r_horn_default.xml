@@ -1,0 +1,16 @@
+<_parent File="zikz_605r_horn_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_horn_default" />
+	<GameData
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_STOCK_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="1">
+			<Constraint Type="Hinge">
+				<Motor Damping="1" Spring="1" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_sideboard">
+		<Body ImpactType="Truck" Mass="950" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneMudguardFrontL_cdt" Collisions="None">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-20" MaxLimit="4" Collisions="None"/>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardFrontR_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-20" MaxLimit="4" Collisions="None"/>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardRearL_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-24" MaxLimit="12" Collisions="None"/>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardRearR_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-25" MaxLimit="10" Collisions="None"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_SIDEBOARD_3_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_SIDEBOARD_3_NAME"
+		/>
+		<InstallSocket Type="MastodonSideboard" />
+		<AddonSlots InitialOffset="(2.65; 1.83; 0)" OffsetStep="(-2.486; 0; 0)" Quantity="3" />
+	</GameData>
+</TruckAddon>

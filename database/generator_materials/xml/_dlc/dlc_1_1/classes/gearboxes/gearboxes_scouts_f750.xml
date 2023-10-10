@@ -1,0 +1,40 @@
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="1.1"
+		CriticalDamageThreshold="0.2"
+		DamageCapacity="75"
+		DamagedConsumptionModifier="1.4"
+		FuelConsumption="1.8"
+		IdleFuelModifier="0.2"
+		Name="g_scout_f750"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="15.0"
+	>
+		<ReverseGear AngVel="2.0" FuelModifier="0.9" />
+		<HighGear AngVel="10.0" FuelModifier="1.5" />
+		<Gear AngVel="1.5" FuelModifier="1.9" />
+		<Gear AngVel="3.0" FuelModifier="1.7" />
+		<Gear AngVel="6.0" FuelModifier="1.5" />
+		<Gear AngVel="8.0" FuelModifier="1.3" />
+		<Gear AngVel="10.0" FuelModifier="1.3" />
+		<Gear AngVel="14.0" FuelModifier="1.0" />
+		<GameData
+			Price="1500"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="true" 
+				IsLowerMinusGearExists="true"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_F750_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_F750_DEFAULT_NAME"
+			/>
+		</GameData>
+	</Gearbox>
+</GearboxVariants>

@@ -1,0 +1,17 @@
+<_parent File="jeep_cj7_renegade_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_tuning/jeep_cj7_renegade_horn_2" />
+	<GameData
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="JeepCJ7RenegadeHorn2" />
+	</GameData>
+</TruckAddon>

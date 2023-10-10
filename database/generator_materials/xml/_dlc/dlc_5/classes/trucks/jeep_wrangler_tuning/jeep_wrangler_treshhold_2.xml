@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="jeep_wrangler_treshhold_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_treshhold_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SILLS_LIGHTWEIGHT_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SILLS_LIGHTWEIGHT_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerThreshold" />
+	</GameData>
+</TruckAddon>

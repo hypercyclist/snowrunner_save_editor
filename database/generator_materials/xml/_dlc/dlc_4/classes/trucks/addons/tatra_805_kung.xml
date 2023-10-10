@@ -1,0 +1,55 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="500"
+		WheelRepairsCapacity="2"
+	/>
+	<PhysicsModel Mesh="trucks/addons/tatra_805_kung">
+		<Body CenterOfMassOffset="(0; 0; 0)" Mass="1000">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="10" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="10" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.658; 0.705; -0.797)" />
+			<Light _template="StopSignal" Pos="(-2.658; 0.705; 0.797)" />
+			<Flare _template="StopSignal" Pos="(-2.496; 0.812; -0.797)" />
+			<Flare _template="StopSignal" Pos="(-2.496; 0.812; 0.797)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3.002; 0.507; 0.754)" />
+			
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-2.402; 0.507; 0.754)" />
+			
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.402; 0.507; 0.754)" />
+			
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(255; 0; 0)x 0.4" Pos="(-2.8; 0.589; 0)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.496; 0.812; -0.797)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.496; 0.812; 0.797)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_MAINTAINER_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_MAINTAINER_SMALL_NAME"
+		/>
+		<InstallSocket Type="Tatra805Kung" />
+	</GameData>
+</TruckAddon>

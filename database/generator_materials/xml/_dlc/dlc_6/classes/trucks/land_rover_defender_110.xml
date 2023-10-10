@@ -1,0 +1,358 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="35"
+			SteeringCastor="8"
+			SteeringJointOffset="0.14"
+			Torque="full"
+		/>
+	</Wheel>
+	<Body>
+		<SunShield Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="6"
+			>
+				<Motor Damping="0.3" Spring="6" Type="Spring" />
+			</Constraint>
+		</SunShield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.06"
+		DiffLockType="Uninstalled"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="80"
+		Responsiveness="0.6"
+		SteerSpeed="0.032"
+		TruckImage="landroverdefender110mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_land_rover_defender_110"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.625; 0.414; 0.9)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.625; 0.414; 0.9)" />
+			<Wheel _template="RearWheel" Pos="(-1.4; 0.414; 0.876)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.4; 0.414; 0.876)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="land_rover_defender_110_suspension_default"
+			Type="s_land_rover_defender_110"
+			MaxWheelRadiusWithoutSuspension="0.28"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRackR" FrameSteerLeft="BoneAxle1Rack_L" FrameSteerRight="BoneAxle1Rack_R" RackHalfSizeZ="0.667" />
+		<SteeringRack Frame="BoneRackL" FrameSteerLeft="BoneAxle1Rack_L" FrameSteerRight="BoneAxle1Rack_R" RackHalfSizeZ="0.667" />
+		<Steam Origin="(1.82; 0.606; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(1.541; 0.928; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/land_rover_defender_110/land_rover_defender_110_brakes_squeal" />
+			<Gear			Sound="trucks/land_rover_defender_110/land_rover_defender_110_gear_shift" />
+			<Handbrake		Sound="trucks/land_rover_defender_110/land_rover_defender_110_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/land_rover_defender_110/land_rover_defender_110_handbrake_off" />
+			<Honk			Sound="trucks/land_rover_defender_110/land_rover_defender_110_honk" />
+			<EngineRev		Sound="trucks/land_rover_defender_110/land_rover_defender_110_rev" />
+			<EngineAccel	Sound="trucks/land_rover_defender_110/land_rover_defender_110_acc" />
+			<EngineStart	Sound="trucks/land_rover_defender_110/land_rover_defender_110_start" />
+			<EngineStop		Sound="trucks/land_rover_defender_110/land_rover_defender_110_stop" />
+			<EngineIdle		Sound="trucks/land_rover_defender_110/land_rover_defender_110_idle" />
+			<EngineIdle_2d	Sound="trucks/land_rover_defender_110/land_rover_defender_110_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/land_rover_defender_110/land_rover_defender_110_low" />
+			<EngineLow_2d	Sound="trucks/land_rover_defender_110/land_rover_defender_110_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/land_rover_defender_110/land_rover_defender_110_high" />
+			<EngineHigh_2d	Sound="trucks/land_rover_defender_110/land_rover_defender_110_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/land_rover_defender_110/land_rover_defender_110_heavy" />
+			<EngineHeavy_2d	Sound="trucks/land_rover_defender_110/land_rover_defender_110_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<OcclusionMap
+			HalfSizeZ="1.8"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-3.0"
+			MaxX="3.2"
+		/>
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust Dir="(-0.698; -0.716; 0)" IsLight="true" Origin="(-2.067; 0.443; 0.497)" Speed="2.0" />
+		<Exhaust Dir="(-0.698; -0.716; 0)" IsLight="true" Origin="(-2.067; 0.443; -0.497)" Speed="2.0" />
+		<EngineSocket Default="us_scout_modern_engine_0" Type="e_us_scout_modern" />
+		<Driver AnimationSet="Scout" Pos="(0.084; 0.852; 0.422)" SteeringWheelPos="(0.397; 1.239; 0.418)" />
+		<Dashboard>
+			<Gauge Dir="(-0.964; 0.264; 0.014)" InputRange="(0;240)" InputType="speed" Mesh="trucks/arrows/land_rover_defender_110_arrow_1" Org="(0.706; 1.265; 0.505)" OutputAngles="(-134; 135)" />
+			<Gauge Damping="0.99" Dir="(-0.964; 0.264; 0.014)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/land_rover_defender_110_arrow_1" Org="(0.706; 1.265; 0.326)" OutputAngles="(-131; 133)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.117; 0.351; -0.752)" Max="(2.275; 1.033; 0.752)" />
+			<DamageArea Type="FuelTank" Min="(-2.091; 0.404; -0.838)" Max="(-1.309; 1.177; -0.117)" />
+		</Damage>
+		<CompatibleWheels Scale="0.39" Type="wheels_land_rover_defender_110" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout1" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout2" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout2" />
+		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/land_rover_defender_110_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/land_rover_defender_110_glass__sh_d.tga"
+				ViewPos="(0.047; 1.556; 0.421)"
+			>
+				<Mirror ClipDir="(-0.925; 0.084; -0.371)" ClipOffset="0.1" FOVScale="1.2" MeshFrame="mirror_left" ReflectionDir="(-0.925; 0.084; -0.371)" Size="(0.18; 0.21)" Pos="(0.514; 1.409; 0.977)" />
+				<Mirror ClipDir="(-0.822; 0.039; 0.568)" ClipOffset="0.1" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.822; 0.039; 0.568)" Size="(0.18; 0.21)" Pos="(0.514; 1.409; -0.977)" />
+				<Mirror ClipDir="(-0.949; -0.152; 0.278)" ClipOffset="0.1" FOVScale="1.5" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.949; -0.152; 0.278)" Size="(0.27; 0.07)" Pos="(0.458; 1.695; 0.018)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1R" IsIndependent="true" />
+			<Axle Frame="BoneAxle1L" IsIndependent="true" />
+			<Axle Frame="BoneAxle2R" IsIndependent="true" />
+			<Axle Frame="BoneAxle2L" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(1.491; 0.839; 0)" />
+	<PhysicsModel Mesh="trucks/land_rover_defender_110">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.8; 0.1; 0)"
+			ImpactType="Truck"
+			Mass="1350"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.8; 0; 0)"
+				ImpactType="Truck"
+				Mass="1000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldRight_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.433; 0.693; 0)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-2.147; 1.181; 0.634)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-2.147; 1.181; -0.634)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-2.147; 0.99; 0.64)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-2.147; 0.99; -0.64)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(255; 230; 215) x 0.8" Pos="(-2.415; 0.56; 0)" />
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-2.154; 1.089; 0.639)" />
+			<Flare _template="ReverseSignal" Dir="(-1; 0; 0)" Size="0.5" Pos="(-2.154; 1.089; -0.639)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-2.6; 0.5; 0)" />
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.0" Pos="(2.227; 1.018; -0.622)" />
+			<Light _template="IgnitionSignalWhite" Color="g(240; 200; 165) x 1.0" Pos="(2.227; 1.018; 0.622)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 240; 230) x 0.5" Size="0.5" Pos="(2.227; 1.018; -0.622)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 240; 230) x 0.5" Size="0.5" Pos="(2.227; 1.018; 0.622)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.1" Size="0.4" Pos="(-2.147; 1.181; 0.634)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.1" Size="0.4" Pos="(-2.147; 1.181; -0.634)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.1" Size="0.4" Pos="(-2.147; 0.99; 0.64)" />
+			<Flare _template="IgnitionSignalRed" Color="g(255; 0; 0) x 0.1" Size="0.4" Pos="(-2.147; 0.99; -0.64)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.227; 1.018; -0.622)" />
+			<Model _template="HeadLightRay" Org="(2.227; 1.018; 0.622)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.4" Pos="(2.227; 1.018; -0.622)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.4" Pos="(2.227; 1.018; 0.622)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(2.227; 1.018; -0.622)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.37" Size="0.1" Pos="(2.227; 1.018; 0.622)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.227; 1.018; -0.622)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.227; 1.018; 0.622)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/land_rover_defender_110_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.49; 0.853; 0)" />
+	<GameData
+		Country="US"
+		Price="2500"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.455; 0.62; 0)" />
+		<WinchSocket Pos="(0.062; 0.547; -0.925)" />
+		<WinchSocket Pos="(0.062; 0.547; 0.925)" />
+		<WinchSocket Pos="(-2.316; 0.697; 0.438)" />
+		<WinchSocket Pos="(-2.316; 0.697; -0.438)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_LAND_ROVER_DEFENDER_110_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgLandRoverDefender110"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="LandRoverLogo80"
+			UiName="UI_VEHICLE_LAND_ROVER_DEFENDER_110_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" InterestPosition="(3.9262;0.1992;-0.4071)" Name="roof_sticker" Position="(8.5081;6.0409;-1.2961)" />
+			<CameraPos FOV="32.0" InterestPosition="(6.0694;1.3383;0.1654)" Interior="true" Name="sticker_1" Position="(4.8594;1.6492;0.0381)" />
+			<CameraPos FOV="32.0" InterestPosition="(2.6077;1.6924;-0.3039)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="addon_1" Position="(-1.8917;3.0092;-4.5453)" />
+			<CameraPos FOV="32.0" InterestPosition="(3.9168;2.3406;-1.1494)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="addon_2" Position="(9.6278;4.3308;1.4367)" />
+			<CameraPos FOV="32.0" InterestPosition="(8.128;0.9619;1.4099)" Interior="true" Name="mirror_mount" Position="(4.5785;1.6818;-0.1197)" />
+			<CameraPos FOV="32.0" InterestPosition="(7.1257;1.1426;-0.1672)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_r" Position="(10.9365;2.033;2.7476)" />
+			<CameraPos FOV="32.0" InterestPosition="(3.1035;0.5016;1.1968)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="hood_ornament" Position="(9.0397;1.6562;-1.0536)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.1315;1.2;1.6148)" Interior="true" Name="sticker" Position="(4.6348;1.6192;-0.5205)" />
+			<CameraPos FOV="32.0" InterestPosition="(6.1056;1.3034;-0.684)" Name="glass_sticker" Position="(10.3295;2.6477;1.3591)" />
+			<CameraPos FOV="32.0" InterestPosition="(6.6624;0.9107;0.6143)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="door_r_sticker" Position="(3.8799;1.5048;3.6583)" />
+			<CameraPos FOV="32.0" InterestPosition="(7.2527;1.8287;-0.0799)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="roof" Position="(11.5246;3.7589;2.7247)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.8229;0.8703;-0.4071)" Name="capote_sticker" Position="(10.9271;3.805;-1.2961)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.1701;0.7106;-0.0374)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="hoods" Position="(11.9129;1.4341;-2.1432)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.8923;0.953;-1.0337)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_l" Position="(10.1381;1.9411;-2.8692)" />
+			<CameraPos FOV="32.0" InterestPosition="(8.3157;0.8474;0.8802)" Interior="true" Name="bubble_head" Position="(4.6679;1.5971;-0.2506)" />
+			<CameraPos FOV="32.0" InterestPosition="(4.1263;0.1126;0.06)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="wheels" Position="(8.8834;0.8234;-2.7337)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.871;1.018;-0.576)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="default" Position="(12.482;1.848;-3.093)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.9294;0.7922;-0.4685)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="rear" Position="(-0.6492;1.6047;1.9784)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.1287;0.9909;-0.2061)" Name="door_l_sticker" Position="(3.5705;1.413;-3.4531)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(2.455; 0.62; 0)" />
+		<CraneSocket Pos="(0.062; 0.547; -0.925)" />
+		<CraneSocket Pos="(0.062; 0.547; 0.925)" />
+		<CraneSocket Pos="(-2.316; 0.697; 0.438)" />
+		<CraneSocket Pos="(-2.316; 0.697; -0.438)" />
+		<CraneSocket Pos="(-0.254; 1.935; 0)" />
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Bumper" />
+			<Socket Names="LandRoverDef110BumperRope" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="land_rover_defender_110_license_default">
+			<Socket Names="LandRoverDef110License" ParentFrame="BoneCabin_cdt">
+				<AddonsShift Offset="(-0.6; 0.2; 0)" Types="LandRoverDef110Bumper" />
+				<AddonsShift Offset="(-0.6; 0.2; 0)" Types="LandRoverDef110BumperRope" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Horn" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Visor1" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="LandRoverDef110Visor2" NamesBlock="LandRoverDef110BumperRope" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110VisorSpotLight" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Flasher" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Roofrack" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LandRoverDef110Snorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="land_rover_defender_110_wheel_addon">
+			<Socket Names="LandRoverDef110WheelAddon" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ScautTrailer" Offset="(-2.341; 0.542; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="landRoverDefender110Sticker_1x4_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="landRoverDefender110StickerDoorL" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="landRoverDefender110StickerDoorR" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="landRoverDefender110StickerCapote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="landRoverDefender110StickerRoof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="landRoverDefender110StickerGlassBot" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.478; 1.67; 0.012)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(0.78; 1.346; 0.187)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodLandRoverDef110" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="land_rover_defender_110_diff_lock_default">
+			<Socket Names="LandRover_Defender_110_diff_lock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneAxle2L_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2L"
+				ModelFrame="BoneAxle2L_IK_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle2R_IK_A" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2R"
+				ModelFrame="BoneAxle2R_IK_B"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

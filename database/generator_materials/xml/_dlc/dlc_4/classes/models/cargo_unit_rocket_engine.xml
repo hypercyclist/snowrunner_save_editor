@@ -1,0 +1,15 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="2500.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+<!--	<Landmark Mesh="" MinScale="1.8" MaxScale="3.8" />-->
+	<GameData LoadType="CargoRocketEngine" PackSlotsNumber="1">
+		<CraneSocket Pos="(0.000; 2.356; 0.000)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_rocket_engine_lmk"/>
+</ModelBrand>

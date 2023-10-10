@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData AllWheelDriveInstalled="false">
+		<Shafts _template="DefaultTransferbox" />
+	</TruckData>
+	<PhysicsModel _template="Invisible" />
+	<GameData
+		CameraPreset="hoods"
+		Category="awd"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_UPGRADE_TRANSFERBOX_NOAWD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_UPGRADE_TRANSFERBOX_NOAWD_NAME"
+		/>
+		<InstallSocket Type="WSnf1430TransferBox" />
+	</GameData>
+</TruckAddon>

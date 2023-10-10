@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<_parent File="jeep_wrangler_bumper_rear_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_90_tuning/land_rover_defender_90_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="6"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="6"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef90RearBumper2" />
+	</GameData>
+</TruckAddon>

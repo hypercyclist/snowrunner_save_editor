@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Medium"
+	Mesh="wheels/invisible_rim"
+	Radius="0.1721"
+	Width = "1.5141"
+>
+	<WheelTracks TextureAlpha="tracks/arable_alpha__s_d.tga" TextureHeight="tracks/arable_height__s_d.tga"  />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />	
+</TruckWheel>

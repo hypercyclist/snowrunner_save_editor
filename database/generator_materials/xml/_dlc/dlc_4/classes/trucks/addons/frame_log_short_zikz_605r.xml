@@ -1,0 +1,9 @@
+<_parent File="frame_addon_log_short" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/frame_log_short_zikz_605r" />
+	<GameData
+		OriginalAddon="frame_addon_log_short"
+	>
+		<InstallSocket Offset="(-2.351; 0; 0)" Type="FrameAddonLogShortZikz" />
+	</GameData>
+</TruckAddon>

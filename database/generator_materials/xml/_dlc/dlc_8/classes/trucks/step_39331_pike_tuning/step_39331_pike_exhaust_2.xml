@@ -1,0 +1,28 @@
+<_parent File="step_39331_pike_exhaust_1" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(1; 1; 1)" MaxFrequency="3.9" ParentFrame="BoneCabinDamper_cdt" />
+			<Shaker Frame="BoneExhaustCover" LimitDirectionX="Negative" MinAngle="(30; 0; 0)" MaxAngle="(90; 0; 0)" MaxFrequency="0.15" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_exhaust_2" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust
+		Dir="(-0.716; 0.126; -0.687)"
+		IsLight="false"
+		Origin="(0.503; 3.008; 0.675)"
+		Speed="3.82"
+	/>
+</TruckAddon>

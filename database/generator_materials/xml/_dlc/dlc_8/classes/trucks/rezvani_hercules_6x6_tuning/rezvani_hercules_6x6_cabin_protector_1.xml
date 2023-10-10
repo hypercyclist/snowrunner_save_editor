@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<Cable Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-3"
+				MaxLimit="3"
+			>
+				<Motor Damping="1.0" Spring="10" Type="Spring" />
+			</Constraint>
+		</Cable>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_tuning/rezvani_hercules_6x6_cabin_protector_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body _template="Cable" ModelFrame="BoneCordR_cdt" />
+			<Body _template="Cable" ModelFrame="BoneCordL_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="hoods"
+		Category="frame_addons"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SAFETY_CAGE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SAFETY_CAGE_NAME"
+		/>
+		<InstallSocket Type="Rezvani6x6Protector" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,39 @@
+<_templates Include="trucks">
+	<Flare>
+		<Beacon
+			AspectRatio="1.4"
+			Color="g(169; 99; 0) x 0.8"
+			ColorMultAtDay="0.3"
+			DirAngle="180"
+			Size="0.2"
+			SizeMultAtDay="0.5"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_gabarite_default" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Pos="(2.086; 2.24; -0.572)" />
+			<Flare _template="Beacon" Pos="(2.107; 2.245; -0.291)" />
+			<Flare _template="Beacon" Pos="(2.112; 2.247; 0)" />
+			<Flare _template="Beacon" Pos="(2.107; 2.245; 0.291)" />
+			<Flare _template="Beacon" Pos="(2.086; 2.24; 0.572)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_PARKLIGHTS_FACTORY_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_PARKLIGHTS_FACTORY_NAME"
+		/>
+		<InstallSocket Type="FordF750Gabarite" />
+	</GameData>
+</TruckAddon>

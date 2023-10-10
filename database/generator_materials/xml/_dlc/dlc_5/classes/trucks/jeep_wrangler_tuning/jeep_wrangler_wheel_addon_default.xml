@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/jeep_wrangler_tuning/jeep_wrangler_wheel_addon_default" />
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-1.73; 1.5; 0)" />
+			<Flare _template="StopSignal" Pos="(-1.73; 1.5; -0.065)" />
+			<Flare _template="StopSignal" Pos="(-1.73; 1.5; 0.065)" />
+		</StopSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-1.73; 1.5; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="wheel_addon"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="JeepWranglerSpareWheel" />
+	</GameData>
+</TruckAddon>

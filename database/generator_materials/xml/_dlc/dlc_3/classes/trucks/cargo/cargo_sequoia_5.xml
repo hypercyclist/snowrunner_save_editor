@@ -1,0 +1,34 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_sequoia_5">
+		<NetSync Legacy="false" />
+		<Body Mass="200" ModelFrame="Bone1_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="200" ModelFrame="Bone2_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="200" ModelFrame="Bone3_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					<Body Mass="200" ModelFrame="Bone4_cdt">
+						<Constraint ExplicitParentFrame="3" Type="Fixed" />
+						<Body Mass="200" ModelFrame="Bone5_cdt">
+							<Constraint ExplicitParentFrame="4" Type="Fixed" />
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_sequoia"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_manual_sequoia"
+		/>
+		<InstallSlot
+			CargoLength="5"
+			CargoType="CargoSequoia"
+			CargoValue="1"
+			Offset="(5.118; 0; 0)"
+		/>
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_sequoia_5_lmk" MinScale="1.8" MaxScale="3.8"/>
+</TruckAddon>

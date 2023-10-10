@@ -1,0 +1,40 @@
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="1.0"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="220"
+		DamagedConsumptionModifier="1.6"
+		FuelConsumption="5.0"
+		IdleFuelModifier="0.3"
+		Name="g_azov_sprinter_sport"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="15.0"
+	>
+		<ReverseGear AngVel="0.5" FuelModifier="1.9" />
+		<HighGear AngVel="7.0" FuelModifier="2.5" />
+		<Gear AngVel="2.1" FuelModifier="3.0" />
+		<Gear AngVel="3.5" FuelModifier="2.8" />
+		<Gear AngVel="5.1" FuelModifier="2.6" />
+		<Gear AngVel="7.3" FuelModifier="2.4" />
+		<Gear AngVel="9.2" FuelModifier="2.2" />
+		<Gear AngVel="11.6" FuelModifier="2.1" />
+		<GameData
+			Price="5700"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<GearboxParams 
+				IsHighGearExists="true" 
+				IsLowerGearExists="true" 
+				IsLowerPlusGearExists="false" 
+				IsLowerMinusGearExists="false"
+			/>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SPORT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SPORT_NAME"
+			/>
+		</GameData>
+	</Gearbox>
+</GearboxVariants>

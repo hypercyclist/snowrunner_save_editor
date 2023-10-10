@@ -1,0 +1,139 @@
+<_templates Include="trucks">
+	<Body>
+		<Anchor
+			ForceBodyParams="true"
+			Mass="50"
+			NoFoliageCollisions="true"
+		>
+			<Constraint
+				AxisLocal="(-1; 0; 0)"
+				Name="Anchor"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.8"
+			>
+				<Motor Force="100000" Type="Position" />
+			</Constraint>
+		</Anchor>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+
+	<PoweredConstraints>
+		<Group
+			ExternalUi="true"
+			FoldingDelay="0.2"
+			Id="anchors_position"
+			LocaleUid="UI_ANCHORS"
+		>
+			<Constraint
+				InitialFix="true"
+				Name="Anchor"
+				TerminalFix="true"
+				Position="0.508"
+			/>
+		</Group>
+	</PoweredConstraints>
+
+	<PhysicsModel Mesh="trucks/addons/tatra_frame_addon_tow">
+		<NetSync Legacy="true" />
+		<Body Mass="1500">
+			<Constraint Type="Rigid" />
+			<Body Mass="200" ModelFrame="BonePull_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="ramp_lower_prismatic"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.5"
+				>
+					<Motor Force="30000000" Tau="0.2" Type="Position" />
+				</Constraint>
+				<Body Mass="200" ModelFrame="BoneRot_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="ramp_lower"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="90"
+					>
+						<Motor Force="30000000" Tau="0.1" Type="Position" />
+					</Constraint>	
+					<Body Mass="100" ModelFrame="BoneForkHinge_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Type="Hinge"
+							MinLimit="-40"
+							MaxLimit="40"
+						>
+							<Motor Damping="5000" Spring="10000" Type="Spring" />
+						</Constraint>
+					</Body>					
+				</Body>
+			</Body>
+		<Body _template="Anchor" ModelFrame="BoneAnchorLeft_cdt" />			
+		<Body _template="Anchor" ModelFrame="BoneAnchorRight_cdt" />			
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4200"
+		SoundForEachConstraint="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		WheelToPack="2"
+		ShowPackingStoppers="false"
+	>
+        <AddonType Name="TowingPlatform" />
+		<WinchSocket Pos="(-5.856; 1.904; 0)" ParentFrame="BoneRoot_cdt" />
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_TOW_PLATFORM_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_TOW_PLATFORM_NAME"
+		/>
+		<SoundPoweredGroupStart Name="" Range="20" Volume="1" />
+		<SoundPoweredGroupLoop Name="addons/addon_tatra_crane/addon_tatra_crane_legs_loop" Range="20" Volume="1" />
+		<SoundPoweredGroupStop Name="addons/addon_tatra_crane/addon_tatra_crane_legs_stop" Range="20" Volume="1" />
+		
+		<InstallSocket Offset="(0; 0; 0)" Type="TatraFrameAddonTow" />
+		<ConstraintSounds>
+			<SoundIKStart ConstraintName="ramp_lower" Name="addons/addon_tatra_tow/addon_tatra_tow_lower_start" Range="20" Volume="1" />
+			<SoundIKLoop ConstraintName="ramp_lower" Name="addons/addon_tatra_tow/addon_tatra_tow_lower_loop" Range="20" Volume="1" />
+			<SoundIKStop ConstraintName="ramp_lower" Name="addons/addon_tatra_tow/addon_tatra_tow_lower_stop" Range="20" Volume="1" />
+
+			<SoundIKStart ConstraintName="ramp_lower_prismatic" Name="addons/addon_tatra_tow/addon_tatra_tow_extend_start" Range="20" Volume="1" />
+			<SoundIKLoop ConstraintName="ramp_lower_prismatic" Name="addons/addon_tatra_tow/addon_tatra_tow_extend_loop" Range="20" Volume="1" />
+			<SoundIKStop ConstraintName="ramp_lower_prismatic" Name="addons/addon_tatra_tow/addon_tatra_tow_extend_stop" Range="20" Volume="1" />
+		</ConstraintSounds>
+	</GameData>
+	<ControlledConstraints>		
+		<Constraint Action="9" BelongToCategorie="tow_control" Id="ramp_lower" LocaleUid="UI_RAMP_LOWER" Name="ramp_lower" SpeedMult="1.5" />
+		<!-- <Constraint Action="10" BelongToCategorie="tow_control" Id="ramp_extend" LocaleUid="UI_RAMP_EXTEND" Name="ramp_extend" SpeedMult="3" /> -->
+		<Constraint Action="11" BelongToCategorie="tow_control" Id="ramp_lower_prismatic" LocaleUid="UI_RAMP_LOWER_PRISMATIC" Name="ramp_lower_prismatic" SpeedMult="8" />
+		<!-- <Constraint Action="11" BelongToCategorie="rake_adjustment" Id="rake_adjust_1" LocaleUid="UI_RAKE_ADJUST_OUTER" Name="rake_adjust_1" SpeedMult="8" /> -->
+		<!-- <Constraint Action="11" BelongToCategorie="rake_adjustment" Id="rake_adjust_2" LocaleUid="UI_RAKE_ADJUST_OUTER" Name="rake_adjust_2" SpeedMult="8" IgnoreUiButtons="true"/> -->
+		<!-- <Constraint Action="10" BelongToCategorie="rake_adjustment" Id="rake_adjust_3" LocaleUid="UI_RAKE_ADJUST_INNER" Name="rake_adjust_3" SpeedMult="8" /> -->
+		<!-- <Constraint Action="10" BelongToCategorie="rake_adjustment" Id="rake_adjust_4" LocaleUid="UI_RAKE_ADJUST_INNER" Name="rake_adjust_4" SpeedMult="8" IgnoreUiButtons="true"/> -->
+		
+		
+	</ControlledConstraints>
+	<ActionCategories>
+		<ActionCategory
+			Action="1"
+			AvailableForFastMode="true"
+			Id="tow_control"
+			LocaleUid="UI_TOW_CONTROL"
+			RemoveChildActionsFromCustomPanelShowCounter="true"
+		/>
+		<!-- <ActionCategory -->
+			<!-- Action="2" -->
+			<!-- AvailableForFastMode="true" -->
+			<!-- Id="rake_adjustment" -->
+			<!-- LocaleUid="UI_RAKE_ADJUSTMENT" -->
+			<!-- RemoveChildActionsFromCustomPanelShowCounter="true" -->
+		<!-- /> -->
+	</ActionCategories>
+</TruckAddon>

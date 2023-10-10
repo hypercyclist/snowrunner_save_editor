@@ -1,0 +1,34 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium" RearMassScale="1">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="100" 
+	Radius="1" 
+	Width="0.618"
+>
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_zikz_566a" Name="zikz_566_tire">
+			<WheelFriction _template="Offroad" BodyFriction="3.0" BodyFrictionAsphalt="0.8" SubstanceFriction="1.3" />
+			<GameData
+				Price="7500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_ZiKZ_566A_DESC" UiName="UI_TIRE_ZiKZ_566A2_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_zikz_566a" Name="zikz_566_rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_ZiKZ_566A_DESC" UiName="UI_RIM_ZiKZ_566A_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

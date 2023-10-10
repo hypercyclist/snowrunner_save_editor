@@ -1,0 +1,65 @@
+<_templates Include="trucks">
+	<Constraint>
+		<TrunkFixed LinearLimitsX="(0;0.01)" LinearLimitsZ="(0;0.01)" Type="Fixed">
+			<Motor Damping="400" Spring="700" Type="Spring" />
+		</TrunkFixed>
+	</Constraint>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="140" RepairsCapacity="150">
+		<LimitedFluid Center="(2.642; 2.932; 0.02)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(2.225; 2.932; 0.02)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(1.817; 2.932; 0.02)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(1.817; 2.932; -0.636)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(2.225; 2.932; -0.636)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(2.638; 2.932; -0.636)" SizeX="0.32" SizeY="0.15" SizeZ="0.45" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+		<Mesh Frame="repair1" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_tunning/derry_special_15c177_roofrack_01a" >
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint _template="TrunkFixed">
+					<TrunkFixed/>
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneFuel_cdt"
+			>
+				<Constraint _template="TrunkFixed">
+					<TrunkFixed/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_sticker"
+		Category="top"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="DerrySpecial15c177Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(2.132; 1.944; -0.885)" />
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_tuning/tuz_108_warthog_snorkel_1"/>
+	<GameData
+		CameraPreset="addon_2"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="tuz108warthogSnorkel" />
+	</GameData>
+</TruckAddon>

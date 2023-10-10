@@ -1,0 +1,25 @@
+<_parent File="cat_ct681_snorkel_1" />
+<TruckAddon>
+	<Snorkel Origin="(0.403; 2.515; -1.174)" />
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_snorkel_2"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Pos="(0.490; 1.935; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.490; 1.870; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.490; 1.804; -1.166)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(0.490; 1.739; -1.166)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+	</GameData>
+</TruckAddon>

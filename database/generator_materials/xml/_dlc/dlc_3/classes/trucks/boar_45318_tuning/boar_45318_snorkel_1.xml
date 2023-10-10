@@ -1,0 +1,22 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(2.669; 2.691; -1.276)" />
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_snorkel_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

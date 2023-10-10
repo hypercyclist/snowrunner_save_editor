@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="khan_317_sentinel_snorkel_2" />
+<TruckAddon>
+	<Snorkel Origin="(2.389; 1.913; -0.761)" />
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_snorkel_1"/>
+	<GameData
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

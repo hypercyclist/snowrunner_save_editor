@@ -1,0 +1,87 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData FuelCapacity="100" RepairsCapacity="150">
+		<LimitedFluid Center="(-1.301; 2.127; -0.359)" SizeX="0.402" SizeY="0.14" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.824; 2.127; -0.374)" SizeX="0.402" SizeY="0.14" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.256; 2.127; -0.338)" SizeX="0.402" SizeY="0.14" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-0.259; 2.127; 0.019)" SizeX="0.402" SizeY="0.14" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-0.258; 2.127; 0.372)" SizeX="0.402" SizeY="0.14" SizeZ="0.330" Type="Box" ParentFrame="BoneFuel1_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_roofrack">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.002"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.015"
+					MaxLimit="0.015"
+				>
+					<Motor Damping="1800" Spring="3500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneTrack_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="2000" Spring="4000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneShovel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping=".3" Spring=".3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="LandRoverDef110Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

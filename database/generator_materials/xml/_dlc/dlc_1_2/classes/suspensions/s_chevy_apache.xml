@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="140"
+		Name="chevy_apache_suspension_default"
+	>
+		<Suspension BrokenSuspensionMax="0.3" Height="0.15" Strength="0.02" SuspensionMin="-0.4" WheelType="front" SuspensionMax=".0" />
+		<Suspension BrokenSuspensionMax="0.3" Height="0" Strength="0.02" SuspensionMin="-0.20" WheelType="rear" />
+		<GameData
+			Price="3200"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

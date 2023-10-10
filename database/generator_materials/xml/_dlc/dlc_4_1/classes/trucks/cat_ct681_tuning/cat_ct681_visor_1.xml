@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct681_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(0.173; 2.853; -0.874)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(0.172; 2.852; 0.879)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(0.27; 2.866; -0.22)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(0.27; 2.866; 0.225)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 174; 0) x 0.5" Size="0.4" Pos="(0.275; 2.866; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

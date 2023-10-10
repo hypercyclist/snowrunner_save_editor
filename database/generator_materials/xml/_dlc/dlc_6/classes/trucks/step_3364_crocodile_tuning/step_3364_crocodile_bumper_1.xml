@@ -1,0 +1,51 @@
+<_parent File="step_3364_crocodile_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_tuning/step_3364_crocodile_bumper_1">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="15"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneHook1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="5"
+				/>
+			</Body>
+			<Body
+				AngularDamping="7"
+				Collisions="None"
+				Mass="3"
+				ModelFrame="BoneHook2_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-8"
+					MaxLimit="8"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_LATTICE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_LATTICE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

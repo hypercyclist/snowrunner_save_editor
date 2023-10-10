@@ -1,0 +1,46 @@
+<_templates Include="trucks">
+	<Body>
+		<Antenna Collisions="None" Mass="2">
+			<Constraint
+				Cone="7"
+				PlaneAxisLocal="(0; 0; 1)"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Ragdoll"
+				PlaneMin="-7"
+				PlaneMax="7"
+			>
+				<PlaneMotor Damping=".1" Spring="60" Type="Spring" />
+				<ConeMotor Damping=".1" Spring="60" Type="Spring" />
+			</Constraint>
+		</Antenna>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		RepairsCapacity="800"
+		WheelRepairsCapacity="6"
+	/>
+	<PhysicsModel Mesh="trucks/addons/frame_kung_zikz_605r">
+		<Body Mass="3000">
+			<Constraint Type="Rigid" />
+			<Body _template="Antenna" ModelFrame="BoneAntenna_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4500"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+		OriginalAddon="frame_addon_kung"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_KUNG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_KUNG_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameAddonKungZikz" />
+	</GameData>
+</TruckAddon>

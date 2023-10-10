@@ -1,0 +1,35 @@
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="600">
+		<LimitedFluid
+			Center="(0.165; 0.826; 0)"
+			LengthX="2.064"
+			RadiusY="0.466"
+			RadiusZ="0.675"
+			Type="Cylinder"
+		/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_tank_small_short">
+		<Body CenterOfMassOffset="(0; 0; 0)" Mass="400">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="4"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_TANK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_TANK_SMALL_NAME"
+		/>
+		<InstallSocket Type="FrameAddonTankSmallShort" />
+	</GameData>
+	<FuelMass>
+		<Body Mass="3000" />
+	</FuelMass>
+</TruckAddon>

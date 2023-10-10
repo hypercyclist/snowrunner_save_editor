@@ -1,0 +1,71 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="10">
+			<Constraint Type="Hinge">
+				<Motor Damping="1" Spring="10" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<_parent File="pacific512_bumper_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_tuning/pacific512_bumper_3">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="2" ModelFrame="BoneStepRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.2" Spring="15" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="2" ModelFrame="BoneStepLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.1" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				AngularDamping="30.0"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="boneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(5.086; 1.885; -0.295)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(5.086; 1.885; 0.275)" Scale="(1; 1; 1.5)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".7" Pos="(5.086; 1.885; -0.295)" />
+			<Flare _template="HeadLight" DirAngle="135" Size=".7" Pos="(5.086; 1.885; 0.275)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" Pos="(5.293; 1.869; -0)" />
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_WINCHPIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_WINCHPIPE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,108 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			SuspensionHeight="0.1"
+			SuspensionStrength="0.1"
+			Torque="default"
+			SuspensionMin="-0.02"
+			ParentFrame="BoneSuspension_cdt"
+		/>	
+	</Wheel>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="TrailerWheel" Pos="(-2; 0.559; 1.164)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-2; 0.559; 1.164)" />
+			<Wheel _template="TrailerWheel" Pos="(-3.306; 0.559; 1.164)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-3.306; 0.559; 1.164)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="2"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-3.651"
+			MaxX="-1.389"
+		/>
+		<Constraint _template="TrailerRagdoll" ConeMin="-80" ConeMax="80">
+			<!--<PlaneConeMotor Damping="6000" Spring="20000" Type="Spring" />-->
+		</Constraint>
+		<CompatibleWheels Scale="0.587" Type="wheels_medium_double" />
+		<Camera Center="(-0.5; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/trailers/trailer_log_pole">
+		<Body ImpactType="Truck" Mass="100">
+			<Body ImpactType="Truck" Mass="700" ModelFrame="BoneFrame_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-20"
+					MaxLimit="20"
+				>
+					<Motor Damping="1000" Spring="1000" Type="Spring" />
+				</Constraint>
+				<Body
+					_template="CartForkBase"
+					ModelFrame="BoneFork_cdt"
+					NoCameraCollision="True"
+					NetSyncUseGravity="True"
+				>
+					<Body
+						_template="CartFork"
+						ModelFrame="BoneForkLeft_cdt"
+						NoCameraCollision="True"
+					>
+						<Constraint AxisLocal="(-1; 0; 0)" />
+					</Body>
+					<Body _template="CartFork" ModelFrame="BoneForkRight_cdt" NoCameraCollision="True" />
+				</Body>
+				<Body ImpactType="Truck" Mass="500" ModelFrame="BoneSuspension_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-15"
+						MaxLimit="15"
+					>
+						<Motor Damping="500" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments/>
+	<Landmark Mesh="landmarks/trailer_log_pole_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData FrameAlign="" Price="14100">
+		<TractorCargoSlotsOverride InitialOffset="(0.0, 2.0, 0.0)" OffsetStep="(-5.0; 0; 0)" />
+		<WinchSocket Pos="(-3.086; 0.948; 0)" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(1.922; 1.105; 0)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_LOGPOLE_DESC"
+			UiIcon30x30="trailerLogPole30"
+			UiIcon40x40="trailerLogPole"
+			UiName="UI_TRAILER_LOGPOLE_NAME"
+		/>
+		<RequiredAddon Types="bunk_log_addon_zikz_612h" />
+		<LoadArea
+			Subtype="MastodonLong"
+			TrailerLoad="true"
+			Type="CargoLogsLong"
+			Min="(-9.14; 1.423; -2.498)"
+			Max="(-2.524; 2.8; 2.4)"
+		/>
+		<InstallSocket Offset="(1.922; 1.105; 0)" Type="MastodonLogPoleTrailer" />
+		<LongLogsAlignTarget 
+			Pos="(0.0, 1.0, 0.0)" 
+			TruckAddonFork="BoneFork_cdt"
+			TrailerFork="BoneFork_cdt"
+		/>
+	</GameData>
+</Truck>

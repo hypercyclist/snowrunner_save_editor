@@ -1,0 +1,17 @@
+<_parent File="international_hx_520_horn_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_horn_1"/>
+	<GameData
+		CameraPreset="roof"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+	</GameData>
+</TruckAddon>

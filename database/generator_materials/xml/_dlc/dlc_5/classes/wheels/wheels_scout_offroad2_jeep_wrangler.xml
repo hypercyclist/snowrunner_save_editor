@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.66">
+	<TruckTires>
+		<TruckTire _template="Light" Mesh="wheels/tire_scout_offroad2_jeep_wrangler" Name="tire1">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutDefault" />
+			<WheelFriction _template="ScoutOffroad" BodyFrictionAsphalt="3.0"/>
+			<GameData
+				Price="4500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_Jeep_Wrangler_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_offroad2_jeep_wrangler" Name="rim1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_Jeep_Wrangler_DESC" UiName="UI_RIM_Jeep_Wrangler_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

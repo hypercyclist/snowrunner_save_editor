@@ -1,0 +1,37 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator01"
+		RotationSpeed="5"
+	/>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_tuning/mack_defense_m917_beacon_1">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Org="(2.924; 3.292; 0.537)" ParentFrame="BoneRotator01" Scale="(0.3; 0.15; 0.4)" />
+			<Light Pos="(3.038; 3.230; 0.536)" ParentFrame="BoneRotator01" />
+			<Flare Pos="(2.933; 3.230; 0.426)" AspectRatio="2" ParentFrame="BoneRotator01" />
+			<Flare Pos="(2.933; 3.230; 0.426)" AspectRatio="2" ParentFrame="BoneRotator01" />
+			<Flare Pos="(2.923; 3.270; 0.536)" Color="g(255; 50; 2) x 0.5" ColorMultAtDay="0.5" Size="1" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_RAISED_BEACON_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_RAISED_BEACON_NAME"
+		/>
+		<InstallSocket Type="MackDefenseM917Beacon" />
+	</GameData>
+</TruckAddon>

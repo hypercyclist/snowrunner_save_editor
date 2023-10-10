@@ -1,0 +1,25 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_770g_tuning/cat_770g_saddle">
+		<Body Mass="200">
+			<Constraint Type="Rigid" />			
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		SaddleType="low"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_CAT770G_SADDLE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_CAT770G_SADDLE_NAME"
+		/>
+		<RequiredAddonType Type="SaddleLow" TypeUiName="UI_REQUIRED_ADDON_TYPE_SADDLE_LOW" />
+		<InstallSocket Type="Cat770gSaddle" />
+	</GameData>
+</TruckAddon>

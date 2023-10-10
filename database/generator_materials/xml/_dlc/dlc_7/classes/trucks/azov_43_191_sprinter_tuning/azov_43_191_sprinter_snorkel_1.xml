@@ -1,0 +1,18 @@
+<_templates Include="trucks" />
+<_parent File="azov_43_191_sprinter_snorkel_default" />
+<TruckAddon>
+	<Snorkel Origin="(1.247; 3.072; 0)" />
+	<PhysicsModel Mesh="trucks/azov_43_191_sprinter_tuning/azov_43_191_sprinter_snorkel_1" />
+	<GameData
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_SQUARECAP_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_SQUARECAP_TALL_NAME"
+		/>
+	</GameData>
+</TruckAddon>

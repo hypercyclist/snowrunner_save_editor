@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.5; 0.05; 0.05)" MaxAngle="(2; 0.2; 0.2)" MaxFrequency="4" />
+			<Shaker Frame="BoneExhaustCap" ParentFrame="BoneExhaust" LimitDirectionZ="Negative" MinAngle="(0; 0; -10)" MaxAngle="(0; 0; -50)" MaxFrequency=".1" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_exhaust_1">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+		<InstallSocket Type="CatCT681Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 1; 0)"
+		IsLight="true"
+		Origin="(-0.971; 3.648; -1.227)"
+		Speed="3.82"
+	/>
+</TruckAddon>

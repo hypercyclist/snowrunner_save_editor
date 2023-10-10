@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoForcklift" PackSlotsNumber="4">
+		<CraneSocket Pos="(0.000; 2.775; 0.000)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_forcklift_caravan_container_lmk" />
+</ModelBrand>

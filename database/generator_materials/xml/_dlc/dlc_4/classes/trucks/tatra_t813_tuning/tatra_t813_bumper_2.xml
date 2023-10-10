@@ -1,0 +1,56 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_bumper_2">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="3" ModelFrame="BoneRope_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-30"
+					MaxLimit="10"
+				>
+					<Motor Damping=".2" Spring="1" Type="Spring" />
+				</Constraint>
+			</Body>			
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.230; 1.610; -0.312)" />
+			<Light AttenEnd="18.0" Color="g(255; 186; 112) x .2" Dir="(1; -0.2; 0)" InnerCone="90" OuterCone="120" Pos="(4.230; 1.610; 0.312)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.230; 1.610; -0.312)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(180; 160; 144) x 1.0" Size="0.2" Pos="(4.230; 1.610; 0.312)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.230; 1.610; -0.312)" />
+			<Model _template="HeadLightRay" Org="(4.230; 1.610; 0.312)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.230; 1.610; -0.312)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.230; 1.610; 0.312)" />			
+			<Flare _template="BlueStreak" Pos="(4.230; 1.610; -0.312)" />
+			<Flare _template="BlueStreak" Pos="(4.230; 1.610; 0.312)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1"/> 
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="14"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_CROSSFOG_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_CROSSFOG_NAME"
+		/>
+		<InstallSocket Type="TatraT813Bumper" />
+	</GameData>
+</TruckAddon>

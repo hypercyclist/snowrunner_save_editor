@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<_parent File="boar_45318_bumper_1" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/boar_45318_tuning/boar_45318_bumper_3" />
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.753; 1.811; -1.242)" Scale="(1; 1; 1.5)" />
+			<Model _template="HeadLightRay" Org="(4.753; 1.811; 1.258)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.753; 1.811; -1.242)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.753; 1.811; 1.258)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.833; 1.811; -0.651)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.5" DirAngle="135" Size=".5" Pos="(4.833; 1.811; 0.664)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="15"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_BARRIER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_BARRIER_NAME"
+		/>
+	</GameData>
+</TruckAddon>

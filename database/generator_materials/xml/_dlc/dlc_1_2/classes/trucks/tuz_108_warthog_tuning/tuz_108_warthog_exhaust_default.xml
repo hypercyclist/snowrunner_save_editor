@@ -1,0 +1,29 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.3; 0.3; 0.3)"
+				MaxAngle="(0.6; 0.6; 0.6)"
+				MaxFrequency="10"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_tuning/tuz_108_warthog_exhaust_default" />
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="tuz108warthogExhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 0; 1)" Origin="(-0.842; 1.076; 0.853)" Speed="2.0" />
+</TruckAddon>

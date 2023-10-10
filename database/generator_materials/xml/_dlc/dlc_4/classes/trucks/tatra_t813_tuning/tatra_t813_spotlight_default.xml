@@ -1,0 +1,36 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_t813_tuning/tatra_t813_spotlight_default">
+		<Body Collisions="None" Mass="8">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(4.101; 2.027; 1.098)" />
+			<Model _template="HeadLightRay" Org="(4.101; 2.027; -1.098)" />
+			<Model _template="HeadLightRay" Org="(3.736; 2.847; 0.264)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(4.101; 2.027; 1.098)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(4.101; 2.027; -1.098)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(3.736; 2.847; 0.264)" />
+			
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_KOLOB_74760_HEADLAMP_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_KOLOB_74760_HEADLAMP_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="TatraT813Spotlight" />
+	</GameData>
+</TruckAddon>

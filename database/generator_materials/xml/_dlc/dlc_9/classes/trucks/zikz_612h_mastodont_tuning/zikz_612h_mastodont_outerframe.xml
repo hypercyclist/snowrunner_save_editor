@@ -1,0 +1,70 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator01"
+		RotationSpeed="3.6"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator02"
+		RotationSpeed="3.4"
+	/>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+			<Multiplier Multiplier="0.85" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_outerframe">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneAddon_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Color="g(255; 50; 5) x 0.55"  Scale="(0.17; 0.17; 0.17)" Dir="(-0.796; 0.222; 0.563)" Org="(8.533; 2.918; 1.388)" ParentFrame="BoneRotator01" />
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(8.533; 2.918; 1.388)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; 0.563)" Size="1" Pos="(8.533; 2.918; 1.388)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.6" Pos="(8.533; 2.918; 1.388)" ParentFrame="BoneRotator01" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(8.533; 2.918; 1.388)" ParentFrame="BoneRotator01" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Color="g(255; 50; 5) x 0.55"  Scale="(0.17; 0.17; 0.17)" Dir="(-0.796; 0.222; 0.563)" Org="(8.533; 2.918; -1.388)" ParentFrame="BoneRotator02" />
+			<Light Dir="(-0.796; 0.222; 0.563)" Pos="(8.533; 2.918; -1.388)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.45" Dir="(-0.796; 0.222; -0.563)" Size="1" Pos="(8.533; 2.918; -1.388)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.7" Dir="(-0.796; 0.222; 0.563)" Size="0.6" Pos="(8.533; 2.918; -1.388)" ParentFrame="BoneRotator02" />
+			<Flare Color="g(255; 50; 5) x 0.55" Size="1" Pos="(8.533; 2.918; -1.388)" ParentFrame="BoneRotator02" />
+		</Ignition>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 190; 100) x 0.4" Pos="(5.482; 2.814; 1.9)" Dir="(0; -0.5; 2)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(0; -0.5; 2)" Size="0.4" Pos="(5.482; 2.814; 1.404)" />	
+			<Light _template="IgnitionSignalWhite" Dir="(0; -0.5; -2)" Color="g(255; 190; 100) x 0.4" Pos="(5.482; 2.814; -1.9)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Dir="(0; -0.5; -2)" Pos="(5.482; 2.814; -1.404)" />	
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Dir="(0; -0.5; 0.5)" Org="(5.482; 2.814; 1.404)" />
+			<Flare _template="HeadLight" Dir="(0; -1; 2)" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(5.482; 2.814; 1.404)" />
+			<Flare _template="BlueStreak" Dir="(0; -1; 2)" Pos="(5.482; 2.814; 1.404)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.5; -0.5)" Org="(5.482; 2.814; -1.404)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Dir="(0; -1; -2)" Size=".4" Pos="(5.482; 2.814; -1.404)" />
+			<Flare _template="BlueStreak" Dir="(0; -1; -2)" Pos="(5.482; 2.814; -1.404)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="outerframe"
+		Category="top"
+		IsCustomizable="true"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SAVIOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SAVIOR_NAME"
+		/>
+		<InstallSocket Type="MastodonOuterframe" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<_parent File="step_39331_pike_bumper_default" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/step_39331_pike_tuning/step_39331_pike_bumper_3">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.463; 1.382; -0.363)" />
+			<Model _template="HeadLightRay" Org="(3.463; 1.382; 0.363)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(3.463; 1.382; -0.363)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(3.463; 1.382; 0.363)" />
+			<Flare _template="BlueStreak" Pos="(3.463; 1.382; -0.363)" />
+			<Flare _template="BlueStreak" Pos="(3.463; 1.382; 0.363)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.435; 0.873; -0.825)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.22" Pos="(3.435; 0.873; 0.825)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REINFORCED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REINFORCED_NAME"
+		/>
+	</GameData>
+</TruckAddon>

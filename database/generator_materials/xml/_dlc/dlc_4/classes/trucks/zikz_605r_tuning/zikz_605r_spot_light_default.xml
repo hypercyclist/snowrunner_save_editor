@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="zikz_605r_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_tuning/zikz_605r_spot_light_default"/>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(3.711; 3.062; -0.116)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".4" Pos="(3.711; 3.062; -0.116)" />
+			<Flare _template="BlueStreak" Pos="(3.711; 3.062; -0.116)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2"/>
+	<GameData
+		Price="500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="zikz605rSpotLight" />
+	</GameData>
+</TruckAddon>

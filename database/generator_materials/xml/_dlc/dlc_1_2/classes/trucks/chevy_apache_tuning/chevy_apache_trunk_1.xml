@@ -1,0 +1,80 @@
+<_templates Include="trucks">
+	<Body>
+		<LimitsZ Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="50" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</LimitsZ>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel3" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="80"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-2.288; 1.419; -0.338)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-2.289; 1.42; 0.324)" SizeX="0.363" SizeY="0.182" SizeZ="0.495" Type="Box" ParentFrame="BoneRepairFuel2_cdt" />
+		<LimitedFluid Center="(-1.743; 1.549; -0.536)" SizeX="0.363" SizeY="0.495" SizeZ="0.182" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-1.327; 1.556; -0.536)" SizeX="0.363" SizeY="0.495" SizeZ="0.182" Type="Box" ParentFrame="BoneFuel1_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/chevy_apache_tuning/chevy_apache_trunk_1">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body
+				_template="LimitsZ"
+				LinearDamping="2"
+				Mass="60"
+				ModelFrame="BoneRepairFuel2_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.032;0.004)" />
+			</Body>
+			<Body
+				_template="LimitsZ"
+				LinearDamping="2"
+				Mass="40"
+				ModelFrame="BoneWheel2_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.032;0.032)" />
+			</Body>
+			<Body Mass="40" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="4"
+				>
+					<Motor Damping="0.2" Spring="0.4" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="ChevyApacheTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

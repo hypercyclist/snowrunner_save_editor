@@ -1,0 +1,23 @@
+<_parent File="paystar_5600ts_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="4" />
+			<Shaker Frame="BoneExhaustCap" LimitDirectionZ="Negative" MinAngle="(0; 0; 45)" MaxAngle="(0; 0; 70)" MaxFrequency="0.1" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_tuning/paystar_5600ts_exhaust_1" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.947; 0.321; 0)" Origin="(2.926; 3.588; -0.811)" />
+</TruckAddon>

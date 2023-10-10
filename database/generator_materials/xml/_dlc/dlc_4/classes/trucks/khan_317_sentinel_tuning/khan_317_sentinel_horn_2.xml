@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<_parent File="khan_317_sentinel_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_tuning/khan_317_sentinel_horn_2" />
+	<GameData
+		CameraPreset="roof"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_SINGLE_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_SINGLE_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="Khan317Horn2" />
+	</GameData>
+</TruckAddon>

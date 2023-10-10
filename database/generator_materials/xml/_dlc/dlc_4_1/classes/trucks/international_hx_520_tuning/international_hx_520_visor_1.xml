@@ -1,0 +1,28 @@
+<_templates Include="trucks" />
+<_parent File="international_hx_520_visor_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_tuning/international_hx_520_visor_1"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.245; 2.817; -0.672)" />
+			<Flare _template="MarkerBeacon" Pos="(0.245; 2.817; 0.672)" />
+			<Flare _template="MarkerBeacon" Pos="(0.273; 2.824; -0.412)" />
+			<Flare _template="MarkerBeacon" Pos="(0.273; 2.824; 0.412)" />
+			<Flare _template="MarkerBeacon" Pos="(0.292; 2.828; -0.148)" />
+			<Flare _template="MarkerBeacon" Pos="(0.292; 2.828; 0.148)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="intHX520Visor1" />
+	</GameData>
+</TruckAddon>

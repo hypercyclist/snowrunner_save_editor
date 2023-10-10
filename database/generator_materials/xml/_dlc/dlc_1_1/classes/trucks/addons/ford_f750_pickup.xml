@@ -1,0 +1,94 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="60"
+		RepairsCapacity="200"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(-0.874; 1.271; 0.449)" SizeX="0.206" SizeY="0.506" SizeZ="0.407" Type="Box" />
+		<LimitedFluid Center="(-0.875; 1.264; 0.004)" SizeX="0.203" SizeY="0.506" SizeZ="0.407" Type="Box" />
+		<LimitedFluid Center="(-0.874; 1.271; -0.454)" SizeX="0.206" SizeY="0.506" SizeZ="0.407" Type="Box" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair1" HideThreshold="0.5" />
+		<Mesh Frame="repair2" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/addons/ford_f750_pickup">
+		<Body ImpactType="Truck" Mass="200">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="30"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.03;0.03)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.03;0.03)"
+				/>
+			</Body>
+			<Body
+				_template="Limits"
+				LinearDamping="2"
+				Mass="30"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.02;0.02)"
+					LinearLimitsY="(0;0.1)"
+					LinearLimitsZ="(-0.02;0.02)"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Pos="(-3.8; 1.31; -0.871)" />
+			<Flare _template="StopSignal" Pos="(-3.8; 1.31; 0.871)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.9" Pos="(-3.8; 1.373; -0.871)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.9" Pos="(-3.8; 1.373; 0.871)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3.5; 1.31; 0)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-3.8; 1.24; -0.871)" />
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-3.8; 1.24; 0.871)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.8; 1.24; -0.871)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.8; 1.24; 0.871)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Size="0.3" Pos="(-3.8; 1.31; -0.871)" />
+			<Flare _template="IgnitionSignalRed" Size="0.3" Pos="(-3.8; 1.31; 0.871)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="4200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDONS_FORD_F750_PICKUP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDONS_FORD_F750_PICKUP_NAME"
+		/>
+		<InstallSocket Type="FordF750Pickup" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

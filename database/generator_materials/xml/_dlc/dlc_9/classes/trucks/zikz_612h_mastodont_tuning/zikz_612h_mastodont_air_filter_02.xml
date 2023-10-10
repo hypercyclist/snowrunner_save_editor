@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(7.302; 2.834; 0)" />
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_tuning/zikz_612h_mastodont_air_filter_02"/>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FLATCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FLATCAP_NAME"
+		/>
+		<InstallSocket Type="MastodonAirFilter" />
+	</GameData>
+</TruckAddon>

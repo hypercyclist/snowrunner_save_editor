@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/gmc_8000_tuning/sticker_door_r_1x1_gmc_8000" />
+	<GameData>
+			<InstallSocket Type="gmc8000Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

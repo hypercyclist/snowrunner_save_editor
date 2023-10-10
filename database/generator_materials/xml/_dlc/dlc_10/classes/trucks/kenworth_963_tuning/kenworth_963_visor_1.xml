@@ -1,0 +1,26 @@
+<TruckAddon>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="Beacon" Color="g(255; 174; 0) x 0.18" Size="0.25" Pos="(2.18; 3.385; 0.665)" DirAngle="110" />
+			<Flare _template="Beacon" Color="g(255; 174; 0) x 0.18" Size="0.25" Pos="(2.269; 3.385; 0)" DirAngle="110" />
+			<Flare _template="Beacon" Color="g(255; 174; 0) x 0.18" Size="0.25" Pos="(2.18; 3.385; -0.665)" DirAngle="110" />
+		</Ignition>	
+	</ModelAttachments>
+	
+	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_visor_1" />
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_NAME"
+		/>
+		<InstallSocket Type="Kenworth963Visor" />
+	</GameData>
+</TruckAddon>

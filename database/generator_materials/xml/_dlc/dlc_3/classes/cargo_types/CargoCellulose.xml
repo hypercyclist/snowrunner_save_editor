@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_CELLULOSE_NAME"
+		UiDesc="UI_CARGO_CELLULOSE_DESC"
+		UiIcon20x20="cargoTypePaper20"
+		UiIcon40x40="cargoTypePaper40"
+		UiIcon100x100="cargoTypeCellulose"
+	/>
+</CargoType>

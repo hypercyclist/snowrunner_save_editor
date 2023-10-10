@@ -1,0 +1,40 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="50"
+		RepairsCapacity="100"
+		WheelRepairsCapacity="2"
+	/>
+	<PhysicsModel Mesh="trucks/ford_f750_tuning/ford_f750_trunk">
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Rigid" />
+			<Body Mass="50" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_SPARE_WITH_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_SPARE_WITH_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="FordF750Trunk" />
+	</GameData>
+</TruckAddon>

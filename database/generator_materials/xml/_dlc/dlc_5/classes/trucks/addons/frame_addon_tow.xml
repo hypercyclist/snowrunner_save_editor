@@ -1,0 +1,187 @@
+<_templates Include="trucks">
+	<Body>
+		<Anchor
+			ForceBodyParams="true"
+			Mass="50"
+			NoFoliageCollisions="true"
+		>
+			<Constraint
+				AxisLocal="(0; -1; 0)"
+				Name="Anchor"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.8"
+			>
+				<Motor Force="8000" Type="Position" />
+			</Constraint>
+		</Anchor>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_tow">
+		<NetSync Legacy="true" />
+		<Body CenterOfMassOffset="(0; 0; 0)" Mass="800">
+			<Constraint Type="Rigid" />			
+			<Body
+				Friction="2.0"
+				Mass="500"
+				ModelFrame="BoneRamp_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="ramp_lower"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="25"
+				>
+					<Motor
+						Damping="1.0"
+						Force="500000"
+						Tau="0.04"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body
+					ForceBodyParams="true"
+					Mass="300"
+					ModelFrame="BoneRampPrismatic_cdt"
+					NoFoliageCollisions="true"
+					CenterOfMassOffset="(-.3;0;0)"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Name="ramp_extend"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="4"
+					>
+						<Motor Force="300000" Type="Position" />
+					</Constraint>
+					<Body
+						ForceBodyParams="true"
+						Mass="30"
+						ModelFrame="BoneWinch_cdt"
+						NoFoliageCollisions="true"
+						CenterOfMassOffset="(-0;0;0)"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Name="winch_move"
+							Type="Prismatic"
+							MinLimit="-0.9"
+							MaxLimit="0.85"
+						>
+							<Motor Force="300000" Type="Position" />
+						</Constraint>
+						<Body
+							CenterOfMassOffset="(0; 0; 0)"
+							ImpactType="Truck"
+							Mass="20"
+							ModelFrame="BoneWinchHook1_cdt"
+							NetSync="pv"
+						>
+							<Constraint
+								AxisLocal="(0; 0; 1)"
+								Type="Hinge"
+								MinLimit="-15"
+								MaxLimit="35"
+							>
+								<Motor Damping="4" Spring="10" Type="Spring" />
+							</Constraint>
+								<Body
+									CenterOfMassOffset="(0; 0; 0)"
+									ImpactType="Truck"
+									Mass="20"
+									ModelFrame="BoneWinchHook2_cdt"
+									NetSync="pv"
+								>
+									<Constraint
+										AxisLocal="(0; 1; 0)"
+										Type="Hinge"
+										MinLimit="0"
+										MaxLimit="30"
+									>
+										<Motor Damping="2" Spring="10" Type="Spring" />
+									</Constraint>
+								</Body>							
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.2" Pos="(2.882; 0.276; 1.391)" ParentFrame="BoneRampPrismatic_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.2" Pos="(2.882; 0.276; -1.391)" ParentFrame="BoneRampPrismatic_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.2" Pos="(0.691; 0.276; 1.391)" ParentFrame="BoneRampPrismatic_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.2" Pos="(0.691; 0.276; -1.391)" ParentFrame="BoneRampPrismatic_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.2" Pos="(-1.276; 0.276; 1.391)" ParentFrame="BoneRampPrismatic_cdt"/>
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.2" Pos="(-1.276; 0.276; -1.391)" ParentFrame="BoneRampPrismatic_cdt"/>					
+			
+			<Light _template="IgnitionSignalWhite" Dir="(-1.000; 0.000; -0.000)" Pos="(2.787; 1.058; -0.826)" ParentFrame="BoneRampPrismatic_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-1.000; 0.000; -0.000)" Pos="(2.824; 1.058; -0.826)" ParentFrame="BoneRampPrismatic_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(2.824; 1.058; -0.826)" />
+			
+		</Ignition>
+	</ModelAttachments>
+	<!-- <ModelAttachments/> -->
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		SoundForEachConstraint="true"
+	>
+        <AddonType Name="TowingPlatform" />
+		<WinchSocket Pos="(2.605; 0.497; 0.041)" ParentFrame="BoneWinch_cdt"/>
+		<UiDesc
+			UiDesc="UI_FRAME_ADDON_TOW_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_FRAME_ADDON_TOW_NAME"
+		/>
+		<ConstraintSounds>
+			<SoundIKStop Name="addons/addon_tow/addon_tow_ramp_lower_stop" Range="20" Volume="1" ConstraintName="ramp_lower"/>
+			<SoundIKStart Name="addons/addon_tow/addon_tow_ramp_lower_start" Range="20" Volume="1" ConstraintName="ramp_lower"/>
+			<SoundIKLoop Name="addons/addon_tow/addon_tow_ramp_lower_loop" Range="20" Volume="1" ConstraintName="ramp_lower"/>
+			
+			<SoundIKStop Name="addons/addon_tow/addon_tow_ramp_extend_stop" Range="20" Volume="1" ConstraintName="ramp_extend"/>
+			<SoundIKStart Name="addons/addon_tow/addon_tow_ramp_extend_start" Range="20" Volume="1" ConstraintName="ramp_extend"/>
+			<SoundIKLoop Name="addons/addon_tow/addon_tow_ramp_extend_loop" Range="20" Volume="1" ConstraintName="ramp_extend"/>
+
+			<SoundIKStop Name="addons/addon_tow/addon_tow_winch_move_stop" Range="20" Volume="1" ConstraintName="winch_move"/>
+			<SoundIKStart Name="" Range="20" Volume="1" ConstraintName="winch_move"/>
+			<SoundIKLoop Name="addons/addon_tow/addon_tow_winch_move_loop" Range="20" Volume="1" ConstraintName="winch_move"/>
+		</ConstraintSounds>
+		<InstallSocket Offset="(0; 0; 0)" Type="FrameAddonTow" />
+	</GameData>
+	<ActionCategories>
+		<ActionCategory Action="1" Id="tow_control" LocaleUid="UI_TOW_CONTROL" AvailableForFastMode="true" RemoveChildActionsFromCustomPanelShowCounter = "true"/>
+	</ActionCategories>
+	
+	<ControlledConstraints>
+		<Constraint Action="9"  Id="ramp_lower" LocaleUid="UI_RAMP_LOWER" Name="ramp_lower" SpeedMult="1.5" BelongToCategorie="tow_control"/>
+		<Constraint Action="10"  Id="ramp_extend" LocaleUid="UI_RAMP_EXTEND" Name="ramp_extend" SpeedMult="1.5" BelongToCategorie="tow_control"/>
+		<Constraint Action="11" Id="winch_move" LocaleUid="UI_WINCH_MOVE" Name="winch_move" SpeedMult="5" BelongToCategorie="tow_control"/>		
+	</ControlledConstraints>
+	<!-- <ControlledConstraints>		 -->
+		<!-- <Constraint Action="10" ActionId="ramp_lower" Id="ramp_lower" LocaleUid="UI_RAMP_LOWER" Name="ramp_lower" SpeedMult="2.5" /> -->
+		<!-- <Constraint Action="12" ActionId="ramp_extend" Id="ramp_extend" LocaleUid="UI_RAMP_EXTEND" Name="ramp_extend" SpeedMult="2" /> -->
+	<!-- </ControlledConstraints> -->
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonBase" ParentFrame="BoneAddon_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRamp_cdt"
+				ModelFrame="BonePiston"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

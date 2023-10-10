@@ -1,0 +1,807 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<MarkerBeacon Color="g(125; 81; 18) x 0.7" Size="0.3" />
+	</Flare>
+	<Body>
+		<Mirror Collisions="None" Mass="1.5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</Mirror>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="14"
+			>
+				<Motor Damping=".1" Spring="10" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<Hitch AngularDamping="1" Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				PivotOffset="(0; 0; 0)"
+				Type="Hinge"
+				MinLimit="-70"
+				MaxLimit="10"
+			>
+				<Motor Damping="0.05" Spring="4" Type="Spring" />
+			</Constraint>
+		</Hitch>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-12"
+				MaxLimit="7"
+			>
+				<Motor Damping="3" Spring="5" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+		<Wire Collisions="None" Mass="0.02">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Prismatic"
+				MinLimit="-0.4"
+				MaxLimit="0.4"
+			>
+				<Motor Damping="0.1" Spring="5" Type="Spring" />
+			</Constraint>
+		</Wire>
+		<Shelf Collisions="None" Mass="0.01">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.021"
+				MaxLimit="0.021"
+			>
+				<Motor Damping="0.1" Spring="5" Type="Spring" />
+			</Constraint>
+		</Shelf>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.025"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_mack_defense_m917"
+		EngineIconScale="1"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0.9"
+		FuelCapacity="350"
+		Responsiveness="0.45"
+		SteerSpeed="0.025"
+		TruckImage="mackdefense917mchr"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="offroad"
+			DefaultWheelType="wheels_mack_defense_m917"
+		>
+			<Wheel _template="FrontWheel" Pos="(4.285; 0.574; 1.083)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(4.285; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" Pos="(-0.572; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-0.572; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" Pos="(-1.955; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.955; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" Pos="(-3.337; 0.574; 1.083)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.337; 0.574; 1.083)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="mack_defense_m917_suspension_default"
+			Type="s_mack_defense_m917"
+			MaxWheelRadiusWithoutSuspension="0.45"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.82"
+		/>
+		<Steam Origin="(0.708; 1.235; 0)" />
+		<Steam Origin="(2.464; 1.307; 0)" Scale="0.5" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="true"
+			Origin="(2.5; 1.64; 0)"
+			MinDist="15.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<Honk			Sound="trucks/mack_defense_m917/mack_defense_m917_honk" />
+			<Handbrake		Sound="trucks/mack_defense_m917/mack_defense_m917_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/mack_defense_m917/mack_defense_m917_handbrake_off" />
+			<BrakePull		Sound="trucks/mack_defense_m917/mack_defense_m917_brake_pull" />
+			<BrakeRelease	Sound="trucks/mack_defense_m917/mack_defense_m917_brake_release" />
+			<BrakesSqueal	Sound="trucks/mack_defense_m917/mack_defense_m917_brakes_squeal" />
+			<Reverse		Sound="trucks/mack_defense_m917/mack_defense_m917_back_beeper" />
+			<EngineAccel	Sound="trucks/mack_defense_m917/mack_defense_m917_acc" />
+			<EngineRev		Sound="trucks/mack_defense_m917/mack_defense_m917_rev" />
+			<EngineStart	Sound="trucks/mack_defense_m917/mack_defense_m917_start" />
+			<EngineStop		Sound="trucks/mack_defense_m917/mack_defense_m917_stop" />
+			<EngineIdle		Sound="trucks/mack_defense_m917/mack_defense_m917_idle" />
+			<EngineIdle_2d	Sound="trucks/mack_defense_m917/mack_defense_m917_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/mack_defense_m917/mack_defense_m917_low" />
+			<EngineLow_2d	Sound="trucks/mack_defense_m917/mack_defense_m917_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/mack_defense_m917/mack_defense_m917_high" />
+			<EngineHigh_2d	Sound="trucks/mack_defense_m917/mack_defense_m917_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<EngineTurbo	Sound="" />
+			<ChassisStress	Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+			<Shaft SocketPointA="ShaftBoxRearWheel" SocketPointB="ShaftRearWheel" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2.10" MinX="-4.300" MaxX="5.300" />
+		<LimitedFluid Center="(0.785; 0.978; 0.868)" SizeX="1.036" SizeY="0.423" SizeZ="0.514" Type="Box"/>
+		<Intake Dir="(1; 0; 0)" Origin="(5.009; 1.687; 0)" Size="1" />
+		<GearboxSocket Default="g_special_mack_defense" Type="gearboxes_special_mack_defense" />
+		<FuelTank DamageCapacity="110" />
+		<EngineSocket Default="us_special_mack_defense_mcv6" Type="e_us_truck_modern_mack_defense_m917" />
+		<Driver
+			AnimationSet="Truck"
+			Pos="(2.620; 2.105; 0.535)"
+			SteeringWheelPos="(2.968; 2.408; 0.529)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.902; 0.431; -0.028)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/mack_defense_m917_arrow_01" Org="(3.300; 2.346; 0.674)" OutputAngles="(-110; 110)" />
+			<Gauge Dir="(-0.902; 0.431; -0.028)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/mack_defense_m917_arrow_01" Org="(3.298; 2.347; 0.383)" OutputAngles="(-120; 70)" />
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.414)" OutputAngles="(-40; 40)" Scale="1.0"/>
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.373)" OutputAngles="(-40; 18)" Scale="1.0"/>
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.333)" OutputAngles="(-40; 22)" Scale="1.0"/>
+			
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.642)" OutputAngles="(-45; 30)" Scale="1.0"/>
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.683)" OutputAngles="(-20; 20)" Scale="1.0"/>
+			<Gauge Damping="0.99" Dir="(-0.959; 0.282; 0.01)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.272; 2.284; 0.723)" OutputAngles="(-40; 6)" Scale="1.0"/>
+			
+			<Gauge Damping="0.99" Dir="(-0.771; 0.196; 0.606)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.098; 2.431; -0.045)" OutputAngles="(-120; 45)" Scale="0.8"/>
+			<Gauge Damping="0.99" Dir="(-0.771; 0.196; 0.606)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.058; 2.437; -0.097)" OutputAngles="(-120; 8)" Scale="0.8"/>
+			<Gauge Damping="0.99" Dir="(-0.771; 0.196; 0.606)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/mack_defense_m917_arrow_03" Org="(3.015; 2.444; -0.152)" OutputAngles="(-120; 20)" Scale="0.8"/>
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(3.405, 0.852, -0.766)" Max="(5.033, 2.343, 0.766)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.239, 0.668, 0.533)" Max="(1.332, 1.319, 1.162)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.6" Type="wheels_mack_defense_m917" />
+		<CompatibleWheels Scale="0.6" Type="wheels_heavy_single" />
+		<Camera Center="(-0.94; -0.35; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/mack_defence_m917a3_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/mack_defence_m917a3_glass__sh_d.tga"
+				ViewPos="(2.58; 2.713; 0.567)"
+				LimitsHor="(-2.5; 0.920)"
+			> 
+				<Rear ViewPosOffset="(0.23; -0.15; 0.5)" />
+				
+				<Mirror
+					ClipDir="(-0.888;-0.0;-0.461)"
+					ClipOffset="0.2"
+					FOVScale="3"
+					MeshFrame="mirror_left_1"
+					ReflectionDir="(-0.888; -0.0; -0.461)"
+					Size="(0.225; 0.358)"
+					Pos="(2.929; 2.619; 1.370)"
+				>
+					<SecondaryView
+						ClipDir="(-0.866; 0.072; -0.495)"
+						ClipOffset="0.1"
+						CurveAngle="40"
+						FOVScale="2"
+						MeshFrame="mirror_left_2"
+						Size="(0.176; 0.176)"
+						Pos="(2.934; 2.362; 1.376)"
+					/>
+				</Mirror>
+				
+				<Mirror
+					ClipDir="(-0.820; -0.0; 0.649)"
+					ClipOffset="0.2"
+					FOVScale="3.5"
+					MeshFrame="mirror_right_1"
+					ReflectionDir="(-0.820; -0.0; 0.649)"
+					Size="(0.225; 0.358)"
+					Pos="(2.929; 2.619; -1.370)"
+				>
+					<SecondaryView
+						ClipDir="(-0.866; 0.00; 0.495)"
+						ClipOffset="0.1"
+						CurveAngle="40"
+						FOVScale="2.8"
+						MeshFrame="mirror_right_2"
+						Size="(0.176; 0.176)"
+						Pos="(2.934; 2.362; -1.376)"
+					/>
+				</Mirror>
+				
+				<Mirror ClipDir="(-0.99;-0.011;0.138)" ClipOffset="0.15" CurveAngle="15" FOVScale="6" MeshFrame="mirror_left_3" ReflectionDir="(-0.99;-0.011;0.138)" Size="(0.362; 0.315)" Pos="(4.808; 2.135; 1.05)" />
+				<Mirror ClipDir="(-0.99;-0.011;0.138)" ClipOffset="0.15" CurveAngle="15" FOVScale="6" MeshFrame="mirror_right_3" ReflectionDir="(-0.99;-0.011;0.138)" Size="(0.362; 0.315)" Pos="(4.808; 2.135; -1.05)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+			<Axle Frame="BoneAxle4" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mack_defense_m917">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.4; 0)"
+			ImpactType="Truck"
+			Mass="11000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="5000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					MinLimit="-2.4"
+					MaxLimit="2.4"
+					Type="Hinge"
+				>
+					<Motor Type="Spring" Spring="150000" Damping="150000"/>
+				</Constraint>
+				<Body _template="Wire" ModelFrame="BoneWireCab_cdt" />
+				<Body _template="Mirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="Mirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshield_cdt" />
+				<Body _template="Shelf" ModelFrame="BoneTopShelf_cdt" />
+				<Body Mass="0.2" ModelFrame="BoneKeyFob_cdt">
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							PivotOffset="(0; 0; 0)"
+							Type="Hinge"
+							MinLimit="-50"
+							MaxLimit="50"
+						>
+							<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+						</Constraint>
+				</Body>
+			</Body>	
+			<Body Collisions="None" Mass="4" ModelFrame="BoneLeftMudguardJiggle_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-7"
+					MaxLimit="7"
+				>
+					<Motor Damping="10" Spring="2200" Type="Spring" />
+				</Constraint>
+				<Body
+					_template="Mudguard"
+					ModelFrame="BoneLeftMudguard_cdt"
+				>
+					<Constraint ExplicitParentFrame="0" MinLimit="-20" MaxLimit="6"/>
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="4" ModelFrame="BoneRightMudguardJiggle_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-7"
+					MaxLimit="7"
+				>
+					<Motor Damping="10" Spring="2200" Type="Spring" />
+				</Constraint>
+				<Body
+					_template="Mudguard"
+					ModelFrame="BoneRightMudguard_cdt"
+				>
+					<Constraint ExplicitParentFrame="0" MinLimit="-18" MaxLimit="5"/>
+				</Body>
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitch_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.290; 0.679; 0)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.896; 0.973; 0.660)" />
+			<Flare _template="StopSignal" Size="0.2" Pos="(-3.896; 0.973; -0.660)" />
+		</StopSignals>
+<!-- 		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(5.378; 1.31; -0.904)" ParentFrame="BoneCabin_cdt"/>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(5.378; 1.31; 0.904)" ParentFrame="BoneCabin_cdt"/>
+		</Ignition> -->
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Size="0.1" Color="g(255; 10; 10) x 0.5" Pos="(-3.897; 0.973; -0.661)" />
+			<Light _template="IgnitionSignalRed" Size="0.1" Color="g(255; 10; 10) x 0.5" Pos="(-3.897; 0.973; 0.661)" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(5.378; 1.31; -0.904)" ParentFrame="BoneCabin_cdt"/>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(5.378; 1.31; 0.904)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.3" Pos="(4.932; 1.424; -0.843)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.3" Pos="(4.932; 1.424; 0.843)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; -0.5)" Size="0.12" Pos="(4.87; 1.439; -1.2)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0.5)" Size="0.12" Pos="(4.87; 1.439; 1.2)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.2" Size="1" Pos="(4.945; 1.419; -1.023)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.2" Size="1" Pos="(4.945; 1.419; 1.023)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.009; 3.112; -0.792)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.166; 3.122; -0.219)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.166; 3.124; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.166; 3.122; 0.219)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.12" Pos="(3.009; 3.112; 0.792)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.7" Pos="(-3.897; 0.973; -0.661)" />
+			<Flare _template="IgnitionSignalRed" Size="0.7" Pos="(-3.897; 0.973; 0.661)" />
+		</Ignition>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.2; 0.68; 0)" />
+			<Flare _template="ReverseSignal" AspectRatio="3.5" Pos="(-3.99; 0.72; 0)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.3" Pos="(-3.99; 0.72; 0)" />
+		</ReverseSignals>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.900; 1.400; -1.032)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.900; 1.400; 1.032)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.25" Pos="(4.900; 1.42; -1.032)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.25" Pos="(4.900; 1.42; 1.032)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(4.909; 1.42; -1.033)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Size="0.5" Pos="(4.909; 1.42; 1.033)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/mack_defense_m917_lmk" MinScale="1.7" MaxScale="3.7" />
+	<HeadLight _template="Default" Pos="(5; 1.287; 0)" ParentFrame="BoneCabin_cdt" />
+	<GameData
+		Country="US"
+		Price="95500"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(5.421; 1.079; -0.6)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(5.421; 1.079; 0.6)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-4.201; 0.978; 0)" />
+		<WinchSocket Pos="(-3.140; 1.08; -0.683)" />
+		<WinchSocket Pos="(-3.140; 1.08; 0.683)" />
+		<WinchSocket Pos="(-1.712; 1.145; 0.483)" />
+		<WinchSocket Pos="(-1.712; 1.145; -0.483)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_MACK_DEFENSE_M917_DESC"
+			UiIcon30x30="offroadVehicleImg30"
+			UiIcon328x458="shopImgMackDefense917"
+			UiIcon40x40="offroadVehicleImg"
+			UiIconLogo="MackDefenseLogo80"
+			UiName="UI_VEHICLE_MACK_DEFENSE_M917_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.275; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="exhaust" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.407; 3.902; 5)" InterestPosition="(4.078; 2.526; 0)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(3.151; 0.534; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.434; 2.391; -3.399)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.849; 1.484; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.708; 3.536; 3.318)" />
+			<CameraPos FOV="32.0" Name="wheels" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9; 1.287; -6)" InterestPosition="(6.49; 0.568; -1.078)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.612; 1.712; -0.148)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.108; 2.916; -3.55)" />
+			<CameraPos FOV="32.0" Name="roof" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8; 5; -4.105)" InterestPosition="(4.914; 3.137; -0.0)" />
+			<CameraPos FOV="32.0" Name="beacon" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.141; 4.898; -2.891)" InterestPosition="(4.322; 2.628; -1.605)" />
+			<CameraPos FOV="32.0" Name="visor" InterestPosition="(4.758; 2.617; -0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.287; 4.69; -5)" />
+			<CameraPos FOV="32.0" Name="snorkels" InterestPosition="(5.887; 2; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.085; 3.446; 4.298)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.275; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(0.697; 1.869; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.265; 3.31; 8.244)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.194; 1.807; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.093; 2.337; -6.718)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" Position="(4.457; 2.988; 0.362)" InterestPosition="(5.211; 1.619; 1.247)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" Position="(5.028; 2.505; 0.547)" InterestPosition="(6.033; 3.356; -0.049)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" Position="(5.058; 2.507; 0.146)" InterestPosition="(7.509; 5.733; -6.497)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(4.791; 0.767; 0.853)" Position="(6.472; 2.335; -0.754)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_4" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(4.525; 2.413; -0.539)" InterestPosition="(5.073; 3.433; -0.111)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_rack" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(4.980; 3.040; -0.940)" InterestPosition="(4.400; 2.288; -0.916)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(5.865; 1.861; 1.06)" Position="(5.327; 2.007; 2.713)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.847; 1.378; 0.294)" Position="(4.1; 2.298; -2.785)" />
+			<CameraPos FOV="32.0" Name="glass_sticker" MaxXRotation="0" MaxYRotation="0" InterestPosition="(4.737; 2.53; -0.951)" Position="(8.594; 3.366; 0.88)" />
+			<CameraPos FOV="32.0" Name="capote_sticker" MaxXRotation="0" MaxYRotation="0" InterestPosition="(5.637; 0.335; -0.48)" Position="(8.629; 4.945; -0.557)" />
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" Position="(5.212; 4.714; -0.475)" InterestPosition="(4.347; 1.194; -0.640)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.75; 1.606; 1.9)" Position="(4.636; 2.429; -0.651)" />			
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" Position="(4.526; 2.777; -0.768)" InterestPosition="(4.406; 2.488; 0.304)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.506; 1.992; -1.506)" Position="(8.557; 2.308; -1.506)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" Position="(4.521; 2.603; -0.917)" InterestPosition="(5.29; 2.994; 1.092)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_figure" Position="(8.333; 2.674; -1.652)" InterestPosition="(5.693; 1.39; 0.328)" />
+			<CameraPos FOV="32.0" Name="spare_wheel_camera" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.74; 2.814; 3.953)" InterestPosition="(4.044; 1.994; 1.743)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.792; 1.181; 0.382)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(4.792; 1.181; -0.382)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-3.133; 1.007; 0)" />
+		<CraneSocket Pos="(0.171; 0.959; 0.457)" />
+		<CraneSocket Pos="(0.171; 0.959; -0.457)" />
+		<AddonSockets DefaultAddon="mack_defense_m917_bumper_default">
+			<Socket Names="MackDefenseM917Bumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="mack_defense_m917_exhaust_default">
+			<Socket Names="MackDefenseM917Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="mack_defense_m917_wheel_addon" RequiredAddonIfNoConflicts="mack_defense_m917_wheel_addon">
+			<Socket Names="MackDefenseM917SpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Beacon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Visor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Spotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Roofrack" Offset="(0; 0; 0)" NamesBlock="MackDefenseM917Beacon, MackDefenseM917Spotlight, MackDefenseM917Horn" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Horn" Offset="(0; 0; 0)" NamesBlock="MackDefenseM917Beacon" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="mack_defense_m917_diff_lock_default">
+			<Socket Names="MackDefenseM917DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Trailer" Offset="(-4.148; 0.954; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer" Types="MinicraneRU, FrameAddon" />
+			</Socket>
+			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-1.970; 1.598; 0)" />
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-1.970; 1.769; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BunkLog" Offset="(-6.0; 1.302; 0)" />
+			<Socket Names="FrameAddonLogShort" NamesBlock="MinicraneNavistar" Offset="(-1.650;1.303;0.0)" />
+			<Socket Names="FrameAddon" Offset="(-1.294; 1.3025; 0)">
+				<AddonsShift Offset="(-0.838; 0; 0)" Types="MinicraneNavistar" />
+			</Socket>
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneNavistar" Offset="(-1.88; 0.280; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="MinicraneNavistar" Offset="(0.50; 1.3035; 0)" />
+			<Socket Names="FrameAddonTank" NamesBlock="MinicraneNavistar" Offset="(-2.2; 1.3035; 0)" />
+			<Socket Names="FrameAddonTow" NamesBlock="MinicraneNavistar" Offset="(-2.2; 1.29; 0)" />
+			<Socket Names="FrameAddonTowPlatform" NamesBlock="MinicraneNavistar" Offset="(-0.71; 1.38; 0)" />
+			<Socket Names="BigCraneUs" Offset="(-2.05; 1.389; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.084; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.084; 0)" />
+			</Socket>
+			<Socket Names="SaddleHigh" Offset="(-1.958; 1.302; 0)" />
+			<Socket Names="SaddleLow" Offset="(-1.958; 1.302; 0)" />
+			<Socket Names="FrameAddonKung" Offset="(-1.75; 1.323; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MinicraneNavistar" Offset="(0.750; 1.289; 0)" NamesBlock="FrameAddonDerryFirefighter, BunkLog, FrameAddonTank, FrameAddonKung, BigCraneUs, BigCrane, BigCraneRu, FrameAddonMaintainerBig" >
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.02)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.02)" />
+			</Socket>
+			<Socket Names="LogLift" NamesBlock="BigCraneUs,BigCrane,FrameAddonTank,FrameAddonMaintainerBig,FrameAddonLogShort,FrameAddonKung,FrameAddonTowPlatform,FrameAddonTow,FrameAddonSeismicVibrator,FrameAddonMaintainer,FrameAddon,FrameAddonLogShort" Offset="(0.8; 1.3035; 0)"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="stuff_hood_mack_bulldog_mack_defense_m917">
+			<Socket Names="StuffHoodMackDefense" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_04"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_05"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_06"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x1_07"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshield_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshield_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="MackDefenseM917Sticker_1x4_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Door_L" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Door_R" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof3" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof4" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof5" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof6" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof7" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Roof8" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_GlassBottom" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_GlassTop" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MackDefenseM917Sticker_Capote" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffCurtainMackDefenseM917" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffDashboard" Offset="(3.23;2.509;-0.1)" Dir="(0.400; -0.003; 0.871)" UpDir="(0.110; 1; -0.05)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets> 
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodHingeL2" ParentFrame="BoneTieRodLeft_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneTieRodPrismaticL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneTieRodHingeR2" ParentFrame="BoneTieRodRight_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneTieRodPrismaticR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonFrontRa" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneIKPistonFrontRb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonFrontLa" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneIKPistonFrontLb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear2Ra" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneIKPistonRear2Rb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear2La" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneIKPistonRear2Lb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear3Ra" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="BoneIKPistonRear3Rb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear3La" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="BoneIKPistonRear3Lb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear4La" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="BoneIKPistonRear4Lb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKPistonRear4Ra" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="BoneIKPistonRear4Rb"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneIKRear1Left" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneIKRear1Left1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRear1Right" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneIKRear1Right1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRear2Left" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="BoneIKRear2Left1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRear2Right" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle3"
+				ModelFrame="BoneIKRear2Right1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRear3Left" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="BoneIKRear3Left1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRear3Right" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle4"
+				ModelFrame="BoneIKRear3Right1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

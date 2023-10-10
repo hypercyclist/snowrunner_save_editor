@@ -1,0 +1,144 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="60"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(0.427; 2.228; -0.474)" SizeX="0.382" SizeY="0.135" SizeZ="0.319" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(0.013; 2.228; -0.474)" SizeX="0.382" SizeY="0.135" SizeZ="0.319" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-0.641; 2.228; 0.476)" SizeX="0.382" SizeY="0.135" SizeZ="0.319" Type="Box" ParentFrame="BoneFuel2_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_tuning/rezvani_hercules_6x6_roofrack_2">
+		<Body ImpactType="Truck" Mass="80" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="60" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.018"
+					MaxLimit="0.008"
+				>
+					<Motor Damping="1100" Spring="1800" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0"
+				>
+					<Motor Damping="2700" Spring="4000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0"
+				>
+					<Motor Damping="1400" Spring="2200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.03"
+					MaxLimit="0"
+				>
+					<Motor Damping="1800" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="10" ModelFrame="BoneShovel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="20"
+				>
+					<Motor Damping="1.3" Spring="13" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Dir="(-0.932; -0.363; 0)" Org="(-1.077; 2.151; -0.002)" Scale="(0.4; 0.4; 0.3)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.363; 0.932)" Org="(0.565; 2.184; 0.798)" Scale="(0.4; 0.4; 0.3)" />
+			<Model _template="HeadLightRay" Dir="(0; -0.363; -0.932)" Org="(0.565; 2.184; -0.798)" Scale="(0.4; 0.4; 0.3)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; 1)" InnerCone="80" OuterCone="180" Pos="(0.56; 1.455; 2.045)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(0; 0; -1)" InnerCone="80" OuterCone="180" Pos="(0.56; 1.455; -2.045)" />
+			<Light AttenEnd="4" Color="g(165; 149; 130) x 4" Dir="(-1; 0; 0)" InnerCone="80" OuterCone="180" Pos="(-2.391; 1.455; 0)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.641; 2.175; 0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.611; 2.175; 0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.579; 2.175; 0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.549; 2.175; 0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.518; 2.175; 0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.487; 2.175; 0.79)" />
+			<!--  -->
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.641; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.611; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.579; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.549; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.518; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.487; 2.198; -0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.641; 2.175; -0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.611; 2.175; -0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.579; 2.175; -0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.549; 2.175; -0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.518; 2.175; -0.79)" />
+			<Flare _template="LED" Dir="(0; -0.363; -0.932)" Pos="(0.487; 2.175; -0.79)" />
+			<!--  -->
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; 0.077)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; 0.046)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; 0.016)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; -0.016)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; -0.046)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.077; 2.165; -0.077)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; 0.077)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; 0.046)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; 0.016)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.641; 2.198; 0.8)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; -0.046)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; -0.077)" />
+			<!--  -->
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.611; 2.198; 0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.579; 2.198; 0.8)" />
+			<Flare _template="LED" Dir="(-0.932; -0.363; 0)" Pos="(-1.069; 2.142; -0.016)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.549; 2.198; 0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.518; 2.198; 0.8)" />
+			<Flare _template="LED" Dir="(0; -0.363; 0.932)" Pos="(0.487; 2.198; 0.8)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(0; -0.363; 0.932)" DirAngle="135" Size="0.2" Pos="(0.565; 2.184; 0.798)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(0; -0.363; -0.932)" DirAngle="135" Size="0.2" Pos="(0.565; 2.184; -0.798)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 1.2" Dir="(-0.932; -0.363; 0)" DirAngle="135" Size="0.2" Pos="(-1.077; 2.151; -0.002)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="Rezvani6x6RoofRrack2" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

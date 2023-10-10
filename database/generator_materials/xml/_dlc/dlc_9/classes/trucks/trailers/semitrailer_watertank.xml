@@ -1,0 +1,200 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheel
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.0244"
+			SuspensionStrength="0.0422"
+			Torque="default"
+			Type="semitrailer_oiltank"
+			SuspensionMin="-0.1"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+	<Constraint>
+		<TrailerRagdoll
+			PlaneAxisLocal="(0; 0; 1)"
+			TwistAxisLocal="(1; 0; 0)"
+			Type="Ragdoll"
+			PlaneMin="-90"
+			TwistMin="-30"
+			PlaneMax="90"
+			TwistMax="30"
+		>
+			<TwistMotor Damping="80000" Spring="320000" Type="Spring" />
+		</TrailerRagdoll>
+	</Constraint>
+</_templates>
+<Truck Type="Trailer" AttachType="Saddle">
+	<TruckData WaterCapacity="3700">
+		<Wheels>
+			<Wheel _template="TrailerWheel" Pos="(-2.275; 0.601; 0.857)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-2.275; 0.601; 0.857)" />
+			<Wheel _template="TrailerWheel" Pos="(-3.588; 0.601; 0.857)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-3.588; 0.601; 0.857)" />
+			<Wheel _template="TrailerWheel" Pos="(-4.901; 0.601; 0.857)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-4.901; 0.601; 0.857)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.842"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-8"
+			MaxX="3.7"
+		/>
+		<LimitedFluid
+			Color="(86; 186; 255; 255)"
+			Center="(0.199; 2.985; 0)"
+			LengthX="12"
+			RadiusY="1.27"
+			RadiusZ="1.27"
+			Type="Cylinder"
+		/>
+		<Foot Origin="(2.196; 0.001; 0.519)" />
+		<Foot Origin="(2.196; 0.001; -0.519)" />
+		<Constraint _template="TrailerRagdoll" />
+		<Camera Center="(-0.9; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				Tau="0.04"
+				TerminalFix="true"
+				Position=".618"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_watertank">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="4000"
+		>
+			<Body
+				Mass="300"
+				ModelFrame="BoneLeg_cdt"
+				NoFoliageCollisions="true"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit=".618"
+				>
+					<Motor Force="45000" Type="Position" />
+				</Constraint>
+				<Body
+					Mass="40"
+					ModelFrame="BoneLeftFoot_cdt"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="20"
+					>
+						<Motor Damping="10" Spring="2" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					Mass="40"
+					ModelFrame="BoneRightFoot_cdt"
+					NoFoliageCollisions="true"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-20"
+						MaxLimit="20"
+					>
+						<Motor Damping="10" Spring="2" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30" />
+			</Body>
+			<Body Mass="5" ModelFrame="BoneHandle_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="1"
+				>
+					<Motor Damping="1" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.989; 1.433; 0)" />
+			<Flare _template="StopSignal" Pos="(-6.889; 1.433; -0.97)" />
+			<Flare _template="StopSignal" Pos="(-6.889; 1.433; 0.97)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.894; 1.438; 0.858)" />
+			<Light _template="ReverseSignal" Pos="(-6.894; 1.438; -0.858)" />
+			<Flare _template="ReverseSignal" Pos="(-6.894; 1.438; 0.858)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.894; 1.438; 0.858)" />
+			<Flare _template="ReverseSignal" Pos="(-6.894; 1.438; -0.858)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.894; 1.438; -0.858)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-6.989; 1.433; 0)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-6.889; 1.433; -1)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-6.889; 1.433; 1)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-4.243; 1.479; -1.137)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-4.243; 1.479; 1.137)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(-1.253; 1.479; -1.137)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(-1.253; 1.479; 1.137)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/semitrailer_oiltank_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData Price="6000">
+		<WinchSocket Pos="(-6.823; 1.454; 0.367)" />
+		<WinchSocket Pos="(-6.823; 1.454; -0.367)" />
+		<WinchSocket Pos="(-1.204; 1.454; 0.445)" />
+		<WinchSocket Pos="(-1.204; 1.454; -0.445)" />
+		<WinchSocket Pos="(2.192; 1.61; 0.589)" />
+		<WinchSocket Pos="(2.192; 1.61; -0.589)" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(4.973; 1.56; 0)" />
+		<UiDesc
+			UiDesc="UI_SEMITRAILER_WATERTANK_DESC"
+			UiIcon30x30="tankImg30"
+			UiIcon40x40="tankImg"
+			UiName="UI_SEMITRAILER_WATERTANK_NAME"
+		/>
+		<RequiredAddon _template="SaddleLow" />
+		<InstallSocket Offset="(4.969; 1.608; 0)" Type="SemitrailerOiltank" />
+		<CraneSocket Pos="(-6.823; 1.454; 0.367)" />
+		<CraneSocket Pos="(-6.823; 1.454; -0.367)" />
+		<CraneSocket Pos="(-1.204; 1.454; 0.445)" />
+		<CraneSocket Pos="(-1.204; 1.454; -0.445)" />
+		<CraneSocket Pos="(2.192; 1.61; 0.589)" />
+		<CraneSocket Pos="(2.192; 1.61; -0.589)" />
+		<CraneSocket Pos="(4.973; 1.56; 0)" />
+	</GameData>
+	<WaterMass>
+		<Body Mass="3700" />
+	</WaterMass>
+</Truck>

@@ -1,0 +1,6 @@
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/bridge_road_01_sn_support_lmk" />
+</ModelBrand>

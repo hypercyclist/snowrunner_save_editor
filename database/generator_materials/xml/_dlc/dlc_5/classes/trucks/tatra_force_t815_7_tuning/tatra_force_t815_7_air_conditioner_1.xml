@@ -1,0 +1,24 @@
+<_parent File="tatra_force_t815_7_horn_1" />
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0.3"
+		Frame="BoneRotator"
+		RotationAxis="(0; 1; 0)"
+		RotationSpeed="8"
+	/>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_air_conditioner_1"/>
+	<GameData
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_CABIN_AIR_CONDITIONER_1_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_CABIN_AIR_CONDITIONER_1_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157AirConditioner" />
+	</GameData>
+</TruckAddon>

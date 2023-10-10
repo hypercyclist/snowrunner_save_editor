@@ -1,0 +1,31 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutOffroad _template="Light" >
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutSoft" />
+			<WheelFriction _template="ScoutOffroad" />
+		</ScoutOffroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.715">
+	<TruckTires>
+		<TruckTire _template="ScoutOffroad" Mesh="wheels/tire_gor_by4" Name="tire_1">
+			<WheelFriction _template="Offroad" SubstanceFriction="2.1" />
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="7"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_GOR_BY4_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_gor_by4" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_GOR_BY4_DESC" UiName="UI_RIM_GOR_BY4_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

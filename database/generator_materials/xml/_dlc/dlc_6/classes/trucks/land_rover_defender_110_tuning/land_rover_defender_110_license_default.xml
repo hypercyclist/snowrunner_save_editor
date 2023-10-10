@@ -1,0 +1,8 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_tuning/land_rover_defender_110_license_default"/>
+	<GameData
+	>
+		<InstallSocket Type="LandRoverDef110License" />
+	</GameData>
+</TruckAddon>

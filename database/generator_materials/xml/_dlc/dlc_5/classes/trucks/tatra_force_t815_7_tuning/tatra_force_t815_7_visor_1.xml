@@ -1,0 +1,32 @@
+<_templates Include="trucks" />
+<_parent File="tatra_force_t815_7_horn_1" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_tuning/tatra_force_t815_7_visor_1">
+		<Body ImpactType="Truck" Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.154; 2.719; -1.037)" />
+			<Flare _template="MarkerBeacon" Pos="(4.154; 2.719; 1.042)" />
+			<Flare _template="MarkerBeacon" Pos="(4.169; 2.719; -0.241)" />
+			<Flare _template="MarkerBeacon" Pos="(4.169; 2.719; 0.257)" />
+			<Flare _template="MarkerBeacon" Pos="(4.169; 2.719; 0.013)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Category="fender_front"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_NAME"
+		/>
+		<InstallSocket Type="TatraForceT8157Visor" />
+	</GameData>
+</TruckAddon>

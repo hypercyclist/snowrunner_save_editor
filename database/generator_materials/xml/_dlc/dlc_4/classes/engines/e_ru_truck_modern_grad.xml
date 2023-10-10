@@ -1,0 +1,31 @@
+<_templates>
+	<Engine>
+		<RUTruckModernEngine BrakesDelay="0.5" MaxDeltaAngVel="0.01" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="RUTruckModernEngine"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="180"
+		DamagedConsumptionModifier="1.2"
+		FuelConsumption="8.2"
+		Name="ru_truck_modern_engine_grad"
+		Torque="235000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="13200"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_TRUCK_MODERN_GRAD_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_TRUCK_MODERN_GRAD_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

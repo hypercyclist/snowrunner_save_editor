@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="land_rover_defender_90_visor_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_90_tuning/land_rover_defender_90_visor_1"/>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(0.577; 1.922; -0.615)" />
+			<Flare _template="MarkerBeacon" Pos="(0.577; 1.922; 0.615)" />
+			<Flare _template="MarkerBeacon" Pos="(0.577; 1.922; -0.153)" />
+			<Flare _template="MarkerBeacon" Pos="(0.577; 1.922; 0.153)" />
+			<Flare _template="MarkerBeacon" Pos="(0.577; 1.922; 0)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_BEACONS_NAME"
+		/>
+	</GameData>
+</TruckAddon>

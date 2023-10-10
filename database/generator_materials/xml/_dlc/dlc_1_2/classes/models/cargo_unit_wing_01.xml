@@ -1,0 +1,15 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0.696; -1.684; -0.234)"
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/cargo_wing1_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData LoadType="CargoWing1" PackSlotsNumber="5">
+		<CraneSocket Pos="(1.938; 1.456; 0)" />
+	</GameData>
+</ModelBrand>

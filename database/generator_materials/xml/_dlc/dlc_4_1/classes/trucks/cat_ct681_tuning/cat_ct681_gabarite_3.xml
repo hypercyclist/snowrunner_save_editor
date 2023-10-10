@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<_parent File="cat_ct681_gabarite_2" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_gabarite_3" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(-0.052; 2.931; -0.875)" />
+			<Flare _template="MarkerBeacon" Pos="(-0.052; 2.931; 0.875)" />
+			<Flare _template="MarkerBeacon" Pos="(-0.034; 2.970; -0.222)" />
+			<Flare _template="MarkerBeacon" Pos="(-0.034; 2.969; 0.226)" />
+			<Flare _template="MarkerBeacon" Pos="(-0.029; 2.972; -0.002)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="17"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_LIGHTS_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_LIGHTS_CHROME_NAME"
+		/>
+	</GameData>
+</TruckAddon>
