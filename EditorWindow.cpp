@@ -56,6 +56,8 @@ EditorWindow::EditorWindow(QWidget *parent)
     ui->upgradesTableBar->filterMaps();
     ui->upgradesTable->updateTable();
 
+    applyLanguage(Language::RUSSIAN);
+
     connect(ui->menuRussian, &QAction::triggered, this, [=] { applyLanguage(Language::RUSSIAN); });
     connect(ui->menuChineseTraditional, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_TRADITIONAL); });
     connect(ui->menuChineseSimple, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_SIMPLIFIED); });

@@ -2,6 +2,7 @@
 
 Truck::Truck() :
     m_code(),
+    m_nameCode(),
     m_name(),
     m_upgrades()
 { }
@@ -19,6 +20,16 @@ void Truck::setCode(std::string _code)
 std::string Truck::code()
 {
     return m_code;
+}
+
+void Truck::setNameCode(std::string _code)
+{
+    m_nameCode = _code;
+}
+
+std::string Truck::nameCode()
+{
+    return m_nameCode;
 }
 
 void Truck::setName(Language _language, std::string _name)

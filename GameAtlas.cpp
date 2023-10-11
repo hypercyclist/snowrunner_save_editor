@@ -275,7 +275,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                             {
                                 for (const auto& upgradePair : mapPair.second->upgrades())
                                 {
-                                    if (upgradePair.second->middleCode() == middleCode)
+                                    if (Utils::stolower(upgradePair.second->middleCode()) == Utils::stolower(middleCode))
                                     {
                                         upgrade = upgradePair.second;
                                         found = true;
@@ -343,7 +343,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                             {
                                 for (const auto& upgradePair : mapPair.second->upgrades())
                                 {
-                                    if (upgradePair.second->middleCode() == middleCode)
+                                    if (Utils::stolower(upgradePair.second->middleCode()) == Utils::stolower(middleCode))
                                     {
                                         upgrade = upgradePair.second;
                                         found = true;
@@ -437,18 +437,20 @@ void GameAtlas::createTrucksData()
                 continue;
             }
 
-            std::string truckCode = "";
+            std::string truckCode = nestedFileInfo.fileName().toStdString().substr(0, nestedFileInfo.fileName().toStdString().length() - 4);
+            std::string translationCode = "";
             rapidxml::xml_node<> *gameDataNode = node->first_node("GameData");
             if (gameDataNode)
             {
-                truckCode = gameDataNode->first_node("UiDesc")->first_attribute("UiName")->value();
+                translationCode = gameDataNode->first_node("UiDesc")->first_attribute("UiName")->value();
             }
 
             Truck* truck = new Truck(truckCode);
 
+            truck->setNameCode(translationCode);
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                truck->setName(languagePair.first, m_localization->getLocalization(truck->code(), languagePair.first));
+                truck->setName(languagePair.first, m_localization->getLocalization(translationCode, languagePair.first));
             }
 
             std::multimap<std::string, std::string> files;
@@ -551,8 +553,44 @@ void GameAtlas::createTrucksData()
                     }
                 }
             }
-            std::string tuningFolderPath = nestedFileInfo.absoluteFilePath().toStdString().substr(0, nestedFileInfo.absoluteFilePath().toStdString().length() - 4);
-            QFileInfoList tuningFolderContent = QDir(QString::fromStdString(tuningFolderPath) + "_tuning").entryInfoList(
+
+            m_trucks[truckCode] = truck;
+        }
+    }
+    for (QFileInfo fileInfo : xmlFolderContent)
+    {
+        if (!fileInfo.isDir())
+        {
+            continue;
+        }
+
+        if (fileInfo.fileName() != "trucks")
+        {
+            continue;
+        }
+        QDir nestedXmlFolder(fileInfo.absoluteFilePath());
+        QFileInfoList nestedXmlFolderContent = nestedXmlFolder.entryInfoList(
+            QStringList(), QDir::Files | QDir::NoDotAndDotDot);
+        QFileInfoList nestedTunningFoldersContent = nestedXmlFolder.entryInfoList(
+            QStringList() << "*_tuning", QDir::Dirs | QDir::NoDotAndDotDot);
+        for (QFileInfo nestedFileInfo : nestedTunningFoldersContent)
+        {
+            std::string folderName = nestedFileInfo.fileName().toStdString();
+            std::string truckMiddleCode = Utils::replace(folderName, "_tuning", "");
+            Truck* truck = nullptr;
+            for (const auto& truckPair : m_trucks)
+            {
+                if (truckPair.first == truckMiddleCode)
+                {
+                    truck = truckPair.second;
+                }
+            }
+
+            if (!truck) {
+                continue;
+            }
+
+            QFileInfoList tuningFolderContent = QDir(nestedFileInfo.absoluteFilePath()).entryInfoList(
                 QStringList(), QDir::Files | QDir::NoDotAndDotDot);
             for (QFileInfo tuningFileInfo : tuningFolderContent)
             {
@@ -568,8 +606,6 @@ void GameAtlas::createTrucksData()
                     truck->addUpgrade(middleCode);
                 }
             }
-
-            m_trucks[truckCode] = truck;
         }
     }
 }
@@ -597,7 +633,7 @@ void GameAtlas::connectUpgradesWithTrucks()
                     std::vector<std::string> truckUpgrades = truckPair.second->upgrades();
                     if (std::find(truckUpgrades.begin(), truckUpgrades.end(), upgrade->middleCode()) != truckUpgrades.end() )
                     {
-                        upgrade->addTruck(truckPair.second->code());
+                        upgrade->addTruck(truckPair.second->nameCode());
                     }
                 }
             }
@@ -701,9 +737,11 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
     {
         Truck* truck = new Truck(trucksIt->name.GetString());
 
+        truck->setNameCode(trucksIt->value["nameCode"].GetString());
+
         for (const auto& languagePair : m_localization->languageTextNames())
         {
-            std::string translation = m_localization->getLocalization(truck->code(), languagePair.first);
+            std::string translation = m_localization->getLocalization(truck->nameCode(), languagePair.first);
             truck->setName(languagePair.first, translation);
         }
 
@@ -846,8 +884,12 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
         rapidjson::Value truckObject;
         truckObject.SetObject();
 
-        rapidjson::Value truckName;
-        truckName.SetString(truck->code().c_str(), truck->code().length(), allocator);
+        rapidjson::Value truckCode;
+        truckCode.SetString(truck->code().c_str(), truck->code().length(), allocator);
+
+        rapidjson::Value truckNameCode;
+        truckNameCode.SetString(truck->nameCode().c_str(), truck->nameCode().length(), allocator);
+        truckObject.AddMember("nameCode", truckNameCode, allocator);
 
         rapidjson::Value truckUpgrades;
         truckUpgrades.SetArray();
@@ -860,7 +902,7 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
         }
         truckObject.AddMember("truckUpgrades", truckUpgrades, allocator);
 
-        trucksObject.AddMember(truckName, truckObject, allocator);
+        trucksObject.AddMember(truckCode, truckObject, allocator);
     }
 
     if (databaseJsonDocument.HasMember("Trucks"))

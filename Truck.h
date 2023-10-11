@@ -15,6 +15,9 @@ public:
     void setCode(std::string _code);
     std::string code();
 
+    void setNameCode(std::string _code);
+    std::string nameCode();
+
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
@@ -23,6 +26,7 @@ public:
 
 private:
     std::string m_code;
+    std::string m_nameCode;
     std::map<Language, std::string> m_name;
     std::vector<std::string> m_upgrades;
 };
