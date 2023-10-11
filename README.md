@@ -23,5 +23,9 @@ There are issues. For now tasks marked as completed isn't counted in statistics.
 Free to use/edit/fork.
 License: GPL.
 
+Demo screenshot:
+
+![](https://github.com/hypercyclist/snowrunner_save_editor/blob/main/images/demo_image_1.png)
+
 Release builds:
 [snowrunner_save_editor_release_v1 (MinGW 64-bit Windows)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release)
