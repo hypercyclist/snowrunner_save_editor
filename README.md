@@ -24,4 +24,4 @@ Free to use/edit/fork.
 License: GPL.
 
 Release builds:
-There are must be a link.
+[snowrunner_save_editor_release_v1 (MinGW 64-bit Windows)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release)
