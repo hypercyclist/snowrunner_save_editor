@@ -135,8 +135,18 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
     rapidjson::Document jsonDocument;
     jsonDocument.Parse(saveFile.c_str());
 
-    rapidjson::Value& ppdObject =
-        jsonDocument["CompleteSave"]["SslValue"]["upgradesGiverData"];
+    rapidjson::Value& ppdObject = jsonDocument;
+    int savesCount = 4;
+    for (int i = 0; i < savesCount; i++)
+    {
+        std::string completeSaveMemberName = "CompleteSave";
+        if (i > 0) {
+            completeSaveMemberName += std::to_string(i);
+        }
+        if (jsonDocument.HasMember(completeSaveMemberName.c_str())) {
+            ppdObject = jsonDocument[completeSaveMemberName.c_str()]["SslValue"]["upgradesGiverData"];
+        }
+    }
 
     for (auto levelIt = ppdObject.MemberBegin(); levelIt != ppdObject.MemberEnd(); levelIt++)
     {

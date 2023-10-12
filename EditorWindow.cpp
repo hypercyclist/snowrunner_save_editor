@@ -97,15 +97,27 @@ void EditorWindow::on_menuOpen_triggered()
     ui->tabWidget->widget(2)->setEnabled(true);
 //    ui->tabWidget->widget(3)->setEnabled(true);
 
-    rapidjson::Value& sslValue = jsonDocument["CompleteSave"]["SslValue"];
-    rapidjson::Value& persistentProfileData = sslValue["persistentProfileData"];
+    rapidjson::Value* sslValue = nullptr;
+    int savesCount = 4;
+    for (int i = 0; i < savesCount; i++)
+    {
+        std::string completeSaveMemberName = "CompleteSave";
+        if (i > 0) {
+            completeSaveMemberName += std::to_string(i);
+        }
+        if (jsonDocument.HasMember(completeSaveMemberName.c_str())) {
+            sslValue = &jsonDocument[completeSaveMemberName.c_str()]["SslValue"];
+        }
+    }
+
+    rapidjson::Value& persistentProfileData = (*sslValue)["persistentProfileData"];
 
     ui->moneyCountSpinBox->setValue(persistentProfileData["money"].GetInt());
     ui->rankSpinBox->setValue(persistentProfileData["rank"].GetInt());
     ui->experienceCountSpinBox->setValue(persistentProfileData["experience"].GetInt());
 
     std::vector<std::string> finishedObjs;
-    rapidjson::Value& finishedObjsArray = sslValue["finishedObjs"].GetArray();
+    rapidjson::Value& finishedObjsArray = (*sslValue)["finishedObjs"].GetArray();
     for (unsigned int i = 0; i < finishedObjsArray.Size(); i++)
     {
         finishedObjs.push_back(finishedObjsArray[i].GetString());
@@ -114,7 +126,7 @@ void EditorWindow::on_menuOpen_triggered()
     ui->completeTasksTable->updateTable();
 
     std::vector<std::string> receivedUpgrades;
-    rapidjson::Value& receivedUpgradesValue = sslValue["upgradesGiverData"];
+    rapidjson::Value& receivedUpgradesValue = (*sslValue)["upgradesGiverData"];
     // for (auto& m : document.GetObject())
     for (auto levelIt = receivedUpgradesValue.MemberBegin(); levelIt != receivedUpgradesValue.MemberEnd(); levelIt++)
     {
@@ -133,9 +145,22 @@ void EditorWindow::on_menuOpen_triggered()
 
 void EditorWindow::on_menuSave_triggered()
 {
-    jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["money"] = ui->moneyCountSpinBox->value();
-    jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["rank"] = ui->rankSpinBox->value();
-    jsonDocument["CompleteSave"]["SslValue"]["persistentProfileData"]["experience"] = ui->experienceCountSpinBox->value();
+    rapidjson::Value* sslValue = nullptr;
+    int savesCount = 4;
+    for (int i = 0; i < savesCount; i++)
+    {
+        std::string completeSaveMemberName = "CompleteSave";
+        if (i > 0) {
+            completeSaveMemberName += std::to_string(i);
+        }
+        if (jsonDocument.HasMember(completeSaveMemberName.c_str())) {
+            sslValue = &jsonDocument[completeSaveMemberName.c_str()]["SslValue"];
+        }
+    }
+
+    (*sslValue)["persistentProfileData"]["money"] = ui->moneyCountSpinBox->value();
+    (*sslValue)["persistentProfileData"]["rank"] = ui->rankSpinBox->value();
+    (*sslValue)["persistentProfileData"]["experience"] = ui->experienceCountSpinBox->value();
     rapidjson::Value finishedObjsArray;
     finishedObjsArray.SetArray();
     for (Task* task : m_database->gameAtlas()->completedTasks())
@@ -144,10 +169,19 @@ void EditorWindow::on_menuSave_triggered()
         strVal.SetString(task->code().c_str(), task->code().length(), jsonDocument.GetAllocator());
         finishedObjsArray.PushBack(strVal, jsonDocument.GetAllocator());
     }
-    jsonDocument["CompleteSave"]["SslValue"]["finishedObjs"] = finishedObjsArray;
-    jsonDocument["CompleteSave"]["SslValue"]["discoveredObjectives"] = finishedObjsArray;
+    (*sslValue)["finishedObjs"] = finishedObjsArray;
 
-    rapidjson::Value& receivedUpgradesValue = jsonDocument["CompleteSave"]["SslValue"]["upgradesGiverData"];
+    rapidjson::Value discoveredObjectivesArray;
+    discoveredObjectivesArray.SetArray();
+    for (Task* task : m_database->gameAtlas()->completedTasks())
+    {
+        rapidjson::Value strVal;
+        strVal.SetString(task->code().c_str(), task->code().length(), jsonDocument.GetAllocator());
+        discoveredObjectivesArray.PushBack(strVal, jsonDocument.GetAllocator());
+    }
+    (*sslValue)["discoveredObjectives"] = discoveredObjectivesArray;
+
+    rapidjson::Value& receivedUpgradesValue = (*sslValue)["upgradesGiverData"];
     std::vector<Upgrade*> newReceivedUpgrades = m_database->gameAtlas()->receivedUpgrades();
     for (auto& levelObject : receivedUpgradesValue.GetObject())
     {
@@ -174,9 +208,8 @@ void EditorWindow::on_menuSave_triggered()
     jsonDocument.Accept(writer);
 
     QString fileName = QFileDialog::getSaveFileName(this, tr("Сохранить файл"), "", tr("CFG (*.cfg)"));
-    QFile file(fileName);
-    file.open(QIODevice::WriteOnly | QIODevice::Text);
-    file.write(buffer.GetString());
+    std::ofstream file(fileName.toStdString());
+    file << buffer.GetString() << '\0';
     file.close();
 }
 

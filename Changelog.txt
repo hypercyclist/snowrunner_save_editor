@@ -1,0 +1,12 @@
+1.01
+- Fixed error when open save file from second, third or fourth slot (not first).
+- Fixed when game don't see save file in slot (I forgot to arr zero byte to end of save file).
+- Fixed when game won't load save file (it looks like game do nothing with save file after press select button).
+- Added information tab with description looks like GitHub readme.
+- Fixed stucked map filter.
+- Tabs disabled before file will open.
+- Removed statistics tab because it's unused.
+- Tested all functions. It works correctly.
+
+1.0
+- Upload raw application as is.
