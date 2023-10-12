@@ -255,6 +255,9 @@
           </property>
           <item row="1" column="0">
            <widget class="CompleteUpgradesTable" name="upgradesTable">
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
             <column>
              <property name="text">
               <string>Регион</string>
