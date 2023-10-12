@@ -22,6 +22,8 @@ private slots:
     void on_menuSave_triggered();
     void applyLanguage(Language _language);
 
+    void on_menuInformation_triggered();
+
 private:
     Ui::EditorWindow *ui;
     Database* m_database;

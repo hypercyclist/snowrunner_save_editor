@@ -13,6 +13,7 @@ SOURCES += \
     CompleteUpgradesTable.cpp \
     Database.cpp \
     GameAtlas.cpp \
+    InformationWidget.cpp \
     Localization.cpp \
     Map.cpp \
     Region.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     Database.h \
     EditorWindow.h \
     GameAtlas.h \
+    InformationWidget.h \
     Localization.h \
     Map.h \
     Region.h \
@@ -83,6 +85,7 @@ HEADERS += \
 
 FORMS += \
     EditorWindow.ui \
+    InformationWidget.ui \
     TableFilterByRegionMap.ui
 
 # Default rules for deployment.

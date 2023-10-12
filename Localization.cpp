@@ -180,7 +180,8 @@ void Localization::loadAppLocalization()
         "UI_TRUCK_PART_SUSPENSION",	// "ПОДВЕСКА"
         "UI_TRUCK_PART_GEARBOX", // "КОРОБКА ПЕРЕДАЧ"
         "UI_TRUCK_INFO_DIFF_LOCK", // "ДИФФЕРЕНЦИАЛ"
-        "UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME" // "Подключаемый полный привод"
+        "UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME", // "Подключаемый полный привод"
+        "UI_POLYGON_INFO" // "Информация"
     };
     for (std::string code : appLocalizationCodes)
     {

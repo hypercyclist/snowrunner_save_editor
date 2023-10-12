@@ -14,7 +14,7 @@
 #include "Utils.h"
 #include "TableFilterByRegionMap.h"
 #include "ui_TableFilterByRegionMap.h"
-
+#include "InformationWidget.h"
 #include <fstream>
 #include <iostream>
 
@@ -50,7 +50,7 @@ EditorWindow::EditorWindow(QWidget *parent)
 
     ui->upgradesTable->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTable->setLocalization(m_database->localization());
-    ui->upgradesTable->setFilterBarWidget(ui->completeTasksTableBar);
+    ui->upgradesTable->setFilterBarWidget(ui->upgradesTableBar);
     ui->upgradesTableBar->setLocalization(m_database->localization());
     ui->upgradesTableBar->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTableBar->filterMaps();
@@ -71,6 +71,11 @@ EditorWindow::EditorWindow(QWidget *parent)
     connect(ui->menuCzech, &QAction::triggered, this, [=] { applyLanguage(Language::CZECH); });
     connect(ui->menuItalian, &QAction::triggered, this, [=] { applyLanguage(Language::ITALIAN); });
     connect(ui->menuPolish, &QAction::triggered, this, [=] { applyLanguage(Language::POLISH); });
+
+    ui->tabWidget->widget(0)->setDisabled(true);
+    ui->tabWidget->widget(1)->setDisabled(true);
+    ui->tabWidget->widget(2)->setDisabled(true);
+//    ui->tabWidget->widget(3)->setDisabled(true);
 }
 
 EditorWindow::~EditorWindow()
@@ -79,13 +84,18 @@ EditorWindow::~EditorWindow()
 }
 
 void EditorWindow::on_menuOpen_triggered()
-{
+{   
     QString fileName = QFileDialog::getOpenFileName(this, tr("Открыть файл"), "", tr("CFG (*.cfg)"));
     QFile file(fileName);
     file.open(QIODevice::ReadOnly | QIODevice::Text);
     text = file.readAll();
     file.close();
     jsonDocument.Parse(text.toUtf8());
+
+    ui->tabWidget->widget(0)->setEnabled(true);
+    ui->tabWidget->widget(1)->setEnabled(true);
+    ui->tabWidget->widget(2)->setEnabled(true);
+//    ui->tabWidget->widget(3)->setEnabled(true);
 
     rapidjson::Value& sslValue = jsonDocument["CompleteSave"]["SslValue"];
     rapidjson::Value& persistentProfileData = sslValue["persistentProfileData"];
@@ -177,6 +187,9 @@ void EditorWindow::applyLanguage(Language _language)
     ui->menuOpen->setText(localization->getLocalization("UI_POLYGON_PACKER_DIALOG_OPEN", _language).c_str());
     ui->menuSave->setText(localization->getLocalization("UI_LOG_SAVE_IN_PROGRESS", _language).c_str());
 
+    ui->menuAbout->setTitle(localization->getLocalization("UI_POLYGON_INFO", _language).c_str());
+    ui->menuInformation->setText(localization->getLocalization("UI_POLYGON_INFO", _language).c_str());
+
     ui->menuLanguage->setToolTip(localization->getLocalization("UI_SETTINGS_LANGUAGE", _language).c_str());
 
     ui->tabWidget->setTabText(0, localization->getLocalization("UI_OPEN_PROFILE", _language).c_str());
@@ -228,7 +241,7 @@ void EditorWindow::applyLanguage(Language _language)
     ui->upgradesTable->horizontalHeaderItem(2)->setText(localization->getLocalization("UI_HUD_NAV_PANEL_GET_UPGRADE", _language).c_str());
     ui->upgradesTable->horizontalHeaderItem(3)->setText(selectString.c_str());
 
-    ui->tabWidget->setTabText(3, localization->getLocalization("UI_PLAYER_PROFILE_STATISTICS_HEADER", _language).c_str());
+//    ui->tabWidget->setTabText(3, localization->getLocalization("UI_PLAYER_PROFILE_STATISTICS_HEADER", _language).c_str());
 
     localization->setDefaultLanguage(_language);
 
@@ -237,6 +250,17 @@ void EditorWindow::applyLanguage(Language _language)
 
     ui->upgradesTableBar->filterMaps();
     ui->upgradesTable->updateTable();
+}
+
+void EditorWindow::on_menuInformation_triggered()
+{
+    InformationWidget* informationWidget = new InformationWidget(this);
+    informationWidget->setWindowTitle(m_database->localization()->
+        getLocalization("UI_POLYGON_INFO", m_database->localization()->defaultLanguage()).c_str());
+    informationWidget->setWindowFlags(Qt::Window);
+    informationWidget->setWindowModality(Qt::WindowModality::ApplicationModal);
+    informationWidget->setAttribute(Qt::WA_DeleteOnClose);
+    informationWidget->show();
 }
 
 //    connect(ui->moneyCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });

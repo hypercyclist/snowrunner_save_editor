@@ -60,6 +60,9 @@
     </item>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -288,11 +291,6 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="statistics">
-       <attribute name="title">
-        <string>Статистика</string>
-       </attribute>
-      </widget>
      </widget>
     </item>
    </layout>
@@ -347,7 +345,14 @@
     <addaction name="menuItalian"/>
     <addaction name="menuPolish"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Информация</string>
+    </property>
+    <addaction name="menuInformation"/>
+   </widget>
    <addaction name="menu"/>
+   <addaction name="menuAbout"/>
    <addaction name="menuLanguage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
@@ -428,6 +433,11 @@
   <action name="menuPolish">
    <property name="text">
     <string>Polski</string>
+   </property>
+  </action>
+  <action name="menuInformation">
+   <property name="text">
+    <string>Информация</string>
    </property>
   </action>
  </widget>
