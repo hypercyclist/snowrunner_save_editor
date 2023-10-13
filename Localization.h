@@ -41,6 +41,7 @@ public:
     std::map<Language, std::map<std::string, std::string>>& getLocalizationTemplates();
 
     std::string languageTextName(Language _language);
+    Language languageByTextName(std::string _languageCode);
     std::map<Language, std::string>& languageTextNames();
 
 private:

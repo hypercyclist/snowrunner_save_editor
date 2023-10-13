@@ -1,6 +1,4 @@
 #include "GameAtlas.h"
-#include <fstream>
-#include <sstream>
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
 #include "Utils.h"
@@ -15,6 +13,9 @@
 #include "rapidxml/rapidxml.hpp"
 #include <QDebug>
 #include "Truck.h"
+
+#include <fstream>
+#include <sstream>
 
 GameAtlas::GameAtlas() :
     m_regions(),

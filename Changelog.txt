@@ -1,3 +1,6 @@
+1.02
+- Add application config that contains database folder path, last save directory and last used language.
+
 1.01
 - Fixed error when open save file from second, third or fourth slot (not first).
 - Fixed when game don't see save file in slot (I forgot to arr zero byte to end of save file).

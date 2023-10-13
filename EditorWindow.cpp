@@ -7,7 +7,6 @@
 #include <QAbstractItemModel>
 #include "Localization.h"
 #include "Database.h"
-#include <rapidjson/writer.h>
 #include "GameAtlas.h"
 #include "Task.h"
 #include "Upgrade.h"
@@ -17,29 +16,231 @@
 #include "InformationWidget.h"
 #include <fstream>
 #include <iostream>
+#include "SaveFile.h"
+#include <QMessageBox>
+#include "AppConfig.h"
+#include <QFileInfo>
 
 EditorWindow::EditorWindow(QWidget *parent)
     : QMainWindow(parent),
     ui(new Ui::EditorWindow),
+    m_appConfig(nullptr),
     m_database(nullptr),
+    m_saveFile(nullptr),
     text("")
 {
     ui->setupUi(this);
 
-    std::string currentPath = QDir::currentPath().toStdString();
-    std::string databasePath = currentPath + "/database/database.json";
-    std::string tasksPath = currentPath + "/database/generator_materials/tasks.json";
-    std::string initialCacheBlockPath = currentPath + "/database/generator_materials/initial.cache_block";
-    std::string savePath = currentPath + "/database/generator_materials/CompleteSave.cfg";
+    std::string appFolderPath = QDir::currentPath().toStdString();
+    std::string configFullFileName = appFolderPath + "/config.json";
+
+    m_appConfig = new AppConfig();
+    m_appConfig->loadConfig(configFullFileName);
+
+    std::string databasePath = m_appConfig->databaseFolderPath();
 
     m_database = new Database();
     bool databaseLoaded = m_database->loadDatabase(databasePath);
     if (!databaseLoaded)
     {
-        m_database->createDatabase(databasePath, tasksPath,
-            initialCacheBlockPath, savePath);
+        m_database->createDatabase(databasePath);
     }
 
+    configureTasksTable();
+    configureUpgradesTable();
+
+    applyLanguage(m_database->localization()->languageByTextName(
+        m_appConfig->lastLanguageCode()));
+
+    connectLanguageButtonsToFunctions();
+
+// Disable tabs before save will open.
+    setTabsEnabled(false);
+}
+
+EditorWindow::~EditorWindow()
+{
+    delete ui;
+
+    if (m_database) delete m_database;
+    if (m_saveFile) delete m_saveFile;
+}
+
+void EditorWindow::on_menuOpen_triggered()
+{   
+// Open and load file.
+    std::string fullFileName = QFileDialog::getOpenFileName(this,
+        tr("Открыть файл"),
+        QString::fromStdString(m_appConfig->lastSaveFolderPath()),
+        tr("CFG (*.cfg)")).toStdString();
+
+    if (m_saveFile)
+    {
+        delete m_saveFile;
+    }
+    m_saveFile = new SaveFile();
+    if (!m_saveFile->loadSaveFile(fullFileName))
+    {
+        QMessageBox* mb = new QMessageBox();
+        mb->setWindowTitle("Save file loading error");
+        mb->setText(QString::fromStdString(m_saveFile->error()));
+        mb->exec();
+        return;
+    }
+
+    QFileInfo fileInfo(QString::fromStdString(fullFileName));
+    m_appConfig->setLastSaveFolderPath(fileInfo.absolutePath().toStdString());
+    m_appConfig->saveConfig();
+
+// Enable tabs after loading.
+    setTabsEnabled(true);
+
+// Grab values.
+    ui->moneyCountSpinBox->setValue(m_saveFile->money());
+    ui->rankSpinBox->setValue(m_saveFile->rank());
+    ui->experienceCountSpinBox->setValue(m_saveFile->experience());
+
+    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->finishedObjs());
+    ui->completeTasksTable->updateTable();
+
+    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(m_saveFile->receivedUpgrades());
+    ui->upgradesTable->updateTable();
+}
+
+void EditorWindow::on_menuSave_triggered()
+{
+// Сhoose file destination and name. It can create and override file.
+    std::string fullFileName = QFileDialog::getSaveFileName(this,
+        tr("Сохранить файл"),
+        QString::fromStdString(m_appConfig->lastSaveFolderPath()),
+        tr("CFG (*.cfg)")).toStdString();
+
+//Apply values.
+    m_saveFile->setMoney(ui->moneyCountSpinBox->value());
+    m_saveFile->setRank(ui->rankSpinBox->value());
+    m_saveFile->setExperience(ui->experienceCountSpinBox->value());
+
+    std::vector<std::string> finishedObjs;
+    for (Task* task : m_database->gameAtlas()->completedTasks())
+    {
+        finishedObjs.push_back(task->code());
+    }
+    m_saveFile->setFinishedObjs(finishedObjs);
+
+    std::vector<std::string> receivedUpgrades;
+    for (Upgrade* upgrade : m_database->gameAtlas()->receivedUpgrades())
+    {
+        receivedUpgrades.push_back(upgrade->code());
+    }
+    m_saveFile->setReceivedUpgrades(receivedUpgrades);
+
+// Save file.
+    if (!m_saveFile->saveSaveFile(fullFileName))
+    {
+        QMessageBox* mb = new QMessageBox();
+        mb->setWindowTitle("Save file saving error");
+        mb->setText(QString::fromStdString(m_saveFile->error()));
+        mb->exec();
+        return;
+    }
+}
+
+// This function change texts of GUI elements.
+void EditorWindow::applyLanguage(Language _language)
+{
+    Localization* localization = m_database->localization();
+    localization->setDefaultLanguage(_language);
+
+    m_appConfig->setLastLanguageCode(localization->languageTextName(_language));
+    m_appConfig->saveConfig();
+
+    ui->menu->setTitle(localization->getLocalization("UI_INGAME_MENU").c_str());
+    ui->menuOpen->setText(localization->getLocalization("UI_POLYGON_PACKER_DIALOG_OPEN").c_str());
+    ui->menuSave->setText(localization->getLocalization("UI_LOG_SAVE_IN_PROGRESS").c_str());
+
+    ui->menuAbout->setTitle(localization->getLocalization("UI_POLYGON_INFO").c_str());
+    ui->menuInformation->setText(localization->getLocalization("UI_POLYGON_INFO").c_str());
+
+    ui->menuLanguage->setToolTip(localization->getLocalization("UI_SETTINGS_LANGUAGE").c_str());
+
+    ui->tabWidget->setTabText(0, localization->getLocalization("UI_OPEN_PROFILE").c_str());
+    ui->moneyCountLabel->setText(localization->getLocalization("UI_POPUP_DEPLOY_MONEY").c_str());
+
+    std::string rankLabelString = localization->getLocalization("UI_NGP_RANK_10");
+    rankLabelString = Utils::replace(rankLabelString, "10", "");
+    rankLabelString = Utils::replace(rankLabelString, " ", "");
+    ui->rankLabel->setText(rankLabelString.c_str());
+    ui->experienceCountLabel->setText(localization->getLocalization("CODEX_LEVEL_UP_HEADER").c_str());
+
+    std::string tasksAndContractsString =
+        localization->getLocalization("UI_PLAYER_PROFILE_TAB_TASKS_NAME") + " / " +
+        localization->getLocalization("UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME");
+    ui->tabWidget->setTabText(1, tasksAndContractsString.c_str());
+
+    std::string regionString = localization->getLocalization("UI_MM_SETTINGS_REGION");
+    std::string mapString = localization->getLocalization("UI_MINIMAP");
+    std::string refreshString = localization->getLocalization("UI_REFRESH");
+    ui->completeTasksTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
+    ui->completeTasksTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
+    ui->completeTasksTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
+
+    std::string checkAllFilteredString =
+        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL") + " / " +
+        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL");
+    ui->completeTasksTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
+
+    ui->completeTasksTable->horizontalHeaderItem(0)->setText(regionString.c_str());
+    ui->completeTasksTable->horizontalHeaderItem(1)->setText(mapString.c_str());
+
+    std::string taskOrContractString =
+            localization->getLocalization("UI_HUD_NAV_PANEL_SHOW_TASK") + " / " +
+            localization->getLocalization("UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT");
+    ui->completeTasksTable->horizontalHeaderItem(2)->setText(taskOrContractString.c_str());
+
+    std::string selectString = localization->getLocalization("UI_SELECT");
+    ui->completeTasksTable->horizontalHeaderItem(3)->setText(selectString.c_str());
+
+    ui->tabWidget->setTabText(2, localization->getLocalization("UI_GARAGE_MODIFICATIONS_UPGRADES").c_str());
+
+    ui->upgradesTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
+    ui->upgradesTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
+    ui->upgradesTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
+    ui->upgradesTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
+
+    ui->upgradesTable->horizontalHeaderItem(0)->setText(regionString.c_str());
+    ui->upgradesTable->horizontalHeaderItem(1)->setText(mapString.c_str());
+    ui->upgradesTable->horizontalHeaderItem(2)->setText(localization->getLocalization("UI_HUD_NAV_PANEL_GET_UPGRADE").c_str());
+    ui->upgradesTable->horizontalHeaderItem(3)->setText(selectString.c_str());
+
+    ui->completeTasksTableBar->filterMaps();
+    ui->completeTasksTable->updateTable();
+
+    ui->upgradesTableBar->filterMaps();
+    ui->upgradesTable->updateTable();
+}
+
+// Open information window.
+void EditorWindow::on_menuInformation_triggered()
+{
+    InformationWidget* informationWidget = new InformationWidget(this);
+    informationWidget->setWindowTitle(m_database->localization()->
+        getLocalization("UI_POLYGON_INFO").c_str());
+    informationWidget->setWindowFlags(Qt::Window);
+    informationWidget->setWindowModality(Qt::WindowModality::ApplicationModal);
+    informationWidget->setAttribute(Qt::WA_DeleteOnClose);
+    informationWidget->show();
+}
+
+void EditorWindow::setTabsEnabled(bool _state)
+{
+    for (int i = 0; i < ui->tabWidget->count(); i++)
+    {
+        ui->tabWidget->widget(i)->setEnabled(_state);
+    }
+}
+
+void EditorWindow::configureTasksTable()
+{
     ui->completeTasksTable->setGameAtlas(m_database->gameAtlas());
     ui->completeTasksTable->setLocalization(m_database->localization());
     ui->completeTasksTable->setFilterBarWidget(ui->completeTasksTableBar);
@@ -47,7 +248,10 @@ EditorWindow::EditorWindow(QWidget *parent)
     ui->completeTasksTableBar->setGameAtlas(m_database->gameAtlas());
     ui->completeTasksTableBar->filterMaps();
     ui->completeTasksTable->updateTable();
+}
 
+void EditorWindow::configureUpgradesTable()
+{
     ui->upgradesTable->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTable->setLocalization(m_database->localization());
     ui->upgradesTable->setFilterBarWidget(ui->upgradesTableBar);
@@ -55,9 +259,10 @@ EditorWindow::EditorWindow(QWidget *parent)
     ui->upgradesTableBar->setGameAtlas(m_database->gameAtlas());
     ui->upgradesTableBar->filterMaps();
     ui->upgradesTable->updateTable();
+}
 
-    applyLanguage(Language::RUSSIAN);
-
+void EditorWindow::connectLanguageButtonsToFunctions()
+{
     connect(ui->menuRussian, &QAction::triggered, this, [=] { applyLanguage(Language::RUSSIAN); });
     connect(ui->menuChineseTraditional, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_TRADITIONAL); });
     connect(ui->menuChineseSimple, &QAction::triggered, this, [=] { applyLanguage(Language::CHINESE_SIMPLIFIED); });
@@ -71,229 +276,6 @@ EditorWindow::EditorWindow(QWidget *parent)
     connect(ui->menuCzech, &QAction::triggered, this, [=] { applyLanguage(Language::CZECH); });
     connect(ui->menuItalian, &QAction::triggered, this, [=] { applyLanguage(Language::ITALIAN); });
     connect(ui->menuPolish, &QAction::triggered, this, [=] { applyLanguage(Language::POLISH); });
-
-    ui->tabWidget->widget(0)->setDisabled(true);
-    ui->tabWidget->widget(1)->setDisabled(true);
-    ui->tabWidget->widget(2)->setDisabled(true);
-//    ui->tabWidget->widget(3)->setDisabled(true);
-}
-
-EditorWindow::~EditorWindow()
-{
-    delete ui;
-}
-
-void EditorWindow::on_menuOpen_triggered()
-{   
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Открыть файл"), "", tr("CFG (*.cfg)"));
-    QFile file(fileName);
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    text = file.readAll();
-    file.close();
-    jsonDocument.Parse(text.toUtf8());
-
-    ui->tabWidget->widget(0)->setEnabled(true);
-    ui->tabWidget->widget(1)->setEnabled(true);
-    ui->tabWidget->widget(2)->setEnabled(true);
-//    ui->tabWidget->widget(3)->setEnabled(true);
-
-    rapidjson::Value* sslValue = nullptr;
-    int savesCount = 4;
-    for (int i = 0; i < savesCount; i++)
-    {
-        std::string completeSaveMemberName = "CompleteSave";
-        if (i > 0) {
-            completeSaveMemberName += std::to_string(i);
-        }
-        if (jsonDocument.HasMember(completeSaveMemberName.c_str())) {
-            sslValue = &jsonDocument[completeSaveMemberName.c_str()]["SslValue"];
-        }
-    }
-
-    rapidjson::Value& persistentProfileData = (*sslValue)["persistentProfileData"];
-
-    ui->moneyCountSpinBox->setValue(persistentProfileData["money"].GetInt());
-    ui->rankSpinBox->setValue(persistentProfileData["rank"].GetInt());
-    ui->experienceCountSpinBox->setValue(persistentProfileData["experience"].GetInt());
-
-    std::vector<std::string> finishedObjs;
-    rapidjson::Value& finishedObjsArray = (*sslValue)["finishedObjs"].GetArray();
-    for (unsigned int i = 0; i < finishedObjsArray.Size(); i++)
-    {
-        finishedObjs.push_back(finishedObjsArray[i].GetString());
-    }
-    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(finishedObjs);
-    ui->completeTasksTable->updateTable();
-
-    std::vector<std::string> receivedUpgrades;
-    rapidjson::Value& receivedUpgradesValue = (*sslValue)["upgradesGiverData"];
-    // for (auto& m : document.GetObject())
-    for (auto levelIt = receivedUpgradesValue.MemberBegin(); levelIt != receivedUpgradesValue.MemberEnd(); levelIt++)
-    {
-        for (auto upgradesIt = levelIt->value.MemberBegin(); upgradesIt != levelIt->value.MemberEnd(); upgradesIt++)
-        {
-            // Если открыли файл заново, то все смешается.
-            if (upgradesIt->value.GetInt() == 2)
-            {
-                receivedUpgrades.push_back(upgradesIt->name.GetString());
-            }
-        }
-    }
-    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(receivedUpgrades);
-    ui->upgradesTable->updateTable();
-}
-
-void EditorWindow::on_menuSave_triggered()
-{
-    rapidjson::Value* sslValue = nullptr;
-    int savesCount = 4;
-    for (int i = 0; i < savesCount; i++)
-    {
-        std::string completeSaveMemberName = "CompleteSave";
-        if (i > 0) {
-            completeSaveMemberName += std::to_string(i);
-        }
-        if (jsonDocument.HasMember(completeSaveMemberName.c_str())) {
-            sslValue = &jsonDocument[completeSaveMemberName.c_str()]["SslValue"];
-        }
-    }
-
-    (*sslValue)["persistentProfileData"]["money"] = ui->moneyCountSpinBox->value();
-    (*sslValue)["persistentProfileData"]["rank"] = ui->rankSpinBox->value();
-    (*sslValue)["persistentProfileData"]["experience"] = ui->experienceCountSpinBox->value();
-    rapidjson::Value finishedObjsArray;
-    finishedObjsArray.SetArray();
-    for (Task* task : m_database->gameAtlas()->completedTasks())
-    {
-        rapidjson::Value strVal;
-        strVal.SetString(task->code().c_str(), task->code().length(), jsonDocument.GetAllocator());
-        finishedObjsArray.PushBack(strVal, jsonDocument.GetAllocator());
-    }
-    (*sslValue)["finishedObjs"] = finishedObjsArray;
-
-    rapidjson::Value discoveredObjectivesArray;
-    discoveredObjectivesArray.SetArray();
-    for (Task* task : m_database->gameAtlas()->completedTasks())
-    {
-        rapidjson::Value strVal;
-        strVal.SetString(task->code().c_str(), task->code().length(), jsonDocument.GetAllocator());
-        discoveredObjectivesArray.PushBack(strVal, jsonDocument.GetAllocator());
-    }
-    (*sslValue)["discoveredObjectives"] = discoveredObjectivesArray;
-
-    rapidjson::Value& receivedUpgradesValue = (*sslValue)["upgradesGiverData"];
-    std::vector<Upgrade*> newReceivedUpgrades = m_database->gameAtlas()->receivedUpgrades();
-    for (auto& levelObject : receivedUpgradesValue.GetObject())
-    {
-        for (auto& upgradeString : levelObject.value.GetObject())
-        {
-            bool found = false; // Хрень какая-то.
-            for (Upgrade* upgrade : newReceivedUpgrades)
-            {
-                if (upgradeString.name.GetString() == upgrade->code())
-                {
-                    upgradeString.value = 2;
-                    found = true;
-                }
-            }
-            if (!found)
-            {
-                upgradeString.value = 0;
-            }
-        }
-    }
-
-    rapidjson::StringBuffer buffer;
-    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-    jsonDocument.Accept(writer);
-
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Сохранить файл"), "", tr("CFG (*.cfg)"));
-    std::ofstream file(fileName.toStdString());
-    file << buffer.GetString() << '\0';
-    file.close();
-}
-
-void EditorWindow::applyLanguage(Language _language)
-{
-    Localization* localization = m_database->localization();
-    ui->menu->setTitle(localization->getLocalization("UI_INGAME_MENU", _language).c_str());
-    ui->menuOpen->setText(localization->getLocalization("UI_POLYGON_PACKER_DIALOG_OPEN", _language).c_str());
-    ui->menuSave->setText(localization->getLocalization("UI_LOG_SAVE_IN_PROGRESS", _language).c_str());
-
-    ui->menuAbout->setTitle(localization->getLocalization("UI_POLYGON_INFO", _language).c_str());
-    ui->menuInformation->setText(localization->getLocalization("UI_POLYGON_INFO", _language).c_str());
-
-    ui->menuLanguage->setToolTip(localization->getLocalization("UI_SETTINGS_LANGUAGE", _language).c_str());
-
-    ui->tabWidget->setTabText(0, localization->getLocalization("UI_OPEN_PROFILE", _language).c_str());
-    ui->moneyCountLabel->setText(localization->getLocalization("UI_POPUP_DEPLOY_MONEY", _language).c_str());
-
-    std::string rankLabelString = localization->getLocalization("UI_NGP_RANK_10", _language);
-    rankLabelString = Utils::replace(rankLabelString, "10", "");
-    rankLabelString = Utils::replace(rankLabelString, " ", "");
-    ui->rankLabel->setText(rankLabelString.c_str());
-    ui->experienceCountLabel->setText(localization->getLocalization("CODEX_LEVEL_UP_HEADER", _language).c_str());
-
-    std::string tasksAndContractsString =
-        localization->getLocalization("UI_PLAYER_PROFILE_TAB_TASKS_NAME", _language) + "/" +
-        localization->getLocalization("UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME", _language);
-    ui->tabWidget->setTabText(1, tasksAndContractsString.c_str());
-
-    std::string regionString = localization->getLocalization("UI_MM_SETTINGS_REGION", _language);
-    std::string mapString = localization->getLocalization("UI_MINIMAP", _language);
-    std::string refreshString = localization->getLocalization("UI_REFRESH", _language);
-    ui->completeTasksTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
-    ui->completeTasksTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
-    ui->completeTasksTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
-
-    std::string checkAllFilteredString =
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL", _language) + "/" +
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL", _language);
-    ui->completeTasksTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
-
-    ui->completeTasksTable->horizontalHeaderItem(0)->setText(regionString.c_str());
-    ui->completeTasksTable->horizontalHeaderItem(1)->setText(mapString.c_str());
-
-    std::string taskOrContractString =
-            localization->getLocalization("UI_HUD_NAV_PANEL_SHOW_TASK", _language) + "/" +
-            localization->getLocalization("UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT", _language);
-    ui->completeTasksTable->horizontalHeaderItem(2)->setText(taskOrContractString.c_str());
-
-    std::string selectString = localization->getLocalization("UI_SELECT", _language);
-    ui->completeTasksTable->horizontalHeaderItem(3)->setText(selectString.c_str());
-
-    ui->tabWidget->setTabText(2, localization->getLocalization("UI_GARAGE_MODIFICATIONS_UPGRADES", _language).c_str());
-
-    ui->upgradesTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
-    ui->upgradesTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
-    ui->upgradesTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
-    ui->upgradesTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
-
-    ui->upgradesTable->horizontalHeaderItem(0)->setText(regionString.c_str());
-    ui->upgradesTable->horizontalHeaderItem(1)->setText(mapString.c_str());
-    ui->upgradesTable->horizontalHeaderItem(2)->setText(localization->getLocalization("UI_HUD_NAV_PANEL_GET_UPGRADE", _language).c_str());
-    ui->upgradesTable->horizontalHeaderItem(3)->setText(selectString.c_str());
-
-//    ui->tabWidget->setTabText(3, localization->getLocalization("UI_PLAYER_PROFILE_STATISTICS_HEADER", _language).c_str());
-
-    localization->setDefaultLanguage(_language);
-
-    ui->completeTasksTableBar->filterMaps();
-    ui->completeTasksTable->updateTable();
-
-    ui->upgradesTableBar->filterMaps();
-    ui->upgradesTable->updateTable();
-}
-
-void EditorWindow::on_menuInformation_triggered()
-{
-    InformationWidget* informationWidget = new InformationWidget(this);
-    informationWidget->setWindowTitle(m_database->localization()->
-        getLocalization("UI_POLYGON_INFO", m_database->localization()->defaultLanguage()).c_str());
-    informationWidget->setWindowFlags(Qt::Window);
-    informationWidget->setWindowModality(Qt::WindowModality::ApplicationModal);
-    informationWidget->setAttribute(Qt::WA_DeleteOnClose);
-    informationWidget->show();
 }
 
 //    connect(ui->moneyCountSpinBox, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), [=](int _value) { });

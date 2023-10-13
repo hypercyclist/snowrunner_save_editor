@@ -10,9 +10,8 @@ class Database
 {
 public:
     Database();
-    void createDatabase(std::string _databasePath, std::string _tasksPath,
-        std::string _initialCacheBlockPath, std::string _savePath);
-    bool loadDatabase(std::string _filename);
+    void createDatabase(std::string _databasePath);
+    bool loadDatabase(std::string _databasePath);
 
     Localization* localization();
     GameAtlas* gameAtlas();

@@ -370,6 +370,18 @@ std::string Localization::languageTextName(Language _language)
     return m_languageTextNames[_language];
 }
 
+Language Localization::languageByTextName(std::string _languageCode)
+{
+    for (const auto& languagePair : m_languageTextNames)
+    {
+        if (languagePair.second == _languageCode)
+        {
+            return languagePair.first;
+        }
+    }
+    return Language::RUSSIAN;
+}
+
 std::map<Language, std::string>& Localization::languageTextNames()
 {
     return m_languageTextNames;

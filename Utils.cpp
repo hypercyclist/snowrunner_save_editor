@@ -1,10 +1,34 @@
 #include "Utils.h"
 #include <sstream>
 #include <algorithm>
+#include <map>
 
 bool Utils::contains(std::string& _source, std::string _string)
 {
     return stolower(_source).find(stolower(_string)) != std::string::npos;
+}
+
+//std::string Utils::toCommonCase(std::string line, std::map<char,char> toLowerMap){
+//    std::string res = std::string(line.length(), ' ');
+//    res[0] = line[0];
+//    for(int i = 1; i < line.length(); i++){
+//        if(toLowerMap.find(i) != toLowerMap.end()){
+//            res[i] = toLowerMap[line[i]];
+//        }
+//        else res[i] = toLowerMap[line[i]];
+//    }
+//}
+
+bool Utils::contains(std::vector<std::string>& _source, std::string _string)
+{
+    for (std::string& element : _source)
+    {
+        if (_string == element)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 // Можно добавить while.

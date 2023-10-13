@@ -2,9 +2,10 @@
 #define EDITORWINDOW_H
 
 #include <QMainWindow>
-#include <rapidjson/document.h>
 
+class AppConfig;
 class Database;
+class SaveFile;
 enum class Language;
 
 namespace Ui { class EditorWindow; }
@@ -26,8 +27,14 @@ private slots:
 
 private:
     Ui::EditorWindow *ui;
+    AppConfig* m_appConfig;
     Database* m_database;
-    rapidjson::Document jsonDocument;
+    SaveFile* m_saveFile;
     QString text;
+
+    void setTabsEnabled(bool _state);
+    void configureTasksTable();
+    void configureUpgradesTable();
+    void connectLanguageButtonsToFunctions();
 };
 #endif // EDITORWINDOW_H

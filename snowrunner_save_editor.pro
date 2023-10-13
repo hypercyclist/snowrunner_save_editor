@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AppConfig.cpp \
     CompleteTasksTable.cpp \
     CompleteUpgradesTable.cpp \
     Database.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
     Localization.cpp \
     Map.cpp \
     Region.cpp \
+    SaveFile.cpp \
     TableFilterByRegionMap.cpp \
     Task.cpp \
     Truck.cpp \
@@ -26,6 +28,7 @@ SOURCES += \
     EditorWindow.cpp
 
 HEADERS += \
+    AppConfig.h \
     CompleteTasksTable.h \
     CompleteUpgradesTable.h \
     Database.h \
@@ -35,6 +38,7 @@ HEADERS += \
     Localization.h \
     Map.h \
     Region.h \
+    SaveFile.h \
     TableFilterByRegionMap.h \
     Task.h \
     Truck.h \
