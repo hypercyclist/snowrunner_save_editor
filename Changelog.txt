@@ -1,5 +1,11 @@
 1.02
-- Add application config that contains database folder path, last save directory and last used language.
+- Added application config that contains database folder path, last save directory and last used language.
+- Added difficulty tab. It can change game mode.
+- Added application logo.
+- Added support for .dat save mode extension from EGS.
+- Fixed crash when user cancel entering file for open.
+- Fixed save function when save file wasn't opened.
+- Fixed crash when user cancel entering file for save.
 
 1.01
 - Fixed error when open save file from second, third or fourth slot (not first).
