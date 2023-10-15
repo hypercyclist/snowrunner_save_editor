@@ -72,7 +72,12 @@ void EditorWindow::on_menuOpen_triggered()
     std::string fullFileName = QFileDialog::getOpenFileName(this,
         tr("Открыть файл"),
         QString::fromStdString(m_appConfig->lastSaveFolderPath()),
-        tr("CFG (*.cfg)")).toStdString();
+        tr("SAVEFILE (*.cfg *.dat)")).toStdString();
+
+    if (fullFileName.size() == 0)
+    {
+        return;
+    }
 
     if (m_saveFile)
     {
@@ -96,43 +101,59 @@ void EditorWindow::on_menuOpen_triggered()
     setTabsEnabled(true);
 
 // Grab values.
-    ui->moneyCountSpinBox->setValue(m_saveFile->money());
-    ui->rankSpinBox->setValue(m_saveFile->rank());
-    ui->experienceCountSpinBox->setValue(m_saveFile->experience());
+    ui->moneyCountSpinBox->setValue(m_saveFile->m_money);
+    ui->rankSpinBox->setValue(m_saveFile->m_rank);
+    ui->experienceCountSpinBox->setValue(m_saveFile->m_experience);
 
-    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->finishedObjs());
+    ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->m_gameDifficultyMode);
+    ui->isHardModeCheckbox->setChecked(m_saveFile->m_isHardMode);
+
+    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->m_finishedObjs);
     ui->completeTasksTable->updateTable();
 
-    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(m_saveFile->receivedUpgrades());
+    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(m_saveFile->m_receivedUpgrades);
     ui->upgradesTable->updateTable();
 }
 
 void EditorWindow::on_menuSave_triggered()
 {
+    if (!m_saveFile || !m_saveFile->loaded())
+    {
+        return;
+    }
+
 // Сhoose file destination and name. It can create and override file.
     std::string fullFileName = QFileDialog::getSaveFileName(this,
         tr("Сохранить файл"),
         QString::fromStdString(m_appConfig->lastSaveFolderPath()),
-        tr("CFG (*.cfg)")).toStdString();
+        tr("SAVEFILE (*.cfg *.dat)")).toStdString();
+
+    if (fullFileName.size() == 0)
+    {
+        return;
+    }
 
 //Apply values.
-    m_saveFile->setMoney(ui->moneyCountSpinBox->value());
-    m_saveFile->setRank(ui->rankSpinBox->value());
-    m_saveFile->setExperience(ui->experienceCountSpinBox->value());
+    m_saveFile->m_money = ui->moneyCountSpinBox->value();
+    m_saveFile->m_rank = ui->rankSpinBox->value();
+    m_saveFile->m_experience = ui->experienceCountSpinBox->value();
+
+    m_saveFile->m_gameDifficultyMode = ui->gameDifficultyModeCombobox->currentIndex();
+    m_saveFile->m_isHardMode = ui->isHardModeCheckbox->isChecked();
 
     std::vector<std::string> finishedObjs;
     for (Task* task : m_database->gameAtlas()->completedTasks())
     {
         finishedObjs.push_back(task->code());
     }
-    m_saveFile->setFinishedObjs(finishedObjs);
+    m_saveFile->m_finishedObjs = finishedObjs;
 
     std::vector<std::string> receivedUpgrades;
     for (Upgrade* upgrade : m_database->gameAtlas()->receivedUpgrades())
     {
         receivedUpgrades.push_back(upgrade->code());
     }
-    m_saveFile->setReceivedUpgrades(receivedUpgrades);
+    m_saveFile->m_receivedUpgrades = receivedUpgrades;
 
 // Save file.
     if (!m_saveFile->saveSaveFile(fullFileName))
@@ -172,10 +193,24 @@ void EditorWindow::applyLanguage(Language _language)
     ui->rankLabel->setText(rankLabelString.c_str());
     ui->experienceCountLabel->setText(localization->getLocalization("CODEX_LEVEL_UP_HEADER").c_str());
 
+    ui->gameDifficultyModeLabel->setText(localization->getLocalization("UI_SETTINGS_GAME").c_str());
+
+    ui->gameDifficultyModeCombobox->clear();
+    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_MAIN_MENU_NEW_GAME_LIST_USUAL").c_str());
+    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_HARDMODE").c_str());
+    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_NGPLUS").c_str());
+    if (m_saveFile)
+    {
+        ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->m_gameDifficultyMode);
+    }
+
+    ui->isHardModeLabel->setText(localization->getLocalization("UI_HARDMODE").c_str());
+    ui->newGamePlusSettingsLabel->setText(localization->getLocalization("NEW_GAME_PLUS_HEADER").c_str());
+
     std::string tasksAndContractsString =
         localization->getLocalization("UI_PLAYER_PROFILE_TAB_TASKS_NAME") + " / " +
         localization->getLocalization("UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME");
-    ui->tabWidget->setTabText(1, tasksAndContractsString.c_str());
+    ui->tabWidget->setTabText(2, tasksAndContractsString.c_str());
 
     std::string regionString = localization->getLocalization("UI_MM_SETTINGS_REGION");
     std::string mapString = localization->getLocalization("UI_MINIMAP");
@@ -200,7 +235,7 @@ void EditorWindow::applyLanguage(Language _language)
     std::string selectString = localization->getLocalization("UI_SELECT");
     ui->completeTasksTable->horizontalHeaderItem(3)->setText(selectString.c_str());
 
-    ui->tabWidget->setTabText(2, localization->getLocalization("UI_GARAGE_MODIFICATIONS_UPGRADES").c_str());
+    ui->tabWidget->setTabText(3, localization->getLocalization("UI_GARAGE_MODIFICATIONS_UPGRADES").c_str());
 
     ui->upgradesTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
     ui->upgradesTableBar->gui()->mapFilterLabel->setText(mapString.c_str());

@@ -88,6 +88,11 @@ bool SaveFile::loadSaveFile(std::string _fullFileName)
     m_rank = persistentProfileDataJMO["rank"].GetInt();
     m_experience = persistentProfileDataJMO["experience"].GetInt();
 
+    m_gameDifficultyMode = sslValueJMO.HasMember("gameDifficultyMode") ?
+        sslValueJMO["gameDifficultyMode"].GetInt() : 0;
+
+    m_isHardMode = sslValueJMO["isHardMode"].GetBool();
+
     rapidjson::Value& finishedObjsJMA = sslValueJMO["finishedObjs"].GetArray();
     for (const auto& element : finishedObjsJMA.GetArray())
     {
@@ -126,6 +131,16 @@ bool SaveFile::saveSaveFile(std::string _fullFileName)
     persistentProfileDataJMO["rank"] = m_rank;
     persistentProfileDataJMO["experience"] = m_experience;
 
+    if (sslValueJMO.HasMember("gameDifficultyMode"))
+    {
+        sslValueJMO["gameDifficultyMode"] = m_gameDifficultyMode;
+    }
+    else
+    {
+        sslValueJMO.AddMember("gameDifficultyMode", m_gameDifficultyMode, allocator);
+    }
+
+    sslValueJMO["isHardMode"] = m_isHardMode;
 
     rapidjson::Value finishedObjsJMA;
     finishedObjsJMA.SetArray();
@@ -195,62 +210,83 @@ std::string SaveFile::error()
     return m_error;
 }
 
-int SaveFile::money()
-{
-    return m_money;
-}
+// Fuck this shit. I'm out.
+//int SaveFile::money()
+//{
+//    return m_money;
+//}
 
-void SaveFile::setMoney(int _value)
-{
-    m_money = _value;
-}
+//void SaveFile::setMoney(int _value)
+//{
+//    m_money = _value;
+//}
 
-int SaveFile::rank()
-{
-    return m_rank;
-}
+//int SaveFile::rank()
+//{
+//    return m_rank;
+//}
 
-void SaveFile::setRank(int _value)
-{
-    m_rank = _value;
-}
+//void SaveFile::setRank(int _value)
+//{
+//    m_rank = _value;
+//}
 
-int SaveFile::experience()
-{
-    return m_experience;
-}
+//int SaveFile::experience()
+//{
+//    return m_experience;
+//}
 
-void SaveFile::setExperience(int _value)
-{
-    m_experience = _value;
-}
+//void SaveFile::setExperience(int _value)
+//{
+//    m_experience = _value;
+//}
 
-std::vector<std::string> SaveFile::finishedObjs()
-{
-    return m_finishedObjs;
-}
+//int SaveFile::gameDifficultyMode()
+//{
+//    return m_gameDifficultyMode;
+//}
 
-void SaveFile::setFinishedObjs(std::vector<std::string> _value)
-{
-    m_finishedObjs = _value;
-}
+//void SaveFile::setGameDifficultyMode(int _value)
+//{
+//    m_gameDifficultyMode = _value;
+//}
 
-std::vector<std::string> SaveFile::foundedUpgrades()
-{
-    return m_foundedUpgrades;
-}
+//int SaveFile::isHardMode()
+//{
+//    return m_isHardMode;
+//}
 
-void SaveFile::setFoundedUpgrades(std::vector<std::string> _value)
-{
-    m_foundedUpgrades = _value;
-}
+//void SaveFile::setIsHardMode(int _value)
+//{
+//    m_isHardMode = _value;
+//}
 
-std::vector<std::string> SaveFile::receivedUpgrades()
-{
-    return m_receivedUpgrades;
-}
+//std::vector<std::string> SaveFile::finishedObjs()
+//{
+//    return m_finishedObjs;
+//}
 
-void SaveFile::setReceivedUpgrades(std::vector<std::string> _value)
-{
-    m_receivedUpgrades = _value;
-}
+//void SaveFile::setFinishedObjs(std::vector<std::string> _value)
+//{
+//    m_finishedObjs = _value;
+//}
+
+//std::vector<std::string> SaveFile::foundedUpgrades()
+//{
+//    return m_foundedUpgrades;
+//}
+
+//void SaveFile::setFoundedUpgrades(std::vector<std::string> _value)
+//{
+//    m_foundedUpgrades = _value;
+//}
+
+//std::vector<std::string> SaveFile::receivedUpgrades()
+//{
+//    return m_receivedUpgrades;
+//}
+
+//void SaveFile::setReceivedUpgrades(std::vector<std::string> _value)
+//{
+//    m_receivedUpgrades = _value;
+//}

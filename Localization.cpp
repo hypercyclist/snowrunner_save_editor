@@ -151,10 +151,6 @@ void Localization::loadAppLocalization()
 {
     std::vector<std::string> appLocalizationCodes = {
 //        "UI_SETTINGS_LANGUAGE", // "ЯЗЫК"
-//        "UI_OPTION_LANGUAGE_ENG", // "АНГЛИЙСКИЙ"
-//        "UI_OPTION_LANGUAGE_RUS", // "РУССКИЙ"
-//        "UI_OPTION_LANGUAGE_TRDN_CHN", // "КИТАЙСКИЙ (ТРАДИЦИОННЫЙ)"
-//        "UI_OPTION_LANGUAGE_SMPL_CHN", // "КИТАЙСКИЙ (УПРОЩЕННЫЙ)"
         "UI_INGAME_MENU", // "Меню"
         "UI_POLYGON_PACKER_DIALOG_OPEN", // "Открыть"
         "UI_LOG_SAVE_IN_PROGRESS", // "СОХРАНЕНИЕ"
@@ -181,7 +177,12 @@ void Localization::loadAppLocalization()
         "UI_TRUCK_PART_GEARBOX", // "КОРОБКА ПЕРЕДАЧ"
         "UI_TRUCK_INFO_DIFF_LOCK", // "ДИФФЕРЕНЦИАЛ"
         "UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME", // "Подключаемый полный привод"
-        "UI_POLYGON_INFO" // "Информация"
+        "UI_POLYGON_INFO", // "Информация"
+        "UI_SETTINGS_GAME", // "ИГРА"
+        "UI_HARDMODE", // "СЛОЖНЫЙ РЕЖИМ"
+        "UI_MAIN_MENU_NEW_GAME_LIST_USUAL", // "ОБЫЧНЫЙ РЕЖИМ"
+        "UI_NGPLUS", // "Новая Игра +"
+        "NEW_GAME_PLUS_HEADER", // "Правила Новой Игры +"
     };
     for (std::string code : appLocalizationCodes)
     {
