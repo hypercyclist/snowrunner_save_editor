@@ -8,10 +8,13 @@ For example your save was lost. You are create new one. And with this applicatio
 
 There are few functions:
 Edit money count, rank and expiriece.
+Edit difficulty settings.
 Edit list of complete tasks. 
 Edit list of founded upgrades.
 
 All other things you can buy with created money.
+
+App automatically translated in 13 languages with game files. There may be semantic errors here.
 
 The app developed with C++, Qt, RapidJSON, RapidXML and ton of crutches.
 It tested by me under Linux and Windows platforms with PC game version save files.
@@ -30,5 +33,7 @@ Demo screenshot:
 ![](https://github.com/hypercyclist/snowrunner_save_editor/blob/main/images/demo_image_2.png)
 
 Release builds:
-[snowrunner_save_editor_release_v1.01 (MinGW 64-bit Windows)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.01)
-[snowrunner_save_editor_release_v1.01 (gcc 64-bit Linux)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.01_Linux)
+
+[snowrunner_save_editor_release_v1.02 (MinGW 64-bit Windows)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.02)
+
+[snowrunner_save_editor_release_v1.02 (gcc 64-bit Linux)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.02_Linux)
