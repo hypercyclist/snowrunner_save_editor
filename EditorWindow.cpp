@@ -193,7 +193,9 @@ void EditorWindow::applyLanguage(Language _language)
     ui->rankLabel->setText(rankLabelString.c_str());
     ui->experienceCountLabel->setText(localization->getLocalization("CODEX_LEVEL_UP_HEADER").c_str());
 
-    ui->gameDifficultyModeLabel->setText(localization->getLocalization("UI_SETTINGS_GAME").c_str());
+    std::string gameString = localization->getLocalization("UI_SETTINGS_GAME");
+    ui->tabWidget->setTabText(1, gameString.c_str());
+    ui->gameDifficultyModeLabel->setText(gameString.c_str());
 
     ui->gameDifficultyModeCombobox->clear();
     ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_MAIN_MENU_NEW_GAME_LIST_USUAL").c_str());

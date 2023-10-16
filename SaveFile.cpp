@@ -38,7 +38,7 @@ bool SaveFile::loadSaveFile(std::string _fullFileName)
     std::ifstream readStream(_fullFileName);
     if (!readStream.is_open())
     {
-        m_error = "Can't open file: " + _fullFileName;
+        m_error = "Can't open file " + _fullFileName;
         return false;
     }
 
@@ -47,6 +47,18 @@ bool SaveFile::loadSaveFile(std::string _fullFileName)
     readStream.close();
     std::string saveFileString = buffer.str();
     saveFileJsonDocument.Parse(saveFileString.c_str());
+
+    if (saveFileString.size() == 0)
+    {
+        m_error = "File " + _fullFileName + " is empty";
+        return false;
+    }
+
+    if (!saveFileJsonDocument.IsObject())
+    {
+        m_error = "File " + _fullFileName + " is not JSON valid or broken";
+        return false;
+    }
 
 // Search for save number.
     rapidjson::Value* completeSaveJMP = nullptr;

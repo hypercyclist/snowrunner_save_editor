@@ -929,7 +929,7 @@ void GameAtlas::saveGameAtlasData(std::string _filename)
     rapidjson::Writer<rapidjson::StringBuffer> writer(writeBuffer);
     databaseJsonDocument.Accept(writer);
 
-    std::ofstream writeStream(_filename);
+    std::ofstream writeStream(_filename  + "/database.json");
     writeStream << writeBuffer.GetString();
     writeStream.close();
 }

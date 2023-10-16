@@ -107,7 +107,7 @@ bool Localization::loadLocalizations(std::string _filename)
     m_localizations.clear();
     m_localizationsCache.clear();
 
-    std::ifstream readStream(_filename);
+    std::ifstream readStream(_filename + "/database.json");
 
     if (!readStream.is_open()) {
         return false;
@@ -195,7 +195,7 @@ void Localization::loadAppLocalization()
 
 void Localization::saveLocalizationCache(std::string _filename)
 {
-    std::ifstream readStream(_filename);
+    std::ifstream readStream(_filename + "/database.json");
     std::stringstream readBuffer;
     readBuffer << readStream.rdbuf();
     readStream.close();
@@ -203,6 +203,12 @@ void Localization::saveLocalizationCache(std::string _filename)
 
     rapidjson::Document databaseJsonDocument;
     databaseJsonDocument.Parse(databaseText.c_str());
+
+    if (databaseText.size() == 0)
+    {
+        databaseJsonDocument.SetObject();
+    }
+
     auto allocator = databaseJsonDocument.GetAllocator();
 
     rapidjson::Value localizationObject;
@@ -287,7 +293,7 @@ void Localization::saveLocalizationCache(std::string _filename)
     rapidjson::Writer<rapidjson::StringBuffer> writer(writeBuffer);
     databaseJsonDocument.Accept(writer);
 
-    std::ofstream writeStream(_filename);
+    std::ofstream writeStream(_filename + "/database.json");
     writeStream << writeBuffer.GetString();
     writeStream.close();
 }
