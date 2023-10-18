@@ -33,6 +33,7 @@ private:
     QString text;
 
     void setTabsEnabled(bool _state);
+    void configureNgpRulesTable();
     void configureTasksTable();
     void configureUpgradesTable();
     void connectLanguageButtonsToFunctions();

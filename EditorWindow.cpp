@@ -46,6 +46,7 @@ EditorWindow::EditorWindow(QWidget *parent)
         m_database->createDatabase(databasePath);
     }
 
+    configureNgpRulesTable();
     configureTasksTable();
     configureUpgradesTable();
 
@@ -55,7 +56,7 @@ EditorWindow::EditorWindow(QWidget *parent)
     connectLanguageButtonsToFunctions();
 
 // Disable tabs before save will open.
-    setTabsEnabled(false);
+//    setTabsEnabled(false);
 }
 
 EditorWindow::~EditorWindow()
@@ -101,17 +102,17 @@ void EditorWindow::on_menuOpen_triggered()
     setTabsEnabled(true);
 
 // Grab values.
-    ui->moneyCountSpinBox->setValue(m_saveFile->m_money);
-    ui->rankSpinBox->setValue(m_saveFile->m_rank);
-    ui->experienceCountSpinBox->setValue(m_saveFile->m_experience);
+    ui->moneyCountSpinBox->setValue(m_saveFile->money());
+    ui->rankSpinBox->setValue(m_saveFile->rank());
+    ui->experienceCountSpinBox->setValue(m_saveFile->experience());
 
-    ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->m_gameDifficultyMode);
-    ui->isHardModeCheckbox->setChecked(m_saveFile->m_isHardMode);
+    ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->gameDifficultyMode());
+    ui->isHardModeCheckbox->setChecked(m_saveFile->isHardMode());
 
-    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->m_finishedObjs);
+    m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->finishedObjs());
     ui->completeTasksTable->updateTable();
 
-    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(m_saveFile->m_receivedUpgrades);
+    m_database->gameAtlas()->setUpgradesReceivedFromVectorCodes(m_saveFile->receivedUpgrades());
     ui->upgradesTable->updateTable();
 }
 
@@ -134,26 +135,26 @@ void EditorWindow::on_menuSave_triggered()
     }
 
 //Apply values.
-    m_saveFile->m_money = ui->moneyCountSpinBox->value();
-    m_saveFile->m_rank = ui->rankSpinBox->value();
-    m_saveFile->m_experience = ui->experienceCountSpinBox->value();
+    m_saveFile->setMoney(ui->moneyCountSpinBox->value());
+    m_saveFile->setRank(ui->rankSpinBox->value());
+    m_saveFile->setExperience(ui->experienceCountSpinBox->value());
 
-    m_saveFile->m_gameDifficultyMode = ui->gameDifficultyModeCombobox->currentIndex();
-    m_saveFile->m_isHardMode = ui->isHardModeCheckbox->isChecked();
+    m_saveFile->setGameDifficultyMode(ui->gameDifficultyModeCombobox->currentIndex());
+    m_saveFile->setIsHardMode(ui->isHardModeCheckbox->isChecked());
 
     std::vector<std::string> finishedObjs;
     for (Task* task : m_database->gameAtlas()->completedTasks())
     {
         finishedObjs.push_back(task->code());
     }
-    m_saveFile->m_finishedObjs = finishedObjs;
+    m_saveFile->setFinishedObjs(finishedObjs);
 
     std::vector<std::string> receivedUpgrades;
     for (Upgrade* upgrade : m_database->gameAtlas()->receivedUpgrades())
     {
         receivedUpgrades.push_back(upgrade->code());
     }
-    m_saveFile->m_receivedUpgrades = receivedUpgrades;
+    m_saveFile->setReceivedUpgrades(receivedUpgrades);
 
 // Save file.
     if (!m_saveFile->saveSaveFile(fullFileName))
@@ -203,7 +204,7 @@ void EditorWindow::applyLanguage(Language _language)
     ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_NGPLUS").c_str());
     if (m_saveFile)
     {
-        ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->m_gameDifficultyMode);
+        ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->gameDifficultyMode());
     }
 
     ui->isHardModeLabel->setText(localization->getLocalization("UI_HARDMODE").c_str());
@@ -274,6 +275,118 @@ void EditorWindow::setTabsEnabled(bool _state)
     {
         ui->tabWidget->widget(i)->setEnabled(_state);
     }
+}
+
+void EditorWindow::configureNgpRulesTable()
+{
+    ui->truckAvailabilityLabel->setText("UI_TRUCK_AVAILABILITY");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_ALL_TRUCKS_FROM_START");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_RANDOM_TRUCKS_IN_EVERY_GARAGE");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_TRUCK_STORE_FROM_LVL_10");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_TRUCK_STORE_FROM_LVL_20");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_TRUCK_STORE_FROM_LVL_30");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_UNAVAILABLE_TRUCK_STORE");
+    ui->truckAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->dlcVehiclesAvailabilityLabel->setText("UI_DLC_VEHICLES");
+    ui->dlcVehiclesAvailabilityCombo->addItem("UI_NGP_AVAILABLE");
+    ui->dlcVehiclesAvailabilityCombo->addItem("UI_NGP_UNAVAILABLE");
+    ui->dlcVehiclesAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->truckPricingLabel->setText("UI_TRUCK_PRICING");
+    ui->truckPricingCombo->addItem("UI_NGP_DEFAULT");
+    ui->truckPricingCombo->addItem("UI_NGP_FREE_TRUCKS");
+    ui->truckPricingCombo->addItem("UI_NGP_X2_PRICES_TRUCKS");
+    ui->truckPricingCombo->addItem("UI_NGP_X4_PRICES_TRUCKS");
+    ui->truckPricingCombo->addItem("UI_NGP_X6_PRICES_TRUCKS");
+    ui->truckPricingCombo->addItem("UI_NGP_RANDOMIZED_X1_TO_X6_TRUCKS");
+    ui->truckPricingCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->truckSellingLabel->setText("UI_NGP_TRUCK_SELLING");
+    ui->truckSellingCombo->addItem("UI_NGP_DEFAULT");
+    ui->truckSellingCombo->addItem("UI_NGP_0.5X_PRICES_TRUCKS");
+    ui->truckSellingCombo->addItem("UI_NGP_0.3X_PRICES_TRUCKS");
+    ui->truckSellingCombo->addItem("UI_NGP_0.1X_PRICES_TRUCKS");
+    ui->truckSellingCombo->addItem("UI_NGP_UNABLE_TO_SELL_TRUCKS");
+    ui->truckSellingCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->vehicleStorageAvailabilityLabel->setText("UI_VEHICLE_STORAGE_AVAILABILITY");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_3_SLOTS");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_5_SLOTS");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_10_SLOTS");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_ONLY_SCOUT_VEHICLES");
+    ui->vehicleStorageAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->trailerAvailabilityLabel->setText("UI_NGP_TRALER_AVAILABILITY");
+    ui->trailerAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->trailerAvailabilityCombo->addItem("UI_NGP_ALL_TRAILERS_AVAILABLE");
+    ui->trailerAvailabilityCombo->addItem("UI_NGP_ONLY_FOUND_IN_WORLD");
+    ui->trailerAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->trailerStoreAvailabilityLabel->setText("UI_NGP_TRAILER_STORE_AVAILABILITY");
+    ui->trailerStoreAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->trailerStoreAvailabilityCombo->addItem("UI_NGP_ONLY_FOUND_IN_WORLD");
+    ui->trailerStoreAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->trailerPricingLabel->setText("UI_NP_TRAILER_PRICING");
+    ui->trailerPricingCombo->addItem("UI_NGP_DEFAULT");
+    ui->trailerPricingCombo->addItem("UI_NGP_ALL_TRAILERS_FREE");
+    ui->trailerPricingCombo->addItem("UI_NGP_X2_PRICES_TRAILERS");
+    ui->trailerPricingCombo->addItem("UI_NGP_X4_PRICES_TRAILERS");
+    ui->trailerPricingCombo->addItem("UI_NGP_X6_PRICES_TRAILERS");
+    ui->trailerPricingCombo->addItem("UI_NGP_RANDOMIZED_X1_TO_X6_TRAILERS");
+    ui->trailerPricingCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->trailerSellingPriceLabel->setText("UI_NGP_TRAILER_SELLING");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_DEFAULT");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_0.5X_PRICES_TRAILERS");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_0.3X_PRICES_TRAILERS");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_0.1X_PRICES_TRAILERS");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_UNABLE_TO_SELL_TRAILERS");
+    ui->trailerSellingPriceCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->externalBodyAddonsAvailabilityLabel->setText("UI_NGP_ALL_ADDONS_AVAILABLE");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_ALL_ADDONS_AVAILABLE");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_RAND_SET_OF_5_ADDONS");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_RAND_SET_OF_10_ADDONS");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_RAND_SET_OF_10_IN_EVERY_GARAGE_ADDONS");
+    ui->externalBodyAddonsAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->tireAvailAbilityLabel->setText("UI_TYRE_AVAILABILITY");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_ALL_TYRES_AVAILABLE");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_ONLY_HIGHWAY_AND_ALLROAD");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_ONLY_HIGHWAY_AND_ALLROAD_AND_OFFROAD");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_NO_MUD_TYRES");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_NO_CHAINED_TYRES");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_SET_OF_RANDOM_IN_EVETY_GARAGE");
+    ui->tireAvailAbilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->internalAddonAvailabilityLabel->setText("UI_INTERNAL_ADDON_AVAILABILITY");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_DEFAULT");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_ALL_INTERNAL_ADDONS_AVAILABLE"); // Need to check!
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_RAND_AMOUNT_IN_10_TO_50");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_RAND_AMOUNT_IN_30_TO_100");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_RAND_AMOUNT_IN_50_TO_150");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_RAND_AMOUNT_IN_0_TO_100");
+    ui->internalAddonAvailabilityCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->vehicleAddonPricingLabel->setText("UI_NGP_ADDON_PRICING");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_DEFAULT");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_FREE_ADDONS");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_X2_PRICES_ADDONS");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_X4_PRICES_ADDONS");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_X6_PRICES_ADDONS");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_RANDOMIZED_X1_TO_X6_ADDONS");
+    ui->vehicleAddonPricingCombo->addItem("UI_NGP_RANDOM_OPTION");
+
+    ui->garageRefuelLabel->setText("UI_NGP_GARAGE_REFUEL");
+    ui->garageRefuelCombo->addItem("UI_NGP_DEFAULT");
+    ui->garageRefuelCombo->addItem("UI_NGP_NO_REFUELNG_IN_GARAGE");
+    ui->garageRefuelCombo->addItem("UI_NGP_RANDOM_OPTION");
 }
 
 void EditorWindow::configureTasksTable()
