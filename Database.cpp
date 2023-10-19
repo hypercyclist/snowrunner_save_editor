@@ -3,14 +3,17 @@
 #include <iostream>
 #include "Localization.h"
 #include "GameAtlas.h"
+#include "NewGamePlusSettings.h"
 
 Database::Database() :
     m_localization(nullptr),
-    m_gameAtlas(nullptr)
+    m_gameAtlas(nullptr),
+    m_newGamePlusSettings(nullptr)
 {
     m_localization = new Localization();
     m_gameAtlas = new GameAtlas();
     m_gameAtlas->setLocalization(m_localization);
+    m_newGamePlusSettings = new NewGamePlusSettings();
 }
 
 void Database::createDatabase(std::string _databasePath)
@@ -62,4 +65,9 @@ Localization* Database::localization()
 GameAtlas* Database::gameAtlas()
 {
     return m_gameAtlas;
+}
+
+NewGamePlusSettings* Database::newGamePlusSettings()
+{
+    return m_newGamePlusSettings;
 }

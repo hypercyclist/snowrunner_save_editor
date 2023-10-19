@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewGamePlusSettingsTable</class>
+ <widget class="QWidget" name="NewGamePlusSettingsTable">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="1,1,1,1">
+   <item row="0" column="0">
+    <widget class="QLabel" name="truckAvailabilityLabel">
+     <property name="text">
+      <string>Truck availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="truckAvailabilityCombo"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="garageVehicleRepairLabel">
+     <property name="text">
+      <string>Garage vehicle repair rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QComboBox" name="garageVehicleRepairCombo"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="dlcVehiclesAvailabilityLabel">
+     <property name="text">
+      <string>DLC vehicles availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="dlcVehiclesAvailabilityCombo"/>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="repairePointsRestockPriceLabel">
+     <property name="text">
+      <string>Repaire points restock price</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QComboBox" name="repairePointsRestockPriceCombo"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="truckPricingLabel">
+     <property name="text">
+      <string>Truck pricing rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="truckPricingCombo"/>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="repairPointsEfficiencyLabel">
+     <property name="text">
+      <string>Repair points efficiency rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QComboBox" name="repairPointsEfficiencyCombo"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="truckSellingLabel">
+     <property name="text">
+      <string>Truck selling rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QComboBox" name="truckSellingCombo"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="vehicleRepairRegionalLabel">
+     <property name="text">
+      <string>Vehicle repair regional rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QComboBox" name="vehicleRepairRegionalCombo"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="vehicleStorageAvailabilityLabel">
+     <property name="text">
+      <string>Vehicle storage availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="vehicleStorageAvailabilityCombo"/>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="vehicleDamageLabel">
+     <property name="text">
+      <string>Vehicle damage rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QComboBox" name="vehicleDamageCombo"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="trailerAvailabilityLabel">
+     <property name="text">
+      <string>Trailer availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QComboBox" name="trailerAvailabilityCombo"/>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="truckRecoveryLabel">
+     <property name="text">
+      <string>Truck recovery rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QComboBox" name="truckRecoveryCombo"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="trailerStoreAvailabilityLabel">
+     <property name="text">
+      <string>Trailer store availabilty rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="trailerStoreAvailabilityCombo"/>
+   </item>
+   <item row="6" column="2">
+    <widget class="QLabel" name="contractPayoutLabel">
+     <property name="text">
+      <string>Contract payout rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <widget class="QComboBox" name="contractPayoutCombo"/>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="trailerPricingLabel">
+     <property name="text">
+      <string>Trailer pricing rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QComboBox" name="trailerPricingCombo"/>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="tasksAndContestPayoutLabel">
+     <property name="text">
+      <string>Tasks and contest payout rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QComboBox" name="tasksAndContestPayoutCombo"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="trailerSellingPriceLabel">
+     <property name="text">
+      <string>Trailer selling price rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QComboBox" name="trailerSellingPriceCombo"/>
+   </item>
+   <item row="8" column="2">
+    <widget class="QLabel" name="contestAvailabilityLabel">
+     <property name="text">
+      <string>Contest availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="3">
+    <widget class="QComboBox" name="contestAvailabilityCombo"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="externalBodyAddonsAvailabilityLabel">
+     <property name="text">
+      <string>External body addons availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QComboBox" name="externalBodyAddonsAvailabilityCombo"/>
+   </item>
+   <item row="9" column="2">
+    <widget class="QLabel" name="automaticCargoLoadingLabel">
+     <property name="text">
+      <string>Automatic cargo loading rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="3">
+    <widget class="QComboBox" name="automaticCargoLoadingCombo"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="tireAvailAbilityLabel">
+     <property name="text">
+      <string>Tire availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QComboBox" name="tireAvailAbilityCombo"/>
+   </item>
+   <item row="10" column="2">
+    <widget class="QLabel" name="mapMarkerLabel">
+     <property name="text">
+      <string>Map marker rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="3">
+    <widget class="QComboBox" name="mapMarkerCombo"/>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="internalAddonAvailabilityLabel">
+     <property name="text">
+      <string>Internal addon availability rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="internalAddonAvailabilityCombo"/>
+   </item>
+   <item row="11" column="2">
+    <widget class="QLabel" name="travellingBetweenRegionsLabel">
+     <property name="text">
+      <string>Travelling between regions</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="3">
+    <widget class="QComboBox" name="travellingBetweenRegionsCombo"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="vehicleAddonPricingLabel">
+     <property name="text">
+      <string>Vehicle addon pricing rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QComboBox" name="vehicleAddonPricingCombo"/>
+   </item>
+   <item row="12" column="2">
+    <widget class="QLabel" name="truckSwitchingLabel">
+     <property name="text">
+      <string>Truck switching rules (minimap)</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="3">
+    <widget class="QComboBox" name="truckSwitchingCombo"/>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="garageRefuelLabel">
+     <property name="text">
+      <string>Garage refueling rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QComboBox" name="garageRefuelCombo"/>
+   </item>
+   <item row="13" column="2">
+    <widget class="QLabel" name="timeSettingsLabel">
+     <property name="text">
+      <string>Time settings</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="3">
+    <widget class="QComboBox" name="timeSettingsCombo"/>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="fuelPricingLabel">
+     <property name="text">
+      <string>Fuel pricing rules</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QComboBox" name="fuelPricingCombo"/>
+   </item>
+   <item row="15" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

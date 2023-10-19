@@ -5,6 +5,7 @@
 
 class Localization;
 class GameAtlas;
+class NewGamePlusSettings;
 
 class Database
 {
@@ -15,10 +16,12 @@ public:
 
     Localization* localization();
     GameAtlas* gameAtlas();
+    NewGamePlusSettings* newGamePlusSettings();
 
 private:
     Localization* m_localization;
     GameAtlas* m_gameAtlas;
+    NewGamePlusSettings* m_newGamePlusSettings;
 };
 
 #endif // DATABASE_H

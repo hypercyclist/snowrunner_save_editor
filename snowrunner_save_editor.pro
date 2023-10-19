@@ -17,6 +17,8 @@ SOURCES += \
     InformationWidget.cpp \
     Localization.cpp \
     Map.cpp \
+    NewGamePlusSettings.cpp \
+    NewGamePlusSettingsTable.cpp \
     Region.cpp \
     SaveFile.cpp \
     TableFilterByRegionMap.cpp \
@@ -37,6 +39,8 @@ HEADERS += \
     InformationWidget.h \
     Localization.h \
     Map.h \
+    NewGamePlusSettings.h \
+    NewGamePlusSettingsTable.h \
     Region.h \
     SaveFile.h \
     TableFilterByRegionMap.h \
@@ -90,6 +94,7 @@ HEADERS += \
 FORMS += \
     EditorWindow.ui \
     InformationWidget.ui \
+    NewGamePlusSettingsTable.ui \
     TableFilterByRegionMap.ui
 
 # Default rules for deployment.
