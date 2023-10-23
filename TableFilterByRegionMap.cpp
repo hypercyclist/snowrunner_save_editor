@@ -49,7 +49,7 @@ void TableFilterByRegionMap::filterMaps()
     ui->regionFilterCombobox->clear();
     ui->mapFilterCombobox->clear();
 
-    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+    std::string allString = m_localization->localization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
 
     if (ui->regionFilterCombobox->findText(allString.c_str()) == -1)
         ui->regionFilterCombobox->addItem(allString.c_str());

@@ -188,7 +188,7 @@ void Localization::loadAppLocalization()
     {
         for (const auto& languagePair : m_languageTextNames)
         {
-            getLocalization(code, languagePair.first);
+            localization(code, languagePair.first);
         }
     }
 }
@@ -303,13 +303,13 @@ void Localization::setDefaultLanguage(Language _language)
     m_defaultLanguage = _language;
 }
 
-std::string Localization::getLocalization(std::string _code)
+std::string Localization::localization(std::string _code)
 {
-    return getLocalization(_code, m_defaultLanguage);
+    return localization(_code, m_defaultLanguage);
 }
 
 // Нет обработки отсутствия языка в map.
-std::string Localization::getLocalization(std::string _code, Language _language)
+std::string Localization::localization(std::string _code, Language _language)
 {
     if (m_localizationsCache.find(_language) == m_localizationsCache.end())
     {
@@ -347,27 +347,27 @@ void Localization::addLocalizationsTemplate(std::string _code, std::string _valu
     }
 }
 
-std::map<Language, std::map<std::string, std::string>>& Localization::getLocalization()
+std::map<Language, std::map<std::string, std::string>>& Localization::localization()
 {
     return m_localizations;
 }
 
-std::map<std::string, std::string>& Localization::getLocalization(Language _language)
+std::map<std::string, std::string>& Localization::localization(Language _language)
 {
     return m_localizations[_language];
 }
 
-std::map<Language, std::map<std::string, std::string>>& Localization::getLocalizationCache()
+std::map<Language, std::map<std::string, std::string>>& Localization::localizationCache()
 {
     return m_localizationsCache;
 }
 
-std::map<std::string, std::string>& Localization::getLocalizationCache(Language _language)
+std::map<std::string, std::string>& Localization::localizationCache(Language _language)
 {
     return m_localizationsCache[_language];
 }
 
-std::map<Language, std::map<std::string, std::string>>& Localization::getLocalizationTemplates()
+std::map<Language, std::map<std::string, std::string>>& Localization::localizationTemplates()
 {
     return m_localizationsTemplates;
 }

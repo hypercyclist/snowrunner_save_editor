@@ -12,6 +12,7 @@ class Database
 public:
     Database();
     void createDatabase(std::string _databasePath);
+    void createDatabase2(std::string _databasePath);
     bool loadDatabase(std::string _databasePath);
 
     Localization* localization();

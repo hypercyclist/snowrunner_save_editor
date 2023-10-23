@@ -23,6 +23,16 @@ std::string Region::code()
     return m_code;
 }
 
+void Region::setTranslationCode(std::string _code)
+{
+    m_translationCode = _code;
+}
+
+std::string Region::translationCode()
+{
+    return m_translationCode;
+}
+
 void Region::setName(Language _language, std::string _name)
 {
     m_name[_language] = _name;

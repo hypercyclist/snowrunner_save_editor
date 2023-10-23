@@ -70,7 +70,7 @@ void GameAtlas::createGameAtlasData(std::string _filename)
 
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                std::string regionTranslate = m_localization->getLocalization(regionCode, languagePair.first);
+                std::string regionTranslate = m_localization->localization(regionCode, languagePair.first);
                 regionTranslate = Utils::cutLongCountryName(regionTranslate);
 
                 region->setName(languagePair.first, regionTranslate);
@@ -86,15 +86,15 @@ void GameAtlas::createGameAtlasData(std::string _filename)
             for (const auto& languagePair : m_localization->languageTextNames())
             {
                 // Тут нужно загрузить для всех языков.
-                std::string mapTranslate = m_localization->getLocalization(mapCode, languagePair.first);
+                std::string mapTranslate = m_localization->localization(mapCode, languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(mapCode + "_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization(mapCode + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(mapCode + "_NEW_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization(mapCode + "_NEW_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode + "_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization("LEVEL_" + mapCode + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + mapCode, languagePair.first);
+                    mapTranslate = m_localization->localization("LEVEL_" + mapCode, languagePair.first);
 
                 mapTranslate = Utils::cutSlash(mapTranslate);
 
@@ -108,7 +108,7 @@ void GameAtlas::createGameAtlasData(std::string _filename)
 
         for (const auto& languagePair : m_localization->languageTextNames())
         {
-            std::string taskTranslate = m_localization->getLocalization(taskCode, languagePair.first);
+            std::string taskTranslate = m_localization->localization(taskCode, languagePair.first);
             task->setName(languagePair.first, taskTranslate);
         }
 
@@ -183,7 +183,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
                 upgrade->setMiddleCode(mCode);
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
-                    std::string translation = m_localization->getLocalization(mCode, languagePair.first);
+                    std::string translation = m_localization->localization(mCode, languagePair.first);
                     translation = translation == "none" ? mCode : translation;
                     upgrade->setName(languagePair.first, translation);
                 }
@@ -306,11 +306,11 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
 
                         for (const auto& languagePair : m_localization->languageTextNames())
                         {
-                            std::string translation = m_localization->getLocalization(translationCode, languagePair.first);
+                            std::string translation = m_localization->localization(translationCode, languagePair.first);
                             upgrade->setName(languagePair.first, translation);
 
-                            m_localization->getLocalization()[languagePair.first][middleCode] = translation;
-                            m_localization->getLocalizationCache()[languagePair.first][middleCode] = translation;
+                            m_localization->localization()[languagePair.first][middleCode] = translation;
+                            m_localization->localizationCache()[languagePair.first][middleCode] = translation;
                         }
                     }
                 }
@@ -380,11 +380,11 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
 
                         for (const auto& languagePair : m_localization->languageTextNames())
                         {
-                            std::string translation = m_localization->getLocalization(translationCode, languagePair.first);
+                            std::string translation = m_localization->localization(translationCode, languagePair.first);
                             upgrade->setName(languagePair.first, translation);
 
-                            m_localization->getLocalization()[languagePair.first][upgrade->middleCode()] = translation;
-                            m_localization->getLocalizationCache()[languagePair.first][upgrade->middleCode()] = translation;
+                            m_localization->localization()[languagePair.first][upgrade->middleCode()] = translation;
+                            m_localization->localizationCache()[languagePair.first][upgrade->middleCode()] = translation;
                         }
                     }
                 }
@@ -461,7 +461,7 @@ void GameAtlas::createTrucksData()
             truck->setNameCode(translationCode);
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                truck->setName(languagePair.first, m_localization->getLocalization(translationCode, languagePair.first));
+                truck->setName(languagePair.first, m_localization->localization(translationCode, languagePair.first));
             }
 
             std::multimap<std::string, std::string> files;
@@ -692,7 +692,7 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
                 Task* task = new Task(taskIt->name.GetString());
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
-                    task->setName(languagePair.first, m_localization->getLocalization(task->code(), languagePair.first));
+                    task->setName(languagePair.first, m_localization->localization(task->code(), languagePair.first));
                 }
                 map->addTask(task);
             }
@@ -712,7 +712,7 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
                 for (const auto& languagePair : m_localization->languageTextNames())
                 {
-                    std::string translation = m_localization->getLocalization(upgrade->middleCode(), languagePair.first);
+                    std::string translation = m_localization->localization(upgrade->middleCode(), languagePair.first);
                     translation = translation == "none" ? upgrade->middleCode() : translation;
                     upgrade->setName(languagePair.first, translation);
                 }
@@ -721,15 +721,15 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                std::string mapTranslate = m_localization->getLocalization(map->code(), languagePair.first);
+                std::string mapTranslate = m_localization->localization(map->code(), languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(map->code() + "_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization(map->code() + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization(map->code() + "_NEW_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization(map->code() + "_NEW_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code() + "_NAME", languagePair.first);
+                    mapTranslate = m_localization->localization("LEVEL_" + map->code() + "_NAME", languagePair.first);
                 if (mapTranslate == "none")
-                    mapTranslate = m_localization->getLocalization("LEVEL_" + map->code(), languagePair.first);
+                    mapTranslate = m_localization->localization("LEVEL_" + map->code(), languagePair.first);
                 map->setName(languagePair.first, mapTranslate);
             }
 
@@ -738,7 +738,7 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
         for (const auto& languagePair : m_localization->languageTextNames())
         {
-            region->setName(languagePair.first, m_localization->getLocalization(region->code(), languagePair.first));
+            region->setName(languagePair.first, m_localization->localization(region->code(), languagePair.first));
         }
 
         addRegion(region);
@@ -752,7 +752,7 @@ bool GameAtlas::loadGameAtlas(std::string _filename)
 
         for (const auto& languagePair : m_localization->languageTextNames())
         {
-            std::string translation = m_localization->getLocalization(truck->nameCode(), languagePair.first);
+            std::string translation = m_localization->localization(truck->nameCode(), languagePair.first);
             truck->setName(languagePair.first, translation);
         }
 

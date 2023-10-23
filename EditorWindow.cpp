@@ -41,11 +41,14 @@ EditorWindow::EditorWindow(QWidget *parent)
     std::string databasePath = m_appConfig->databaseFolderPath();
 
     m_database = new Database();
-    bool databaseLoaded = m_database->loadDatabase(databasePath);
-    if (!databaseLoaded)
-    {
-        m_database->createDatabase(databasePath);
-    }
+
+    m_database->createDatabase2(databasePath);
+
+//    bool databaseLoaded = m_database->loadDatabase(databasePath);
+//    if (!databaseLoaded)
+//    {
+//        m_database->createDatabase(databasePath);
+//    }
 
     configureNgpRulesTable();
     configureTasksTable();
@@ -109,6 +112,10 @@ void EditorWindow::on_menuOpen_triggered()
 
     ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->gameDifficultyMode());
     ui->isHardModeCheckbox->setChecked(m_saveFile->isHardMode());
+
+//    ui->newGamePlusSettingsTable->setNewGamePlusSettings(m_database->newGamePlusSettings());
+    ui->newGamePlusSettingsTable->setSaveFile(m_saveFile);
+    ui->newGamePlusSettingsTable->updateTable();
 
     m_database->gameAtlas()->setTasksCompleteFromVectorCodes(m_saveFile->finishedObjs());
     ui->completeTasksTable->updateTable();
@@ -177,69 +184,69 @@ void EditorWindow::applyLanguage(Language _language)
     m_appConfig->setLastLanguageCode(localization->languageTextName(_language));
     m_appConfig->saveConfig();
 
-    ui->menu->setTitle(localization->getLocalization("UI_INGAME_MENU").c_str());
-    ui->menuOpen->setText(localization->getLocalization("UI_POLYGON_PACKER_DIALOG_OPEN").c_str());
-    ui->menuSave->setText(localization->getLocalization("UI_LOG_SAVE_IN_PROGRESS").c_str());
+    ui->menu->setTitle(localization->localization("UI_INGAME_MENU").c_str());
+    ui->menuOpen->setText(localization->localization("UI_POLYGON_PACKER_DIALOG_OPEN").c_str());
+    ui->menuSave->setText(localization->localization("UI_LOG_SAVE_IN_PROGRESS").c_str());
 
-    ui->menuAbout->setTitle(localization->getLocalization("UI_POLYGON_INFO").c_str());
-    ui->menuInformation->setText(localization->getLocalization("UI_POLYGON_INFO").c_str());
+    ui->menuAbout->setTitle(localization->localization("UI_POLYGON_INFO").c_str());
+    ui->menuInformation->setText(localization->localization("UI_POLYGON_INFO").c_str());
 
-    ui->menuLanguage->setToolTip(localization->getLocalization("UI_SETTINGS_LANGUAGE").c_str());
+    ui->menuLanguage->setToolTip(localization->localization("UI_SETTINGS_LANGUAGE").c_str());
 
-    ui->tabWidget->setTabText(0, localization->getLocalization("UI_OPEN_PROFILE").c_str());
-    ui->moneyCountLabel->setText(localization->getLocalization("UI_POPUP_DEPLOY_MONEY").c_str());
+    ui->tabWidget->setTabText(0, localization->localization("UI_OPEN_PROFILE").c_str());
+    ui->moneyCountLabel->setText(localization->localization("UI_POPUP_DEPLOY_MONEY").c_str());
 
-    std::string rankLabelString = localization->getLocalization("UI_NGP_RANK_10");
+    std::string rankLabelString = localization->localization("UI_NGP_RANK_10");
     rankLabelString = Utils::replace(rankLabelString, "10", "");
     rankLabelString = Utils::replace(rankLabelString, " ", "");
     ui->rankLabel->setText(rankLabelString.c_str());
-    ui->experienceCountLabel->setText(localization->getLocalization("CODEX_LEVEL_UP_HEADER").c_str());
+    ui->experienceCountLabel->setText(localization->localization("CODEX_LEVEL_UP_HEADER").c_str());
 
-    std::string gameString = localization->getLocalization("UI_SETTINGS_GAME");
+    std::string gameString = localization->localization("UI_SETTINGS_GAME");
     ui->tabWidget->setTabText(1, gameString.c_str());
     ui->gameDifficultyModeLabel->setText(gameString.c_str());
 
     ui->gameDifficultyModeCombobox->clear();
-    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_MAIN_MENU_NEW_GAME_LIST_USUAL").c_str());
-    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_HARDMODE").c_str());
-    ui->gameDifficultyModeCombobox->addItem(localization->getLocalization("UI_NGPLUS").c_str());
+    ui->gameDifficultyModeCombobox->addItem(localization->localization("UI_MAIN_MENU_NEW_GAME_LIST_USUAL").c_str());
+    ui->gameDifficultyModeCombobox->addItem(localization->localization("UI_HARDMODE").c_str());
+    ui->gameDifficultyModeCombobox->addItem(localization->localization("UI_NGPLUS").c_str());
     if (m_saveFile)
     {
         ui->gameDifficultyModeCombobox->setCurrentIndex(m_saveFile->gameDifficultyMode());
     }
 
-    ui->isHardModeLabel->setText(localization->getLocalization("UI_HARDMODE").c_str());
-    ui->newGamePlusSettingsLabel->setText(localization->getLocalization("NEW_GAME_PLUS_HEADER").c_str());
+    ui->isHardModeLabel->setText(localization->localization("UI_HARDMODE").c_str());
+    ui->newGamePlusSettingsLabel->setText(localization->localization("NEW_GAME_PLUS_HEADER").c_str());
 
     std::string tasksAndContractsString =
-        localization->getLocalization("UI_PLAYER_PROFILE_TAB_TASKS_NAME") + " / " +
-        localization->getLocalization("UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME");
+        localization->localization("UI_PLAYER_PROFILE_TAB_TASKS_NAME") + " / " +
+        localization->localization("UI_PLAYER_PROFILE_TAB_CONTRACTS_NAME");
     ui->tabWidget->setTabText(2, tasksAndContractsString.c_str());
 
-    std::string regionString = localization->getLocalization("UI_MM_SETTINGS_REGION");
-    std::string mapString = localization->getLocalization("UI_MINIMAP");
-    std::string refreshString = localization->getLocalization("UI_REFRESH");
+    std::string regionString = localization->localization("UI_MM_SETTINGS_REGION");
+    std::string mapString = localization->localization("UI_MINIMAP");
+    std::string refreshString = localization->localization("UI_REFRESH");
     ui->completeTasksTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
     ui->completeTasksTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
     ui->completeTasksTableBar->gui()->filterApplyButton->setText(refreshString.c_str());
 
     std::string checkAllFilteredString =
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL") + " / " +
-        localization->getLocalization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL");
+        localization->localization("UI_MOD_BROWSER_MORE_OPTIONS_DISABLE_ALL") + " / " +
+        localization->localization("UI_MOD_BROWSER_MORE_OPTIONS_ENABLE_ALL");
     ui->completeTasksTableBar->gui()->checkAllFilteredButton->setText(checkAllFilteredString.c_str());
 
     ui->completeTasksTable->horizontalHeaderItem(0)->setText(regionString.c_str());
     ui->completeTasksTable->horizontalHeaderItem(1)->setText(mapString.c_str());
 
     std::string taskOrContractString =
-            localization->getLocalization("UI_HUD_NAV_PANEL_SHOW_TASK") + " / " +
-            localization->getLocalization("UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT");
+            localization->localization("UI_HUD_NAV_PANEL_SHOW_TASK") + " / " +
+            localization->localization("UI_HUD_EVENT_DISCOVERED_OBJECTIVE_CONTRACT");
     ui->completeTasksTable->horizontalHeaderItem(2)->setText(taskOrContractString.c_str());
 
-    std::string selectString = localization->getLocalization("UI_SELECT");
+    std::string selectString = localization->localization("UI_SELECT");
     ui->completeTasksTable->horizontalHeaderItem(3)->setText(selectString.c_str());
 
-    ui->tabWidget->setTabText(3, localization->getLocalization("UI_GARAGE_MODIFICATIONS_UPGRADES").c_str());
+    ui->tabWidget->setTabText(3, localization->localization("UI_GARAGE_MODIFICATIONS_UPGRADES").c_str());
 
     ui->upgradesTableBar->gui()->regionFilterLabel->setText(regionString.c_str());
     ui->upgradesTableBar->gui()->mapFilterLabel->setText(mapString.c_str());
@@ -248,7 +255,7 @@ void EditorWindow::applyLanguage(Language _language)
 
     ui->upgradesTable->horizontalHeaderItem(0)->setText(regionString.c_str());
     ui->upgradesTable->horizontalHeaderItem(1)->setText(mapString.c_str());
-    ui->upgradesTable->horizontalHeaderItem(2)->setText(localization->getLocalization("UI_HUD_NAV_PANEL_GET_UPGRADE").c_str());
+    ui->upgradesTable->horizontalHeaderItem(2)->setText(localization->localization("UI_HUD_NAV_PANEL_GET_UPGRADE").c_str());
     ui->upgradesTable->horizontalHeaderItem(3)->setText(selectString.c_str());
 
     ui->completeTasksTableBar->filterMaps();
@@ -263,7 +270,7 @@ void EditorWindow::on_menuInformation_triggered()
 {
     InformationWidget* informationWidget = new InformationWidget(this);
     informationWidget->setWindowTitle(m_database->localization()->
-        getLocalization("UI_POLYGON_INFO").c_str());
+        localization("UI_POLYGON_INFO").c_str());
     informationWidget->setWindowFlags(Qt::Window);
     informationWidget->setWindowModality(Qt::WindowModality::ApplicationModal);
     informationWidget->setAttribute(Qt::WA_DeleteOnClose);
@@ -283,7 +290,7 @@ void EditorWindow::setTabsEnabled(bool _state)
 void EditorWindow::configureNgpRulesTable()
 {
     ui->newGamePlusSettingsTable->setLocalization(m_database->localization());
-    ui->newGamePlusSettingsTable->setNewGamePlusSettings(m_database->newGamePlusSettings());
+//    ui->newGamePlusSettingsTable->setNewGamePlusSettings(m_database->newGamePlusSettings());
     ui->newGamePlusSettingsTable->updateTable();
 }
 

@@ -19,7 +19,7 @@ void CompleteUpgradesTable::updateTable()
 
     QAbstractItemModel* upgradesTableModel = model();
 
-    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+    std::string allString = m_localization->localization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
 
     for (auto regionPair : m_gameAtlas->regions())
     {
@@ -49,7 +49,7 @@ void CompleteUpgradesTable::updateTable()
                         for (std::string truckCode : upgradePair.second->trucks())
                         {
                             if (trucksList.size() > 0) trucksList += ", ";
-                            trucksList += m_localization->getLocalization(truckCode, m_localization->defaultLanguage());
+                            trucksList += m_localization->localization(truckCode, m_localization->defaultLanguage());
                         }
 
                         std::string upgradeName = upgradeTypeToText(upgradePair.second, m_localization->defaultLanguage())
@@ -91,11 +91,11 @@ std::string CompleteUpgradesTable::upgradeTypeToText(Upgrade* upgrade,
     UpgradeType upgradeType = upgrade->type();
     switch (upgradeType)
     {
-    case UpgradeType::ENGINE: return m_localization->getLocalization("UI_TRUCK_PART_ENGINE", _language); break;
-    case UpgradeType::GEARBOX: return m_localization->getLocalization("UI_TRUCK_PART_GEARBOX", _language); break;
-    case UpgradeType::SUSPENSION: return m_localization->getLocalization("UI_TRUCK_PART_SUSPENSION", _language); break;
-    case UpgradeType::DIFFLOCK: return m_localization->getLocalization("UI_TRUCK_INFO_DIFF_LOCK", _language); break;
-    case UpgradeType::TRANSFERBOX: return m_localization->getLocalization("UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME", _language); break;
+    case UpgradeType::ENGINE: return m_localization->localization("UI_TRUCK_PART_ENGINE", _language); break;
+    case UpgradeType::GEARBOX: return m_localization->localization("UI_TRUCK_PART_GEARBOX", _language); break;
+    case UpgradeType::SUSPENSION: return m_localization->localization("UI_TRUCK_PART_SUSPENSION", _language); break;
+    case UpgradeType::DIFFLOCK: return m_localization->localization("UI_TRUCK_INFO_DIFF_LOCK", _language); break;
+    case UpgradeType::TRANSFERBOX: return m_localization->localization("UI_UPGRADE_TRANSFERBOX_AWDSWITCHABLE_NAME", _language); break;
     default: return "Unknown"; break;
     }
 }

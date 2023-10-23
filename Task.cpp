@@ -12,6 +12,26 @@ Task::Task(std::string _code) :
     m_code = _code;
 }
 
+void Task::setRegionCode(std::string _code)
+{
+    m_regionCode = _code;
+}
+
+std::string Task::regionCode()
+{
+    return m_regionCode;
+}
+
+void Task::setMapCode(std::string _code)
+{
+    m_mapCode = _code;
+}
+
+std::string Task::mapCode()
+{
+    return m_mapCode;
+}
+
 void Task::setCode(std::string _code)
 {
     m_code = _code;

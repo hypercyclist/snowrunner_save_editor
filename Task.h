@@ -11,6 +11,12 @@ public:
     Task();
     Task(std::string _code);
 
+    void setRegionCode(std::string _code);
+    std::string regionCode();
+
+    void setMapCode(std::string _code);
+    std::string mapCode();
+
     void setCode(std::string _code);
     std::string code();
 
@@ -21,6 +27,8 @@ public:
     bool complete();
 
 private:
+    std::string m_regionCode;
+    std::string m_mapCode;
     std::string m_code;
     std::map<Language, std::string> m_name;
     bool m_complete;

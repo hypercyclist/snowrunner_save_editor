@@ -54,7 +54,7 @@ void CompleteTasksTable::updateTable()
 
     QAbstractItemModel* tasksTableModel = model();
 
-    std::string allString = m_localization->getLocalization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
+    std::string allString = m_localization->localization("UI_DLC_STORE_ALL_DLCS", m_localization->defaultLanguage());
 
     for (auto regionPair : m_gameAtlas->regions())
     {

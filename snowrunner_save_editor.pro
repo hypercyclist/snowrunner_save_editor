@@ -17,7 +17,6 @@ SOURCES += \
     InformationWidget.cpp \
     Localization.cpp \
     Map.cpp \
-    NewGamePlusSettings.cpp \
     NewGamePlusSettingsTable.cpp \
     Region.cpp \
     SaveFile.cpp \
@@ -39,7 +38,6 @@ HEADERS += \
     InformationWidget.h \
     Localization.h \
     Map.h \
-    NewGamePlusSettings.h \
     NewGamePlusSettingsTable.h \
     Region.h \
     SaveFile.h \

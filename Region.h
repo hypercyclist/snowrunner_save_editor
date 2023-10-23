@@ -17,6 +17,9 @@ public:
     void setCode(std::string _code);
     std::string code();
 
+    void setTranslationCode(std::string _code);
+    std::string translationCode();
+
     void setName(Language _language, std::string _name);
     std::string name(Language _language);
 
@@ -26,6 +29,7 @@ public:
 
 private:
     std::string m_code;
+    std::string m_translationCode;
     std::map<Language, std::string> m_name;
     std::map<std::string, Map*> m_maps;
 };

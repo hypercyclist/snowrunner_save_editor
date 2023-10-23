@@ -29,16 +29,16 @@ public:
     void loadAppLocalization();
     void saveLocalizationCache(std::string _filename);
     void setDefaultLanguage(Language _language);
-    std::string getLocalization(std::string _code);
-    std::string getLocalization(std::string _code, Language _language);
+    std::string localization(std::string _code);
+    std::string localization(std::string _code, Language _language);
     Language defaultLanguage();
     void addLocalizationsTemplate(std::string _code, std::string _value);
 
-    std::map<Language, std::map<std::string, std::string>>& getLocalization();
-    std::map<std::string, std::string>& getLocalization(Language _language);
-    std::map<Language, std::map<std::string, std::string>>& getLocalizationCache();
-    std::map<std::string, std::string>& getLocalizationCache(Language _language);
-    std::map<Language, std::map<std::string, std::string>>& getLocalizationTemplates();
+    std::map<Language, std::map<std::string, std::string>>& localization();
+    std::map<std::string, std::string>& localization(Language _language);
+    std::map<Language, std::map<std::string, std::string>>& localizationCache();
+    std::map<std::string, std::string>& localizationCache(Language _language);
+    std::map<Language, std::map<std::string, std::string>>& localizationTemplates();
 
     std::string languageTextName(Language _language);
     Language languageByTextName(std::string _languageCode);
