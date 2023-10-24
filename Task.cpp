@@ -32,6 +32,16 @@ std::string Task::mapCode()
     return m_mapCode;
 }
 
+void Task::setTranslationCode(std::string _code)
+{
+    m_translationCode = _code;
+}
+
+std::string Task::translationCode()
+{
+    return m_translationCode;
+}
+
 void Task::setCode(std::string _code)
 {
     m_code = _code;

@@ -5,13 +5,16 @@
 #include "GameAtlas.h"
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
+#include "rapidxml/rapidxml.hpp"
 //#include "NewGamePlusSettings.h"
 #include <fstream>
 #include <sstream>
 #include "Region.h"
 #include "Map.h"
 #include "Task.h"
+#include "Truck.h"
 #include "Utils.h"
+#include <QDebug>
 
 Database::Database() :
     m_localization(nullptr),
@@ -59,6 +62,7 @@ void Database::createDatabase2(std::string _databasePath)
 
     m_localization->createLocalizations();
 
+// Read regions, maps, tasks.
     std::ifstream readStream(tasksPath);
     std::stringstream buffer;
     buffer << readStream.rdbuf();
@@ -79,14 +83,13 @@ void Database::createDatabase2(std::string _databasePath)
         if (!region)
         {
             region = new Region(regionCode);
-            std::string regionTranslationCode = regionCode;
             for (const auto& languagePair : m_localization->languageTextNames())
             {
-                std::string translation = m_localization->localization(regionTranslationCode, languagePair.first);
+                std::string translation = m_localization->localization(regionCode, languagePair.first);
                 translation = Utils::cutLongCountryName(translation);
                 region->setName(languagePair.first, translation);
             }
-            region->setTranslationCode(regionTranslationCode);
+            region->setTranslationCode(regionCode);
             gameAtlas->addRegion(region);
         }
         Map* map = region->map(mapCode);
@@ -121,16 +124,184 @@ void Database::createDatabase2(std::string _databasePath)
         }
 
         Task* task = new Task(taskCode);
+        task->setTranslationCode(taskCode);
+        task->setRegionCode(regionCode);
+        task->setMapCode(mapCode);
 
         for (const auto& languagePair : m_localization->languageTextNames())
         {
-            std::string taskTranslate = m_localization->localization(taskCode, languagePair.first);
-            task->setName(languagePair.first, taskTranslate);
+            std::string translation = m_localization->localization(taskCode, languagePair.first);
+            task->setName(languagePair.first, translation);
         }
 
         map->addTask(task);
     }
 
+// Read vehicles.
+    QString rootXmlFolderPath = QString::fromStdString(_databasePath) + "/generator_materials/xml";
+
+    QFileInfoList joinedGameClassesFoldersContent = QDir(rootXmlFolderPath + "/classes")
+        .entryInfoList(QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+
+    QFileInfoList joinedTruckTuningFoldersContent;
+
+    QFileInfoList dlcFolderContent = QDir(rootXmlFolderPath + "/_dlc")
+        .entryInfoList(QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+    for (QFileInfo specificDlcFolder : dlcFolderContent)
+    {
+        joinedGameClassesFoldersContent += QDir(specificDlcFolder.absoluteFilePath() + "/classes")
+            .entryInfoList(QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+    }
+
+    for (QFileInfo classFolderInfo : joinedGameClassesFoldersContent)
+    {
+        if (classFolderInfo.fileName() == "trucks")
+        {
+            QFileInfoList classFolderContent = QDir(classFolderInfo.absoluteFilePath())
+                .entryInfoList(QStringList(), QDir::Files | QDir::NoDotAndDotDot);
+
+            for (QFileInfo fileFileInfo : classFolderContent)
+            {
+                std::ifstream readStream(fileFileInfo.absoluteFilePath().toStdString(), std::ios::binary);
+                std::stringstream buffer;
+                buffer << readStream.rdbuf();
+                readStream.close();
+                std::string xmlFileText = buffer.str();
+
+                rapidxml::xml_document<> xmlDocument;
+                xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                rapidxml::xml_node<> *node = xmlDocument.first_node("Truck");
+
+                if (!node) {
+                    continue;
+                }
+
+                std::string truckCode = fileFileInfo.fileName().toStdString().substr(0, fileFileInfo.fileName().toStdString().length() - 4);
+                std::string translationCode = "";
+                rapidxml::xml_node<> *gameDataNode = node->first_node("GameData");
+                if (gameDataNode)
+                {
+                    translationCode = gameDataNode->first_node("UiDesc")->first_attribute("UiName")->value();
+                }
+
+                Truck* truck = new Truck(truckCode);
+
+                truck->setNameCode(translationCode); // check.
+                truck->setTranslationCode(translationCode);
+                for (const auto& languagePair : m_localization->languageTextNames())
+                {
+                    truck->setName(languagePair.first, m_localization->localization(translationCode, languagePair.first));
+                }
+
+                rapidxml::xml_node<> *truckDataNode = node->first_node("TruckData");
+                if (truckDataNode)
+                {
+                    rapidxml::xml_node<> *engineSocketNode = truckDataNode->first_node("EngineSocket");
+                    if (engineSocketNode) {
+                        std::string typeText = engineSocketNode->first_attribute("Type")->value();
+                        typeText = Utils::replace(typeText, " ", "");
+                        for (std::string file : Utils::split(typeText, ','))
+                        {
+                            truck->addEngineSocketType(file);
+                        }
+                    }
+
+                    rapidxml::xml_node<> *gearboxSocketNode = truckDataNode->first_node("GearboxSocket");
+                    if (gearboxSocketNode) {
+                        std::string typeText = gearboxSocketNode->first_attribute("Type")->value();
+                        typeText = Utils::replace(typeText, " ", "");
+                        for (std::string file : Utils::split(typeText, ','))
+                        {
+                            truck->addGearboxSocketType(file);
+                        }
+                    }
+
+                    rapidxml::xml_node<> *suspensionSocketNode = truckDataNode->first_node("SuspensionSocket");
+                    if (suspensionSocketNode) {
+                        std::string typeText = suspensionSocketNode->first_attribute("Type")->value();
+                        typeText = Utils::replace(typeText, " ", "");
+                        for (std::string file : Utils::split(typeText, ','))
+                        {
+                            truck->addSuspensionSocketType(file);
+                        }
+                    }
+                }
+
+                auto socketTypes = truck->socketTypes();
+                for(auto filesIt = socketTypes.begin(); filesIt != socketTypes.end(); filesIt++)
+                {
+                    QFileInfo file;
+                    std::string filePathString = rootXmlFolderPath.toStdString() + "/" + filesIt->first + "/"
+                        + filesIt->second + ".xml";
+                    if (QFileInfo::exists(QString::fromStdString(filePathString)))
+                    {
+                        file.setFile(QString::fromStdString(filePathString));
+                    }
+                    else
+                    {
+                        QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
+                        QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
+                            QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
+                        for (QFileInfo folder : addonsXmlFolderContent)
+                        {
+                            std::string filePathString = folder.absoluteFilePath().toStdString() + "/classes/" + filesIt->first + "/" + filesIt->second + ".xml";
+                            if (QFileInfo::exists(QString::fromStdString(filePathString)))
+                            {
+                                file.setFile(QString::fromStdString(filePathString));
+                            }
+                        }
+                    }
+
+                    std::ifstream readStream(file.absoluteFilePath().toStdString(), std::ios::binary);
+                    std::stringstream buffer;
+                    buffer << readStream.rdbuf();
+                    readStream.close();
+                    std::string xmlFileText = buffer.str();
+
+                    rapidxml::xml_document<> xmlDocument;
+                    xmlDocument.parse<0>(const_cast<char*>(xmlFileText.c_str()));
+
+                    rapidxml::xml_node<> *upgradeVariantsNode = nullptr;
+                    rapidxml::xml_node<> *upgradeNode = nullptr;
+                    if (filesIt->first == "engines")
+                    {
+                        upgradeVariantsNode = xmlDocument.first_node("EngineVariants");
+                        upgradeNode = upgradeVariantsNode->first_node("Engine");
+                    }
+                    else if (filesIt->first == "gearboxes")
+                    {
+                        upgradeVariantsNode = xmlDocument.first_node("GearboxVariants");
+                        upgradeNode = upgradeVariantsNode->first_node("Gearbox");
+                    }
+                    else if (filesIt->first == "suspensions")
+                    {
+                        upgradeVariantsNode = xmlDocument.first_node("SuspensionSetVariants");
+                        upgradeNode = upgradeVariantsNode->first_node("SuspensionSet");
+                    }
+
+                    if (upgradeVariantsNode)
+                    {
+                        for (rapidxml::xml_node<> *node = upgradeNode; node; node = node->next_sibling())
+                        {
+                            rapidxml::xml_attribute<> *nameAttribute = node->first_attribute("Name");
+                            if (!nameAttribute) {
+                                continue;
+                            }
+                            truck->addUpgrade(nameAttribute->value());
+                        }
+                    }
+                }
+
+                m_trucks[truckCode] = truck;
+            }
+
+        }
+        else
+        {
+//            parseUpgrade();
+        }
+    }
 }
 
 bool Database::loadDatabase(std::string _databasePath)
