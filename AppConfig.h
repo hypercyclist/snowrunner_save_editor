@@ -20,7 +20,7 @@ public:
     std::string configFullFileName();
 
     std::string databaseFolderPath();
-    void setDatabaseFolderPath(std::string _path);
+//    void setDatabaseFolderPath(std::string _path);
 
     std::string lastSaveFolderPath();
     void setLastSaveFolderPath(std::string _path);

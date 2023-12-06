@@ -205,11 +205,11 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
         }
     }
 
-    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
+    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/");
     QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
 
-    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
+    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
     for (QFileInfo folder : addonsXmlFolderContent)
@@ -395,11 +395,11 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
 
 void GameAtlas::createTrucksData()
 {
-    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/");
+    QDir xmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/");
     QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
 
-    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
+    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
     for (QFileInfo folder : addonsXmlFolderContent)
@@ -504,7 +504,7 @@ void GameAtlas::createTrucksData()
             {
                 QFileInfo file;
                 std::string filePathString = QDir::currentPath().toStdString()
-                    + "/database/generator_materials/xml/" + filesIt->first + "/"
+                    + "/database/generator_materials/xml/classes/" + filesIt->first + "/"
                     + filesIt->second + ".xml";
                 if (QFileInfo::exists(QString::fromStdString(filePathString)))
                 {
@@ -512,7 +512,7 @@ void GameAtlas::createTrucksData()
                 }
                 else
                 {
-                    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
+                    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
                     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
                         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
                     for (QFileInfo folder : addonsXmlFolderContent)

@@ -52,10 +52,11 @@ bool AppConfig::loadConfig(std::string _fullFileName)
     std::string saveFileString = buffer.str();
     configFileJsonDocument.Parse(saveFileString.c_str());
 
-    if (configFileJsonDocument.HasMember("databaseFolderPath"))
-    {
-        m_databaseFolderPath = configFileJsonDocument["databaseFolderPath"].GetString();
-    }
+//    if (configFileJsonDocument.HasMember("databaseFolderPath"))
+//    {
+//        m_databaseFolderPath = configFileJsonDocument["databaseFolderPath"].GetString();
+//    }
+    m_databaseFolderPath = "database/";
 
     if (configFileJsonDocument.HasMember("lastSaveFolderPath"))
     {
@@ -87,17 +88,17 @@ bool AppConfig::saveConfig(std::string _fullFileName)
 
     configFileJsonDocument.SetObject();
 
-    if (configFileJsonDocument.HasMember("databaseFolderPath"))
-    {
-        configFileJsonDocument["databaseFolderPath"].SetString(m_databaseFolderPath.c_str(), m_databaseFolderPath.length());
-    }
-    else
-    {
-        rapidjson::Value databaseFolderPathValue(m_databaseFolderPath.c_str(),
-            m_databaseFolderPath.length(), allocator);
-        configFileJsonDocument.AddMember("databaseFolderPath",
-            databaseFolderPathValue, allocator);
-    }
+//    if (configFileJsonDocument.HasMember("databaseFolderPath"))
+//    {
+//        configFileJsonDocument["databaseFolderPath"].SetString(m_databaseFolderPath.c_str(), m_databaseFolderPath.length());
+//    }
+//    else
+//    {
+//        rapidjson::Value databaseFolderPathValue(m_databaseFolderPath.c_str(),
+//            m_databaseFolderPath.length(), allocator);
+//        configFileJsonDocument.AddMember("databaseFolderPath",
+//            databaseFolderPathValue, allocator);
+//    }
 
     if (configFileJsonDocument.HasMember("lastSaveFolderPath"))
     {
@@ -150,10 +151,10 @@ std::string AppConfig::databaseFolderPath()
     return m_databaseFolderPath;
 }
 
-void AppConfig::setDatabaseFolderPath(std::string _path)
-{
-    m_databaseFolderPath = _path;
-}
+//void AppConfig::setDatabaseFolderPath(std::string _path)
+//{
+//    m_databaseFolderPath = _path;
+//}
 
 
 std::string AppConfig::lastSaveFolderPath()
