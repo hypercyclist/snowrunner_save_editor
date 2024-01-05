@@ -1,3 +1,11 @@
+1.03
+- Updated tasks list.
+- Added few files validation.
+- Removed changeable database path from app config.
+- Fixed xml materials path, that prevent to database creation crash.
+- Fixed difficulty tab translation.
+- Fixed unsaveable database.
+
 1.02
 - Added application config that contains database folder path, last save directory and last used language.
 - Added difficulty tab. It can change game mode.

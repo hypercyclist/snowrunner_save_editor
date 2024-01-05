@@ -64,7 +64,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="userProfileLayout">
        <attribute name="title">
@@ -246,13 +246,17 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1068</width>
-               <height>432</height>
+               <width>1066</width>
+               <height>449</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
               <item>
-               <widget class="NewGamePlusSettingsTable" name="newGamePlusSettingsTable" native="true"/>
+               <widget class="NewGamePlusSettingsTable" name="newGamePlusSettingsTable" native="true">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
