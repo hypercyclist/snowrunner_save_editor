@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_bull_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_stuff/stuff_hood_bull_western_star_nf1424" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodNF1424" />
+	</GameData>
+</TruckAddon>

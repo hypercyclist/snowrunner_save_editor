@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_tuning/neo_falcon_2000_wings_2"/>
+	<GameData
+		CameraPreset="default"
+		Category="fenders"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc=""
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDER_SET_NAME"
+		/>
+		<InstallSocket Type="NeoFalcon2000Wings" />
+	</GameData>
+</TruckAddon>

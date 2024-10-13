@@ -172,6 +172,10 @@
 		</Damage>
 		<CompatibleWheels RearOffsetZ="0.04" Scale="0.64" Type="wheels_tatra_force_815_7" />
 		<CompatibleWheels RearOffsetZ="0.04" Scale="0.64" Type="wheels_heavy_single" />
+
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.64" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.64" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.64" Type="wheels_heavy_mudtires_single2" />
 		<Camera Center="(-1.7; 0; 0)" ParentFrame="BoneChassis_cdt">
 			<Cockpit
 				_template="Default"
@@ -197,7 +201,7 @@
 	<PhysicsModel Mesh="trucks/tatra_force_t815_7">
 		<NetSync Legacy="false" />
 		<Body
-			CenterOfMassOffset="(1; 0; 0)"
+			CenterOfMassOffset="(-1; 0; 0)"
 			ImpactType="Truck"
 			Mass="12000"
 			ModelFrame="BoneChassis_cdt"
@@ -356,7 +360,7 @@
 	<Landmark Mesh="landmarks/tatra_force_t815_7_lmk" MinScale="1.8" MaxScale="2.8" />
 	<HeadLight _template="Default" Pos="(4.541; 1.196; 0)" />
 	<GameData
-		Country="RU,CAS"
+		Country="RU,CAS,NE,CE"
 		ExcludeAddons="trailer_log_pole"
 		Price="182600"
 		UnlockByExploration="true"
@@ -399,10 +403,11 @@
 		<CraneSocket Pos="(-1.657; 1.04; -0.465)" />
 		<CraneSocket Pos="(-5.546; 1.002; 0)" />
 		<AddonSockets>
-			<Socket Names="Trailer" Offset="(-5.546; 1.002; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-5.546; 1.002; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-3.452; 1.746; 0)" />
 		</AddonSockets>
 		<AddonSockets>
+			<Socket Names="HeavyRepairSmall" NamesBlock="TatraCrane" Offset="(-2.15; 1.38; 0)"/>
 			<Socket Names="TatraFrameAddonTank" Offset="(-1.2; 0.04; 0)" />
 			<Socket Names="TatraSideboard" Offset="(-1.060; 0.021; 0)">
 				<AddonsShift Offset="(-0.33; 0; 0)" Types="TatraCrane" />
@@ -411,10 +416,10 @@
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.015)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.015)" />
 			</Socket>
-			<Socket Names="TatraFrameAddonTow" NamesBlock="TatraFrameAddonTow, Trailer, LargeSemitrailerOiltank" />
+			<Socket Names="TatraFrameAddonTow" NamesBlock="TatraFrameAddonTow, Trailer, LogTrailer, LargeSemitrailerOiltank" />
 		</AddonSockets>
 		<AddonSockets>
-			<Socket Names="TatraCrane" NamesBlock="TatraForceT8157Fender, TatraFrameAddonTank" />
+			<Socket Names="TatraCrane" Offset="(0; 0.2; 0)" NamesBlock="TatraFrameAddonTank" />
 		</AddonSockets>
 		<AddonSockets DefaultAddon="tatra_force_t815_7_bumper_default">
 			<Socket Names="TatraForceT8157Bumper" />

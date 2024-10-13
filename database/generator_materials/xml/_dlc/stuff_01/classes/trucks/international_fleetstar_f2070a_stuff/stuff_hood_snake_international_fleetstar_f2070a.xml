@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_snake_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_fleetstar_f2070a_stuff/stuff_hood_snake_international_fleetstar_f2070a" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodInternationalFleetstarF2070A" />
+	</GameData>
+</TruckAddon>

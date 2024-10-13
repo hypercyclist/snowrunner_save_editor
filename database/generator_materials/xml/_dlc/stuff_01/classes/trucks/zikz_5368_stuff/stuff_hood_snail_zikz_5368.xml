@@ -1,0 +1,18 @@
+<_parent File="stuff_hood_snail_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_stuff/stuff_hood_snail_zikz_5368">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodZikz5368" />
+	</GameData>
+</TruckAddon>

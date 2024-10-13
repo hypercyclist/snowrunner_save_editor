@@ -1,0 +1,51 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_spot_light_1">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(2.93; 3.153; 0.484)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(2.988; 3.153; 0)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.4" Pos="(2.988; 3.153; -0.485)" />
+			<!-- <Flare _template="IgnitionSignalOrange" AspectRatio="6" Color="g(255; 140; 0) x 0.4" Dir="(0; 0; 1)" Pos="(4.854; 1.134; 0.928)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="6" Color="g(255; 140; 0) x 0.4" Dir="(0; 0; 1)" Pos="(4.854; 1.134; -0.928)" ParentFrame="BoneCabin_cdt"/> -->
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.904; 3.153; -0.483)" Scale="(0.7; 0.7; 0.4)" />
+			<Model _template="HeadLightRay" Org="(2.904; 3.153; 0.483)" Scale="(0.7; 0.7; 0.4)" />
+			
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; -0.552)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; -0.483)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; -0.414)" />
+			
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.959; 3.153; -0.068)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.959; 3.153; 0.001)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.959; 3.153; 0.070)" />
+			
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; 0.417)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; 0.486)" />
+			<Flare _template="HeadLight" Color="g(165; 149; 130) x 0.5" DirAngle="135" Size="0.5" Pos="(2.904; 3.153; 0.555)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<RequiredAddon Types="kenworth_w990_top_fender" />
+		<InstallSocket Type="KenworthW990Spotlight" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,178 @@
+<ModelBrand NightLightingShadowsAllowCap="true" >
+	<Landmark Mesh="landmarks/us_tunnel_wide_01_ru13_lmk" />
+
+	<Subset Name="state_start" IsDefault="true">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="cdt_mesh_start" />
+	</Subset>
+
+	<Subset Name="state_end" IsDefault="false">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="cdt_mesh_end" />
+		<AnimSubset Name="build_animation_0" /> 
+			<AnimTrack Name="anim_state" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="cart_01"/>
+		<Mesh Name="cart_02"/>
+		<Mesh Name="cart_03"/>
+		<Mesh Name="cart_04"/>
+		<Mesh Name="cart_05"/>
+		<Mesh Name="cart_row_01"/>
+		<Mesh Name="cart_row_02"/>
+		<Mesh Name="gates"/>
+		<Mesh Name="gates_01"/>
+		<Mesh Name="gates_02"/>
+		<Mesh Name="rails"/>
+		<Mesh Name="tunnel"/>
+		<Mesh Name="light_switch"/>
+		<CdtMesh Name="cdt_mesh_end" />
+	</AnimSubset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+
+		<Flare
+			AttenEnd="100"
+			AttenStart="27"
+			Color="g(1; 255; 1) x 0.5"
+			Dir="(0; -1; 0)"
+			Pos="(2.33278 ; 6.07455 ; -5.42724 )"
+			Size="0.75"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+			OcclusionOffset="0.02"
+			ColorMultAtDay="1"
+			SizeAtDay="0.65"
+			SizeMultAtDay="1.0"
+
+		/>
+		<Flare
+			AttenEnd="100"
+			AttenStart="27"
+			Color="g(255; 1; 1) x 0.5"
+			Dir="(0; -1; 0)"
+			Pos="(2.71099 ; 6.07455 ; -5.42724)"
+			Size="0.75"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+			OcclusionOffset="0.02"
+			ColorMultAtDay="1"
+			SizeAtDay="0.65"
+			SizeMultAtDay="1.0"
+		/>
+
+		<Flare
+			AttenEnd="100"
+			AttenStart="27"
+			Color="g(255; 1; 1) x 0.5"
+			Dir="(0; -1; 0)"
+			Pos="(-2.33278 ; 6.07455 ; -5.42724 )"
+			Size="0.75"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+			OcclusionOffset="0.02"
+			ColorMultAtDay="1"
+			SizeAtDay="0.65"
+			SizeMultAtDay="1.0"
+
+		/>
+		<Flare
+			AttenEnd="100"
+			AttenStart="27"
+			Color="g(1; 255; 1) x 0.5"
+			Dir="(0; -1; 0)"
+			Pos="(-2.71099 ; 6.07455 ; -5.42724)"
+			Size="0.75"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+			OcclusionOffset="0.02"
+			ColorMultAtDay="1"
+			SizeAtDay="0.65"
+			SizeMultAtDay="1.0"
+		/>
+
+	</PhysicsModel>
+
+	<TrackEvents TrackName="anim_state">
+
+		<AnimEvent Key="225">
+                <Fade Time="8" />
+		</AnimEvent>
+
+		<!--
+   		 Carts dropped 
+     	 -->
+		<AnimEvent Key="10">
+			<Sound Name="actors/actor_construction/actor_construct_mine_wagoons" Range="200" Volume="1"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="65">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_01"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_04"/>
+		</AnimEvent>
+
+		<AnimEvent Key="69">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_05"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_08"/>
+		</AnimEvent>
+
+		<AnimEvent Key="72">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_09"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_12"/>
+		</AnimEvent>
+
+		<AnimEvent Key="52">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_13"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_16"/>
+		</AnimEvent>
+
+		<AnimEvent Key="57">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_17"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_20"/>
+		</AnimEvent>
+		<!--
+   		 Carts start moving
+     	-->
+		<AnimEvent Key="161">
+			<SFX Name="pole_smoke_01" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_05"/>
+		</AnimEvent>
+
+		<AnimEvent Key="170">
+			<SFX Name="pole_smoke_01" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_13"/>
+		</AnimEvent>
+
+		<AnimEvent Key="165">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_09"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_11"/>
+		</AnimEvent>
+
+		<AnimEvent Key="160">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_17"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_20"/>
+		</AnimEvent>
+
+		<AnimEvent Key="175">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_13"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_16"/>
+		</AnimEvent>
+
+		<AnimEvent Key="180">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_05"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_08"/>
+		</AnimEvent>
+
+		<AnimEvent Key="185">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_09"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_12"/>
+		</AnimEvent>
+		
+		<AnimEvent Key="191">
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_17"/>
+			<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" Frame="Bone.Effect_12"/>
+		</AnimEvent>
+
+	
+	</TrackEvents>
+
+
+</ModelBrand>

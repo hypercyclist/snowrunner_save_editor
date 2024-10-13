@@ -1,0 +1,517 @@
+<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			_template="FirstAxle"
+			SteeringAngle="24"
+			SteeringCastor="4"
+		/>
+		<RearAxle
+			ConnectedToHandbrake="true"
+			Location="front"
+			Torque="default"
+		/>
+		<FirstAxle
+			Location="front"
+			SteeringAngle="36"
+			SteeringCastor="12"
+			Torque="default"
+		/>
+	</Wheel>
+	<Flare>
+		<MarkerBeacon Color="g(117; 94; 72) x 0.7" Size="0.5" />
+		<IgnitionSignalWhite
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 0.8"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Size="0.4"
+		/>
+		<IgnitionSignalOrange
+			AspectRatio="1.4"
+			Color="g(255; 140; 0) x 0.3"
+			ColorMultAtDay="0.6"
+			Dir="(0; 1; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<HeadLight
+			AspectRatio="1.4"
+			Color="g(141; 133; 117) x .9"
+			ColorMultAtDay="0.7"
+			Dir="(1; 0; 0)"
+			DirAngle="90"
+			Reflections="true"
+			Size="2.0"
+			SizeMultAtDay="0.5"
+		/>
+	</Flare>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-0.5"
+				MaxLimit="0.5"
+			>
+				<Motor Damping="5" Spring="150" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Panel Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Prismatic"
+				MinLimit="-0.1"
+				MaxLimit="0.05"
+			>
+				<Motor Damping="50" Spring="600" Type="Spring" />
+			</Constraint>
+		</Panel>
+		<MudguardFrame Collisions="None" Mass="30">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="1"
+			>
+				<Motor Damping="70" Spring="5500" Type="Spring" />
+			</Constraint>
+		</MudguardFrame>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_pacific_p16"
+		EngineIconScale="0.8"
+		EngineStartDelay="3.2"
+		ExhaustStartTime="2.8"
+		FuelCapacity="380"
+		Responsiveness="0.2"
+		SteerSpeed="0.016"
+		TruckImage="KOLOB74760mchr"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="mudtires_1"
+			DefaultWheelType="wheels_superheavy_single"
+		>
+			<Wheel _template="FirstAxle" Pos="(2.603; 0.816; 1.35)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(2.603; 0.816; 1.35)" />
+			<Wheel _template="SecondAxle" Pos="(0.789; 0.816; 1.35)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(0.789; 0.816; 1.35)" />
+			<Wheel _template="RearAxle" Pos="(-1.961; 0.743; 1.35)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-1.961; 0.743; 1.35)" />
+			<Wheel _template="RearAxle" Pos="(-3.661; 0.743; 1.35)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-3.661; 0.743; 1.35)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="kolob_74760_suspension_default"
+			Type="s_kolob_74760"
+			MaxWheelRadiusWithoutSuspension="0.76"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRack2" FrameSteerLeft="BoneRackL2" FrameSteerRight="BoneRackR2" RackHalfSizeZ="1.078" />
+		<SteeringRack Frame="BoneRack" FrameSteerLeft="BoneRackL1" FrameSteerRight="BoneRackR1" RackHalfSizeZ="1.078" />
+		<Steam Origin="(0.324; 1.902; 0)" />
+		<Steam Origin="(1.29; 1.219; 0)" Scale="0.7" ParentFrame="BoneChassis_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			Origin="(0.95; 1.3; 0)"
+			MinDist="15.0"
+		>
+			<Reverse		Sound="trucks/kolob_74760/kolob_74760_back_beeper" />
+			<Handbrake		Sound="trucks/kolob_74760/kolob_74760_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/kolob_74760/kolob_74760_handbrake_off" />
+			<BrakesSqueal	Sound="trucks/kolob_74760/kolob_74760_brakes_squeal" />
+			<BrakeRelease	Sound="trucks/kolob_74760/kolob_74760_brake_release" />
+			<Honk			Sound="trucks/kolob_74760/kolob_74760_honk" />
+			<EngineRev		Sound="trucks/kolob_74760/kolob_74760_rev" />
+			<EngineAccel	Sound="trucks/kolob_74760/kolob_74760_acc" />
+			<EngineStart	Sound="trucks/kolob_74760/kolob_74760_start" />
+			<EngineStop		Sound="trucks/kolob_74760/kolob_74760_stop" />
+			<EngineIdle		Sound="trucks/kolob_74760/kolob_74760_idle" />
+			<EngineIdle_2d	Sound="trucks/kolob_74760/kolob_74760_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/kolob_74760/kolob_74760_low" />
+			<EngineLow_2d	Sound="trucks/kolob_74760/kolob_74760_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/kolob_74760/kolob_74760_high" />
+			<EngineHigh_2d	Sound="trucks/kolob_74760/kolob_74760_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/kolob_74760/kolob_74760_heavy" />
+			<EngineHeavy_2d	Sound="trucks/kolob_74760/kolob_74760_heavy_2d"	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2.932" MinX="-6.63" MaxX="4.88" />
+		<LimitedFluid Center="(-0.605; 1.147; 1.112)" SizeX="0.787" SizeY="0.655" SizeZ="0.820" Type="Box" />
+		<LimitedFluid Center="(-0.605; 1.147; -1.112)" SizeX="0.787" SizeY="0.655" SizeZ="0.820" Type="Box" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.971; 1.492; 0)" Size="0.8" />
+		<GearboxSocket Default="g_special_default" Type="gearboxes_special, gearboxes_special_kolob" />
+		<FuelTank DamageCapacity="100" />
+		<EngineSocket Default="ru_special_engine_0" Type="e_ru_special" />
+		<Driver AnimationSet="HeavyTruck" Pos="(3.67; 2.370; 0.669)" SteeringWheelPos="(4.057; 2.715; 0.67)" />
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/kolob_74760_arrow_03" Org="(4.386; 2.685; 0.854)" OutputAngles="(-124;124)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/kolob_74760_arrow_03" Org="(4.386; 2.685; 0.524)" OutputAngles="(-117;117)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.911)" OutputAngles="(-30;5)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.855)" OutputAngles="(-30;-5)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.799)" OutputAngles="(-30;18)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.577)" OutputAngles="(-30;30)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.522)" OutputAngles="(-30;4)" />
+			<Gauge Damping="0.9" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_02" Org="(4.355; 2.603; 0.465)" OutputAngles="(-30;14)" />
+			<Gauge Damping="0.95" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_01" Org="(4.162; 2.643; 0.043)" OutputAngles="(-134;-25)" />
+			<Gauge Damping="0.95" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_01" Org="(4.162; 2.643; -0.033)" OutputAngles="(-134;5)" />
+			<Gauge Damping="0.95" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_01" Org="(4.162; 2.643; -0.109)" OutputAngles="(-134;-35)" />
+			<Gauge Damping="0.95" Dir="(-0.939; 0.344; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/kolob_74760_arrow_01" Org="(4.162; 2.643; -0.184)" OutputAngles="(-134;-93)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2.688; 1.25; -1.1)" Max="(4.6; 2.5; 1.1)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.5; 0.753; -1.6)" Max="(0.5; 1.541; 1.6)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.745" Type="wheels_superheavy_single" />
+		<CompatibleWheels Scale="0.745" Type="wheels_superheavy_mudtires" />
+		<Camera Center="(-0.5; 0; 0)" ParentFrame="BoneChassis_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/kolob_74760_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/kolob_74760_glass__sh_d.tga"
+				ViewPos="(3.6; 3.072; 0.669)"
+			>
+				<Mirror
+					ClipDir="(-0.91; -0.019; -0.413)"
+					ClipOffset="0.1"
+					FOVScale="1.8"
+					MeshFrame="mirror_left"
+					ReflectionDir="(-0.91; -0.019; -0.413)"
+					Size="(0.22; 0.451)"
+					Pos="(4.266; 2.998; 1.585)"
+				>
+					<SecondaryView
+						ClipDir="(-0.91; -0.019; -0.413)"
+						ClipOffset=".1"
+						FOVScale="1.5"
+						MeshFrame="mirror_left_1"
+						ReflectionDir="(-0.91; -0.019; -0.413)"
+						Size="(0.236; 0.194)"
+						Pos="(4.294; 2.645; 1.585)"
+					/>
+				</Mirror>
+				<Mirror
+					ClipDir="(-0.813; -0.091; 0.576)"
+					ClipOffset="0.1"
+					FOVScale="2.5"
+					MeshFrame="mirror_right"
+					ReflectionDir="(-0.813; -0.091; 0.576)"
+					Size="(0.22; 0.451)"
+					Pos="(4.277; 3.115; -1.569)"
+				>
+					<SecondaryView
+						ClipDir="(-0.813; -0.091; 0.576)"
+						ClipOffset=".1"
+						CurveAngle="10"
+						FOVScale="1.5"
+						MeshFrame="mirror_right_1"
+						ReflectionDir="(-0.813; -0.091; 0.576)"
+						Size="(0.236; 0.194)"
+						Pos="(4.306; 2.761; -1.569)"
+					/>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleL1" />
+			<Axle Frame="BoneAxleR1" />
+			<Axle Frame="BoneAxleL2" />
+			<Axle Frame="BoneAxleR2" />
+			<Axle Frame="BoneAxleL3" />
+			<Axle Frame="BoneAxleR3" />
+			<Axle Frame="BoneAxleL4" />
+			<Axle Frame="BoneAxleR4" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kolob_74760">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-1; -0.3; 0)"
+			ImpactType="Truck"
+			Mass="28800"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+			<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+			<Body _template="SideMirror" ModelFrame="BoneMirrorLeft2_cdt" />
+			<Body _template="SideMirror" ModelFrame="BoneMirrorRight2_cdt" />
+			<Body _template="MudguardFrame" ModelFrame="BoneLeftMudguardFrame1_cdt" />
+			<Body _template="MudguardFrame" ModelFrame="BoneLeftMudguardFrame2_cdt" />
+			<Body _template="MudguardFrame" ModelFrame="BoneRightMudguardFrame1_cdt" />
+			<Body _template="MudguardFrame" ModelFrame="BoneRightMudguardFrame2_cdt" />
+			<Body _template="Panel" ModelFrame="BoneLeftPanel1_cdt" />
+			<Body _template="Panel" Mass="4" ModelFrame="BoneLeftPanel2_cdt">
+				<Constraint>
+					<Motor Damping="25" Spring="700" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="Panel" ModelFrame="BoneRightPanel1_cdt" />
+			<Body _template="Panel" Mass="6" ModelFrame="BoneRightPanel2_cdt">
+				<Constraint>
+					<Motor Damping="30" Spring="800" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="5" ModelFrame="BoneCrane1_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="7"
+				>
+					<Motor Damping="10" Spring="0.2" Type="Spring" />
+				</Constraint>
+				<Body Mass="5" ModelFrame="BoneCrane2_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-50"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.1" Spring="0.2" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.726; 1.323; 0.005)" />
+			<Flare _template="StopSignal" Pos="(-4.586; 1.402; 1.282)" />
+			<Flare _template="StopSignal" Pos="(-4.586; 1.402; -1.282)" />
+			<Flare _template="StopSignal" Pos="(-4.586; 1.356; 1.282)" />
+			<Flare _template="StopSignal" Pos="(-4.586; 1.356; -1.282)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.726; 1.2; 0.005)" />
+			<Flare _template="ReverseSignal" Pos="(-4.586; 1.402; 1.209)" />
+			<Flare _template="ReverseSignal" Pos="(-4.586; 1.356; 1.209)" />
+			<Flare _template="ReverseSignal" Pos="(-4.586; 1.402; -1.209)" />
+			<Flare _template="ReverseSignal" Pos="(-4.586; 1.356; -1.209)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.586; 1.38; 1.209)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.586; 1.38; -1.209)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Color="g(168; 12; 0)" Pos="(-4.726; 1.2; 0.005)" />
+			<Light _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Pos="(4.700; 1.2; 1.1)" />
+			<Light _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Pos="(4.700; 1.2; -1.1)" />
+			<Light _template="IgnitionSignalRed" Dir="(1; 0; 0)" Pos="(4.700; 1.2; 0.005)" />
+			<!-- back-->
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 0; 0) x 0.3" Dir="(-1; 0; 0)" Size="0.1" Pos="(-4.586; 1.402; 1.278)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 0; 0) x 0.3" Dir="(-1; 0; 0)" Size="0.1" Pos="(-4.586; 1.402; -1.278)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 0; 0) x 0.3" Dir="(-1; 0; 0)" Size="0.1" Pos="(-4.586; 1.356; 1.278)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 0; 0) x 0.3" Dir="(-1; 0; 0)" Size="0.1" Pos="(-4.586; 1.356; -1.278)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.3" Dir="(0; 0; 1)" Size="0.2" Pos="(-4.522; 1.383; 1.489)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.3" Dir="(0; 0; -1)" Size="0.2" Pos="(-4.522; 1.383; -1.489)" />
+			<!-- sides -->
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Dir="(0; 0; 1)" Size="0.1" Pos="(-0.605; 0.883; 1.628)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Dir="(0; 0; -1)" Size="0.1" Pos="(-0.605; 0.883; -1.628)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.05" Pos="(0.603; 2.511; 1.269)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.05" Pos="(1.786; 1.54; 1.612)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.15" Pos="(4.493; 1.494; 1.599)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.05" Pos="(1.786; 1.54; -1.612)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.15" Pos="(4.493; 1.494; -1.599)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.1" Pos="(4.225; 3.509; 1.246)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.1" Pos="(4.225; 3.509; -1.246)" />
+			<!-- front -->
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.733; 1.993; 1.008)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="40" Size="0.04" Pos="(4.733; 1.993; 1.008)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.733; 1.993; -1.008)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.6" DirAngle="40" Size="0.04" Pos="(4.733; 1.993; -1.008)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.83; 1.599; 1.124)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.2" Pos="(4.83; 1.599; -1.124)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Size="0.05" Pos="(4.882; 1.449; 1.165)" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Size="0.05" Pos="(4.882; 1.449; -1.165)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.2" Pos="(4.83; 1.599; -1.286)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(4.846; 1.692; -1.297)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.4" DirAngle="20" Size="0.1" Pos="(4.846; 1.692; -1.297)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(4.846; 1.692; 1.297)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.4" DirAngle="20" Size="0.1" Pos="(4.846; 1.692; 1.297)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(4.846; 1.692; -1.122)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.4" DirAngle="20" Size="0.1" Pos="(4.846; 1.692; -1.122)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(4.846; 1.692; 1.122)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.4" DirAngle="20" Size="0.1" Pos="(4.846; 1.692; 1.122)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.2" Pos="(4.83; 1.599; 1.286)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(4.405; 3.58; 0.151)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(4.405; 3.58; 0)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(4.405; 3.58; -0.151)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.846; 1.692; 1.297)" />
+			<Model _template="HeadLightRay" Org="(4.846; 1.692; -1.297)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.846; 1.692; 1.297)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.8" Size=".15" Pos="(4.846; 1.692; -1.297)" />
+			<Flare _template="BlueStreak" Pos="(4.846; 1.692; 1.297)" />
+			<Flare _template="BlueStreak" Pos="(4.846; 1.692; -1.297)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/kolob_74760_lmk" MinScale="1.8" MaxScale="2.8" />
+	<HeadLight _template="Default" Pos="(5.052; 1.103; 0)" ParentFrame="BoneChassis_cdt" />
+	<GameData
+		Country="RU,CAS"
+		Price="107700"
+		UnlockByExploration="false"
+		UnlockByRank="22"
+		ExcludeAddons="trailer_log_pole"
+	>
+		<WinchSocket Pos="(4.986; 1.302; 0.446)" />
+		<WinchSocket Pos="(4.986; 1.302; -0.446)" />
+		<WinchSocket Pos="(-4.644; 0.832; 0)" />
+		<WinchSocket Pos="(-0.605; 0.717; 1.483)" />
+		<WinchSocket Pos="(-0.605; 0.717; -1.483)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_KOLOB_74760_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgMZKTVolat"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="KolobLogo80"
+			UiName="UI_VEHICLE_KOLOB_74760_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(2.004; 1.167; -0.342)" Position="(6.089; 6.363; -0.944)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(8.067; 3.057; 1.334)" Position="(5.608; 3.313; -0.554)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(-0.28; 1.903; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.733; 4.067; 5.257)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.5; 2.387; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-1.534; 4.27; 3.527)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.067; 3.057; 1.334)" Position="(5.275; 3.338; -0.599)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.764; 1.97; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.226; 4.969; -4.508)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(8.067; 1.461; 2.035)" Position="(5.914; 2.907; -0.241)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(7.16; 2.03; -0.145)" Position="(3.239; 2.461; 3.59)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.758; 2.358; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.787; 4.806; -3.717)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.227; 3.233; -1.219)" Position="(9.682; 3.105; 1.439)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.716; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.576; 1.402; -3.863)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(8.044; 0.68; 1.138)" Position="(6.193; 3.608; -0.463)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.27; 2.278; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.866; 5.284; -4.55)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(8.067; 1.97; 1.534)" Position="(5.756; 3.132; -0.479)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(3.679; 0.627; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.058; 2.362; -6.974)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.716; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.576; 1.402; -3.863)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.479; 0.992; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.767; 1.805; 2.899)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.795; 2.061; 0.11)" Position="(3.255; 2.625; -3.526)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(8.067; 3.057; 1.334)" Position="(5.275; 3.338; -0.599)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.986; 1.302; 0.446)" />
+		<CraneSocket Pos="(4.986; 1.302; -0.446)" />
+		<CraneSocket Pos="(-4.644; 0.832; 0)" />
+		<CraneSocket Pos="(-0.605; 0.717; 1.483)" />
+		<CraneSocket Pos="(-0.605; 0.717; -1.483)" />
+		<AddonSockets>
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.704; 0.838; 0)" />
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-1.95; 2; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="SaddleHigh1" Offset="(-1.95; 1.65; -0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kolob_74760_snorkel_default">
+			<Socket Names="Kolob74760Snorkel" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kolob_74760_exhaust_default">
+			<Socket Names="Kolob74760Exhaust" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="kolob_74760_headlamp_default">
+			<Socket Names="Kolob74760Headlamp" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760Spotlight" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760BeaconFront" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760Beacon" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760Gabarite" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760Bumper" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Kolob74760SpareWheel" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffDashboard" Offset="(4.307; 2.814; 0.059)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x1_01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x1_02" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x2_01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x2_02" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x2_03" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_1x4_01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_GlassTop" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="kolob74760Sticker_GlassBottom" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="kolob74760Sticker_Door_R" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="kolob74760Sticker_Door_L" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="kolob74760Sticker_Roof" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffAirfreshener" Offset="(4.203; 3.507; 0.113)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffCurtainKolob74760" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHorns" Offset="(4.059; 3.630; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneIKLeft1" ParentFrame="BoneAxleL4">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL3"
+				ModelFrame="BoneIKLeft2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKRight1" ParentFrame="BoneAxleR4">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR3"
+				ModelFrame="BoneIKRight2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

@@ -1,0 +1,125 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+<Landmark Mesh="landmarks/pier_us12_objective_lmk" />
+
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="state_start" />
+		<CdtMesh Name="cdt_state_start" />
+		<Mesh Name="static" />
+		<CdtMesh Name="cdt_static" />
+	</Subset>
+
+	<Subset Name="state_end">
+		<Mesh Name="state_end" />
+		<CdtMesh Name="cdt_state_end" />
+		<Mesh Name="static" />
+		<CdtMesh Name="cdt_static" />
+		<AnimSubset Name="build_animation_0" /> 
+			<AnimTrack Name="anim_state" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="static" />
+		<CdtMesh Name="cdt_static" />
+		<Mesh Name="animesh_1"/>
+		<Mesh Name="animesh_2"/>
+		<CdtMesh Name="cdt_state_end" />
+	</AnimSubset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="state_start">
+			<Body Collisions="Dynamic" ModelFrame="state_end"/>
+		</Body>
+	</PhysicsModel>
+
+	<TrackEvents TrackName="anim_state">
+
+
+		<AnimEvent Key="33">
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(4; 1.28; 9.33)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.5; 1.28; 9.33)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(3.5; 1.28; 9.33)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.6; 1.28; 9.33)" />
+			<Sound Name="actors/actor_construction/actor_construct_concrete_block_03" Range="200" Volume="1"/>
+		</AnimEvent>
+
+
+		<AnimEvent Key="45">
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(5.74; 0.75; 1.48)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(5.74; 0.75; 1.48)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(5.74; 0.75; 1.48)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(5.74; 0.75; 1.48)" />
+			<Sound Name="actors/actor_construction/actor_construct_wooden_bridge" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		<AnimEvent Key="56">
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(-0.77; 0; 8.51)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-0.77; 0; 8.51)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-0.77; 0; 8.51)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-0.77; 0; 8.51)" />
+			<Sound Name="actors/actor_construction/actor_construct_trees_roadblock" Range="200" Volume="1"/>
+		</AnimEvent>
+
+
+		<AnimEvent Key="57">
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.115; 0; -0.09)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.115; 0; -0.09)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.115; 0; -0.09)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.115; 0; -0.09)" />
+			<Sound Name="actors/actor_construction/actor_construct_container_03" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		<AnimEvent Key="76">
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(7.65; 0.85; -6.06)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(7.25; 0.85; -6.36)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(7.45; 0.85; -5.55)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(7.65; 0.85; -6.06)" />
+			<Sound Name="actors/actor_construction/actor_construct_rocks_roadblock" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		<AnimEvent Key="130">
+			<Sound Name="actors/actor_construction/actor_construct_high_tower_01_rus" Range="200" Volume="1"/>
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(3.322; 0; 6.597)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(4.120; 0; 3.411)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-0.777; 0; -5.82)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-0.777; 0; -5.82)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-0.777; 0; -5.82)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-0.777; 0; -5.82)" />
+		</AnimEvent>
+
+		<AnimEvent Key="111">
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.029; -0.29; 7.73)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.029; -0.29; 7.73)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.029; -0.29; 7.73)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.029; -0.29; 7.73)" />
+			<Sound Name="actors/actor_construction/actor_construct_rocks_roadblock" Range="200" Volume="0.5"/>
+		</AnimEvent>
+
+		<AnimEvent Key="121">
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 0)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 0)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 0)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 0)" />
+			<Sound Name="actors/actor_construction/actor_construct_concrete_block_03" Range="200" Volume="0.5"/>
+		</AnimEvent>
+
+		<AnimEvent Key="90">
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 13.54)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 13.54)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 13.54)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.03; -0.29; 13.54)" />
+			<Sound Name="actors/actor_construction/actor_construct_concrete_block_03" Range="200" Volume="0.5"/>
+		</AnimEvent>
+
+
+		<AnimEvent Key="10">
+			<Sound Name="actors/actor_construction/actor_construct_metal_bridge_01" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		
+	</TrackEvents>
+
+</ModelBrand>
+

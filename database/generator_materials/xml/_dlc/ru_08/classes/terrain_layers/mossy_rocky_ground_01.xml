@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/mossy_rocky_ground_01__d_a.tga" 
+	Normal="tiles/mossy_rocky_ground_01_relief__d_a.tga"
+	NoGrass="true"
+	GrassBrush="DebrisStonesAz"
+	Sound="surfaces/surf_gravel_rnd"
+	EndEffectSound="surfaces/hit/hit_gravel_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	WheelTracks="0"
+/>

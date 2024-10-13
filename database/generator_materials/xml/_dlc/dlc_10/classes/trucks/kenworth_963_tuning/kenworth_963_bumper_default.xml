@@ -8,6 +8,16 @@
 	<PhysicsModel Mesh="trucks/kenworth_963_tuning/kenworth_963_bumper_default">
 		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
 			<Constraint Type="Rigid" />
+			<Body Mass="1" Collisions="None" ModelFrame="BoneFootrestR_cdt">
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30">
+					<Motor Damping="12" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" Collisions="None" ModelFrame="BoneFootrestL_cdt">
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30">
+					<Motor Damping="12" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
 		</Body>
 	</PhysicsModel>
 	<ModelAttachments _noinherit="true">

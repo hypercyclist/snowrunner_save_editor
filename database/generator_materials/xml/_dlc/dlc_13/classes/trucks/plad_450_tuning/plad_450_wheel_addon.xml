@@ -1,0 +1,79 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="plad_450_wheel_r" HideThreshold="0.0" />
+		<Mesh Frame="plad_450_wheel_l" HideThreshold="0.5" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="2" />
+	<Rotator
+		EngineTorqueFactor="0"
+		RotationAxis="(0; 1; 0)"
+		Frame="BoneRotatorRight"
+		RotationSpeed="3.8"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		RotationAxis="(0; -1; 0)"
+		Frame="BoneRotatorLeft" 
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_wheel_addon">
+		<Body Mass="15" ModelFrame="BoneAddon1_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+				<Body Collisions="None" Mass="50" ModelFrame="BoneWheelR_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Prismatic"
+						MinLimit="-0.003"
+						MaxLimit="0.003"
+					>
+						<Motor Damping="1" Spring="7000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="50" ModelFrame="BoneWheelL_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Prismatic"
+						MinLimit="-0.003"
+						MaxLimit="0.003"
+					>
+						<Motor Damping="1" Spring="10000" Type="Spring" />
+					</Constraint>
+				</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.55; 0.071; -0.829)" Org="(-0.334; 3.858; -0.996)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0.55; 0.071; -0.829)" Pos="(-0.334; 3.858; -0.996)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0.55; 0.071; -0.829)" Pos="(-0.334; 3.858; -0.996)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0.55; 0.071; -0.829)" Pos="(-0.334; 3.858; -0.996)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(-0.334; 3.935; -0.935)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.55; 0.071; 0.829)" Org="(-0.334; 3.858; 0.996)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0.55; 0.071; 0.829)" Pos="(-0.334; 3.858; 0.996)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.55; 0.071; 0.829)" Pos="(-0.334; 3.858; 0.996)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.55; 0.071; 0.829)" Pos="(-0.334; 3.858; 0.996)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(-0.334; 3.935; 0.935)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="wheel_addon"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEELS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEELS_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="Plad450SpareWheel" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,81 @@
+<_templates Include="trucks">
+	<Flare>
+		<ReverseSignal
+			AspectRatio="4"
+			Color="g(255; 255; 255) x 0.2"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Reflections="true"
+			Size="0.3"
+		/>
+		<LED02
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.0"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.05"
+		/>
+		<LED01
+			AspectRatio="1.4"
+			Color="g(146; 137; 121) x 1.6"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.04"
+		/>
+		<FrontMarker
+			_template="MarkerBeacon"
+			Dir="(1; 0; 0)"
+			DirAngle="140"
+			Size="0.3"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_tuning/navistar_5000mv_lights_01">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="4" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments _noinherit="true">
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Color="g(146; 137; 121) x 0.7" Org="(-0.212; 3.068; -0.621)" />
+			<Model _template="HeadLightRay" Color="g(146; 137; 121) x 0.7" Org="(-0.212; 3.068; 0.621)" />
+			<Model _template="HeadLightRay" Color="g(146; 137; 121) x 0.7" Org="(-0.201; 3.038; 0)" />
+			<Flare
+				_template="LED01"
+				Color="g(146; 137; 121) x 0.5"
+				Size="2"
+				Pos="(-0.202; 3.038; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="LED01" Dir="(0; 0; 1)" Size="1" Pos="(-1.366; 3.436; 1.148)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Dir="(0; 0; -1)" Size="1" Pos="(-1.366; 3.436; -1.148)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Color="g(146; 137; 121) x 1.3" Size="1" Pos="(-0.21; 3.066; 0.622)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Color="g(146; 137; 121) x 1.3" Size="1" Pos="(-0.21; 3.066; -0.622)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED01" Color="g(146; 137; 121) x 1.3" Size="1" Pos="(-0.202; 3.038; 0)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_NAVISTAR5000_HEADLIGHTS_01_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_NAVISTAR5000_HEADLIGHTS_01_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="Navistar5000mvLights" />
+	</GameData>
+</TruckAddon>

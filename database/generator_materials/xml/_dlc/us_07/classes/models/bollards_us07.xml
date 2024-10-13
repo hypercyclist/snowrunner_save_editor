@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body _template="Sign" ModelFrame="BoneRoot">
+			<Constraint _template="Sign" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

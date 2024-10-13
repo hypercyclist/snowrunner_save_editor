@@ -1,0 +1,589 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneBack_cdt"
+		/>
+		<FrontWheel Location="front" Torque="default" ParentFrame="BoneFront_cdt" ConnectedToHandbrake="true"/>
+	</Wheel>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.02"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.6"
+		EngineStartDelay="1.9"
+		ExhaustStartTime="1.9"
+		FuelCapacity="340"
+		Responsiveness="0.3"
+		SteerSpeed="0.035"
+		TruckImage="femm37atmchr"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="mudtires_1"
+			DefaultWheelType="wheels_superheavy_single"
+		>
+			<Wheel _template="FrontWheel" Pos="(4.987; 0.82; 1.195)" ParentFrame="BoneFront_cdt" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(4.987; 0.82; 1.195)" ParentFrame="BoneFront_cdt" />
+			<Wheel _template="RearWheel" Pos="(-2.768; 0.82; 1.195)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.768; 0.82; 1.195)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" Pos="(-4.682; 0.82; 1.195)" ParentFrame="BoneSuspension_cdt" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-4.682; 0.82; 1.195)" ParentFrame="BoneSuspension_cdt" />
+		</Wheels>
+		<SuspensionSocket
+			Default="femm_37at_suspension_default"
+			Type="s_femm_37at"
+			MaxWheelRadiusWithoutSuspension="0.8"
+		/>
+		<Messages Pos="(5.4; 1.5; 0)" ParentFrame="BoneFront_cdt" />
+		<SteeringWheel Frame="BoneSteering" />
+		<Steam Origin="(6.918; 1.693; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			MinDist="15.0"
+			Origin="(5.6; 1.8; 0)"
+			ParentFrame="BoneFront_cdt"
+		>
+			<Reverse		_inheritRemove="true" />
+			<EngineTrans	Sound="trucks/femm_37at/femm_37at_turbo" />
+			<Reverse		Sound="trucks/femm_37at/femm_37at_back_beeper" />
+			<BrakePull		Sound="trucks/femm_37at/femm_37at_brake_pull" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<BrakesSqueal	Sound="trucks/femm_37at/femm_37at_brakes_squeal" />
+			<Handbrake		Sound="trucks/femm_37at/femm_37at_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/femm_37at/femm_37at_handbrake_off" />
+			<Honk			Sound="trucks/femm_37at/femm_37at_honk" />
+			<EngineRev		Sound="trucks/femm_37at/femm_37at_rev" />
+			<EngineAccel	Sound="trucks/femm_37at/femm_37at_acc" />
+			<EngineStart	Sound="trucks/femm_37at/femm_37at_start" />
+			<EngineStop		Sound="trucks/femm_37at/femm_37at_stop" />
+			<EngineIdle		Sound="trucks/femm_37at/femm_37at_idle" />
+			<EngineIdle_2d	Sound="trucks/femm_37at/femm_37at_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/femm_37at/femm_37at_low" />
+			<EngineLow_2d	Sound="trucks/femm_37at/femm_37at_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/femm_37at/femm_37at_high" />
+			<EngineHigh_2d	Sound="trucks/femm_37at/femm_37at_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+			<Shaft SocketPointA="Shaft6a" SocketPointB="Shaft6b" />
+			<Shaft SocketPointA="Shaft7a" SocketPointB="Shaft7b" />
+			<Shaft SocketPointA="Shaft8a" SocketPointB="Shaft8b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="2"
+			MinX="-6.5"
+			MaxX="6.8"
+			ParentFrame="BoneBack_cdt"
+		/>
+		<LimitedFluid Center="(0.527; 1.33; 0.96)" SizeX="1.52" SizeY="0.57" SizeZ="0.57" Type="Box" ParentFrame="BoneBack_cdt" />
+		<LimitedFluid Center="(0.527; 1.33; -0.96)" SizeX="1.52" SizeY="0.57" SizeZ="0.57" Type="Box" ParentFrame="BoneBack_cdt" />
+		<Intake
+			Dir="(1; 0; 0)"
+			Origin="(7.065; 1.991; 0 )"
+			Size="2"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<GearboxSocket Default="g_special_default" Type="gearboxes_special" />
+		<FuelTank DamageCapacity="100" />
+		<EngineSocket Default="ru_special_engine_0" Type="e_ru_special, e_ru_special_femm_37at" />
+		<Driver Pos="(5.7; 2.573; 0.741)" SteeringWheelPos="(6.072; 2.901; 0.724)" AnimationSet="HeavyTruck" LegsOffset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		 <Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.922; 0.387; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/femm_37at_arrow_01" Org="(6.354; 2.808; 0.632)" OutputAngles="(-135;130)" />
+			<Gauge Damping="0.9" Dir="(-0.922; 0.387; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/femm_37at_arrow_01" Org="(6.354; 2.808; 0.805)" OutputAngles="(-135;130)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.382; 2.877; 0.902)" OutputAngles="(-53;-10)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.36; 2.823; 0.902)" OutputAngles="(-53;-10)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.336; 2.767; 0.902)" OutputAngles="(-53;-10)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.382; 2.877; 0.5347)" OutputAngles="(-53;-10)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.36; 2.823; 0.534)" OutputAngles="(-53;-10)" />
+			<Gauge Damping="0.9" Dir="(-0.952; 0.305; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/femm_37at_arrow_02" Org="(6.336; 2.767; 0.534)" OutputAngles="(-53;53)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(5.46; 1.1; -0.79)" Max="(6.905; 2.152; 0.79)" ParentFrame="BoneFront_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.191; 0.983; -1.308)" Max="(1.401; 1.672; 1.308)" ParentFrame="BoneBack_cdt" />
+		</Damage>
+		<CompatibleWheels Scale=".9" Type="wheels_superheavy_single" />
+		<CompatibleWheels Scale=".9" Type="wheels_superheavy_mudtires" />
+		<Camera Center="(-1.3; 0; 0)" RadiusMultiplier="1.5">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/femm_37at_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/femm_37at_glass__sh_d.tga"
+				ViewPos="(5.62; 3.25; 0.741)"
+				LimitsVer="(-0.37; 0.27)"
+				WindshieldDiffuseCleanAlpha="0.4"
+			>
+				<Rear HorTransitionStart="-0.3" ViewPosOffset="(0.38; -0.1; 0.7)"  />
+				<Mirror
+					ClipDir="(-0.97; -0.05; -0.3)"
+					FOVScale="2.5"
+					MeshFrame="mirror_left"
+					Size="(0.24; 0.621)"
+					Pos="(6.27; 3.122; 1.5)"
+					ClipOffset="0.15"
+					LookAtOffset="(0; 0; 0.08)"
+				>
+					<SecondaryView
+						ClipDir="(-0.5; 0.2; -0.9)"
+						ClipOffset="0.1"
+						CurveAngle="20"
+						FOVScale="0.5"
+						MeshFrame="mirror_left_convex"
+						Size="(0.1; 0.1)"
+						Pos="(6.254; 2.895; 1.547)"
+					/>
+				</Mirror>
+				<Mirror
+					ClipDir="(-0.55; -0.05; 0.4)"
+					ClipOffset="0.2" 
+					FOVScale="2.5"
+					MeshFrame="mirror_right"
+					Size="(0.24; 0.621)"
+					Pos="(6.27; 3.122; -1.5)"
+				>
+					<SecondaryView
+						ClipDir="(-0.97; 0.2; 0.4)"
+						ClipOffset="0.1"
+						CurveAngle="20"
+						FOVScale="0.3"
+						MeshFrame="mirror_right_convex"
+						Size="(0.1; 0.1)"
+						Pos="(6.254; 2.895; -1.547)"
+					/>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(6.898; 1.83; 0)" ParentFrame="BoneFront_cdt" />
+	<PhysicsModel Mesh="trucks/femm_37at">
+		<NetSync Legacy="false" />
+		<Body
+			ImpactType="Truck"
+			Mass="11000"
+			ModelFrame="BoneFront_cdt"
+			NetSync="pv"
+			CenterOfMassOffset="(0.7; 0; -0.1)"
+		>
+			<Body
+				ImpactType="Truck"
+				Mass="1000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+				CenterOfMassOffset="(0; -0.2; 0)"
+			>
+				<Constraint
+					Cone="2"
+					PlaneAxisLocal="(1; 0; 0)"
+					TwistAxisLocal="(0; 1; 0)"
+					Type="Ragdoll"
+					PlaneMin="-0.1"
+					PlaneMax="0.3"
+				>
+					<PlaneMotor Damping="150000" Spring="300000" Type="Spring" />
+					<!--right-left-->
+					<ConeMotor Damping="15000" Spring="30000" Type="Spring" />
+					<!--back-front-->
+				</Constraint>
+				<Body Collisions="None" Mass="10" ModelFrame="BoneChairCabin_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-1"
+						MaxLimit="1"
+					>
+						<Motor Damping="100" Spring="200" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="2" ModelFrame="BoneHandleCabin_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="8"
+					>
+						<Motor Damping="0.3" Spring="1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="1" ModelFrame="BoneCurtainCabin_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.01" Spring="0.1" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="15" ModelFrame="BoneBedCabin_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="3"
+					>
+						<Motor Damping="7" Spring="30" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneMirrorLeft_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-2"
+						MaxLimit="2"
+					>
+						<Motor Damping="10" Spring="200" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Collisions="None" Mass="5" ModelFrame="BoneMirrorRight_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-2"
+						MaxLimit="2"
+					>
+						<Motor Damping="17" Spring="200" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="6500" ModelFrame="BoneBack_cdt" CenterOfMassOffset="(0; -0.2; 0)" NetSync="pv">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="ChassisSteer"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="40"
+				>
+					<Motor
+						Damping="1.0"
+						Force="123000"
+						Tau="0.03"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body
+					ImpactType="Truck"
+					Mass="4000"
+					ModelFrame="BoneChassisBack_cdt"
+					NetSync="pv"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-4"
+						MaxLimit="4"
+					>
+						<Motor Damping="140000" Spring="140000" Type="Spring" />
+					</Constraint>
+					<Body
+						Collisions="None"
+						ImpactType="Truck"
+						Mass="3500"
+						ModelFrame="BoneSuspension_cdt"
+					>
+						<Constraint
+							AxisLocal="(0; 0; 1)"
+							Type="Hinge"
+							MinLimit="-7"
+							MaxLimit="7"
+						>
+							<Motor Damping="100" Spring="0" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			
+		</StopSignals>
+		<ReverseSignals>
+			
+		</ReverseSignals>
+		<Ignition>
+			<!-- SIDE SMALL LIGHTS -->
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.22" Pos="(6.182; 3.665; 1.198)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.22" Pos="(6.225; 3.665; 1.198)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(5.22; 1.912; 1.387)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.22" Pos="(6.182; 3.665; -1.198)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.22" Pos="(6.225; 3.665; -1.198)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(5.22; 1.912; -1.387)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.22" Pos="(-6.259; 1.55; -0.39)" ParentFrame="BoneChassisBack_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.22" Pos="(-6.259; 1.55; 0.39)" ParentFrame="BoneChassisBack_cdt" />
+			
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(4.954; 3.734; 1.11)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(4.954; 3.734; -1.11)" ParentFrame="BoneCabin_cdt" />
+			<!-- TOP HEADLIGHTS -->
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.35" Pos="(6.45; 3.693; 0.764)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.35" Pos="(6.45; 3.693; -0.764)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.5; 1.254; 0)" ParentFrame="BoneChassisBack_cdt"/>
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-6.233; 1.254; -0.386)" ParentFrame="BoneChassisBack_cdt"/>
+			<Flare _template="ReverseSignal" Size="0.25" Pos="(-6.233; 1.254; 0.386)" ParentFrame="BoneChassisBack_cdt"/>
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.233; 1.254; -0.386)" ParentFrame="BoneChassisBack_cdt"/>
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.233; 1.254; 0.386)" ParentFrame="BoneChassisBack_cdt"/>
+		</ReverseSignals>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.5; 1.254; 0)" ParentFrame="BoneChassisBack_cdt" />
+			<Flare _template="StopSignal" Pos="(-6.259; 1.55; -0.39)" ParentFrame="BoneChassisBack_cdt"/>
+			<Flare _template="StopSignal" Pos="(-6.259; 1.55; 0.39)" ParentFrame="BoneChassisBack_cdt"/>
+		</StopSignals>
+		<HeadLight>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.45" Pos="(6.45; 3.693; -0.764)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.45" Pos="(6.45; 3.693; 0.764)" ParentFrame="BoneCabin_cdt"/>
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/femm_37at_lmk" MinScale="1.6" MaxScale="2.8" />
+	<GameData
+		Country="RU,CAS"
+		ExcludeAddons="trailer_log_pole, trailer_log"
+		Price="181300"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+		FrameAlign="BoneBack_cdt"
+		FrameAlignOffset="(-5; 0; 0)"
+		ResetTruckAfterGateway="true"
+	>
+		<WinchSocket Pos="(6.942; 1.036; 0)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(4.106; 1.873; 1.204)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(4.106; 1.873; -1.204)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(-1.172; 1.238; 0.601)" ParentFrame="BoneBack_cdt" />
+		<WinchSocket Pos="(-1.172; 1.238; -0.601)" ParentFrame="BoneBack_cdt" />
+		<WinchSocket Pos="(-6.136; 1.261; 0.561)" ParentFrame="BoneChassisBack_cdt" />
+		<WinchSocket Pos="(-6.136; 1.261; -0.561)" ParentFrame="BoneChassisBack_cdt" />
+		<WinchSocket Pos="(-6.342; 1.189; 0)" ParentFrame="BoneChassisBack_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_FEMM_37AT_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgFemm37at"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="FEMMLogo80"
+			UiName="UI_VEHICLE_FEMM_37AT_NAME"
+		/>
+		<CustomizationCameras>
+			<!-- addons -->
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(-1; 2; -0.551)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-11; 5.3; 8.7)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5; 0.602; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.5; 2.1; -6.1)" />
+			<!-- customization -->
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(7.909; 2.6; 1.1)" Position="(5.65; 3.4; -0.885)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.909; 3.3; 1.5)" Position="(6; 3.3; -0.685)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(7.909; 3; 1.85)" Position="(5.85; 3.3; -1.1)" />
+			<CameraPos FOV="32.0" Name="back" InterestPosition="(5.6; 2.5; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.5; 4.3; 5)" />
+			<CameraPos FOV="32.0" Name="exhaust" InterestPosition="(5.6; 2.83; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.5; 4.4; 5)" />
+			<CameraPos FOV="32.0" Name="snorkel" InterestPosition="(6; 2.5; -0.3)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.5; 4.3; -5)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.35; 3.3; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11; 5.8; -2.8)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.35; 3.3; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11; 5.5; -2.8)" />
+			<!-- Stickers -->
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(4.751; 2.55; -0.899)" Position="(12; 3.55; 1.8)" />
+			<CameraPos FOV="32.0" Name="door_l_sticker" Interior="true" InterestPosition="(6.2; 2.378; 0.294)" Position="(4.1; 2.8; -5)" />
+			<CameraPos FOV="32.0" Name="door_r_sticker" Interior="true" InterestPosition="(7.2; 2.378; -0.294)" Position="(2.4; 2.8; 5)" />
+			<CameraPos FOV="32.0" Name="back_sticker" Interior="true" InterestPosition="(5.6; 2.5; 0)" Position="(0.5; 4.3; 5)" />			
+			<CameraPos FOV="32.0" Name="roof_sticker" Interior="true" InterestPosition="(7.6; 2.7; 0)" Position="(3.35; 6.15; 1.7)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x1_01" InterestPosition="(7.909; 3.8; 2.5)" Position="(5.65; 3.2; -0.885)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x1_02" InterestPosition="(6; 1.7; 1.1)" Position="(5.9; 3.4; -0.885)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x2_01" InterestPosition="(6.3; 1.7; 0.35)" Position="(6.3; 3.55; -0.4)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x4_01" InterestPosition="(4.3; 3.3; 0.35)" Position="(7; 3.25; -0.8)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x4_02" InterestPosition="(4.3; 3; -1.5)" Position="(7; 3.25; 0.95)" />
+	
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.5; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.57; 1.65; -3.425)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(6.942; 1.036; 0)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(4.106; 1.873; 1.204)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(4.106; 1.873; -1.204)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(-1.172; 1.238; 0.601)" ParentFrame="BoneBack_cdt" />
+		<CraneSocket Pos="(-1.172; 1.238; -0.601)" ParentFrame="BoneBack_cdt" />
+		<CraneSocket Pos="(-6.136; 1.261; 0.561)" ParentFrame="BoneBack_cdt" />
+		<CraneSocket Pos="(-6.136; 1.261; -0.561)" ParentFrame="BoneBack_cdt" />
+		<CraneSocket Pos="(-6.342; 1.189; 0)" ParentFrame="BoneBack_cdt" />
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -ADDON SOCKETS- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<AddonSockets DefaultAddon="femm_37at_exhaust_default" >
+			<Socket Names="Femm37atExhaust" ParentFrame="BoneFront_cdt"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="femm_37at_snorkel_default" >
+			<Socket Names="Femm37AtSnorkel" ParentFrame="BoneFront_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtBeacon" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="femm_37at_bumper_default">
+			<Socket Names="Femm37AtBumper" ParentFrame="BoneFront_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtHorn" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>		
+		<AddonSockets>
+			<Socket Names="Femm37AtRoofrack" NamesBlock="Femm37AtHorn, Femm37AtBeacon, Femm37AtTop" ParentFrame="BoneFront_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSpotlight" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtVisor" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtTop" NamesBlock="Femm37AtSpotlight, Femm37AtBeacon, Femm37AtHorn" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtProtection" NamesBlock="Femm37AtTop" ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="femm_37at_diff_lock_default" >
+			<Socket Names="FemmDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneFront_cdt" />
+		</AddonSockets>
+		<!-- FRAME_ADDONS -->
+		<AddonSockets>
+			<Socket
+				Names="SaddleHighFemm37at"
+				NamesBlock="FemmSideboard"
+				Offset="(-4.200; 1.6882; 0)"
+				ParentFrame="BoneChassisBack_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names=" LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="FemmSideboard" Offset="(-4.200; 2.14; 0)" ParentFrame="BoneChassisBack_cdt" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-6.342; 1.189; 0)" ParentFrame="BoneBack_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FemmSideboard" ParentFrame="BoneChassisBack_cdt" Offset="(0; -0.02; 0)">
+				<ExtraParent Frame="BoneChassisBack_cdt"/>
+				<ExtraParent Frame="BoneBack_cdt"/>		
+			</Socket>
+			<Socket Names="BigCrane" NamesBlock="SaddleHighFemm37at, Femm37AtTop, Femm37AtRoofrack" Offset="(-1.5; 1.76; 0)" ParentFrame="BoneChassisBack_cdt"/>
+			<Socket Names="FrameAddon3" NamesBlock="SaddleHighFemm37at" Offset="(-2.35; 1.683; 0)" ParentFrame="BoneChassisBack_cdt">
+				<AddonsShift Offset="(-1.15; 0; 0)" Types="Femm37atMinicraneRU" />
+			</Socket>
+			<Socket Names="FrameAddonSideboard3" NamesBlock="SaddleHighFemm37at" Offset="(-2.35; 1.683; 0)" ParentFrame="BoneChassisBack_cdt">
+				<AddonsShift Offset="(-1.25; 0; 0)" Types="Femm37atMinicraneRU" />
+			</Socket>
+			<Socket Names="KenworthFrameAddonMaintainerBig" NamesBlock="SaddleHighFemm37at, Trailer, LogTrailer" Offset="(1.5; 1.79; 0)" ParentFrame="BoneChassisBack_cdt"/>
+			<Socket Names="FrameAddonTank" NamesBlock="SaddleHighFemm37at" Offset="(-4; 1.683; 0)" ParentFrame="BoneChassisBack_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37atMinicraneRU" NamesBlock="FemmSideboard, KenworthFrameAddonMaintainerBig, FrameAddonTankLong, BigCrane" Offset="(1.1; 1.68; 0)" ParentFrame="BoneBack_cdt"/>
+		</AddonSockets>
+		<!-- STICKERS -->
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Femm37atSticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Femm37atSticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37atSticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Femm37atSticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Femm37atSticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Femm37atSticker_Back" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSticker_1x1_01" InCockpit="true"  ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSticker_1x1_02" InCockpit="true"  ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSticker_1x2_01" InCockpit="true"  ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSticker_1x4_01" InCockpit="true"  ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Femm37AtSticker_1x4_02" InCockpit="true"  ParentFrame="BoneCabin_cdt"/>
+		</AddonSockets>
+		<!-- CUSTOMIZATION -->
+		<AddonSockets>
+			<Socket
+				Dir="(0.4; -0.003; 0.871)"
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(6.38; 2.961; 0.264)"
+				UpDir="(0; 1; -0.05)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(6.328; 3.473; 0.1)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffCurtainFemm37at" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="ChassisSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBackPistonLBase" ParentFrame="BoneFront_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneBack_cdt"
+				ModelFrame="BoneBackPistonL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBackPistonRBase" ParentFrame="BoneFront_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneBack_cdt"
+				ModelFrame="BoneBackPistonR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneFrontPistonRBase" ParentFrame="BoneFront_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneFrontPistonR"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneFrontPistonLBase" ParentFrame="BoneFront_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneFrontPistonL"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

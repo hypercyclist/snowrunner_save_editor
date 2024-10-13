@@ -1,0 +1,13 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	ClipCamera="false"
+>
+	<SnapPoint Pos="(0.061; 16.991; -0.395)" />
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/lamppole_quarry_02_ru13_lmk" />
+</ModelBrand>

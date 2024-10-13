@@ -1,0 +1,567 @@
+<DistributionBrushes>
+	<Grass>
+	
+		<GrassShortSpringA PlantsPerBlock="1500">
+			<PlantType Brand="grass_short_spring_a" />
+		</GrassShortSpringA>
+		
+		<GrassShortSpringB PlantsPerBlock="1000">
+			<PlantType Brand="grass_short_spring_b" />
+		</GrassShortSpringB>
+		
+		<GrassShortSpringC PlantsPerBlock="1000">
+			<PlantType Brand="grass_short_spring_c" />
+		</GrassShortSpringC>
+		
+		<GrassTallSpringA PlantsPerBlock="500">
+			<PlantType Brand="grass_tall_spring_a" />
+		</GrassTallSpringA>
+		
+		<GrassTallSpringB PlantsPerBlock="100">
+			<PlantType Brand="grass_tall_can_b" />
+		</GrassTallSpringB>
+		
+		<GrassTallSpringC PlantsPerBlock="30">
+		
+			<PlantType Brand="grass_tall_spring_b" />
+		</GrassTallSpringC>
+		
+		<GrassSwampTallMaineA PlantsPerBlock="2000">
+			<PlantType Brand="grass_tall_autumn_a" />
+		</GrassSwampTallMaineA>
+		
+		<GrassSwampTallMaineB PlantsPerBlock="800">
+			<PlantType Brand="grass_tall_autumn_b" />
+		</GrassSwampTallMaineB>
+	</Grass>
+	<Plants>
+		<FoliarSpringMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="50">
+			<PlantType
+				Brand="birch_03_rus"
+				Divergence="0.04"
+				MinSize=".7"
+				MaxSize="1.5"
+			/>
+			<PlantType
+				Brand="birch_03_tall_rus"
+				Divergence="0.1"
+				MinSize=".8"
+				MaxSize="1.2"
+			/>
+			<PlantType
+				Brand="birch_02_tall_rus"
+				Divergence="0.2"
+				MinSize=".5"
+				MaxSize="1.35"
+				
+			/>	
+			<PlantType
+				Brand="aspen_01_rus"
+				Divergence="0.06"
+				MinSize="1.5"
+				MaxSize="2.0"
+			/>
+			<PlantType
+				Brand="aspen_02_rus"
+				Divergence="0.25"
+				MinSize="1"
+				MaxSize="1.7"
+				
+			/>		
+		</FoliarSpringMaine>	
+		<DrySpringMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="90">
+		
+			<PlantType
+				Brand="aspen_dry_01"
+				Divergence="0.2"
+				MinSize="1.4"
+				MaxSize="1.8"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="aspen_dry_02"
+				Divergence="0.2"
+				MinSize="1.4"
+				MaxSize="1.8"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="birch_dry_01"
+				Divergence="0.15"
+				MinSize=".4"
+				MaxSize="1.5"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="aspen_dry_01"
+				Divergence=".1"
+				MinSize="0.6"
+				MaxSize="0.9"
+				Perpendicularity="0.1"
+			/>		
+			<PlantType
+				Brand="aspen_dry_02"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.0"
+				Perpendicularity="0.1"
+			/>	
+			<PlantType
+				Brand="sugar_maple_dry_01"
+				Divergence="0.06"
+				MinSize="1.2"
+				MaxSize="1.8"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="sugar_maple_dry_02"
+				Divergence="0.06"
+				MinSize="1.35"
+				MaxSize="2"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="sugar_maple_dry_03"
+				Divergence="0.06"
+				MinSize="1.2"
+				MaxSize="1.8"
+				Perpendicularity="0.1"
+			/>
+		</DrySpringMaine>	
+		<FrozenLakeUnderwoodMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="250">
+		
+			<PlantType
+				Brand="dry_bush_a"
+				Divergence="0.1"
+				MinSize="1.5"
+				MaxSize="2"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_b"
+				Divergence="0.1"
+				MinSize="1"
+				MaxSize="1.5"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_c"
+				Divergence="0.1"
+				MinSize="1.2"
+				MaxSize="1.6"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_d"
+				Divergence="0.1"
+				MinSize="1.25"
+				MaxSize="1.7"
+				Perpendicularity="0.8"
+			/>
+			
+			<PlantType
+				Brand="small_tree_b"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1"
+			/>
+			<PlantType
+				Brand="small_tree_e"
+				Divergence="0.1"
+				MinSize=".6"
+				MaxSize="1.2"
+			/>		
+		</FrozenLakeUnderwoodMaine>	
+		<SwampTreesMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="10">
+			<PlantType
+				Brand="spruce_02"
+				Divergence="0.05"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="spruce_03"
+				Divergence="0.01"
+				MinSize="1"
+				MaxSize="2.5"
+				Perpendicularity="0.1"
+			/>	
+		
+			<PlantType
+				Brand="us_tsuga_dry_02"
+				Divergence="0.1"
+				MinSize="1.2"
+				MaxSize="3"
+			/>	
+			<PlantType
+				Brand="pine_dry_a"
+				Divergence="0.15"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.1"
+			/>
+			
+		
+		</SwampTreesMaine>
+		<SwampDryTreesMaine PlantsPerBlock="4">
+			<PlantType
+				Brand="swamp_stub_long_a"
+				Divergence="0.15"
+				MinSize="1"
+				MaxSize="1.7"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="swamp_stub_long_c"
+				Divergence="0.15"
+				MinSize="0.6"
+				MaxSize="1.2"
+				Perpendicularity="0.1"
+			/>
+			
+			<PlantType
+				Brand="spruce_02"
+				Divergence="0.16"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.1"
+			/>	
+		</SwampDryTreesMaine>
+		<FernFieldMaine PlantsPerBlock="20">
+			<PlantType
+				Brand="fern_a"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>
+			<PlantType
+				Brand="fern_b"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>	
+			<PlantType
+				Brand="fern_c"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>	
+			<PlantType
+				Brand="fern_d"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>		
+			<PlantType
+				Brand="fern_e"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>		
+			<PlantType
+				Brand="fern_f"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>	
+			<PlantType
+				Brand="fern_g"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.5"
+			/>				
+		</FernFieldMaine>
+		<PinesSmallMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="4">
+			<PlantType
+				Brand="pine_small_a"
+				Divergence="0.1"
+				MinSize="0.6"
+				MaxSize="0.8"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="pine_small_b"
+				Divergence="0.1"
+				MinSize="0.4"
+				MaxSize="0.8"
+				Perpendicularity="0.1"
+			/>
+		</PinesSmallMaine>
+		<LyingSprucesPinesMaine FlatThreshold="0.2" PlantsPerBlock="5">
+			<PlantType
+				Brand="pine_lying_a"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="pine_lying_b"
+				MinSize="1.3"
+				MaxSize="1.7"
+				Perpendicularity="1.0"
+			/>			
+			<PlantType
+				Brand="spruce_lying_02"
+				MinSize="0.6"
+				MaxSize="0.8"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="spruce_lying_02"
+				MinSize="1.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="spruce_lying_02_broken"
+				MinSize="1.1"
+				MaxSize="1.5"
+				Perpendicularity="1.0"
+			/>	
+		</LyingSprucesPinesMaine>
+		<SwampDryBushesMaine LinkedGrassBrush="LeavesFirs" PlantsPerBlock="100">
+		
+			
+			<PlantType
+				Brand="dry_bush_a"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_b"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_c"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_d"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="dry_bush_e"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.3"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="small_tree_b"
+				Divergence="0.1"
+				MinSize="0.7"
+				MaxSize="1.2"
+			/>
+			<PlantType
+				Brand="small_tree_e"
+				Divergence="0.1"
+				MinSize="1"
+				MaxSize="1.4"
+			/>			
+		
+		</SwampDryBushesMaine>
+		<LyingMaineMudflow FlatThreshold="0.2" PlantsPerBlock="50">
+		
+			<PlantType
+				Brand="pine_lying_a"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="pine_lying_b"
+				MinSize="1.3"
+				MaxSize="1.7"
+				Perpendicularity="1.0"
+			/>			
+			<PlantType
+				Brand="spruce_lying_02"
+				MinSize="0.6"
+				MaxSize="0.8"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="spruce_lying_02"
+				MinSize="1.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="spruce_lying_02_broken"
+				MinSize="1.1"
+				MaxSize="1.5"
+				Perpendicularity="1.0"
+			/>	
+		</LyingMaineMudflow>
+		<RocksBigMaineMudflow LinkedGrassBrush="DebrisStonesRus" PlantsPerBlock="10">
+			<PlantType
+				Brand="rock_big_01_usa"
+				Divergence="1"
+				MinSize="0.3"
+				MaxSize="1.5"
+
+				Perpendicularity="0.1"	
+			/>	
+			
+		</RocksBigMaineMudflow>
+		<SmallRocksMaineMudflow LinkedGrassBrush="DebrisStones" PlantsPerBlock="700">
+			<PlantType
+				Brand="small_rock_a"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxMapScale="0.5"
+				MaxSize="2.5"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="small_rock_b"
+				Divergence="0.04"
+				MinMapScale="0.2"
+				MinSize="1.2"
+				MaxMapScale="0.8"
+				MaxSize="2.8"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="small_rock_c"
+				Divergence="0.04"
+				MinMapScale="0.5"
+				MinSize="1.2"
+				MaxSize="2.5"
+				Perpendicularity="1.0"
+			/>
+		</SmallRocksMaineMudflow>
+		<PineStumpMaineMudflow LinkedGrassBrush="DebrisStones" PlantsPerBlock="5">
+			<PlantType
+				Brand="pine_stump_03_maine"
+				Divergence="0.2"
+				MinSize="0.5"
+				MaxSize="1.2"
+			/>	
+	
+		</PineStumpMaineMudflow>
+		<DryRavineMaine LinkedGrassBrush="DebrisStones" PlantsPerBlock="100">
+			<PlantType
+				Brand="small_tree_b"
+				Divergence="0.2"
+				MinSize="0.6"
+				MaxSize="1.0"
+			/>
+			<PlantType
+				Brand="small_tree_e"
+				Divergence="0.2"
+				MinSize="0.6"
+				MaxSize="1.0"
+			/>
+			<PlantType
+				Brand="aspen_dry_02"
+				Divergence="0.15"
+				MinSize="0.55"
+				MaxSize="1.2"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="swamp_stub_long_c"
+				Divergence="0.25"
+				MinSize="0.5"
+				MaxSize="0.75"
+				Perpendicularity="0.1"
+			/>
+	
+		</DryRavineMaine>
+		<IceChunksMelted LinkedGrassBrush="" PlantsPerBlock="900">
+		
+			<PlantType
+				Brand="ice_small_b"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+			<PlantType
+				Brand="ice_small_c"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+			<PlantType
+				Brand="ice_small_d"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+		</IceChunksMelted>
+		<IceChunksMaine LinkedGrassBrush="" PlantsPerBlock="1000">
+		
+			<PlantType
+				Brand="ice_small_b"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+			<PlantType
+				Brand="ice_small_c"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+			<PlantType
+				Brand="ice_small_d"
+				MinSize="0.3"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+		</IceChunksMaine>
+		
+		<IceChunksSnowMaine LinkedGrassBrush="" PlantsPerBlock="500">
+			<PlantType
+				Brand="ice_small_b_sn"
+				MinSize="1.0"
+				MaxSize="4.0"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+				Divergence="0.25"
+			/>
+			<PlantType
+				Brand="ice_small_c_sn"
+				MinSize="1.0"
+				MaxSize="4.0"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+				Divergence="0.25"
+			/>
+			<PlantType
+				Brand="ice_small_d_sn"
+				MinSize="1.0"
+				MaxSize="4.0"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+				Divergence="0.25"
+			/>
+		</IceChunksSnowMaine>
+	</Plants>
+</DistributionBrushes>

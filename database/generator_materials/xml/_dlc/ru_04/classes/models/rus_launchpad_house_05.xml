@@ -1,0 +1,16 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark
+		Mesh="landmarks/rus_launchpad_house_05_lmk"
+	/>
+	<Occlusion
+		Size="(13.0; 11.0)" 
+		Texture="occlusion_rus_launchpad_house_05.tga"
+	/>
+</ModelBrand>

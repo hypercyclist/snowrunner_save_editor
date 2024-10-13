@@ -1,0 +1,10 @@
+<ModelBrand 
+	Instanced="true"  
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="100" NoSoftContacts="True" >
+			<Constraint Type="Fixed" BreakOffThreshold="100" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

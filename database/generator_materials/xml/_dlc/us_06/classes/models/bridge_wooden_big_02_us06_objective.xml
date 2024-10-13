@@ -1,0 +1,51 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+	AcceptZoneBorderDecals="true"
+	ClipCameraBridge="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="base">
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+			<Body Collisions="Dynamic" ModelFrame="base_not_blocker" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="base" />
+		<CdtMesh Name="base" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="base_not_blocker" />
+		<CdtMesh Name="base_not_blocker" />
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_1_anim" Speed="0.75"/>
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="base" />
+		<Mesh Name="animated_mesh" />
+		<CdtMesh Name="base_not_blocker" />
+	</AnimSubset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="19">
+			<Sound Name="actors/actor_construction/actor_construct_wooden_bridge" Range="200" Volume="1" />
+		</AnimEvent>
+		<AnimEvent Key="31">
+			<SFX Name="bridge_smoke_03" Dir="(0; 1; 0)" Pos="(-13.088; 0.377; 0.013)" />
+		</AnimEvent>
+		<AnimEvent Key="39">
+			<SFX Name="bridge_smoke_03" Dir="(0; 1; 0)" Pos="(7.032; 0.165; -0.021)" />
+		</AnimEvent>
+		<AnimEvent Key="45">
+			<SFX Name="bridge_smoke_03" Dir="(0; 1; 0)" Pos="(-5.094; 0.301; 0.184)" />
+		</AnimEvent>
+		<AnimEvent Key="54">
+			<SFX Name="bridge_smoke_03" Dir="(0; 1; 0)" Pos="(-0.164; 0.474; 0.228)" />
+		</AnimEvent>
+		<AnimEvent Key="86">
+			<SFX Name="bridge_smoke_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/bridge_wooden_big_02_objective_lmk" />
+</ModelBrand>

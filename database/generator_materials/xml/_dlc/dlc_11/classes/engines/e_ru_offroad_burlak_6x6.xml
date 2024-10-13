@@ -1,0 +1,33 @@
+<_templates>
+	<Engine>
+		<USScoutModernEngine BrakesDelay="0.5" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USScoutModernEngine"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="150"
+		DamagedConsumptionModifier="1.2"
+		EngineResponsiveness="0.1"
+		FuelConsumption="5.2"
+		Name="ru_offroad_burlak_engine"
+		Torque="80000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.6"
+		MaxDeltaAngVel="0.05"
+	>
+		<GameData
+			Price="1900"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_RU_OFFROAD_BURLAK_6X6_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_RU_OFFROAD_BURLAK_6X6_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

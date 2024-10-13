@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_963_stuff/stuff_curtain_kenworth_963" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainKenworth963" />
+	</GameData>
+</TruckAddon>

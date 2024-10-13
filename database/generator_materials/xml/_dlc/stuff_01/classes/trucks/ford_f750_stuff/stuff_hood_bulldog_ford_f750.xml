@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_stuff/stuff_hood_bulldog_ford_f750" />
+	<GameData
+		CameraPreset="hood_ornament"
+		Category="hood_ornament"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_BULLDOG_NAME"
+		/>
+		<InstallSocket Type="StuffHoodFordF750" />
+	</GameData>
+</TruckAddon>

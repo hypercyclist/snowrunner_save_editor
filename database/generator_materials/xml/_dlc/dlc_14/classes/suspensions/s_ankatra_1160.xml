@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.8"
+		DamageCapacity="120"
+		Name="ankatra_1160_suspension_default"
+	>
+		<Suspension
+			WheelType="front"
+			Damping=".12"
+			Height="0.1"
+			Strength="0.03" 
+			BrokenSuspensionMax="0.2" 
+			SuspensionMin="-0.1"
+			SuspensionMax="0.01"
+		/>
+		
+		<Suspension
+			WheelType="rear"
+			Damping="0.6"
+			Height="0"
+			Strength="0.2"
+			BrokenSuspensionMax="0.001"
+			SuspensionMin="0"
+		/>
+		<GameData
+			Price="8300"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

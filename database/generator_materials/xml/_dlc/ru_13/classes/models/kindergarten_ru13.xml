@@ -1,0 +1,12 @@
+<ModelBrand
+Instanced="true"
+InstancedAsModel="true"
+NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/kindergarten_ru13_lmk" />
+</ModelBrand>

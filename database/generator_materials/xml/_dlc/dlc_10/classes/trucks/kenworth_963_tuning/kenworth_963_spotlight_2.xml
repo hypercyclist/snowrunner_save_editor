@@ -12,11 +12,17 @@
 			<Model _template="HeadLightRay" Org="(1.998; 3.641; -0.654)" />
 			<Model _template="HeadLightRay" Org="(1.998; 3.641; -0.363)" />
 			
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.998; 3.641; 0.654)" />
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.998; 3.641; 0.363)" />
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.998; 3.641; -0.654)" />
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.998; 3.641; -0.363)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.998; 3.641; 0.654)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.998; 3.641; 0.363)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.998; 3.641; -0.654)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.998; 3.641; -0.363)" />
 		</HeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.2" Size="0.2" Pos="(1.998; 3.641; 0.363)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.2" Size="0.2" Pos="(1.998; 3.641; 0.654)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.2" Size="0.2" Pos="(1.998; 3.641; -0.363)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.2" Size="0.2" Pos="(1.998; 3.641; -0.654)" />
+		</Ignition>
 	</ModelAttachments>
 	<MainHeadLight _template="Multiply2"/>
 	<GameData
@@ -25,7 +31,7 @@
 		IsCustomizable="true"
 		Price="1200"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="15"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"

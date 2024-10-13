@@ -1,0 +1,8 @@
+<ModelBrand NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ru08_moorage_02_01_lmk" />
+</ModelBrand>

@@ -2,7 +2,7 @@
 	<Wheel>
 		<RearWheel
 			ConnectedToHandbrake="true"
-			Location="front"
+			Location="rear"
 			Torque="default"
 		/>
 		<FrontWheel
@@ -60,7 +60,7 @@
 		TruckImage="tuz108warthogmchr"
 		TruckType="OFFROAD"
 	>
-		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks, winches_actaeon" />
 		<Wheels
 			DefaultRim="rim_1"
 			DefaultTire="highway_1"
@@ -163,12 +163,33 @@
 			<DamageArea Type="FuelTank" Min="(-0.544; 0.796; 0.463)" Max="(0.374; 1.123; 0.984)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(-0.544; 0.796; -0.984)" Max="(0.374; 1.123; -0.463)" ParentFrame="BoneCabin_cdt" />
 		</Damage>
-		<CompatibleWheels OffsetZ="0.04" RearOffsetZ="0.06" Scale="0.5" Type="wheels_medium_double_front" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.06" Scale="0.5" Type="wheels_medium_double_front" />
 		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.5" Type="wheels_medium_mudtires_actaeon" />
-		<CompatibleWheels OffsetZ="0.04" RearOffsetZ="0.06" Scale="0.55" Type="wheels_medium_double_front" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.06" Scale="0.55" Type="wheels_medium_double_front" />
 		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.55" Type="wheels_medium_mudtires_actaeon" />
-		<CompatibleWheels OffsetZ="0.04" RearOffsetZ="0.06" Scale="0.6" Type="wheels_medium_double_front" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.06" Scale="0.6" Type="wheels_medium_double_front" />
 		<CompatibleWheels OffsetZ="0.18" RearOffsetZ="0.08" Scale="0.6" Type="wheels_medium_mudtires_actaeon" />
+
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.5" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.5" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.5" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.5" Type="wheels_medium_mudtires_double" />
+
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.55" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.55" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.55" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.55" Type="wheels_medium_mudtires_double" />
+
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.6" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.6" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.6" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.16" Scale="0.6" Type="wheels_medium_mudtires_double" />
+
+		<!--<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.5" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.5" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.5" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.5" Type="wheels_medium_mudtires_double" />-->
+
 		<Camera Center="(-1.25; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -357,7 +378,7 @@
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="Semitrailer" Offset="(-1.89; 1.458; 0)" />
-			<Socket Names="Trailer" NamesBlock="FrameAddonMaintainerSmall" Offset="(-3.065; 1.071; 0)" />
+			<Socket Names="Trailer, LogTrailer" NamesBlock="FrameAddonMaintainerSmall" Offset="(-3.065; 1.071; 0)" />
 		</AddonSockets>
 		<AddonSockets DefaultAddon="tuz_108_warthog_diff_lock_default">
 			<Socket Names="TUZ108DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />

@@ -1,0 +1,74 @@
+<DayTimeState
+	ColorLUT="lut/day_us_01__vol_uncmp.tga"
+	FogColor="g(46; 54; 86) x 1.2"
+	FogScatterColor="g(255; 200; 82) x 0.2"
+	HorizonColor="g(96; 107; 136)"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="2"
+	SkySharpness="1"
+	SSAOColor="g(255; 255; 255; 180) x 0.001"
+	SkyBloomColor="g(177; 222; 248; 100) x 0.5"
+	SkyColor="g(176; 158; 196)"
+	SunColor="g(254; 208; 194) x 0"
+	SunDir="(1; -0.35; 0)"
+	WaterCubeMapIntensity="0.5"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 255; 255; 10)"
+	
+	EnvMap="env/morning_taim_02__d_ggxrefl.tga"
+	CubeMapScale="1"
+	
+	HdrAdaptationMinLum="0.02"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="0.65"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.75"
+	TonemapB="0.19"
+	TonemapC="0.4"
+	TonemapD="0.6"
+	TonemapE="0.2"
+	TonemapF="0.15"
+	
+    BloomEnabled="true"
+	BloomPoint="0.2"
+	BloomIntensity="2"
+	BloomGamma="0.7"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomoHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="1.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+>
+	<Sky>
+		<Lightshaft
+			Tint="g(255; 194; 167)"
+			Intensity="0.08"
+			BlurRadius="20"
+			FalloffRadius="0.4"
+			FalloffInnerRadius="0.05"
+			IntensityClamp="3.0"
+		/>
+		<Flare
+			AspectRatio="0.9"
+			Color="g(255; 245; 180) x 0.015"
+			Size="50.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.003" StartDist="0" ScatterAngle="90" Alpha="0.9" Height="25" UpperScale="0.1" LowerScale="0.01"/>
+	<SecondaryFog Density="0.0007" Height="90" UpperScale="0.01" LowerScale="0.0"/>
+	<DistantFog StartDistance="10" EndDistance="6000" Height="90" DensityMultiplier="1"/>
+	<VolumeFog Density="0.8" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(234; 234; 234) x 0.15" MidY="g(227; 191; 233) x 0.8" PosY="g(176; 208; 255) x 1.2" />
+</DayTimeState>

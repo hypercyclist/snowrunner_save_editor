@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_ae4380_stuff/sticker_inside_1x4_01_voron_ae4380" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"/>
+		<InstallSocket Type="voronAe4380Sticker_1x4_01" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,153 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="2000" Spring="3000" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData FuelCapacity="120" RepairsCapacity="150">
+		<LimitedFluid Center="(-0.342; 2.119; 0.335)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-0.501; 2.125; -0.43)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.854; 2.125; -0.43)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-1.197; 2.125; -0.43)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-1.564; 2.116; -0.277)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel3_cdt" />
+		<LimitedFluid Center="(-1.564; 2.116; 0.208)" SizeX="0.312" SizeY="0.122" SizeZ="0.348" Type="Box" ParentFrame="BoneFuel4_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/aac_58dw_tuning/aac_58dw_roofrack">
+		<Body ImpactType="Truck" Mass="120" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Limits" Mass="20" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					LinearLimitsX="(-0.01; 0.01)"
+					LinearLimitsY="(0; 0.006)"
+					LinearLimitsZ="(-0.035; 0.025)"
+				/>
+			</Body>
+			<Body _template="Limits" Mass="60" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					LinearLimitsX="(-0.02; 0.018)"
+					LinearLimitsY="(0; 0.006)"
+					LinearLimitsZ="(-0.002; 0.05)"
+				>
+					<Motor Damping="2400" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="20"
+				ModelFrame="BoneFuel3_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.04"
+					MaxLimit="0.005"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="20"
+				ModelFrame="BoneFuel4_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.005"
+					MaxLimit="0.04"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="Limits" Mass="80" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					LinearLimitsX="(-0.01; 0.04)"
+					LinearLimitsY="(0; 0.006)"
+					LinearLimitsZ="(-0.05; 0)"
+				>
+					<Motor Damping="4000" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneShovel_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping=".3" Spring=".3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Light _template="IgnitionSignalWhite" Color="g(215; 215; 215) x 1" Dir="(0; -0.2; 1)" Pos="(-1.244; 2.090; 0.749)" ParentFrame="BoneChassis_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(215; 215; 215) x 1" Dir="(0; -0.2; -1)" Pos="(-1.244; 2.090; -0.749)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.356; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.319; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.281; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.243; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.205; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.168; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.13; 2.114; -0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.356; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.319; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.281; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.243; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.205; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.168; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; -1)" Size="0.05" Pos="(-1.13; 2.08; -0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.356; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.319; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.281; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.243; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.205; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.168; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.13; 2.114; 0.734)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.356; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.319; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.281; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.243; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.205; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.168; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Dir="(0; 0; 1)" Size="0.05" Pos="(-1.13; 2.08; 0.723)" ParentFrame="BoneChassis_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="Aac58DwRoofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel_01" HideThreshold="0.85" />
+		<Mesh Frame="fuel_02" HideThreshold="0.44" />
+		<Mesh Frame="fuel_03" HideThreshold="0.22" />
+		<Mesh Frame="fuel_04" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

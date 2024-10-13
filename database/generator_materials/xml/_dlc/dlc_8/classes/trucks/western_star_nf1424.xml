@@ -140,8 +140,17 @@
 			<DamageArea Type="FuelTank" Min="(2.653; 0.401; -1.124)" Max="(3.88; 1.041; -0.486)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(2.394; 0.401; 0.488)" Max="(3.621; 1.041; 1.125)" ParentFrame="BoneCabin_cdt" />
 		</Damage>
-		<CompatibleWheels RearOffsetZ="0.07" Scale="0.56" Type="wheels_medium_double" />
-		<CompatibleWheels RearOffsetZ="0.07" Scale="0.61" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.56" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.61" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.56" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.56" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.56" Type="wheels_medium_allterrain_double" />
+
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.61" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.61" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.07" Scale="0.61" Type="wheels_medium_allterrain_double" />
+
 		<Camera Center="(1.4; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -301,7 +310,7 @@
 	<Landmark Mesh="landmarks/western_star_nf1424_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(7.084; 1.180; 0)" ParentFrame="BoneCabinDamper_cdt" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="113500"
 		UnlockByExploration="false"
 		UnlockByRank="1"
@@ -354,25 +363,35 @@
 		<CraneSocket Pos="(-0.921; 0.883; 0.426)" />
 		<CraneSocket Pos="(-1.155; 0.847; 0)" />
 		<AddonSockets>
-			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(1.08; 1.597; 0)" />
-			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(0.715; 1.433; 0)" />
-			<Socket Names="Trailer" Offset="(-1.15; 0.838; 0)">
-				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer" Types="MinicraneUS, FrameAddon" />
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(1.08; 1.597; 0)">
+				<AddonsShift Offset="(-0.5; 0; 0)" Types="MinicraneNavistar" />
 			</Socket>
+			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(0.715; 1.433; 0)">
+				<AddonsShift Offset="(-0.5; 0; 0)" Types="MinicraneNavistar" />
+			</Socket>
+			<Socket Names="Trailer, LogTrailer" Offset="(-1.15; 0.838; 0)"/>
 		</AddonSockets>
 		<AddonSockets DefaultAddon="western_star_nf1424_diff_lock_default">
 			<Socket Names="WesternStarNF1424DiffLock" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="BunkLog" Offset="(-2.544; 1.068; 0)" />
-			<Socket Names="SaddleLow" Offset="(0.715; 1.077; 0)" />
+			<Socket Names="SaddleLow" Offset="(0.715; 1.077; 0)" >
+				<AddonsShift Offset="(-0.5; 0; 0)" Types="MinicraneNavistar" />
+			</Socket>
 			<Socket Names="SaddleHigh" Offset="(1.08; 1.077; 0)">
+			    <AddonsShift Offset="(-0.5; 0; 0)" Types="MinicraneNavistar" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.02)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.02)" />
 			</Socket>
-			<!-- <Socket Names="FrameAddonTank" Offset="(0; 1.082; 0)" /> too heavy for default wheels -->
-			<Socket Names="FrameAddonMaintainer" NamesBlock="Trailer" Offset="(0.3; 0.082; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="Trailer, LogTrailer" Offset="(0.3; 0.082; 0)" ParentFrame="BoneChassis_cdt" />
 			<Socket Names="FrameAddon" Offset="(0.9; 1.08; 0)" />
+			<Socket Names="FrameAddonFlatbed1" Offset="(1.77; 1.08; 0)" >
+				<AddonsShift Offset="(-1.1; 0; 0)" Types="MinicraneNavistar" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets >
+			<Socket Names="MinicraneNavistar" NamesBlock="FrameAddon, FrameAddonMaintainer, BunkLog" Offset="(2.75; 1.07; 0)" />
 		</AddonSockets>
 		<AddonSockets DefaultAddon="western_star_nf1424_bumper_default">
 			<Socket Names="nf1424Bumper" ParentFrame="BoneCabin_cdt" />

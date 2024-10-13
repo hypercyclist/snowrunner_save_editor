@@ -1,0 +1,12 @@
+<_parent File="stuff_hood_bat_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aac_58dw_stuff/stuff_hood_bat_aac_58dw" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<InstallSocket Type="StuffHoodAac58dw" />
+	</GameData>
+</TruckAddon>

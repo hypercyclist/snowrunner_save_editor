@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_stuff/sticker_inside_1x2_02_ford_f750" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"/>
+		<InstallSocket Type="FordF750Sticker_1x2_02" />
+	</GameData>
+</TruckAddon>

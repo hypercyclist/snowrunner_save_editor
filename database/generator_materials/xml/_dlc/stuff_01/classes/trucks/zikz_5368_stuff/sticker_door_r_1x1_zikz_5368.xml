@@ -1,0 +1,14 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_5368_stuff/sticker_door_r_1x1_zikz_5368" >
+		<Body Collisions="None" Mass="1" ModelFrame="BoneOne_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneTwo_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+			<InstallSocket Type="zikz5368Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/ankatra_1160_counterweight">
+		<Body ImpactType="Truck" Mass="1500">
+			<Constraint Type="Rigid"/>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="frame_addons"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_COUNTERWEIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_COUNTERWEIGHT_NAME"
+		/>
+		<InstallSocket Type="Ankatra1160Counterweight" />
+		<RequiredAddonType Type="Ankatra1160Crane" />
+		<RequiredAddon Types="ankatra_1160_crane" />
+	</GameData>
+</TruckAddon>

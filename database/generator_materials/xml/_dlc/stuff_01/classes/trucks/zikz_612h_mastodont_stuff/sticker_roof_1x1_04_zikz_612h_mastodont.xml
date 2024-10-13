@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_stuff/sticker_roof_1x1_04_zikz_612h_mastodont" />
+	<GameData
+		CameraPreset="out_sticker09"
+		Category="sticker_exterior"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_ROOF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_ROOF_STICKER_1x1_NAME"
+		/>
+		<InstallSocket Type="StuffZikz612hRoof_1x1_4" />
+	</GameData>
+</TruckAddon>

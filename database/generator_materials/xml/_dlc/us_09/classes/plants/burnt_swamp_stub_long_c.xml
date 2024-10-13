@@ -1,0 +1,42 @@
+<_templates Include="environment" />
+<PlantBrand BreakType="SmallTree" PlantingMinSpacing="0.3">
+	<PhysicsModel>
+		<Body
+			_template="SmallTreeRoot"
+			DebrisType="FoliageAutumn"
+			IsCapsuleCDT="false"
+			ModelFrame="BoneRoot"
+		>
+			<Constraint _template="SmallTreeRoot" />
+			<Body _template="SwampTrunk" ModelFrame="BoneBody_1">
+				<Constraint BreakOffThreshold="1000" Type="Fixed" />
+				<Body _template="SwampBranch" ModelFrame="Bone_1">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_2">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_3">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_4">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_5">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_6">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone_7">
+					<Constraint BreakOffThreshold="25" Cone="15" TwistAxisLocal="(0;1;0)" Type="Ragdoll"/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.8" Size="(2.0; 2.0)" />
+	<Landmark Mesh="landmarks/swamp_stub_long_a_lmk"/>
+	<GameData>
+		<WinchSocket Pos="(-0.027; 1.307; -0.037)" ParentFrame="BoneRoot_cdt" />
+	</GameData>
+</PlantBrand>

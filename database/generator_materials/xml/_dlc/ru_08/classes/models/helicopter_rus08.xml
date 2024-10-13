@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(9.0; 37.0)" 
+		Texture="occlusion_helicopter_rus_01a.tga"
+	/>
+	<Landmark Mesh="landmarks/helicopter_rus08_lmk" />
+</ModelBrand>

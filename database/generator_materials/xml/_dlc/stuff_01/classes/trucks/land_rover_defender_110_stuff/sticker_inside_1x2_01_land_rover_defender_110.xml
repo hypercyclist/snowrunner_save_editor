@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x2_01_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_stuff/sticker_inside_1x2_01_land_rover_defender_110" />
+	<GameData>
+		<InstallSocket Type="landRoverDefender110Sticker_1x2_01" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_stuff/sticker_inside_1x4_01_derry_longhorn_3194" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"/>
+		<InstallSocket Type="DerryLonghorn3194Sticker_1x4_01" />
+	</GameData>
+</TruckAddon>

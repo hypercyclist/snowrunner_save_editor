@@ -1,0 +1,60 @@
+<_templates Include="models" />
+<ModelBrand 
+	NightLightingShadowsAllowCap="True" 
+	Instanced="true"
+	Fence="True"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body _template="Fence" ModelFrame="BoneStake">
+				<Constraint _template="Fence" />
+				<Body _template="Fence" ModelFrame="BoneFrame">
+					<Constraint _template="Fence" />
+					<Body _template="Fence" ModelFrame="BonePart3">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart4">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart5">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart6">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart7">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart8">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart9">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart10">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart11">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart12">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart13">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart14">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart15">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart16">
+						<Constraint _template="Fence" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Size="(9.0, 4.0)" Texture="occlusion_rus_fence_06.tga" />
+</ModelBrand>

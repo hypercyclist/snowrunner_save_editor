@@ -1,0 +1,67 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.75" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/aac_58dw_tuning/aac_58dw_bumper_2">
+		<Body Mass="80" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="6"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="20"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(2.032; 1.067; 0)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; -0.12)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; -0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; -0.065)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; -0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; -0.012)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; 0.12)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; 0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; 0.065)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; 0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.081; 0.012)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; -0.12)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; -0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; -0.065)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; -0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; -0.012)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; 0.12)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; 0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; 0.065)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; 0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" Size="0.05" Pos="(2.026; 1.055; 0.012)" ParentFrame="BoneChassis_cdt" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_DEFENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_DEFENDER_NAME"
+		/>
+		<InstallSocket Type="Aac58DwBumper" />
+	</GameData>
+</TruckAddon>

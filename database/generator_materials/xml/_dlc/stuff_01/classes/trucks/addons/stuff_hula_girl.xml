@@ -1,0 +1,78 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_hula_girl">
+		<Body Collisions="None" Mass=".5">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneAim_cdt">
+				<Constraint
+					LinearLimitsX="(-.005;.003)"
+					LinearLimitsY="(0;0)"
+					LinearLimitsZ="(-.02;.02)"
+					Type="Fixed"
+				>
+					<Motor Damping=".001" Spring="300" Type="Spring" />
+				</Constraint>
+			</Body>
+			<!-- <Body Collisions="None" Mass="0.2" ModelFrame="BoneAim1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.005"
+					MaxLimit="0.003"
+				>
+					<Motor Damping="0.00001" Spring="100" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="0.2" ModelFrame="BoneAim2_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Prismatic"
+						MinLimit="-0.02"
+						MaxLimit="0.02"
+					>
+						<Motor Damping="0.00001" Spring="100" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body> -->
+			<Body Collisions="None" Mass=".5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="bubble_head"
+		Category="bubble_head"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HULA_GIRL_DESC"
+			UiIcon30x30="interiorBubbleImg30"
+			UiIcon40x40="interiorBubbleImg40"
+			UiName="UI_STUFF_HULA_GIRL_NAME"
+		/>
+		<InstallSocket Type="StuffDashboard" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneIKSkirt" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAim_cdt"
+				ModelFrame="BoneIKSkirt_2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneIKtop" ParentFrame="BoneRoot_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAim_cdt"
+				ModelFrame="BoneIKtop_2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</TruckAddon>

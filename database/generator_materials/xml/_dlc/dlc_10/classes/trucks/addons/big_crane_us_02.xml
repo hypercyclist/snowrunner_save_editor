@@ -10,7 +10,7 @@
 		/>
 	</Flare>
 	<Body>
-		<Mechanism Mass="2500" >
+		<Mechanism Mass="800" >
 			<Constraint
 				AxisLocal="(-1; 0; 0)"
 				Name="AnchorRot"
@@ -20,7 +20,7 @@
 			>
 				<Motor Force="80000" Tau="0.02" Type="Position" />
 			</Constraint>
-			<Body Mass="2100">
+			<Body Mass="600">
 				<Constraint
 					AxisLocal="(0; 1; 0)"
 					Name="AnchorExt"
@@ -41,7 +41,7 @@
 					>
 						<Motor Force="50000" Type="Position" />
 					</Constraint>
-					<Body Mass="600" ForceBodyParams="true" NoFoliageCollisions="true">
+					<Body Mass="400" ForceBodyParams="true" NoFoliageCollisions="true">
 						<Constraint
 							AxisLocal="(0; -1; 0)"
 							Name="AnchorTrue"
@@ -73,15 +73,15 @@
 
 	<PhysicsModel Mesh="trucks/addons/big_crane_us_02">
 		<NetSync Legacy="true" />
-		<Body CenterOfMassOffset="(0; 0; 0)" Mass="2000">
+		<Body CenterOfMassOffset="(-1.45; 0.739; 0)" Mass="3800">
 			<Constraint Type="Fixed" />
 			<Body
-				CenterOfMassOffset="(0; 0; 0)"
-				Mass="2000"
+				CenterOfMassOffset="(-1.040; 0.12; 0)"
+				Mass="800"
 				ModelFrame="BoneCabin_cdt"
 			>
 				<Constraint
-					AxisLocal="(0; 1; 0)"
+					AxisLocal="(0; 0.7; 0)"
 					Name="Crane"
 					Type="Hinge"
 					MinLimit="-355"

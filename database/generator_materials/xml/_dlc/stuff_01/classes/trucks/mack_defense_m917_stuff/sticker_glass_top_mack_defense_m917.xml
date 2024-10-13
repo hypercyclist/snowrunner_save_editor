@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_stuff/sticker_glass_top_mack_defense_m917" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_TOP_DESC" UiName="UI_STUFF_GLASS_STICKER_TOP_CUT_100_PERCENT_MAN_NAME" />
+		<InstallSocket Type="MackDefenseM917Sticker_GlassTop" />
+	</GameData>
+</TruckAddon>

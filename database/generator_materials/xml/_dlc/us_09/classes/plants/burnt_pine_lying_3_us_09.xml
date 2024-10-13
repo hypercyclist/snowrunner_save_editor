@@ -1,0 +1,16 @@
+<_templates Include="environment" />
+<PlantBrand _template="LyingTree">
+	<PhysicsModel>
+		<Body _template="FallingTreeRoot" ModelFrame="BoneRoot" DamageMult="0.3">
+			<Constraint _template="FallingTreeRoot" />
+			<Body _template="TrunkHeadLying" ModelFrame="BoneEnd" DamageMult="0.0">
+				<Constraint _template="TrunkHeadLying" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(4.0; 10.0)" Texture="occlusion_vertical.tga" />
+	<Landmark Mesh="landmarks/burnt_pine_lying_3_us_09_lmk"/>
+	<GameData>
+		<WinchSocket Pos="(-0.117; 0.055; 0.012)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

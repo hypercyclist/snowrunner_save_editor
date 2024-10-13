@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_SOYABEAN_NAME"
+		UiDesc="UI_CARGO_SOYABEAN_DESC"
+		UiIcon20x20="cargoTypeSand20"
+		UiIcon40x40="cargoTypeSand40"
+		UiIcon100x100="cargoTypeSandBags"
+	/>
+</CargoType>

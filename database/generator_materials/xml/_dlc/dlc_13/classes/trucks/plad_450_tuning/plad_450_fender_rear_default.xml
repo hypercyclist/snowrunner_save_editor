@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Body>
+		<MudguardRear Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-22"
+				MaxLimit="15"
+			>
+				<Motor Damping="3" Spring="5" Type="Spring" />
+			</Constraint>
+		</MudguardRear>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_fender_rear_default">
+		<Body Mass="400" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" ExplicitParentFrame="0"/>
+			<Body Collisions="None" Mass="400" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+			<Body _template="MudguardRear" ModelFrame="BoneRearMudguardLeft_cdt" />
+			<Body _template="MudguardRear" ModelFrame="BoneRearMudguardRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; 1)" Size="0.2" Pos="(-0.801; 1.798; 1.520)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; -1)" Size="0.2" Pos="(-0.801; 1.798; -1.520)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; 1)" Size="0.2" Pos="(-2.909; 1.798; 1.520)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; -1)" Size="0.2" Pos="(-2.909; 1.798; -1.520)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; 1)" Size="0.2" Pos="(-4.651; 1.798; 1.520)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Dir="(0; 0; -1)" Size="0.2" Pos="(-4.651; 1.798; -1.520)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>	
+	</ModelAttachments>
+	<GameData
+		CameraPreset="fenders"
+		Category="fender_rear"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc=""
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_WINGS_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Plad450RearFender" />
+	</GameData>
+</TruckAddon>

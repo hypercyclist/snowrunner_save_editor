@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_fender_1">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="fenders"
+		Category="fenders"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc=""
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FENDER_SET_NAME"
+		/>
+		<InstallSocket Type="RezvaniTankFender" />
+	</GameData>
+</TruckAddon>

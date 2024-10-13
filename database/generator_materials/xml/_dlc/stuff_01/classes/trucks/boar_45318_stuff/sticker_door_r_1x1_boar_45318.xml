@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_stuff/sticker_door_r_1x1_boar_45318" />
+	<GameData>
+			<InstallSocket Type="boar45318Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

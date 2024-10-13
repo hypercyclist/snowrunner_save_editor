@@ -1,0 +1,54 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 29; 18) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(10.9; 10.5; -0.85)"
+			Size="0.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 29; 18) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(10.9; 10.5; 1.1)"
+			Size="0.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 29; 18) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(-10.5; 10.5; -0.85)"
+			Size="0.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 29; 18) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(-10.5; 10.5; 1.1)"
+			Size="0.5"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rus_crane_01_lmk" />
+</ModelBrand>

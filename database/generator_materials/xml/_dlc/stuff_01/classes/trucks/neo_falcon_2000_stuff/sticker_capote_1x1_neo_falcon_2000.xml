@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_stuff/sticker_capote_1x1_neo_falcon_2000" />
+	<GameData CameraPreset="capote_sticker">
+		<InstallSocket Type="NeoFalcon2000Sticker_Capote" />
+	</GameData>
+</TruckAddon>

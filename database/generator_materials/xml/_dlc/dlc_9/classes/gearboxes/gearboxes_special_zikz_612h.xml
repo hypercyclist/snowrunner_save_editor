@@ -11,7 +11,7 @@
 		MaxBreakFreq="1.0"
 	>
 		<ReverseGear AngVel="0.3" FuelModifier="0.9" />
-		<HighGear AngVel="0.8" FuelModifier="1.3" />
+		<HighGear AngVel="2.2" FuelModifier="1.3" />
 		<Gear AngVel="0.1" FuelModifier="1.6" />
 		<Gear AngVel="1" FuelModifier="1.4" />
 		<Gear AngVel="3.5" FuelModifier="1.2" />
@@ -46,7 +46,7 @@
 		MaxBreakFreq="20.0"
 	>
 		<ReverseGear AngVel="0.3" FuelModifier="0.9" />
-		<HighGear AngVel="1" FuelModifier="1.4" />
+		<HighGear AngVel="3.5" FuelModifier="1.4" />
 		<Gear AngVel="0.1" FuelModifier="1.5" />
 		<Gear AngVel="0.5" FuelModifier="1.4" />
 		<Gear AngVel="1.2" FuelModifier="1.2" />
@@ -84,7 +84,7 @@
 		MaxBreakFreq="25.0"
 	>
 		<ReverseGear AngVel="0.7" FuelModifier="0.9" />
-		<HighGear AngVel="5.0" FuelModifier="1.6" />
+		<HighGear AngVel="4.0" FuelModifier="1.6" />
 		<Gear AngVel="0.15" FuelModifier="1.5" />
 		<Gear AngVel="0.8" FuelModifier="1.4" />
 		<Gear AngVel="1.5" FuelModifier="1.2" />

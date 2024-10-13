@@ -1,0 +1,24 @@
+<_templates Include="trucks" />
+<_parent File="mtb_8106_threshold_default" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_threshold_2">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fenders"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SILLS_LIGHTWEIGHT_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SILLS_LIGHTWEIGHT_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="MTB8106Threshold" />
+	</GameData>
+</TruckAddon>

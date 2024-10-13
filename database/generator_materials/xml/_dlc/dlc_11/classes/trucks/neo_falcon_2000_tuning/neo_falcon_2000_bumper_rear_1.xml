@@ -1,0 +1,49 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="3.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-80"
+				MaxLimit="30"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.7" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_tuning/neo_falcon_2000_bumper_rear_1">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitch_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitch2_cdt"> 
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-60" MaxLimit="20" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(-1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(-2.034; 0.704; 0.819)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(-1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(-2.034; 0.704; -0.819)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_LIGHTPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_LIGHTPROT_NAME"
+		/>
+		<InstallSocket Type="NeoFalcon2000RearBumper1" />
+	</GameData>
+</TruckAddon>

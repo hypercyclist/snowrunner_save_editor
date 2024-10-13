@@ -9,6 +9,7 @@
 			Location="front"
 			SteeringAngle="35"
 			SteeringCastor="8"
+			SteeringJointOffset="0.2"
 			Torque="full"
 		/>
 	</Wheel>
@@ -156,9 +157,23 @@
 			<DamageArea Type="FuelTank" Min="(-0.8; 0.34; -0.6)" Max="(0.7; 0.64; 0.6)" ParentFrame="BoneChassis_cdt" />
 		</Damage>
 		<CompatibleWheels OffsetZ="0.02" Scale="0.35" Type="wheels_scout_offroad2_jeep_wrangler" />
+		<CompatibleWheels OffsetZ="0.07" Scale="0.4" Type="wheels_scout_offroad2_jeep_wrangler" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout1" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout2" />
 		<CompatibleWheels OffsetZ="0.05" Scale="0.4" Type="wheels_scout2" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.35" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.35" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.05" Scale="0.4" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.4" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.03" Scale="0.35" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.03" Scale="0.35" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.07" Scale="0.4" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.07" Scale="0.4" Type="wheels_scout_allterrain_chain" />
+		
 		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -256,7 +271,7 @@
 	<Landmark Mesh="landmarks/jeep_cj7_renegade_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(1.49; 0.853; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="2500"
 		Recallable="true"
 		UnlockByExploration="false"
@@ -324,7 +339,7 @@
 			<Socket Names="JeepCJ7RenegadeVisor" ParentFrame="BoneCabin_cdt" />
 		</AddonSockets>
 		<AddonSockets>
-			<Socket Names="CJ7RenegadeRoofrack" NamesBlock="JeepCJ7RenegadeVisor" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="CJ7RenegadeRoofrack" ParentFrame="BoneCabin_cdt" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="JeepCJ7RenegadeHorn1" ParentFrame="BoneCabin_cdt" />

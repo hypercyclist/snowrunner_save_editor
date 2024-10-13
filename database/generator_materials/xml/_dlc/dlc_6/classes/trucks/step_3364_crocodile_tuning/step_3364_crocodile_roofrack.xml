@@ -13,7 +13,6 @@
 			</Body>
 			<Body
 				Collisions="None"
-				LinearDamping="2"
 				Mass="20"
 				ModelFrame="BoneFuel_cdt"
 			>

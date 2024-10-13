@@ -1,0 +1,167 @@
+<ModelBrand 
+	Fence="True"
+	Instanced="true" 
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body 
+			Collisions="None" 
+			ModelFrame="BoneRoot">
+			<Body 
+				Collisions="Dynamic" 
+				Friction="0.7" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				AngularDamping="1" 
+				ModelFrame="Bone6">
+				<Constraint Type="Fixed" BreakOffThreshold="3000.0" />
+				<Body 
+					Collisions="Dynamic" 
+					Friction="0.7" 
+					Mass="400.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone8">
+					<Constraint Type="Fixed" BreakOffThreshold="100.0" />
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone3">
+						<Constraint Type="Fixed" BreakOffThreshold="200.0" />
+					</Body>
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone15">
+						<Constraint Type="Fixed" BreakOffThreshold="300.0" />
+					</Body>
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone21">
+						<Constraint Type="Fixed" BreakOffThreshold="100.0" />
+					</Body>
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone5">
+						<Constraint Type="Fixed" BreakOffThreshold="10.0" />
+					</Body>
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone2">
+						<Constraint Type="Fixed" BreakOffThreshold="10.0" />
+					</Body>
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone18">
+					<Constraint Type="Fixed" BreakOffThreshold="200.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone19">
+					<Constraint Type="Fixed" BreakOffThreshold="100.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone11">
+					<Constraint Type="Fixed" BreakOffThreshold="300.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone13">
+					<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+				</Body>
+			</Body>
+			<Body 
+				Collisions="Dynamic" 
+				Friction="0.7" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				AngularDamping="1" 
+				ModelFrame="Bone7">
+				<Constraint Type="Fixed" BreakOffThreshold="5000.0" />
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone1">
+					<Constraint Type="Fixed" BreakOffThreshold="10.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					_template="light" 
+					template="0.0" 
+					ModelFrame="Bone4">
+					<Constraint Type="Fixed" BreakOffThreshold="400.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone20">
+					<Constraint Type="Fixed" BreakOffThreshold="10.0" />
+				</Body>
+			</Body>
+			<Body 
+				Collisions="Dynamic" 
+				Friction="0.7" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				AngularDamping="1" 
+				ModelFrame="Bone9">
+				<Constraint Type="Fixed" BreakOffThreshold="4500.0" />
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone10">
+					<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone12">
+					<Constraint Type="Fixed" BreakOffThreshold="150.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone14">
+					<Constraint Type="Fixed" BreakOffThreshold="600.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone16">
+					<Constraint Type="Fixed" BreakOffThreshold="100.0" />
+				</Body>
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone17">
+					<Constraint Type="Fixed" BreakOffThreshold="50.0" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

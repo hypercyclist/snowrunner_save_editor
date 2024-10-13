@@ -1,0 +1,81 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 7.21362; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 6.22062; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 5.21362; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 4.21362; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 3.21362; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(114; 114; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.4376; 2.21362; -18.4463)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		
+
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/garage_01_us14_lmk" />
+</ModelBrand>

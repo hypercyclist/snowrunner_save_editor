@@ -1,0 +1,80 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	DayShadowOffsetMult="13"
+>
+	<StaticLights>
+	<!--lamp_1-->
+		<StaticLight
+			AttenEnd="8"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0.8; -1; 0.0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(30.24; 2.046; -29.98)"
+			Shadows="true"
+		/>
+		<!--lamp_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(16.63; 3.52; -41.55)"
+			Shadows="true"
+		/>
+		<!--lamp_3-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(10.71; 3.52; -41.55)"
+			Shadows="true"
+		/>
+    </StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"/>
+			<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(255; 0; 0) x 0.3"
+			OcclusionOffset="-0.3"
+			Dir="(0; -1; 0)"
+			Pos="(28.95; 16.90; -13.63)"
+			Size="1.1"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(255; 0; 0) x 0.3"
+			OcclusionOffset="-0.3"
+			Dir="(0; -1; 0)"
+			Pos="(28.95; 16.90; -34.58)"
+			Size="1.1"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(255; 0; 0) x 0.3"
+			OcclusionOffset="-0.3"
+			Dir="(0; -1; 0)"
+			Pos="(10.31; 16.90; -34.58)"
+			Size="1.1"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+	</PhysicsModel> 
+	<Landmark Mesh="landmarks/NPP_bloking_2_us12_lmk"/>
+</ModelBrand>

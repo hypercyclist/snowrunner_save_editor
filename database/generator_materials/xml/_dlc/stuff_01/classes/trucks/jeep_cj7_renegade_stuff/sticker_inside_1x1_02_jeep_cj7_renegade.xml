@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_stuff/sticker_inside_1x1_02_jeep_cj7_renegade" />
+	<GameData CameraPreset="sticker_1">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME" />
+		<InstallSocket Type="JeepCJ7RenegadeSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

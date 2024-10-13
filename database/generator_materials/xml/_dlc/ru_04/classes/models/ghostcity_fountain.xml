@@ -1,0 +1,9 @@
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ghostcity_fountain_lmk" />
+	<GameData>
+		<WinchSocket Pos="(1.1; 7.2; -2.0)" />
+	</GameData>
+</ModelBrand>

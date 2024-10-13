@@ -12,7 +12,6 @@
 			<Constraint Type="Rigid" />
 			<Body
 				Collisions="None"
-				LinearDamping="2"
 				Mass="40"
 				ModelFrame="BoneFuel_cdt"
 			>
@@ -27,7 +26,6 @@
 			</Body>
 			<Body
 				Collisions="None"
-				LinearDamping="2"
 				Mass="50"
 				ModelFrame="BoneRepair_cdt"
 			>

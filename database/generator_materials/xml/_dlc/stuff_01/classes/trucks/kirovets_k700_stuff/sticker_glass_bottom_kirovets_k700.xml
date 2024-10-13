@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k700_stuff/sticker_glass_bottom_kirovets_k700" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_CUT_DRAGONS_NAME" />
+		<InstallSocket Type="KirovetsK700Sticker_GlassBottom" />
+	</GameData>
+</TruckAddon>

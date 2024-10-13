@@ -1,0 +1,41 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_construct_conveyor" Range="200" Volume="1"/>
+			<SFX Name="conveyor_smoke_01" Dir="(0; 1; 0)" Pos="(1.395; 2.168; -0.047)"/>
+			<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0.58; 2.578; -10.878)"/>
+			<SFX Name="conveyor_smoke_03" Dir="(0; 1; 0)" Pos="(1.88; 2.734; 9.693)"/>
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(6.417; 5.883; 7.488)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(6.365; 5.883; 12.93)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-2.243; 5.883; 12.782)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-2.115; 5.883; 7.593)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-3.648; 5.883; -12.999)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-3.659; 5.883; -7.655)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(4.799; 5.883; -12.98)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(4.971; 5.728; -7.77)"/>	
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(2.76; 3.085; -7.503)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.031; 3.01; -7.531)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.133; 3.04; 7.367)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(2.693; 2.969; 7.396)"/>			
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(2.7; 1.677; -3.431)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(2.73; 1.683; 3.534)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.148; 1.834; 3.602)"/>		
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.124; 1.782; -3.323)"/>					
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/conveyor_objective_01_lmk" />
+</ModelBrand>

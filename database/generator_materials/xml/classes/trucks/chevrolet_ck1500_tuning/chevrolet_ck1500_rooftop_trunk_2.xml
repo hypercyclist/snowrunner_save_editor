@@ -1,0 +1,63 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(0;0)"
+				LinearLimitsY="(0;0.04)"
+				LinearLimitsZ="(0;0.03)"
+				Type="Fixed"
+			>
+				<Motor Damping="50" Spring="0.01" Type="Spring" />
+			</Constraint>
+		</Limits>
+		<AngularLimits Collisions="None">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-1"
+				MaxLimit="4"
+			>
+				<Motor Damping="3" Spring="2" Type="Spring" />
+			</Constraint>
+		</AngularLimits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="40"
+		WheelRepairsCapacity="4"
+	>
+        <LimitedFluid Center="(0.237; 2.242; 0.454)" SizeX = "0.363" SizeY = "0.463" SizeZ = "0.184" Type="Box" ParentFrame="BoneFuel2_cdt" />
+        <LimitedFluid Center="(-0.168; 2.242; 0.454)" SizeX = "0.363" SizeY = "0.463" SizeZ = "0.184" Type="Box" ParentFrame="BoneFuel1_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_tuning/chevrolet_ck1500_rooftop_trunk_2">
+		<Body Mass="100">
+			<Constraint Type="Rigid" />
+			<Body _template="AngularLimits" CenterOfMassOffset="(0;-0.15;0)" AngularDamping="1" Mass="3" ModelFrame="BoneFuel1_cdt" />
+			<Body _template="AngularLimits" AngularDamping="4" Mass="3" ModelFrame="BoneFuel2_cdt" />
+			<Body _template="Limits" Mass="50" ModelFrame="BoneWheel_cdt" />
+		</Body>
+	</PhysicsModel>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="5"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="ChevroletCK1500RooftopTrunk" />
+	</GameData>
+</TruckAddon>

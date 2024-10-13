@@ -1,6 +1,6 @@
 <_templates Include="trucks" />
 <TruckAddon>
-	<TruckData FuelCapacity="50" RepairsCapacity="150">
+	<TruckData FuelCapacity="200" RepairsCapacity="350" WheelRepairsCapacity="4">
 		<LimitedFluid Center="(-0.55; 1.609; 0.24)" SizeX="0.308" SizeY="0.121" SizeZ="0.352" Type="Box" />
 		<LimitedFluid Center="(-0.55; 1.609; -0.158)" SizeX="0.308" SizeY="0.121" SizeZ="0.352" Type="Box" />
 	</TruckData>
@@ -12,7 +12,6 @@
 			<Constraint Type="Rigid" />
 			<Body
 				Collisions="None"
-				LinearDamping="2"
 				Mass="40"
 				ModelFrame="BoneFuel_cdt"
 			>
@@ -27,7 +26,6 @@
 			</Body>
 			<Body
 				Collisions="None"
-				LinearDamping="2"
 				Mass="50"
 				ModelFrame="BoneRepair_cdt"
 			>

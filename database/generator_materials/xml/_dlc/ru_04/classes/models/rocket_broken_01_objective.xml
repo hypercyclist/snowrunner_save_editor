@@ -1,0 +1,19 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_deconstruct_rocket_part" Range="50" Volume="1"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+		</Body>
+	</PhysicsModel>
+	<!--<Landmark Mesh="models/_missing_model" />-->
+</ModelBrand>

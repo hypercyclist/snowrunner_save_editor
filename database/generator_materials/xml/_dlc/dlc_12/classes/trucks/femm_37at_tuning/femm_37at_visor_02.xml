@@ -1,0 +1,28 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_visor_02" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0.3; 0)" Size="0.22" Pos="(6.679; 3.68; 0.78)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0.3; 0)" Size="0.22" Pos="(6.723; 3.68; 0.22)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0.3; 0)" Size="0.22" Pos="(6.727; 3.68; 0)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0.3; 0)" Size="0.22" Pos="(6.679; 3.68; -0.78)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0.3; 0)" Size="0.22" Pos="(6.723; 3.68; -0.22)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_BEACONS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_BEACONS_NAME"
+		/>
+		<InstallSocket Type="Femm37AtVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,31 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData
+		RepairsCapacity="250"
+	>
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_repair_box">
+		<Body Mass="210">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear_trunk"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BURLAK_6X6_REPAIR_INTERIOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BURLAK_6X6_REPAIR_INTERIOR_NAME"
+		/>
+		<InstallSocket Type="RezvaniTankRepairBox" />
+	</GameData>
+</TruckAddon>

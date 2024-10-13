@@ -1,0 +1,10 @@
+<ModelBrand
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(16.0; 9.0)" Texture="occlusion_service_cabin_rus_02.tga" />
+	<Landmark Mesh="landmarks/cargo_cabin_rus_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,13 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	ClipCamera="false"
+	NightLightingShadowsAllowCap="true"
+>
+	<SnapPoint Pos="(-0.491; 7.2; 0)" />
+	<SnapPoint Pos="(0.44; 7.214; 0)" />
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(5.0; 8.0)" Texture="occlusion_lamppole_a_disabled.tga" />
+</ModelBrand>

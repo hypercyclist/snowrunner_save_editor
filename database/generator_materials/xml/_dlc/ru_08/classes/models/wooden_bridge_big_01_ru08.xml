@@ -1,0 +1,11 @@
+<ModelBrand DayShadowOffsetMult="0.1"
+            AcceptZoneBorderDecals="true"
+			ClipCameraBridge="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/wooden_bridge_big_01_lmk" />
+</ModelBrand>

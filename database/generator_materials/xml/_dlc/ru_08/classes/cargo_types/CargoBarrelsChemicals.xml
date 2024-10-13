@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_BARRELS_CHEMICALS_NAME"
+		UiDesc="UI_CARGO_BARRELS_CHEMICALS_DESC"
+		UiIcon20x20="cargoTypeChemicals20"
+		UiIcon40x40="cargoTypeChemicals40"
+		UiIcon100x100="cargoTypeBarrelsMasut"
+	/>
+</CargoType>

@@ -181,6 +181,7 @@
 			<DamageArea Type="FuelTank" Min="(1.353; 0.609; -1.082)" Max="(2.853; 1.37; 1.082)" />
 		</Damage>
 		<CompatibleWheels Scale="0.646" Type="wheels_heavy_offroad_p512" />
+		<CompatibleWheels Scale="0.646" Type="wheels_heavy_offroad_double" />
 		<Camera Center="(-1.2; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -339,7 +340,7 @@
 	<Landmark Mesh="landmarks/pacific_p512_lmk" MinScale="1.5" MaxScale="2.5" />
 	<HeadLight _template="Default" Pos="(5.292; 0.982; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="108300"
 		UnlockByExploration="true"
 		UnlockByRank="1"
@@ -384,8 +385,8 @@
 		<AddonSockets>
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-2.878; 1.81; 0)" />
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-2.878; 1.642; 0)" />
-			<Socket Names="Trailer" Offset="(-4.813; 1.189; 0)">
-				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer" Types="FrameAddonLogMedium, Pacific512CabinProtector" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.813; 1.189; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer, LogTrailer" Types="FrameAddonLogMedium, Pacific512CabinProtector" />
 			</Socket>
 		</AddonSockets>
 		<AddonSockets>
@@ -420,13 +421,13 @@
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.015)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.015)" />
 			</Socket>
-			<Socket Names="FrameAddonTowPlatform" NamesBlock="Pacific512CabinProtector, LogLift, MetalDetector, MinicraneUS, Pacific512SpareWheel, Trailer" Offset="(-0.82; 1.324; 0)" />
+			<Socket Names="FrameAddonTowPlatform" NamesBlock="Pacific512CabinProtector, LogLift, MetalDetector, MinicraneUS, Pacific512SpareWheel, Trailer, LogTrailer" Offset="(-0.82; 1.324; 0)" />
 			<Socket Names="FrameAddon" NamesBlock="Pacific512SpareWheel" Offset="(-1.87; 1.324; 0)">
 				<AddonsShift Offset="(-0.48; 0; 0)" Types="MinicraneUS" />
 			</Socket>
 			<Socket Names="FrameAddonTank" NamesBlock="Pacific512SpareWheel, Pacific512CabinProtector" Offset="(-2.38; 1.324; 0)" />
-			<Socket Names="FrameAddonMaintainer" NamesBlock="Trailer, MinicraneUS, MetalDetector, Pacific512SpareWheel, Pacific512CabinProtector" Offset="(-2; 0.298; 0)" />
-			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, MinicraneUS, MetalDetector" Offset="(0.174; 1.324; 0)" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="Trailer, LogTrailer, MinicraneUS, MetalDetector, Pacific512SpareWheel, Pacific512CabinProtector" Offset="(-2; 0.298; 0)" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, LogTrailer, MinicraneUS, MetalDetector" Offset="(0.174; 1.324; 0)" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="MinicraneUS" NamesBlock="BigCraneUs, LogLift, FrameAddonTank, Pacific512SpareWheel, Pacific512CabinProtector" Offset="(0.657; 1.327; 0)" ParentFrame="BoneCabin_cdt" />

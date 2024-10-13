@@ -1,0 +1,60 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutMudtires _template="Medium">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutSoft" />
+			<WheelFriction _template="ScoutMudtires" />
+		</ScoutMudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.93" Mass="50">
+	<TruckTires>
+		<TruckTire _template="ScoutMudtires" Mesh="wheels/tire_scout_mudtires_10" Name="JAT MS I">
+			<WheelFriction _template="ScoutMudtires" BodyFriction="2.7" BodyFrictionAsphalt="0.5" SubstanceFriction="1.8"/>
+			<GameData
+				Price="5100"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_10_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="ScoutMudtires" Mesh="wheels/tire_scout_mudtires_11" Name="JAT MS II">
+			<WheelFriction _template="ScoutMudtires" BodyFriction="2.4" BodyFrictionAsphalt="0.5" SubstanceFriction="2.1"/>
+			<GameData
+				Price="5500"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_11_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="ScoutMudtires" Mesh="wheels/tire_scout_mudtires_12" Name="JAT MS III">
+			<WheelFriction _template="ScoutMudtires" BodyFriction="2.1" BodyFrictionAsphalt="0.4" SubstanceFriction="2.5"/>
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_SCOUT_MUDTIRES_12_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_mudtires_10" Name="JAT MS I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_MUDTIRES_10_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_scout_mudtires_11" Name="JAT MS II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_MUDTIRES_11_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_scout_mudtires_12" Name="JAT MS III">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_MUDTIRES_12_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

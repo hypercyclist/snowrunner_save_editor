@@ -82,7 +82,7 @@
 		Category="bumper"
 		Price="1300"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="8"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"

@@ -1,0 +1,7 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_110_stuff/sticker_glass_bottom_land_rover_defender_110" />
+	<GameData>
+		<InstallSocket Type="landRoverDefender110StickerGlassBot" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,456 @@
+<_templates Include="trucks">
+	<Wheel>
+		<SecondAxle
+			_template="FirstAxle"
+			SteeringAngle="24"
+			SteeringCastor="4"
+			ConnectedToHandbrake="true"
+		/>
+		<RearAxle
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FirstAxle
+			Location="front"
+			SteeringAngle="32"
+			SteeringCastor="0"
+			SteeringJointOffset="0.3"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+			ConnectedToHandbrake="true"
+		/>
+	</Wheel>
+	<Body>
+		<Hook Collisions="None" Mass="10">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="0"
+				MaxLimit="3"
+			/>
+		</Hook>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.5"
+		EngineMarkerOffset="(-0.5; 0.5; 0)"
+		EngineStartDelay="3.2"
+		ExhaustStartTime="2.8"
+		FuelCapacity="300"
+		Responsiveness="0.2"
+		SteerSpeed="0.03"
+		TruckImage="TUZ420Tatarinmchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="offroad_btr_1"
+			DefaultWheelType="wheels_scout_btr"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.975; 0.567; 1.25)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.975; 0.567; 1.25)" />
+			<Wheel _template="SecondAxle" Pos="(0.625; 0.567; 1.25)" />
+			<Wheel _template="SecondAxle" RightSide="true" Pos="(0.625; 0.567; 1.25)" />
+			<Wheel _template="RearAxle" Pos="(-1.064; 0.567; 1.25)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-1.064; 0.567; 1.25)" />
+			<Wheel _template="RearAxle" Pos="(-2.401; 0.567; 1.25)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-2.401; 0.567; 1.25)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="tuz_420_tatarin_suspension_default"
+			Type="s_tuz_420_tatarin"
+			MaxWheelRadiusWithoutSuspension="0.62"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRack1" FrameSteerLeft="BoneRackL1" FrameSteerRight="BoneRackR1" RackHalfSizeZ="1.069" />
+		<SteeringRack Frame="BoneRack2" FrameSteerLeft="BoneRackL2" FrameSteerRight="BoneRackR2" RackHalfSizeZ="1.069" />
+		<Steam Origin="(-2.7; 1.3; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(-2.8; 1.4; 0)"
+			MinDist="10.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<EngineTurbo	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_turbo" />
+			<Reverse		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_reverse" />
+			<BrakesSqueal	Sound="trucks/voron_grad/voron_grad_brakes_squeal" />
+			<BrakePull		Sound="trucks/voron_grad/voron_grad_brake_pull" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt3_rnd_set/truck_brake_release_alt3_rnd" />
+			<Handbrake		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_handbrake_off" />
+			<AWD			Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_awd" />
+			<Honk			Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_honk" />
+			<EngineRev		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_rev" />
+			<EngineAccel	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_acc" />
+			<EngineStart	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_start" />
+			<EngineStop		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_stop" />
+			<EngineIdle		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_idle" />
+			<EngineIdle_2d	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_low" />
+			<EngineLow_2d	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_high" />
+			<EngineHigh_2d	Sound="trucks/tuz_420_tatarin/tuz_420_tatarin_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_stress_rnd_set/truck_stress_rnd" />
+		</Sounds>
+		<OcclusionMap HalfSizeZ="2.2" MinX="-4.3" MaxX="4.5" />
+		<Intake Dir="(0.951; 0.168; -0.259)" Origin="(-2.806; 1.55; -1.338)" Size="0.5" />
+		<Intake Dir="(0.951; 0.168; 0.259)" Origin="(-2.806; 1.55; 1.338)" Size="0.5" />
+		<GearboxSocket Default="g_special_default" Type="gearboxes_special" />
+		<FuelTank DamageCapacity="100" />
+		<Exhaust Dir="(-0.25; -0.433; -0.866)" IsLight="false" Origin="(-3.573; 1.911; -1.245)" Speed="2.0" />
+		<Exhaust Dir="(-0.25; -0.433; 0.866)" IsLight="false" Origin="(-3.573; 1.911; 1.245)" Speed="2.0" />
+		<EngineSocket Default="ru_tuz_tatarin" Type="e_ru_tuz_tatarin" />
+		<Driver Pos="(2.057; 1.1; 0.377)" SteeringWheelPos="(2.439; 1.428; 0.37)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.874; 0.486; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/tuz_420_tatarin_arrow_1" Org="(2.679; 1.37; 0.428)" OutputAngles="(-110; 120)" />
+			<Gauge Dir="(-0.874; 0.486; 0)" InputRange="(0;120)" InputType="speed" Mesh="trucks/arrows/tuz_420_tatarin_arrow_1" Org="(2.683; 1.368; 0.272)" OutputAngles="(-104; 104)" />
+			<Gauge Damping="0.99" Dir="(-0.874; 0.486; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_420_tatarin_arrow_2" Org="(2.672; 1.349; 0.548)" OutputAngles="(-50; 24)" />
+			<Gauge Damping="0.99" Dir="(-0.874; 0.486; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/tuz_420_tatarin_arrow_2" Org="(2.678; 1.359; 0.163)" OutputAngles="(-80; 80)" />
+			<Gauge Damping="0.99" Dir="(-0.873; 0.487; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_420_tatarin_arrow_3" Org="(2.716; 1.422; 0.548)" OutputAngles="(-67; 14)" />
+			<Gauge Damping="0.99" Dir="(-0.873; 0.487; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_420_tatarin_arrow_3" Org="(2.715; 1.422; 0.345)" OutputAngles="(-55; 37)" />
+			<Gauge Damping="0.99" Dir="(-0.874; 0.486; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_420_tatarin_arrow_3" Org="(2.714; 1.421; 0.163)" OutputAngles="(-61; 10)" />
+			<Gauge Dir="(-0.468; 0; -0.884)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/tuz_420_tatarin_arrow_4" Org="(2.58; 1.362; 0.868)" OutputAngles="(0; 0)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea
+				Type="FuelTank"
+				Min="(-3.6; 1.3; -1.1)"
+				Max="(-3; 2; 1.1)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</Damage>
+		<CompatibleWheels Scale="0.6" Type="wheels_scout_btr" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.6" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.6" Type="wheels_heavy_mudtires_single2" />
+		<Camera Center="(-1.5; 0; 0)" Radius="1.2">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/tuz_420_tatarin_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/tuz_420_tatarin_glass__sh_d.tga"
+				ViewPos="(1.98; 1.8; 0.377)"
+			>
+				<Rear
+					HorTransitionEnd="-1.2"
+					HorTransitionStart="-1.1"
+					ViewPosOffset="(0.45; -0.1; 0.9)"
+				/>
+				<Mirror ClipDir="(-0.914; -0.005; -0.407)" ClipOffset="0.1" FOVScale="2" MeshFrame="mirror_left" ReflectionDir="(-0.914; -0.005; -0.407)" Size="(0.23; 0.2)" Pos="(2.712; 1.652; 1.503)" />
+				<Mirror ClipDir="(-0.848; -0; 0.530)" ClipOffset="0.1" FOVScale="2" MeshFrame="mirror_right" ReflectionDir="(-0.848; -0; 0.530)" Size="(0.23; 0.2)" Pos="(2.71; 1.65; -1.499)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleL1" IsIndependent="true" />
+			<Axle Frame="BoneAxleR1" IsIndependent="true" />
+			<Axle Frame="BoneAxleL2" IsIndependent="true" />
+			<Axle Frame="BoneAxleR2" IsIndependent="true" />
+			<Axle Frame="BoneAxleL3" IsIndependent="true" />
+			<Axle Frame="BoneAxleR3" IsIndependent="true" />
+			<Axle Frame="BoneAxleL4" IsIndependent="true" />
+			<Axle Frame="BoneAxleR4" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<Rotator Frame="BoneRotatorFanL" RotationSpeed="12" />
+	<Rotator Frame="BoneRotatorFanR" RotationSpeed="12" />
+	<PhysicsModel Mesh="trucks/tuz_420_tatarin">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-1.6; 0; 0)"
+			ImpactType="Truck"
+			Mass="7000"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(1.7; -1; 0)"
+				ImpactType="Truck"
+				Mass="7000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" Mass="1.5" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="SideMirror" Mass="1.5" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="Hook" ModelFrame="BoneHookLeft_cdt" />
+				<Body _template="Hook" ModelFrame="BoneHookRight_cdt" />
+				<Body Collisions="None" Mass="5" ModelFrame="BoneSunshieldRight_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="5"
+					/>
+				</Body>
+				<Body Collisions="None" Mass="100" ModelFrame="BoneShield_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="0"
+					/>
+				</Body>
+				<Body Collisions="None" Mass="3" ModelFrame="BoneDevice_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="10"
+					>
+						<Motor Damping="1" Spring="50" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="20" ModelFrame="BoneFanCap_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping="1" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.078; 0.89; 0)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-3.608; 1.825; -0.89)" />
+			<Flare _template="StopSignal" Size="0.4" Pos="(-3.608; 1.825; 0.89)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(240; 220; 220) x 1.0" Pos="(-3.647; 1.975; 0.19)" />
+			<Flare _template="ReverseSignal" Color="g(240; 230; 220) x 0.6" Size="0.4" Pos="(-3.647; 1.975; 0.19)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.647; 1.975; 0.19)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(4.3; 1.013; 1)" />
+			<Light _template="IgnitionSignalWhite" Pos="(4.3; 1.013; -1)" />
+			<Light _template="IgnitionSignalRed" Pos="(-4.25; 1.025; 0)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.114; 1.385; -1.326)" />
+			<Flare _template="IgnitionSignalWhite" Pos="(3.114; 1.385; 1.326)" />
+			<!-- <Flare _template="IgnitionSignalWhite" Size=".2" Pos="(2.267; 2.109; -0.259)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(2.267; 2.109; 0.259)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(2.267; 2.109; -0.442)" />
+			<Flare _template="IgnitionSignalWhite" Size=".2" Pos="(2.267; 2.109; 0.442)" /> -->
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Size="0.2" Pos="(2.961; 1.46; -1.478)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Size="0.2" Pos="(2.961; 1.46; 1.478)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.621; 1.825; -0.959)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-3.621; 1.825; 0.959)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.114; 1.385; -1.326)" />
+			<Model _template="HeadLightRay" Org="(3.114; 1.385; 1.326)" />
+			<Flare _template="HeadLight" Color="g(255; 225; 180) x 0.6" Size=".25" Pos="(3.114; 1.385; -1.326)" />
+			<Flare _template="HeadLight" Color="g(255; 225; 180) x 0.6" Size=".25" Pos="(3.114; 1.385; 1.326)" />
+			<Flare _template="BlueStreak" Pos="(3.114; 1.385; -1.326)" />
+			<Flare _template="BlueStreak" Pos="(3.114; 1.385; 1.326)" />
+			<!--Spotlight-->
+			<Model _template="HeadLightRay" Org="(2.267; 2.109; -0.259)" />
+			<Model _template="HeadLightRay" Org="(2.267; 2.109; 0.259)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.35" Size=".3" Pos="(2.267; 2.109; -0.259)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.35" Size=".3" Pos="(2.267; 2.109; 0.259)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.35" Size=".3" Pos="(2.267; 2.109; -0.442)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.35" Size=".3" Pos="(2.267; 2.109; 0.442)" />
+			<Flare _template="BlueStreak" Pos="(2.267; 2.109; -0.259)" />
+			<Flare _template="BlueStreak" Pos="(2.267; 2.109; 0.259)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/tuz_420_tatarin_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4.273; 1.098; 0)" />
+	<GameData
+		Country="RU,CAS"
+		Price="106700"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.549; 1.038; -0.908)" />
+		<WinchSocket Pos="(3.549; 1.038; 0.908)" />
+		<WinchSocket Pos="(1.666; 1.585; -1.437)" />
+		<WinchSocket Pos="(1.666; 1.585; 1.437)" />
+		<WinchSocket Pos="(-3.56; 1.43; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_TUZ_420_TATARIN_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgTuz420tatarin"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="TUZLogo80"
+			UiName="UI_VEHICLE_TUZ_420_TATARIN_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(1.597; 0.674; -0.498)" Position="(6.777; 5.943; -0.106)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(7.736; 1.695; 2.324)" Position="(4.861; 1.677; -0.658)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(0.697; 1.869; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.265; 3.31; 8.244)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.194; 1.807; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.093; 2.337; -6.718)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.736; 1.695; 2.324)" Position="(4.861; 1.677; -0.658)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.764; 1.97; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.226; 4.969; -4.508)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(7.752; 0.707; 0.089)" Position="(5.068; 2.039; 0.005)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(4.832; 1.273; -1.119)" Position="(9.164; 2.715; 0.97)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(4.582; 1.255; 1.593)" Position="(1.592; 1.77; 3.23)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(3.76; 1.352; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.577; 4.402; -3.898)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(5.048; 1.335; -0.771)" Position="(7.918; 4.649; -0.237)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.085; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.662; 0.61; 1.935)" Position="(5.221; 1.595; 0.03)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.186; 1.352; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.692; 4.402; -3.898)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.594; 1.391; 2.082)" Position="(5.115; 1.677; -0.399)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(4.207; 0.853; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.998; 2.036; -6.125)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.085; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(1.169; 1.557; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.101; 4.145; 3.662)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(3.36; 1.341; -0)" Position="(1.814; 1.599; -3.266)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(3.549; 1.038; -0.908)" />
+		<CraneSocket Pos="(3.549; 1.038; 0.908)" />
+		<CraneSocket Pos="(1.666; 1.585; -1.437)" />
+		<CraneSocket Pos="(1.666; 1.585; 1.437)" />
+		<CraneSocket Pos="(-3.56; 1.43; 0)" />
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinTrunk" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinSpotlight" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinBeacon" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinVisor1" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinVisor2" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz420TatarinHorn" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x1_04"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Tuz420TatarinSticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(2.373; 1.854; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffDashboard" Offset="(2.676; 1.543; -0.568)" Dir="(0.721; 0.126; 0.681)" UpDir="(-0.133; 0.99; 0.043)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz420TatarinSticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz420TatarinSticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz420TatarinSticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz420TatarinSticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz420TatarinSticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz420TatarinSticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" Offset="(3.613; 1.472; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBalancer1_L1" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL1"
+				ModelFrame="BoneBalancer2_L1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancer1_R1" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR1"
+				ModelFrame="BoneBalancer2_R1"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancer1_L2" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL2"
+				ModelFrame="BoneBalancer2_L2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancer1_R2" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR2"
+				ModelFrame="BoneBalancer2_R2"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

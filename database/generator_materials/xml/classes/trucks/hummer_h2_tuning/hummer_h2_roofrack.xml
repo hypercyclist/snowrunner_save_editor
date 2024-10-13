@@ -1,0 +1,63 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(-0.01;0.01)"
+				LinearLimitsY="(0;0.01)"
+				LinearLimitsZ="(0;0)"
+				Type="Fixed"
+			>
+				<Motor Damping="10" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="40"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(0.102; 2.268; 0.439)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel_cdt" />
+		<LimitedFluid Center="(0.509; 2.267; 0.432)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_roofrack">
+		<Body Mass="100">
+			<Constraint Type="Rigid" />
+			<Body _template="Limits" Mass="40" ModelFrame="BoneFuel_cdt" />
+			<Body _template="Limits" Mass="50" ModelFrame="BoneRepair_cdt" />
+			<Body
+				_template="Limits"
+				Mass="50"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.01;0)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="HummerH2Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

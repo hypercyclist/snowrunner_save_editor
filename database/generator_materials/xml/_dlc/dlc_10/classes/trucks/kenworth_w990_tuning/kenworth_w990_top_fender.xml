@@ -1,0 +1,51 @@
+<_templates Include="trucks">
+	<Flare>
+		<MarkerBeacon Color="g(125; 81; 18) x 0.7" Size="0.2" />
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_top_fender">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.324; 2.984; -0.956)" Dir="(0; 0; -1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.067; 2.984; -0.973)" Dir="(0; 0; -1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.759; 2.985; -0.638)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.799; 2.985; -0.325)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.821; 2.985; 0)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.799; 2.985; 0.325)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.759; 2.985; 0.638)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.324; 2.984; 0.956)" Dir="(0; 0; 1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.067; 2.984; 0.973)" Dir="(0; 0; 1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.919; 1.137; 0.940)" Dir="(0; 0; 1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.595; 1.136; 0.937)" Dir="(0; 0; 1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.325; 1.135; 0.966)" Dir="(0; 0; 1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.068; 1.136; 0.986)" Dir="(0; 0; 1)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.919; 1.137; -0.940)" Dir="(0; 0; -1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.595; 1.136; -0.937)" Dir="(0; 0; -1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.325; 1.135; -0.966)" Dir="(0; 0; -1)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(2.068; 1.136; -0.986)" Dir="(0; 0; -1)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_CLT_TOP_FENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_CLT_TOP_FENDER_NAME"
+		/>
+		<InstallSocket CameraPreset="roof" Type="KenworthW990Top" />
+	</GameData>
+</TruckAddon>

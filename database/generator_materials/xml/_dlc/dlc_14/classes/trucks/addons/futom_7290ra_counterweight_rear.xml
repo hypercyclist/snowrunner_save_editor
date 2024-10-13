@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/futom_7290ra_counterweight_rear">
+		<Body ImpactType="Truck" Mass="500">
+			<Constraint Type="Rigid"/>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_COUNTERWEIGHT_REAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_COUNTERWEIGHT_REAR_NAME"
+		/>
+		<InstallSocket Type="Futom7290RaCounterweightRear" />
+	</GameData>
+</TruckAddon>

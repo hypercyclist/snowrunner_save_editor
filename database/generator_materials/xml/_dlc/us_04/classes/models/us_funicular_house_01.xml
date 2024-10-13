@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(28.0; 29.0)" 
+		Texture="occlusion_us_funicular_house_01.tga"
+	/>
+</ModelBrand>

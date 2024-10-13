@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_tiger_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_stuff/stuff_hood_tiger_jeep_cj7_renegade" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodJeepCJ7Renegade" />
+	</GameData>
+</TruckAddon>

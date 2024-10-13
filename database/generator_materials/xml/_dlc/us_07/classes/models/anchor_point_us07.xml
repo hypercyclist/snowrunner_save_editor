@@ -1,0 +1,14 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0; 0.1; 0)" />
+	</GameData>
+	<!--<Landmark Mesh="landmarks/rock_06_lmk" /> -->
+</ModelBrand>

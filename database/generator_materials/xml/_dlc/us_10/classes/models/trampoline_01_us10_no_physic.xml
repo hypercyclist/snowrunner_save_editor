@@ -1,0 +1,16 @@
+<_templates Include="models" />
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body 
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(8.0; 8.0)" 
+		Texture="occlusion_trampoline_01.tga"
+	/>
+</ModelBrand>

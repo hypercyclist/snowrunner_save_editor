@@ -1,0 +1,139 @@
+<ModelBrand Instanced="true" InstancedAsModel="true">
+	<PhysicsModel>
+	<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-20.0295; 9.39857; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-20.7928; 9.39857; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-22.9938; 9.0999; -13.100)"
+			Size="2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-22.1606; 9.0999; -13.100)"
+			Size="2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-14.6667; 10.0995; -13.100)"
+			Size="2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-15.4769; 10.0995; -13.100)"
+			Size="2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-18.8165; 9.56954; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-17.9237; 9.56954; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-17.1651; 9.56954; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2"
+			Dir="(0; -1; 0)" 
+			Pos="(-16.3357; 9.56954; -13.100)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2.5"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.0056; 9.59769; -10.9278)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="50"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(46; 83; 114) x 2.5"
+			Dir="(0; -1; 0)" 
+			Pos="(-12.6874; 9.59769; -11.6659)"
+			Size="3.5"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(55.9696207971; 52.0)" Texture="occlusion_garage01.tga" />
+	<Landmark Mesh="landmarks/garage_us11_lmk" />
+</ModelBrand>

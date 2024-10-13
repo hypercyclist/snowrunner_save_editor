@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_f750_stuff/sticker_door_l_1x1_ford_f750" />
+	<GameData
+		CameraPreset="door_l_sticker"
+		Category="sticker_exterior"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_DOOR_L_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_DOOR_L_STICKER_1x1_NAME"
+		/>
+		<InstallSocket Type="FordF750Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

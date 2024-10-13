@@ -113,9 +113,22 @@
 			<DamageArea Type="FuelTank" Min="(-2.091; 0.404; -0.838)" Max="(-1.309; 1.177; -0.117)" />
 		</Damage>
 		<CompatibleWheels Scale="0.39" Type="wheels_land_rover_defender_110" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.41" Type="wheels_land_rover_defender_110" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout1" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout2" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout2" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.39" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.41" Type="wheels_scout_allterrain_chain" />
 		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -196,7 +209,7 @@
 	<Landmark Mesh="landmarks/land_rover_defender_110_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(1.49; 0.853; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="2500"
 		Recallable="true"
 		UnlockByExploration="false"

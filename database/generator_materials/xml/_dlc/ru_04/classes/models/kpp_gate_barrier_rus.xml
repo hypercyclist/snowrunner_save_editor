@@ -1,0 +1,25 @@
+<_templates Include="models" />
+<ModelBrand
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	NightLightingShadowsAllowCap="false"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" _template="ModelStaticRoot"
+ ModelFrame="BoneRoot_cdt">
+			<Constraint _template="ModelStaticRoot" />
+			<Body _template="FrameHard" ModelFrame="joint1">
+				<Constraint _template="Frame" />
+<Body _template="FencePart" ModelFrame="joint2">
+				<Constraint _template="FencePart" />
+</Body>
+				<Body _template="FrameHard" ModelFrame="joint3">
+					<Constraint _template="Frame" />
+                           
+				</Body>
+			</Body>	
+		</Body>
+	</PhysicsModel>
+</ModelBrand>
+

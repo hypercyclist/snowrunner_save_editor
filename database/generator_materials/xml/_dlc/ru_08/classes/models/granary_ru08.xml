@@ -1,0 +1,15 @@
+<ModelBrand
+	InstancedAsModel="true"
+	Instanced="true"
+	DynamicModel="false"
+	ClipCamera="true"
+	NightLightingShadowsAllowCap="true"
+	DayShadowOffsetMult="3.0"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/granary_ru08_lmk" />
+</ModelBrand>

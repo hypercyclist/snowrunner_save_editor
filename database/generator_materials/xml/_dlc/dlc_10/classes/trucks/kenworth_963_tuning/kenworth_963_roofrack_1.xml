@@ -10,7 +10,7 @@
 <TruckAddon>
 	<TruckData
 		FuelCapacity="140"
-		RepairsCapacity="300"
+		RepairsCapacity="220"
 	>
 		<LimitedFluid Center="(1.85; 3.843; -0.36)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" ParentFrame="BoneFuel_cdt" />
 		<LimitedFluid Center="(1.51; 3.843; -0.65)" SizeX="0.296" SizeY="0.135" SizeZ="0.358" Type="Box" />
@@ -33,7 +33,6 @@
 			<Constraint Type="Rigid" />
 			<Body
 				_template="Limits"
-				LinearDamping="2"
 				Mass="30"
 				ModelFrame="BoneRepair_cdt"
 			>
@@ -41,7 +40,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="4"
 				Mass="30"
 				ModelFrame="BoneFuel_cdt"
 			>
@@ -72,7 +70,7 @@
 		IsCustomizable="true"
 		Price="4400"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="11"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"

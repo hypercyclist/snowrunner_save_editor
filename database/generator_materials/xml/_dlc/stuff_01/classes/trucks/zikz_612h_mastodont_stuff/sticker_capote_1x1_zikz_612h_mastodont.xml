@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_stuff/sticker_capote_1x1_zikz_612h_mastodont" />
+	<GameData
+		CameraPreset="out_sticker01"
+		Category="sticker_exterior"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_CAPOTE_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_CAPOTE_STICKER_1x1_NAME"
+		/>
+		<InstallSocket Type="StuffZikz612hCapote_1x1" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,63 @@
+<ModelBrand
+	DisableShadows="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body 
+			DamageMult="0"
+			Mass="10.0"
+			NoSoftContacts="false"
+ 			ModelFrame="BoneRoot">
+					<Constraint
+						Cone="90"
+						TwistAxisLocal="(0;1;0)"
+						TwistMin="0"
+						TwistMax="0"
+						Type="Ragdoll"
+					>
+					<PlaneConeMotor Damping="90" Spring="1500" Type="Spring" />
+				</Constraint>
+			<Body
+				DamageMult="0"
+				Mass="10.0"
+				NoSoftContacts="false"
+				ModelFrame="BoneBend">
+					<Constraint
+						Cone="90"
+						TwistAxisLocal="(0;1;0)"
+						TwistMin="0"
+						TwistMax="0"
+						Type="Ragdoll"
+					>
+					<PlaneConeMotor Damping="50" Spring="600" Type="Spring" />
+				</Constraint>
+				<Body
+					DamageMult="0"
+					Mass="5.0"
+					NoSoftContacts="false"
+					ModelFrame="BoneFlag01">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Type="Hinge"
+						>
+						<Motor Damping="5.9" Spring="3.5" Type="Spring" />
+					</Constraint>
+					<Body
+						DamageMult="0"
+						Mass="2.0"
+						NoSoftContacts="false"
+						ModelFrame="BoneFlag02">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Type="Hinge"
+							MinLimit="-25"
+							MaxLimit="25"
+						>
+						<Motor Damping="0.01" Spring="30.0" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

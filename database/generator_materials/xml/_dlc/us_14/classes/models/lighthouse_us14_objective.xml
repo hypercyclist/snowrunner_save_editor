@@ -1,0 +1,55 @@
+<ModelBrand  
+	NightLightingShadowsAllowCap="true"
+	ApplyNormalInReference="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	ClipCamera="false"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+<!-- spotlights off -->
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="state_00" />
+		<Mesh Name="ligthouse" />
+		<Mesh Name="ligthouse_lod1" />
+		<Mesh Name="ligthouse_lod2" />
+		<CdtMesh Name="cdt_ligthouse" />
+	</Subset>
+<!-- spotlights on -->
+	<Subset Name="build_stage_1">
+		<Mesh Name="animesh" />
+		<Mesh Name="ligthouse" />
+		<Mesh Name="ligthouse_lod1" />
+		<Mesh Name="ligthouse_lod2" />
+		<CdtMesh Name="cdt_ligthouse" />
+		<AnimTrack Name="stage_1_anim" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrackSubset Name="anim_loop" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_vibro_sensor/actor_vibrator_seismo_loop" FadeInTime="1.0" FadeOutTime="1.0" RangeMin="25" RangeMax="120" Volume="0.1" IsLoop="true"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh" />
+		<Mesh Name="ligthouse" />
+		<AnimTrack Name="stage_1_anim" />
+		<AnimTrackSubset Name="anim_loop" />
+	</AnimSubset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="0">
+           		<Fade Time="1.2" />
+       	</AnimEvent>
+		<AnimEvent Key="5" ForceDaytimePreset="true" />
+		<AnimEvent Key="20">
+			<Sound Name="addons/ramp/ramp_start" Range="200" Volume="0.2" />
+		</AnimEvent>
+		<AnimEvent Key="30">
+			<Sound Name="actors/actor_vibro_sensor/actor_vibrator_seismo_loop" Range="200" Volume="0.1" />
+		</AnimEvent>
+		<AnimEvent Key="199">
+           		<Fade Time="1.2" />
+       	</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/lighthouse_01_us14_objective_lmk" />
+</ModelBrand>

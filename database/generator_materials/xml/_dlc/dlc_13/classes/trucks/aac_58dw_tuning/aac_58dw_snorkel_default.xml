@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(1.132; 1.249; 0)" />
+	<PhysicsModel Mesh="trucks/aac_58dw_tuning/aac_58dw_snorkel_default" />
+	<GameData
+		CameraPreset="snorkel"
+		Category="snorkel"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_NAME"
+		/>
+		<InstallSocket Type="Aac58DwSnorkel" />
+	</GameData>
+</TruckAddon>

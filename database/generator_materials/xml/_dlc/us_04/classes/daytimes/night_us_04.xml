@@ -1,0 +1,86 @@
+<DayTimeState 
+	ColorLUT="lut/us_02_night__vol_uncmp.tga"
+	FogColor="g(51; 86; 143) x 0.08"
+	FogScatterColor="g(118; 103; 55) x 0.13"
+	HorizonColor="g(0; 71; 150) x 0.2"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="1.5"
+	SkySharpness="2.5"
+	SSAOColor="g(0; 0; 0)"
+	SkyBloomColor="g(52; 68; 138; 140) x 1.1"
+	SkyColor="g(0; 3; 11) x 0.9"
+	SunColor="g(215; 234; 255) x 0"
+	SunDir="(1; 0; 0)"
+	MoonDir="(1; -0.38; 0)"
+	WaterCubeMapIntensity="0.5"
+	VignetteFlareColor="g(173; 196; 253; 10) x 0"
+	EmissiveScale="5"
+	
+	LightPbrMult="3"
+	ToneMapWhite="0.1"
+	
+	EnvMap="env/night_al_01__d_ggxrefl.tga"
+	CubeMapScale="1"
+
+	SparklesIntensity="20"
+	SparklesHeadLightScale="0.01"
+	
+	HdrAdaptationMinLum="0.02"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="3.0"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="1.3"
+	HdrExposureScaleX="2"
+	
+	TonemapA="0.2"
+	TonemapB="0.19"
+	TonemapC="0.22"
+	TonemapD="0.15"
+	TonemapE="0.015"
+	TonemapF="0.1"
+	
+	BloomEnabled="true"
+	BloomPoint="150"
+	BloomIntensity="0.6"
+	BloomGamma="0.8"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+		
+	RadiusMinSSAO="1.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+	ShadowMapResolution="2048"
+	TerrainHideDist = "800"
+>
+    <Sky>
+		<Lightshaft
+			Tint="g(255; 242; 213)"
+			Intensity="0.2"
+			BlurRadius="3"
+			FalloffRadius="0.6"
+			FalloffInnerRadius="0.05"
+		/>
+		<Flare
+			AspectRatio="1"
+			Color="g(197; 251; 253) x 0.03"
+			Size="0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.006" StartDist="5" ScatterAngle="90" Alpha="0.8" Height="15" UpperScale="0.1" LowerScale="0.01"/>
+	<SecondaryFog Density="0.001" Height="20" UpperScale="0.6" LowerScale="0.01"/>
+	<DistantFog StartDistance="10" EndDistance="4500" Height="90" DensityMultiplier="1"/>
+	<VolumeFog Density="0.3" />
+	<Dof NearEnd="4" NearRange="2" />
+	<Ambient NegY="g(152; 189; 220) x 0.2" MidY="g(170; 204; 227) x 0.28" PosY="g(144; 188; 255) x 0.5" />
+		<TruckAmbient
+		 Color="g(144; 156; 173) x 2"
+		 Radius="512"
+	/>	
+	<WeatherParticles Type="heavy_snow" MinIntensity="0" MaxIntensity="0.2" IntensityChangeInterval="30" />
+</DayTimeState>

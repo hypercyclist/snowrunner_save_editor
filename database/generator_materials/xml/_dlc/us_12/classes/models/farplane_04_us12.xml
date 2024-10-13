@@ -1,0 +1,11 @@
+<ModelBrand
+	InBackground="true"
+	NightLightingShadowsAllowCap="true"
+	DayShadowOffsetMult="3.0"
+>
+	<PhysicsModel>
+		<Body 
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</ModelBrand>

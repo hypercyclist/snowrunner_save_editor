@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_MINECART_NAME"
+		UiDesc="UI_CARGO_MINECART_DESC"
+		UiIcon20x20="cargoMinersTrolley20"
+		UiIcon40x40="cargoMinersTrolley40"
+		UiIcon100x100="cargoTypeMinersTrolley"
+	/>
+</CargoType>

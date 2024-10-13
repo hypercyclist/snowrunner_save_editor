@@ -1,0 +1,16 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<SnapPoint Pos="(-1.038; 3.812; 1.164)" />
+	<SnapPoint Pos="(0.902; 3.846; 1.189)" />
+	<SnapPoint Pos="(-1.035; 3.82; -1.156)" />
+	<SnapPoint Pos="(0.877; 3.83; -1.151)" />
+	<SnapPoint Pos="(-0.06; 3.83; -1.165)" />
+	<SnapPoint Pos="(-0.06; 3.83; 1.165)" />
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/station_02_lmk" />
+</ModelBrand>

@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_threshold_1" />
+	<GameData
+		CameraPreset="hoods_default"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_PIPE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_PIPE_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="Azov73210Threshold" />
+	</GameData>
+</TruckAddon>

@@ -3,6 +3,7 @@
 
 #include <map>
 #include <vector>
+#include <string>
 
 class Region;
 class Task;

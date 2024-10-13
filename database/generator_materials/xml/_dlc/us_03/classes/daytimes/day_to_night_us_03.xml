@@ -1,0 +1,79 @@
+<DayTimeState
+	ColorLUT="lut/day_us_01__vol_uncmp.tga"
+	FogColor="g(53; 80; 157)"
+	FogScatterColor="g(202; 67; 40) x 0.1"
+	HorizonColor="g(30; 59; 130) x 0.3"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="1.5"
+	SkySharpness="1.8"
+	SSAOColor="g(255; 255; 255; 180) x 0.001"
+	SkyBloomColor="g(177; 222; 248; 100) x 0.5"
+	SkyColor="g(120; 71; 63)"
+	SunColor="g(255; 123; 83) x 0"
+	SunDir="(1; -0.35; 0)"
+	WaterCubeMapIntensity="0.5"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 255; 255; 10)"
+	
+	EnvMap="env/evn_taim_01__d_ggxrefl.tga"
+	CubeMapScale="0.8"
+	
+	HdrAdaptationMinLum="0.02"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="0.65"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.7"
+	TonemapB="0.3"
+	TonemapC="0.4"
+	TonemapD="0.6"
+	TonemapE="0.3"
+	TonemapF="0.1"
+	
+	BloomEnabled="true"
+	BloomPoint="0.2"
+	BloomIntensity="2.2"
+	BloomGamma="0.4"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="1.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="60.0"
+	ShadowMapResolution="2048"
+>
+	<Sky>
+		<Lightshaft
+			Tint="g(255; 194; 167)"
+			Intensity="0.08"
+			BlurRadius="20"
+			FalloffRadius="0.4"
+			FalloffInnerRadius="0.05"
+			IntensityClamp="3.0"
+		/>
+		<Flare
+			AspectRatio="0.9"
+			Color="g(255; 245; 180) x 0.015"
+			Size="50.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.002" StartDist="0" ScatterAngle="90" Alpha="0.9" Height="10" UpperScale="0.03" LowerScale="0.01"/>
+	<SecondaryFog Density="0.001" Height="90" UpperScale="0.01" LowerScale="0.0"/>
+	<DistantFog StartDistance="10" EndDistance="6000" Height="90" DensityMultiplier="1"/>
+	<VolumeFog Density="0.3" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(234; 234; 234) x 0.3" MidY="g(227; 191; 233) x 0.3" PosY="g(147; 171; 210) x 0.8" />
+	<TruckAmbient
+		 Color="g(65; 69; 77)"
+		 Radius="2048"
+	/>	
+</DayTimeState>

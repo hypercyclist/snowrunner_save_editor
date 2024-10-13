@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1200.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoFertilizer" PackSlotsNumber="1">
+		<CraneSocket Pos="(-0.015; 1.165; 0.01)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_fertilizer_us14_lmk" MinScale="1.8" MaxScale="3.8"/>
+</ModelBrand>

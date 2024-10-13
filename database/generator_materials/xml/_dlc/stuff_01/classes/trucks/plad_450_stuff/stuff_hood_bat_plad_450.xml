@@ -1,0 +1,12 @@
+<_parent File="stuff_hood_bat_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/plad_450_stuff/stuff_hood_bat_plad_450" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<InstallSocket Type="StuffHoodPlad450" />
+	</GameData>
+</TruckAddon>

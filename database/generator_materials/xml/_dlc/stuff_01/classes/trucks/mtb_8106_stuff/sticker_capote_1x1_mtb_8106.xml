@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_stuff/sticker_capote_1x1_mtb_8106" />
+	<GameData CameraPreset="capote_sticker">
+		<InstallSocket Type="MTB8106Sticker_Capote" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,33 @@
+<_templates Include="trucks" />
+<_parent File="kenworth_w990_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabin_cdt" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_exhaust_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_SLANTCUT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_SLANTCUT_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.430; 0.030; 0.903)" IsLight="true" Origin="(1.501; 3.141; 1.048)" Speed="3.82" />
+	<Exhaust Dir="(-0.462; 0.010; 0.887)" IsLight="true" Origin="(1.452; 3.357; 0.998)" Speed="3.82" />
+	<Exhaust Dir="(-0.430; 0.030; 0.903)" IsLight="true" Origin="(1.406; 3.561; 0.947)" Speed="3.82" />
+	<Exhaust Dir="(0.430; 0.030; -0.903)" IsLight="true" Origin="(1.501; 3.141; -1.048)" Speed="3.82" />
+	<Exhaust Dir="(-0.462; 0.010; -0.887)" IsLight="true" Origin="(1.452; 3.357; -0.998)" Speed="3.82" />
+	<Exhaust Dir="(-0.430; 0.030; -0.903)" IsLight="true" Origin="(1.406; 3.561; -0.947)" Speed="3.82" />
+</TruckAddon>

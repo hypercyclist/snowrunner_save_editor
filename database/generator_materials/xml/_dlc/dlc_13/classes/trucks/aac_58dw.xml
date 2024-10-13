@@ -1,0 +1,523 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="full"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="33"
+			SteeringCastor="8"
+			SteeringJointOffset="0.25"
+			Torque="default"
+		/>
+	</Wheel>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.05"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="0.74"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="60"
+		Responsiveness="0.6"
+		SteerSpeed="0.03"
+		TruckImage="aac58dwmchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_aac_58dw"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.28; 0.404; 0.718)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.28; 0.404; 0.718)" />
+			<Wheel _template="RearWheel" Pos="(-1.28; 0.403; 0.72)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.28; 0.403; 0.72)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="aac_58dw_suspension_default"
+			Type="s_aac_58dw"
+			MaxWheelRadiusWithoutSuspension="0.3"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.5975"
+		/>
+		<Steam Origin="(1.402; 0.821; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(1; 0.97; 0)"
+			MinDist="8.0"
+		>
+			<EngineTrans	Sound="" />
+			<Reverse		Sound="" />
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<AWD			Sound="trucks/aac_58dw/aac_58dw_awd" />
+			<BrakePull		Sound="trucks/aac_58dw/aac_58dw_brake_pull" />
+			<BrakeRelease	Sound="trucks/aac_58dw/aac_58dw_brake_release" />
+			<BrakesSqueal	Sound="trucks/aac_58dw/aac_58dw_brakes_squeal" />
+			<Gear			Sound="trucks/aac_58dw/aac_58dw_gear_shift" />
+			<Handbrake		Sound="trucks/aac_58dw/aac_58dw_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/aac_58dw/aac_58dw_handbrake_off" />
+			<Honk			Sound="trucks/aac_58dw/aac_58dw_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/aac_58dw/aac_58dw_acc" />
+			<EngineStart	Sound="trucks/aac_58dw/aac_58dw_start" />
+			<EngineStop		Sound="trucks/aac_58dw/aac_58dw_stop" />
+			<EngineIdle		Sound="trucks/aac_58dw/aac_58dw_idle" />
+			<EngineIdle_2d	Sound="trucks/aac_58dw/aac_58dw_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/aac_58dw/aac_58dw_low" />
+			<EngineLow_2d	Sound="trucks/aac_58dw/aac_58dw_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/aac_58dw/aac_58dw_high" />
+			<EngineHigh_2d	Sound="trucks/aac_58dw/aac_58dw_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.3; 0.3; 0.3)"
+				MaxAngle="(2.100; 2.100; 2.100)"
+				MaxFrequency="3.4"
+			/>
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.3"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.3"
+			MaxX="2.2"
+		/>
+		<LimitedFluid
+			Center="(-0.26; 0.545; 0.556)"
+			SizeX="0.788"
+			SizeY="0.161"
+			SizeZ="0.395"
+			Type="Box"
+		/>
+		<Intake Dir="(1; 0; 0)" Origin="(1.9; 0.857; 0)" Size="0.6" />
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts, gearboxes_special_aac_58dw" />
+		<FuelTank DamageCapacity="60" />
+		<Exhaust Dir="(-1; 0; 0)" Origin="(-2; 0.482; -0.514)" Speed="2.0" />
+		<EngineSocket Default="us_scout_old_engine_0" Type="e_us_scout_old, e_us_special_aac_58dw" />
+		<Driver
+			AnimationSet="Scout"
+			LegsOffset="(-0.1; -0.05; 0)"
+			Pos="(0; 0.954; 0.4)"
+			SteeringWheelPos="(0.31; 1.322; 0.421)"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.750; 0.661; 0)" InputRange="(0;200)" InputType="speed" Mesh="trucks/arrows/aac_58dw_arrow_03" Org="(0.546; 1.368; 0.338)" OutputAngles="(-122;90)" />
+			<Gauge Damping="0.9" Dir="(-0.750; 0.661; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/aac_58dw_arrow_02" Org="(0.541; 1.381; 0.421)" OutputAngles="(-122;90)" />
+			<Gauge Damping="0.5" Dir="(-0.750; 0.661; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/aac_58dw_arrow_01" Org="(0.556; 1.377; 0.493)" OutputAngles="(70; 5)" />
+			<Gauge Damping="0.9" Dir="(-0.750; 0.661; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aac_58dw_arrow_01" Org="(0.556; 1.377; 0.516)" OutputAngles="(-61; -30)" />
+			<Gauge Damping="0.9" Dir="(-0.750; 0.661; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aac_58dw_arrow_01" Org="(0.542; 1.361; 0.519)" OutputAngles="(-140; -87)" />
+			<Gauge Damping="0.9" Dir="(-0.750; 0.661; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/aac_58dw_arrow_01" Org="(0.543; 1.361; 0.488)" OutputAngles="(140; 110)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.89; 0.547; -0.365)" Max="(1.746; 1.145; 0.365)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.67; 0.465; 0.34)" Max="(0.156; 0.8; 0.775)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.025" Scale="0.41" Type="wheels_aac_58dw" />
+		<CompatibleWheels Scale="0.44" Type="wheels_aac_58dw" />
+		<CompatibleWheels Scale="0.41" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.44" Type="wheels_scout1" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout2" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.44" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.41" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.41" Type="wheels_scout_mudtires" />
+		<CompatibleWheels Scale="0.44" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.44" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.09" Scale="0.44" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.44" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.44" Type="wheels_scout_allterrain_chain" />
+		<Camera Center="(-1.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				LimitsVer="(-0.35; 0.2)"
+				WindshieldDiffuseTexture="trucks/aac_58dw_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/aac_58dw_glass__sh_d.tga"
+				ViewPos="(-0.05; 1.58; 0.421)"
+			>
+				<Rear ViewPosOffset="(0.14; -0.12; 0.5)" />
+				<Mirror ClipDir="(-0.949; 0.118; -0.293)" ClipOffset="0.05" FOVScale="1.2" MeshFrame="mirror_left" ReflectionDir="(-0.949; 0.118; -0.293)" Size="(0.17; 0.2)" Pos="(0.589; 1.408; 0.931)" />
+				<Mirror ClipDir="(-0.879; 0.073; 0.472)" ClipOffset="0.05" FOVScale="1.4" MeshFrame="mirror_right" ReflectionDir="(-0.879; 0.073; 0.472)" Size="(0.17; 0.2)" Pos="(0.589; 1.408; -0.931)" />
+				<Mirror ClipDir="(-1; 0; 0)" ClipOffset="0.1" FOVScale="1.55" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.75; -0.082; 0.23)" Size="(0.17; 0.06)" Pos="(0.529; 1.679; 0.005)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(1.812; 0.857; 0)" />
+	<PhysicsModel Mesh="trucks/aac_58dw">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.2; -0.5; 0)"
+			ImpactType="Truck"
+			Mass="3700"
+			NetSync="pv"
+		>
+			<Body _template="SideMirror" ModelFrame="BoneMirrorR_cdt" />
+			<Body _template="SideMirror" ModelFrame="BoneMirrorL_cdt" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneBelt_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.03"
+				>
+					<Motor Damping="30" Spring="200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneSunshield_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-18"
+					MaxLimit="18"
+				>
+					<Motor Damping="0.1" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="0.3" ModelFrame="BoneKeyFob_cdt">
+				<Constraint
+					Cone="20"
+					PlaneAxisLocal="(0; 0; 1)"
+					TwistAxisLocal="(0; 1; 0)"
+					Type="Ragdoll"
+					PlaneMin="-60"
+					TwistMin="-50"
+					PlaneMax="60"
+					TwistMax="50"
+				>
+					<TwistMotor Damping="0.002" Spring="0" Type="Spring" />
+					<PlaneMotor Damping="0.0005" Spring="0" Type="Spring" />
+					<ConeMotor Damping="0.0005" Spring="0" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneRearBeltRight_cdt">
+				<Constraint
+					LinearLimitsX="-0.02; 0.03"
+					LinearLimitsY="0; 0.02"
+					LinearLimitsZ="-0.08; 0.06"
+					Type="Fixed"
+				>
+					<Motor Damping="30" Spring="900" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneWipers_cdt">
+				<Constraint
+					LinearLimitsX="0; 0"
+					LinearLimitsY="-0.01; 0.006"
+					LinearLimitsZ="0; 0"
+					Type="Fixed"
+				>
+					<Motor Damping="50" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="TieRodSteer"
+					MinLimit="-25"
+					MaxLimit="25"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Color="g(255; 0; 0) x 0.6" Pos="(-2.3; 0.963; 0)" />
+			<Flare _template="StopSignal" AspectRatio="2" Color="g(255; 0; 0) x 0.6" Size="0.2" Pos="(-1.922; 0.963; 0.692)" />
+			<Flare _template="StopSignal" AspectRatio="2" Color="g(255; 0; 0) x 0.6" Size="0.2" Pos="(-1.922; 0.963; -0.692)" />
+			<Flare _template="StopSignal" AspectRatio="6" Color="g(255; 0; 0) x 0.1" Size="0.2" Pos="(-1.749; 1.894; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.161)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.134)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.107)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.082)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.052)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0.027)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; 0)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.161)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.134)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.107)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.082)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.052)" />
+			<Flare _template="StopSignal" Color="g(255; 0; 0) x 0.5" Size="0.04" Pos="(-1.749; 1.894; -0.027)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.3; 0.824; 0)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.3" Pos="(-1.922; 0.824; 0.692)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.3" Pos="(-1.922; 0.824; -0.692)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.922; 0.824; 0.692)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.922; 0.824; -0.692)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.7" Pos="(2.4; 0.839; 0.521)" />
+			<Light _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.7" Pos="(2.4; 0.839; -0.521)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.5" Size="0.8" Pos="(1.735; 0.839; 0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.5" Size="0.8" Pos="(1.735; 0.839; -0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Size="0.1" Pos="(1.66; 0.97; 0.75)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Size="0.1" Pos="(1.66; 0.97; -0.75)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="2" Color="g(255; 0; 0) x 0.25" Size="0.3" Pos="(-1.922; 0.894; 0.692)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="2" Color="g(255; 0; 0) x 0.25" Size="0.3" Pos="(-1.922; 0.894; -0.692)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.2" Pos="(1.735; 0.791; 0.757)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(240; 225; 215) x 0.3" Size="0.2" Pos="(1.735; 0.791; -0.757)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.735; 0.839; 0.521)" ParentFrame="BoneChassis_cdt" />
+			<Model _template="HeadLightRay" Org="(1.735; 0.839; -0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 185) x 0.25" Size="0.5" Pos="(1.735; 0.839; 0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 185) x 0.25" Size="0.5" Pos="(1.735; 0.839; -0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Size="0.5" Pos="(1.735; 0.839; 0.521)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Dir="(1; 0; 0)" Size="0.5" Pos="(1.735; 0.839; -0.521)" ParentFrame="BoneChassis_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/aac_58dw_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(2.182; 0.857; 0)" />
+	<GameData
+		Country="US,NE,CAS,CE"
+		Price="6400"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.916; 0.491; 0)" />
+		<WinchSocket Pos="(0; 0.541; -0.845)" />
+		<WinchSocket Pos="(0; 0.541; 0.845)" />
+		<WinchSocket Pos="(-1.997; 0.638; 0.587)" />
+		<WinchSocket Pos="(-1.997; 0.638; -0.587)" />
+		<WinchSocket Pos="(-2.13; 0.557; 0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_AAC_58DW_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgAAC58DW"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="AACLogo80"
+			UiName="UI_VEHICLE_AAC_58DW_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.2; 0.976; -0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.332; 1.526; -4.276)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.65; 0.865; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.5; 1.496; -3.289)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.7; 1.23; 1.75)" Position="(5.3; 1.6; -0.5)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.65; 0.92; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.104; 1.85; 2.4)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6; 0.413; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.421; 0.7; -3.51)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.5; 1.6; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8; 4.5; -2.2)" />
+			<CameraPos FOV="32.0" Name="snorkel" InterestPosition="(5.5; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.8; 3.041; -1.7)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(4.616; 1.747; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.75; 4.237; 5.28)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(5.9; 0.8; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.332; 3.8; -3.8)" />
+			<!-- STICKERS/FIGURES -->
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.3; 0.674; -0.65)" Position="(9.5; 3.256; -0.8)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(5.5; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.8; 3.041; -1.7)" />
+			<CameraPos FOV="32.0" Name="sticker_back" InterestPosition="(3.24; 1.02; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.65; 1.9; -2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.067; 0.791; 0.942)" Position="(5.3; 1.7; -0.3)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(5.7; 1.75; 0.5)" Position="(5.28; 1.55; -0.45)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(5.7; 0.85; 0.5)" Position="(5.5; 1.8; -0.25)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(6; 0.5; 3)" Position="(5.5; 1.55; -0.6)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_4" InterestPosition="(5.5; 1.85; 3)" Position="(5.5; 1.55; -0.8)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(7; 1; 0.998)" Position="(4.3; 1; 3)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(5.2; 1; -0.4)" Position="(4.200; 1; -3)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_roof" InterestPosition="(4.234; 1.445; 0.5)" Position="(2.5; 4.775; -1.2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_figure" InterestPosition="(6.7; 1.050; -0.8)" Position="(9; 1.46; -1.4)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(5.7; 1.2; 0.5)" Position="(5.28; 1.7; -0.45)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(1.916; 0.491; 0)" />
+		<CraneSocket Pos="(0; 0.541; -0.845)" />
+		<CraneSocket Pos="(0; 0.541; 0.845)" />
+		<CraneSocket Pos="(-1.997; 0.638; 0.587)" />
+		<CraneSocket Pos="(-1.997; 0.638; -0.587)" />
+		<CraneSocket Pos="(-2.13; 0.557; 0)" />
+		<CraneSocket Pos="(-0.41; 1.963; 0)" />
+		<AddonSockets DefaultAddon="aac_58dw_spare_wheel_default">
+			<Socket Names="AAC58DWSpareWheel" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="aac_58dw_bumper_default">
+			<Socket Names="Aac58DwBumper" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="aac_58dw_bumper_rear_default">
+			<Socket Names="Aac58DwRearBumper" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="aac_58dw_snorkel_default">
+			<Socket Names="Aac58DwSnorkel" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="aac_58dw_wings_default">
+			<Socket Names="Aac58DwWings" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58DwBeacon" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58DwThreshold" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58DwSpotlight" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58DwVisor" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58DwRoofrack" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ScautTrailer" Offset="(-2.13; 0.62; 0)" />
+		</AddonSockets>
+		<!-- <STICKERS> -->
+		<AddonSockets>
+			<Socket Names="StuffHoodAac58dw" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(0.616; 1.37; 0.08)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.531; 1.648; 0.004)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="Aac58dwSticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Aac58dwSticker_GlassBot" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Aac58dwSticker_Capote" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Aac58dwSticker_Roof" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58dwSticker_Door_R" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Aac58dwSticker_Door_L" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BonePistonL2Base" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BonePistonL2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonR2Base" ParentFrame="BoneAxle2">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BonePistonR2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTieRod1Hinge" ParentFrame="BoneTieRod1_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneTieRod1Prismatic"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

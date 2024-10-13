@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(50.0; 25.0)" 
+		Texture="occlusion_rus_fuel_factory_05_stage_0.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_fuel_factory_05_stage_0_lmk" />
+</ModelBrand>

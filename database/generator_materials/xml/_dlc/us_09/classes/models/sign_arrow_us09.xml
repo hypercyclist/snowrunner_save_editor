@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand
+	Instanced="True"
+	NightLightingShadowsAllowCap="True"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="130" NoSoftContacts="true" ModelFrame="BoneSignBase">
+			<Constraint BreakOffThreshold="8000" Type="Fixed"/>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

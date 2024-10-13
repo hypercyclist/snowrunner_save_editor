@@ -1,0 +1,154 @@
+<_templates Include="trucks">
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.7"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.07"
+		/>
+	</Flare>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData
+		FuelCapacity="60"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="2"
+	>
+		<LimitedFluid Center="(1.13; 4.09; -0.31)" SizeX="0.3" SizeY="0.128" SizeZ="0.348" Type="Box" ParentFrame="BoneChassis_cdt"/>
+		<LimitedFluid Center="(0.8; 4.09; -0.31)" SizeX="0.3" SizeY="0.128" SizeZ="0.348" Type="Box" ParentFrame="BoneChassis_cdt"/>
+		<LimitedFluid Center="(0.47; 4.09; -0.31)" SizeX="0.3" SizeY="0.128" SizeZ="0.348" Type="Box" ParentFrame="BoneChassis_cdt"/>
+	</TruckData>
+	<WheelRepairsHide>
+		<Mesh Frame="spare_wheel_r" HideThreshold="0.0" />
+		<Mesh Frame="spare_wheel_l" HideThreshold="0.5" />
+	</WheelRepairsHide>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/addons/frame_addon_flatbed_kenworth_963_2">
+		<Body Mass="1400" ModelFrame="BoneChassis_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Rigid" />
+			<Body Collisions="None" Mass="300" ModelFrame="BoneCabin_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneWheelR_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.003"
+					MaxLimit="0.003"
+				>
+					<Motor Damping="1" Spring="7000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneWheelL_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.003"
+					MaxLimit="0.003"
+				>
+					<Motor Damping="1" Spring="10000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneСhainL_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-24"
+					MaxLimit="24"
+				>
+					<Motor Spring="0.1" Damping="0.7" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneСhainR_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-24"
+					MaxLimit="24"
+				>
+					<Motor Spring="0.2" Damping="1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneCainSideL_cdt">
+				<Constraint
+					Type="Ragdoll"
+					TwistAxisLocal="(0; 1; 0)"
+					PlaneAxisLocal="(1; 0; 0)"
+					TwistMin="-50"
+					TwistMax="20"
+					PlaneMin="-100"
+					PlaneMax="100"
+					Cone="7"
+					ConeMin="-100"
+					ConeMax="100"
+				>
+					<PlaneConeMotor Spring="0.01" Damping="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneCainSideR_cdt">
+				<Constraint
+					Type="Ragdoll"
+					TwistAxisLocal="(0; 1; 0)"
+					PlaneAxisLocal="(1; 0; 0)"
+					TwistMin="-50"
+					TwistMax="20"
+					PlaneMin="-100"
+					PlaneMax="100"
+					Cone="7"
+					ConeMin="-100"
+					ConeMax="100"
+				>
+					<PlaneConeMotor Spring="0.01" Damping="0.1" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" Size="0.5" Pos="(-7.911; 1.78; 1.459)" />
+			<Flare _template="StopSignal" Size="0.5" Pos="(-7.911; 1.78; -1.459)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-7.911; 1.841; -1.459)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-7.911; 1.841; 1.459)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.911; 1.841; -1.459)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.911; 1.841; 1.459)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.3"  Dir="(-1; 0; 0)" Pos="(-0.372; 3.581; -0.509)" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.3"  Dir="(-1; 0; 0)" Pos="(-0.372; 3.581; 0.509)" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.3" Dir="(0; 0; 1)" Pos="(-7.829; 1.718; 1.792)" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.3" Dir="(0; 0; 1)" Pos="(-7.829; 1.923; 1.792)" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.3" Dir="(0; 0; -1)" Pos="(-7.829; 1.718; -1.792)" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.3" Dir="(0; 0; -1)" Pos="(-7.829; 1.923; -1.792)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Pos="(-7.911; 1.78; 1.459)" />
+			<Flare _template="IgnitionSignalRed" Dir="(-1; 0; 0)" Pos="(-7.911; 1.78; -1.459)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="6100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_FLATBED_KENWORTH_963_02_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_FLATBED_KENWORTH_963_02_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="FlatbedKenworth2" />
+		<AddonSlots InitialOffset="(-3.213; 2.348; 0)" OffsetStep="(-2.9; 0; 0)" Quantity="2" />
+		<WinchSocket Pos="(-7.919; 0.97; 0)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-7.919; 0.97; 0)" ParentFrame="BoneChassis_cdt" />
+	</GameData>
+</TruckAddon>

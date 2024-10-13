@@ -1,0 +1,101 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_silver_ru13">
+		<NetSync Legacy="false" />
+		<Body Mass="3000" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="10" ModelFrame="belt1_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="60"
+				>
+					<Motor Damping="10" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Mass="20" ModelFrame="belt1half_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-80"
+						MaxLimit="80"
+					>
+						<Motor Damping="5" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="belt2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="60"
+				>
+					<Motor Damping="10" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Mass="20" ModelFrame="belt2half_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-80"
+						MaxLimit="80"
+					>
+						<Motor Damping="5" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="belt3_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="60"
+				>
+					<Motor Damping="10" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Mass="20" ModelFrame="belt3half_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-80"
+						MaxLimit="80"
+					>
+						<Motor Damping="5" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="belt4_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-60"
+					MaxLimit="60"
+				>
+					<Motor Damping="10" Spring="0" Type="Spring" />
+				</Constraint>
+				<Body Mass="20" ModelFrame="belt4half_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-80"
+						MaxLimit="80"
+					>
+						<Motor Damping="5" Spring="0" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_container_small"
+			TransportedSound="load/metal_small/metal_small_rnd"
+			ManualSound="cargo_manual/cargo_manual_container_small"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoSilver"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

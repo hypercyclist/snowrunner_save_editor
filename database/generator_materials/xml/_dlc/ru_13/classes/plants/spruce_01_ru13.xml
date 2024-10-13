@@ -1,0 +1,34 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" PlantingMinSpacing="2.4">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" DebrisType="FoliageNeedles" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk">
+				<Constraint _template="TrunkHead" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch1">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch2">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch3">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch4">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch5">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch6">
+				<Constraint _template="BranchSoft" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(14.0; 14.0)" />
+	<Landmark Mesh="landmarks/spruce_01_ru13_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0;0.316; -0.193)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

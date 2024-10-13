@@ -1,0 +1,11 @@
+<_templates Include="trucks" />
+<TruckWheel
+	_template="Medium"
+	Mesh="wheels/wheels_trailer_log"
+	Radius="0.55"
+	Width="0.541"
+>
+	<WheelTracks _template="Default" />
+	<WheelSoftness _template="Stiff" />
+	<WheelFriction _template="Allterrain" />
+</TruckWheel>

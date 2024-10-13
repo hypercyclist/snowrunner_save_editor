@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aac_58dw_stuff/sticker_roof_1x1_aac_58dw" />
+	<GameData CameraPreset="sticker_roof">
+		<InstallSocket Type="Aac58dwSticker_Roof" />
+	</GameData>
+</TruckAddon>

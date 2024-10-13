@@ -139,11 +139,22 @@
 			<DamageArea Type="Engine" Min="(1.455; 0.677; -0.5)" Max="(3.568; 2.115; 0.5)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(-0.545; 0.566; -1.258)" Max="(0.647; 1.198; 1.258)" ParentFrame="BoneChassis_cdt" />
 		</Damage>
-		<CompatibleWheels Scale="0.6" Type="wheels_medium_ank_mk38" />
-		<CompatibleWheels RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_double" />
-		<CompatibleWheels Scale="0.65" Type="wheels_medium_ank_mk38" />
-		<CompatibleWheels RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_double" />
+		<CompatibleWheels Scale="0.6" RearOffsetZ="-0.04" Type="wheels_medium_ank_mk38" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_double" />
+		<CompatibleWheels Scale="0.65" RearOffsetZ="-0.04" Type="wheels_medium_ank_mk38" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_double" />
 		<CompatibleWheels OffsetZ=".05" RearOffsetZ=".08" Scale="0.65" Type="wheels_medium_mudtires_ankmk38" />
+
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.04" Scale="0.6" Type="wheels_medium_mudtires_double" />
+
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-.01" Scale="0.65" Type="wheels_medium_mudtires_double" />
+
 		<Camera Center="(-2.2; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -281,7 +292,7 @@
 	<Landmark Mesh="landmarks/ank_mk38_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(5; 1.287; 0)" ParentFrame="BoneCabin_cdt" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="51100"
 		UnlockByExploration="false"
 		UnlockByRank="1"
@@ -328,7 +339,7 @@
 		<CraneSocket Pos="(-0.721; 1.09; -0.429)" />
 		<CraneSocket Pos="(-0.721; 1.09; 0.429)" />
 		<AddonSockets>
-			<Socket Names="Trailer" Offset="(-5.209; 0.919; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-5.209; 0.919; 0)" />
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-3.25; 1.61; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-2.65; 1.77; 0)" />
 		</AddonSockets>

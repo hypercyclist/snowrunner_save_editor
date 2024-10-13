@@ -1,0 +1,589 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			Torque="connectable"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<MarkerBeacon Color="g(125; 81; 18) x 0.7" Size="0.3" />
+		<IgnitionSignalWhite
+			AspectRatio="1.4"
+			Color="g(165; 149; 130) x 1"
+			Dir="(1; 0; 0)"
+			DirAngle="120"
+			Size="0.4"
+		/>
+	</Flare>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="350" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.02"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.3"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0.9"
+		FuelCapacity="300"
+		Responsiveness="0.15"
+		SteerSpeed="0.025"
+		TruckImage="ws4964mchr"
+		TruckType="HEAVY_DUTY"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="RearWheel" Pos="(-3.41; 0.579; 1.086)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.41; 0.579; 1.086)" />
+			<Wheel _template="RearWheel" Pos="(-2.090; 0.579; 1.086)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.090; 0.579; 1.086)" />
+			<Wheel _template="FrontWheel" Pos="(3.629; 0.579; 1.09)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.629; 0.579; 1.09)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="white_ws4964_suspension_default"
+			Type="s_white_ws4964"
+			MaxWheelRadiusWithoutSuspension="0.4"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.809"
+		/>
+		<Steam Origin="(1.472; 1.097; -0)" />
+		<Steam Origin="(3.55; 1.2; -0)" Scale="0.5" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="true"
+			Origin="(3.35; 1.6; -0)"
+			MinDist="10.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_big_old" />
+			<Reverse		Sound="" />
+			<Honk			Sound="trucks/common/truck_honk_default" />
+			<Handbrake		Sound="trucks/ws_4964_white/ws_4964_white_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/ws_4964_white/ws_4964_white_handbrake_off" />
+			<BrakesSqueal	Sound="trucks/ws_4964_white/ws_4964_white_brakes_squeal" />
+			<EngineRev		Sound="trucks/ws_4964_white/ws_4964_white_rev" />
+			<EngineAccel	Sound="trucks/ws_4964_white/ws_4964_white_acc" />
+			<EngineStart	Sound="trucks/ws_4964_white/ws_4964_white_start" />
+			<EngineStop		Sound="trucks/ws_4964_white/ws_4964_white_stop" />
+			<EngineIdle		Sound="trucks/ws_4964_white/ws_4964_white_idle" />
+			<EngineIdle_2d	Sound="trucks/ws_4964_white/ws_4964_white_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ws_4964_white/ws_4964_white_low" />
+			<EngineLow_2d	Sound="trucks/ws_4964_white/ws_4964_white_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ws_4964_white/ws_4964_white_high" />
+			<EngineHigh_2d	Sound="trucks/ws_4964_white/ws_4964_white_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/ws_4964_white/ws_4964_white_heavy" />
+			<EngineHeavy_2d	Sound="trucks/ws_4964_white/ws_4964_white_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_old_rnd_set/truck_swing_big_old_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="ShaftWheel2WheelA" SocketPointB="ShaftWheel2WheelB" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2" MinX="-4.462" MaxX="4.809" />
+		<LimitedFluid Center="(2.124; 0.828; -0.857)" LengthX="1.529" RadiusY="0.285" RadiusZ="0.285" Type="Cylinder" />
+		<LimitedFluid Center="(1.791; 0.828; 0.857)" LengthX="1.118" RadiusY="0.285" RadiusZ="0.285" Type="Cylinder" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.422; 1.446; -0)" Size="1.219" />
+		<GearboxSocket Default="g_truck_default" Type="gearboxes_trucks" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="us_truck_old_engine_0" Type="e_us_truck_old, e_us_truck_old_top" />
+		<Driver Pos="(1.753; 1.728; 0.457)" SteeringWheelPos="(2.136; 2.056; 0.455)" ParentFrame="BoneCabin_cdt" />
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.875; 0.485; -0.001)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/ws_4964_white_arrow_02" Org="(2.367; 1.994; 0.208)" OutputAngles="(-115;115)" RandomInputRange="(0;0.1)" />
+			<Gauge Damping="0.9" Dir="(-0.962; 0.274; -0.003)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ws_4964_white_arrow_03" Org="(2.388; 2.069; 0.444)" OutputAngles="(-40;0)" />
+			<Gauge Damping="0.9" Dir="(-0.962; 0.274; -0.003)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ws_4964_white_arrow_03" Org="(2.365; 1.989; 0.444)" OutputAngles="(-130;130)" />
+			<Gauge Damping="0.99" Dir="(-0.962; 0.274; -0.003)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ws_4964_white_arrow_03" Org="(2.379; 2.035; 0.394)" OutputAngles="(-130;50)" />
+			<Gauge Damping="0.9992" Dir="(-0.962; 0.274; -0.003)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ws_4964_white_arrow_01" Org="(2.387; 2.067; 0.338)" OutputAngles="(-40;10)" />
+			<Gauge Damping="0.9" Dir="(-0.962; 0.274; -0.003)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/ws_4964_white_arrow_01" Org="(2.362; 1.98; 0.338)" OutputAngles="(-30;30)" />
+			<Gauge Damping="0.9" Dir="(-0.875; 0.485; -0.001)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/ws_4964_white_arrow_02" Org="(2.367; 1.995; 0.6)" OutputAngles="(-115;115)" />
+			<Gauge Damping="0.9" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ws_4964_white_arrow_03" Org="(2.331; 2.05; 0.06)" OutputAngles="(-130;130)" />
+			<Gauge Damping="0.9995" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ws_4964_white_arrow_01" Org="(2.331; 2.005; 0)" OutputAngles="(-30;5)" />
+			<Gauge Damping="0.9" Dir="(-1; 0; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ws_4964_white_arrow_03" Org="(2.331; 2.05; -0.06)" OutputAngles="(-130;130)" />
+		</Dashboard>
+		<Damage
+			Capacity="600"
+			SensationMin="(1.342; 1.95; -0.84)"
+			SensationMax="(2.362; 2.629; 0.827)"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<DamageArea Type="Engine" Min="(2.5; 0.9; -0.6)" Max="(4.4; 2; 0.6)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(1.27; 0.5; -1.25)" Max="(2.95; 1.15; 1.25)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.04" Scale="0.55" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.60" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.55" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.55" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.55" Type="wheels_medium_allterrain_double" />
+		
+		<CompatibleWheels OffsetZ="0.04" Scale="0.60" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.60" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.60" Type="wheels_medium_allterrain_double" />
+
+		<Camera Center="(-1.25; 0; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/white_ws4964_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/white_ws4964_glass__sh_d.tga"
+				ViewPos="(1.665; 2.411; 0.457)"
+			>
+				<Rear ViewPosOffset="(0; -0.1; 0.7)" />
+				<Mirror ClipDir="(-0.895; 0; -0.447)" ClipOffset="0.25" FOVScale="2" MeshFrame="mirror_left" ReflectionDir="(-0.895; 0; -0.447)" Size="(0.17; 0.38)" Pos="(2.026; 2.318; 1.247)" />
+				<Mirror ClipDir="(-0.811; 0; 0.586)" ClipOffset="0.25" FOVScale="2.4" MeshFrame="mirror_right" ReflectionDir="(-0.811; 0; 0.586)" Size="(0.17; 0.38)" Pos="(2.027; 2.317; -1.25)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ws_4964_white">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.2; 0; 0)"
+			ImpactType="Truck"
+			Mass="4500"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.1; 0.1; 0)"
+				ImpactType="Truck"
+				Mass="3500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-22"
+					MaxLimit="22"
+				>
+					<Motor Damping="35000" Spring="350000" Type="Spring" />
+				</Constraint>
+				<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+					<Constraint AxisLocal="(1; 0; 0)" MinLimit="0" MaxLimit="23" />
+				</Body>
+				<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+					<Constraint AxisLocal="(1; 0; 0)" MinLimit="0" MaxLimit="6" />
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="5"
+					ModelFrame="BoneSunshieldLeft_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.65" Spring="55" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="3"
+					ModelFrame="BoneSunshieldRight_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.63" Spring="52" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					Mass="0.1"
+					ModelFrame="BoneKey1_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-60"
+						MaxLimit="40"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						Collisions="None"
+						Mass="0.1"
+						ModelFrame="BoneKey2_cdt"
+					>
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							PivotOffset="(0; 0; 0)"
+							Type="Hinge"
+							MinLimit="-60"
+							MaxLimit="25"
+						>
+							<Motor Damping="0.002" Spring="0.02" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRodSteer"
+						MinLimit="-30"
+						MaxLimit="30"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.292; 0.698; -0)" />
+			<Flare _template="StopSignal" Pos="(-4.106; 0.716; 0.401)" />
+			<Flare _template="StopSignal" Pos="(-4.106; 0.716; -0.401)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.292; 0.698; -0)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-4.106; 0.716; 0.401)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-4.106; 0.716; -0.401)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.106; 0.716; 0.401)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-4.106; 0.716; -0.401)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 0.8" Pos="(4.539; 1.163; 1)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 205; 145) x 0.8" Pos="(4.539; 1.163; -1)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Size="0.15" Pos="(-4.200; 0.716; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(4.073; 1.625; -1.255)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(4.124; 1.625; -1.255)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(4.073; 1.625; 1.255)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(4.124; 1.625; 1.255)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.196; 2.702; -0.695)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.197; 2.746; -0.143)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.197; 2.747; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.197; 2.746; 0.143)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Pos="(2.196; 2.702; 0.695)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Pos="(4.091; 1.41; -1.31)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Pos="(4.091; 1.41; 1.31)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(4.287; 1.336; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(4.287; 1.336; 1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.106; 0.716; -0.401)" />
+			<Flare _template="IgnitionSignalRed" Size="0.15" Pos="(-4.106; 0.716; 0.401)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.287; 1.336; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.287; 1.336; 1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.8" Pos="(4.287; 1.336; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.8" Pos="(4.287; 1.336; 1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.287; 1.336; -1.074)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.287; 1.336; 1.074)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/ws_4964_white_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4.539; 1.163; -0)" ParentFrame="BoneCabin_cdt" />
+	<GameData
+		Country="US,NE,CE"
+		Price="32200"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.406; 0.777; 0.502)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(4.406; 0.777; -0.502)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-4.33; 0.867; -0)" />
+		<WinchSocket Pos="(-0.321; 0.945; 0.505)" />
+		<WinchSocket Pos="(-0.321; 0.945; -0.505)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_WS_4964_WHITE_DESC"
+			UiIcon30x30="heavyDutyVehicleImg30"
+			UiIcon328x458="shopImgWesternStarWhite"
+			UiIcon40x40="heavyDutyVehicleImg"
+			UiIconLogo="WesternStarLogo80"
+			UiName="UI_VEHICLE_WS_4964_WHITE_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.92; 1.979; -0.723)" Position="(7.301; 6.355; -0.113)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.729; 4.297; 1.961)" Position="(4.38; 1.798; -0.738)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(0.058; 1.675; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-8.726; 3.91; 6.637)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.991; 1.77; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.328; 3.173; 3.632)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.93; 2.152; 2.164)" Position="(4.293; 2.405; -0.487)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(1.954; 0.308; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.742; 3.473; -4.445)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.729; 0.67; 1.775)" Position="(4.642; 2.451; 0.099)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(5.908; 2.39; -0.827)" Position="(8.482; 3.083; 0.403)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(5.947; 1.391; 1.022)" Position="(3.295; 2.199; 3.414)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.372; 1.663; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-1.402; 3.19; 3.677)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.846; 1.674; -0.726)" Position="(9.143; 5.576; 0.036)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(6.01; 1.711; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.555; 1.659; -2.751)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(7.511; 0.883; 0.809)" Position="(4.718; 2.389; -0.517)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.282; 2.097; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.079; 3.805; -3.533)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.729; 1.259; 1.72)" Position="(4.787; 2.445; -0.325)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.049; 0.613; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.127; 1.902; -5.565)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.01; 1.711; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.555; 1.659; -2.751)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(-0.391; 1.117; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-6.509; 1.857; 2.371)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.226; 1.468; -0.391)" Position="(3.343; 2.193; -3.512)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.506; 2.011; -1.114)" Position="(8.863; 2.419; -1.114)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(8.93; 2.152; 2.164)" Position="(4.293; 2.405; -0.487)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.406; 0.777; 0.502)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(4.406; 0.777; -0.502)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-4.33; 0.867; -0)" />
+		<CraneSocket Pos="(-0.321; 0.945; 0.505)" />
+		<CraneSocket Pos="(-0.321; 0.945; -0.505)" />
+		<AddonSockets>
+			<Socket Names="Ws4964WhiteSpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-1.8; 1.61; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="LargeSemitrailerOiltank" Types="MinicraneUS, WS4964WhiteCabinProtector" />
+			</Socket>
+			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-2.76; 1.62; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.329; 0.865; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer, LogTrailer" Types="MinicraneUS, FrameAddon" />
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer, LogTrailer" Types="WS4964WhiteCabinProtector, FrameAddon" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FrameAddonTowPlatform" Offset="(-0.85; 1.091; 0)" NamesBlock="WS4964WhiteCabinProtector, MinicraneUS, Trailer, LogTrailer" />
+			<Socket Names="LogLift" Offset="(0.123; 1.091; 0)" NamesBlock="MinicraneUS, Ws4964WhiteSpareWheel" />
+			<Socket Names="BunkLog" Offset="(-4.772; 1.143; 0)" NamesBlock="MinicraneUS" >
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.05; 0)" />
+			</Socket>	
+			<Socket Names="FrameAddonLogShort" NamesBlock="MinicraneUS, WS4964WhiteCabinProtector" Offset="(-1.37; 1.089; 0)" />
+			<Socket Names="FrameAddonLogMedium" NamesBlock="MinicraneUS, WS4964WhiteCabinProtector" Offset="(-1.37; 1.089; 0)" />
+			<Socket Names="SaddleLow1" Offset="(-2.747; 1.11; 0)" />
+			<Socket Names="SaddleHigh" Offset="(-1.8; 1.11; 0)" />
+			<Socket Names="FrameAddon" Offset="(-1.5; 1.09; 0)" ParentFrame="BoneChassis_cdt">
+				<AddonsShift Offset="(-1; 0; 0)" Types="MinicraneUS" />
+				<AddonsShift Offset="(-0.85; 0; 0)" Types="WS4964WhiteCabinProtector" />
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="FrameAddon" Types="MinicraneUS, WS4964WhiteCabinProtector" />
+			</Socket>
+			<Socket Names="FrameAddonKung" Offset="(-2.17; 1.170; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.16)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.16)" />
+			</Socket>
+			<Socket Names="FrameAddonTank" Offset="(-2.370; 1.09; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneUS, WS4964WhiteCabinProtector, Trailer, LogTrailer" Offset="(-2.05; 0.061; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="BigCraneUsWS4964" NamesBlock="MinicraneUS, WS4964WhiteCabinProtector" Offset="(-1.947; 1.097; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MinicraneUS" NamesBlock="FrameAddonKung, FrameAddonTank" Offset="(0.5; 1.11; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.07)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.07)" />
+				<AddonsShift Offset="(-0.912; -0.018; 0)" Types="WS4964WhiteCabinProtector" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="UsLoadLogsShort" Offset="(0.5; -0.1; 0)" />
+			<Socket Names="UsLoadLogsShortLoaderA" Offset="(0.5; -0.1; 0)" />
+			<!--<Socket Names="UsLoadLogsShortLoader" Offset="(-.2; .2; 0)" />
+			<Socket Names="UsLoadLogsLong" Offset="(-2.853; 1.386; 0)"/>-->
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_bumper_default">
+			<Socket Names="WS4964WhiteBumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_exhaust_default">
+			<Socket Names="WS4964WhiteExhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_fender_default">
+			<Socket Names="WS4964WhiteFender" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_horn_1">
+			<Socket Names="WS4964WhiteHorn" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="WS4964WhiteBeacon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="WS4964WhiteVisor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="WS4964WhiteGabarite" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="WS4964WhiteCabinProtector"
+				NamesBlock="FrameAddonKung, FrameAddonTank"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_snorkel_1">
+			<Socket Names="WS4964WhiteSnorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="WS4964WhiteSpotLight"
+				NamesBlock="WS4964WhiteBeacon, WS4964WhiteHorn"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_transferbox_default">
+			<Socket Names="Ws4964WhiteTransferBox" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt">
+				<ExtraParent Frame="BoneAxle1" />
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ws_4964_white_diff_lock_default">
+			<Socket Names="WS4964WhiteDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(2.376; 2.178; -0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(2.352; 2.58; 0.074)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+			<Socket InCockpit="true" Names="StuffCurtainWS4964White" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldLeft_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldLeft_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldRight_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="WS4964WhiteSticker_Roof" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_Capote"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="WS4964WhiteSticker_Door_L"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="WS4964WhiteSticker_Door_R" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="WS4964WhiteSticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="WS4964WhiteSticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodWS4964White" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" NamesBlock="StuffHoodWS4964White" Offset="(4.310; 2.035; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBeam1" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneBeam2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

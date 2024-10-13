@@ -1,0 +1,12 @@
+<_parent File="stuff_crab_bulldog_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_stuff/stuff_hood_crab_mack_defense_m917"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<InstallSocket Type="StuffHoodMackDefense" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/pavers_01a_us14__d_a.tga" 
+	Normal="tiles/pavers_01a_us14_relief__d_a.tga"
+	NoGrass="true"
+	IsExtrudable="false"
+	IsAsphalt="true"
+	WheelTracks="0"
+	Sound="surfaces/surf_concrete_rnd"
+	SkidSound="surfaces/skidding/skidding_concrete_loop"
+/>

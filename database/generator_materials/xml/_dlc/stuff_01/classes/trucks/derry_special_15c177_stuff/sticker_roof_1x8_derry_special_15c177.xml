@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_stuff/sticker_roof_1x8_derry_special_15c177" />
+	<GameData CameraPreset="roof_sticker_2">
+			<InstallSocket Type="DerrySpecial15C177Sticker_Roof8" />
+	</GameData>
+</TruckAddon>

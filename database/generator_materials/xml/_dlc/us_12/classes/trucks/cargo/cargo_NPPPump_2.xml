@@ -1,0 +1,25 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_NPPPump_2" >
+		<NetSync Legacy="false" />
+		<Body Mass="5650" ModelFrame="bone_root_cdt" >
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="100" ModelFrame="bone_cargo_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_concrete_slab"
+			TransportedSound="load/concrete_blocks/concrete_blocks_rnd"
+			ManualSound="cargo_manual/cargo_manual_concrete_slab"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoNPPPump"
+			CargoValue="1"
+			Offset="(1.279; 0; 0)"
+		/>
+	</GameData >
+</TruckAddon>

@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="tire_front" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_spare_wheel">
+		<Body Mass="10" ModelFrame="BoneCabin_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+			<Body ModelFrame="wheel_cdt" Mass="10">
+				<Constraint
+					Type="Prismatic"
+					AxisLocal="(1; 0; 0)"
+					MinLimit="0"
+					MaxLimit="0.05"
+				>
+					<Motor Type="Spring" Spring="250" Damping="650"/>
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="spare_wheel"
+		Category="wheel_addon"
+		IsCustomizable="true"
+		Price="2900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="KenworthW990SpareWheel" />
+	</GameData>
+</TruckAddon>

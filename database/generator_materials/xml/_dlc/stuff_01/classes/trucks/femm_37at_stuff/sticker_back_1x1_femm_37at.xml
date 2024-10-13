@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/femm_37at_stuff/sticker_back_1x1_femm_37at" />
+	<GameData CameraPreset="back_sticker">
+		<InstallSocket Type="Femm37atSticker_Back" />
+	</GameData>
+</TruckAddon>

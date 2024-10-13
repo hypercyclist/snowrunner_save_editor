@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_stuff/sticker_door_r_1x1_derry_special_15c177" />
+	<GameData>
+			<InstallSocket Type="DerrySpecial15C177Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

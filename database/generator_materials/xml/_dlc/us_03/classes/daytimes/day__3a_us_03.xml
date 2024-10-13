@@ -1,0 +1,75 @@
+<DayTimeState
+	ColorLUT="lut/day_us_01__vol_uncmp.tga"
+	FogColor="g(120; 126; 135) x 1.3"
+	FogScatterColor="g(224; 223; 202) x 0.2"
+	HorizonColor="g(110; 130; 157) x 1.7"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="3"
+	SkySharpness="2"
+	SSAOColor="g(255; 255; 255; 205) x 0.001"
+	SkyBloomColor="g(229; 233; 244; 80) x 0.2"
+	SkyColor="g(212; 214; 215) x 0.6"
+	SunColor="g(255; 229; 191) x 1.5"
+	SunDir="(1; -0.65; 0)"
+	WaterCubeMapIntensity="0.8"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 255; 255; 10) x 0.9"
+	
+	EnvMap="env/day_a_taim_01__d_ggxrefl.tga"
+	CubeMapScale="3.0"
+	
+	HdrAdaptationMinLum="1.2"
+	HdrAdaptationMaxLum="800"
+	TonemapWhitePoint="15"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="1"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.3"
+	TonemapB="0.03"
+	TonemapC="0.6"
+	TonemapD="0.6"
+	TonemapE="0.2"
+	TonemapF="0.04"
+	
+    BloomEnabled="true"
+	BloomPoint="0.18"
+	BloomIntensity="2.3"
+	BloomGamma="0.7"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="1.2"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="60.0"
+	ShadowMapResolution="2048"
+>
+	<Sky>
+		<Lightshaft
+			Tint="g(255; 255; 255)"
+			Intensity="0.1"
+			BlurRadius="18"
+			FalloffRadius="0.6"
+			FalloffInnerRadius="0.04"
+		/>
+		<Flare
+			AspectRatio="2.0"
+			Color="g(223; 240; 255) x 0.04"
+			Size="32.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.006" StartDist="0" ScatterAngle="90" Alpha="0.9" Height="20" UpperScale="0.1" LowerScale="0.01"/>
+	<SecondaryFog Density="0.002" Height="180" UpperScale="0.02" LowerScale="0.0"/>
+	<DistantFog StartDistance="10" EndDistance="6000" Height="90" DensityMultiplier="1"/>
+	<VolumeFog Density="0.8" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(255; 255; 255) x 0.6" MidY="g(200; 210; 216) x 1.2" PosY="g(231; 238; 251) x 1.6" />
+	<WeatherParticles Type="heavy_rain" MinIntensity="0.4" MaxIntensity="0.8" IntensityChangeInterval="30" />
+</DayTimeState>

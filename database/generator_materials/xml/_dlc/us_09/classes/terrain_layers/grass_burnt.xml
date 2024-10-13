@@ -1,0 +1,13 @@
+<MaterialType 
+	AllowHiddenExtrudes="0.25"
+	Texture="tiles/grass_burnt__d_a.tga" 
+	Normal="tiles/grass_burnt_relief__d_a.tga"
+	GenerateDust="true"
+	GrassBrush="DebrisCoal,GrassShortBurn,GrassShortBurnC"
+	IsThickGrass="false"
+	AllowHiddenExtrudes="0.5"
+	Sound="surfaces/surf_grass_mix_loop"
+	EndEffectSound="surfaces/hit/hit_grass_rnd"
+	SkidSound="surfaces/skidding/skidding_grass_loop"
+	MinViscosity="2.0"
+/>

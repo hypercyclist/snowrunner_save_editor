@@ -1,0 +1,39 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_trunk_roof">
+		<Body Mass="50">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="3"
+				ModelFrame="BoneTent_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					LinearLimitsX="(-.003;.003)"
+					LinearLimitsY="(-.1;.1)"
+					LinearLimitsZ="(-.01;.01)"
+					Type="Fixed"
+				>
+					<Motor Damping="10" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="miscellenious"
+		IsCustomizable="true"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_HUMMER_H2_TRUNK_ROOF_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_HUMMER_H2_TRUNK_ROOF_NAME"
+		/>
+		<InstallSocket Type="HummerH2TrunkRoof" />
+	</GameData>
+</TruckAddon>

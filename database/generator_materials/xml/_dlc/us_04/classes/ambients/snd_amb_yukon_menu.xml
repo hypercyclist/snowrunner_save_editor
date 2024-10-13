@@ -1,0 +1,19 @@
+<AmbientSounds>
+	<Volume Min="0.5" Max="0.5" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_yukon/amb_yukon_day_forest_loop">
+	</DayForest>
+	<DayWind Sound="amb/amb_yukon/amb_yukon_day_forest_loop">
+	</DayWind>
+	<NightForest Sound="amb/amb_yukon/amb_yukon_night_forest_loop">
+	</NightForest>
+	<NightWind Sound="amb/amb_yukon/amb_yukon_night_open_loop">
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="150"
+		Dist2D="0"
+		Dist3D="45"
+	/>
+</AmbientSounds>

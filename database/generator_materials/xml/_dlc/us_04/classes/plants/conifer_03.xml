@@ -1,0 +1,17 @@
+<_templates Include="environment" />
+<PlantBrand
+	BreakType="BigTree"
+	PlantingGroups="BigTree"
+	PlantingMinSpacing="2.8"
+>
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" DebrisType="FoliageNeedles" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(12.0; 12.0)" />
+	<Landmark Mesh="landmarks/us_tsuga_01_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0; 1; 0)" ParentFrame="BoneRoot_cdt" />
+	</GameData>
+</PlantBrand>

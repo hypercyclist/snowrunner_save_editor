@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_stuff/sticker_glass_top_ws_6900xd_twin" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_TOP_DESC" UiName="UI_STUFF_GLASS_STICKER_TOP_CUT_100_PERCENT_MAN_NAME" />
+		<InstallSocket Type="ws6900XdTwinSticker_GlassTop" />
+	</GameData>
+</TruckAddon>

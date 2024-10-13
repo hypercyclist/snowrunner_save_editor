@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_stuff/sticker_kung_2_1x1_earthroamer_sx" />
+	<GameData CameraPreset="side_2_sticker">
+		<InstallSocket Type="EarthroamerSxSticker_Kung2" />
+	</GameData>
+</TruckAddon>

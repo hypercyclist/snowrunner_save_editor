@@ -1,0 +1,12 @@
+<_templates Include="models" />
+<ModelBrand 
+	Instanced="true"
+	InstancedAsModel="true"
+	ClipCameraBridge="true"
+>
+	<PhysicsModel>
+        <Body Collisions="Dynamic" />
+		
+    </PhysicsModel>
+	<Landmark Mesh="landmarks/inflatable_arch_us11_lmk"/>
+</ModelBrand>

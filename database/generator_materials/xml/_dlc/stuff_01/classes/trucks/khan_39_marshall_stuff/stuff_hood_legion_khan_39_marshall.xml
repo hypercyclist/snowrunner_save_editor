@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_legion_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_stuff/stuff_hood_legion_khan_39_marshall" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodKhan39Marshall" />
+	</GameData>
+</TruckAddon>

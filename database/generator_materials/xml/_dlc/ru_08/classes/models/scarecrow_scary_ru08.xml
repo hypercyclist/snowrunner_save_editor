@@ -1,0 +1,45 @@
+<_templates Include="models" />
+
+<ModelBrand
+	ApplyNormalInReference="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	ClipCamera="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+
+	<PhysicsModel>
+	
+		<Body
+			Collisions="Dynamic"
+		/>
+		
+		<Flare
+			_template="Red"
+			AttenEnd="1000"
+			AttenStart="10"
+			ColorMultAtDay="0"
+			Color="g(255; 100; 100) x 0.69"
+			Dir="(0; -1; 0)"
+			Pos="(-0.125; 2.12; 0.045)"
+			Size="0.075"
+			Texture="sfx/flare_lamp_scarecrow__s_d.tga"
+		/>
+		
+		<Flare
+			_template="Red"
+			AttenEnd="1000"
+			AttenStart="10"
+			ColorMultAtDay="0"
+			Color="g(255; 100; 100) x 0.69"
+			Dir="(0; -1; 0)"
+			Pos="(-0.125; 2.12; -0.045)"
+			Size="0.075"
+			Texture="sfx/flare_lamp_scarecrow__s_d.tga"
+		/>
+		
+	</PhysicsModel>
+
+
+</ModelBrand>

@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_stuff/stuff_curtain_western_star_nf1424" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainNF1424" />
+	</GameData>
+</TruckAddon>

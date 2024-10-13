@@ -1,0 +1,11 @@
+<ModelBrand 
+	ClipCameraBridge="false"
+	DayShadowOffsetMult="10.0"
+	>
+	<Landmark Mesh="landmarks/radio_telescope_01_a_us12_lmk" />
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+
+</ModelBrand>

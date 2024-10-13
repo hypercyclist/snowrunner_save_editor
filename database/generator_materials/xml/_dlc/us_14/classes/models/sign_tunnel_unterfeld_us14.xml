@@ -1,0 +1,16 @@
+<ModelBrand
+	Instanced="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+>
+	<PhysicsModel>
+		<Body
+			CenterOfMassOffset="(0; -1; 0)"
+			Collisions="Dynamic"
+			Mass="300"
+		>
+			<Constraint BreakOffThreshold="3000" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.7" Size="(4.0; 4.0)" />
+</ModelBrand>

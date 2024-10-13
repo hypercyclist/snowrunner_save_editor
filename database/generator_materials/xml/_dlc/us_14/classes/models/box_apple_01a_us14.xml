@@ -1,0 +1,13 @@
+<ModelBrand 
+	Instanced="true"  
+	NightLightingShadowsAllowCap="true"
+	BreakType="Apple"
+	DeleteOnBreak="true"
+	DeactivationPhantomExt="10"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="100" NoSoftContacts="False" AllowedPenetrationDepth="3.0" >
+			<Constraint Type="Fixed" BreakOffThreshold="100" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

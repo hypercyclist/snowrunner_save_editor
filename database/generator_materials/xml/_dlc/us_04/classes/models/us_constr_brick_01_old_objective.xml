@@ -1,0 +1,23 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_deconstruct_brick_old" Range="200" Volume="1"/>
+			<SFX Name="us_constr_brick_01_old" Dir="(0; 1; 0)" Pos="(-0.107; 0.562; -0.11)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/us_constr_brick_01_old_objective_lmk"/>
+</ModelBrand>

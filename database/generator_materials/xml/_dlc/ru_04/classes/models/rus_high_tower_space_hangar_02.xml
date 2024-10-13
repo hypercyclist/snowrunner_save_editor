@@ -1,0 +1,36 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<StaticLights>
+		<StaticLight
+			Dir="(0; 0; -0.30)" 
+			Pos="(-60; 16; 0)" 
+			AttenEnd="17"
+			Color="g(217; 246; 255) x 45"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="240"
+			Shadows="false"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+		<Flare
+			_template="Red"
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(0; 0; 0) x 0"
+			OcclusionOffset="-0.2"
+			Dir="(0; -1; 0)"
+			Pos="(-2.5; 34; 0)"
+			Size="1.7"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(14.0; 10.0)" 
+		Texture="occlusion_rus_high_tower_space_hangar_02.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_high_tower_space_hangar_01_lmk" />
+</ModelBrand>

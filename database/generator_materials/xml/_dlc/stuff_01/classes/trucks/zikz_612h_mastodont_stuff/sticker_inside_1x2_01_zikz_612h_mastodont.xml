@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_stuff/sticker_inside_1x2_01_zikz_612h_mastodont" />
+	<GameData CameraPreset="ins_sticker03">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"/>
+		<InstallSocket _noinherit="true" Type="StuffZikz612h_1x2_01" />
+	</GameData>
+</TruckAddon>

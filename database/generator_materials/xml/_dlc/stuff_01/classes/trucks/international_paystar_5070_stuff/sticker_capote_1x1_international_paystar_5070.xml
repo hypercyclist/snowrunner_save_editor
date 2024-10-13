@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_paystar_5070_stuff/sticker_capote_1x1_international_paystar_5070" />
+	<GameData>
+			<InstallSocket Type="internationalPaystar5070Sticker_Capote" />
+	</GameData>
+</TruckAddon>

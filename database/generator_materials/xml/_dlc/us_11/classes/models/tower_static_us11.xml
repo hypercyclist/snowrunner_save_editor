@@ -1,0 +1,7 @@
+<_templates Include="models" />
+<ModelBrand Instanced="true" InstancedAsModel="true">
+    <PhysicsModel>
+        <Body Collisions="Dynamic" />
+    </PhysicsModel>
+	<Landmark Mesh="landmarks/tower_static_us11_lmk"/>
+</ModelBrand>

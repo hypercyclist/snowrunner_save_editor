@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/jeep_cj7_renegade_stuff/sticker_door_r_1x1_jeep_cj7_renegade" />
+	<GameData>
+		<InstallSocket Type="JeepCJ7RenegadeSticker_Door_R" />
+	</GameData>
+</TruckAddon>

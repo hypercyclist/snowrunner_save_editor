@@ -1,0 +1,370 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<SunShield Collisions="None" Mass="2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-6"
+				MaxLimit="10"
+			>
+				<Motor Damping="0.008" Spring="8" Type="Spring" />
+			</Constraint>
+		</SunShield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.06"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.7"
+		ExhaustStartTime="1.6"
+		FuelCapacity="80"
+		Responsiveness="0.65"
+		SteerSpeed="0.04"
+		TruckImage="KHANLo4Fmchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_scout1"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.248; 0.37; 0.789)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.248; 0.37; 0.789)" />
+			<Wheel _template="RearWheel" Pos="(-1.056; 0.37; 0.789)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.056; 0.37; 0.789)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="khan_lo4f_suspension_default"
+			Type="s_khan_lo4f"
+			MaxWheelRadiusWithoutSuspension="0.22"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.672"
+		/>
+		<Steam Origin="(1.245; 0.789; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			MinDist="10.0"
+			Origin="(1.375; 0.866; 0)"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_old" />
+			<Handbrake		Sound="trucks/int_scout_800/int_scout_800_handbrake_on" />
+			<Gear			Sound="trucks/int_scout_800/int_scout_800_gear_shift" />
+			<Honk			Sound="trucks/khan_lo4f/khan_lo4f_honk" />
+			<BrakeRelease	Sound="trucks/khan_lo4f/khan_lo4f_brake_release" />
+			<BrakesSqueal	Sound="trucks/khan_lo4f/khan_lo4f_brakes_squeal" />
+			<BrakePull		Sound="" />
+			<Reverse		Sound="trucks/khan_lo4f/khan_lo4f_reverse" />
+			<EngineRev		Sound="trucks/khan_lo4f/khan_lo4f_rev" />
+			<EngineAccel	Sound="trucks/khan_lo4f/khan_lo4f_acc" />
+			<EngineStart	Sound="trucks/khan_lo4f/khan_lo4f_start" />
+			<EngineStop		Sound="trucks/khan_lo4f/khan_lo4f_stop" />
+			<EngineIdle		Sound="trucks/khan_lo4f/khan_lo4f_idle" />
+			<EngineIdle_2d	Sound="trucks/khan_lo4f/khan_lo4f_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/khan_lo4f/khan_lo4f_low" />
+			<EngineLow_2d	Sound="trucks/khan_lo4f/khan_lo4f_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/khan_lo4f/khan_lo4f_high" />
+			<EngineHigh_2d	Sound="trucks/khan_lo4f/khan_lo4f_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/khan_lo4f/khan_lo4f_heavy" />
+			<EngineHeavy_2d	Sound="trucks/khan_lo4f/khan_lo4f_heavy_2d"	IsSound2D="true" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(0.8; 0.8; 0.8)" MaxFrequency="4" />
+			<Shaker Frame="BoneGearstick" MinAngle="(0.8; 0.8; 0.8)" MaxAngle="(3; 3; 3)" MaxFrequency="0.1" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.4"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.85"
+			MaxX="2.6"
+		/>
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-1; 0; 0)"
+			IsLight="false"
+			Origin="(-2.165; 0.527; -0.393)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="ru_scout_old_engine_0" Type="e_ru_scout_old" />
+		<Driver AnimationSet="Scout" Pos="(1.172; 1.014; 0.565)" SteeringWheelPos="(1.478; 1.401; 0.558)" />
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.996; 0.088; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/khan_lo4f_arrow_01" Org="(1.789; 1.312; 0.758)" OutputAngles="(-50;10)" />
+			<Gauge Damping="0.9" Dir="(-0.996; 0.085; -0.001)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/khan_lo4f_arrow_01" Org="(1.789; 1.312; 0.675)" OutputAngles="(-50;0)" />
+			<Gauge Damping="0.9" Dir="(-0.996; 0.089; -0.001)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/khan_lo4f_arrow_01" Org="(1.789; 1.312; 0.526)" OutputAngles="(-50;50)" />
+			<Gauge Damping="0.9995" Dir="(-0.996; 0.086; -0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/khan_lo4f_arrow_01" Org="(1.789; 1.312; 0.443)" OutputAngles="(-50;10)" />
+			<Gauge Damping="0.9" Dir="(-0.996; 0.087; -0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/khan_lo4f_arrow_02" Org="(1.791; 1.338; 0.259)" OutputAngles="(-120;120)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.5; 0.6; -0.5)" Max="(2.2; 1.3; 0.5)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.6; 0.35; -0.9)" Max="(0.8; 0.6; 0.9)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.38" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.38" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout2" />
+
+		<CompatibleWheels Scale="0.38" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.38" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.38" Type="wheels_scout_mudtires" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.42" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels Scale="0.38" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.38" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.42" Type="wheels_scout_allterrain_chain" />
+		<Camera Center="(-1.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/khanlo4f_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/khanlo4f_glass__sh_d.tga"
+				ViewPos="(1.143; 1.714; 0.565)"
+			>
+				<Rear
+					HorTransitionEnd="-1.2"
+					HorTransitionStart="-1.1"
+					ViewPosOffset="(-0.1; -0.1; 0.55)"
+				/>
+				<Mirror ClipDir="(-0.956; 0; -0.292)" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.956; 0; -0.292)" Size="(0.15; 0.23)" Pos="(1.598; 1.607; 0.999)" />
+				<Mirror ClipDir="(-0.809; 0; 0.588)" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.809; 0; 0.588)" Size="(0.15; 0.23)" Pos="(1.555; 1.607; -0.991)" />
+				<Mirror ClipDir="(-1; 0; 0)" ClipOffset="0.1" FOVScale="1.75" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.913; -0.186; 0.364)" Size="(0.22; 0.08)" Pos="(1.66; 1.818; 0)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleFront" />
+			<Axle Frame="BoneAxleRear" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(2.208; 0.844; 0)" />
+	<PhysicsModel Mesh="trucks/khan_lo4f">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.6; 0)"
+			ImpactType="Truck"
+			Mass="1800"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; -0.4; 0)"
+				ImpactType="Truck"
+				Mass="1500"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="SunShield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="SunShield" ModelFrame="BoneSunshieldRight_cdt" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.276; 0.968; 0)" />
+			<Flare _template="StopSignal" DirAngle="135" Size="0.5" Pos="(-2.068; 0.968; -0.843)" />
+			<Flare _template="StopSignal" DirAngle="135" Size="0.5" Pos="(-2.068; 0.968; 0.843)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-2.276; 0.854; 0)" />
+			<Flare _template="ReverseSignal" DirAngle="135" Size="0.7" Pos="(-2.068; 0.854; -0.843)" />
+			<Flare _template="ReverseSignal" DirAngle="135" Size="0.7" Pos="(-2.068; 0.854; 0.843)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.077; 0.854; -0.843)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-2.077; 0.854; 0.843)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(2.25; 0.85; 0.5)" />
+			<Light _template="IgnitionSignalWhite" Pos="(2.25; 0.85; -0.5)" />
+			<Light _template="IgnitionSignalRed" Pos="(-1.8; 1.025; -0)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.3" Pos="(2.223; 1.025; -0.531)" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="120" Size="0.3" Pos="(2.223; 1.025; 0.531)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Size="0.08" Pos="(2.187; 0.815; -0.531)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.7" Size="0.08" Pos="(2.187; 0.815; 0.531)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(1.43; 2.008; -0.789)" />
+			<Flare _template="IgnitionSignalOrange" Pos="(1.43; 2.008; 0.789)" />
+			<Flare _template="IgnitionSignalRed" Size="0.09" Pos="(-2.068; 0.968; -0.843)" />
+			<Flare _template="IgnitionSignalRed" Size="0.09" Pos="(-2.068; 0.968; 0.843)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(2.244; 1.025; -0.531)" />
+			<Model _template="HeadLightRay" Org="(2.244; 1.025; 0.531)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 200) x 0.6" DirAngle="135" Size="0.4" Pos="(2.223; 1.025; -0.531)" />
+			<Flare _template="HeadLight" Color="g(245; 225; 200) x 0.6" DirAngle="135" Size="0.4" Pos="(2.223; 1.025; 0.531)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.5" Pos="(2.244; 1.025; -0.531)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.5" Pos="(2.244; 1.025; 0.531)" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/khan_lo4f_lmk" MinScale="1.8" MaxScale="3.5" />
+	<HeadLight _template="Default" Pos="(2.307; 0.985; 0)" />
+	<GameData
+		Country="RU,CAS"
+		Price="3400"
+		Recallable="true"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-2.17; 0.747; 0)" />
+		<WinchSocket Pos="(2.202; 0.661; 0.335)" />
+		<WinchSocket Pos="(2.202; 0.661; -0.335)" />
+		<WinchSocket Pos="(0.064; 0.455; 0.896)" />
+		<WinchSocket Pos="(0.064; 0.455; -0.896)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_KHAN_Lo4F_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgKhanlo4f"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="KhanLogo80"
+			UiName="UI_VEHICLE_KHAN_Lo4F_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="roof_sticker" InterestPosition="(4.382; 0.363; -0.304)" Position="(7.768; 5.509; -1.155)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.036; 1.692; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-6.923; 2.071; 10.147)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.867; 1.185; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.328; 3.44; -2.861)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.323; 1.692; 1.299)" Position="(5.956; 1.621; -0.274)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.339; 1.222; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.396; 2.878; -2.281)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(7.059; 2.385; 0.8)" Position="(6.118; 1.417; -0.1)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(7.059; 1.2; 0.8)" Position="(6.2; 2; -0.1)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.646; 0.658; 0)" Position="(3.519; 1.358; 2.838)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.798; 0.713; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.212; 2.243; -3.182)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.809; 1.531; -0.952)" Position="(9.512; 2.290; 1.03)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.624; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.091; 1.495; -3.925)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.944; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.22; 3.041; 3.401)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(7.059; 1.2; 0.8)" Position="(6.2; 1.7; -0.1)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.826; 0.253; -0.046)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.585; 0.853; -3.686)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.624; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.091; 1.495; -3.925)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.857; 0.956; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.612; 1.654; 4.180)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.794; 0.782; 0.486)" Position="(3.53; 1.295; -2.898)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(-2.17; 0.747; 0)" />
+		<CraneSocket Pos="(2.202; 0.661; 0.335)" />
+		<CraneSocket Pos="(2.202; 0.661; -0.335)" />
+		<CraneSocket Pos="(0; 2.100; 0)" />
+		<CraneSocket Pos="(0.064; 0.455; 0.896)" />
+		<CraneSocket Pos="(0.064; 0.455; -0.896)" />
+		<AddonSockets DefaultAddon="khan_lo4f_front_bumper">
+			<Socket Names="Khanlo4fFrontBumper" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="khan_lo4f_rear_bumper">
+			<Socket Names="Khanlo4fRearBumper" />
+			<Socket Names="Khanlo4fRearBumper1" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fRoofrack" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fRoofrack2" />
+		</AddonSockets>
+		<!--		<AddonSockets>
+			<Socket Names="Khanlo4fSpotlight" NamesBlock="Khanlo4fRoofrack2" />
+		</AddonSockets>-->
+		<AddonSockets>
+			<Socket Names="Khanlo4fBeacon" NamesBlock="Khanlo4fGabarite" />
+			<Socket Names="Khanlo4fConditioner" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fGabarite" />
+			<Socket Names="Khanlo4fGabarite2" NamesBlock="Khanlo4fVisor" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fSnorkel" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fVisor" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fHorn" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fStairs" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Khanlo4fWheelAddon" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ScautTrailer" NamesBlock="Khanlo4fWheelAddon" Offset="(-2.17; 0.76; 0)">
+				<AddonsShift Offset="(-0.109; 0; 0)" Types="Khanlo4fRearBumper1" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffAirfreshener" Offset="(1.682; 1.824; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Dir="(0; 0; 1)"
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(1.86; 1.42; -0.005)"
+				UpDir="(0.151; 0.989; 0)"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x1_01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x1_02" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x1_03" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x1_04" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x2_01" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_1x2_02" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="khanLo4FSticker_GlassTop" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="khanLo4FSticker_Door_R" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="khanLo4FSticker_Door_L" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="khanLo4FSticker_Roof" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" NamesBlock="Khanlo4fConditioner, Khanlo4fBeacon, Khanlo4fGabarite, Khanlo4fGabarite2" Offset="(1.480; 2.040; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+</Truck>

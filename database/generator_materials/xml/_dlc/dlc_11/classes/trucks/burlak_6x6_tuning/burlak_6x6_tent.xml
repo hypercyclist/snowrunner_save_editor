@@ -1,0 +1,88 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData RepairsCapacity="150" FuelCapacity="100" WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_tent">
+		<Body Mass="350" ModelFrame="BoneBurlakTent_cdt">
+			<Constraint Type="Rigid"/>
+			
+			
+			<Body Collisions="None" Mass="30" ModelFrame="BoneClothLeft_cdt">
+				<Constraint
+					LinearLimitsZ="(-.1;.15)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body Collisions="None" Mass="30" ModelFrame="BoneClothRight_cdt">
+				<Constraint
+					LinearLimitsZ="(-.1;.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body Collisions="None" Mass="30" ModelFrame="BoneCloth2Left_cdt">
+				<Constraint
+					LinearLimitsZ="(-.1;.1)"
+					Type="Fixed"
+				>
+					<Motor Damping="200" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="30" ModelFrame="BoneCloth2Right_cdt">
+				<Constraint
+					LinearLimitsZ="(-.02;.03)"
+					Type="Fixed"
+				>
+					<Motor Damping="1" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			
+			<Body Collisions="None" Mass="30" ModelFrame="BoneClothTop_cdt">
+				<Constraint
+					LinearLimitsY="(-.1;.08)"
+					Type="Fixed"
+				>
+					<Motor Damping="500" Spring="7000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="30" ModelFrame="BoneClothBack_cdt">
+				<Constraint
+					LinearLimitsX="(-.04;.04)"
+					Type="Fixed"
+				>
+					<Motor Damping="0.1" Spring="0.5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="1" ModelFrame="BoneClothBack2_cdt" GravityFactor="0.5">
+				<Constraint
+					LinearLimitsY="(-0.01;.03)"
+					Type="Fixed"
+				>
+					<Motor Damping="7" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_HUMMER_H2_TRUNK_ROOF_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_HUMMER_H2_TRUNK_ROOF_NAME"
+		/>
+		<InstallSocket Type="BurlakTent" />
+	</GameData>
+</TruckAddon>

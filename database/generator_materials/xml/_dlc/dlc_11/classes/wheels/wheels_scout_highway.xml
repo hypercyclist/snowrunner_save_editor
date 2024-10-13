@@ -1,0 +1,55 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutHighway _template="Light">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutStiff" />
+			<WheelFriction _template="ScoutHighway" />
+		</ScoutHighway>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.57" Mass="50">
+	<TruckTires>
+		<TruckTire _template="ScoutHighway" Mesh="wheels/tire_scout_highway_10" Name="JAT HS I">
+			<WheelFriction _template="ScoutHighway" BodyFriction="0.7" BodyFrictionAsphalt="2.2" SubstanceFriction="0.3"/>
+			<GameData
+				Price="1200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_10_NAME" />
+			</GameData>
+		</TruckTire>     
+		<TruckTire _template="ScoutHighway" Mesh="wheels/tire_scout_highway_11" Name="JAT HS II">
+			<WheelFriction _template="ScoutHighway" BodyFriction="1" BodyFrictionAsphalt="2.3" SubstanceFriction="0.2"/>
+			<GameData
+				Price="1400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_HIGHWAY_DESC" UiName="UI_TIRE_SCOUT_HIGHWAY_11_NAME" />
+			</GameData>
+		</TruckTire>     
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_highway_10" Name="JAT HS I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_10_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_highway_11" Name="JAT HS II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_11_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_default1_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_1_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_default1_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_HIGHWAY_2_DESC" UiName="UI_RIM_SCOUT_HIGHWAY_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

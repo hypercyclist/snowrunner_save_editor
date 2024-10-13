@@ -1,0 +1,247 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			Location="rear"
+			Type="wheels_trailer_log"
+			SuspensionHeight="0"
+			SuspensionStrength="1"
+			SuspensionMin="0"
+			SteeringCastor="0"
+		/>
+	</Wheel>
+	<Body>
+		<Chain Collisions="None" Mass="3">
+			<Constraint
+				Type="Ragdoll"
+				TwistAxisLocal="(0; 1; 0)"
+				PlaneAxisLocal="(1; 0; 0)"
+				TwistMin="-50"
+				TwistMax="20"
+				PlaneMin="-100"
+				PlaneMax="100"
+				Cone="7"
+			>
+				<PlaneConeMotor Spring="0.01" Damping="0.1" Type="Spring" />
+			</Constraint>
+		</Chain>
+		<LegMove Mass="200" AngularDamping="10.0" ImpactType="Truck" Collisions="Default">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Name="Leg"
+				Type="Prismatic"
+				MinLimit="0"
+				MaxLimit="0.7"
+			>
+				<Motor Force="14000" Tau="1" Type="Position" />
+			</Constraint>
+		</LegMove>
+	</Body>
+</_templates>
+<Truck Type="Trailer">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="RearWheel" Pos="(-1.161; 0.550; 1.1)" ParentFrame="BoneChassisLeft_cdt"/>
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.161; 0.550; 1.1)" ParentFrame="BoneChassisRight_cdt"/>
+			<Wheel _template="RearWheel" Pos="(-2.404; 0.550; 1.1)" ParentFrame="BoneChassisLeft_cdt"/>
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.404; 0.550; 1.1)" ParentFrame="BoneChassisRight_cdt"/>
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.677"
+			MinX="-4.3"
+			MaxX="2.9"
+			ParentFrame="BoneFront_cdt"
+		/>
+		<Camera Center="(-1; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxleR1" ParentFrame="BoneChassisRight_cdt" IsIndependent="true"/>
+			<Axle Frame="BoneAxleR2" ParentFrame="BoneChassisRight_cdt" IsIndependent="true"/>
+			<Axle Frame="BoneAxleL1" ParentFrame="BoneChassisLeft_cdt" IsIndependent="true"/>
+			<Axle Frame="BoneAxleL2" ParentFrame="BoneChassisLeft_cdt" IsIndependent="true"/>
+		</Axles>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				TerminalFix="true"
+				Position=".67"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/trailer_log_medium">
+		<Body ImpactType="Truck" Mass="900" ModelFrame="BoneFront_cdt">
+			<Body Mass="300" ModelFrame="BoneFrontCart_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="40"
+				>
+					<Motor Damping="8000" Spring="40000" Type="Spring" />
+				</Constraint>
+				<Body _template="LegMove" ModelFrame="BoneFootrestLeft_cdt"/>
+				<Body _template="LegMove" ModelFrame="BoneFootrestRight_cdt"/>
+			</Body>
+			<Body ImpactType="Truck" Mass="600" ModelFrame="BoneRear_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-15"
+					MaxLimit="15"
+				>
+					<Motor Damping="32000" Spring="120000" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="800"
+					ModelFrame="BoneChassisRight_cdt"
+					AngularDamping="0.8"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="8"
+					>
+						<Motor Damping="100" Spring="10" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="800"
+					ModelFrame="BoneChassisLeft_cdt"
+					AngularDamping="0.8"
+				>
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-8"
+						MaxLimit="8"
+					>
+						<Motor Damping="100" Spring="10" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="5"
+					ModelFrame="BoneChainRear_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-10"
+						MaxLimit="25"
+					>
+						<Motor Damping="0.05" Spring="0.1" Type="Spring" />
+					</Constraint>
+				</Body>
+			
+				<Body _template="Chain" ModelFrame="BoneChainR2_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneChainR3_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneChainR4_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneChainR5_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneCainL2_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneCainL3_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneCainL4_cdt"/>
+				<Body _template="Chain" ModelFrame="BoneCainL5_cdt"/>
+			</Body>
+			<Body _template="Chain" ModelFrame="BoneChainR1_cdt"/>
+			<Body _template="Chain" ModelFrame="BoneCainL1_cdt"/>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.363; 0.914; 0)" ParentFrame="BoneRear_cdt" />
+			<Flare _template="StopSignal" Pos="(-4.333; 1.014; 0.776)" ParentFrame="BoneRear_cdt" />
+			<Flare _template="StopSignal" Pos="(-4.333; 1.014; -0.776)" ParentFrame="BoneRear_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.363; 0.914; 0)" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="BlueStreak" AspectRatio="2.0" Size="0.5" Dir="(-1; 0; 0)" Pos="(-4.343; 1.013; 0.928)" ParentFrame="BoneRear_cdt" />
+			<Flare _template="BlueStreak" AspectRatio="2.0" Size="0.5" Dir="(-1; 0; 0)" Pos="(-4.343; 1.013; -0.928)" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; -0.832)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; -0.904)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; -0.977)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; -0.843)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; -0.916)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; -0.988)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; -0.856)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; -0.928)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; -1.001)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; -0.868)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; -0.941)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; -1.014)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; -0.881)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; -0.953)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; -1.026)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; 0.832)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; 0.904)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.068; 0.977)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; 0.843)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; 0.916)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.041; 0.988)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; 0.856)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; 0.928)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 1.013; 1.001)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; 0.868)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; 0.941)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.985; 1.014)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; 0.881)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; 0.953)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			<Flare _template="ReverseSignal" AspectRatio="2.5" Size="0.09" Pos="(-4.343; 0.957; 1.026)" Color="g(255; 255; 255) x 0.1" ParentFrame="BoneRear_cdt" />
+			
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalRed" Pos="(-4.363; 0.914; 0)" ParentFrame="BoneRear_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.333; 1.014; 0.776)" ParentFrame="BoneRear_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(-4.333; 1.014; -0.776)" ParentFrame="BoneRear_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/trailer_log_medium_lmk" MinScale="1.2" MaxScale="2.2" />
+	<GameData Price="16500">
+		<WinchSocket Pos="(-0.076; 1.044; 0.622)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(-0.076; 1.044; -0.622)" ParentFrame="BoneFront_cdt" />
+		<WinchSocket Pos="(-4.325; 1.034; 0.690)" ParentFrame="BoneRear_cdt" />
+		<WinchSocket Pos="(-4.325; 1.034; -0.690)" ParentFrame="BoneRear_cdt" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(3.624; 1.169; 0)" ParentFrame="BoneFrontCart_cdt" />
+		<CraneSocket Pos="(-0.076; 1.044; 0.622)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(-0.076; 1.044; -0.622)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(-4.325; 1.034; 0.690)" ParentFrame="BoneRear_cdt" />
+		<CraneSocket Pos="(-4.325; 1.034; -0.690)" ParentFrame="BoneRear_cdt" />
+		<UiDesc
+			UiDesc="UI_TRAILER_LOGTRAILER_MEDIUM_DESC"
+			UiIcon30x30="loggingImg30"
+			UiIcon40x40="loggingImg"
+			UiName="UI_TRAILER_LOGTRAILER_MEDIUM_NAME"
+		/>
+		<InstallSocket Offset="(3.61; 1.162; 0)" Type="LogTrailer" ParentFrame="BoneFrontCart_cdt" />
+		<LoadArea Subtype="ScautTrailerLogMedium" TrailerLoad="true" Type="CargoLogsMedium" Min="(-4.492; 1.1; -1.251)" Max="(-2.528; 2.407; 1.251)" ParentFrame="BoneFront_cdt" />
+		<LoadArea Subtype="ScautTrailerLogMedium" TrailerLoad="true" Type="CargoLogsMedium" Min="(0.256; 1.1; -1.251)" Max="(2; 2.407; 1.251)" ParentFrame="BoneRear_cdt" />
+		<AddonSlots
+			InitialOffset="(0; 0; 0)"
+			ParentFrames="BoneFront_cdt, BoneRear_cdt"
+			Quantity="1"
+		/>
+	</GameData>
+</Truck>

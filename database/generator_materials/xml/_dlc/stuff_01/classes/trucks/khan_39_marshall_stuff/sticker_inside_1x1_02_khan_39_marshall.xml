@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_stuff/sticker_inside_1x1_02_khan_39_marshall" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket Type="khan39MarshallSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

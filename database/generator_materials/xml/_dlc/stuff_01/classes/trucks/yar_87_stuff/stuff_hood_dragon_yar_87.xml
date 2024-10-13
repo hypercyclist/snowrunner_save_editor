@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dragon_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/yar_87_stuff/stuff_hood_dragon_yar_87" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodYar87" />
+	</GameData>
+</TruckAddon>

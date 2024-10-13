@@ -1,0 +1,27 @@
+<_templates Include="environment" />
+<PlantBrand 
+	_template="Corn" 
+	UsePhysicsForInstancing="true" 
+	DeactivationPhantomExt="2" 
+	PlantingMinSpacing="0.3">
+
+	<PhysicsModel>
+    <Body _template="Corn" ModelFrame="BoneRoot">
+
+      <Constraint _template="CornRoot" />
+
+    </Body>
+  	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(2.4; 2.4)" />
+</PlantBrand>
+
+
+<!-- <PlantBrand
+	DisableShadows="true"
+	DistSkipPercentage="0.4"
+	LocalYOcclusionOffset="0.1"
+	PlantingGroups="Flower"
+	PlantingMinSpacing="0.2"
+	PlantingMaxWaterFlow="0.2"
+	IsEraseSnow="true"
+> -->

@@ -1,0 +1,21 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_soyabean_us14">
+		<NetSync Legacy="false" />
+		<Body Mass="2500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_bags_2"
+			TransportedSound="load/wood_box/wood_box_rnd"
+			ManualSound="cargo_manual/cargo_manual_bags_2"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoSoyabean"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

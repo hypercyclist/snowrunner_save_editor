@@ -1,0 +1,20 @@
+<TruckAddon>
+	<Snorkel Origin="(2.541; 1.758; -1.003)" />
+	<Snorkel Origin="(2.541; 1.758; 1.003)" />
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_snorkel_1"/>
+	<GameData
+		CameraPreset="snorkel"
+		Category="snorkel"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_SIDESWEPT_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_SIDESWEPT_TALL_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxSnorkel" />
+	</GameData>
+</TruckAddon>

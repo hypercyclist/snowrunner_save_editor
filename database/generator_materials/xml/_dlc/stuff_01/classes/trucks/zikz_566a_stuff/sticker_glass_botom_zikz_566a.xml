@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_566a_stuff/sticker_glass_botom_zikz_566a" />
+	<GameData CameraPreset="glass_sticker">
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_CUT_DRAGONS_NAME" />
+		<InstallSocket Type="Zikz566ASticker_Glass_01" />
+	</GameData>
+</TruckAddon>

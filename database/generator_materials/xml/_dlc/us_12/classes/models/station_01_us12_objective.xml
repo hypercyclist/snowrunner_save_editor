@@ -1,0 +1,50 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+		<Mesh Name="stage_1" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_2" />
+		<CdtMesh Name="stage_2" />
+		<Mesh Name="stage_3" />
+		<AnimTrack Name="stage_1_anim"/>
+		<AnimSubset Name="build_animation_0"/>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_2" />
+			<Body Collisions="Dynamic" ModelFrame="stage_0_for_anim" />
+		</Body>
+	</PhysicsModel>
+	<TrackEvents TrackName="stage_1_anim">
+
+	<AnimEvent Key="28">
+			<Sound Name="actors/actor_construction/actor_construct_us06_garage_03" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="us_garage_06_us06_objective" Pos="(-0.457; 1.108; -0.928)" />
+
+		</AnimEvent>
+
+		<AnimEvent Key="50">
+			<Sound Name="actors/actor_construction/actor_construct_us06_garage_07" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="us_garage_06_us06_objective" Pos="(-0.457; 1.108; -0.928)" />
+
+		</AnimEvent>
+	</TrackEvents>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh_01"/>
+		<Mesh Name="animated_mesh_02"/>
+		<Mesh Name="stage_0_for_anim"/>
+		<CdtMesh Name="stage_0_for_anim"/>
+	</AnimSubset>
+	<SnapPoint Pos="(17.803; 10.352; -4.692)" />
+	<SnapPoint Pos="(17.803; 10.352; -0.015)" />
+	<SnapPoint Pos="(17.809; 10.324; 5.072)" />
+	<SnapPoint Pos="(-22.099; 10.352; 4.681)" />
+	<SnapPoint Pos="(-22.099; 10.352; 0.014)" />
+	<SnapPoint Pos="(-22.099; 10.347; -5.081)" />
+	<Landmark Mesh="landmarks/station_01_us12_objective_lmk" />
+</ModelBrand>

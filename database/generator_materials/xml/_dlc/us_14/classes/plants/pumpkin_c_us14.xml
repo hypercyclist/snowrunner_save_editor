@@ -1,0 +1,23 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallRock"
+	BreakType="Pumpkin"
+	DistSkipPercentage="0.6"
+	LocalYOcclusionOffset="0.1"
+	PlantingMinSpacing="0.5"
+>
+	<PhysicsModel>
+		<Body Mass="100.0" NoSoftContacts="true">
+			<Constraint _template="SmallTreeRoot" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.8" Size="(1.8; 1.8)" />
+	<ChunksBreak
+		Brands="pumpkin_chunk_c_us14"
+		Handler="Pumpkin"
+		Offsets="(-0.15; 0.12; 0),(0.12; 0.12; -0.15),(0.12; 0.12; 0.15)"
+		SpawnAngMult="8.0"
+		SpawnLinMult="0.5"
+		Threshold="5.0"
+	/>
+</PlantBrand>

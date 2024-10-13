@@ -231,7 +231,7 @@
 			UiIcon40x40="trailerSeeder40"
 			UiName="UI_TRAILER_PLANTER_NAME"
 		/>
-		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler" />
+		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler, futom_7290ra_coupler, ankatra_1160_coupler" />
 		<InstallSocket Offset="(2.561; 0.957; 0)" Type="TrailerFarm" ParentFrame="BoneCoupler_cdt" />
 		<!--		<InstallSocket Offset="(2.561; 0.661; 0)" Type="TrailerPlanter" ParentFrame="BoneTruck_cdt" /> -->
 		<CraneSocket Pos="(1.749; 1.201; -0.317)" ParentFrame="BoneTrailer_cdt" />

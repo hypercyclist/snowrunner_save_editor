@@ -7,7 +7,7 @@
 				MinLimit="0"
 				MaxLimit="0.55"
 			>
-				<Motor Force="5000" Type="Position" />
+				<Motor Force="50000" Type="Position" Tau="1"/>
 			</Constraint>
 			<Body Collisions="None" Mass="60">
 				<Constraint
@@ -16,7 +16,7 @@
 					MinLimit="0"
 					MaxLimit="90"
 				>
-					<Motor Force="2000" Type="Position" />
+					<Motor Force="20000" Type="Position" Tau="1"/>
 				</Constraint>
 				<Body
 					ForceBodyParams="true"
@@ -30,7 +30,7 @@
 						MinLimit="0"
 						MaxLimit="0.5"
 					>
-						<Motor Force="4000" Type="Position" />
+						<Motor Force="40000" Type="Position" Tau="1"/>
 					</Constraint>
 				</Body>
 			</Body>

@@ -1,0 +1,438 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheel
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.15"
+			SuspensionStrength="0.0422"
+			Torque="default"
+			Type="semitrailer_oiltank"
+			SuspensionMin="-0.1"
+		/>
+	</Wheel>
+	<Constraint>
+		<SmallSpaceMove Type="Prismatic" MinLimit="0" MaxLimit="0.95">
+			<Motor Force="100000" Tau="0.99" Type="Position" />
+		</SmallSpaceMove>
+		<LegsMove Type="Prismatic" MinLimit="0.1" MaxLimit="0.8">
+			<Motor Force="18000" Tau="1" Type="Position" />
+		</LegsMove>
+		<BigSpaceMove Type="Prismatic" MinLimit="0" MaxLimit="0.95">
+			<Motor Force="100000" Tau="1" Type="Position" />
+		</BigSpaceMove>
+	</Constraint>
+	<Constraint>
+		<TrailerRagdoll
+			PlaneAxisLocal="(0; 0; 1)"
+			TwistAxisLocal="(1; 0; 0)"
+			Type="Ragdoll"
+			PlaneMin="-90"
+			TwistMin="-30"
+			PlaneMax="90"
+			TwistMax="30"
+		>
+			<TwistMotor Damping="80000" Spring="320000" Type="Spring" />
+		</TrailerRagdoll>
+	</Constraint>
+</_templates>
+<Truck AttachType="Saddle" Type="Trailer">
+	<TruckData>
+		<Wheels>
+			<Wheel _template="TrailerWheel" Pos="(-3.064; 0.56; 1.03)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-3.064; 0.56; 1.03)" />
+			<Wheel _template="TrailerWheel" Pos="(-4.377; 0.56; 1.03)" />
+			<Wheel _template="TrailerWheel" RightSide="true" Pos="(-4.377; 0.56; 1.03)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.9"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-8"
+			MaxX="4.7"
+		/>
+		<Foot Origin="(3.2; -0.2;  0.9)" />
+		<Foot Origin="(3.2; -0.2;  -0.9)" />	
+		<Constraint _template="TrailerRagdoll" />
+		<Camera Center="(-1; 0; 0)" RadiusMultiplier="1.2" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="LegMove"
+				Tau="0.99"
+				TerminalFix="true"
+				Position="0.55"
+				SpeedMult="0.5"
+			/>
+		</Group>
+		<Group Id="bigSpace_move" FoldingDelay="0.01" UnFoldingDelay="0.01">
+			<Constraint Name="BigSpcMoveL" SpeedMult="0.25" Position="0.9" />
+			<Constraint Name="BigSpcMoveR" SpeedMult="0.19" Position="0.9" />
+			<Constraint Name="SmallSpcMoveR" SpeedMult="0.20" Position="0.55" />
+			<Constraint Name="SmallSpcMoveL" SpeedMult="0.25" Position="0.55" />
+			<Constraint Name="SpaceUpMove" SpeedMult="0.2" Position="0.37" />
+			<Constraint Name="TentMove" SpeedMult="0.3" Position="1.3" />
+			<Constraint Name="FootrestMove" SpeedMult="0.2" Position="0.35" />
+			<Constraint Name="SmallDoorMove" SpeedMult="0.5" Position="80" />
+			<Constraint Name="SmallDoorRMove" SpeedMult="0.6" Position="65" />
+			<Constraint Name="HandleRMove" SpeedMult="0.5" Position="90" />
+			<Constraint Name="RadarMove" SpeedMult="0.6" Position="110" />
+			<Constraint Name="RadarElementMove" SpeedMult="0.4" Position="70" />
+			<Constraint Name="RadarRotator" SpeedMult="0.7" Position="130" />
+			<Constraint Name="AntenaMove" SpeedMult="0.4" Position="1.3" />
+		</Group>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_star">
+		<Body
+			CenterOfMassOffset="(-2; 0; 0)"
+			ImpactType="Truck"
+			Mass="10000"
+			ModelFrame="BoneTrailer_cdt"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="80"
+				ModelFrame="BoneBigSpaceRight_cdt"
+			>
+				<Constraint _template="BigSpaceMove" AxisLocal="(0; 0; -1)" Name="BigSpcMoveR" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="80"
+				ModelFrame="BoneBigSpaceLeft_cdt"
+			>
+				<Constraint _template="BigSpaceMove" AxisLocal="(0; 0; 1)" Name="BigSpcMoveL" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="1"
+				ModelFrame="BoneFootrest_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Name="FootrestMove"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="1"
+				>
+					<Motor Force="100000" Tau="0.99" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneTent_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Name="TentMove"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="2"
+				>
+					<Motor Force="100000" Tau="0.99" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="2"
+				ModelFrame="BoneAntena_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="AntenaMove"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="2"
+				>
+					<Motor Force="100000" Tau="0.99" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="30"
+				ModelFrame="BoneSmallSpaceRight_cdt"
+			>
+				<Constraint _template="SmallSpaceMove" AxisLocal="(0; 0; -1)" Name="SmallSpcMoveR" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="30"
+				ModelFrame="BoneSmallSpaceLeft_cdt"
+			>
+				<Constraint _template="SmallSpaceMove" AxisLocal="(0; 0; 1)" Name="SmallSpcMoveL" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="60"
+				ModelFrame="BoneUp_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="SpaceUpMove"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="1"
+				>
+					<Motor Force="100000" Tau="0.99" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				AngularDamping="10.0"
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="Default"
+				ImpactType="Truck"
+				Mass="400"
+				ModelFrame="BoneLegLeft_cdt"
+			>
+				<Constraint _template="LegsMove" AxisLocal="(0; 1; 0)" Name="LegMove" />
+			</Body>
+			<Body
+				AngularDamping="10.0"
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="Default"
+				ImpactType="Truck"
+				Mass="400"
+				ModelFrame="BoneLegRight_cdt"
+			>
+				<Constraint _template="LegsMove" AxisLocal="(0; 1; 0)" Name="LegMove" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.7"
+				ModelFrame="BoneSmallDoor_cdt"
+			>
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Name="SmallDoorMove"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="180"
+				>
+					<Motor Force="100000" Tau="0.6" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="0.7"
+				ModelFrame="BoneSmallDoorR_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="SmallDoorRMove"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="90"
+				>
+					<Motor Force="100000" Tau="0.6" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="3" ModelFrame="BoneHandleR_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="HandleRMove"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="120"
+				>
+					<Motor Force="100" Tau="0.5" Type="Position" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="1"
+				ModelFrame="BoneRadarRotator_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Name="RadarRotator"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="150"
+				>
+					<Motor Force="100000" Tau="0.99" Type="Position" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneRadar_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="RadarMove"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="130"
+					>
+						<Motor Force="100000" Tau="1" Type="Position" />
+					</Constraint>
+				</Body>
+				<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None"
+					ImpactType="Truck"
+					Mass="1"
+					ModelFrame="BoneRadarElement_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 0; -1)"
+						Name="RadarElementMove"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="80"
+					>
+						<Motor Force="100000" Tau="0.99" Type="Position" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="4"
+				ModelFrame="BoneExtinguisher_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.025"
+				>
+					<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				Collisions="None"
+				ImpactType="Truck"
+				Mass="30"
+				ModelFrame="BoneSpareWheel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="50" Spring="400" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Flare _template="StopSignal" AspectRatio="0.7" Color="g(255; 1; 1) x 4" Size="0.5" Pos="(-7.862; 3.225; -1.232)" />
+			<Flare _template="StopSignal" AspectRatio="0.7" Color="g(255; 0; 0) x 4" Size="0.5" Pos="(-7.862; 3.225; 1.232)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.35" ColorMultAtDay="0.3" Pos="(-7.862; 1.112; -1.232)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.35" ColorMultAtDay="0.3" Pos="(-7.862; 1.112; 1.232)" />
+			<Light _template="ReverseSignal" Pos="(-7.862; 1.112; 0)" />
+			<Flare _template="BlueStreak" Color="g(255; 235; 245) x 0.1" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.862; 1.112; 1.232)" />
+			<Flare _template="BlueStreak" Color="g(255; 235; 245) x 0.1" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.862; 1.112; -1.232)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.4" Dir="(-1; 0; 0)" Size="0.35" Pos="(-7.864; 3.505; -1.215)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.4" Dir="(-1; 0; 0)" Size="0.35" Pos="(-7.864; 3.505; 1.215)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="0.7" Color="g(255; 140; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.862; 3.225; -1.232)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="0.7" Color="g(255; 140; 0) x 0.5" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.862; 3.225; 1.232)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(-7.103; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(-4.461; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(-1.818; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(0.823; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(3.466; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; 1)" DirAngle="160" Size="0.2" Pos="(6.108; 3.497; 1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(-7.103; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(-4.461; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(-1.818; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(0.823; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(3.466; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; -1; -1)" DirAngle="160" Size="0.2" Pos="(6.108; 3.497; -1.361)" ColorMultAtDay="0.3" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.864; 3.505; -1.215)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-7.864; 3.505; 1.215)" />
+		</Ignition>
+		<HeadLight>
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-7.103; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-4.461; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-1.818; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(0.823; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(3.497; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; -1)" Size="0.5" ColorMultAtDay="0.3" Pos="(6.108; 3.497; -1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-7.103; 3.497; 1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-4.461; 3.497; 1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(-1.818; 3.497; 1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(0.823; 3.497; 1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(3.497; 3.497; 1.361)" />
+			<Flare _template="BlueStreak" Color="g(255; 140; 0) x 0.35" Dir="(-0.2; 0; 1)" Size="0.5" ColorMultAtDay="0.3" Pos="(6.108; 3.497; 1.361)" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(-7.103; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(-4.461; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(-1.818; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(0.823; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(3.466; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.2" Pos="(6.108; 3.497; -1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(-7.103; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(-4.461; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(-1.818; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(0.823; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(3.466; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; 1)" Size="0.2" Pos="(6.108; 3.497; 1.361)" ParentFrame="BoneTrailer_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/semitrailer_star_lmk" MinScale="1.45" MaxScale="2.2" />
+	<GameData IsQuest="true" ExcludedCargoTypes="CargoPlane, CargoWing1, CargoWing2, CargoForcklift, CargoBoiler, CargoIronRoad" Price="6800">
+		<WinchSocket Pos="(-6.489; 1.355; 0.425)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(-6.489; 1.355; -0.425)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(0.752; 1.473; 1.028)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket Pos="(0.752; 1.473; -1.028)" ParentFrame="BoneTrailer_cdt" />
+		<WinchSocket WinchableWhenAttached="false" Pos="(5.855; 1.413; 0)" ParentFrame="BoneTrailer_cdt" />
+		<UiDesc
+			UiDesc="UI_SEMITRAILER_STAR_DESC"
+			UiIcon30x30="trailerSemiFullImg30"
+			UiIcon40x40="trailerSemiFullImg"
+			UiName="UI_SEMITRAILER_STAR_NAME"
+		/>
+		<RequiredAddon _template="SaddleLow" />
+		<InstallSocket Offset="(5.854; 1.52; 0)" Type="Semitrailer" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(-6.489; 1.355; 0.425)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(-6.489; 1.355; -0.425)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(0.752; 1.473; 1.028)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(0.752; 1.473; -1.028)" ParentFrame="BoneTrailer_cdt" />
+		<CraneSocket Pos="(5.855; 1.413; 0)" ParentFrame="BoneTrailer_cdt" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTentIK" ParentFrame="BoneTrailer_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			<IKBone AttachOffset="(0; 0; 0)" ModelFrame="BoneTentIK1">
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+				<IKBone
+					AttachOffset="(0; 0; 0)"
+					AttachToFrame="BoneTent_cdt"
+					ModelFrame="BoneTentIK2"
+				>
+					<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+				</IKBone>
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

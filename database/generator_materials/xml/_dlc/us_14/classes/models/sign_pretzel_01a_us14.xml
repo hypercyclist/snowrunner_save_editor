@@ -1,0 +1,18 @@
+<ModelBrand 
+	Instanced="true" 
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body NoSoftContacts="true" ModelFrame="BoneRoot">
+    			<Body AngularDamping="0.2" DamageMult="0" Mass="150" NoSoftContacts="true" ModelFrame="BoneHinge" >
+                    		<Constraint
+                        		AxisLocal="(1; 0; 0)"
+                        			Type="Hinge"
+                        			MinLimit="-60"
+                        			MaxLimit="60"
+                    		>
+			                <Motor Damping="7" Spring="700" Type="Spring" />
+                    		</Constraint>
+            		</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

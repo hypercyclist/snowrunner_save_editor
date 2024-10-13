@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(24.0; 34.0)" 
+		Texture="occlusion_rocket_broken_04_static.tga"
+	/>
+</ModelBrand>

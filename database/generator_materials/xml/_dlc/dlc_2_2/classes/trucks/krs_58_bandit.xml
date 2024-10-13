@@ -156,8 +156,13 @@
 			<DamageArea Type="Engine" Min="(3.457; 1.136; -0.905)" Max="(4.457; 2.017; 0.905)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(1.521; 0.773; -0.5)" Max="(3.505; 1.638; 0.5)" ParentFrame="BoneCabin_cdt" />
 		</Damage>
-		<CompatibleWheels OffsetZ="0.04" RearOffsetZ="0.06" Scale="0.65" Type="wheels_medium_double_front" />
+		<CompatibleWheels RearOffsetZ="0.06" Scale="0.65" Type="wheels_medium_double_front" />
 		<CompatibleWheels OffsetZ="0.18" RearOffsetZ="0.08" Scale="0.65" Type="wheels_medium_mudtires_actaeon" />
+
+		<CompatibleWheels RearOffsetZ="0.06" Scale="0.65" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels RearOffsetZ="0.06" Scale="0.65" Type="wheels_medium_highway_double" />
+		<CompatibleWheels RearOffsetZ="0.06" Scale="0.65" Type="wheels_medium_allterrain_double" />
+
 		<Camera Center="(-1.6; 0; 0)" Radius="1.2">
 			<Cockpit
 				_template="Default"
@@ -403,7 +408,7 @@
 			<Socket Names="FrameAddonLogShort" NamesBlock="CraneKrs58Bandit" Offset="(-1.2; 1.357; 0)" />
 			<Socket Names="SaddleLow" Offset="(-1.995; 1.347; 0)" />
 			<Socket Names="SaddleHigh" Offset="(-1.995; 1.347; 0)" />
-			<Socket Names="FrameAddonTowPlatform" Offset="(-0.73; 1.358; 0)" NamesBlock="CraneKrs58Bandit, Trailer" />
+			<Socket Names="FrameAddonTowPlatform" Offset="(-0.73; 1.358; 0)" NamesBlock="CraneKrs58Bandit, Trailer, LogTrailer" />
 			<Socket Names="FrameAddon" Offset="(-1.336; 1.358; 0)" ParentFrame="BoneChassis_cdt">
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0)" />
@@ -414,14 +419,14 @@
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.12)" />
 				<AddonsShift Offset="(-0.65; 0; 0)" Types="CraneKrs58Bandit" />
 			</Socket>
-			<Socket Names="FrameAddonMaintainer" NamesBlock="CraneKrs58Bandit, Trailer" Offset="(-1.93; 0.33; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="CraneKrs58Bandit, Trailer, LogTrailer" Offset="(-1.93; 0.33; 0)" ParentFrame="BoneChassis_cdt" />
 			<Socket Names="FrameAddonTank" NamesBlock="CraneKrs58Bandit" Offset="(-2.3; 1.358; 0)" ParentFrame="BoneChassis_cdt" />
-			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, CraneKrs58Bandit" Offset="(0.716; 1.349; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, LogTrailer, CraneKrs58Bandit" Offset="(0.716; 1.349; 0)" ParentFrame="BoneChassis_cdt" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-1.995; 1.66; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-1.995; 1.79; 0)" />
-			<Socket Names="Trailer" Offset="(-3.662; 1.014; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-3.662; 1.014; 0)" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket InCockpit="true" Names="Krs58BanditSticker_1x1_01" ParentFrame="BoneCabin_cdt" />

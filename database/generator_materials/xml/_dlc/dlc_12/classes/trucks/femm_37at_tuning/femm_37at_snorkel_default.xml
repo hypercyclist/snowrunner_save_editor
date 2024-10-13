@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(4.665; 3; 0.164)" />
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_snorkel_default" />
+	<GameData
+		CameraPreset="snorkel"
+		Category="snorkel"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_STOCK_NAME"
+		/>
+		<InstallSocket Type="Femm37AtSnorkel" />
+	</GameData>
+</TruckAddon>

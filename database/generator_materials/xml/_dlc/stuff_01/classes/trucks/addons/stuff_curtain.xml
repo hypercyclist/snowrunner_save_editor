@@ -1,0 +1,70 @@
+<_templates Include="trucks">
+	<Body>
+		<SideCurtain Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				LinearLimitsX="(-.04;.04)"
+				LinearLimitsY="(0;.1)"
+				LinearLimitsZ="(-.1; .01)"
+				Type="Fixed"
+			>
+				<Motor Damping="3" Spring="200" Type="Spring" />
+			</Constraint>
+		</SideCurtain>
+		<CurtainPompon Collisions="None" Mass="0.2">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-50"
+				MaxLimit="50"
+			>
+				<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</CurtainPompon>
+		<Curtain Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.006" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Curtain>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_curtain">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="SideCurtain" ModelFrame="BoneCurtainSideLeft_cdt" />
+			<Body _template="SideCurtain" ModelFrame="BoneCurtainSideRight_cdt">
+				<Constraint AxisLocal="(0; 0; -1)" />
+			</Body>
+			<Body _template="Curtain" ModelFrame="BoneCurtain_cdt">
+				<Body _template="CurtainPompon" ModelFrame="BoneCurtainPompon_cdt" />
+				<Body _template="CurtainPompon" ModelFrame="BoneCurtainPomponL1_cdt" />
+				<Body _template="CurtainPompon" ModelFrame="BoneCurtainPomponL2_cdt" />
+				<Body _template="CurtainPompon" ModelFrame="BoneCurtainPomponR1_cdt" />
+				<Body _template="CurtainPompon" ModelFrame="BoneCurtainPomponR2_cdt" />
+			</Body>
+			<Body _template="Curtain" ModelFrame="BoneCurtainLeft_cdt" />
+			<Body _template="Curtain" ModelFrame="BoneCurtainRight_cdt" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="curtain"
+		Category="curtain"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_CURTAIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_CURTAIN_NAME"
+		/>
+		<InstallSocket Type="StuffCurtain" />
+	</GameData>
+</TruckAddon>

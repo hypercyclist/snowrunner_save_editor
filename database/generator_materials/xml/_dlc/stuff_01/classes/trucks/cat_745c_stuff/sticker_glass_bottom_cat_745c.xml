@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_745c_stuff/sticker_glass_bottom_cat_745c" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_2x16_LOADWHEEL_NAME" />
+		<InstallSocket Type="Cat745cSticker_GlassBottom" />
+	</GameData>
+</TruckAddon>

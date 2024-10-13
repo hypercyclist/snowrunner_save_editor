@@ -1,0 +1,12 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic" DamageMult="0.1"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/spring_board_us07_lmk" />
+</ModelBrand>

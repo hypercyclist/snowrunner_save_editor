@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_stuff/sticker_inside_1x2_03_international_loadstar_1700" />
+	<GameData CameraPreset="sticker_1">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"/>
+		<InstallSocket Type="internationalLoadstar1700Sticker_1x2_03" />
+	</GameData>
+</TruckAddon>

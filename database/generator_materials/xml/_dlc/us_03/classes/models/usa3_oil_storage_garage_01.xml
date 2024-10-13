@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(18.0; 14.0)" 
+		Texture="occlusion_usa3_oil_storage_garage_01.tga"
+	/>
+	<Landmark Mesh="landmarks/usa3_oil_storage_garage_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,37 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body _template="Cars" LinearDamping="3" ModelFrame="BoneRoot" >
+			<Constraint _template="Cars" />
+			<Body Collisions="None" Mass="100" ModelFrame="Bone.003" >
+				<Constraint Type="Ragdoll" Cone="2" >
+					<AllMotor Damping="10000" Spring="500000" Type="Spring" />
+				</Constraint>
+					<Body Mass="200" Friction="2" ModelFrame="Bone.001" >
+						<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" />
+					</Body>
+					<Body Mass="200" Friction="1.5" ModelFrame="Bone.002" >
+						<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" />
+					</Body>
+					
+			</Body>
+			<Body _template="LightWeight" ModelFrame="Bone.004" >
+				<Constraint _template="LightWeight" />
+			</Body>
+			<Body Mass="5" AngularDamping="2.5" ModelFrame="Bone.005" >
+				<Constraint Type="Ragdoll" Cone="100" />
+			</Body>
+			<Body Mass="50" ModelFrame="Bone.006" >
+				<Constraint BreakOffThreshold="200" Type="Hinge" AxisLocal="(1; 0; 0)" MinLimit="-5" MaxLimit="3" >
+					<Motor Damping="0.5" Spring="50" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark 
+		Mesh="landmarks/car_blue_ru08_lmk" 
+	/>
+</ModelBrand>

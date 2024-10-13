@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="FuelTank" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/aac_58dw_tuning/aac_58dw_bumper_rear_default">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneRearBumperDefault_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneBumperDefaultMudguardL_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-36" MaxLimit="15" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneBumperDefaultMudguardR_cdt">
+				<Constraint AxisLocal="(1; 0; 0)" MinLimit="-35" MaxLimit="15" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="Aac58DwRearBumper" />
+	</GameData>
+</TruckAddon>

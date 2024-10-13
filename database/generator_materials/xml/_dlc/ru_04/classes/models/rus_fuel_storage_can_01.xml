@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(48.0; 42.0)" 
+		Texture="occlusion_rus_fuel_storage_can_01.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_fuel_storage_can_01_lmk" />
+</ModelBrand>

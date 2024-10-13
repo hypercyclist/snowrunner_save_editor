@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/inflatble_arch_us07_lmk" />
+</ModelBrand>

@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_boar_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_stuff/stuff_hood_boar_ws_4964_white" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodWS4964White" />
+	</GameData>
+</TruckAddon>

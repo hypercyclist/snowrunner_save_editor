@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dragon_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/dan_96320_stuff/stuff_hood_dragon_dan_96320" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodDan96320" />
+	</GameData>
+</TruckAddon>

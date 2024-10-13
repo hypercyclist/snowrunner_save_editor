@@ -1,0 +1,33 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="1.36">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_extend_ankatra_1160" Name="tire_double" Mass="400">
+			<WheelFriction _template="Mudtires" BodyFriction="2.2"/>
+			<GameData
+				Price="7200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_DOUBLE_ANKATRA_1160_NAME" />
+			</GameData>
+			<WheelTracks
+                TextureAlpha="tracks/kirovets_k7m_base_alpha__s_d.tga"
+                TextureHeight="tracks/kirovets_k7m_base_height__s_d.tga"
+			/>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_extend_ankatra_1160" Name="rim_double">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SUPERHEAVY_MUDTIRES_1_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_DOUBLE_ANKATRA_1160_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

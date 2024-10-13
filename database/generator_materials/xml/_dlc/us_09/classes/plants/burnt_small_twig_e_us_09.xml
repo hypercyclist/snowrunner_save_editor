@@ -1,0 +1,15 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallRock"
+	DistSkipPercentage="0.6"
+	PlantingMinSpacing="0.07"
+	UseDirtTint="true"
+	IsAboveSnow="false"
+>
+	<PhysicsModel>
+		<Body _template="SmallTwigs" >
+			<Constraint BreakOffThreshold="20" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.4" Size="(0.6; 1.6)" Texture="occlusion_vertical.tga" />
+</PlantBrand>

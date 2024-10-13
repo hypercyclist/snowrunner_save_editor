@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="240"
+		Name="plad_450_suspension_default"
+	>
+		<Suspension
+			WheelType="front"
+			Damping=".15"
+			Height="0.18"
+			Strength="0.03" 
+			BrokenSuspensionMax="0.2" 
+			SuspensionMin="-0.22"
+			SuspensionMax="1.2"
+		/>
+		
+		<Suspension 
+			WheelType="rear"
+			Damping=".22"
+			Height="0.11"
+			Strength="0.04"
+			BrokenSuspensionMax="0.2"
+			SuspensionMin="-0.22" 
+			SuspensionMax="1.2"
+		/>
+		<GameData
+			Price="5900"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

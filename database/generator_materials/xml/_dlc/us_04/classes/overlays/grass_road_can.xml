@@ -1,0 +1,18 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/grass_road_01__d_a.tga"
+	TextureRelief="overlays/grass_road_01_relief__d_a.tga"
+>
+	<Prebuild
+		DefaultWidth="4.0"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_grass_road__s.tga"
+		SnowmapMask="overlay_grass_road_01__s_d.tga"
+		Layer="2"	
+		LandmarkUseAverageWidth="true"
+		LandmarkColor="(145; 135; 100)"
+		LandmarkPart="0.8"
+		LandmarkBorderWidth="1"
+		LandmarkBorderColor="(80;80;80)"
+	/>
+</OverlayBrand>

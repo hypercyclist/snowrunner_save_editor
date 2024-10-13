@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_stuff/sticker_door_l_1x1_neo_falcon_2000" />
+	<GameData CameraPreset="door_l_sticker">
+		<InstallSocket Type="NeoFalcon2000Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

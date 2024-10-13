@@ -19,19 +19,19 @@ Localization::Localization() :
     m_languageTextNames()
 {
 // Языки жестко запрограммированы.
-    m_languageTextNames.insert({Language::RUSSIAN, "russian"});
-    m_languageTextNames.insert({Language::CHINESE_TRADITIONAL, "chinese_traditional"});
-    m_languageTextNames.insert({Language::CHINESE_SIMPLIFIED, "chinese_simple"});
-    m_languageTextNames.insert({Language::BRAZILIAN_PORTUGUESE, "brazilian_portuguese"});
-    m_languageTextNames.insert({Language::KOREAN, "korean"});
-    m_languageTextNames.insert({Language::ENGLISH, "english"});
-    m_languageTextNames.insert({Language::JAPANESE, "japanese"});
-    m_languageTextNames.insert({Language::GERMAN, "german"});
-    m_languageTextNames.insert({Language::SPANISH, "spanish"});
-    m_languageTextNames.insert({Language::FRENCH, "french"});
-    m_languageTextNames.insert({Language::CZECH, "czech"});
-    m_languageTextNames.insert({Language::ITALIAN, "italian"});
-    m_languageTextNames.insert({Language::POLISH, "polish"});
+    m_languageTextNames.insert({Language::RUSSIAN, "strings_russian"});
+    m_languageTextNames.insert({Language::CHINESE_TRADITIONAL, "strings_chinese_traditional"});
+    m_languageTextNames.insert({Language::CHINESE_SIMPLIFIED, "strings_chinese_simple"});
+    m_languageTextNames.insert({Language::BRAZILIAN_PORTUGUESE, "strings_brazilian_portuguese"});
+    m_languageTextNames.insert({Language::KOREAN, "strings_korean"});
+    m_languageTextNames.insert({Language::ENGLISH, "strings_english"});
+    m_languageTextNames.insert({Language::JAPANESE, "strings_japanese"});
+    m_languageTextNames.insert({Language::GERMAN, "strings_german"});
+    m_languageTextNames.insert({Language::SPANISH, "strings_spanish"});
+    m_languageTextNames.insert({Language::FRENCH, "strings_french"});
+    m_languageTextNames.insert({Language::CZECH, "strings_czech"});
+    m_languageTextNames.insert({Language::ITALIAN, "strings_italian"});
+    m_languageTextNames.insert({Language::POLISH, "strings_polish"});
 }
 
 // https://stackoverflow.com/questions/50696864/reading-utf-16-file-in-c

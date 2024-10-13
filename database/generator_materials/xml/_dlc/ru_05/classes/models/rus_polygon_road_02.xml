@@ -1,0 +1,12 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(5.0; 9.0)" Texture="occlusion_rus_concrete_tube_01.tga" />
+
+	<Landmark Mesh="landmarks/rus_polygon_road_02_lmk" />
+</ModelBrand>

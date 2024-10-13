@@ -1,0 +1,9 @@
+<ModelBrand NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(58.0; 40.0)" Texture="occlusion_us_lumber_mill_abandoned_01.tga" />
+	<Landmark Mesh="landmarks/us_lumber_mill_abandoned_01_lmk" />
+</ModelBrand>

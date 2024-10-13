@@ -1,0 +1,43 @@
+<GearboxVariants>
+	<Gearbox
+		AWDConsumptionModifier="1.1"
+		CriticalDamageThreshold="0.5"
+		DamageCapacity="150"
+		DamagedConsumptionModifier="1.4"
+		FuelConsumption="1.8"
+		IdleFuelModifier="0.2"
+		Name="g_rezvani_tank_special"
+		MinBreakFreq="0.0"
+		MaxBreakFreq="15.0"
+	>
+		<ReverseGear AngVel="2.0" FuelModifier="0.9" />
+		<HighGear AngVel="10.0" FuelModifier="1.5" />
+		<Gear AngVel="3.0" FuelModifier="1.7" />
+		<Gear AngVel="6.0" FuelModifier="1.6" />
+		<Gear AngVel="9.0" FuelModifier="1.5" />
+		<Gear AngVel="12.0" FuelModifier="1.4" />
+		<Gear AngVel="15.0" FuelModifier="1.3" />
+		<Gear AngVel="18.0" FuelModifier="1.2" />
+		<Gear AngVel="21.0" FuelModifier="1.1" />
+		<Gear AngVel="24.0" FuelModifier="1.0" />
+		
+		<GameData
+			Price="2700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_GEARBOX_SPECIAL_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_GEARBOX_SPECIAL_DEFAULT_NAME"
+			/>
+			<GearboxParams
+				IsHighGearExists="true"
+				IsLowerGearExists="true"
+				IsLowerPlusGearExists="false"
+				IsLowerMinusGearExists="false"
+			/>
+		</GameData>
+	</Gearbox>
+</GearboxVariants>

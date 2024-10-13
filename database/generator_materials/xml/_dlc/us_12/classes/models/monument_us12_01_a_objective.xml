@@ -1,0 +1,51 @@
+<ModelBrand 
+	NightLightingShadowsAllowCap="true" 
+	DynamicModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_01">
+			<Body Collisions="Dynamic" ModelFrame="mesh_02" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="state_start" IsDefault="true">
+		<Mesh Name="mesh_01" />
+		<CdtMesh Name="cdt_mesh_01" />
+	</Subset>
+	<Subset Name="state_end" >
+		<Mesh Name="mesh_01" />
+		<Mesh Name="mesh_02" />
+		<CdtMesh Name="cdt_mesh_01" />
+		<CdtMesh Name="cdt_mesh_02" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_1_anim" Speed="1.0" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="mesh_01" />
+		<Mesh Name="animesh" />
+		<CdtMesh Name="cdt_mesh_01" />
+		<CdtMesh Name="cdt_mesh_02" />
+	</AnimSubset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_construction/actor_construct_oil_abandoned_01" Range="200" Volume="1"/>
+		</AnimEvent>
+		<AnimEvent Key="67">
+			<Sound Name="actors/actor_construction/actor_construct_oil_abandoned_02" Range="200" Volume="1"/>
+		</AnimEvent>
+		<AnimEvent Key="48">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.0; 2.5262; 0.0)" />
+		</AnimEvent>
+		<AnimEvent Key="59">
+			<SFX Name="bridge02_smoke_01" Dir="(0; 1; 0)" Pos="(0.0; 3.7; 0.0)" />
+		</AnimEvent>
+		<AnimEvent Key="110">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-1.1978; 1.2229; 0.14)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.7667; 1.2229; 0.8371)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.7787; 1.2229; -1.4593)" />
+		</AnimEvent>
+		<AnimEvent Key="80"> 	
+			<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0.0; 0.1654; 0.0)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/monument_us12_01_a_objective_lmk"/>
+</ModelBrand>

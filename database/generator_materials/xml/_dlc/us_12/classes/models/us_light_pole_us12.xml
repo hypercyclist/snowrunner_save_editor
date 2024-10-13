@@ -1,0 +1,39 @@
+<ModelBrand
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	Instanced="true"
+	InstancedAsModel="true"
+	ClipCamera="false"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="15"
+			Color="g(205; 241; 255) x 3.5"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(0.0; 9.6; 3.6)"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			Color="g(205; 241; 255) x 0.28"
+			ColorMultAtDay="0"
+			DirAngle="120"
+			Dir="(0; -1; 0)"
+			Pos="(0.013; 9.85; 3.671)"
+			Size="1.9"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(10; 10)" Texture="occlusion_us_light_pole.tga" />
+	<Landmark Mesh="landmarks/us_light_pole_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0; 0.8; 0)" />
+	</GameData>
+</ModelBrand>

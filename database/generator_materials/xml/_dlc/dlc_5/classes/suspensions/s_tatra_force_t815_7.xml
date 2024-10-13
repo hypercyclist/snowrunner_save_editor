@@ -7,8 +7,8 @@
 		DamageCapacity="300"
 		Name="tatra_force_t815_7_suspension_default"
 	>
-		<Suspension Damping="0.3" Height="0.18" Strength="0.035" WheelType="front" BrokenSuspensionMax=".3" SuspensionMin="-0.32" SuspensionMax="0.3" />
-		<Suspension Damping="0.3" Height="0.10" Strength="0.09" WheelType="rear" BrokenSuspensionMax=".3" SuspensionMin="-0.25" SuspensionMax="0.3" />
+		<Suspension Damping="0.3" Height="0.2" Strength="0.035" BrokenSuspensionMax=".3" SuspensionMin="-0.32" SuspensionMax="0.3" WheelType="front" />
+		<Suspension Damping="0.3" Height="0.2" Strength="0.035" BrokenSuspensionMax=".3" SuspensionMin="-0.32" SuspensionMax="0.3" WheelType="rear" />
 		<GameData
 			Price="6000"
 			UnlockByExploration="false"

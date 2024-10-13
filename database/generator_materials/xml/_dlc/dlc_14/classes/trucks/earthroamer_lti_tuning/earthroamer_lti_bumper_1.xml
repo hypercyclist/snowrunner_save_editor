@@ -1,0 +1,78 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_bumper_1">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!-- Flares -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.35" Pos="(4.056; 1.248; -0.666)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.35" Pos="(4.056; 1.248; 0.666)" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.25" Dir="(1; 0; 0)" Size="0.45" Pos="(4.140; 1.600; -0.306)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.25" Dir="(1; 0; 0)" Size="0.45" Pos="(4.140; 1.600; 0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.25" Dir="(1; 0; 0)" Size="0.45" Pos="(4.140; 1.600; 0.306)" />
+		</Ignition>
+		<HeadLight>
+			<!-- Bumper Flares Left -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.271; 0.688)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.271; 0.645)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.227; 0.688)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.227; 0.645)" />
+			<!-- Bumper Flares Right -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.271; -0.688)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.271; -0.645)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.227; -0.688)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.071; 1.227; -0.645)" />
+			<!-- Bumper Flares Center -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.649; 0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.601; 0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.552; 0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; 0.349)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; 0.264)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; 0.349)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; 0.264)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.649; 0)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.601; 0)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.552; 0)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; 0.044)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; -0.04)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; 0.044)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; -0.04)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.649; -0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.601; -0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.552; -0.304)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; -0.349)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.624; -0.264)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; -0.349)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(4.153; 1.575; -0.264)" />
+			
+			<Model _template="HeadLightRay" Org="(4.140; 1.600; -0.306)" />
+			<Model _template="HeadLightRay" Org="(4.140; 1.600; 0)" />
+			<Model _template="HeadLightRay" Org="(4.140; 1.600; 0.306)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiBumper" />
+	</GameData>
+</TruckAddon>

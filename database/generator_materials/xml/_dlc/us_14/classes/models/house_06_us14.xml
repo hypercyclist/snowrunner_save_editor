@@ -1,0 +1,57 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>	
+		<StaticLights>
+	<!--lamp_1-->
+		<StaticLight
+			AttenEnd="2"
+			Color="g(246; 242; 209) x 0.8"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(3.56; 1.92; -3.86)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="2"
+			Color="g(246; 242; 209) x 0.8"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2.198; 1.92; -3.86)"
+			Shadows="true"
+		/>
+</StaticLights>
+	<PhysicsModel>
+	<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(218; 214; 197) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(2.201; 2.26; -3.55)"
+			Size="0.4"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(218; 214; 197) x 0.15"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(3.560; 2.26; -3.55)"
+			Size="0.4"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/house_06_us14_lmk" />
+</ModelBrand>

@@ -1,0 +1,39 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"	
+>
+	<PhysicsModel>
+        	<Body Collisions="None" />
+	</PhysicsModel>
+	
+	<Subset IsDefault="true" Name="build_stage_0">
+	</Subset>
+	
+	<Subset Name="build_complete">
+		<Mesh Name="cable_car_01" />
+		<Mesh Name="cable_car_02" />
+		<Mesh Name="cable_car_03" />
+		<Mesh Name="cable_car_04" />
+		<Mesh Name="cable_car_05" />
+		<Mesh Name="cable_car_06" />
+		<Mesh Name="cable_car_07" />
+		<Mesh Name="cable_car_08" />
+		<Mesh Name="cable_car_09" />
+		<Mesh Name="cable_car_10" />
+		<Mesh Name="cable" />
+		<CdtMesh Name="cdt" />
+		<AnimSubset Name="build_animation_0" />
+          	<AnimTrack Name="anim_stage_1"/>
+          	<AnimTrackSubset Name="anim_loop" />
+    </Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh" />
+	</AnimSubset>
+	
+	<TrackEvents TrackName="anim_stage_1">
+		<AnimEvent Key="120">
+           		<Fade Time="2.0" />
+       		</AnimEvent>
+	</TrackEvents>
+</ModelBrand>

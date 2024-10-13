@@ -1,0 +1,11 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(10.0; 16.0)" Texture="occlusion_rus_hut_sauna_01.tga" />
+	<Landmark Mesh="landmarks/rus_hut_sauna_01_lmk" />
+</ModelBrand>

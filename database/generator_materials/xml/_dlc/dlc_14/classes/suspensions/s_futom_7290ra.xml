@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		BrokenWheelDamageMultiplier="2"
+		CriticalDamageThreshold="0.6"
+		DamageCapacity="280"
+		Name="futom_7290ra_suspension_default"
+	>
+		<Suspension Damping="0.3" Height="0.015" SuspensionMin="-0.1" Strength="0.01" WheelType="front" BrokenSuspensionMax="0.03" SuspensionMax="0.1"  />
+		<Suspension Damping="0.3" Height="0.015" SuspensionMin="-0.1" Strength="0.01" WheelType="rear" BrokenSuspensionMax="0.03" SuspensionMax="0.1" />
+		<GameData
+			Price="9400"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

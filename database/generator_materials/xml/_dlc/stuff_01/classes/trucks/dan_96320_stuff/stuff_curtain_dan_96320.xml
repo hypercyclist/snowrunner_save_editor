@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/dan_96320_stuff/stuff_curtain_dan_96320" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainDan96320" />
+	</GameData>
+</TruckAddon>

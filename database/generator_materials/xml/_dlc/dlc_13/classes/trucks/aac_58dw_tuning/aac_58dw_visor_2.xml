@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aac_58dw_tuning/aac_58dw_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Size="0.15" Pos="(0.54; 1.878; 0.714)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.4" Size="0.15" Pos="(0.54; 1.878; -0.714)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_2"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DARKSLANT_NAME"
+		/>
+		<InstallSocket Type="Aac58DwVisor" />
+	</GameData>
+</TruckAddon>

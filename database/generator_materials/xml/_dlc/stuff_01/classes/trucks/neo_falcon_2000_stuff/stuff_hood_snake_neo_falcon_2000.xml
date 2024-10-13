@@ -1,0 +1,12 @@
+<_parent File="stuff_hood_snake_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_stuff/stuff_hood_snake_neo_falcon_2000" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<InstallSocket Type="StuffHoodNeoFalcon2000" />
+	</GameData>
+</TruckAddon>

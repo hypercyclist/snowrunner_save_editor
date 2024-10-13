@@ -1,0 +1,105 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="120"
+		RepairsCapacity="300"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(-0.299; 2.869; 0.312)" SizeX="0.460" SizeY="0.182" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(-0.912; 2.871; 0.318)" SizeX="0.460" SizeY="0.182" SizeZ="0.358" Type="Box" />
+		<LimitedFluid Center="(-0.301; 2.852; 0.718)" SizeX="0.460" SizeY="0.179" SizeZ="0.357" Type="Box" />
+		<LimitedFluid Center="(-0.915; 2.854; 0.725)" SizeX="0.460" SizeY="0.179" SizeZ="0.357" Type="Box" />
+		<LimitedFluid Center="(-1.506; 2.856; 0.731)" SizeX="0.460" SizeY="0.179" SizeZ="0.357" Type="Box" />
+		<LimitedFluid Center="(-2.107; 2.859; 0.738)" SizeX="0.460" SizeY="0.179" SizeZ="0.357" Type="Box" />
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorL" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorR" RotationSpeed="4.1" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/yar_87_tuning/yar_87_roofrack_1">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="40"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.05;0)" LinearLimitsY="(0;0.03)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="80"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.03)" LinearLimitsY="(0;0.03)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.02;0)" LinearLimitsY="(0;0.03)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="40"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsZ="(0;0.05)" LinearLimitsY="(0;0.03)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Size="0.3" Pos="(0.833; 2.85; -0.33)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(0.833; 2.85; 0)" />
+			<Flare _template="HeadLight" Size="0.3" Pos="(0.833; 2.85; 0.33)" />
+		</MainHeadLight>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.89; 0.162; -0.426)" Org="(0.536; 2.882; 0.791)" ParentFrame="BoneRotatorL" />
+			<Light Dir="(0.89; 0.162; -0.426)" Pos="(0.536; 2.882; 0.791)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(0.536; 2.882; 0.791)" ParentFrame="BoneRotatorL" />
+			<Flare Dir="(0.89; 0.162; -0.426)" Pos="(0.536; 2.882; 0.791)" ParentFrame="BoneRotatorL" />
+			<Flare Pos="(0.504; 2.876; 0.806)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(0.504; 2.88; -0.766)" ParentFrame="BoneRotatorR" />
+			<Light Dir="(0; 0.1; 1)" Pos="(0.504; 2.88; -0.766)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.504; 2.88; -0.766)" ParentFrame="BoneRotatorR" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(0.504; 2.88; -0.766)" ParentFrame="BoneRotatorR" />
+			<Flare Pos="(0.504; 2.876; -0.806)" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" ExtraColor="g(117; 212; 255)" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="Yar87Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

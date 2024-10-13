@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_stuff/stuff_curtain_derry_longhorn_4520" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainDerryLonghorn4520" />
+	</GameData>
+</TruckAddon>

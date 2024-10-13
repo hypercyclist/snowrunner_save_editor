@@ -23,12 +23,12 @@
 <Truck Type="Trailer">
 	<TruckData WaterCapacity="2000">
 		<Wheels>
-			<Wheel _template="TrailerWheelFront" Pos="(2.739; 0.582; 1.050)" />
-			<Wheel _template="TrailerWheelFront" RightSide="true" Pos="(2.739; 0.582; 1.050)" />
-			<Wheel _template="TrailerWheelRear" Pos="(-1.474; 0.582; 1.050)" />
-			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-1.474; 0.582; 1.050)" />
-			<Wheel _template="TrailerWheelRear" Pos="(-2.818; 0.582; 1.050)" />
-			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-2.818; 0.582; 1.050)" />
+			<Wheel _template="TrailerWheelFront" Pos="(2.739; 0.581; 1.050)" />
+			<Wheel _template="TrailerWheelFront" RightSide="true" Pos="(2.739; 0.581; 1.050)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-1.474; 0.581; 1.050)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-1.474; 0.581; 1.050)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-2.818; 0.581; 1.050)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-2.818; 0.581; 1.050)" />
 		</Wheels>
 		<OcclusionMap
 			HalfSizeZ="1.842"

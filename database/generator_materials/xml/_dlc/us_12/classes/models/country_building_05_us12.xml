@@ -1,0 +1,18 @@
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/country_building_05_us12_lmk" />
+	<Occlusion Size="(42.0; 23.0)" Texture="occlusion_country_building_05.tga" />
+	<StaticLights/>
+			<StaticLight
+			Dir="(0; -1; 0)"
+			Pos="(-8.528; 0.894; 8.539)"
+			AttenEnd="1"
+			Color="g(255; 245; 198) x 1.2"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="180"
+			Shadows="false"
+		/>
+</ModelBrand>

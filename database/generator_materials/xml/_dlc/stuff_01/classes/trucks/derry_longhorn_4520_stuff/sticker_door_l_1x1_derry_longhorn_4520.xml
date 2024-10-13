@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_4520_stuff/sticker_door_l_1x1_derry_longhorn_4520" />
+	<GameData>
+			<InstallSocket Type="derryLonghorn4520Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

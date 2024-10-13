@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dolphin_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_166_stuff/stuff_hood_dolphin_tuz_166" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodTuz166" />
+	</GameData>
+</TruckAddon>

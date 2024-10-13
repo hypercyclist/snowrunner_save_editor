@@ -1,0 +1,17 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="True"
+	DynamicModel="true"
+>
+
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="state_start" />
+		<CdtMesh Name="cdt_state_start" />
+    </Subset>
+
+	<Subset Name="state_end">
+	</Subset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="state_start"/>
+	</PhysicsModel>
+</ModelBrand>

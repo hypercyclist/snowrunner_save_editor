@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x2_01_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_stuff/sticker_inside_1x2_01_rezvani_hercules_6x6" />
+	<GameData CameraPreset="sticker_1">
+		<InstallSocket _noinherit="true" Type="rezvaniHercules6X6Sticker_1x2_01" />
+	</GameData>
+</TruckAddon>

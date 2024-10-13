@@ -1,0 +1,42 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallTree"
+	LocalYOcclusionOffset="0.2"
+	PlantingGroups="Bush,SmallTree"
+	PlantingMinSpacing="0.8"
+	IsEraseSnow="true"
+	PlantingOffsetY="-0.2"
+	EraseBySnowThreshold="0.8"
+>
+	<PhysicsModel>
+		<Body _template="SmallTreeRoot" DebrisType="FoliageNeedles" ModelFrame="BoneRoot">
+			<Constraint _template="SmallTreeRoot" />
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk">
+				<Constraint _template="TrunkHead" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch2">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch3">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch4">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch5">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch6">
+				<Constraint _template="BushBranch" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.4" Size="(14.0; 14.0)" />
+	<Landmark Mesh="landmarks/spruce_04_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0;0.316; -0.193)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

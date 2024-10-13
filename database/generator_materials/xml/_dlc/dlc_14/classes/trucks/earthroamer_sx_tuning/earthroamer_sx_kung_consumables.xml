@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		FuelCapacity="160"
+		RepairsCapacity="500"
+		WheelRepairsCapacity="3"
+	>
+		<LimitedFluid Center="(-4.497; 1.331; -0.863)" SizeX="1.22" SizeY="0.594" SizeZ="0.555" Type="Box" ParentFrame="BoneStuff_cdt"/>
+		<LimitedFluid Center="(-4.497; 1.331; 0.863)" SizeX="1.22" SizeY="0.594" SizeZ="0.555" Type="Box" ParentFrame="BoneStuff_cdt"/>
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorBack" RotationSpeed="3.9" />
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_kung_consumables">
+		<NetSync Legacy="true" />
+		<Body Collisions="None" Mass="300">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.983; 0.182; 0.016)" Org="(1.247; 3.534; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0.983; 0.182; 0.016)" Pos="(1.247; 3.534; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(1.247; 3.534; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(1.247; 3.534; 0.726)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.247; 3.534; 0.726)" ParentFrame="BoneStuff_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(1.247; 3.534; -0.726)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0.1; 1)" Pos="(1.247; 3.534; -0.726)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.247; 3.534; -0.726)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.247; 3.534; -0.726)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.247; 3.534; -0.726)" ParentFrame="BoneStuff_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(-5.145; 3.586; 0.001)" ParentFrame="BoneRotatorBack" />
+			<Light Dir="(0; 0.1; 1)" Pos="(-5.145; 3.586; 0.001)" ParentFrame="BoneRotatorBack" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-5.145; 3.586; 0.001)" ParentFrame="BoneRotatorBack" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(-5.145; 3.586; 0.001)" ParentFrame="BoneRotatorBack" />
+			<Flare Pos="(-5.145; 3.586; 0.001)" ParentFrame="BoneStuff_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="side_l"
+		Category="frame_addons"
+		Price="4000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EARTHROAMERS_CONSUMABLES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EARTHROAMERS_CONSUMABLES_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxKungConsumbles" />
+	</GameData>
+</TruckAddon>

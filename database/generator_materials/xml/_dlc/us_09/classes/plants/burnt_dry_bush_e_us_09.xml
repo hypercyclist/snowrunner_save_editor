@@ -1,0 +1,15 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="Stump"
+	LocalYOcclusionOffset="0.2"
+	PlantingGroups="Bush,SmallTree"
+	PlantingMinSpacing="1.4"
+	EraseBySnowThreshold="0.5"
+>
+	<PhysicsModel>
+		<Body _template="BushBranch" ModelFrame="BoneTrunk">
+			<Constraint _template="BushBranch" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.2" Size="(6.0; 6.0)" />
+</PlantBrand>

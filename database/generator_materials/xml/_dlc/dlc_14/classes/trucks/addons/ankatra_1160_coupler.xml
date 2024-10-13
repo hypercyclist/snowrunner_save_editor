@@ -1,0 +1,93 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/ankatra_1160_coupler">
+		<Body Mass="400" ModelFrame="BoneTruck_cdt" Collisions="None">
+			<Constraint Type="Rigid" />
+			<Body Mass="200" ModelFrame="BoneCoupler_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Name="ANKATRA_1160_COUPLER"
+					Type="Hinge"
+					MinLimit="0"
+					MaxLimit="18"
+				>
+					<Motor Force="150000" Type="Position" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<PoweredConstraints>
+		<Group
+			ExternalUi="true"
+			Id="coupler_lift"
+			LocaleUid="UI_COUPLER_LIFT"
+		>
+			<Constraint
+				InitialFix="true"
+				Name="ANKATRA_1160_COUPLER"
+				SpeedMult=".15"
+				Tau="0.1"
+				TerminalFix="true"
+				Position="18"
+			/>
+		</Group>
+	</PoweredConstraints>
+	<GameData
+		CameraPreset="coupler"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_K7M_COUPLER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_TRACTOR_COUPLER_NAME"
+		/>
+		<!-- <RequiredAddonType Type="Ankatra1160Coupler" TypeUiName="UI_REQUIRED_ADDON_TYPE_ANKATRA_1160_COUPLER" /> -->
+		<InstallSocket Type="Ankatra1160Coupler" />
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBArmBase" ParentFrame="BoneTruck_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneCoupler_cdt"
+				ModelFrame="BoneBArm"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTArmBase" ParentFrame="BoneTruck_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneCoupler_cdt"
+				ModelFrame="BoneTArm"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneMidCylBase" ParentFrame="BoneBArmBase">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneTruckHinge"
+				ModelFrame="BoneMidCyl"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTruckHingeBase" ParentFrame="BoneTruck_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneCoupler_cdt"
+				ModelFrame="BoneTruckHinge"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>	
+</TruckAddon>

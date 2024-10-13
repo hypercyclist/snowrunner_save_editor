@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dinosaur_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_stuff/stuff_hood_dinosaur_earthroamer_lti" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodEarthroamerLti" />
+	</GameData>
+</TruckAddon>

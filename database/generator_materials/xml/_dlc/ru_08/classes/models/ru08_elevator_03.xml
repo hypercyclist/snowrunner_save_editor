@@ -1,0 +1,12 @@
+<ModelBrand
+	DayShadowOffsetMult="2.0"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/ru08_elevator_03_lmk" />
+</ModelBrand>

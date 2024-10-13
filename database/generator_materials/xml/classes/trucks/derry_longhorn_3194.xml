@@ -1,0 +1,571 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearAxle
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<MiddleAxle Location="middle" Torque="none" UiTorque="default" />
+		<FirstAxle
+			Location="front"
+			SteeringAngle="24"
+			SteeringCastor="12"
+			SteeringJointOffset="0.27"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<Sunshield Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="7"
+			>
+				<Motor Damping=".01" Spring="50" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<Hitch AngularDamping="1" Collisions="None" Mass="3">
+			<Constraint AxisLocal="(0; 0; 1)" Type="Hinge" MinLimit="-120" />
+		</Hitch>
+		<BoneFan Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="1" Spring="50" Type="Spring" />
+			</Constraint>
+		</BoneFan>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.4"
+		EngineStartDelay="3.2"
+		ExhaustStartTime="2.8"
+		FuelCapacity="370"
+		Responsiveness="0.25"
+		SteerSpeed="0.018"
+		TruckImage="militarytruck1mchr"
+		TruckType="HEAVY"
+	>
+		<WinchUpgradeSocket Default="w_heavy_trucks_default" IsUpgradable="true" Type="winches_heavy_trucks" />
+		<Wheels
+			DefaultRim="rim_5"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_heavy_double1"
+		>
+			<Wheel _template="FirstAxle" Pos="(1.723; 0.671; 0.9)" />
+			<Wheel _template="FirstAxle" RightSide="true" Pos="(1.723; 0.671; 0.9)" />
+			<Wheel _template="RearAxle" Pos="(-3.518; 0.671; 0.95)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-3.518; 0.671; 0.95)" />
+			<Wheel _template="RearAxle" Pos="(-5.056; 0.671; 0.95)" />
+			<Wheel _template="RearAxle" RightSide="true" Pos="(-5.056; 0.671; 0.95)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="derry_longhorn_3194_suspension_default"
+			Type="s_derry_longhorn_3194"
+			MaxWheelRadiusWithoutSuspension="0.85"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackL"
+			FrameSteerRight="BoneRackR"
+			RackHalfSizeZ="0.649"
+		/>
+		<Steam Origin="(2.273; 1.61; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			Origin="(2; 1.8; 0)"
+			MinDist="15.0"
+		>
+			<Reverse		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_back_beeper" />
+			<BrakePull		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_brake_pull" />
+			<BrakeRelease	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_brake_release" />
+			<BrakesSqueal	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_brakes_squeal" />
+			<Honk			Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_honk" />
+			<Handbrake		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_handbrake_off" />
+			<EngineRev		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_rev" />
+			<EngineAccel	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_acc" />
+			<EngineStart	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_start" />
+			<EngineStop		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_stop" />
+			<EngineIdle		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_idle" />
+			<EngineIdle_2d	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_low" />
+			<EngineLow_2d	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_high" />
+			<EngineHigh_2d	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_heavy" />
+			<EngineHeavy_2d	Sound="trucks/derry_longhorn_3194/derry_longhorn_3194_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker
+				Frame="BoneGearstick"
+				MaxAngle="(3; 3; 3)"
+				MaxFrequency="0.1"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</Shakers>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="1.9" MinX="-6.2" MaxX="3.5" />
+		<LimitedFluid Center="(-0.765; 1.142; 0.885)" SizeX="0.875" SizeY="0.42" SizeZ="0.636" Type="Box" />
+		<LimitedFluid Center="(0.357; 1.061; -0.885)" SizeX="0.875" SizeY="0.42" SizeZ="0.636" Type="Box" />
+		<Intake Dir="(1; 0; 0)" Origin="(3.071; 1.617; 0)" Size="1" />
+		<GearboxSocket Default="g_truck_default" Type="gearboxes_trucks" />
+		<FuelTank DamageCapacity="100" />
+		<ExtraWheels
+			Rim="rim_5"
+			Scale="0.66"
+			Tire="highway_1"
+			WheelType="wheels_heavy_double1"
+		>
+			<Wheel _template="MiddleAxle" Pos="(-2.012; 0.671; 0.86)" />
+			<Wheel _template="MiddleAxle" RightSide="true" Pos="(-2.012; 0.671; 0.86)" />
+		</ExtraWheels>
+		<EngineSocket Default="us_truck_old_heavy_engine_0" Type="e_us_truck_old_heavy" />
+		<Driver Pos="(0.36; 2.272; 0.374)" SteeringWheelPos="(0.745; 2.596; 0.37)" ParentFrame="BoneCabin_cdt" />
+		<Dashboard>
+			<Gauge Dir="(-0.723; 0.691; 0)" InputRange="(0;80)" InputType="speed" Mesh="trucks/arrows/derry_longhorn_3194_arrow_2" Org="(1.045; 2.707; 0.425)" OutputAngles="(-124; 127)" />
+			<Gauge Damping="0.99" Dir="(-0.724; 0.69; -0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/derry_longhorn_3194_arrow_2" Org="(1.045; 2.707; 0.307)" OutputAngles="(-129; 131)" />
+			<Gauge Damping="0.99" Dir="(-0.723; 0.691; -0.001)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/derry_longhorn_3194_arrow_1" Org="(0.96; 2.616; 0.365)" OutputAngles="(-45; 46)" />
+			<Gauge Damping="0.99" Dir="(-0.723; 0.691; -0.001)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/derry_longhorn_3194_arrow_1" Org="(0.96; 2.616; 0.433)" OutputAngles="(-41; 24)" />
+			<Gauge Damping="0.99" Dir="(-0.724; 0.69; 0.011)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/derry_longhorn_3194_arrow_1" Org="(1.043; 2.702; 0.531)" OutputAngles="(-45; 7)" />
+			<Gauge Damping="0.99" Dir="(-0.721; 0.692; 0.025)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/derry_longhorn_3194_arrow_3" Org="(0.961; 2.616; 0.298)" OutputAngles="(-53; -43)" />
+			<Gauge Damping="0.99" Dir="(-0.721; 0.692; 0.025)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/derry_longhorn_3194_arrow_3" Org="(1.043; 2.703; 0.203)" OutputAngles="(-54; -44)" />
+			<Gauge Damping="0.99" Dir="(-0.721; 0.692; 0.025)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/derry_longhorn_3194_arrow_3" Org="(1.012; 2.671; 0.127)" OutputAngles="(-50; -22)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.2; 0.9; -0.7)" Max="(3.1; 2.65; 0.7)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.24; 0.5; -1.28)" Max="(0.85; 1.45; 1.28)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ=".07" Scale="0.66" Type="wheels_heavy_double1" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ=".1" Scale="0.66" Type="wheels_heavy_double2" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ=".07" Scale="0.66" Type="wheels_heavy_highway_double" />
+		<CompatibleWheels RearOffsetZ=".07" Scale="0.66" Type="wheels_heavy_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ=".07" Scale="0.66" Type="wheels_heavy_allterrain_double" />
+
+		<Camera Center="(-3; 0; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/derry_longhorn_3194_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/derry_longhorn_3194_glass__sh_d.tga"
+				ViewPos="(0.29; 3; 0.374)"
+			>
+				<Mirror
+					ClipDir="(-0.92; 0; -0.391)"
+					ClipOffset="0.1"
+					FOVScale="1.9"
+					MeshFrame="mirror_left"
+					ReflectionDir="(-0.92; 0; -0.391)"
+					Size="(0.233; 0.412)"
+					Pos="(0.875; 2.991; 1.327)"
+				>
+					<SecondaryView
+						ClipDir="(-0.92; 0; -0.391)"
+						FOVScale="1.2"
+						MeshFrame="mirror_left_1"
+						Size="(0.2; 0.13)"
+						Pos="(0.881; 2.7; 1.325)"
+					/>
+				</Mirror>
+				<Mirror
+					ClipDir="(-0.831; 0; 0.556)"
+					ClipOffset="0.1"
+					FOVScale="2.4"
+					MeshFrame="mirror_right"
+					ReflectionDir="(-0.831; 0; 0.556)"
+					Size="(0.233; 0.412)"
+					Pos="(0.81; 2.992; -1.294)"
+				>
+					<SecondaryView
+						ClipDir="(-0.831; 0; 0.556)"
+						FOVScale="1.6"
+						MeshFrame="mirror_right_1"
+						Size="(0.2; 0.13)"
+						Pos="(0.812; 2.702; -1.295)"
+					/>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+			<Axle Frame="BoneAxle4" />
+		</Axles>
+	</TruckData>
+	<Rotator Frame="BoneRotatorFanR" RotationSpeed="12" />
+	<Rotator Frame="BoneRotatorFanL" RotationSpeed="12" />
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-1; -0.3; 0)"
+			ImpactType="Truck"
+			Mass="15000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-1; -0.5; 0)"
+				ImpactType="Truck"
+				Mass="5000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="3"
+				>
+					<Motor Damping="100000" Spring="4000000" Type="Spring" />
+				</Constraint>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldRight_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshieldLeft_cdt" />
+				<Body _template="BoneFan" ModelFrame="BoneFanR_cdt" />
+				<Body _template="BoneFan" ModelFrame="BoneFanL_cdt" />
+				<Body Mass="0.2" ModelFrame="BoneKeyFobRing_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-50"
+						MaxLimit="50"
+					>
+						<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRodSteer"
+						MinLimit="-30"
+						MaxLimit="30"
+					/>
+				</Body>
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitchL1_cdt">
+				<Constraint MaxLimit="24" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitchR1_cdt">
+				<Constraint MaxLimit="24" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitchL2_cdt">
+				<Constraint MaxLimit="30" />
+			</Body>
+			<Body _template="Hitch" ModelFrame="BoneHitchR2_cdt">
+				<Constraint MaxLimit="30" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.068; 1.181; -0.32)" />
+			<Light _template="StopSignal" Pos="(-6.068; 1.181; 0.32)" />
+			<Flare _template="StopSignal" Pos="(-5.858; 1.225; -0.32)" />
+			<Flare _template="StopSignal" Pos="(-5.858; 1.225; 0.32)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.068; 1.181; -0.32)" />
+			<Light _template="ReverseSignal" Pos="(-6.068; 1.181; 0.32)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-5.858; 1.225; -0.32)" />
+			<Flare _template="ReverseSignal" Size="0.4" Pos="(-5.858; 1.225; 0.32)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-5.858; 1.225; -0.32)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-5.858; 1.225; 0.32)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(3.5; 1.013; 0.7)" />
+			<Light _template="IgnitionSignalWhite" Pos="(3.5; 1.013; -0.7)" />
+			<Light _template="IgnitionSignalRed" Pos="(-5.8; 1.025; -0)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.9" DirAngle="120" Pos="(3.05; 1.4; -0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(165; 149; 130) x 0.9" DirAngle="120" Pos="(3.05; 1.4; 0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Dir="(1; 0; 0)" Size="0.1" Pos="(3.038; 1.2; -0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Dir="(1; 0; 0)" Size="0.1" Pos="(3.038; 1.2; 0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="Beacon" Size="0.25" Pos="(2.053; 1.58; -1.133)" />
+			<Flare _template="Beacon" Size="0.25" Pos="(2.053; 1.58; 1.133)" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; -1)" Size="0.1" Pos="(0.216; 1.761; -0.863)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(0; 0; 1)" Size="0.1" Pos="(0.216; 1.761; 0.863)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Pos="(-5.87; 1.225; -0.32)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-5.87; 1.225; 0.32)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.3" Dir="(-1; 0; 0)" Pos="(-5.817; 1.109; -0.337)" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 140; 0) x 0.3" Dir="(-1; 0; 0)" Pos="(-5.817; 1.109; 0.337)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3; 1.4; -0.73)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(3; 1.4; 0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.5" Pos="(3; 1.4; -0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Size="0.5" Pos="(3; 1.4; 0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.08; 1.4; -0.73)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(3.08; 1.4; 0.73)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/derry_longhorn_3194_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(3.479; 1.222; 0)" />
+	<GameData
+		Country="US,NE,CE"
+		ExcludeAddons="stuff_bobblehead_joker, trailer_log_pole"
+		Price="110700"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.334; 0.883; -0.744)" />
+		<WinchSocket Pos="(3.334; 0.883; 0.744)" />
+		<WinchSocket Pos="(-2.592; 1.689; -0.8)" />
+		<WinchSocket Pos="(-2.592; 1.689; 0.8)" />
+		<WinchSocket Pos="(-5.948; 1.170; -0.473)" />
+		<WinchSocket Pos="(-5.948; 1.170; 0.473)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_DERRY_LONGHORN_3194_DESC"
+			UiIcon30x30="heavyVehicleImg30"
+			UiIcon328x458="shopImgDerryLonghorn3194"
+			UiIcon40x40="heavyVehicleImg"
+			UiIconLogo="DerryLonghornLogo80"
+			UiName="UI_VEHICLE_DERRY_LONGHORN_3194_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(7.701; 4.08; 1.452)" Position="(4.46; 2.796; -0.352)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(0.697; 1.869; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.265; 3.31; 8.244)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(3.272; 2.155; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.136; 4.675; 6.067)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.418; 2.587; 1.47)" Position="(3.994; 3.136; -0.413)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(3.7; 2.308; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.894; 4.086; -4.943)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(7.519; 1.235; 1.082)" Position="(4.512; 3.115; -0.297)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(3.661; 2.631; -1.002)" Position="(7.867; 3.417; 0.365)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.477; 2.789; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.066; 4.61; -2.856)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(4.804; 0.662; -0.429)" Position="(9.094; 4.968; -0.47)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.085; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.662; 0.61; 1.935)" Position="(5.221; 1.595; 0.03)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(4.862; 1.888; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.188; 4.917; -3.826)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(7.443; 1.477; 1.433)" Position="(4.311; 3.349; -0.317)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(3.95; 1.133; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.774; 2.216; -5.854)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.085; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.479; 0.992; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.767; 1.805; 2.899)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.893; 1.525; 1.076)" Position="(3.775; 2.643; -2.883)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.506; 2.447; -1.173)" Position="(8.557; 2.763; -1.173)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(3.334; 0.883; -0.744)" />
+		<CraneSocket Pos="(3.334; 0.883; 0.744)" />
+		<CraneSocket Pos="(-2.592; 1.689; -0.8)" />
+		<CraneSocket Pos="(-2.592; 1.689; 0.8)" />
+		<CraneSocket Pos="(-5.948; 1.170; -0.473)" />
+		<CraneSocket Pos="(-5.948; 1.170; 0.473)" />
+		<AddonSockets>
+			<Socket
+				Names="DerryLonghorn3194SpareWheel"
+				NamesBlock="DerryLonghorn3194CabinProtector, LargeSemitrailerOiltank"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Trailer, LogTrailer" Offset="(-5.987; 1.12; 0)" />
+			<Socket Names="Semitrailer, SemitrailerOiltank" NamesBlock="SaddleHigh" Offset="(-4.21; 1.656; 0)" />
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-3.46; 1.836; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="SaddleLow" Offset="(-4.180; 1.338; 0)" />
+			<Socket Names="SaddleHigh" Offset="(-3.45; 1.338; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.018)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.018)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="derry_longhorn_3194_bumper_default">
+			<Socket Names="DerryLonghorn3194Bumper" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="derry_longhorn_3194_exhaust">
+			<Socket Names="DerryLonghorn3194Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="derry_longhorn_3194_snorkel_default">
+			<Socket Names="DerryLonghorn3194Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0; 0; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="derry_longhorn_3194_fender_default">
+			<Socket Names="DerryLonghorn3194Fender" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Spotlight" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Beacon" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Gabarite1" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Gabarite2" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194CabinProtector" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Horn" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="DerryLonghorn3194Visor" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x2_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldLeft_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="DerryLonghorn3194Sticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(1.213; 3.146; 0.126)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="DerryLonghorn3194Sticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="DerryLonghorn3194Sticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="DerryLonghorn3194Sticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="DerryLonghorn3194Sticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodDerryLonghorn3194" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffDashboard" Offset="(1.136; 2.747; 0)" Dir="(0.338; -0.111; 0.935)" UpDir="(0.311; 0.95; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" NamesBlock="StuffHoodDerryLonghorn3194" Offset="(3.058; 2.440; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<!--	TieRod-->
+		<IKBone ModelFrame="BoneTieRodHinge2" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BonePiston"
+				ModelFrame="BoneTieRodPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackL"
+				ModelFrame="BonePiston"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!--Anchors-->
+		<IKBone ModelFrame="BoneAxle2AnchorBaseL" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneAxle2AnchorL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle2AnchorBaseR" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneAxle2AnchorR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!--Balancers-->
+		<IKBone ModelFrame="BoneAxle2BalancerBaseL" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneAxle2BalancerL"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneAxle2BalancerBaseR" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BoneAxle2BalancerR"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

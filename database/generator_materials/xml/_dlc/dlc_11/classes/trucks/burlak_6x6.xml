@@ -1,0 +1,717 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="0"
+			Torque="full"
+			ParentFrame="BoneChassis_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<TieRod Mass="1">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor
+					Damping="1.0"
+					Force="6000"
+					Tau="0"
+					Type="Position"
+				/>
+			</Constraint>
+		</TieRod>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.3" Spring="10" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="5" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-12"
+				MaxLimit="7"
+			>
+				<Motor Damping="2" Spring="1" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+		<Mirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-2"
+				MaxLimit="2"
+			>
+				<Motor Damping="1" Spring="200" Type="Spring" />
+			</Constraint>
+		</Mirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_big"
+		EngineIconScale="1"
+		EngineStartDelay="2.2"
+		ExhaustStartTime="1.8"
+		FuelCapacity="280"
+		InstallTrailerAddonRequired="burlak_6x6_farkop_trailer, burlak_6x6_farkop_scout_trailer"
+		Responsiveness="0.5"
+		SteerSpeed="0.03"
+		TruckImage="Burlak6x6mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_scout_burlak_offroad"
+		>
+			<Wheel _template="FrontWheel" Pos="(2.304; 0.897; 1.050)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(2.304; 0.897; 1.050)" />
+			<Wheel _template="RearWheel" Pos="(-0.590; 0.897; 1.050)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-0.590; 0.897; 1.050)" />
+			<Wheel _template="RearWheel" Pos="(-2.425; 0.897; 1.050)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.425; 0.897; 1.050)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="burlak_suspension_default"
+			Type="s_burlak_6x6"
+			MaxWheelRadiusWithoutSuspension="0.8"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.9131"
+		/>
+		<Steam Origin="(2.3; 1.8; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(1.8; 1.5; 0)"
+			MinDist="15.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Gear			Sound="trucks/common/truck_gear_shift_medium_rnd_set/truck_gear_shift_medium_rnd" />
+			<EngineTrans	Sound="" />
+			<Reverse		Sound="trucks/burlak_6x6/burlak_6x6_reverse" />
+			<Handbrake		Sound="trucks/burlak_6x6/burlak_6x6_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/burlak_6x6/burlak_6x6_handbrake_off" />
+			<BrakesSqueal	Sound="trucks/burlak_6x6/burlak_6x6_brakes_squeal" />
+			<Honk			Sound="trucks/burlak_6x6/burlak_6x6_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/burlak_6x6/burlak_6x6_acc" />
+			<EngineStart	Sound="trucks/burlak_6x6/burlak_6x6_start" />
+			<EngineStop		Sound="trucks/burlak_6x6/burlak_6x6_stop" />
+			<EngineIdle		Sound="trucks/burlak_6x6/burlak_6x6_idle" />
+			<EngineIdle_2d	Sound="trucks/burlak_6x6/burlak_6x6_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/burlak_6x6/burlak_6x6_low" />
+			<EngineLow_2d	Sound="trucks/burlak_6x6/burlak_6x6_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/burlak_6x6/burlak_6x6_high" />
+			<EngineHigh_2d	Sound="trucks/burlak_6x6/burlak_6x6_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft5a" SocketPointB="Shaft5b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft6a" SocketPointB="Shaft6b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="1.7" MinX="-4.6" MaxX="3.3" />
+		<LimitedFluid Center="(0.845; 0.995; 0.755)" SizeX="0.742" SizeY="0.256" SizeZ="0.735" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<LimitedFluid Center="(0.845; 0.995; -0.755)" SizeX="0.742" SizeY="0.256" SizeZ="0.735" Type="Box" ParentFrame="BoneChassis_cdt" />
+		<Intake Dir="(1; 0; 0)" Origin="(3.18; 1.923; 0)" Size="1.2" />
+		<GearboxSocket Default="g_scout_burlak_default" Type="gearboxes_offroad_burlak_6x6" />
+		<FuelTank DamageCapacity="100" />
+		<EngineSocket Default="ru_offroad_burlak_engine" Type="e_ru_offroad_burlak_6x6" />
+		<Driver
+			AnimationSet="Truck"
+			LegsOffset="(0.1; 0.1; 0)"
+			Pos="(1.46; 2.276; 0.583)"
+			SteeringWheelPos="(1.882; 2.63; 0.590)"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<Dashboard>
+			<Gauge Dir="(-0.905; 0.42; 0)" InputRange="(0;130)" InputType="speed" Mesh="trucks/arrows/burlak_6x6_arrow_01" Org="(2.164; 2.552; 0.5)" OutputAngles="(-125;120)" />
+			<Gauge Damping="0.99" Dir="(-0.905; 0.42; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/burlak_6x6_arrow_01" Org="(2.164; 2.551; 0.679)" OutputAngles="(-118; 120)" />
+			<Gauge Damping="0.99" Dir="(-0.905; 0.42; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/burlak_6x6_arrow_02" Org="(2.187; 2.592; 0.561)" OutputAngles="(-57; 60)" />
+			<Gauge Damping="0.99" Dir="(-0.905; 0.42; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/burlak_6x6_arrow_02" Org="(2.187; 2.592; 0.618)" OutputAngles="(-50; 10)" />
+			<Gauge Damping="0.99" Dir="(-0.905; 0.42; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/burlak_6x6_arrow_03" Org="(2; 2.451; 0.139)" OutputAngles="(-130; -50)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(1.406; 0.972; -0.446)" Max="(3.158; 1.788; 0.446)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.367; 0.831; -1.174)" Max="(1.309; 1.234; 1.174)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.875" Type="wheels_scout_burlak_offroad" />
+		<Camera Center="(-1.7; 0.36; 0)" Radius="1.2">
+			<Cockpit
+				_template="Default"
+				LimitsVer="(-0.38; 0.3)"
+				WindshieldDiffuseTexture="trucks/burlak_6x6_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/burlak_6x6_glass__sh_d.tga"
+				ViewPos="(1.45; 2.9; 0.591)"
+			>
+				<Rear HorTransitionStart="-0.9" ViewPosOffset="(0; -0.15; 0.7)" />
+				<Mirror ClipDir="(-0.99; -0.045; -0.17)" ClipOffset="0.1" FOVScale="2" LookAtOffset="(0; 0; 0.07)" MeshFrame="mirror_left" Size="(0.25; 0.42)" Pos="(2.358; 2.855; 1.161)" />
+				<Mirror ClipDir="(-0.5; -0.045; 0.17)" ClipOffset="0.1" FOVScale="2" MeshFrame="mirror_right" Size="(0.25; 0.42)" Pos="(2.287; 2.855; -1.169)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleL1" IsIndependent="true" />
+			<Axle Frame="BoneAxleR1" IsIndependent="true" />
+			<Axle Frame="BoneAxleL2" IsIndependent="true" />
+			<Axle Frame="BoneAxleR2" IsIndependent="true" />
+			<Axle Frame="BoneAxleL3" IsIndependent="true" />
+			<Axle Frame="BoneAxleR3" IsIndependent="true" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(3.244; 1.791; 0)" />
+	<PhysicsModel Mesh="trucks/Burlak_6x6">
+		<Body
+			CenterOfMassOffset="(0.8; 0; 0)"
+			ImpactType="Truck"
+			Mass="4000"
+			ModelFrame="BoneChassis_cdt"
+		>
+			<Body _template="Mirror" ModelFrame="BoneMirrorLeft_cdt" />
+			<Body _template="Mirror" Mass="4.8" ModelFrame="BoneMirrorRight_cdt" />
+			<Body _template="Sunshield" ModelFrame="BoneSunShield_cdt" />
+			<Body _template="Mudguard" Collisions="None" ModelFrame="BoneMudguardR_cdt">
+				<Constraint MinLimit="-10" MaxLimit="12" />
+			</Body>
+			<Body _template="Mudguard" Collisions="None" ModelFrame="BoneMudguardL_cdt">
+				<Constraint MinLimit="-10" MaxLimit="12" />
+			</Body>
+			<Body Collisions="Default" Mass="0.5" ModelFrame="BoneLock_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-0.5"
+					MaxLimit="0.5"
+				>
+					<Motor Damping="0.01" Spring="0.001" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="Default" Mass="1" ModelFrame="BoneBelt_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.01"
+				>
+					<Motor Damping="10" Spring="800" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" ModelFrame="BoneWiperL_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.3"
+					MaxLimit="0.3"
+				>
+					<Motor Damping="0.01" Spring="1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" ModelFrame="BoneWiperR_cdt">
+				<Constraint
+					AxisLocal="(-1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-0.3"
+					MaxLimit="0.3"
+				>
+					<Motor Damping="0.001" Spring="1" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="0.2" ModelFrame="BoneKeyFob_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-50"
+					MaxLimit="50"
+				>
+					<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" ModelFrame="BoneWindowHingeR_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="0.01" Spring="7" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" ModelFrame="BoneWindowHingeL_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="10"
+				>
+					<Motor Damping="0.01" Spring="7" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-4.9; 1.312; 0.909)" />
+			<Light _template="StopSignal" Pos="(-4.9; 1.312; 0.909)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-4.263; 1.312; 0.909)" />
+			<Flare _template="StopSignal" Size="0.3" Pos="(-4.263; 1.312; -0.909)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-4.05; 1.311; 0.9)" />
+			<Light _template="ReverseSignal" Pos="(-4.05; 1.311; -0.9)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.2" Pos="(-4.263; 1.312; 0.806)" />
+			<Flare _template="ReverseSignal" Color="g(255; 235; 245) x 0.5" Size="0.2" Pos="(-4.263; 1.312; -0.806)" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(3.9; 1.913; 0.763)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-4.263; 1.312; 0.996)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.2" Pos="(-4.263; 1.312; -0.996)" ParentFrame="BoneCabin_cdt" />
+			<!-- top orange -->
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 235; 215) x 0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.097; 1.95; 1.039)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 235; 215) x 0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.097; 1.95; -1.039)" ParentFrame="BoneChassis_cdt" />
+			<!-- front white side-->
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" ColorMultAtDay="0.3" Dir="(1; 0; 0)" Size="0.15" Pos="(2.05; 3.348; 0.856)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" ColorMultAtDay="0.3" Dir="(1; 0; 0)" Size="0.15" Pos="(2.05; 3.348; -0.856)" ParentFrame="BoneChassis_cdt" />
+			<!-- front headlight -->
+			<Light _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 1.0" Pos="(3.9; 1.913; -0.763)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.4" Size="0.30" Pos="(3.194; 1.913; 0.763)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.4" Size="0.30" Pos="(3.194; 1.913; -0.763)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(3.194; 1.913; 0.763)" ParentFrame="BoneChassis_cdt" />
+			<Model _template="HeadLightRay" Org="(3.194; 1.913; -0.763)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.35" Pos="(3.194; 1.913; 0.763)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.8" Size="0.35" Pos="(3.194; 1.913; -0.763)" ParentFrame="BoneChassis_cdt" />
+			<!-- side lights -->
+			<Light _template="ReverseSignal" Color="(255; 235; 215)" Dir="(0; 0; 1)" Pos="(-0.436; 3.119; 1.74)" ParentFrame="BoneChassis_cdt" />
+			<Light _template="ReverseSignal" Color="(255; 235; 215)" Dir="(0; 0; -1)" Pos="(-0.436; 3.119; -1.74)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" ColorMultAtDay="0.3" Dir="(0; 0; 1)" DirAngle="180" Size="0.35" Pos="(-0.436; 3.119; 1.24)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" ColorMultAtDay="0.3" Dir="(0; 0; -1)" DirAngle="180" Size="0.35" Pos="(-0.436; 3.119; -1.24)" ParentFrame="BoneChassis_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/burlak_6x6_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(3.8; 1.131; 0)" />
+	<GameData
+		Country="RU,CAS,NE,CE"
+		ExcludeAddons="trailer_log_pole,trailer_flatbed_ramps_4,trailer_log"
+		Price="97500"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(3.4; 1.491; -0.54)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(3.4; 1.54; 0.54)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.503; 1.921; 1.328)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.503; 1.921; -1.328)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-4.21; 1.306; -0.0)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.475; 3.268; 1.136)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.475; 3.268; -1.136)" ParentFrame="BoneChassis_cdt" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_BURLAK_6X6_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgBurlak6x6"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="BurlakLogo80"
+			UiName="UI_VEHICLE_BURLAK_6X6_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6.7; 1.818; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(14.2; 2; -3.8)" />
+			<!-- <Stickers> -->
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.664; 2.5; -0.5)" Position="(5; 3.2; -0.25)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.664; 2; 1.2)" Position="(5.2; 3.2; -0.498)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.664; 2; 3)" Position="(5.2; 3; 0.2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(4; 2.5; 3)" Position="(5.8; 3; -0.35)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_4" InterestPosition="(6.664; 3.2; 1.9)" Position="(5; 2.8; -0.498)" />
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(4.950; 2.5; 0.5)" Position="(0.35; 6.69; -2.3)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.4; 2; -0.75)" Position="(9.5; 4.5; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.15; 2.47; 0)" Position="(2.167; 2.7; -5.28)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6; 2.47; 0)" Position="(2.2; 2.7; 5.28)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.708; 2.8; -0.65)" Position="(9.268; 3.6; 0.903)" />
+			<!-- <Stuff> -->
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.664; 2.3; 1.2)" Position="(5; 3; -0.498)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.664; 2.75; 1)" Position="(5.1; 2.95; -0.9)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(6.664; 2.8; 1.2)" Position="(4.8; 2.75; -0.75)" />
+			<CameraPos FOV="32.0" Name="hood_ornament" InterestPosition="(5.7; 1.818; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.25; 2.65; -1.407)" />
+			<!-- <Addons> -->
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.2; 1.706; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.636; 3.87; 4.3)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(5.759; 2.49; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.793; 4.409; -3.424)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.601; 1.97; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(7.352; 1.747; 6.216)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(2.672; 1.664; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.252; 2.13; -5.376)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5; 2.8; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.8; 5; -2.2)" />
+			<CameraPos FOV="32.0" Name="snorkels" InterestPosition="(6.601; 1.97; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.352; 2.247; 6.216)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.6; 0.85; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.393; 2; -5.834)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(2.057; 1.117; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.216; 1.658; 2.478)" />
+			<CameraPos FOV="32.0" Name="farkop" InterestPosition="(1; 1.117; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-3; 1.45; 2.2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="repair" InterestPosition="(2.3; 1.77; 1.2)" Position="(6.1; 3.45; -3.5)" />
+			<CameraPos FOV="32.0" Interior="true" Name="footrest" InterestPosition="(2.3; 0.77; 1.2)" Position="(6.1; 1.45; -3.5)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(3.4; 1.491; -0.54)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(3.4; 1.54; 0.54)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(0.692; 1.14; 1.328)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(0.692; 1.44; -1.328)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-4.21; 1.306; -0.0)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-0.475; 3.268; 1.136)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-0.475; 3.268; -1.136)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(0.374; 3.351; -0.0)" ParentFrame="BoneChassis_cdt" />
+		<!-- <ADDONS> -->
+		<AddonSockets DefaultAddon="burlak_6x6_finder_light">
+			<Socket Names="BurlakFinderLight" />
+			<Socket Names="BurlakSpotlight" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_tent">
+			<Socket Names="BurlakTent" />
+			<Socket Names="BurlakBort" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakRepairInterior" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakMinicraneRU" Offset="(-3.87; 1.44; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakBeacon" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakHornOut" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakProtector" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakRoofrack" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakSnorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_threshold_default">
+			<Socket Names="BurlakThreshold" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_wings_default">
+			<Socket Names="BurlakWings" NamesBlock="BurlakThreshold" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="BurlakWingsDefault" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_bumper_default">
+			<Socket Names="BurlakBumper" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_exhaust_default">
+			<Socket Names="BurlakExhaust" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- <STICKER> -->
+		<!-- <STUFF> -->
+		<!-- <OTHER> -->
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x1_01" Offset="(-1.502; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x1_02" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x2_02" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x4_01" Offset="(-1.502; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="BurlakSticker_GlassTop"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakSticker_GlassBottom" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_Capote" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_Capote_L" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakSticker_Roof" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BurlakSticker_Door_R" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_Door_L" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x1_03" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(2.127; 2.565; 0.1)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffCurtainBurlak"
+				Offset="(-1.5; 0; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodBurlak" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(2.212; 3.15; 0.305)"
+				ParentFrame="BoneChassis_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="BurlakSticker_1x2_01" Offset="(-1.5; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_diff_lock_default">
+			<Socket Names="BurlakDiffLock" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.385; 1.14; 0)" />
+			<Socket Names="ScautTrailer" Offset="(-4.238; 0.913; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="burlak_6x6_farkop_trailer">
+			<Socket Names="BurlakFarkop" NamesBlock="ScautTrailer" />
+			<Socket Names="BurlakFarkopScout" NamesBlock="Trailer, LogTrailer" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<!-- <AXLES FRONT> -->
+		<!-- <Left> -->
+		<IKBone ModelFrame="BoneBalancerTop1_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneBalancerTop1_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown1_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL1"
+				ModelFrame="BoneBalancerDown1_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension1L1" ParentFrame="BoneBalancerDown1_L1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension1L2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- <Right> -->
+		<IKBone ModelFrame="BoneBalancerTop1_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneBalancerTop1_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown1_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR1"
+				ModelFrame="BoneBalancerDown1_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension1R1" ParentFrame="BoneBalancerDown1_R1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension1R2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- <AXLES REAR> -->
+		<!-- <AXLE2> -->
+		<IKBone ModelFrame="BoneBalancerTop2_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL2"
+				ModelFrame="BoneBalancerTop2_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown2_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL2"
+				ModelFrame="BoneBalancerDown2_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension2L1" ParentFrame="BoneBalancerDown2_L1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension2L2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerTop2_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR2"
+				ModelFrame="BoneBalancerTop2_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown2_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR2"
+				ModelFrame="BoneBalancerDown2_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension2R1" ParentFrame="BoneBalancerDown2_R1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension2R2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<!-- <AXLE3> -->
+		<IKBone ModelFrame="BoneBalancerTop3_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL3"
+				ModelFrame="BoneBalancerTop3_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown3_L1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleL3"
+				ModelFrame="BoneBalancerDown3_L2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension3L1" ParentFrame="BoneBalancerDown3_L1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension3L2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerTop3_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR3"
+				ModelFrame="BoneBalancerTop3_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBalancerDown3_R1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxleR3"
+				ModelFrame="BoneBalancerDown3_R2"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneSuspension3R1" ParentFrame="BoneBalancerDown3_R1">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneChassis_cdt"
+				ModelFrame="BoneSuspension3R2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

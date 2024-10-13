@@ -1,0 +1,46 @@
+<ModelBrand  
+	NightLightingShadowsAllowCap="true"
+	ApplyNormalInReference="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	ClipCamera="false"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="15"
+			Color="g(247; 174; 46) x 2.5"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="5"
+			OuterCone="90"
+			Pos="(0; 1; 0.0)"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="castle_fire_01a_us14_plane" />
+		<Mesh Name="castle_fire_01a_us14" />
+		<Mesh Name="castle_fire_01a_us14_lod1" />
+		<Mesh Name="castle_fire_01a_us14_lod2" />
+		<Mesh Name="castle_fire_01a_us14_lod3" />
+		<CdtMesh Name="cdt_castle_fire_01a_us14" />
+		<AnimTrackSubset Name="anim_loop" />
+		<OnSubsetActivateEvent>
+            			<SFX Name="campfire" Dir="(0; 1; 0)" Pos="(0; 0.18; 0)"/>
+				<Sound Name="actors/actor_landfire_loop" FadeInTime="0.5" FadeOutTime="0.5" RangeMin="3" RangeMax="35" IsLoop="true"/>
+        	</OnSubsetActivateEvent>
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="castle_fire_01a_us14" />
+		<Mesh Name="castle_fire_01a_us14_lod1" />
+		<Mesh Name="castle_fire_01a_us14_lod2" />
+		<Mesh Name="castle_fire_01a_us14_lod3" />
+		<CdtMesh Name="cdt_castle_fire_01a_us14" />
+		<OnSubsetActivateEvent>
+            		<SFX Name="stone_smoke_01" Dir="(0; 1; 0)" Pos="(0; 0.18; 0)"/>
+        	</OnSubsetActivateEvent>
+	</Subset>
+</ModelBrand>

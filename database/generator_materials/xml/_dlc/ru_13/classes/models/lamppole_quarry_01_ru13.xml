@@ -1,0 +1,29 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	DynamicModel="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="true"
+	ClipCamera="false"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="25"
+			Color="g(246; 225; 160) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0.8)"
+			InnerCone="0"
+			OuterCone="75"
+			Pos="(0; 17.677; 4.0)"
+			Shadows="true"
+		/>
+
+	</StaticLights>
+	<SnapPoint Pos="(0.061; 16.991; -0.395)" />
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/lamppole_quarry_01_ru13_lmk" />
+</ModelBrand>

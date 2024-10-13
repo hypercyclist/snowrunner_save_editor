@@ -20,7 +20,7 @@
 		Category="exhaust"
 		Price="1900"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="12"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"

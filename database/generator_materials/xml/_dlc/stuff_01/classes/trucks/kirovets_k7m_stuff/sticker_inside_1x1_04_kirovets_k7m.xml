@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k7m_stuff/sticker_inside_1x1_04_kirovets_k7m" />
+	<GameData
+		CameraPreset="sticker_inside_02"
+		Category="sticker"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"
+		/>
+		<InstallSocket Type="KirovetsK7MSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

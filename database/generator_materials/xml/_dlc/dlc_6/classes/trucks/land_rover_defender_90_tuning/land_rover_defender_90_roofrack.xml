@@ -82,34 +82,34 @@
 	</PhysicsModel>
 	<ModelAttachments>
 		<MainHeadLight>
-			<Flare _template="LED01" Pos="(0.417; 2.189; -0.425)" />
-			<Flare _template="LED01" Pos="(0.417; 2.189; -0.381)" />
-			<Flare _template="LED01" Pos="(0.417; 2.162; -0.459)" />
-			<Flare _template="LED01" Pos="(0.417; 2.152; -0.398)" />
-			<Flare _template="LED01" Pos="(0.417; 2.166; -0.346)" />
-			<Flare _template="LED01" Pos="(0.417; 2.120; -0.47)" />
-			<Flare _template="LED01" Pos="(0.417; 2.123; -0.429)" />
-			<Flare _template="LED01" Pos="(0.417; 2.123; -0.371)" />
-			<Flare _template="LED01" Pos="(0.417; 2.127; -0.33)" />
-			<Flare _template="LED01" Pos="(0.417; 2.081; -0.455)" />
-			<Flare _template="LED01" Pos="(0.417; 2.094; -0.399)" />
-			<Flare _template="LED01" Pos="(0.417; 2.085; -0.341)" />
-			<Flare _template="LED01" Pos="(0.417; 2.058; -0.418)" />
-			<Flare _template="LED01" Pos="(0.417; 2.059; -0.374)" />
-			<Flare _template="LED01" Pos="(0.417; 2.189; 0.425)" />
-			<Flare _template="LED01" Pos="(0.417; 2.189; 0.381)" />
-			<Flare _template="LED01" Pos="(0.417; 2.162; 0.459)" />
-			<Flare _template="LED01" Pos="(0.417; 2.152; 0.398)" />
-			<Flare _template="LED01" Pos="(0.417; 2.166; 0.346)" />
-			<Flare _template="LED01" Pos="(0.417; 2.120; 0.47)" />
-			<Flare _template="LED01" Pos="(0.417; 2.123; 0.429)" />
-			<Flare _template="LED01" Pos="(0.417; 2.123; 0.371)" />
-			<Flare _template="LED01" Pos="(0.417; 2.127; 0.33)" />
-			<Flare _template="LED01" Pos="(0.417; 2.081; 0.455)" />
-			<Flare _template="LED01" Pos="(0.417; 2.094; 0.399)" />
-			<Flare _template="LED01" Pos="(0.417; 2.085; 0.341)" />
-			<Flare _template="LED01" Pos="(0.417; 2.058; 0.418)" />
-			<Flare _template="LED01" Pos="(0.417; 2.059; 0.374)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.189; -0.425)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.189; -0.381)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.162; -0.459)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.152; -0.398)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.166; -0.346)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.120; -0.47)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.123; -0.429)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.123; -0.371)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.127; -0.33)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.081; -0.455)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.094; -0.399)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.085; -0.341)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.058; -0.418)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.059; -0.374)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.189; 0.425)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.189; 0.381)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.162; 0.459)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.152; 0.398)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.166; 0.346)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.120; 0.47)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.123; 0.429)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.123; 0.371)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.127; 0.33)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.081; 0.455)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.094; 0.399)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.085; 0.341)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.058; 0.418)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.417; 2.059; 0.374)" />
 			<Flare _template="LED01" Dir="(0; 0; -1)" Pos="(-0.978; 2.125; -0.75)" />
 			<Flare _template="LED01" Dir="(0; 0; -1)" Pos="(-0.91; 2.125; -0.75)" />
 			<Flare _template="LED01" Dir="(0; 0; -1)" Pos="(-0.843; 2.125; -0.75)" />
@@ -126,6 +126,9 @@
 			<Flare _template="LED01" Dir="(-1; 0; 0)" Pos="(-1.71; 2.125; -0.102)" />
 			<Flare _template="LED01" Dir="(-1; 0; 0)" Pos="(-1.71; 2.125; -0.169)" />
 			<Flare _template="LED01" Dir="(-1; 0; 0)" Pos="(-1.71; 2.125; -0.237)" />
+			
+			<Model _template="HeadLightRay" Org="(0.417; 2.123; -0.400)" Scale="(1.4; 1.4; 1)" />
+			<Model _template="HeadLightRay" Org="(0.417; 2.123; 0.400)" Scale="(1.4; 1.4; 1)" />
 		</MainHeadLight>
 	</ModelAttachments>
 	<GameData

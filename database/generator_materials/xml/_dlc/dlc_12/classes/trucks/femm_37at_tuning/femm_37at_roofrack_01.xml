@@ -1,0 +1,110 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.75" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator_L"
+		RotationSpeed="3.8"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator_R"
+		RotationSpeed="4.3"
+	/>
+	<TruckData
+		FuelCapacity="140"
+		RepairsCapacity="260"
+	>
+		<LimitedFluid Center="(5.052; 4.2911; -0.767)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(5.64; 4.2911; -0.806)" SizeX="0.435" SizeY="0.154" SizeZ="0.362" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(6.161; 4.2911; -0.681)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+		<LimitedFluid Center="(6.161; 4.2911; -0.186)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+		<LimitedFluid Center="(6.16; 4.2911; 0.74)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		<LimitedFluid Center="(5.729; 4.2911; 0.74)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		<LimitedFluid Center="(5.05; 4.2911; 0.66)" SizeX="0.362" SizeY="0.154" SizeZ="0.435" Type="Box" ParentFrame="BoneFuel4_cdt"/>
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_roofrack_01">
+		<Body Mass="100" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsX="(0; 0.03)" LinearLimitsY="(0; 0)" LinearLimitsZ="(-0.02; 0.02)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.02)" LinearLimitsZ="(0; 0.02)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.02; 0)" LinearLimitsZ="(0; 0.01)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneFuel3_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.02; 0.0)" LinearLimitsZ="(-0.015; 0.015)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneFuel4_cdt"
+			>
+				<Constraint LinearLimitsX="(0; 0.04)" LinearLimitsZ="(-0.03; 0.006)" LinearLimitsY="(0; 0)"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.996; 0.093; 0)" Org="(4.772; 4.461; 1.079)" ParentFrame="BoneRotator_L" />
+			<Light Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; 1.079)" ParentFrame="BoneRotator_L" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; 1.079)" ParentFrame="BoneRotator_L" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; 1.079)" ParentFrame="BoneRotator_L" />
+			<Flare Pos="(4.772; 4.461; 1.079)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.996; 0.093; 0)" Org="(4.772; 4.461; -1.079)" ParentFrame="BoneRotator_R" />
+			<Light Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; -1.079)" ParentFrame="BoneRotator_R" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; -1.079)" ParentFrame="BoneRotator_R" />
+			<Flare Dir="(0.996; 0.093; 0)" Pos="(4.772; 4.461; -1.079)" ParentFrame="BoneRotator_R" />
+			<Flare Pos="(4.772; 4.461; -1.079)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="13"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="Femm37AtRoofrack" />
+	</GameData>
+</TruckAddon>

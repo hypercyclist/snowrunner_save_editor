@@ -1,0 +1,12 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body/>
+	</PhysicsModel>
+		<Landmark Mesh="landmarks/tent_1_us12_lmk" />
+</ModelBrand>

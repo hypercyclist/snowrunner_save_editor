@@ -1,0 +1,9 @@
+<_templates Include="environment" />
+<PlantBrand _template="WoodChunk">
+	<PhysicsModel>
+		<Body _template="WoodChunk"  DebrisType="Sparks"  ModelFrame="BoneRoot">
+			<Constraint _template="WoodChunk" />
+		</Body>
+	</PhysicsModel>
+
+</PlantBrand>

@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakc70_stuff/stuff_curtain_chevrolet_kodiakc70" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainChevroletKodiakC70" />
+	</GameData>
+</TruckAddon>

@@ -47,14 +47,16 @@
 	</PhysicsModel>
 	<ModelAttachments>
 		<MainHeadLight>
-			<Flare _template="LED" Pos="(2.601; 2.172; -0.617)" />
-			<Flare _template="LED" Pos="(2.601; 2.172; -0.588)" />
-			<Flare _template="LED" Pos="(2.601; 2.147; -0.617)" />
-			<Flare _template="LED" Pos="(2.601; 2.147; -0.588)" />
-			<Flare _template="LED" Pos="(2.601; 2.172; 0.617)" />
-			<Flare _template="LED" Pos="(2.601; 2.172; 0.588)" />
-			<Flare _template="LED" Pos="(2.601; 2.147; 0.617)" />
-			<Flare _template="LED" Pos="(2.601; 2.147; 0.588)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.172; -0.617)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.172; -0.588)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.147; -0.617)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.147; -0.588)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.172; 0.617)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.172; 0.588)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.147; 0.617)" />
+			<Flare _template="LED" Dir="(1; 0; 0)" Pos="(2.601; 2.147; 0.588)" />
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(2.611; 2.160; -0.603)" Scale="(0.4; 0.4; 0.3)" />
+			<Model _template="HeadLightRay" Dir="(1; 0; 0)" Org="(2.611; 2.160; 0.603)" Scale="(0.4; 0.4; 0.3)" />
 		</MainHeadLight>
 	</ModelAttachments>
 	<GameData

@@ -1,0 +1,71 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+ 	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="80"
+		Name="neo_falcon_2000_suspension_default"
+	>
+		<Suspension 
+				Damping="0.2" 
+				Height="0.125" 
+				Strength="0.025" 
+				WheelType="front" 
+				BrokenSuspensionMax="0.15" 
+				SuspensionMin="-0.18" />
+		<Suspension 
+				Damping="0.2" 
+				Height="0.14"
+				Strength="0.025" 
+				WheelType="rear" 
+				BrokenSuspensionMax="0.15" 
+				SuspensionMin="-0.14" />
+		<GameData
+			Price="2700"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet> 
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="100"
+		Name="neo_falcon_2000_suspension_high"
+	>
+		<Suspension 
+				Damping="0.3" 
+				Height="0.25" 
+				Strength="0.03" 
+				WheelType="front" 
+				BrokenSuspensionMax="0.15" 
+				SuspensionMin="-0.3"
+				SuspensionMax="1.5" />
+		<Suspension 
+				Damping="0.3" 
+				Height="0.25"
+				Strength="0.03" 
+				WheelType="rear" 
+				BrokenSuspensionMax="0.15" 
+				SuspensionMin="-0.25" 
+				SuspensionMax="1.5" />
+		<GameData
+			Price="5700"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

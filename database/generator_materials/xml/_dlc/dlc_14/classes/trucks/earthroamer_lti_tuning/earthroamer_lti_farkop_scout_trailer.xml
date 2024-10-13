@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_farkop_scout_trailer">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneFarkopScoutTrailer_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="farkop"
+		Category="frame_addons"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-4.528; 0.738; 0)" FixedToTruck="true" />
+		<CraneSocket Pos="(-4.528; 0.738; 0)" FixedToTruck="true" />
+		<UiDesc
+			UiDesc="UI_TUNING_FARKOP_SCOUT_TRAILER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FARKOP_SCOUT_TRAILER_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiFarkopScout" />
+	</GameData>
+</TruckAddon>

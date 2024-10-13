@@ -1,0 +1,97 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutAllterrain _template="Light">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="ScoutDefault" />
+			<WheelFriction _template="ScoutAllterrain" />
+		</ScoutAllterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.73">
+	<TruckTires>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_allterrain_10" Name="Ultima AT I">
+			<WheelFriction _template="ScoutAllterrain" SubstanceFriction="1.4" BodyFrictionAsphalt="1" BodyFriction="1.1"/>
+			<GameData
+				Price="2800"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_10_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_allterrain_11" Name="Ultima AT II">
+			<WheelFriction _template="ScoutAllterrain" SubstanceFriction="1.3" BodyFrictionAsphalt="1.1" BodyFriction="1.1"/>
+			<GameData
+				Price="3100"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_11_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_allterrain_13" Name="Ultima AT III">
+			<WheelFriction _template="ScoutAllterrain" SubstanceFriction="1.2" BodyFrictionAsphalt="1.1" BodyFriction="1.1"/>
+			<GameData
+				Price="3400"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_12_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_allterrain_14" Name="Ultima AT IV">
+			<WheelFriction _template="ScoutAllterrain" SubstanceFriction="1.1" BodyFrictionAsphalt="1" BodyFriction="1.3"/>
+			<GameData
+				Price="2800"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_SCOUT_ALLTERRAIN_13_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_allterrain_10" Name="Ultima AT I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_ALLTERRAIN_10_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_scout_allterrain_11" Name="Ultima AT II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_ALLTERRAIN_11_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_allterrain_13" Name="Ultima AT III">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_ALLTERRAIN_12_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_allterrain_12" Name="Ultima AT IV">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_ALLTERRAIN_13_NAME" />
+			</GameData>
+		</TruckRim>
+		
+		<TruckRim Mesh="wheels/rim_scout_offroad_10" Name="JAT OS I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_OFFROAD_10_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_offroad_11" Name="JAT OS II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_SCOUT_OFFROAD_11_NAME" />
+			</GameData>
+		</TruckRim>
+		
+		<TruckRim Mesh="wheels/rim_scout_offroad_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_OFFROAD_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_scout_offroad_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_2_DESC" UiName="UI_RIM_SCOUT_OFFROAD_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

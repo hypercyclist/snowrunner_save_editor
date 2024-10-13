@@ -1,0 +1,19 @@
+<PlantBrand
+	AttachToGround="false"
+	DisableShadows="true"
+	DistSkipPercentage="1.0"
+>
+	<PhysicsModel>
+		<Body
+			AllowedPenetrationDepth="0.5"
+			AngularDamping="4.0"
+			IsCapsuleCDT="false"
+			LinearDamping="1.0"
+			Mass="10"
+			DamageMult="0.0"
+		
+		>
+			<Constraint BreakOffThreshold="2" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+</PlantBrand>

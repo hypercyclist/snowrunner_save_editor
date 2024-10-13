@@ -1,0 +1,73 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" PlantingMinSpacing="2.4">
+	<PhysicsModel>
+		<Body
+			_template="HugeTrunk"
+			DebrisType="FoliageAutumn"
+			IsCapsuleCDT="false"
+			ModelFrame="BoneRoot"
+		>
+			<Constraint _template="HugeTrunk" />
+			<Body _template="BigTreeRoot" ModelFrame="BoneBranch1">
+				<Constraint Cone="30" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+					<PlaneConeMotor Damping="2000000" Spring="4000000" Type="Spring" />
+				</Constraint>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch7">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch8">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch11">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch6">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="BigTreeRoot" DebrisType="FoliageAutumn" ModelFrame="BoneBranch2">
+				<Constraint Cone="30" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+					<PlaneConeMotor Damping="2000000" Spring="4000000" Type="Spring" />
+				</Constraint>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch10">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch9">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="BigTreeRoot" DebrisType="FoliageAutumn" ModelFrame="BoneBranch3">
+				<Constraint Cone="30" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+					<PlaneConeMotor Damping="2000000" Spring="4000000" Type="Spring" />
+				</Constraint>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch4">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch5">
+					<Constraint Cone="50" TwistAxisLocal="(0;1;0)" Type="Ragdoll">
+						<PlaneConeMotor Damping="400" Spring="25000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(30.0; 30.0)" />
+	<Landmark Mesh="landmarks/oak_02_lmk" />
+	<GameData>
+		<WinchSocket Pos="(-0.022; 0.4; -0.132)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

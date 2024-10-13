@@ -1,0 +1,29 @@
+<_templates Include="trucks"/>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/azov_670963n_sideboard">
+		<Body Mass="600" ModelFrame="BoneAddon1_cdt">
+			<Constraint Type="Rigid" ExplicitParentFrame="0"/>
+				<Body Collisions="None" Mass="500" ModelFrame="BoneAddon2_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="5700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		ExcludedCargoTypes="CargoWing2, CargoForcklift, CargoIronRoad, CargoRocketPart2, CargoRocketPart1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_AZOV67096_SIDEBOARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_AZOV67096_SIDEBOARD_NAME"
+		/>
+		<InstallSocket Type="Azov670963nSideboard" />
+		<AddonSlots InitialOffset="(1.110; 1.535; 0.000)" OffsetStep="(-3; 0; 0)" ParentFrames="BoneAddon_cdt, BoneAddon_cdt, BoneAddon_cdt, BoneAddon_cdt" Quantity="3" />
+	</GameData>
+</TruckAddon>

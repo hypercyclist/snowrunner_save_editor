@@ -1,0 +1,16 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true" AcceptZoneBorderDecals="true">
+	<Subset IsDefault="true" Name="stage_visible">
+		<Mesh Name="rock" />
+		<CdtMesh Name="cdt_rock" />
+	</Subset>
+	<Subset Name="stage_hidden">
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_construct_rocks_roadblock" Pos="(0; 0; 0)" Volume="1" Range="20"/>
+			<SFX Name="stone_smoke_01" Dir="(0; 1; 0)" Pos="(-0.107; 0.562; -0.11)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_03_objective_lmk" />
+</ModelBrand>

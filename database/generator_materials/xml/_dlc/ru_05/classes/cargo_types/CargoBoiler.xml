@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_BOILER"
+		UiDesc="UI_CARGO_BOILER_DESC"
+		UiIcon20x20="cargoTypeBoiler20"
+		UiIcon40x40="cargoTypeBoiler40"
+		UiIcon100x100="cargoTypeBoiler"
+	/>
+</CargoType>

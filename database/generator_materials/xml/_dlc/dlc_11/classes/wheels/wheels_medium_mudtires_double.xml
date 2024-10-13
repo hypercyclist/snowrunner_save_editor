@@ -1,0 +1,84 @@
+<_templates Include="trucks">
+	<TruckTire>  
+		<Mudtires _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Mudtires" />
+		</Mudtires>  
+	</TruckTire>
+</_templates>
+<TruckWheels
+	DamageCapacity="50"
+	Radius="1"
+	Width="0.65"
+	WidthRear="1.3"
+	Mass="100"
+>
+	<TruckTires>
+        <!-- Mud tires -->
+        <TruckTire _template="Mudtires" Mesh="wheels/tire_medium_mudtires_double_10" Name="JAT MMD I">
+			<WheelFriction _template="Mudtires" BodyFriction="2" BodyFrictionAsphalt="0.5" SubstanceFriction="2.2"/>
+			<GameData
+				Price="5200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MEDIUM_MUDTIRES_DOUBLE_10_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Mudtires" Mesh="wheels/tire_medium_mudtires_double_11" Name="JAT MMD II">
+			<WheelFriction _template="Mudtires" BodyFriction="2.2" BodyFrictionAsphalt="0.4" SubstanceFriction="2"/>
+			<GameData
+				Price="5600"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MEDIUM_MUDTIRES_DOUBLE_11_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Mudtires" Mesh="wheels/tire_medium_mudtires_double_12" Name="JAT MMD III">
+			<WheelFriction _template="Mudtires" BodyFriction="2.1" BodyFrictionAsphalt="0.4" SubstanceFriction="2.1"/>
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_MEDIUM_MUDTIRES_DOUBLE_12_NAME" />
+			</GameData>
+		</TruckTire>
+
+	</TruckTires>
+	<TruckRims>
+        <!-- Offroad rims -->
+        <TruckRim Mesh="wheels/rim_medium_offroad_double_10" Name="JAT OMD I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_10_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_medium_offroad_double_11" Name="JAT OMD II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_11_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_1" Name="rim_offroad_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_2" Name="rim_offroad_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_3" Name="rim_offroad_3">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_3_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_4" Name="rim_offroad_4">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_DOUBLE_4_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

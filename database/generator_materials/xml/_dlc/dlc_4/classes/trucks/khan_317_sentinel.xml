@@ -9,6 +9,7 @@
 			Location="front"
 			SteeringAngle="32"
 			SteeringCastor="8"
+			SteeringJointOffset="0.2"
 			Torque="full"
 		/>
 	</Wheel>
@@ -176,6 +177,25 @@
 		<CompatibleWheels OffsetZ="0.045" Scale="0.47" Type="wheels_scout1" />
 		<CompatibleWheels OffsetZ="0.055" Scale="0.47" Type="wheels_scout2" />
 		<CompatibleWheels OffsetZ="0.1" Scale="0.52" Type="wheels_scout2" />
+
+		<CompatibleWheels OffsetZ="0.045" Scale="0.42" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.42" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.42" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.045" Scale="0.47" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.47" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.47" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.045" Scale="0.52" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.52" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.045" Scale="0.42" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.42" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.07" Scale="0.47" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.07" Scale="0.47" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.12" Scale="0.52" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.12" Scale="0.52" Type="wheels_scout_allterrain_chain" />
+		
 		<Camera Center="(-0.3; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -331,7 +351,7 @@
 			<CameraPos FOV="32.0" InterestPosition="(6.5798;2.2887;1.41)" Interior="true" Name="sticker_2" Position="(4.7255;1.8225;0.2277)" />
 			<CameraPos FOV="32.0" InterestPosition="(5.1026;1.4194;-0.4712)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="side_l" Position="(11.1009;4.0109;-3.3519)" />
 			<CameraPos FOV="32.0" InterestPosition="(6.5222;1.3807;1.433)" Interior="true" Name="bubble_head" Position="(4.7313;1.7223;-0.4913)" />
-			<CameraPos FOV="32.0" InterestPosition="(3.0383;0.1803;1.4418)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="wheels" Position="(10.0945;0.9888;-3.7651)" />
+			<CameraPos FOV="32.0" InterestPosition="(5.0383;0.1803;0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="wheels" Position="(10.0945;0.9888;-3.7651)" />
 			<CameraPos FOV="32.0" InterestPosition="(5.1967;0.6607;-0.096)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="default" Position="(13.6412;2.6701;-4.4023)" />
 			<CameraPos FOV="32.0" InterestPosition="(5.2399;0.253;-0.5935)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Name="rear" Position="(-1.3721;2.2188;2.556)" />
 			<CameraPos FOV="32.0" InterestPosition="(5.2171;0.753;0.2633)" Name="door_l_sticker" Position="(3.8258;1.5295;-3.715)" />

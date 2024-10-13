@@ -26,8 +26,15 @@
 			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.12" Size=".4" Pos="(4.797; 2.035; -0.386)" />
 		</HeadLight>
 		<Ignition>
-			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; -0.903)" ParentFrame="BoneCabin_cdt" />
-			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; 0.903)" ParentFrame="BoneCabin_cdt" />
+			<!-- <Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" DirAngle="90" Pos="(4.434; 1.676; 0.903)" ParentFrame="BoneCabin_cdt" /> -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; 0.243)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; 0.314)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; 0.386)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; -0.243)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; -0.314)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 205) x 0.1" Size="0.2" Pos="(4.797; 2.035; -0.386)" />
+			
 		</Ignition>
 	</ModelAttachments>
 	<MainHeadLight _template="Multiply2"/>
@@ -36,7 +43,7 @@
 		Category="bumper"
 		Price="2400"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="10"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"

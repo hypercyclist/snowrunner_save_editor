@@ -1,0 +1,6 @@
+<ModelBrand Instanced="false">
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+</ModelBrand>

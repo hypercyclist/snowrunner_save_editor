@@ -1,0 +1,13 @@
+<_parent File="sticker_inside_1x1_01_zikz_605r" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_stuff/sticker_inside_1x1_03_zikz_605r" />
+	<GameData>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="zikz605RSticker_1x1_03" />
+	</GameData>
+</TruckAddon>

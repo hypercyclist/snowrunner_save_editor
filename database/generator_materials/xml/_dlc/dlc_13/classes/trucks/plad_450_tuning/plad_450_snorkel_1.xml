@@ -1,0 +1,31 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(4.88; 2.535; -1.233)" />
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_snorkel_1">
+		<Body ImpactType="Truck" Mass="8" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Size="0.2" Pos="(5.155; 2.239; -1.194)" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Size="0.2" Pos="(5.155; 2.14; -1.194)" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .5" Size="0.2" Pos="(5.155; 2.04; -1.194)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="8"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_EXT_AIRFILTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_EXT_AIRFILTER_NAME"
+		/>
+		<InstallSocket Type="Plad450Snorkel" />
+	</GameData>
+</TruckAddon>

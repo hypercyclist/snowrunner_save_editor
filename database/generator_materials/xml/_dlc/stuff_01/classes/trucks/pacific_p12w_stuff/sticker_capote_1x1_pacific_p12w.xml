@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p12w_stuff/sticker_capote_1x1_pacific_p12w" />
+	<GameData>
+			<InstallSocket Type="pacificP12WSticker_Capote" />
+	</GameData>
+</TruckAddon>

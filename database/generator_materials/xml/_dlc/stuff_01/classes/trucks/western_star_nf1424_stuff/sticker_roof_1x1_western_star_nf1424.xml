@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_stuff/sticker_roof_1x1_western_star_nf1424" />
+	<GameData>
+			<InstallSocket Type="westernStarNf1424Sticker_Roof" />
+	</GameData>
+</TruckAddon>

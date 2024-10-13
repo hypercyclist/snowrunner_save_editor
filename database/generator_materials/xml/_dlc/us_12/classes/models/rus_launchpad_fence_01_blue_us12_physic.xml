@@ -1,0 +1,13 @@
+<_templates Include="models" />
+<ModelBrand
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	NightLightingShadowsAllowCap="false"
+	Instanced="true"
+>
+	<PhysicsModel>
+			<Body _template="Fence" ModelFrame="BoneRoot">
+				<Constraint _template="Fence" />
+			</Body>
+	</PhysicsModel>
+</ModelBrand>

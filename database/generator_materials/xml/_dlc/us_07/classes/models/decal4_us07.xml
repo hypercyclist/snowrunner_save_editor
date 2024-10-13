@@ -1,0 +1,12 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(5.0; 5.0)" Texture="occlusion_us_flagpole.tga" />
+	<GameData>
+		<WinchSocket Pos="(0; 0.8; 0)" />
+	</GameData>
+</ModelBrand>

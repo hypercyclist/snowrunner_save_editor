@@ -1,0 +1,19 @@
+<_templates Include="models" />
+<ModelBrand 
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="True">
+	
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="state_start" />
+		<CdtMesh Name="cdt_state_start" />
+    </Subset>
+
+	<Subset Name="state_end">
+	</Subset>
+
+	<Occlusion Size="(8; 4)" Texture="occlusion_boards_01.tga" />
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="state_start"/>
+	</PhysicsModel>
+</ModelBrand>

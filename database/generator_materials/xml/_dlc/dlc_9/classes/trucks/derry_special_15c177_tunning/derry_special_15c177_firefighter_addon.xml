@@ -27,9 +27,9 @@
 	</Flare>
 </_templates>
 <TruckAddon IsChassisFullOcclusion="true">
-	<WaterlMass>
+	<WaterMass>
 		<Body Mass="2200" />
-	</WaterlMass>
+	</WaterMass>
 	<TruckData
 		WaterCapacity="2200"
 		RepairsCapacity="200"

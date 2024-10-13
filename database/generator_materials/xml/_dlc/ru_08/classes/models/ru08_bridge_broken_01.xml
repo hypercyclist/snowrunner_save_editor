@@ -1,0 +1,12 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/ru08_bridge_broken_01_lmk" />
+	
+</ModelBrand>

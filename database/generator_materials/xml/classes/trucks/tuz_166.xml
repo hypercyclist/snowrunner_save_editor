@@ -1,0 +1,399 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.058"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_small"
+		EngineIconScale="1.15"
+		EngineStartDelay="1.7"
+		ExhaustStartTime="1.6"
+		FuelCapacity="60"
+		Responsiveness="0.5"
+		SteerSpeed="0.03"
+		TruckImage="tuz166mchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_scout1"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.237; 0.355; 0.746)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.237; 0.355; 0.746)" />
+			<Wheel _template="RearWheel" Pos="(-1.079; 0.355; 0.746)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.079; 0.355; 0.746)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="tuz_166_suspension_default"
+			HardpointY="0.424"
+			Type="s_tuz_166"
+			MaxWheelRadiusWithoutSuspension="0.3"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.636"
+		/>
+		<Steam Origin="(1.241; 0.866; 0)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="true"
+			MinDist="8.0"
+			Origin="(1; 0.9; 0)"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_old" />
+			<Handbrake		Sound="trucks/tuz_166/tuz_166_handbrake_on" />
+			<Gear			Sound="trucks/tuz_166/tuz_166_gear_shift" />
+			<DiffLock		Sound="trucks/tuz_166/tuz_166_diff_lock" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="trucks/tuz_166/tuz_166_brake_release" />
+			<BrakesSqueal	Sound="trucks/tuz_166/tuz_166_brakes_squeal" />
+			<Honk			Sound="trucks/tuz_166/tuz_166_honk" />
+			<EngineRev		Sound="trucks/tuz_166/tuz_166_rev" />
+			<EngineAccel	Sound="trucks/tuz_166/tuz_166_acc" />
+			<EngineStart	Sound="trucks/tuz_166/tuz_166_start" />
+			<EngineStop		Sound="trucks/tuz_166/tuz_166_stop" />
+			<EngineIdle		Sound="trucks/tuz_166/tuz_166_idle" />
+			<EngineIdle_2d	Sound="trucks/tuz_166/tuz_166_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/tuz_166/tuz_166_low" />
+			<EngineLow_2d	Sound="trucks/tuz_166/tuz_166_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/tuz_166/tuz_166_high" />
+			<EngineHigh_2d	Sound="trucks/tuz_166/tuz_166_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MaxAngle="(1.5; 1.5; 1.5)" MaxFrequency="4" />
+		</Shakers>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.4"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.2"
+			MaxX="2.2"
+		/>
+		<GearboxSocket Default="g_scout_tuz" Type="gearboxes_scouts_tuz, gearboxes_scouts" />
+		<FuelTank DamageCapacity="50" />
+		<Exhaust
+			Dir="(-0.037; -0.575; -0.817)"
+			IsLight="true"
+			Origin="(-0.28; 0.423; -0.638)"
+			Speed="2.0"
+		/>
+		<EngineSocket Default="ru_scout_old_engine_tuz" Type="e_ru_scout_old_tuz, e_ru_scout_old" />
+		<Driver AnimationSet="Scout" Pos="(0.016; 0.887; 0.349)" SteeringWheelPos="(0.322; 1.275; 0.342)" />
+		<Dashboard>
+			<Gauge Damping="0.9" Dir="(-0.993; 0.12; 0.002)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_166_arrow_01" Org="(0.501; 1.227; 0.509)" OutputAngles="(-50;15)" />
+			<Gauge Damping="0.9995" Dir="(-0.993; 0.12; 0.002)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_166_arrow_01" Org="(0.503; 1.236; 0.429)" OutputAngles="(-50;-5)" />
+			<Gauge Damping="0.9" Dir="(-0.993; 0.12; 0.002)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/tuz_166_arrow_02" Org="(0.502; 1.237; 0.339)" OutputAngles="(-105;105)" />
+			<Gauge Damping="0.9" Dir="(-0.993; 0.12; 0.002)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/tuz_166_arrow_01" Org="(0.503; 1.235; 0.249)" OutputAngles="(-50;50)" />
+			<Gauge Damping="0.9" Dir="(-0.993; 0.12; 0.002)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tuz_166_arrow_01" Org="(0.502; 1.227; 0.17)" OutputAngles="(-50;25)" />
+		</Dashboard>
+		<Damage
+			Capacity="300"
+			SensationMin="(-0.8; 1.2; -0.7)"
+			SensationMax="(0.6; 1.8; 0.7)"
+		>
+			<DamageArea Type="Engine" Min="(0.6; 0.45; -0.4)" Max="(1.8; 1.3; 0.4)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-1.85; 0.4; -0.8)" Max="(-0.7; 0.9; 0.8)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels Scale="0.40" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.40" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.45" Type="wheels_scout1" />
+		<CompatibleWheels OffsetZ="0.03" Scale="0.45" Type="wheels_scout2" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.50" Type="wheels_scout2" />
+
+		<CompatibleWheels Scale="0.40" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.40" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.40" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels Scale="0.45" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.45" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.45" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.045" Scale="0.50" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.50" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0" Scale="0.4" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0" Scale="0.4" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.03" Scale="0.45" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.03" Scale="0.45" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.5" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.045" Scale="0.5" Type="wheels_scout_allterrain_chain" />
+
+	
+
+		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/tuz_166_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/tuz_166_glass__sh_d.tga"
+				ViewPos="(-0.072; 1.599; 0.349)"
+			>
+				<Rear
+					HorTransitionEnd="-1.2"
+					HorTransitionStart="-1.1"
+					ViewPosOffset="(0.2; -0.1; 0.55)"
+				/>
+				<Mirror ClipDir="(-0.951; 0; -0.309)" FOVScale="1.5" LookAtOffset="(0; 0; 0.05)" MeshFrame="mirror_left" ReflectionDir="(-0.951; 0; -0.309)" Size="(0.2; 0.238)" Pos="(0.378; 1.322; 0.921)" />
+				<Mirror ClipDir="(-0.857; 0; 0.515)" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.857; 0; 0.515)" Size="(0.2; 0.238)" Pos="(0.404; 1.322; -0.896)" />
+				<Mirror ClipDir="(-0.935; -0.192; 0.297)" FOVScale="1" MeshFrame="hp_cab_mirror" ReflectionDir="(-0.948; -0.086; 0.306)" Size="(0.174; 0.065)" Pos="(0.366; 1.655; 0.001)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxleFront" />
+			<Axle Frame="BoneAxleRear" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(1.861; 0.919; 0)" />
+	<PhysicsModel Mesh="trucks/tuz_166">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.4; 0)"
+			ImpactType="Truck"
+			Mass="760"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="760"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+			</Body>
+			<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+			<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+			<Body Collisions="None" Mass="5" ModelFrame="BoneTent1_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0.05"
+				>
+					<Motor Damping="100" Spring="1000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneTent2_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0.05"
+				>
+					<Motor Damping="100" Spring="2000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneTent3_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Prismatic"
+					MinLimit="-0.05"
+					MaxLimit="0.05"
+				>
+					<Motor Damping="100" Spring="2000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneTentLeft_cdt">
+				<Constraint
+					AxisLocal="(0; 0; -1)"
+					Type="Prismatic"
+					MinLimit="-0.1"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="100" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="5" ModelFrame="BoneTentRight_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.1"
+					MaxLimit="0.02"
+				>
+					<Motor Damping="100" Spring="500" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2; 1.243; 0)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="StopSignal" DirAngle="135" Size="0.5" Pos="(-1.857; 1.1; -0.645)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="StopSignal" DirAngle="135" Size="0.5" Pos="(-1.857; 1.1; 0.645)" ParentFrame="BoneChassis_cdt" />
+		</StopSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(1.936; 0.805; 0.726)" ParentFrame="BoneChassis_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(1.936; 0.805; -0.726)" ParentFrame="BoneChassis_cdt" />
+			<Light _template="IgnitionSignalRed" Pos="(-1.95; 1; 0)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(1.707; 0.928; 0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Pos="(1.707; 0.928; -0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(1.76; 0.805; 0.519)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size="0.15" Pos="(1.76; 0.805; -0.519)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.25" Pos="(-1.857; 1.1; -0.645)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalRed" Size="0.25" Pos="(-1.857; 1.1; 0.645)" ParentFrame="BoneChassis_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(1.707; 0.928; -0.726)" ParentFrame="BoneChassis_cdt" />
+			<Model _template="HeadLightRay" Org="(1.707; 0.928; 0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" DirAngle="135" Size="0.3" Pos="(1.707; 0.928; -0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" DirAngle="135" Size="0.3" Pos="(1.707; 0.928; 0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.4" Pos="(1.707; 0.928; -0.726)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Size="0.4" Pos="(1.707; 0.928; 0.726)" ParentFrame="BoneChassis_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/tuz_166_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(1.707; 0.928; 0)" ParentFrame="BoneChassis_cdt" />
+	<GameData
+		Country="RU,CAS"
+		Price="7200"
+		Recallable="true"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(1.859; 0.738; -0.381)" />
+		<WinchSocket Pos="(1.859; 0.738; 0.381)" />
+		<WinchSocket Pos="(-1.872; 0.727; 0)" />
+		<WinchSocket Pos="(-0.119; 0.503; 0.854)" />
+		<WinchSocket Pos="(-0.119; 0.503; -0.854)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_TUZ_166_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgTUZ166"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="TUZLogo80"
+			UiName="UI_VEHICLE_TUZ_166_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(7.669; 0.590; 1.361)" Position="(5.502; 1.589; 0.07)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.036; 1.692; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-6.923; 2.071; 10.147)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.991; 1.77; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.328; 3.173; 3.632)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(7.736; 1.366; 2.214)" Position="(5.012; 1.587; -0.604)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.990; 0.759; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.402; 2.059; -3.713)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(7.669; 0.818; 0.297)" Position="(5.427; 1.532; -0.193)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.227; 1.498; -0.788)" Position="(8.225; 2.090; 0.896)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(7.368; 0.527; 0)" Position="(4.938; 1.201; 2.296)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.474; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.148; 3.473; -2.51)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(6.966; 0.662; -0.869)" Position="(8.658; 2.876; -0.262)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.735; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.78; 1.486; -3.957)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(6.662; 0.61; 1.935)" Position="(5.221; 1.595; 0.03)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.944; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.22; 3.041; 3.401)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6.02; 0.191; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.421; 1.608; -3.51)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.735; 0.976; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.78; 1.486; -3.957)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(5.141; 0.956; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.112; 1.595; 3.721)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(5.443; 0.519; 0.685)" Position="(5.008; 1.27; -2.246)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.114; 1.152; -0.812)" Position="(8.271; 1.5; -0.812)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(1.859; 0.738; -0.381)" />
+		<CraneSocket Pos="(1.859; 0.738; 0.381)" />
+		<CraneSocket Pos="(-1.872; 0.727; 0)" />
+		<CraneSocket Pos="(-0.2; 1.9; 0)" />
+		<CraneSocket Pos="(-0.119; 0.503; 0.854)" />
+		<CraneSocket Pos="(-0.119; 0.503; -0.854)" />
+		<AddonSockets DefaultAddon="tuz_166_bumper_default">
+			<Socket Names="Tuz166Bumper" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tuz_166_rear_bumper_default">
+			<Socket Names="Tuz166RearBumper, Tuz166RearBumperSpareWheel, Tuz166RearBumper1" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166Horn" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166Roofrack" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166SpotLight" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166Visor" NamesBlock="Tuz166Snorkel" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166Threshold" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tuz166Snorkel, Tuz166Snorkel2" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="ScautTrailer" NamesBlock="Tuz166RearBumperSpareWheel" Offset="(-1.87; 0.74; 0)">
+				<AddonsShift Offset="(-0.122; 0; 0)" Types="Tuz166RearBumper1" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x1_01" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x1_02" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x1_03" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x2_01" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x2_02" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_1x4_01" Offset="(0; 0; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tuz166Sticker_GlassTop" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz166Sticker_Door_L" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz166Sticker_Door_R" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tuz166Sticker_Capote" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodTuz166" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffAirfreshener" Offset="(0.387; 1.686; -0.005)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" NamesBlock="StuffHoodTuz166" Offset="(1.770; 1.225; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+	</GameData>
+</Truck>

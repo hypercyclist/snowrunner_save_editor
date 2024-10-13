@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k7m_stuff/sticker_roof_2_1x1_kirovets_k7m" />
+	<GameData
+		CameraPreset="sticker_roof_2"
+		Category="sticker_exterior"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_CAPOTE_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_CAPOTE_STICKER_1x1_NAME"
+		/>
+		<InstallSocket Type="KirovetsK7MSticker_Roof_2" />
+	</GameData>
+</TruckAddon>

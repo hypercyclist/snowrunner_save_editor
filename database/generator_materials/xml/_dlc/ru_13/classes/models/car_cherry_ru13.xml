@@ -1,0 +1,6 @@
+<_parent File="car_blue_ru13" />
+<ModelBrand>
+	<Landmark 
+		Mesh="landmarks/car_cherry_ru08_lmk" 
+	/>
+</ModelBrand>

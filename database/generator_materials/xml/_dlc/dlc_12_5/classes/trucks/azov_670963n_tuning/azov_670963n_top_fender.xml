@@ -1,0 +1,59 @@
+<_templates Include="trucks">
+	<Flare>
+		<MarkerBeacon Color="g(125; 81; 18) x 0.7" Size="0.2" />
+	</Flare>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_670963n_tuning/azov_670963n_top_fender">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!-- FRONT -->
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.337; 3.429; -0.715)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.350; 3.439; -0.255)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.350; 3.438; 0)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.350; 3.439; 0.255)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.337; 3.429; 0.715)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<!-- RIGHT -->
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(3.778; 3.423; -1.112)" Dir="(0; 0; -1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(4.235; 3.423; -1.107)" Dir="(0; 0; -1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(4.729; 3.423; -1.095)" Dir="(0; 0; -1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<!-- LEFT -->
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(3.778; 3.423; 1.112)" Dir="(0; 0; 1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(4.235; 3.423; 1.107)" Dir="(0; 0; 1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(4.729; 3.423; 1.095)" Dir="(0; 0; 1)" DirAngle="110" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(5.296; 3.700; -0.538)" />
+			<Model _template="HeadLightRay" Org="(5.296; 3.700; 0.538)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.279; 3.701; -0.624)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.279; 3.701; -0.450)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.286; 3.707; -0.087)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.286; 3.707; 0.087)" />
+			
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.279; 3.701; 0.624)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.45" DirAngle="135" Size=".4" Pos="(5.279; 3.701; 0.450)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply1" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		IsCustomizable="true"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_FORD_CLT9000_CLT_TOP_FENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FORD_CLT9000_CLT_TOP_FENDER_NAME"
+		/>
+		<InstallSocket CameraPreset="roof" Type="Azov670963nTop" />
+	</GameData>
+</TruckAddon>

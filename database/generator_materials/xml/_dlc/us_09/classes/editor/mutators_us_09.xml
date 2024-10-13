@@ -1,0 +1,16 @@
+<Mutators>
+	<Mutator Name="us_09">
+        <Mutations>
+		    
+        	<ModelMutation Source = "barn_round_01"  Target = "barn_round_01_us09"/>
+					
+			<MaterialLayerMutation Source = "grass_rus_01"     Target = "grass_spring_02"/>
+			<MaterialLayerMutation Source = "grass_rus_02"     Target = "grass_spring_02"/>
+			<MaterialLayerMutation Source = "grass_rus_03"     Target = "grass_spring_02"/>
+
+             <OverlayMutation Source = "cliff_dirt_kuban_01"       Target = "cliff_dirt_us9"/>
+        
+		</Mutations>
+
+    </Mutator>
+</Mutators>

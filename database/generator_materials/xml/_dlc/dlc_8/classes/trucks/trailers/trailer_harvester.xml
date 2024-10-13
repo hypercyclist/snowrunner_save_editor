@@ -125,7 +125,7 @@
 			UiIcon40x40="trailerPotatoDigger40"
 			UiName="UI_TRAILER_HARVESTER_NAME"
 		/>
-		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler" />
+		<RequiredAddon Types="kirovets_k700_coupler, kirovets_k7m_coupler, futom_7290ra_coupler, ankatra_1160_coupler" />
 		<InstallSocket Offset="(2.6; 1; 0)" Type="TrailerFarm" ParentFrame="BoneRoot_cdt" />
 		<!--		<InstallSocket Offset="(2.561; 0.661; 0)" Type="TrailerPlanter" ParentFrame="BoneTruck_cdt" /> -->
 		<CraneSocket Pos="(-0.928; 0.777; 0)" ParentFrame="BoneTrailer_cdt" />

@@ -1,0 +1,9 @@
+<_templates Include="environment" />
+<PlantBrand _template="WoodChunk">
+	<PhysicsModel>
+		<Body _template="WoodChunk" DebrisType="Sparks" ModelFrame="BoneRoot" Mass="200.0" >
+			<Constraint _template="WoodChunk" />
+		</Body>
+	</PhysicsModel>
+	<ChunksBreak Brands="burnt_wood_chunk_us_09" Threshold="300" />
+</PlantBrand>

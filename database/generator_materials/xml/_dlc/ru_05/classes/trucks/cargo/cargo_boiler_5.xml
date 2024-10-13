@@ -1,0 +1,33 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_boiler_5">
+		<NetSync Legacy="false" />
+		<Body Mass="2000" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="2000" ModelFrame="BoneCargo_container_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="2000" ModelFrame="BoneCargo_container_2_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					<Body Mass="2000" ModelFrame="BoneCargo_container_3_cdt">
+						<Constraint ExplicitParentFrame="3" Type="Fixed" />
+						<Body Mass="2000" ModelFrame="BoneCargo_container_4_cdt">
+							<Constraint ExplicitParentFrame="4" Type="Fixed" />
+						</Body>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_boiler"
+			TransportedSound="load/container_large/cargo_manual_pipe_large"
+			ManualSound="cargo_manual/cargo_manual_boiler"
+		/>
+		<InstallSlot
+			CargoLength="5"
+			CargoType="CargoBoiler"
+			CargoValue="1"
+			Offset="(5; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

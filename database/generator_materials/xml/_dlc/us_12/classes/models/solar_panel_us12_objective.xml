@@ -1,0 +1,35 @@
+<ModelBrand
+
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="stage_start" />
+		<CdtMesh Name="stage_start" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_end" />
+		<CdtMesh Name="stage_end" />
+		<AnimTrack Name="stage_1_anim"/>
+		<AnimSubset Name="build_animation_0"/>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_start">
+			<Body Collisions="Dynamic" ModelFrame="stage_end" />
+			<Body Collisions="Dynamic" ModelFrame="mesh_0" />
+		</Body>
+	</PhysicsModel>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="41">
+			<Sound Name="actors/actor_construction/actor_construct_us06_garage_07" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="rus_base_01_full" Pos="(0; 0; 0)" />
+
+		</AnimEvent>
+	</TrackEvents>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh_01"/>
+		<Mesh Name="animated_mesh_02"/>
+		<Mesh Name="mesh_0"/>
+		<CdtMesh Name="mesh_0"/>
+	</AnimSubset>
+	<Landmark Mesh="landmarks/solar_panel_us12_objective_lmk" />
+</ModelBrand>

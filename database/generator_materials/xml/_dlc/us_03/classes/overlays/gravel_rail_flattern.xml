@@ -1,0 +1,14 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/gravel_rail__d_a.tga"
+	TextureRelief="overlays/gravel_rail_relief__d_a.tga"
+>
+	<Prebuild
+		DefaultWidth="5"
+		FlattenPart="0.75"
+		SnowmapMask="overlay_dirt_road_pbr__s_d.tga"
+		LandmarkColor="(100; 90; 80)"
+		LandmarkPart="0.8"
+		Layer="2"
+	/>
+</OverlayBrand>

@@ -1,0 +1,34 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cargo/cargo_burnt_logs_medium_frame_addon" >
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.3; 0)"
+			Friction="0.1"
+			ImpactType="Foliage"
+			Mass="2500"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Constraint Type="Rigid" />
+			<Body ImpactType="Truck" Mass="2500" ModelFrame="BonePrismaticShift_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_logs_medium"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_manual_logs_medium"
+		/>        
+		<RequiredAddon Types="frame_addon_log_medium_high_kenworth" />
+		<SpawnLoadOrigin Position="(-3.504; 1.152; 0.000)" />        
+		<InstallSlot
+			CargoAddonSubtype="MediumKenworth"
+			CargoLength="1"
+			CargoType="CargoLogsMedium_Burnt"
+			ManualLoads="3"
+			Offset="(0; -0.2; 0)"
+		/>
+	</GameData>
+</TruckAddon>
+

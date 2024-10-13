@@ -1,0 +1,17 @@
+<WeatherParticles
+	ColorMult="g(145; 48; 43; 255) x 1000"
+	DrawDistance="16"
+	FallSpeed="0.039"
+	LifeTime="7"
+	TurbulenceIntensity="0.02"
+	TurbulenceMagnitude="0.1"
+	Wind="(0.2; 0.1; 0)"
+>
+	<Flying
+		AvgSize="0.006"
+		Diffuse="sfx/ashes_6x__d_a.tga"
+		NumFramesX="6"
+		RotationSpeed="3"
+	/>
+	<Collided AgeIncreaseWater="2" />
+</WeatherParticles>

@@ -1,0 +1,20 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/femm_37at_stuff/stuff_curtain_femm_37at">
+		<Body>
+			<Body>
+				<Constraint
+					MinLimit="-25"
+					MaxLimit="12"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainFemm37at" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Snorkel Origin="(3; 2.692; 0)" />
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_snorkel_2">
+		<Body ImpactType="Truck" Mass="40" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="1.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.4" Pos="(3.09; 2.895; 1.015)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="0.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.6" Pos="(3.068; 2.847; 1.047)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="0.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.6" Pos="(3.05; 2.739; 1.052)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+			
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="1.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.4" Pos="(3.09; 2.895; -1.015)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="0.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.6" Pos="(3.068; 2.847; -1.047)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+			<Flare _template="IgnitionSignalOrange" DirAngle="110" AspectRatio="0.5" Color="g(255; 140; 0) x 0.2" Dir="(1; 0; 0)" Size="0.6" Pos="(3.05; 2.739; -1.052)" ParentFrame="BoneCabin_cdt" ColorMultAtDay="0.5"/>
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="snorkels"
+		Category="snorkel"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_WEDGECAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_WEDGECAP_NAME"
+		/>
+		<InstallSocket Type="KenworthW990Snorkel" />
+	</GameData>
+</TruckAddon>

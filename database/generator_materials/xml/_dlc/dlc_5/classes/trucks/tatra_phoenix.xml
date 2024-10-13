@@ -140,6 +140,10 @@
 		</Damage>
 		<CompatibleWheels RearOffsetZ="0.04" Scale="0.58" Type="wheels_tatra_phoenix" />
 		<CompatibleWheels RearOffsetZ="0.04" Scale="0.58" Type="wheels_heavy_single" />
+
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.58" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.58" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels RearOffsetZ="0.04" Scale="0.58" Type="wheels_heavy_mudtires_single2" />
 		<Camera Center="(-1; 0; 0)" ParentFrame="BoneChassis_cdt">
 			<Cockpit
 				_template="Default"
@@ -303,7 +307,7 @@
 	<Landmark Mesh="landmarks/tatra_phoenix_lmk" MinScale="1.8" MaxScale="2.8" />
 	<HeadLight _template="Default" Pos="(4.8; 1.2; 0)" />
 	<GameData
-		Country="RU,CAS"
+		Country="RU,CAS,NE,CE"
 		ExcludeAddons="trailer_log_pole"
 		Price="72800"
 		UnlockByExploration="true"
@@ -350,10 +354,12 @@
 		<CraneSocket Pos="(-0.65; 1; -0.46)" />
 		<CraneSocket Pos="(-3.968; 1.028; 0)" />
 		<AddonSockets>
-			<Socket Names="TatraCrane" Offset="(-0.4; -0.02; 0)" NamesBlock="TatraSideboard, TatraFrameAddonTank" />
+			<Socket Names="TatraCrane" Offset="(-0.4; 0.17; 0)" NamesBlock="TatraFrameAddonTank">
+				<AddonsShift Offset="(1.64; 0; -0.025)" Types="TatraSideboard" />
+			</Socket>
 		</AddonSockets>
 		<AddonSockets>
-			<Socket Names="Trailer" Offset="(-3.968; 1.028; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-3.968; 1.028; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-2.173; 1.647; 0)" />
 		</AddonSockets>
 		<AddonSockets>
@@ -364,6 +370,9 @@
 			</Socket>
 			<Socket Names="TatraSideboard" />
 			<Socket Names="TatraFrameAddonTank" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="TatraPhoenixSpareWheel" />
 		</AddonSockets>
 		<AddonSockets DefaultAddon="tatra_phoenix_bumper_default">
 			<Socket Names="TatraPhoenixBumper" />
@@ -379,9 +388,6 @@
 		</AddonSockets>
 		<AddonSockets DefaultAddon="tatra_phoenix_fender">
 			<Socket Names="TatraPhoenixFender" />
-		</AddonSockets>
-		<AddonSockets>
-			<Socket Names="TatraPhoenixSpareWheel" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="TatraPhoenixSpotlight" ParentFrame="BoneCabinRagdoll_cdt" />

@@ -1,0 +1,12 @@
+<_templates Include="models"/>
+<ModelBrand Instanced="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			CenterOfMassOffset="(0; 0.1; 0)"
+			Mass="100"
+		>
+			<Constraint BreakOffThreshold="105" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

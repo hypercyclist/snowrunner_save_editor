@@ -1,0 +1,57 @@
+<_templates Include="models" >
+	<Body>
+		<rock_05_ru13_root
+			Collisions="None"
+		/>
+		<rock_05_ru13
+			Mass="170.00"
+			NoSoftContacts="True"
+			Friction="0.05"
+			Collisions="Dynamic"
+			AllowedPenetrationDepth="1.2"
+			LinearDamping="0.5"
+		/>
+	</Body>
+	<Constraint>
+		<rock_05_ru13_parent_1
+			BreakOffThreshold="300"
+			Type="Fixed"
+		/>
+		<rock_05_ru13_parent_2
+			BreakOffThreshold="30"
+			Type="Fixed"
+		/>
+		<rock_05_ru13
+			BreakOffThreshold="100"
+			Type="Fixed"
+		/>
+	</Constraint>
+</_templates>
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	BreakType="Rockfall"
+>
+	<PhysicsModel>
+	  	<Body Collisions="None" ModelFrame="BoneRoot" >
+			<Body _template="rock_05_ru13" ModelFrame="piece_0" Mass="113.89">
+				<Constraint _template="rock_05_ru13_parent_2" />
+				<Body _template="rock_05_ru13" ModelFrame="piece_2" Mass="34.61">
+					<Constraint _template="rock_05_ru13_parent_2" />
+					<Body _template="rock_05_ru13" ModelFrame="piece_3" Mass="52.69">
+						<Constraint _template="rock_05_ru13_parent_2" />
+					</Body>
+				</Body>
+				<Body _template="rock_05_ru13" ModelFrame="piece_5" Mass="33.12">
+					<Constraint _template="rock_05_ru13_parent_2" />
+					<Body _template="rock_05_ru13" ModelFrame="piece_4" Mass="129.90">
+						<Constraint _template="rock_05_ru13_parent_2" />
+					</Body>
+					<Body _template="rock_05_ru13" ModelFrame="piece_1" Mass="73.81">
+						<Constraint _template="rock_05_ru13_parent_2" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

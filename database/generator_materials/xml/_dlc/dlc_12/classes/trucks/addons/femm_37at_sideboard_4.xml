@@ -1,0 +1,68 @@
+<_templates Include="trucks"/>
+<TruckAddon IsChassisFullOcclusion="true">
+	<PhysicsModel Mesh="trucks/addons/femm_37at_sideboard_4">
+		<Body Mass="600" ModelFrame="BoneAddon1_cdt">
+			<Constraint Type="Rigid" ExplicitParentFrame="0"/>
+			<Body Collisions="None" Mass="500" ModelFrame="BoneAddon2_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!-- side_flares -->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(-4.881; 1.996; 1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(-2.799; 1.996; 1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(-0.715; 1.996; 1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; 1)" Size="0.15" Pos="(1.367; 1.996; 1.441)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(-4.881; 1.996; -1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(-2.799; 1.996; -1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(-0.715; 1.996; -1.44)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(0; 0; -1)" Size="0.15" Pos="(1.367; 1.996; -1.441)" ParentFrame="BoneAddon_cdt" />
+			<!-- front_flares -->
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.619; 2.953; 1.549)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(3.559; 2.953; 1.549)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.548; 2.09; 1.412)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.619; 2.953; -1.549)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(3.559; 2.953; -1.549)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(3.548; 2.09; -1.412)" ParentFrame="BoneAddon_cdt" />
+			<!-- back_flares -->
+			<Flare _template="IgnitionSignalRed" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(-6.97; 1.887; 1.553)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(-6.916; 1.887; 1.553)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(-6.75; 1.92; 1.468)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(-6.7; 1.919; 1.468)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(-6.97; 1.887; -1.553)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(-6.916; 1.887; -1.553)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.15" Pos="(-6.75; 1.92; -1.468)" ParentFrame="BoneAddonBack_cdt" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0)" Size="0.15" Pos="(-6.7; 1.919; -1.468)" ParentFrame="BoneAddonBack_cdt" />
+		</Ignition>
+		<StopSignals>
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.98; 1.81; -1.286)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalRed" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.98; 1.81; 1.286)" ParentFrame="BoneAddon_cdt" />
+			<Light _template="StopSignal" Pos="(-7.1; 1.346; 0)" ParentFrame="BoneAddon_cdt"/>
+		</StopSignals>
+		<ReverseSignals>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.98; 1.81; -1.123)" ParentFrame="BoneAddon_cdt" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.2" Dir="(-1; 0; 0)" Size="0.4" Pos="(-6.98; 1.81; 1.123)" ParentFrame="BoneAddon_cdt" />
+			<Light _template="ReverseSignal" Pos="(-7.1; 1.346; 0)" ParentFrame="BoneAddon_cdt"/>
+		</ReverseSignals>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="6700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		ExcludedCargoTypes="CargoWing2, CargoForcklift, CargoIronRoad"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FEMM_37AT_SIDEBOARD_4_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FEMM_37AT_SIDEBOARD_4_NAME"
+		/>
+		<InstallSocket Type="FemmSideboard" />
+		<AddonSlots InitialOffset="(2.1079; 2.199; 0)" OffsetStep="(-2.6; 0; 0)" ParentFrames="BoneAddon1_cdt, BoneAddon1_cdt, BoneAddon1_cdt, BoneAddon1_cdt" Quantity="4" />
+	</GameData>
+</TruckAddon>

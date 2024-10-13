@@ -1,0 +1,10 @@
+<_templates Include="models" />
+<ModelBrand Instanced="True">
+	<PhysicsModel>
+		<Body _template="LightWeight" ModelFrame="BoneRoot">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+	
+	
+</ModelBrand>

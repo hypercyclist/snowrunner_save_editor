@@ -30,10 +30,9 @@
 	<PhysicsModel Mesh="trucks/gor_by4_tuning/gor_by4_roofrack_2">
 		<Body ImpactType="Truck" Mass="100">
 			<Constraint Type="Rigid" />
-			<Body _template="Limits" LinearDamping="2" Mass="40" ModelFrame="BoneFuel_cdt" />
+			<Body _template="Limits" Mass="40" ModelFrame="BoneFuel_cdt" />
 			<Body
 				_template="Limits"
-				LinearDamping="2"
 				Mass="50"
 				ModelFrame="BoneRepair_cdt"
 			>
@@ -41,7 +40,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="2"
 				Mass="50"
 				ModelFrame="BoneWheel_cdt"
 			>

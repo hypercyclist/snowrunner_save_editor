@@ -1,0 +1,50 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		FuelCapacity="160"
+		RepairsCapacity="450"
+		WheelRepairsCapacity="3"
+	>
+		<LimitedFluid Center="(-3.526; 1.258; 0.898)" SizeX="0.7" SizeY="0.449" SizeZ="0.461" Type="Box" ParentFrame="BoneStuff_cdt"/>
+		<LimitedFluid Center="(-3.642; 1.258; -0.723)" SizeX="0.467" SizeY="0.449" SizeZ="0.811" Type="Box" ParentFrame="BoneStuff_cdt"/>
+	</TruckData>
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorLeft" RotationSpeed="4" />
+	<Rotator EngineTorqueFactor="0" Frame="BoneRotatorRight" RotationSpeed="4.1" />
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_kung_consumables">
+		<NetSync Legacy="true" />
+		<Body Collisions="None" Mass="300">
+			<Constraint Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.983; 0.182; 0.016)" Org="(1.108; 3.390; 0.596)" ParentFrame="BoneRotatorLeft" />
+			<Light Dir="(0.983; 0.182; 0.016)" Pos="(1.108; 3.390; 0.596)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(1.108; 3.390; 0.596)" ParentFrame="BoneRotatorLeft" />
+			<Flare Dir="(0.983; 0.182; 0.016)" Pos="(1.108; 3.390; 0.596)" ParentFrame="BoneRotatorLeft" />
+			<Flare Pos="(1.108; 3.390; 0.596)" ParentFrame="BoneStuff_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0; 0.1; 1)" Org="(1.108; 3.390; -0.596)" ParentFrame="BoneRotatorRight" />
+			<Light Dir="(0; 0.1; 1)" Pos="(1.108; 3.390; -0.596)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.108; 3.390; -0.596)" ParentFrame="BoneRotatorRight" />
+			<Flare Dir="(0; 0.1; 1)" Pos="(1.108; 3.390; -0.596)" ParentFrame="BoneRotatorRight" />
+			<Flare Pos="(1.108; 3.390; -0.596)" ParentFrame="BoneStuff_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="kung"
+		Category="frame_addons"
+		Price="3800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EARTHROAMERS_CONSUMABLES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EARTHROAMERS_CONSUMABLES_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiKungConsumbles" />
+	</GameData>
+</TruckAddon>

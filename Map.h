@@ -2,6 +2,7 @@
 #define MAP_H
 
 #include <map>
+#include <string>
 
 class Task;
 class Upgrade;

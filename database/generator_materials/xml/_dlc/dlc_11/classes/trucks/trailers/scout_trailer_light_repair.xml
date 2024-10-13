@@ -1,0 +1,227 @@
+<_templates Include="trucks">
+	<Wheel>
+		<TrailerWheelRear
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.07"
+			SuspensionStrength="0.065"
+			Torque="default"
+			Type="wheel_scout_light_trailer_rear"
+			SuspensionMin="-0.1"
+		/>
+		<TrailerWheelFront
+			ConnectedToHandbrake="true"
+			SuspensionHeight="0.01"
+			SuspensionStrength="1"
+			Torque="default"
+			Type="wheel_scout_trailer_front"
+			SuspensionMin="0.01"
+			ParentFrame="BoneRotFrontWheel_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.8"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.075"
+		/>
+	</Flare>
+	<Body>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-60"
+				MaxLimit="12"
+			>
+				<Motor Damping="0.3" Spring="5" Type="Spring" />
+			</Constraint>	
+		</Mudguard>
+	</Body>
+	<Flare>
+		<IgnitionSignalYellow
+			AspectRatio="1.4"
+			Color="g(238; 195; 34) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+		<IgnitionSignalRedSmall
+			AspectRatio="1.4"
+			Color="g(169; 0; 0) x 0.6"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="135"
+			Size="0.1"
+		/>
+	</Flare>
+</_templates>
+
+<Truck Type="Trailer" AttachType="Drawbar">
+
+	<TruckData FuelCapacity="150" RepairsCapacity="250" WheelRepairsCapacity="2">
+		<Wheels>
+			<Wheel _template="TrailerWheelFront" RightSide="true" Pos="(1.508; 0.108; 0.011)" />
+			<Wheel _template="TrailerWheelRear" Pos="(-0.720; 0.301; 0.677)" />
+			<Wheel _template="TrailerWheelRear" RightSide="true" Pos="(-0.720; 0.301; 0.677)" />
+		</Wheels>
+		<OcclusionMap
+			HalfSizeZ="1.32"
+			Texture="trucks/occlusion/chassis_trailer__s_d_a.tga"
+			MinX="-2.38"
+			MaxX="2.20"
+		/>
+		<Constraint _template="TrailerRagdoll">
+			<TwistMotor _inheritRemove="true" />
+		</Constraint>
+		<Camera Center="(0; 0; 0)" />
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+		</Axles>
+	</TruckData>
+	
+	<PoweredConstraints>
+		<Group Id="_trailer_foot">
+			<Constraint
+				InitialFix="true"
+				Name="Leg"
+				TerminalFix="true"
+				Position=".224"
+			/>
+		</Group>
+	</PoweredConstraints>
+	
+	<PhysicsModel Mesh="trucks/trailers/scout_trailer_light_repair">
+		<Body
+			CenterOfMassOffset="(0; 0; 0)"
+			ImpactType="Truck"
+			Mass="900"
+		>
+			<Body Collisions="None" Mass="100" ModelFrame="BoneMoveFrontWheel_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Leg"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.224"
+				>
+					<Motor Force="6000" Type="Position" />
+				</Constraint>
+				<Body
+					AngularDamping="10.0"
+					Collisions="None"
+					Mass="50"
+					ModelFrame="BoneRotFrontWheel_cdt"
+				>
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Hinge"
+						MinLimit="-180"
+						MaxLimit="180"
+					/>
+				</Body>
+			</Body>
+			<Body Mass="5" ModelFrame="BoneHandle_cdt">
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Name="Handle"
+					Type="Hinge"
+					MinLimit="-180"
+					MaxLimit="180"
+				>
+					<Motor Damping=".2" Spring="2" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardLeft_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-60" MaxLimit="10" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneMudguardRight_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-55" MaxLimit="12"/>
+			</Body>
+			<Body Collisions="None" Mass="60" ModelFrame="BoneCloth1_cdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX ="-0.053; 0.060"
+					LinearLimitsY ="0;0.01"
+					LinearLimitsZ ="-0.008; 0.03"
+				>
+					<Motor Damping="700" Spring="2200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneCloth2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.065"
+					MaxLimit="0"
+				>
+					<Motor Damping="800" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneCloth3_cdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX ="-0.03; 0.06"
+					LinearLimitsY ="0;0.002"
+					LinearLimitsZ ="-0.008; 0.06"
+				>
+					<Motor Damping="900" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneCloth4_cdt">
+				<Constraint
+					Type="Fixed"
+					LinearLimitsX ="-0.34; 0.18"
+					LinearLimitsY ="0;0.002"
+					LinearLimitsZ ="-0.008; 0.06"
+				>
+					<Motor Damping="800" Spring="2000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.7; 1.021; 0)" />
+			<Flare _template="StopSignal" Pos="(-2.037; 0.611; 0.568)" />
+			<Flare _template="StopSignal" Pos="(-2.037; 0.611; -0.568)" />
+			<Flare _template="BlueStreak" Color="g(102; 1; 1) x 0.3" Dir="(-1; 0; 0)" Pos="(-2.037; 0.610; 0.601)" />
+			<Flare _template="BlueStreak" Color="g(102; 1; 1) x 0.3" Dir="(-1; 0; 0)" Pos="(-2.037; 0.610; -0.601)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-3; 1.021; 0)" />
+			<Flare _template="ReverseSignal" Size="0.5" Pos="(-2.037; 0.611; 0.568)" />
+			<Flare _template="ReverseSignal" Size="0.5" Pos="(-2.037; 0.611; -0.568)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalRed" Pos="(-2.037; 0.611; 0.568)" />
+			<Flare _template="IgnitionSignalRed" Pos="(-2.037; 0.611; -0.568)" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/scout_trailer_light_repair_lmk" MinScale="1.5" MaxScale="3.5" />
+	<GameData Price="3400">
+		<WinchSocket WinchableWhenAttached="false" Pos="(2.215; 0.723; 0.0)" />
+		<WinchSocket Pos="(0.398; 0.730; 0.832)" />
+		<WinchSocket Pos="(0.398; 0.730; -0.832)" />
+		<WinchSocket Pos="(-1.588; 0.730; 0.832)" />
+		<WinchSocket Pos="(-1.588; 0.730; -0.832)" />
+		<WinchSocket Pos="(-2.030; 0.730; 0.401)" />
+		<WinchSocket Pos="(-2.030; 0.730; -0.401)" />
+		<UiDesc
+			UiDesc="UI_TRAILER_SCOUT_LIGHT_REPAIR_DESC"
+			UiIcon30x30="trailerScoutLightRepair30"
+			UiIcon40x40="trailerScoutLightRepair40"
+			UiName="UI_TRAILER_SCOUT_LIGHT_REPAIR_NAME"
+		/>
+		<InstallSocket Offset="(2.215; 0.744; 0)" Type="ScautTrailer" />
+		<CraneSocket Pos="(2.218; 0.721; 0)" />
+		<CraneSocket Pos="(-1.994; 0.74; 0)" />
+		<CraneSocket Pos="(-0.57; 0.702; 0.798)" />
+		<CraneSocket Pos="(-0.57; 0.702; -0.798)" />
+	</GameData>
+	
+</Truck>

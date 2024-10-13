@@ -1,0 +1,68 @@
+<_templates Include="models" />
+<ModelBrand
+	Instanced="true"
+	NightLightingShadowsAllowCap="True"
+	ClipCamera="false"
+	Fence="True"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body _template="Fence" ModelFrame="BoneStake3">
+				<Constraint _template="Fence" />
+				<Body _template="Fence" ModelFrame="BoneFrameL">
+					<Constraint _template="Fence" />
+					<Body _template="Fence" ModelFrame="BonePart4">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart5">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart6">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart7">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart8">
+						<Constraint _template="Fence" />
+					</Body>
+				</Body>
+			</Body>
+			<Body _template="Fence" ModelFrame="BoneStake">
+				<Constraint _template="Fence" />
+				<Body _template="Fence" ModelFrame="BonePart1">
+					<Constraint _template="Fence" />
+				</Body>
+			</Body>
+			<Body _template="Fence" ModelFrame="BoneStake2">
+				<Constraint _template="Fence" />
+				
+				<Body _template="Null" ModelFrame="BoneNull">
+					<Constraint _template="Null" />
+				</Body>
+				
+				<Body _template="Fence" ModelFrame="BonePart2">
+					<Constraint _template="Fence" />
+				</Body>
+				<Body _template="Fence" ModelFrame="BoneFrameR">
+					<Constraint _template="Fence" />
+					<Body _template="Fence" ModelFrame="BonePart10">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart11">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart12">
+						<Constraint _template="Fence" />
+					</Body>
+					<Body _template="Fence" ModelFrame="BonePart13">
+						<Constraint _template="Fence" />
+					</Body>
+				</Body>
+			</Body>
+
+		</Body>
+	</PhysicsModel>
+	<Occlusion Size="(12.0, 6.0)" Texture="occlusion_rus_glg_fency_02.tga" />
+	<Landmark Mesh="landmarks/rus_glg_fency_02_02_lmk" />
+</ModelBrand>

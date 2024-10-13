@@ -1,0 +1,19 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_horn_2"/>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="1100"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_QUAD_ONESIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_QUAD_ONESIDE_NAME"
+		/>
+		<InstallSocket Type="BurlakHornOut" />
+	</GameData>
+</TruckAddon>

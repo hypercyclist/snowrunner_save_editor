@@ -1,0 +1,61 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_0_for_anim" />
+		</Body>
+	</PhysicsModel>
+	
+	<Subset Name="state_start" IsDefault="true">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+
+	<Subset Name="state_end" >
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_water_tower_loop" FadeInTime="2.5" FadeOutTime="1.0" RangeMin="30" RangeMax="150" IsLoop="true"/>
+		</OnSubsetActivateEvent>
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_state_end" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh_01"/>
+		<Mesh Name="animated_mesh_02"/>
+		<Mesh Name="mesh_0_for_anim"/>
+		<CdtMesh Name="mesh_0_for_anim"/>
+	</AnimSubset>
+
+	<TrackEvents TrackName="anim_state_end">
+		<AnimEvent Key="48">
+			<SFX Name="water_tower" Dir="(0; 1; 0)" Pos="(0; 0.5; 0)"/>
+		</AnimEvent>
+		<AnimEvent Key="50">
+			<Sound Name="actors/actor_construction/actor_construct_water_tower" Range="200" Volume="1"/>
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.946; 22.326; -5.103)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.946; 22.326; -5.103)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(5.862; 22.111; 0)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.946; 22.111; 5.077)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.931; 22.111; 5.077)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.862; 22.111; 0)" />
+		</AnimEvent>
+		<AnimEvent Key="52">
+		<SFX Dir="(0; 0; -1)" Name="bridge_sparks_01" Pos="(-0.768; 27.702; -5.215)" />
+		<SFX Dir="(0; 0; -1)" Name="bridge_sparks_01" Pos="(-3.547; 28.759; -2.636)" />
+		</AnimEvent>
+		<AnimEvent Key="54">
+		<SFX Dir="(0; 0; -1)" Name="bridge_sparks_01" Pos="(-0.543; 27.141; -5.497)" />
+		</AnimEvent>
+		<AnimEvent Key="53">
+		<SFX Dir="(0; 0; -1)" Name="bridge_sparks_01" Pos="(3.551; 26.409; -4.333)" />
+		<SFX Dir="(0; 0; -1)" Name="bridge_sparks_01" Pos="(4.089; 27.701; -3.359)" />
+		</AnimEvent>
+	</TrackEvents>
+
+	<Landmark Mesh="landmarks/water_tower_1_us_09_objective_lmk" />
+</ModelBrand>

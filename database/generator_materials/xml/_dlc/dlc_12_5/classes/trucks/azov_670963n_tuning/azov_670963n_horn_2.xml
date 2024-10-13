@@ -1,0 +1,20 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_670963n_tuning/azov_670963n_horn_2">
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_HORNS_TWIN_TWOSIDE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_HORNS_TWIN_TWOSIDE_NAME"
+		/>
+		<InstallSocket Type="Azov670963nHorn" />
+	</GameData>
+</TruckAddon>

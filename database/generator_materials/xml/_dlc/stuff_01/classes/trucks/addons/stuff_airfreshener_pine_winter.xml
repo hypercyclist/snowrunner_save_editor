@@ -1,0 +1,11 @@
+<_parent File="stuff_airfreshener_pine_aroma" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_airfreshener_pine_winter" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc UiName="UI_STUFF_AIRFRESHENER_PINE_WINTER_NAME" />
+	</GameData>
+</TruckAddon>

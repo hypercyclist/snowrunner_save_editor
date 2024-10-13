@@ -1,0 +1,28 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="3.7" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_exhaust_02">
+		<Body ImpactType="Truck" Mass="150">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="exhaust"
+		Category="exhaust"
+		Price="1800"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_OUTROLLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_OUTROLLED_NAME"
+		/>
+		<InstallSocket Type="Femm37atExhaust" />
+	</GameData>
+	<Exhaust Dir="(-1; 0.8; -1)" IsLight="false" Origin="(4.262; 4.193; -1.051)" Speed="3.82" />
+</TruckAddon>

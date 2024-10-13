@@ -1,0 +1,35 @@
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/hummer_h2_tuning/hummer_h2_spare_wheel">
+		<Body Collisions="None" ImpactType="Truck" Mass="30">
+			<Constraint Type="Rigid" />
+			<Body
+				Collisions="None"
+				Mass="20"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-.01;.01)" LinearLimitsZ="(-.031;.067)" Type="Fixed">
+					<Motor Damping="800" Spring="20" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="wheel_addon"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Type="HummerH2SpareWheel" />
+	</GameData>
+</TruckAddon>

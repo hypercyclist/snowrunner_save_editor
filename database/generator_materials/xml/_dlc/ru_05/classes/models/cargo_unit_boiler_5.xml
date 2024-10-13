@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="2500.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoBoiler" PackSlotsNumber="5">
+		<CraneSocket Pos="(0.000; 3; 0.000)" />
+    </GameData>
+	<Landmark Mesh="landmarks/cargo_unit_boiler_5_lmk" MinScale="1.8" MaxScale="1.9"/>
+</ModelBrand>

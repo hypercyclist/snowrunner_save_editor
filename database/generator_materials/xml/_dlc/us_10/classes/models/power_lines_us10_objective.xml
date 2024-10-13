@@ -1,0 +1,27 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="state_start" />
+		<CdtMesh Name="state_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="state_end" />
+		<CdtMesh Name="state_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_deconstruct_metal" Range="200" Volume="1"/>
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.268; 15.278; -2.165)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.270; 15.278; 2.300)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.189; 15.278; 2.298)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.189; 15.278; -2.164)" />
+			<SFX Name="burnt_storage_smoke" Dir="(0; 0.1; 0)" Pos="(0.0; 0.0; 0.0)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="state_start">
+			<Body Collisions="Dynamic" ModelFrame="state_end"/>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/power_lines_us10_objective_lmk" />
+</ModelBrand>

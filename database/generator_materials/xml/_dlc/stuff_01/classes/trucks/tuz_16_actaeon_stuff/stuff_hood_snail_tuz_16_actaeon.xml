@@ -1,0 +1,18 @@
+<_parent File="stuff_hood_snail_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_16_actaeon_stuff/stuff_hood_snail_tuz_16_actaeon">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodTuz16Actaeon" />
+	</GameData>
+</TruckAddon>

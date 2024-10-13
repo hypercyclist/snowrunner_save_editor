@@ -1,0 +1,30 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh"/>
+	</PhysicsModel>
+	<Subset IsDefault="true" Name="state_start">
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh" />
+		<Mesh Name="mesh_lod1" />
+		<Mesh Name="mesh_lod2" />
+		<Mesh Name="mesh_lod3" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_state" />
+		<AnimTrackSubset Name="anim_loop" />
+		<CdtMesh Name="cdt_mesh" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh"/>
+		<CdtMesh Name="cdt_mesh" />
+	</AnimSubset>
+	<TrackEvents TrackName="anim_state">
+		<AnimEvent Key="21">
+			<SFX Dir="(0; 1; 0)" Name="conveyor_smoke_02" Pos="(0.0; 0.263; 0.0)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/sensory_buoy_us12_objective_lmk" />
+</ModelBrand>

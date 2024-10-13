@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_90_stuff/sticker_door_r_1x1_land_rover_defender_90" />
+	<GameData>
+		<InstallSocket Type="landRoverDefenderStickerDoorR" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,13 @@
+<_templates Include="models"/>
+<ModelBrand Instanced="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			CenterOfMassOffset="(0; 0.1; 0)"
+			Mass="20"
+		>
+			<Constraint BreakOffThreshold="22" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Size="(5; 5)" Texture="occlusion_barrel_02.tga" />
+</ModelBrand>

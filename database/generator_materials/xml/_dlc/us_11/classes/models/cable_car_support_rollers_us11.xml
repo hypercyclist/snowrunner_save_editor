@@ -1,0 +1,13 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<SnapPoint Pos="(2.989; 0.969; -3.508)" />
+	<SnapPoint Pos="(2.989; 0.953; 3.508)" />
+	<SnapPoint Pos="(-2.989; 0.953; 3.508)" />
+	<SnapPoint Pos="(-2.989; 0.969; -3.509)" />
+	<PhysicsModel>
+		<Body Collisions="Dynamic"/>
+	</PhysicsModel>
+</ModelBrand>

@@ -32,5 +32,17 @@
 				<UiDesc UiDesc="UI_RIM_MEDIUM_DOUBLE_2_DESC" UiName="UI_RIM_MEDIUM_DOUBLE_2_NAME" />
 			</GameData>
 		</TruckRim>
+
+		<!-- New Wheels -->
+		<TruckRim Mesh="wheels/rim_medium_offroad_double_10" Name="JAT OHD I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_10_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_medium_offroad_double_11" Name="JAT OHD II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_11_NAME" />
+			</GameData>
+		</TruckRim>
 	</TruckRims>
 </TruckWheels>

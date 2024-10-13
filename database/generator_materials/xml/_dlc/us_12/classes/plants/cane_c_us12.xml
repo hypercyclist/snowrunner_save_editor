@@ -1,0 +1,29 @@
+<_templates Include="environment" />
+<PlantBrand
+	DisableShadows="true"
+	DistSkipPercentage="0.4"
+	LocalYOcclusionOffset="0.1"
+	PlantingGroups="Flower"
+	PlantingMinSpacing="0.2"
+	PlantingMaxWaterFlow="0.2"
+	IsEraseSnow="true"
+>
+	<PhysicsModel>
+		<Body _template="HugeTrunk" Collisions="None" ModelFrame="BoneRoot">
+			<Constraint _template="HugeTrunk" />
+			<Body _template="Cane" ModelFrame="BoneTrunk">
+				<Constraint _template="Cane" />
+			</Body>
+			<Body _template="Cane" ModelFrame="BoneTrunk1">
+				<Constraint _template="Cane" />
+			</Body>
+			<Body _template="Cane" ModelFrame="BoneTrunk2">
+				<Constraint _template="Cane" />
+			</Body>
+			<Body _template="Cane" ModelFrame="BoneTrunk3">
+				<Constraint _template="Cane" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.2" Size="(2.4; 2.4)" />
+</PlantBrand>

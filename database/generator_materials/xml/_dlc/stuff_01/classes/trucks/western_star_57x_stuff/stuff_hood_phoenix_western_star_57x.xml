@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_57x_stuff/stuff_hood_phoenix_western_star_57x" />
+	<GameData
+		CameraPreset="hood_ornament"
+		Category="hood_ornament"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_PHOENIX_NAME"
+		/>
+		<InstallSocket Type="StuffHood57X" />
+	</GameData>
+</TruckAddon>

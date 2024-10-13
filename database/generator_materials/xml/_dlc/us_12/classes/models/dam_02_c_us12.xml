@@ -1,0 +1,47 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+
+	<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(19.40; 61.142; 7.437)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(19.071; 57.02; -7.255)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(28.362; 57.02; -7.255)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/dam_02_c_us12_lmk" />
+</ModelBrand>

@@ -1,0 +1,35 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+<StaticLights>
+	        <!--lamp_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-1.353; 2.133; -1.955)"
+			Shadows="true"
+		/>
+		    <!--lamp_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(1.642; 2.133; -1.955)"
+			Shadows="true"
+		/>
+</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/box_office_us11_lmk"/>
+    </ModelBrand>

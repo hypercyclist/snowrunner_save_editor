@@ -18,6 +18,16 @@
 					<Motor Damping="0.32" Spring="0.5" Type="Spring" />
 				</Constraint>
 			</Body>
+			<Body Mass="1" Collisions="None" ModelFrame="BoneFootrestR_cdt">
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30">
+					<Motor Damping="12" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Mass="1" Collisions="None" ModelFrame="BoneFootrestL_cdt">
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="30">
+					<Motor Damping="12" Spring="5" Type="Spring" />
+				</Constraint>
+			</Body>
 		</Body>
 	</PhysicsModel>
 	<ModelAttachments _noinherit="true">

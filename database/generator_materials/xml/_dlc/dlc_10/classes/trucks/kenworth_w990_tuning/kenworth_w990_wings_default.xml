@@ -1,0 +1,28 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.99" Type="Suspension" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_wings_default">
+		<Body ImpactType="Truck" Mass="30" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_VORON_GRAD_AIR_BEACON_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_VORON_GRAD_AIR_BEACON_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="KenworthW990Wings" />
+	</GameData>
+</TruckAddon>

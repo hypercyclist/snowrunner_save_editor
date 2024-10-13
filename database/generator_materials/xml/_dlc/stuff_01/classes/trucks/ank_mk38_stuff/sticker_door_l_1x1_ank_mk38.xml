@@ -1,0 +1,14 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ank_mk38_stuff/sticker_door_l_1x1_ank_mk38" >
+		<Body Collisions="None" Mass="0.1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+			<InstallSocket Type="ankMk38Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

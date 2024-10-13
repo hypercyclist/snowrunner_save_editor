@@ -32,7 +32,6 @@
 			</Body>
 			<Body
 				_template="LimitsZ"
-				LinearDamping="2"
 				Mass="60"
 				ModelFrame="BoneRepairFuel2_cdt"
 			>
@@ -40,7 +39,6 @@
 			</Body>
 			<Body
 				_template="LimitsZ"
-				LinearDamping="2"
 				Mass="40"
 				ModelFrame="BoneWheel2_cdt"
 			>

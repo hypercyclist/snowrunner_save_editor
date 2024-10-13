@@ -1,0 +1,144 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	AcceptZoneBorderDecals="true"
+	DynamicModel="true"
+>
+	<StaticLights>
+
+		<StaticLight
+			AttenEnd="8.5"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-4.242; 7.716; 1)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="8.5"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(4.234; 7.716; 1)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="8.5"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(-4.242; 7.716; 4.198)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="8.5"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="25"
+			Pos="(4.234; 7.716; 4.198)"
+			Shadows="true"
+		/>
+
+		<!-- LAMP LD -->
+		<StaticLight
+			Dir="(1; -0.1; 1)"
+			Pos="(-4.312; 3.980; -8.750)"
+			AttenEnd="11"
+			Color="g(0; 208; 255) x 10"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="65"
+			Shadows="true"
+		/>
+		<!-- LAMP RD -->
+		<StaticLight
+			Dir="(-1; -0.1; 1)"
+			Pos="(4.312; 3.980; -8.750)"
+			AttenEnd="11"
+			Color="g(0; 208; 255) x 10"
+			CreateSuperLight="true"
+			InnerCone=""
+			OuterCone="65"
+			Shadows="true"
+		/>
+		<!-- LAMP LT -->
+		<StaticLight
+			Dir="(1; -0.1; -1)"
+			Pos="(-4.312; 3.980; 6.985)"
+			AttenEnd="11"
+			Color="g(255; 107; 0) x 10"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="65"
+			Shadows="true"
+		/>
+		<!-- LAMP RT -->
+		<StaticLight
+			Dir="(-1; -0.1; -1)"
+			Pos="(4.312; 3.980; 6.985)"
+			AttenEnd="11"
+			Color="g(255; 107; 0) x 10"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="65"
+			Shadows="true"
+		/>
+	</StaticLights>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="scene" DamageMult="0">
+			<Body Collisions="Dynamic" ModelFrame="lighters" />
+			<Body Collisions="Dynamic" ModelFrame="lamp" />
+		</Body>
+	</PhysicsModel>
+
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="scene" />
+		<CdtMesh Name="scene" />
+		<Mesh Name="lighters" />
+		<CdtMesh Name="lighters" />
+		<Mesh Name="lamp" />
+		<CdtMesh Name="lamp" />
+		<AnimTrackSubset Name="anim_loop" />
+	</Subset>
+
+	<Subset Name="build_stage_1">
+		<Mesh Name="scene" />
+		<CdtMesh Name="scene" />
+		<Mesh Name="lighters" />
+		<CdtMesh Name="lighters" />
+		<Mesh Name="lamp" />
+		<CdtMesh Name="lamp" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_stage_1" />
+		<AnimTrackSubset Name="anim_loop" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="scene" />
+		<CdtMesh Name="scene" />
+		<Mesh Name="lamp" />
+		<CdtMesh Name="lamp" />
+		<Mesh Name="lighters-winner" />
+		<CdtMesh Name="lighters-winner" />
+	</AnimSubset>
+
+	<TrackEvents TrackName="anim_stage_1">
+
+		<!-- <AnimEvent Key="40">
+			<SFX Name="truck_destroy_mid" Dir="(0; 1; 0)" Pos="(2.244; 1.183; -8.376)" />
+		</AnimEvent>  -->
+
+	</TrackEvents>
+
+	<Landmark Mesh="landmarks/race_scene_us07_lmk" />
+
+</ModelBrand>

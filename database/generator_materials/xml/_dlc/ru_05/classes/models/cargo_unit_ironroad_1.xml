@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="2500.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoIronRoad" PackSlotsNumber="4">
+		<CraneSocket Pos="(0.000; 1.700; 0.000)" />
+    </GameData>
+	<Landmark Mesh="landmarks/cargo_unit_ironroad_1_lmk" MinScale="1.8" MaxScale="3.8"/>
+</ModelBrand>

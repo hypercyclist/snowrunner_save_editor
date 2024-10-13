@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k7m_stuff/stuff_hood_horns_kirovets_k7m" />
+	<GameData
+		CameraPreset="hood_ornament"
+		Category="hood_ornament"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		TrialsToUnlock="4"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_HORNS_NAME"
+		/>
+		<InstallSocket Type="StuffHoodKirovetsk7m" />
+	</GameData>
+</TruckAddon>

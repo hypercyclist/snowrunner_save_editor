@@ -1,0 +1,11 @@
+<_parent File="stuff_airfreshener_card_clubs" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_airfreshener_card_diamonds" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc UiName="UI_STUFF_AIRFRESHENER_CARD_DIAMONDS_NAME" />
+	</GameData>
+</TruckAddon>

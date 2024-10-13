@@ -1,0 +1,121 @@
+<DistributionBrushes>
+	<Plants>
+
+		<FirsKZ LinkedGrassBrush="LeavesFirs" PlantsPerBlock="32">
+			<PlantType
+				Brand="spruce_01_ru13"
+				Divergence="0.04"
+				MinMapScale="0.2"
+				MinSize="0.8"
+				MaxSize="1.2"
+			/>			
+		</FirsKZ>
+		<AspensKZ LinkedGrassBrush="LeavesAutumn" PlantsPerBlock="26">
+			<PlantType
+				Brand="aspen_dry_01"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.1"
+				Perpendicularity="0.1"
+			/>
+		<PlantType
+				Brand="aspen_01_ru13"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.3"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="aspen_02_ru13"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.1"
+				Perpendicularity="0.1"
+			/>			
+		</AspensKZ>	
+		
+		<BirchesKZs LinkedGrassBrush="LeavesAutumn" PlantsPerBlock="26">
+			<PlantType
+				Brand="birch_01_ru13"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="0.1"
+			/>
+		</BirchesKZs>	
+		<BirchesKZm LinkedGrassBrush="LeavesAutumn" PlantsPerBlock="26">
+			<PlantType
+				Brand="birch_dry_01"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.1"
+				Perpendicularity="0.1"
+			/>
+		<PlantType
+				Brand="birch_02_ru13"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="birch_02_driedup_ru13"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="birch_02_tall_ru13"
+				Divergence="0.06"
+				MinSize="0.6"
+				MaxSize="0.8"
+				Perpendicularity="0.1"
+			/>
+		</BirchesKZm>	
+		<BirchesKZtall LinkedGrassBrush="LeavesAutumn" PlantsPerBlock="26">
+			<PlantType
+				Brand="birch_03_ru13"
+				Divergence="0.06"
+				MinSize="0.7"
+				MaxSize="1"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="birch_03_tall_ru13"
+				Divergence="0.06"
+				MinSize="0.7"
+				MaxSize="1.0"
+				Perpendicularity="0.1"
+			/>
+		</BirchesKZtall>	
+		
+		<SmallRocksKZ LinkedGrassBrush="DebrisStones" PlantsPerBlock="700">
+			<PlantType
+				Brand="small_rock_01a_ru13"
+				Divergence="0.04"
+				MinSize="0.8"
+				MaxMapScale="0.5"
+				MaxSize="2.5"
+				Perpendicularity="1.0"
+			/>
+			<PlantType
+				Brand="small_rock_01b_ru13"
+				Divergence="0.04"
+				MinMapScale="0.2"
+				MinSize="1.2"
+				MaxMapScale="0.8"
+				MaxSize="2.8"
+				Perpendicularity="1.0"	
+			/>
+			<PlantType
+				Brand="small_rock_01c_ru13"
+				Divergence="0.04"
+				MinMapScale="0.5"
+				MinSize="1.2"
+				MaxSize="2.5"
+				Perpendicularity="1.0"
+			/>
+		</SmallRocksKZ>
+	</Plants>
+</DistributionBrushes>

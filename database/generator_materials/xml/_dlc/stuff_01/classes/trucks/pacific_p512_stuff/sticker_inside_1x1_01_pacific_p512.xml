@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p512_stuff/sticker_inside_1x1_01_pacific_p512" />
+	<GameData CameraPreset="sticker">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME" />
+		<InstallSocket Type="pacificP512Sticker_1x1_01" />
+	</GameData>
+</TruckAddon>

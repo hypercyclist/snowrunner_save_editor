@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ford_clt9000_stuff/sticker_roof_1x1_ford_clt9000" />
+	<GameData>
+			<InstallSocket Type="fordClt9000Sticker_Roof" />
+	</GameData>
+</TruckAddon>

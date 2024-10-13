@@ -1,0 +1,32 @@
+<ModelBrand 
+	Instanced="true" 
+	NightLightingShadowsAllowCap="true"
+	BreakType="ClayJug"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_5" >
+			<Constraint Type="Fixed" BreakOffThreshold="30" />
+				<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_1" >
+					<Constraint Type="Fixed" BreakOffThreshold="30" />
+					<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_2" >
+					<Constraint Type="Fixed" BreakOffThreshold="1" />
+					<Body Collisions="Dynamic" Mass="30" NoSoftContacts="True" ModelFrame="Bone_piece_4" >
+						<Constraint Type="Fixed" BreakOffThreshold="35" />
+						<Body Collisions="Dynamic" Mass="30" NoSoftContacts="True" ModelFrame="Bone_piece_3" >
+							<Constraint Type="Fixed" BreakOffThreshold="35" />
+						</Body>
+					</Body>
+				</Body>
+				<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_0" >
+					<Constraint Type="Fixed" BreakOffThreshold="1" />
+					<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_6" >
+						<Constraint Type="Fixed" BreakOffThreshold="20" />
+					</Body>
+				</Body>
+				<Body Collisions="Dynamic" Mass="10" NoSoftContacts="True" ModelFrame="Bone_piece_7" >
+					<Constraint Type="Fixed" BreakOffThreshold="1" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

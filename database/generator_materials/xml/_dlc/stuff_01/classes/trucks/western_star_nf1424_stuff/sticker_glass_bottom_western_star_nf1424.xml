@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_nf1424_stuff/sticker_glass_bottom_western_star_nf1424" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_2x16_LOADWHEEL_NAME" />
+		<InstallSocket Type="westernStarNf1424Sticker_GlassBot" />
+	</GameData>
+</TruckAddon>

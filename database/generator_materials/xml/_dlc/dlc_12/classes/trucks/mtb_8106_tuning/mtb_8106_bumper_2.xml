@@ -1,0 +1,53 @@
+<_templates Include="trucks">
+	<Body>
+		<Mudguard Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-28"
+				MaxLimit="14"
+			>
+				<Motor Damping="2" Spring="1" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.75" Type="Engine"/>
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_bumper_2">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftFrontMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="14" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightFrontMudguard_cdt"/>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(1.989; 0.731; 0.586)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(2.004; 0.731; 0.518)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(2.004; 0.731; -0.518)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(240; 225; 215) x 0.2" Size="0.3" Pos="(1.989; 0.731; -0.586)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_FOGLIGHTER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_FOGLIGHTER_NAME"
+		/>
+		<InstallSocket Type="MTB8106Bumper" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,20 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true">
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+						<Sound Name="cargo/cargo_barrels" Volume="1"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/rus_broken_pumptower_02_objective_lmk"/>
+</ModelBrand>

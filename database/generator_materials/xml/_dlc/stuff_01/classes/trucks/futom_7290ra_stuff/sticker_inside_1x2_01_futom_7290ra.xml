@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/futom_7290ra_stuff/sticker_inside_1x2_01_futom_7290ra" />
+	<GameData
+		CameraPreset="sticker_inside_1x2_01"
+		Category="sticker"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"
+		/>
+		<InstallSocket Type="Futom7290RaSticker_1x2_01" />
+	</GameData>
+</TruckAddon>

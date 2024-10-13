@@ -15,18 +15,18 @@
 	<PhysicsModel Mesh="trucks/cat_ct681_tuning/cat_ct681_spot_light_2" />
 	<ModelAttachments _noinherit="True">
 		<MainHeadLight>
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.573)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.523)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.474)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.424)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.375)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; -0.325)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.325)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.375)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.424)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.474)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.523)" />
-			<Flare _template="LED01" Pos="(0.169; 3.018; 0.573)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.573)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.523)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.474)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.424)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.375)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; -0.325)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.325)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.375)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.424)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.474)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.523)" />
+			<Flare _template="LED01" Dir="(1; 0; 0)" Pos="(0.169; 3.018; 0.573)" />
 		</MainHeadLight>
 	</ModelAttachments>
 	<GameData

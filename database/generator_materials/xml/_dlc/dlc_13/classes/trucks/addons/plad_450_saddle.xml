@@ -1,0 +1,25 @@
+<_parent File="saddle_high" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/plad_450_saddle">
+		<Body Mass="40">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="0"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_SADDLE_HIGH_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_SADDLE_HIGH_NAME"
+		/>
+		<RequiredAddonType Type="SaddleHigh" TypeUiName="UI_REQUIRED_ADDON_TYPE_SADDLE_HIGH" />
+		<InstallSocket Type="Plad450Saddle" />
+	</GameData>
+</TruckAddon>

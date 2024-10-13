@@ -1,0 +1,24 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(242; 252; 220) x 3"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="150"
+			Pos="(0.0; 2.7; 0.3)"
+			Shadows="false"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0; 0.8; 0)" />
+	</GameData>
+</ModelBrand>

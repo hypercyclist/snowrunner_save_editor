@@ -1,0 +1,751 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<FrontWheel
+			ConnectedToHandbrake="true"
+			Location="front"
+			SteeringAngle="30"
+			SteeringCastor="8"
+			SteeringJointOffset="0.22"
+			Torque="full"
+		/>
+	</Wheel>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="5"
+			>
+				<Motor Damping="0.7" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Belt Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.1"
+				MaxLimit="0.085"
+			>
+				<Motor Damping="30" Spring="200" Type="Spring" />
+			</Constraint>
+		</Belt>
+		<BeltRear Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Prismatic"
+				MinLimit="-0.05"
+				MaxLimit="0.03"
+			>
+				<Motor Damping="30" Spring="210" Type="Spring" />
+			</Constraint>
+		</BeltRear>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-9"
+				MaxLimit="10"
+			>
+				<Motor Damping="0.02" Spring="5" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.05"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="0.74"
+		SuspensionMarkerOffset="(-4; 0; 0;)"
+		EngineStartDelay="1.8"
+		ExhaustStartTime="1.6"
+		FuelCapacity="80"
+		Responsiveness="0.6"
+		SteerSpeed="0.03"
+		TruckImage="rezvanitankmchr"
+		TruckType="SCOUT"
+	>
+		<WinchUpgradeSocket Default="w_scout_default" IsUpgradable="true" Type="winches_scouts" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_rezvani_tank"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.536; 0.469; 0.885)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.536; 0.469; 0.885)" />
+			<Wheel _template="RearWheel" Pos="(-1.458; 0.469; 0.884)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.458; 0.469; 0.884)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="rezvani_tank_suspension_default"
+			Type="s_rezvani_tank"
+			MaxWheelRadiusWithoutSuspension="0.36"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.5475"
+		/>
+		<Steam Origin="(1.314; 0.884; -0.022)" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Scout" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			Origin="(1.33; 0.990; 0)"
+			MinDist="8.0"
+		>
+			<GearFail		Sound="trucks/common/truck_gear_wrong/truck_gear_wrong_small_modern" />
+			<Reverse		Sound="" />
+			<BrakePull		Sound="" />
+			<BrakeRelease	Sound="" />
+			<BrakesSqueal	Sound="trucks/rezvani_tank/rezvani_tank_brakes_squeal" />
+			<Gear			Sound="trucks/rezvani_tank/rezvani_tank_gear_shift" />
+			<Handbrake		Sound="trucks/rezvani_tank/rezvani_tank_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/rezvani_tank/rezvani_tank_handbrake_off" />
+			<AWD			Sound="trucks/rezvani_tank/rezvani_tank_awd" />
+			<Honk			Sound="trucks/rezvani_tank/rezvani_tank_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/rezvani_tank/rezvani_tank_acc" />
+			<EngineStart	Sound="trucks/rezvani_tank/rezvani_tank_start" />
+			<EngineStop		Sound="trucks/rezvani_tank/rezvani_tank_stop" />
+			<EngineIdle		Sound="trucks/rezvani_tank/rezvani_tank_idle" />
+			<EngineIdle_2d	Sound="trucks/rezvani_tank/rezvani_tank_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/rezvani_tank/rezvani_tank_low" />
+			<EngineLow_2d	Sound="trucks/rezvani_tank/rezvani_tank_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/rezvani_tank/rezvani_tank_high" />
+			<EngineHigh_2d	Sound="trucks/rezvani_tank/rezvani_tank_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/hummer_h2/hummer_h2_chassis" />
+			<AbruptStop		Sound="" />
+		</Sounds>
+		<Shafts>
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft Mesh="env/minishaft" SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<Shakers>
+			<!-- <Shaker Frame="BoneExhaustL" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(2.100; 2.100; 2.100)" MaxFrequency="3.4" /> -->
+			<!-- <Shaker Frame="BoneExhaustR" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(2.100; 2.100; 2.100)" MaxFrequency="3.3" /> -->
+			<Shaker Frame="BoneGearStick" MaxAngle="(2; 2; 2)" MaxFrequency="0.9" />
+			<Shaker Frame="BoneShaker2" MaxAngle="(4; 4; 4)" MaxFrequency="0.4" />
+		</Shakers>
+		<OcclusionMap
+			HalfSizeZ="1.85"
+			Texture="trucks/occlusion/chassis_small__s_d_a.tga"
+			MinX="-2.5"
+			MaxX="2.6"
+		/>
+		<LimitedFluid Center="(-0.404; 0.567; 0.274)" SizeX="0.852" SizeY="0.160" SizeZ="0.403" Type="Box"/>
+		<Intake Origin="(2.079; 1.099; 0)" Size="0.45" />
+		<GearboxSocket Default="g_scout_default" Type="gearboxes_scouts, gearboxes_special_rezvani_tank" />
+		<FuelTank DamageCapacity="80" />
+		<EngineSocket Default="us_scout_modern_engine_0" Type="e_us_scout_modern" />
+		<Driver AnimationSet="Scout" Pos="(-0.052; 0.975; 0.371)" LegsOffset="(0; 0.05; 0)" SteeringWheelPos="(0.25; 1.432; 0.371)" />
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.89; 0.64; -0.365)" Max="(1.746; 1.145; 0.365)" ParentFrame="BoneChassis_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.865, 0.48, 0.073)" Max="(0.058, 0.657, 0.477)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.983; 0.185; 0.007)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/rezvani_tank_arrow_1" Org="(0.472; 1.443; 0.460)" OutputAngles="(-134; 0)" />
+			<Gauge Dir="(-0.983; 0.185; 0.007)" InputRange="(0;200)" InputType="speed" Mesh="trucks/arrows/rezvani_tank_arrow_1" Org="(0.476; 1.442; 0.282)" OutputAngles="(-130; 128)" />
+			<Gauge Damping="0.99" Dir="(-0.96; 0.279; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_2" Org="(0.461; 1.496; 0.426)" OutputAngles="(142; 106)" />
+			<Gauge Damping="0.99" Dir="(-0.96; 0.279; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/rezvani_hercules_6x6_arrow_2" Org="(0.461; 1.496; 0.316)" OutputAngles="(-142; -91)" />
+		</Dashboard>
+		
+		<CompatibleWheels Scale="0.47" Type="wheels_rezvani_tank" />
+		<CompatibleWheels Scale="0.49" Type="wheels_rezvani_tank" />
+		
+		<CompatibleWheels Scale="0.47" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout1" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout2" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout2" />
+		
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_offroad" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_offroad" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_mudtires" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_allterrain_chain" />
+		
+		<Camera Center="(-1.3; 0; 0)" RadiusMultiplier="0.8">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/rezvani_tank_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/rezvani_tank_glass__sh_d.tga"
+				ViewPos="(-0.15; 1.68; 0.36)"
+				LimitsVer="(-0.35; 0.2)"
+			>
+				<Rear ViewPosOffset="(0.325; -0.1; 0.55)" />
+				<Mirror ClipDir="(-0.815; 0.03; -0.264)" FOVScale="1.5" MeshFrame="mirror_left" ReflectionDir="(-0.815; 0.03; -0.264)" Size="(0.176; 0.19)" Pos="(0.432; 1.548; 0.940)" />
+				<Mirror ClipDir="(-0.81; 0.03; 0.472)" FOVScale="1.5" MeshFrame="mirror_right" ReflectionDir="(-0.81; 0.03; 0.472)" Size="(0.176; 0.19)" Pos="(0.432; 1.548; -0.940)" />
+				<Mirror ClipDir="(-0.75; -0.045; 0.25)" ClipOffset="0.15" FOVScale="1.5" MeshFrame="mirror_cab" ReflectionDir="(-0.75; -0.07; 0.25)" Size="(0.22; 0.1)" Pos="(0.290; 1.738; 0)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(2.228; 1.198; 0)" />
+	<PhysicsModel Mesh="trucks/rezvani_tank">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0.2; -0.3; 0)"
+			ImpactType="Truck"
+			Mass="2000"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				ImpactType="Truck"
+				Mass="1700"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorL_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="SideMirror" ModelFrame="BoneMirrorR_cdt">
+					<Constraint AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body _template="Belt" ModelFrame="BoneBelt1_cdt" />
+				<Body _template="BeltRear" ModelFrame="BoneBelt2_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshield_cdt" />
+				<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+					<Constraint
+						AxisLocal="(0; -1; 0)"
+						Name="TieRodSteer"
+						MinLimit="-15"
+						MaxLimit="0"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.329; 1.562; 0)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="StopSignal" DirAngle="135" Dir="(0; 0; -1)" Size=".4" Pos="(-1.749; 1.643; -0.903)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" DirAngle="135" Dir="(0; 0; 1)" Size=".4" Pos="(-1.749; 1.643; 0.903)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.870; 1.632; 0.843)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.877; 1.632; 0.827)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.886; 1.632; 0.807)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.895; 1.632; 0.787)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.903; 1.632; 0.771)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.894; 1.647; 0.767)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.883; 1.665; 0.764)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.872; 1.682; 0.761)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.863; 1.699; 0.755)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.861; 1.712; 0.741)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.865; 1.719; 0.723)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.871; 1.723; 0.704)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.878; 1.726; 0.684)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.883; 1.730; 0.667)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.875; 1.743; 0.666)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.866; 1.756; 0.665)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.860; 1.754; 0.681)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.853; 1.751; 0.702)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.845; 1.748; 0.722)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.838; 1.745; 0.742)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.831; 1.741; 0.761)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.825; 1.738; 0.781)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.818; 1.733; 0.800)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.816; 1.725; 0.818)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.822; 1.708; 0.830)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.835; 1.688; 0.834)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.847; 1.668; 0.837)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.860; 1.647; 0.840)" ParentFrame="BoneCabin_cdt"/>
+			
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.888; 1.603; 0.847)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.895; 1.603; 0.831)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.903; 1.603; 0.811)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.912; 1.603; 0.791)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.920; 1.603; 0.776)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.930; 1.587; 0.777)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.943; 1.566; 0.779)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.956; 1.546; 0.782)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.970; 1.526; 0.783)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.984; 1.509; 0.779)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.998; 1.496; 0.767)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.011; 1.489; 0.749)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.023; 1.484; 0.729)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.035; 1.479; 0.710)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.07; 1.474; 0.689)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.058; 1.470; 0.673)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.066; 1.456; 0.674)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.076; 1.442; 0.677)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.067; 1.445; 0.693)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.055; 1.449; 0.712)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.044; 1.453; 0.731)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.033; 1.457; 0.750)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.021; 1.462; 0.769)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.010; 1.466; 0.787)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.998; 1.471; 0.806)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.986; 1.477; 0.824)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.974; 1.484; 0.842)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.960; 1.495; 0.854)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.947; 1.512; 0.858)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.935; 1.531; 0.856)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.922; 1.550; 0.854)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.910; 1.568; 0.852)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.898; 1.588; 0.849)" ParentFrame="BoneCabin_cdt"/>
+			
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.870; 1.632; -0.843)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.877; 1.632; -0.827)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.886; 1.632; -0.807)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.895; 1.632; -0.787)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.903; 1.632; -0.771)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.894; 1.647; -0.767)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.883; 1.665; -0.764)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.872; 1.682; -0.761)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.863; 1.699; -0.755)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.861; 1.712; -0.741)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.865; 1.719; -0.723)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.871; 1.723; -0.704)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.878; 1.726; -0.684)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.883; 1.730; -0.667)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.875; 1.743; -0.666)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.866; 1.756; -0.665)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.860; 1.754; -0.681)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.853; 1.751; -0.702)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.845; 1.748; -0.722)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.838; 1.745; -0.742)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.831; 1.741; -0.761)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.825; 1.738; -0.781)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.818; 1.733; -0.800)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.816; 1.725; -0.818)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.822; 1.708; -0.830)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.835; 1.688; -0.834)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.847; 1.668; -0.837)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.860; 1.647; -0.840)" ParentFrame="BoneCabin_cdt"/>
+			
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.888; 1.603; -0.847)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.895; 1.603; -0.831)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.903; 1.603; -0.811)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.912; 1.603; -0.791)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.920; 1.603; -0.776)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.930; 1.587; -0.777)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.943; 1.566; -0.779)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.956; 1.546; -0.782)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.970; 1.526; -0.783)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.984; 1.509; -0.779)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.998; 1.496; -0.767)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.011; 1.489; -0.749)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.023; 1.484; -0.729)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.035; 1.479; -0.710)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.07; 1.474; -0.689)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.058; 1.470; -0.673)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.066; 1.456; -0.674)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.076; 1.442; -0.677)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.067; 1.445; -0.693)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.055; 1.449; -0.712)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.044; 1.453; -0.731)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.033; 1.457; -0.750)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.021; 1.462; -0.769)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-2.010; 1.466; -0.787)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.998; 1.471; -0.806)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.986; 1.477; -0.824)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.974; 1.484; -0.842)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.960; 1.495; -0.854)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.947; 1.512; -0.858)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.935; 1.531; -0.856)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.922; 1.550; -0.854)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.910; 1.568; -0.852)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="StopSignal" DirAngle="135" Dir="(-1; 0; 0)" Size=".06" SizeMultAtDay="0.6" AspectRatio="1" Pos="(-1.898; 1.588; -0.849)" ParentFrame="BoneCabin_cdt"/>
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Pos="(-2.375; 1.063; -0.782)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Pos="(-2.375; 1.063; 0.782)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Size="0.3" Pos="(-2.083; 1.063; -0.782)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Color="g(220; 220; 225) x 0.5" Size="0.3" Pos="(-2.083; 1.063; 0.782)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.15" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.083; 1.063; -0.782)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.15" Dir="(-1; 0; 0)" Size="0.2" Pos="(-2.083; 1.063; 0.782)" ParentFrame="BoneCabin_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.9" Pos="(2.671; 0.633; -0.718)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.9" Pos="(2.671; 0.633; 0.718)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".2" Color="g(197; 233; 250) x 0.7" Size="0.19" Pos="(2.038; 1.149; -0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".2" Color="g(197; 233; 250) x 0.7" Size="0.19" Pos="(2.038; 1.149; 0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".2" Color="g(197; 233; 250) x 0.7" Size="0.19" Pos="(1.981; 1.158; -0.717)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".2" Color="g(197; 233; 250) x 0.7" Size="0.19" Pos="(1.981; 1.158; 0.717)" ParentFrame="BoneCabin_cdt" />
+			
+			<!-- flares headlights -->
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.124; 1.193; 0.538)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.118; 1.193; 0.556)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.112; 1.194; 0.573)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.104; 1.195; 0.588)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.095; 1.196; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.088; 1.196; 0.617)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.081; 1.198; 0.630)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.073; 1.198; 0.645)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.065; 1.200; 0.658)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.055; 1.200; 0.672)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.047; 1.202; 0.686)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.037; 1.203; 0.700)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.028; 1.204; 0.714)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.019; 1.206; 0.727)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.010; 1.206; 0.740)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.002; 1.207; 0.752)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.992; 1.208; 0.766)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.984; 1.209; 0.777)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.977; 1.203; 0.784)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.193; 0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.182; 0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.168; 0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.152; 0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.137; 0.789)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.124; 1.193; -0.538)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.118; 1.193; -0.556)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.112; 1.194; -0.573)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.104; 1.195; -0.588)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.095; 1.196; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.088; 1.196; -0.617)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.081; 1.198; -0.630)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.073; 1.198; -0.645)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.065; 1.200; -0.658)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.055; 1.200; -0.672)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.047; 1.202; -0.686)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.037; 1.203; -0.700)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.028; 1.204; -0.714)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.019; 1.206; -0.727)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.010; 1.206; -0.740)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(2.002; 1.207; -0.752)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.992; 1.208; -0.766)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.984; 1.209; -0.777)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.977; 1.203; -0.784)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.193; -0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.182; -0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.168; -0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.152; -0.789)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.1" Size="0.07" Pos="(1.971; 1.137; -0.789)" ParentFrame="BoneCabin_cdt" />
+			
+			<!--LED-->
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.340)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.290)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.240)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.164)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; -0.013)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.012)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.113)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.138)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.163)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.239)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.264)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.289)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="LED" Pos="(0.269; 1.981; 0.340)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.340)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.290)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.265)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.240)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.164)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.139)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; -0.013)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.012)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.038)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.063)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.088)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.113)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.138)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.163)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.189)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.214)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.239)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.264)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.289)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.315)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(197; 233; 250) x 0.14" Size="0.12" Pos="(0.269; 1.981; 0.340)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Mesh="env/light_ray_white" Org="(2.067; 1.157; -0.667)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Mesh="env/light_ray_white" Org="(2.067; 1.157; 0.667)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.2" Pos="(2.033; 1.148; -0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.2" Pos="(2.033; 1.148; 0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.2" Pos="(2.08; 1.159; -0.718)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.2" Pos="(2.08; 1.159; 0.718)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.033; 1.148; -0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.033; 1.148; 0.602)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.08; 1.159; -0.718)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.07" Size="0.7" Pos="(2.08; 1.159; 0.718)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.5" Pos="(0.267; 1.984; -0.186)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.5" Pos="(0.267; 1.984; 0.186)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 255; 255) x 0.37" Size="0.5" Pos="(0.266; 1.986; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(255; 255; 255) x 0.07" Size="0.7" Pos="(0.267; 1.984; -0.186)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(255; 255; 255) x 0.07" Size="0.7" Pos="(0.267; 1.984; 0.186)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(255; 255; 255) x 0.07" Size="0.7" Pos="(0.266; 1.986; 0)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Color="g(197; 233; 250) x 6.5" Pos="(2.320; 1.040; 0)" />
+	<Landmark Mesh="landmarks/rezvani_tank_lmk" MinScale="1.8" MaxScale="3.8" />
+	<GameData Country="US,NE,CE" Price="4400" UnlockByRank="1">
+		<WinchSocket Pos="(2.357; 0.557; 0)" />
+		<WinchSocket Pos="(-0.057; 0.593; -0.923)" />
+		<WinchSocket Pos="(-0.057; 0.593; 0.923)" />
+		<WinchSocket Pos="(-2.199; 0.641; 0.573)" />
+		<WinchSocket Pos="(-2.199; 0.641; -0.573)" />
+		<WinchSocket Pos="(-2.204; 0.546; 0.0)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_REZVANI_TANK_DESC"
+			UiIcon30x30="scoutVehicleImg30"
+			UiIcon328x458="shopImgRezvaniTank"
+			UiIcon40x40="scoutVehicleImg"
+			UiIconLogo="RezvaniLogo80"
+			UiName="UI_VEHICLE_REZVANI_TANK_NAME"
+		/>
+		<CustomizationCameras>
+			<!-- MAIN CAMERAS -->
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(6; 0.976; -0.2)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.332; 1.526; -4.276)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(5.892; 0.953; -1.034)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.138; 1.941; -2.869)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(7.126; 1.143; -0.167)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.6; 2.343; 2.594)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(6; 0.413; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.421; 0.7; -3.51)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(4.6; 0.92; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-1.104; 2.037; 3.756)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(6.197; 0.875; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.073; 1.8; -3.949)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(4.5; 1.6; -0.4)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9; 4; -2.2)" />
+			<!-- ADDONS -->
+			<CameraPos FOV="32.0" Name="fenders" InterestPosition="(5.323; 1.205; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12; 2; -3.9)" />
+			<CameraPos FOV="32.0" Name="snorkel" InterestPosition="(5.5; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.8; 3.041; -1.8)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.977; 1.692; -0.304)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-2.812; 4.052; -4.545)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(5.9; 0.8; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(10.332; 3.8; -3.8)" />
+			<CameraPos FOV="32.0" Name="rear_trunk" InterestPosition="(3.796; 1.352; 0.798)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(1.3; 2.154; 1.82)" />
+			<!-- STICKERS -->
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(3.926; 0.199; -0.752)" Position="(8.265; 5.7; -0.572)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.069; 1.207; 1.403)" Position="(4.724; 1.649; 0.038)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_left" InterestPosition="(6.6; 1.558; -1.615)" Position="(5.111; 1.67; 0.636)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(4.478; 1.558; 1.615)" Position="(5.111; 1.67; -0.636)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.641; 0.845; 0.614)" Position="(3.531; 1.748; 3.705)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.682; 0.991; -0.206)" Position="(3.897; 1.535; -3.738)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(6.106; 1.125; -0.684)" Position="(10.72; 2.827; 1.399)" />
+			<!-- STUFF -->
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(6.7; 1.050; -0.8)" Position="(9; 1.46; -1.4)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(8.227; 0.596; 0.538)" Position="(4.793; 1.785; -0.119)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(8.227; 0.962; 1.41)" Position="(4.677; 1.682; -0.12)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(-0.553; 2.036; 0)" />
+		<CraneSocket Pos="(2.357; 0.557; 0)" />
+		<CraneSocket Pos="(-0.057; 0.593; -0.923)" />
+		<CraneSocket Pos="(-0.057; 0.593; 0.923)" />
+		<CraneSocket Pos="(-2.204; 0.546; 0.0)" />
+		<AddonSockets DefaultAddon="rezvani_tank_bumper_default">
+			<Socket Names="RezvaniTankBumper" />
+			<Socket Names="RezvaniTankBumper1" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="rezvani_tank_bumper_rear_default">
+			<Socket Names="RezvaniTankBumperRear" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankSnorkel" ParentFrame="BoneCabin_cdt" />
+			<Socket Names="RezvaniTankSnorkelShort" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankHorn" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankThreshold" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankFender" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankRoofrack" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankProtector" NamesBlock="RezvaniTankBumper" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankVisor" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankSpotlight" NamesBlock="RezvaniTankSnorkel" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankRepairBox" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="rezvani_tank_diff_lock_default">
+			<Socket Names="RezvaniTankDiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x1_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x2_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x2_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_1x4_02" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankSticker_Door_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankSticker_Door_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="RezvaniTankSticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="RezvaniTankSticker_GlassBot" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodRezvaniTank" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.328; 1.755; 0)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(0.509; 1.54; 0.222)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+	
+		<IKBone ModelFrame="BoneFrontBalancerBase" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(-0.018; -0.18; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BoneFrontBalancer"
+			>
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			</IKBone>
+		</IKBone>
+	
+		<IKBone ModelFrame="BonePistonFrontR1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonFrontR2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonFrontL1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle1"
+				ModelFrame="BonePistonFrontL2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BonePistonRearBottomR1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonRearBottomR2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRearBottomL1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonRearBottomL2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRearTopR1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonRearTopR2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BonePistonRearTopL1" ParentFrame="BoneChassis_cdt">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneAxle2"
+				ModelFrame="BonePistonRearTopL2"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneTieRod2" ParentFrame="BoneTieRod1_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneTieRod3"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

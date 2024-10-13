@@ -1,0 +1,14 @@
+<_templates Include="environment" />
+<PlantBrand
+	DistSkipPercentage="0.6"
+	IsAboveSnow="false"
+	PlantingMinSpacing="0.95"
+	PlantingOffsetY="-0.15"
+	UseDirtTint="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</PlantBrand>

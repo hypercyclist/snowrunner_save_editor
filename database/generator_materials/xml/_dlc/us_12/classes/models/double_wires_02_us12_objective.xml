@@ -1,0 +1,24 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="True"
+>
+
+	<Subset IsDefault="true" Name="state_start">
+    </Subset>
+
+	<Subset Name="state_end">
+		<Mesh Name="state_end2" />
+		<CdtMesh Name="cdt_state_end2" />
+		<AnimSubset Name="build_animation_0" /> 
+			<AnimTrack Name="anim_state" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_wire_02"/>
+		<CdtMesh Name="cdt_state_end2" />
+	</AnimSubset>
+	
+<PhysicsModel>
+		<Body Collisions="None" ModelFrame="state_end2"/>
+	</PhysicsModel>
+</ModelBrand>

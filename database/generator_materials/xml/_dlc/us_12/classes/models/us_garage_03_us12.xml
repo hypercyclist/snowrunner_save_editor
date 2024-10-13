@@ -1,0 +1,9 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" >
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/us_garage_03_us12_lmk" />
+</ModelBrand>

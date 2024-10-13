@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x1_01_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_tank_stuff/sticker_inside_1x1_02_rezvani_tank" />
+	<GameData CameraPreset="sticker_left">
+		<InstallSocket _noinherit="true" Type="RezvaniTankSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

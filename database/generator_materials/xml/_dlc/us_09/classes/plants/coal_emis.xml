@@ -1,0 +1,10 @@
+<_templates Include="environment" />
+<PlantBrand
+	PlantingMinSpacing="0.1"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+</PlantBrand>

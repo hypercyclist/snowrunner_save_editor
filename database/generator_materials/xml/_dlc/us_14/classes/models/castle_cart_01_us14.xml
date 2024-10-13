@@ -1,0 +1,16 @@
+<_templates Include="models" />
+<ModelBrand 
+	NightLightingShadowsAllowCap="true" Instanced="True">
+	
+	<PhysicsModel>
+		<Body _template="Cars" LinearDamping="3" ModelFrame="bone_root" >
+			<Constraint _template="Cars" />
+				<Body Mass="200" Friction="2" ModelFrame="bone_wheels_01" >
+					<Constraint Type="UnlimitedHinge" AxisLocal="(1; 0; 0)" />
+				</Body>
+				<Body Mass="200" Friction="1.5" ModelFrame="bone_wheels_02" >
+					<Constraint Type="UnlimitedHinge" AxisLocal="(1; 0; 0)" />
+				</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

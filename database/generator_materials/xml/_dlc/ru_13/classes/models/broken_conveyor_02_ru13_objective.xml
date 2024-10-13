@@ -1,0 +1,55 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCameraBridge="true"
+	
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+		</Body>
+	</PhysicsModel>
+	
+    <Subset IsDefault="true" Name="state_start">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="cdt_stage_0" />
+
+    </Subset>
+	
+	<Subset Name="state_end">
+      	 	<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+		<AnimTrack Name="stage_1_anim" />
+		<AnimSubset Name="build_animation_0" />	
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh"/>	
+	</AnimSubset>
+	
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="11">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(0; 0; 0)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(1.589; 2.204; -5.231)" />
+		</AnimEvent>
+		<AnimEvent Key="20">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-2.796; 5.276; 3.104)" />
+		</AnimEvent>
+		<AnimEvent Key="28">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(3.16; 9.24; -8.742)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(1.201; 9.24; -9.642)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(0.439; 8.511; -5.645)" />
+		</AnimEvent>
+
+		<AnimEvent Key="37">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-3.402; 9.086; 6.241)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-5.414; 9.087; 5.267)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-2.732; 8.511; 1.758)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/broken_conveyor_02_ru13_objective_lmk" />
+</ModelBrand>

@@ -1,0 +1,10 @@
+<_templates Include="models" />
+<ModelBrand 
+	ClipCamera="false"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/log_short_a_fence_lmk" />
+</ModelBrand>

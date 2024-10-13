@@ -5,7 +5,7 @@
 		</Body>
 	</PhysicsModel>
 	<GameData
-		CameraPreset="hoods"
+		CameraPreset="side_l"
 		Category="miscellenious"
 		IsCustomizable="true"
 		Price="0"

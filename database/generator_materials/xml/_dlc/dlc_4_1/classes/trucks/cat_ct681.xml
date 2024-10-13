@@ -173,8 +173,17 @@
 			<DamageArea Type="Engine" Min="(0.201; 2.16; -0.6)" Max="(1.879; 0.721; 0.6)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(-1.443; 0.361; -1.19)" Max="(0.011; 1.034; 1.19)" ParentFrame="BoneCabin_cdt" />
 		</Damage>
-		<CompatibleWheels Scale="0.55" Type="wheels_medium_double" />
-		<CompatibleWheels Scale="0.60" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.55" RearOffsetZ="-0.01" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.60" RearOffsetZ="-0.01" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.1" Scale="0.55" RearOffsetZ="-0.01" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.55" RearOffsetZ="-0.01" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.1" Scale="0.55" RearOffsetZ="-0.01" Type="wheels_medium_allterrain_double" />
+
+		<CompatibleWheels OffsetZ="0.1"  Scale="0.60" RearOffsetZ="-0.001" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1"  Scale="0.60" RearOffsetZ="-0.001" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.1"  Scale="0.60" RearOffsetZ="-0.001" Type="wheels_medium_allterrain_double" />
+
 		<Camera Center="(-3.5; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -400,7 +409,7 @@
 	<Landmark Mesh="landmarks/cat_ct680_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(4.21; 0.864; 0)" ParentFrame="BoneCabin_cdt" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="59800"
 		UnlockByExploration="false"
 		UnlockByRank="1"

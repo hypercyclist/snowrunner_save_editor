@@ -1,0 +1,30 @@
+<DistributionBrushes>
+	<Plants>	
+
+
+		<MainTsugas LinkedGrassBrush="LeavesFirs" PlantsPerBlock="86">
+			<PlantType
+				Brand="us_tsuga_us11"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="1.6"
+				MaxSize="1.8"
+			/>			
+	
+		</MainTsugas>
+		<TsugasSmallHighDensity LinkedGrassBrush="LeavesFirs" PlantsPerBlock="300">
+
+			<PlantType
+				Brand="us_tsuga_03"
+				Divergence="0.06"
+				MaxMapScale="0.4"
+				MinSize="0.6"
+				MaxSize="1.4"
+				Perpendicularity="0.1"
+			/>		
+			
+		</TsugasSmallHighDensity>			
+
+	</Plants>
+
+</DistributionBrushes>

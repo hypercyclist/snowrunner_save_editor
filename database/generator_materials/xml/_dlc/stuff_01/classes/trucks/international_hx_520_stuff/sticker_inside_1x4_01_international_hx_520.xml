@@ -1,0 +1,13 @@
+<_parent File="sticker_inside_1x1_01_international_hx_520" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_stuff/sticker_inside_1x4_01_international_hx_520" />
+	<GameData>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="internationalHx520Sticker_1x4_01" />
+	</GameData>
+</TruckAddon>

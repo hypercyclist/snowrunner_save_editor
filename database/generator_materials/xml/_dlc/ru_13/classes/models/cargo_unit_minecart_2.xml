@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoMinecart" PackSlotsNumber="2">
+		<CraneSocket Pos="(0; 1.591; 0)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_minecart_2_lmk"/>
+</ModelBrand>

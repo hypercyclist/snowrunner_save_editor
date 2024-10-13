@@ -1,0 +1,26 @@
+<_templates Include="environment" />
+<PlantBrand
+	DistSkipPercentage="0.6"
+	IsAboveSnow="false"
+	PlantingMinSpacing="0.95"
+	PlantingOffsetY="-0.15"
+	UseDirtTint="true"
+>
+	<PhysicsModel>
+		<Body _template="StaticRoot" ModelFrame="BoneRoot">
+			<Constraint _template="StaticRoot" />
+			<Body _template="BranchWithLeaves" ModelFrame="Branch01">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="Branch02">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="Branch03">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="Branch04">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+</PlantBrand>

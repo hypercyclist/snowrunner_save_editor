@@ -1,0 +1,20 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_3364_crocodile_stuff/sticker_inside_1x4_01_step_3364_crocodile">
+		<Body Collisions="None" Mass="1" ModelFrame="BoneCabinDamper_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData CameraPreset="sticker_1">
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"
+		/>
+		<InstallSocket Type="step3364CrocodileSticker_1x4_01" />
+	</GameData>
+</TruckAddon>

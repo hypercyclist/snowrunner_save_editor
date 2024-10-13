@@ -1,0 +1,51 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="Bush"
+	LocalYOcclusionOffset="0.2"
+	PlantingGroups="Bush,SmallTree"
+	PlantingMinSpacing="1.4"
+>
+	<PhysicsModel>
+		<Body _template="BushRoot" ModelFrame="BoneRoot" DebrisType="FoliageSummer">
+			<Constraint
+				Cone="1"
+            	TwistAxisLocal="(0; 1; 0)"
+            	Type="Ragdoll"	
+				>
+				<PlaneConeMotor Damping="850" Spring="2000" Type="Spring" />
+				</Constraint>
+			<Body _template="BushBranch" ModelFrame="BoneBranch1" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch2">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch3" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch4" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch5">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch6" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch7" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch8">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch9" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch10" DebrisType="FoliageSummer">
+				<Constraint _template="BushBranch" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(8.0; 8.0)" />
+	<Landmark Mesh="landmarks/bush_1_us12_lmk" />
+</PlantBrand>

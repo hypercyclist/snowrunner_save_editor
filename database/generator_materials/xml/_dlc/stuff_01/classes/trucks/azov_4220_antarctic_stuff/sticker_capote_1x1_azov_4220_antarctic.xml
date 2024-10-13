@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_stuff/sticker_capote_1x1_azov_4220_antarctic" />
+	<GameData>
+		<InstallSocket Type="Azov4220AntarcticSticker_Capote" />
+	</GameData>
+</TruckAddon>

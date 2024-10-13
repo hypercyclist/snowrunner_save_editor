@@ -1,0 +1,25 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_visor_01" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; 0.5)" Size="0.22" Pos="(6.628; 3.6; 0.94)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1.5" ColorMultAtDay="0.2" Dir="(1; 0; -0.5)" Size="0.22" Pos="(6.628; 3.6; -0.94)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_STRAIGHTCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_STRAIGHTCAP_NAME"
+		/>
+		<InstallSocket Type="Femm37AtVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,81 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="120"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(-1.928; 2.352; -0.803)" SizeX="0.456" SizeY="0.173" SizeZ="0.353" Type="Box" />
+		<LimitedFluid Center="(-1.926; 2.352; -0.4)" SizeX="0.456" SizeY="0.173" SizeZ="0.353" Type="Box" />
+		<LimitedFluid Center="(-2.573; 2.352; -0.803)" SizeX="0.456" SizeY="0.173" SizeZ="0.353" Type="Box" />
+		<LimitedFluid Center="(-2.573; 2.352; -0.401)" SizeX="0.456" SizeY="0.173" SizeZ="0.353" Type="Box" />
+		<LimitedFluid Center="(-3.182; 2.352; -0.82)" SizeX="0.458" SizeY="0.173" SizeZ="0.356" Type="Box" />
+		<LimitedFluid Center="(-3.185; 2.352; -0.415)" SizeX="0.455" SizeY="0.173" SizeZ="0.355" Type="Box" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/tuz_420_tatarin_tuning/tuz_420_tatarin_trunk_1">
+		<Body Mass="50">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="80"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.05;0)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="40"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.03)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="80"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsZ="(0;0.05)" LinearLimitsY="(0;0.1)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="50"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.05)" LinearLimitsZ="(-0.03;0.03)" LinearLimitsY="(0;0.1)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="Tuz420TatarinTrunk" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

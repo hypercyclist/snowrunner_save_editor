@@ -1,0 +1,90 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_sensory_buoy_2" >
+		<NetSync Legacy="false" />
+		<Body Mass="1500" ModelFrame="BoneRoot_cdt" >
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="750" ModelFrame="BoneCargo_1_cdt" > 
+				<Constraint
+					AxisLocal="(0; 1; 0)"
+					Type="Hinge"
+					MinLimit="-1"
+					MaxLimit="1"
+				>
+					<Motor Damping="0.1" Spring="100" Type="Spring" />
+				</Constraint>
+				<Body Mass="20" ModelFrame="BoneMainPipe_cdt" > 
+					<Constraint
+						Cone="2"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistAxisLocal="(0; 1; 0)"
+						Type="Ragdoll"
+						PlaneMin="-10"
+						PlaneMax="10"
+					>
+						<PlaneMotor Damping="2500" Spring="7000" Type="Spring" />
+						<ConeMotor Damping="2500" Spring="7000" Type="Spring" />
+					</Constraint>
+					<Body Mass="1" ModelFrame="BoneAntenna_cdt" >
+						<Constraint
+						Cone="50"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistAxisLocal="(0; 1; 0)"
+						Type="Ragdoll"
+						PlaneMin="-50"
+						PlaneMax="50"
+					>
+						<PlaneMotor Damping="0.4" Spring="10" Type="Spring" />
+						<ConeMotor Damping="0.4" Spring="10" Type="Spring" />
+					</Constraint>
+					</Body >
+					<Body Mass="10" ModelFrame="BoneVane_cdt" >
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Type="Hinge"
+							MinLimit="-120"
+							MaxLimit="220"
+						>
+							<Motor Damping="0.04" Spring="0.01" Type="Spring" />
+						</Constraint>
+					</Body >
+					<Body Mass="10" ModelFrame="BoneVaneBig_cdt" >
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							Type="Hinge"
+							MinLimit="-120"
+							MaxLimit="220"
+						>
+							<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+						</Constraint>
+					</Body >
+				</Body >
+				<Body Mass="50" ModelFrame="BoneSecondaryPipe_cdt" >
+					<Constraint
+						Cone="1"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistAxisLocal="(0; 1; 0)"
+						Type="Ragdoll"
+						PlaneMin="-5"
+						PlaneMax="5"
+					>
+						<PlaneMotor Damping="10000" Spring="10000" Type="Spring" />
+						<ConeMotor Damping="10000" Spring="10000" Type="Spring" />
+					</Constraint>
+				</Body >
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_concrete_slab"
+			TransportedSound="load/concrete_blocks/concrete_blocks_rnd"
+			ManualSound="cargo_manual/cargo_manual_concrete_slab"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoSensoryBuoy"
+			CargoValue="1"
+			Offset="(1.279; 0; 0)"
+		/>
+	</GameData >
+</TruckAddon>

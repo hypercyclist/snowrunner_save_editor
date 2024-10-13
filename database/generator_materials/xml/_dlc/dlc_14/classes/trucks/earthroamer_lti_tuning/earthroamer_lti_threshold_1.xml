@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_threshold_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_PIPE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_PIPE_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiThreshold" />
+	</GameData>
+</TruckAddon>

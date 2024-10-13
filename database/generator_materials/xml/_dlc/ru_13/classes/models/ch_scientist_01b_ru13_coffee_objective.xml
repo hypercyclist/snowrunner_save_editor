@@ -1,0 +1,15 @@
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Subset Name="state_start">
+    	</Subset>
+	<Subset IsDefault="true" Name="state_end">
+      	 	<Mesh Name="mesh.001" />
+		<CdtMesh Name="cdt" />
+		<OnSubsetActivateEvent>
+			<SFX Name="smoke_coffee_01_0" Dir="(0; 1; 0)" Pos="(0.03; 0.1; 0.04)" Frame="LeftFingers" />
+		</OnSubsetActivateEvent>
+		<AnimTrackSubset Name="anim_loop" />
+	</Subset>
+</ModelBrand>

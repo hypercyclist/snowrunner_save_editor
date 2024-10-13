@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_stuff/sticker_roof_1x1_khan_39_marshall" />
+	<GameData>
+		<InstallSocket Type="khan39MarshallSticker_Roof" />
+	</GameData>
+</TruckAddon>

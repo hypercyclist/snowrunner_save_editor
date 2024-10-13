@@ -1,0 +1,13 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="Stump"
+	DistSkipPercentage="0.6"
+	PlantingMinSpacing="1.0"
+	PlantingOffsetY="-1.5"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Intensity="0.8" Size="(5.8; 5.8)" />
+	<Landmark Mesh="landmarks/rock_big_01_usa_us10_lmk" />
+</PlantBrand>

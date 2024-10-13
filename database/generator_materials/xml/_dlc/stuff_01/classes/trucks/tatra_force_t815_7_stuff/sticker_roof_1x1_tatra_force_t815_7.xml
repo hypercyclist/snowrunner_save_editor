@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_force_t815_7_stuff/sticker_roof_1x1_tatra_force_t815_7" />
+	<GameData>
+		<InstallSocket Type="tatraForSticker_roof" />
+	</GameData>
+</TruckAddon>

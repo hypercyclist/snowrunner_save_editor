@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevy_apache_stuff/sticker_capote_1x1_chevy_apache" />
+	<GameData>
+		<InstallSocket Type="ChevyApacheSticker_Capote" />
+	</GameData>
+</TruckAddon>

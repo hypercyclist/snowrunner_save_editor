@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_stuff/stuff_curtain_tuz_108_warthog" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainTuz108Warthog" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,46 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cargo/cargo_logs_trailer_log_medium">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.3; 0)"
+			Friction="0.1"
+			ImpactType="Foliage"
+			Mass="4000"
+			ModelFrame="BoneRoot_cdt"
+		>
+			<Constraint Type="Fixed" />
+			<Body AngularDamping="3.0" Mass="50" ModelFrame="BoneShieldFront_cdt">
+				<Constraint Type="Fixed" />
+			</Body>
+			<Body ImpactType="Truck" Mass="4000" ModelFrame="BoneRear_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+			<Body
+				Collisions="All"
+				ImpactType="Foliage"
+				LinearDamping="1"
+				Mass="200"
+				ModelFrame="BoneTop_cdt"
+			>
+				<Constraint
+					LinearLimitsX="(-0.1; 0)"
+					LinearLimitsY="(0; 0.5)"
+					LinearLimitsZ="(-0.03; 0.03)"
+					Type="Fixed"
+				>
+					<Motor Damping="4000" Spring="100" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_logs_medium"
+			TransportedSound=""
+			ManualSound="cargo_manual/cargo_manual_logs_medium"
+		/>
+		<SpawnLoadOrigin Position="(-1.3; 1.6; 0)" />
+		<RequiredAddon Types="trailer_log_medium" />
+		<InstallSlot CargoAddonSubtype="ScautTrailerLogMedium" CargoLength="1" CargoType="CargoLogsMedium" ManualLoads="3" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,15 @@
+<ModelBrand
+	InstancedAsModel="true"
+	Instanced="true"
+	DynamicModel="false"
+	ClipCamera="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/nii_sculpt_ru08_lmk" />
+
+</ModelBrand>

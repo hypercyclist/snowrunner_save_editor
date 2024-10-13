@@ -1,0 +1,6 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DayShadowOffsetMult="20">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/silver_factory_ru13_lmk" />
+</ModelBrand>

@@ -1,0 +1,16 @@
+<_templates Include="environment" />
+<PlantBrand _template="SmallTree" PlantingMinSpacing="2.4">
+	<PhysicsModel>
+		<Body _template="MediumTreeRoot" ModelFrame="BoneRoot">
+			<Constraint _template="MediumTreeRoot" />
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk">
+				<Constraint _template="TrunkHead" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.32" Size="(10.0; 10.0)" />
+	<GameData>
+		<WinchSocket Pos="(-0.022; 0.382; -0.049)" ParentFrame="BoneRoot" />
+	</GameData>
+	<Landmark Mesh="landmarks/poplar_02_rus_lmk"/>
+</PlantBrand>

@@ -1,0 +1,24 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_farkop_trailer">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneFarkopTrailer_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="farkop"
+		Category="frame_addons"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(-5.847; 0.740; 0)" FixedToTruck="true" />
+		<CraneSocket Pos="(-5.847; 0.740; 0)" FixedToTruck="true" />
+		<UiDesc
+			UiDesc="UI_TUNING_FARKOP_TRAILER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_FARKOP_TRAILER_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxFarkop" />
+	</GameData>
+</TruckAddon>

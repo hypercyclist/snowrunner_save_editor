@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_420_tatarin_stuff/sticker_door_l_1x1_tuz_420_tatarin" />
+	<GameData>
+			<InstallSocket Type="tuz420TatarinSticker_Door_L" />
+	</GameData>
+</TruckAddon>

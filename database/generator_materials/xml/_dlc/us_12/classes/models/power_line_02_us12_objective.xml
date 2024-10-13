@@ -1,0 +1,106 @@
+<ModelBrand
+	DynamicModel="true"
+	ClipCamera="false"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<Mesh Name="mesh_start_lod1" />
+		<Mesh Name="mesh_start_lod2" />
+		<Mesh Name="mesh_start_lod3" />
+		<CdtMesh Name="cdt_mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<Mesh Name="mesh_end_lod1" />
+		<Mesh Name="mesh_end_lod2" />
+		<Mesh Name="mesh_end_lod3" />
+		<CdtMesh Name="cdt_mesh_end" />
+		<AnimSubset Name="build_animation_0" /> 
+			<AnimTrack Name="anim_state" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_1"/>
+		<Mesh Name="animesh_2"/>
+		<CdtMesh Name="cdt_mesh_end" />
+	</AnimSubset>
+
+		<TrackEvents TrackName="anim_state">
+
+			<AnimEvent Key="56">
+				<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0; 15.221; 0)"/>
+				<SFX Name="conveyor_smoke_02" Dir="(1; 1; 0)" Pos="(0; 15.221; 0)"/>
+				<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0; 15.221; 0)"/>
+				<SFX Name="conveyor_smoke_02" Dir="(1; 1; 0)" Pos="(0; 15.221; 0)"/>
+			</AnimEvent>
+
+			<AnimEvent Key="58">
+				<Sound Name="actors/actor_construction/actor_construct_water_tower" Range="200" Volume="0.5"/>
+				<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0; 18; 0)"/>
+				<SFX Name="conveyor_smoke_02" Dir="(1; 1; 0)" Pos="(0; 18; 0)"/>
+			</AnimEvent>
+
+			<AnimEvent Key="97">
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+			</AnimEvent>
+
+			<AnimEvent Key="98">
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+			</AnimEvent>
+
+				<AnimEvent Key="99">
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+				<Sound Name="actors/actor_construction/actor_construct_metal_power_line" Range="200" Volume="1.3"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+			</AnimEvent>
+
+			<AnimEvent Key="110">
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+			</AnimEvent>
+
+			<AnimEvent Key="105">
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; -10.204)"/>
+				<SFX Name="oil_derrek_sparks_02" Dir="(0; 1; 0)" Pos="(0; 26.607; 0)"/>
+			</AnimEvent>
+
+
+		</TrackEvents>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/power_line_02_us12_objective_lmk" />
+	
+</ModelBrand>

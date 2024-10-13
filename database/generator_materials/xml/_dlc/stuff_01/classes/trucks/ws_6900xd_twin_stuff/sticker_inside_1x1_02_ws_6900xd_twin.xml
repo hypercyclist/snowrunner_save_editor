@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_stuff/sticker_inside_1x1_02_ws_6900xd_twin" />	
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket Type="WS6900XDTwinSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

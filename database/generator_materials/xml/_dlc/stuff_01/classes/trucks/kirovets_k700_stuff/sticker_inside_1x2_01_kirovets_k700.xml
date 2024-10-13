@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k700_stuff/sticker_inside_1x2_01_kirovets_k700" />
+	<GameData CameraPreset="sticker">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME" />
+		<InstallSocket Type="KirovetsK700Sticker_1x2_01" />
+	</GameData>
+</TruckAddon>

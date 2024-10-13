@@ -1,0 +1,9 @@
+<MaterialType 
+	Texture="tiles/stone_pbr_test__d_a.tga" 
+	Normal="tiles/stone_pbr_test_relief__d_a.tga"
+	NoGrass="true"
+	IsExtrudable="false"
+	WheelTracks="0"
+	Sound="surfaces/surf_rock_rnd"
+	IsWetnessAsIce="true"
+/>

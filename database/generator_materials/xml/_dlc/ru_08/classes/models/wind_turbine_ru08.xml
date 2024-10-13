@@ -1,0 +1,13 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="main_pole">
+			<Body Collisions="Dynamic" ModelFrame="vent_static" />
+			<Body Collisions="Dynamic" ModelFrame="vent_anim" />
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/wind_turbine_ru08_lmk" />
+</ModelBrand>

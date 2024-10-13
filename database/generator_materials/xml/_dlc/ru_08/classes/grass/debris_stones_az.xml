@@ -1,0 +1,9 @@
+<GrassBrand
+	IgnoreNoGrass="true"
+	PlantingGroup="Debris"
+	PlantingMinSpacing="0.15"
+	UseDirtTint="true"
+	ParticlesType="fragments_dirt_stones"
+	FadeDistances="10, 20, 30"
+	FadeInterval="10"
+/>

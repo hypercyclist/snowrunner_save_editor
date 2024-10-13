@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_73210_tuning/azov_73210_visor_1" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(4.997; 2.546; -0.977)" />
+			<Flare _template="MarkerBeacon" Pos="(4.997; 2.546; 0.977)" />
+			<Flare _template="MarkerBeacon" Pos="(5.06; 2.571; -0.001)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods_default"
+		Category="miscellenious"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_CHROME_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_CHROME_NAME"
+		/>
+		<InstallSocket Type="Azov73210Visor" />
+	</GameData>
+</TruckAddon>

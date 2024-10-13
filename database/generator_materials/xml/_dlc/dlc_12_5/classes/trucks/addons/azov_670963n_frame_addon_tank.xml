@@ -1,0 +1,133 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.75" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon IsChassisFullOcclusion="true">
+	<TruckData FuelCapacity="2500" RepairsCapacity="300" WheelRepairsCapacity="4">
+		<LimitedFluid Center="(0.061; 2.650; 0)" SizeX="4.962" SizeY="1.630" SizeZ="2.135" Type="Box"/>
+	</TruckData>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator"
+		RotationSpeed="4"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		Frame="BoneRotator2" 
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/addons/azov_670963n_frame_addon_tank">
+		<Body Mass="3000" ModelFrame="BoneAddon1_cdt">
+			<Constraint Type="Rigid" ExplicitParentFrame="0"/>
+			
+			<Body
+				_template="Limits"
+				Mass="10"
+				ModelFrame="BoneHose_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.06)" LinearLimitsY="(0; 0)" LinearLimitsZ="(0; 0)"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-6.300; 0.832; 0)" />
+			<Flare _template="StopSignal" Pos="(-6.262; 1.655; 1.129)" />
+			<Flare _template="StopSignal" Pos="(-6.262; 1.655; -1.129)" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Pos="(-6.300; 0.831; 0)" />
+			<Flare _template="ReverseSignal" Pos="(-6.262; 1.655; 1.129)" />
+			<Flare _template="ReverseSignal" Pos="(-6.262; 1.655; -1.129)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.243; 0.831; -0.708)" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-3.243; 0.831; 0.708)" />
+		</ReverseSignals>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(0; 0; 1)" Size="0.5" Pos="(-2.189; 3.605; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(-2.189; 3.605; -1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(0; 0; 1)" Size="0.5" Pos="(2.311; 3.605; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(2.311; 3.605; -1.275)" ParentFrame="BoneAddon1_cdt" />
+			
+			<Light _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 1" Dir="(0; 0; 1)" Size="1" Pos="(-2.189; 2.573; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 1" Dir="(0; 0; -1)" Size="1" Pos="(-2.189; 2.573; -1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 1" Dir="(0; 0; 1)" Size="1" Pos="(2.311; 2.573; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 1" Dir="(0; 0; -1)" Size="1" Pos="(2.311; 2.573; -1.275)" ParentFrame="BoneAddon1_cdt" />
+			
+			<Flare _template="IgnitionSignalRed" Pos="(-6.262; 1.655; 1.129)" ParentFrame="BoneAddon1_cdt"/>
+			<Flare _template="IgnitionSignalRed" Pos="(-6.262; 1.655; -1.129)" ParentFrame="BoneAddon1_cdt"/>
+			
+			<!-- rear -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(-0.908; -0.258; 0.331)" Size=".25" Pos="(-6.368; 3.194; 0.998)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(-0.908;-0.258; -0.331)" Size=".25" Pos="(-6.368; 3.194; 0.786)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(-0.908; -0.258; -0.331)" Size=".25" Pos="(-6.368; 3.194; -0.998)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(-0.908;-0.258; -0.331)" Size=".25" Pos="(-6.368; 3.194; -0.786)" ParentFrame="BoneAddon1_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.2" Dir="(-1; 0; 0)" Size=".15" Pos="(-6.296; 3.372; -0.892)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.2" Dir="(-1; 0; 0)" Size=".15" Pos="(-6.296; 3.372; 0.892)" ParentFrame="BoneAddon1_cdt" />
+			<!-- front -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(2.557; 3.323; 1.176)" Size=".25" Pos="(2.557; 3.323; -1.176)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(2.557; 3.323; 1.176)" Size=".25" Pos="(2.557; 3.323; 1.176)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(2.557; 3.323; 1.176)" Size=".25" Pos="(2.557; 2.045; -1.176)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 255; 255) x 0.5" Dir="(2.557; 3.323; 1.176)" Size=".25" Pos="(2.557; 2.045; 1.176)" ParentFrame="BoneAddon1_cdt" />
+			
+			<!-- sides -->
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 1; 0)" Size="0.2" Pos="(-5.440; 1.602; 1.220)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 1; 0)" Size="0.2" Pos="(-5.440; 1.602; -1.220)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 1; 0)" Size="0.2" Pos="(-1.848; 1.602; 1.224)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 1; 0)" Size="0.2" Pos="(-1.848; 1.602; -1.224)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 0; 1)" Size="0.2" Pos="(1.355; 1.602; 1.224)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(0; 0; -1)" Size="0.2" Pos="(1.355; 1.602; -1.224)" ParentFrame="BoneAddon1_cdt" />
+			
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(-1; 0; 0)" Size="0.25" Pos="(-6.239; 3.260; 0.303)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay=".2" Color="g(255; 160; 2) x .4" Dir="(-1; 0; 0)" Size="0.25" Pos="(-6.239; 3.260; -0.303)" ParentFrame="BoneAddon1_cdt" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.96; -0.1; 0.262)" Org="(-6.296; 3.405; -0.930)" ParentFrame="BoneRotator" />
+			<Light Dir="(0.96; -0.1; 0.262)" Pos="(-6.296; 3.405; -0.930)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.96; -0.1; 0.262)" Pos="(-6.296; 3.405; -0.930)" ParentFrame="BoneRotator" />
+			<Flare Dir="(0.96; -0.1; 0.262)" Pos="(-6.296; 3.405; -0.930)" ParentFrame="BoneRotator" />
+			<Flare Pos="(-6.296; 3.372; -0.892)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.96; -0.1; 0.262)" Org="(-6.258; 3.405; 0.892)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0.96; -0.1; 0.262)" Pos="(-6.258; 3.405; 0.892)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.96; -0.1; 0.262)" Pos="(-6.258; 3.405; 0.892)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.96; -0.1; 0.262)" Pos="(-6.258; 3.405; 0.892)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(-6.296; 3.372; 0.892)" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Color="g(255; 255; 255) x 1" Dir="(0; -0.5; 1)" Org="(-2.189; 3.605; 1.275)" Size="0.7" ParentFrame="BoneAddon1_cdt" />
+			<Model _template="HeadLightRay" Color="g(255; 255; 255) x 1" Dir="(0; -0.5; -1)" Org="(-2.189; 3.605; -1.275)" Size="0.7" ParentFrame="BoneAddon1_cdt" />
+			<Model _template="HeadLightRay" Color="g(255; 255; 255) x 1" Dir="(0; -0.5; 1)" Org="(2.311; 3.605; 1.275)" Size="0.7" ParentFrame="BoneAddon1_cdt" />
+			<Model _template="HeadLightRay" Color="g(255; 255; 255) x 1" Dir="(0; -0.5; -1)" Org="(2.311; 3.605; -1.275)" Size="0.7" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="BlueStreak" Dir="(0; 0; 1)" Size="0.7" Pos="(-2.189; 3.605; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="BlueStreak" Dir="(0; 0; -1)" Size="0.7" Pos="(-2.189; 3.605; -1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="BlueStreak" Dir="(0; 0; 1)" Size="0.7" Pos="(2.311; 3.605; 1.275)" ParentFrame="BoneAddon1_cdt" />
+			<Flare _template="BlueStreak" Dir="(0; 0; -1)" Size="0.7" Pos="(2.311; 3.605; -1.275)" ParentFrame="BoneAddon1_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="7000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_AZOV67096_FRAME_TANK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_AZOV67096_FRAME_TANK_NAME"
+		/>
+		<InstallSocket Type="Azov670963nTank" />
+	</GameData>
+	<FuelMass>
+		<Body Mass="10000" />
+	</FuelMass>
+</TruckAddon>

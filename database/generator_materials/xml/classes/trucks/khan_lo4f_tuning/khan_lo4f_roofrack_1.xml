@@ -1,0 +1,81 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="120"
+		RepairsCapacity="300"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(-0.322; 2.262; -0.201)" SizeX="0.381" SizeY="0.185" SizeZ="0.450" Type="Box" />
+		<LimitedFluid Center="(-0.73; 2.262; -0.198)" SizeX="0.381" SizeY="0.185" SizeZ="0.450" Type="Box" />
+		<LimitedFluid Center="(-0.73; 2.262; 0.483)" SizeX="0.381" SizeY="0.185" SizeZ="0.450" Type="Box" />
+		<LimitedFluid Center="(-0.323; 2.262; 0.483)" SizeX="0.381" SizeY="0.185" SizeZ="0.450" Type="Box" />
+		<LimitedFluid Center="(0.11; 2.261; 0.477)" SizeX="0.381" SizeY="0.187" SizeZ="0.450" Type="Box" />
+		<LimitedFluid Center="(0.517; 2.261; 0.484)" SizeX="0.381" SizeY="0.185" SizeZ="0.450" Type="Box" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/khan_lo4f_tuning/khan_lo4f_roofrack_1">
+		<Body Mass="20">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="40"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.05;0)" LinearLimitsY="(0;0.02)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="80"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.05)" LinearLimitsZ="(-0.05;0)" LinearLimitsY="(0;0.02)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint LinearLimitsZ="(-0.03;0.05)" LinearLimitsY="(0;0.02)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="40"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.05;0)" LinearLimitsZ="(0;0.05)" LinearLimitsY="(0;0.02)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_REGULAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_REGULAR_NAME"
+		/>
+		<InstallSocket Type="Khanlo4fRoofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

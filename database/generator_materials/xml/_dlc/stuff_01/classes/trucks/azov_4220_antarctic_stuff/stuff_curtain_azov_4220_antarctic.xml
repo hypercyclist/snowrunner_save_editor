@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_stuff/stuff_curtain_azov_4220_antarctic" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainAzov4220Antarctic" />
+	</GameData>
+</TruckAddon>

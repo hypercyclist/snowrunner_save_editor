@@ -1,0 +1,137 @@
+<ModelBrand 
+	ClipCameraBridge="false"
+	DayShadowOffsetMult="5.0"
+	>
+	<Landmark Mesh="landmarks/radio_telescope_01_a_us12_objective_lmk" />
+
+	<Subset Name="state_start" IsDefault="true">
+		<Mesh Name="mesh_start" />
+		<Mesh Name="mesh_start_lod1" />
+		<Mesh Name="mesh_start_lod2" />
+		<CdtMesh Name="cdt_mesh_start" />
+	</Subset>
+
+	<Subset Name="state_end" IsDefault="false">
+		<Mesh Name="mesh_end" />
+		<Mesh Name="mesh_end_lod1" />
+		<Mesh Name="mesh_end_lod2" />
+		<CdtMesh Name="cdt_mesh_end" />
+		<AnimSubset Name="build_animation_0" /> 
+			<AnimTrack Name="anim_state" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_1"/>
+		<Mesh Name="animesh_2"/>
+		<CdtMesh Name="cdt_mesh_end" />
+	</AnimSubset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+
+	<TrackEvents TrackName="anim_state">
+		<AnimEvent Key="56">
+			<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(0; 0; 0)"/>
+			<SFX Name="conveyor_smoke_02" Dir="(1; 1; 0)" Pos="(0; 0; 0)"/>
+		</AnimEvent>
+		<AnimEvent Key="57">
+			<Sound Name="actors/actor_construction/actor_construct_oil_03" Range="200" Volume="1"/>
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(4.80318; 15.5931; -3.12109)" />
+			<SFX Dir="(-1; -1; 0)" Name="bridge_sparks_01" Pos="(4.80318; 15.5931; -3.12109)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(4.57167; 11.4812; -0.366625)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(4.57167; 13.4812; -1.566625)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(6.9263; 9.97159; 1.50475)" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(3.9263; 7.97159; 0.75475)" />
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(4.80318; 15.5931; -3.12109)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.57167; 11.4812; -0.366625)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.57167; 13.4812; -1.566625)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(6.9263; 9.97159; 1.50475)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(3.9263; 7.97159; 0.75475)" />
+		</AnimEvent>
+
+		<AnimEvent Key="58">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(8.10562; 14.635; -2.353)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(0.170; 19.603; -3.571)" />
+		</AnimEvent>
+
+		<AnimEvent Key="59">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.83; 14.85; -0.303)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-3.102; 16.605; -1.147)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.917; 16.885; 0.661)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-6.920; 14.885; -0.781)" />
+			<SFX Dir="(-1; -1; 0)" Name="conveyor_smoke_02" Pos="(4.80318; 15.5931; -3.12109)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.57167; 11.4812; -0.366625)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.57167; 13.4812; -1.566625)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(6.9263; 9.97159; 1.50475)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(3.9263; 7.97159; 0.75475)" />
+			<Sound Name="actors/actor_construction/actor_construct_radio_station_rus" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		<AnimEvent Key="66">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.953; 8.055; 4.353)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(4.953; 8.055; 4.353)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(3.322; 7.285; 6.597)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(5.457; 7.685; 5.251)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(5.457; 7.685; 5.251)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.120; 8.485; 3.411)" />
+		</AnimEvent>
+
+		<AnimEvent Key="67">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-0.608; 22.885; -6.153)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(1.792; 22.885; -5.917)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(1.792; 22.885; -5.917)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.917; 22.885; -5.451)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(3.920; 22.885; -4.781)" />
+		</AnimEvent>
+
+		<AnimEvent Key="68">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.83; 14.85; -0.303)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-3.102; 16.605; -1.147)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.917; 16.885; 0.661)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-6.920; 14.885; -0.781)" />
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		<AnimEvent Key="76">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.953; 8.055; 4.353)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(3.322; 7.285; 6.597)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(3.322; 7.285; 6.597)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(5.457; 7.685; 5.251)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.120; 8.485; 3.411)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(4.120; 8.485; 3.411)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.170; 19.603; -3.571)" />
+		</AnimEvent>
+
+		<AnimEvent Key="78">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(8.10562; 14.635; -2.353)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(0.170; 19.603; -3.571)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.170; 19.603; -3.571)" />
+			
+		</AnimEvent>
+
+		<AnimEvent Key="79">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(8.10562; 14.635; -2.353)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(0.170; 19.603; -3.571)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-5.502; 15.62; 1.64)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-2.917; 17.885; -1.451)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0.170; 19.603; -3.571)" />
+			<Sound Name="actors/actor_construction/actor_construct_radio_station_rus" Range="200" Volume="1"/>
+		</AnimEvent>
+
+		
+	</TrackEvents>
+
+</ModelBrand>

@@ -1,0 +1,19 @@
+<TruckAddon>
+	<Snorkel Origin="(0.611; 1.538; -0.831)" />
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_snorkel_2"/>
+	<GameData
+		CameraPreset="snorkel"
+		Category="snorkel"
+		Price="2500"
+		UnlockByExploration="false"
+		UnlockByRank="11"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SNORKEL_FRONTFACE_TALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SNORKEL_FRONTFACE_TALL_NAME"
+		/>
+		<InstallSocket Type="MTB8106Snorkel" />
+	</GameData>
+</TruckAddon>

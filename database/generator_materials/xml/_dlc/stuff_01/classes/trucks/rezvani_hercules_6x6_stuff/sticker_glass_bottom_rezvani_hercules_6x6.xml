@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_hercules_6x6_stuff/sticker_glass_bottom_rezvani_hercules_6x6" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_2x16_LOADWHEEL_NAME" />
+		<InstallSocket Type="rezvaniHercules6X6Sticker_GlassBot" />
+	</GameData>
+</TruckAddon>

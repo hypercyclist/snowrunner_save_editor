@@ -1,0 +1,45 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+>
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="stage_00" />
+		<CdtMesh Name="stage_00" />
+		<Mesh Name="stage_start" />
+		<CdtMesh Name="stage_start" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_end" />
+		<CdtMesh Name="stage_end" />
+		<Mesh Name="stage_00" />
+		<CdtMesh Name="stage_00" />
+		<AnimTrack Name="stage_1_anim"/>
+		<AnimSubset Name="build_animation_0"/>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_00">
+			<Body Collisions="Dynamic" ModelFrame="stage_start" />
+			<Body Collisions="Dynamic" ModelFrame="stage_end" />
+		</Body>
+	</PhysicsModel>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="41">
+			<Sound Name="actors/actor_construction/actor_construct_us06_garage_07" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="rus_base_01_full" Pos="(0; 0; 0)" />
+
+		</AnimEvent>
+	</TrackEvents>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh_01"/>
+		<Mesh Name="animated_mesh_02"/>
+		<Mesh Name="stage_00"/>
+		<CdtMesh Name="stage_00"/>
+	</AnimSubset>
+	<Occlusion
+		Size="(14.0; 13.0)" 
+		Texture="occlusion_meteo_station_us_01.tga"
+	/>
+	<Landmark Mesh="landmarks/meteo_station_01_us12_objective_lmk"/>
+</ModelBrand>

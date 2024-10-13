@@ -1,0 +1,20 @@
+<ModelBrand Instanced="true" InstancedAsModel="true">
+    <StaticLights>
+	<!--lamp_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.3)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-17.202; 2.735; -13.287)"
+			Shadows="true"
+		/>
+    </StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(55.9696207971; 52.0)" Texture="occlusion_garage01.tga" />
+	<Landmark Mesh="landmarks/fire_station_us_09_lmk" />
+</ModelBrand>

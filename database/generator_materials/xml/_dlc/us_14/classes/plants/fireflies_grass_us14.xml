@@ -1,0 +1,12 @@
+<PlantBrand
+	DeactivationPhantomExt="2" 
+	PlantingMinSpacing="0.3"
+	BreakType="FirefliesGrass"
+	DeleteOnBreak="true"
+>
+	<PhysicsModel>
+		<Body DamageMult="0" Mass="1" ModelFrame="BoneRoot">
+			<Constraint Type="Fixed" BreakOffThreshold="1" />
+		</Body>
+	</PhysicsModel>
+</PlantBrand>

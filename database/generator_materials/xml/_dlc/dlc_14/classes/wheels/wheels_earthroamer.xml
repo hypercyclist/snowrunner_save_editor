@@ -1,0 +1,36 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Medium" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Stiff" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.676">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_earthrommer" Name="earthroamer_offroad">
+		<WheelFriction
+				SubstanceFriction="1.6"
+				BodyFriction="3.1"
+				BodyFrictionAsphalt="0.9"
+			/>
+			<GameData
+				Price="4500"
+				UnlockByExploration="false"
+				AddonUnlockByObjective="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_MEDIUM_OFFROAD_EARTHROAMER_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_earthrommer" Name="earthroamer_rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_MEDIUM_SINGLE_10_DESC" UiName="UI_RIM_MEDIUM_OFFROAD_EARTHROAMER_NAME" />
+			</GameData>
+		</TruckRim>
+
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="false"
+	ClipCamera="false"
+	Instanced="true"
+	DynamicModel="true"
+	CastDayLightmapShadow="false"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot_cdt">
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.9" Size="(2.4; 2.4)" />
+</ModelBrand>

@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ankatra_1160_stuff/sticker_glass_top_ankatra_1160" />
+	<GameData
+		CameraPreset="glass_sticker"
+		Category="sticker_windshield"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_GLASS_STICKER_TOP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_GLASS_STICKER_TOP_2x16_BIG_N_DIRTY_NAME"
+		/>
+		<InstallSocket Type="Ankatra1160Sticker_GlassTop" />
+	</GameData>
+</TruckAddon>

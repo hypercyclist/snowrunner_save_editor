@@ -29,7 +29,6 @@
 			<Constraint Type="Rigid" />
 			<Body
 				_template="Limits"
-				LinearDamping="2"
 				Mass="40"
 				ModelFrame="BoneFuel1_cdt"
 			>
@@ -37,7 +36,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="4.1"
 				Mass="40"
 				ModelFrame="BoneFuel2_cdt"
 			>
@@ -45,7 +43,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="3"
 				Mass="30"
 				ModelFrame="BoneRepair_cdt"
 			>

@@ -1,0 +1,31 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutAllterrain _template="Medium">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutSoft" />
+			<WheelFriction _template="ScoutChains" />
+		</ScoutAllterrain>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.93" Mass="50">
+	<TruckTires>	
+		<TruckTire _template="ScoutAllterrain" Mesh="wheels/tire_scout_allterrain_12" Name="Ultima CS I">
+			<WheelFriction _template="ScoutChains" SubstanceFriction="1.2" BodyFrictionAsphalt="0.9" BodyFriction="1.3" IsIgnoreIce="true"/>
+			<GameData
+				Price="5200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_SCOUT_CHAINS_10_DESC" UiName="UI_TIRE_SCOUT_CHAINS_10_NAME" />
+			</GameData>
+		</TruckTire>
+		
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_scout_allterrain_12" Name="Ultima AT IV">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_SCOUT_ALLTERRAIN_13_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

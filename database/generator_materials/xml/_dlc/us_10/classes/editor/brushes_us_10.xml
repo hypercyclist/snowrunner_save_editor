@@ -1,0 +1,18 @@
+<DistributionBrushes>
+	<Plants>	
+		<RocksBigUsaUS10 LinkedGrassBrush="DebrisStonesRus" PlantsPerBlock="50">
+			<PlantType
+				Brand="rock_big_01_usa_us10"
+				Divergence="1"
+				MinSize="0.3"
+				MaxSize="1.5"
+				Perpendicularity="0.1"	
+			/>	
+			
+		</RocksBigUsaUS10>		
+	</Plants>
+	<OverlaysPlants>	
+	</OverlaysPlants>
+	<Grass>
+	</Grass>
+</DistributionBrushes>

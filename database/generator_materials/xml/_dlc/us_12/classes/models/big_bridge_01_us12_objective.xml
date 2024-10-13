@@ -1,0 +1,87 @@
+<ModelBrand
+	DayShadowOffsetMult="2.0"
+	AcceptZoneBorderDecals="true"
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCameraBridge="true"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="30"
+			Color="g(205; 241; 255) x 1.1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="40"
+			Pos="(0; 8.2; -39.3)"
+		/>
+
+		<StaticLight
+			AttenEnd="30"
+			Color="g(205; 241; 255) x 1.1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="40"
+			Pos="(0; 8.2; -22.0)"
+		/>
+		<StaticLight
+			AttenEnd="30"
+			Color="g(205; 241; 255) x 1.1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="40"
+			Pos="(0; 8.2; -7.0)"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+
+		<Body Collisions="Dynamic" ModelFrame="state_start">
+			<Body Collisions="Dynamic" ModelFrame="state_00" />
+			<Body Collisions="Dynamic" ModelFrame="state_end" />
+		</Body>
+	</PhysicsModel>
+	
+    <Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="state_00" />
+		<CdtMesh Name="cdt_state_00" />
+		<Mesh Name="state_01" />
+		<Mesh Name="state_end" />
+		<CdtMesh Name="cdt_state_end" />
+
+    </Subset>
+	
+	<Subset Name="build_stage_1">
+        <Mesh Name="state_00" />
+	<CdtMesh Name="cdt_state_00" />
+        <Mesh Name="state_01" />
+	<Mesh Name="state_start" />
+	<CdtMesh Name="cdt_state_start" />
+
+		<AnimTrack Name="stage_1_anim" />
+		<AnimSubset Name="build_animation_0" />
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="state_00" />  
+		<CdtMesh Name="cdt_state_00" />
+		<Mesh Name="animesh_1" />
+		<Mesh Name="animesh_2" />
+		<Mesh Name="animesh_3" />
+		<Mesh Name="animesh_4" />
+		<Mesh Name="animesh_5" />
+		<Mesh Name="animesh_6" />
+		<Mesh Name="animesh_7" />
+		<Mesh Name="animesh_8" />
+		<Mesh Name="animesh_9" />
+		
+	</AnimSubset>
+	
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_construction/actor_construct_metal_bridge_01" Range="200" Volume="1" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/big_bridge_01_us12_objective_lmk" />
+</ModelBrand>

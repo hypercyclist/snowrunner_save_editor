@@ -1,0 +1,23 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_solar_panel_default">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneTop_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNPANEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNPANEL_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiSolarPanel" />
+	</GameData>
+</TruckAddon>

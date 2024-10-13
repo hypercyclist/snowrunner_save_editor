@@ -1,0 +1,11 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	InBackground="true"
+>
+	<PhysicsModel>
+		<Body/>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_tuning/earthroamer_lti_threshold_default">
+		<Body Mass="15" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SILLS_STOCK_COVERS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SILLS_STOCK_COVERS_NAME"
+		/>
+		<InstallSocket Type="EarthroamerLtiThreshold" />
+	</GameData>
+</TruckAddon>

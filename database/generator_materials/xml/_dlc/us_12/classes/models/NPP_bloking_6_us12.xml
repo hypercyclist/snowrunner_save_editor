@@ -1,0 +1,59 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	DayShadowOffsetMult="13"
+>
+	<StaticLights>
+	<!--lamp_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-30.44; 2.01; -22.11)"
+			Shadows="true"
+		/>
+		<!--lamp_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-34.10; 3.52; -22.24)"
+			Shadows="true"
+		/>
+		<!--lamp_3-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-38.33; 3.52; -22.24)"
+			Shadows="true"
+		/>
+		<!--lamp_4-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; -0.8)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-42.60; 3.52; -22.24)"
+			Shadows="true"
+		/>
+    </StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel> 
+	<Landmark Mesh="landmarks/NPP_bloking_6_us12_lmk"/>
+</ModelBrand>

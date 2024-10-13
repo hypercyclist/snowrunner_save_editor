@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_670963n_stuff/sticker_back_1x1_azov_670963n" />
+	<GameData CameraPreset="rear">
+		<InstallSocket Type="Azov670963nSticker_Back" />
+	</GameData>
+</TruckAddon>

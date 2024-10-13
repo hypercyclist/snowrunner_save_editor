@@ -1,0 +1,33 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+		<Shakers>
+			<Shaker Frame="BoneExhaustL" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(2.100; 2.100; 2.100)" MaxFrequency="3.4" />
+			<Shaker Frame="BoneExhaustR" MinAngle="(0.3; 0.3; 0.3)" MaxAngle="(2.100; 2.100; 2.100)" MaxFrequency="3.3" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_bumper_rear_default">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="RezvaniTankBumperRear" />
+	</GameData>
+	<Exhaust Dir="(-0.76; 0.53; 0.35)" IsLight="true" Origin="(-2.366; 0.558; 0.367)" Speed="2.0" />
+	<Exhaust Dir="(-0.76; 0.53; 0.35)" IsLight="true" Origin="(-2.366; 0.558; -0.367)" Speed="2.0" />
+</TruckAddon>

@@ -1,0 +1,44 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+<Body NoSoftContacts="true" ModelFrame="BoneRoot">
+
+    <Body AngularDamping="0.2" DamageMult="0" Mass="1500" NoSoftContacts="true" ModelFrame="joint4" >
+                    <Constraint
+                        AxisLocal="(0; 1; 0)"
+                        Type="Hinge"
+                        MinLimit="-60"
+                        MaxLimit="60"
+                    >
+			                <Motor Damping="1000" Spring="10000" Type="Spring" />
+                    </Constraint>
+	<Body AngularDamping="0.2" Collisions="None" NoSoftContacts="true" DamageMult="0" Mass="500" ModelFrame="joint1">
+            <Constraint Type="Ragdoll" Cone="4">
+				<AllMotor Damping="50" Spring="10000" Type="Spring" />
+			</Constraint>
+
+		</Body>
+	<Body AngularDamping="0.2" Collisions="None" NoSoftContacts="true" DamageMult="0" Mass="500" ModelFrame="joint2">
+            <Constraint Type="Ragdoll" Cone="4">
+				<AllMotor Damping="50" Spring="10000" Type="Spring" />
+			</Constraint>
+        </Body>
+		
+	<Body Collisions="None" DamageMult="0" Mass="500" NoSoftContacts="true" ModelFrame="joint3" >
+            <Constraint
+                AxisLocal="(1; 0; 0)"
+                Type="Prismatic"
+                MinLimit="-0.25"
+                MaxLimit="0.25"
+            >
+                <Motor Damping="1000" Spring="40000" Type="Spring" />
+            </Constraint>
+			
+			
+                </Body>
+            </Body>
+</Body>
+	</PhysicsModel>
+</ModelBrand>

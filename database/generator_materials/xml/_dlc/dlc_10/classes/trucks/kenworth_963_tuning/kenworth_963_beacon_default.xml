@@ -52,6 +52,6 @@
 			UiIcon40x40=""
 			UiName="UI_TUNING_BEACONS_STOCK_NAME"
 		/>
-		<InstallSocket Type="Kenworth963Roofrack" />
+		<InstallSocket Type="Kenworth963Beacon" />
 	</GameData>
 </TruckAddon>

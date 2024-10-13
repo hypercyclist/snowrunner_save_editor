@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_horns_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_ae4380_stuff/stuff_hood_horns_voron_ae4380" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodVoronAE4380" />
+	</GameData>
+</TruckAddon>

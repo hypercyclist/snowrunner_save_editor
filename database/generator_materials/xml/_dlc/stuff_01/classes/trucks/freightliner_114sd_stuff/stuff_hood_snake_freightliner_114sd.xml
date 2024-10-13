@@ -1,0 +1,18 @@
+<_parent File="stuff_hood_snake_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_114sd_stuff/stuff_hood_snake_freightliner_114sd">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodFreightliner114Sd" />
+	</GameData>
+</TruckAddon>

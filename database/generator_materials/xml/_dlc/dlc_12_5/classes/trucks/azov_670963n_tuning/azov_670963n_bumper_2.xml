@@ -1,0 +1,60 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_670963n_tuning/azov_670963n_bumper_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="1"
+				Collisions="None"
+				Mass="1"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-12"
+					MaxLimit="32"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+	<Ignition>
+		<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.559; 0.990; -1.133)" ParentFrame="BoneCabin_cdt" />
+		<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.559; 0.990; 1.133)" ParentFrame="BoneCabin_cdt" />
+	</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(5.559; 0.990; -1.133)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(5.559; 0.990; 1.133)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.265; -0.459)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.266; -0.400)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.266; -0.341)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.265; 0.459)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.266; 0.400)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 140; 0) x 0.3" Size="0.2" Pos="(5.817; 1.266; 0.341)" Dir="(1; 0; 0)" DirAngle="120" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_DEFENDER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_DEFENDER_NAME"
+		/>
+		<InstallSocket Type="Azov670963nBumper" />
+	</GameData>
+</TruckAddon>

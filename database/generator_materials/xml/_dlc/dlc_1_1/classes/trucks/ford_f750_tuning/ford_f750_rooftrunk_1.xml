@@ -42,7 +42,6 @@
 			<Body _template="LimitsFuel" ModelFrame="BoneFuel_cdt" />
 			<Body
 				_template="Limits"
-				LinearDamping="2"
 				Mass="30"
 				ModelFrame="BoneWheel_cdt"
 			>

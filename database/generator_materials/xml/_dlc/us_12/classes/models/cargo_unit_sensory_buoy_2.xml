@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoSensoryBuoy" PackSlotsNumber="2">
+		<CraneSocket Pos="(0.34; 1.9; -0.008)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_unit_sensory_buoy_2_lmk" />
+</ModelBrand>

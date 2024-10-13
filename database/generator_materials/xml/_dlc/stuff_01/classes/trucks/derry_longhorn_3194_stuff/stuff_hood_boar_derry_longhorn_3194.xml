@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_boar_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_longhorn_3194_stuff/stuff_hood_boar_derry_longhorn_3194" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodDerryLonghorn3194" />
+	</GameData>
+</TruckAddon>

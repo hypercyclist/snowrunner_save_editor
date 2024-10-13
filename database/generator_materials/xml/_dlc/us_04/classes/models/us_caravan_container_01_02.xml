@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(7.0; 13.0)" 
+		Texture="occlusion_us_caravan_container_01.tga"
+	/>
+	<Landmark Mesh="landmarks/us_caravan_container_01_02_lmk" />
+</ModelBrand>

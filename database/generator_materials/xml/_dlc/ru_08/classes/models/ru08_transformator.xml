@@ -1,0 +1,23 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(10.0; 9.0)" />
+	<Landmark Mesh="landmarks/ru08_transformator_lmk" />
+	<SnapPoint Pos="(-1.45349; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(-1.13354; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(-0.82948; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(0.8227; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(1.13674; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(1.4491; 5.25087; -3.12392)" />
+	<SnapPoint Pos="(-1.45349; 5.25087; 3.12392)" />
+	<SnapPoint Pos="(-1.13354; 5.25087; 3.12392)" />
+	<SnapPoint Pos="(-0.82948; 5.25087; 3.12392)" />
+	<SnapPoint Pos="(0.8227; 5.25087; 3.12392)" />
+	<SnapPoint Pos="(1.13674; 5.25087; 3.12392)" />
+	<SnapPoint Pos="(1.4491; 5.25087; 3.12392)" />
+</ModelBrand>

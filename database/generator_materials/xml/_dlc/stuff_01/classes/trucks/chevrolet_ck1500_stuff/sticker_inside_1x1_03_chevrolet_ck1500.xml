@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_ck1500_stuff/sticker_inside_1x1_03_chevrolet_ck1500" />
+	<GameData>
+		<InstallSocket _noinherit="true" Type="ChevroletCk1500Sticker_1x1_03" />
+	</GameData>
+</TruckAddon>

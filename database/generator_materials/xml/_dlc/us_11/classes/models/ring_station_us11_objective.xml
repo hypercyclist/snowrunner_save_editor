@@ -1,0 +1,205 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true">
+    <StaticLights>
+	<!--lamp_down_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(0; 2.749; -6.7829)"
+			Shadows="true"
+		/>
+		<!--lamp_down_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-2.401; 2.749; -2.423)"
+			Shadows="true"
+		/>
+		<!--lamp_down_3-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(2.436; 2.749; -2.423)"
+			Shadows="true"
+		/>
+	        <!--lamp_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(10.968; 2.262; -3.141)"
+			Shadows="true"
+		/>
+		    <!--lamp_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(10.968; 2.262; -0.1451)"
+			Shadows="true"
+		/>
+		    <!--lamp_3-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0.3)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-0.014; -1.090; 3.063)"
+			Shadows="true"
+		/>
+</StaticLights>
+
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_deconstruct_wood" Range="200" Volume="1"/>
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(-0.107; 0.562; -0.11)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(5.29395; 4.75502; -3.96754)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(5.29395; 4.75502; -1.73242)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(5.29395; 4.75502; 0.548409)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(5.29395; 4.75502; 2.75797)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.5"
+			Dir="(0; -1; 0)" 
+			Pos="(5.29395; 4.75502; 4.2991)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.28277; 4.75502; 3.95683)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.28277; 4.75502; 1.72431)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.28277; 4.75502; -0.533135)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.9"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.28277; 4.75502; -2.85993)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+		<Flare      
+			AttenEnd="80"
+			AttenStart="5"
+			SizeMultAtDay="0"
+			ColorMultAtDay="0"
+			Color="g(75; 135; 135) x 0.5"
+			Dir="(0; -1; 0)" 
+			Pos="(-5.28277; 4.75502; -4.23508)"
+			Size="3"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(19.0; 19.0)" 
+		Texture="occlusion_constr_wood_01_objective.tga"
+	/>
+		<Landmark Mesh="landmarks/ring_station_us11_objective_lmk" />
+</ModelBrand>

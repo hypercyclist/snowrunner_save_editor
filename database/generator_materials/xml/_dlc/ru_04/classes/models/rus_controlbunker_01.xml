@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(31.0; 17.0)" 
+		Texture="occlusion_rus_controlbunker_01.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_controlbunker_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,32 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="2.1" ParentFrame="BoneExhaustLeft" />
+			<Shaker Frame="BoneExhaustRight" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.6; 0.6; 0.6)" MaxFrequency="2.0" ParentFrame="BoneExhaustRight" />
+			<Shaker Frame="BoneExhaustCapR"  LimitDirectionZ="Negative" MinAngle="(0; 0; 17)" MaxAngle="(0; 0; 52)" MaxFrequency="0.15" ParentFrame="BoneExhaustRight" />
+			<Shaker Frame="BoneExhaustCapL"  LimitDirectionZ="Negative" MinAngle="(0; 0; 15)" MaxAngle="(0; 0; 55)" MaxFrequency="0.13" ParentFrame="BoneExhaustLeft" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_exhaust_1">
+		<Body Collisions="None" Mass="8" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+		<InstallSocket Type="Plad450Exhaust" />
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.772; 4.424; 1.060)" Speed="3.82" ParentFrame="BoneExhaustLeft"/>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(0.772; 4.424; -1.060)" Speed="3.82" ParentFrame="BoneExhaustRight"/>
+</TruckAddon>

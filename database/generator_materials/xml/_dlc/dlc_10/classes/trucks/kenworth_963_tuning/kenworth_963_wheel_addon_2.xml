@@ -84,7 +84,7 @@
 		IsCustomizable="true"
 		Price="5700"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="12"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_SPARE_WHEELS_DESC"

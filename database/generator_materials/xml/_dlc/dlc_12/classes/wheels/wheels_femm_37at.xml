@@ -1,0 +1,29 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Superheavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="1.26">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_femm_37at" Name="tire">
+			<WheelFriction _template="Allterrain" BodyFrictionAsphalt="1.6" BodyFriction="1.7" SubstanceFriction="1.0"/>
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_FEMM_37AT_DESC" UiName="UI_TIRE_FEMM_37AT_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_femm_37at" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_FEMM_37AT_DESC" UiName="UI_RIM_FEMM_37AT_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,34 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.75" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_bumper_rear_1">
+		<Body ImpactType="Truck" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body _template="Mudguard" ModelFrame="BoneLeftRearMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-30" MaxLimit="3" />
+			</Body>
+			<Body _template="Mudguard" ModelFrame="BoneRightRearMudguard_cdt">
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-24" MaxLimit="3" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_LIGHTPROT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_LIGHTPROT_NAME"
+		/>
+		<InstallSocket Type="MTB8106RearBumper" />
+	</GameData>
+</TruckAddon>

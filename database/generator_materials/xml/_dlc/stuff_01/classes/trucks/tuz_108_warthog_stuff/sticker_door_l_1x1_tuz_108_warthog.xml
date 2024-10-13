@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_stuff/sticker_door_l_1x1_tuz_108_warthog" />
+	<GameData>
+		<InstallSocket Type="tuz108warthogSticker_Door_L" />
+	</GameData>
+</TruckAddon>

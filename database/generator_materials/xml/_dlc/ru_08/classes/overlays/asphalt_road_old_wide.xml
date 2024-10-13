@@ -1,0 +1,19 @@
+<OverlayBrand
+	IsClampV="true"
+	IsExtrudable="false"
+	IsAsphalt="true"
+	HeightMapBlendingContrast="0.9"
+	BlendBorderMin="0.0"
+	BlendBorderMax="0.4"
+	Texture="overlays/asphalt_road_old_wide__d_a.tga"
+	TextureRelief="overlays/asphalt_road_old_relief_wide__d_a.tga"
+	WheelTracks="0"
+>
+	<Prebuild
+		DefaultWidth="9"
+		FlattenPart="1"
+		LandmarkColor="(100; 100; 100)"
+		LandmarkPart="1"
+		Layer="4"
+	/>
+</OverlayBrand>

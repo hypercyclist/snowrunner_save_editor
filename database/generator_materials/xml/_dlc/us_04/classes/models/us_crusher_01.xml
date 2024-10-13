@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(15.0; 15.0)" 
+		Texture="occlusion_us_crusher_01.tga"
+	/>
+	<Landmark Mesh="landmarks/us_crusher_01_lmk" />
+</ModelBrand>

@@ -1,0 +1,13 @@
+<ModelBrand 
+	Instanced="true" 
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body 
+			Collisions="Dynamic" 
+			Mass="100.0" 
+			NoSoftContacts="True" 
+			ModelFrame="Bone_wood_plank_01b_ru13">
+			<Constraint Type="Fixed" BreakOffThreshold="100.0" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

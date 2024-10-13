@@ -1,0 +1,15 @@
+<ModelBrand
+	ApplyNormalInReference="false"
+	ClipCamera="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Intensity="0.8" Size="(4.0; 4.0)" />
+	<Landmark Mesh="landmarks/ru08_pole_a_broken_down_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0; 0.8; 0)" />
+	</GameData>
+</ModelBrand>

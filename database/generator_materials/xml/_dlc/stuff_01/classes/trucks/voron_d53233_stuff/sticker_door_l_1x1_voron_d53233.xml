@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/voron_d53233_stuff/sticker_door_l_1x1_voron_d53233" />
+	<GameData>
+			<InstallSocket Type="voronD53233Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

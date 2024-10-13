@@ -191,7 +191,7 @@
 					MinLimit="-10"
 					MaxLimit="10"
 				>
-					<Motor Damping="300000" Spring="4000" Type="Spring" />
+					<Motor Damping="500" Spring="1000" Type="Spring" />
 				</Constraint>
 			</Body>
 			<Body Collisions="None" Mass="1" ModelFrame="BoneMirrorL_cdt">
@@ -302,7 +302,7 @@
 		Pos="(2.059; 1.466; 0)"
 	/>
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="85200"
 		UnlockByExploration="true"
 		UnlockByRank="1"

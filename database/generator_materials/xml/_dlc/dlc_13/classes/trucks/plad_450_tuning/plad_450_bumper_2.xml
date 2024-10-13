@@ -1,0 +1,72 @@
+<_templates Include="trucks">
+	<_parent File="plad_450_bumper_default" />
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel _noinherit="true" Mesh="trucks/plad_450_tuning/plad_450_bumper_2">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="4"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; -1; 0)"
+					Type="Hinge"
+					MinLimit="-10"
+					MaxLimit="6"
+				/>
+				 <Motor Damping="0.1" Spring="0.1" Type="Spring" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Color="g(253; 220; 186) x 1" Pos="(6; 1.850; 1)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Color="g(253; 220; 186) x 1" Pos="(6; 1.850; -1)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.4" Pos="(5.554; 1.473; -1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.4" Pos="(5.554; 1.473; 1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.2" Pos="(5.589; 1.223; -1.003)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.2" Pos="(5.589; 1.223; 1.003)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.2" Pos="(5.798; 1.872; -0.613)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay=".05" DirAngle="90" Color="g(253; 220; 186) x 1" Size="0.2" Pos="(5.798; 1.872; 0.613)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(5.798; 1.872; -0.613)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(5.798; 1.872; 0.613)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".2" Pos="(5.798; 1.872; -0.613)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".2" Pos="(5.798; 1.872; 0.613)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(5.798; 1.872; -0.613)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(5.798; 1.872; 0.613)" ParentFrame="BoneCabin_cdt" />
+			
+			<Model _template="HeadLightRay" Org="(5.554; 1.473; -1.115)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(5.554; 1.473; 1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".2" Pos="(5.554; 1.473; -1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 200) x 0.6" Size=".2" Pos="(5.554; 1.473; 1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(5.554; 1.473; -1.115)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(5.554; 1.473; 1.115)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="hoods_default"
+		Category="bumper"
+		Price="1800"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="Plad450Bumper" />
+	</GameData>
+</TruckAddon>

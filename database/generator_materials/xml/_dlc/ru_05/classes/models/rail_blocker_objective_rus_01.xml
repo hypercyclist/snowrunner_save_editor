@@ -1,0 +1,22 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<Subset IsDefault="true" Name="stage_0">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="build_complete">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_construct_rail_blocker_01" Range="200" Volume="1"/>
+			<SFX Name="rail_blocker_smoke_01" Dir="(0; 1; 0)" Pos="(-0.107; 0.562; -0.11)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

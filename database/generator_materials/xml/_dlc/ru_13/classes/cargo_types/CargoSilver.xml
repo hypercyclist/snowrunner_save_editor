@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_SILVER_NAME"
+		UiDesc="UI_CARGO_SILVER_DESC"
+		UiIcon20x20="cargoSilver20"
+		UiIcon40x40="cargoSilver40"
+		UiIcon100x100="cargoTypeSilver"
+	/>
+</CargoType>

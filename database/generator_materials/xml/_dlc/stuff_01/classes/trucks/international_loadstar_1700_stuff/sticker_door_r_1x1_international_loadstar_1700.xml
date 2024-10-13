@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_loadstar_1700_stuff/sticker_door_r_1x1_international_loadstar_1700" />
+	<GameData>
+			<InstallSocket Type="internationalLoadstar1700Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,11 @@
+<GrassBrand
+	IgnoreNoGrass="true"
+	PlantingGroup="Debris"
+	IsAboveSnow="true"
+	PlantingMinSpacing="0.5"
+	UseDirtTint="true"
+	ParticlesType="fragments_ash_dust"
+	FadeDistances="10, 20, 30"
+	FadeInterval="10"
+	DissolveInterval="1"
+/>

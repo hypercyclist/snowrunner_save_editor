@@ -1,0 +1,25 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+<PhysicsModel>
+	<NetSync Legacy="false" />
+		<Body Collisions="Dynamic" Friction="1.8" Mass="1000" NoSoftContacts="true" AngularDamping="0.001">
+			<Body
+					CenterOfMassOffset="(0; 0; 0)"
+					Collisions="None" 
+					Mass="2000"
+					ModelFrame="BoneCrane_cdt"
+				>
+					<Constraint
+							AxisLocal="(0; 1; 0)"
+							Type="Prismatic"
+							MinLimit="0"
+							MaxLimit="0.25"
+						>
+							<Motor Damping="1" Spring="0.0001" Type="Spring" />
+					</Constraint>
+			</Body>
+		</Body>
+</PhysicsModel>
+	<GameData LoadType="CargoStoneBlock" PackSlotsNumber="2">
+		<CraneSocket Pos="(1.198; 2.49; 0.016)" ParentFrame="BoneCrane_cdt"/>
+	</GameData>
+</ModelBrand>

@@ -1,0 +1,25 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_stuff/stuff_curtain_burlak" _noinherit="true">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneCurtain_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="5"
+				>
+					<Motor Damping="0.05" Spring="0.01" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainBurlak" />
+	</GameData>
+</TruckAddon>

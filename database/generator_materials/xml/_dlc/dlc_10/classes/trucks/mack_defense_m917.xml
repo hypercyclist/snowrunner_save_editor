@@ -197,6 +197,11 @@
 		</Damage>
 		<CompatibleWheels Scale="0.6" Type="wheels_mack_defense_m917" />
 		<CompatibleWheels Scale="0.6" Type="wheels_heavy_single" />
+
+		<CompatibleWheels RearOffsetZ="0.05" Scale="0.6" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels RearOffsetZ="0.1" Scale="0.6" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels RearOffsetZ="0.1" Scale="0.6" Type="wheels_heavy_mudtires_single2" />
+
 		<Camera Center="(-0.94; -0.35; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -382,7 +387,7 @@
 	<Landmark Mesh="landmarks/mack_defense_m917_lmk" MinScale="1.7" MaxScale="3.7" />
 	<HeadLight _template="Default" Pos="(5; 1.287; 0)" ParentFrame="BoneCabin_cdt" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="95500"
 		UnlockByExploration="true"
 		UnlockByRank="1"
@@ -470,8 +475,8 @@
 			<Socket Names="MackDefenseM917DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
 		</AddonSockets>
 		<AddonSockets>
-			<Socket Names="Trailer" Offset="(-4.148; 0.954; 0)">
-				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer" Types="MinicraneRU, FrameAddon" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.148; 0.954; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer, LogTrailer" Types="MinicraneRU, FrameAddon" />
 			</Socket>
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-1.970; 1.598; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-1.970; 1.769; 0)" />
@@ -482,8 +487,8 @@
 			<Socket Names="FrameAddon" Offset="(-1.294; 1.3025; 0)">
 				<AddonsShift Offset="(-0.838; 0; 0)" Types="MinicraneNavistar" />
 			</Socket>
-			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneNavistar" Offset="(-1.88; 0.280; 0)" ParentFrame="BoneChassis_cdt" />
-			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="MinicraneNavistar" Offset="(0.50; 1.3035; 0)" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneNavistar, Trailer, LogTrailer" Offset="(-1.88; 0.280; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="MinicraneNavistar, Trailer, LogTrailer" Offset="(0.50; 1.3035; 0)" />
 			<Socket Names="FrameAddonTank" NamesBlock="MinicraneNavistar" Offset="(-2.2; 1.3035; 0)" />
 			<Socket Names="FrameAddonTow" NamesBlock="MinicraneNavistar" Offset="(-2.2; 1.29; 0)" />
 			<Socket Names="FrameAddonTowPlatform" NamesBlock="MinicraneNavistar" Offset="(-0.71; 1.38; 0)" />

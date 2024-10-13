@@ -1,0 +1,22 @@
+<OverlayBrand
+	IsClampV="true"
+	IsExtrudable="false"
+	IsAsphalt="true"
+	HeightMapBlendingContrast="0"
+	BlendBorderMin="0.05"
+	BlendBorderMax="0.99"
+	Texture="overlays/asphalt_road_2lane_kuban__d_a.tga"
+	TextureRelief="overlays/asphalt_road_2lane_kuban_relief__d_a.tga"
+	WheelTracks="0"
+>
+	<Prebuild
+		DefaultWidth="9"
+		FlattenPart="1"
+		Layer="4"
+		LandmarkUseAverageWidth="true"
+		LandmarkColor="(100; 100; 100)"
+		LandmarkPart="1"
+		LandmarkBorderWidth="1"
+		LandmarkBorderColor="(70;70;70)"
+	/>
+</OverlayBrand>

@@ -10,7 +10,7 @@
 		Category="miscellenious"
 		Price="1200"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="13"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_HORNS_TWIN_TWOSIDE_DESC"

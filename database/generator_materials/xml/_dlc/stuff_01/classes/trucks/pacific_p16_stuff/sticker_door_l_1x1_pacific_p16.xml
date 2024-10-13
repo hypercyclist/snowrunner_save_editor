@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/pacific_p16_stuff/sticker_door_l_1x1_pacific_p16" />
+	<GameData>
+			<InstallSocket Type="pacificP16Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

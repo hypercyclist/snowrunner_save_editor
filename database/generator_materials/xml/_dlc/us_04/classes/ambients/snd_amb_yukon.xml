@@ -1,0 +1,87 @@
+<AmbientSounds>
+	<Volume Min="0.5" Max="0.5" FadeTime="3.0"/>
+	<Interval Min="1.0" Max="1.0" />
+	<DayForest Sound="amb/amb_yukon/amb_yukon_day_forest_loop">
+		<RandomSet
+			Sound="amb/amb_us_winter/amb_us_winter_day_tree_rnd_set/amb_us_winter_day_tree_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "25"
+			MaxInterval = "45"
+			MinVolume = "0.5"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="actors/actor_bird_woodpecker_rnd_set/actor_bird_woodpecker_rnd"
+			MinRadius = "10"
+			MaxRadius = "55"
+			MinInterval = "20"
+			MaxInterval = "50"
+			MinVolume = "0.4"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_birds1/amb_us_autumn_day_forest_birds1_rnd"
+			MinRadius = "5"
+			MaxRadius = "35"
+			MinInterval = "30"
+			MaxInterval = "60"
+			MinVolume = "0.5"
+			MaxVolume = "0.7"
+			WeatherIntensityThreshold="0.6"
+		/>
+		<RandomSet
+			Sound="amb/amb_us_autumn/amb_us_autumn_day_forest_birds2/amb_us_autumn_day_forest_birds2_rnd"
+			MinRadius = "10"
+			MaxRadius = "40"
+			MinInterval = "25"
+			MaxInterval = "50"
+			MinVolume = "0.4"
+			MaxVolume = "0.8"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</DayForest>
+	<DayWind Sound="amb/amb_yukon/amb_yukon_day_open_loop">
+		<RandomSet
+			Sound="amb/amb_us_winter/amb_us_winter_day_crow_rnd_set/amb_us_winter_day_crow_rnd"
+			MinRadius = "10"
+			MaxRadius = "40"
+			MinInterval = "35"
+			MaxInterval = "75"
+			MinVolume = "0.6"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</DayWind>
+	<NightForest Sound="amb/amb_yukon/amb_yukon_night_forest_loop">
+		<RandomSet
+			Sound="amb/amb_us_winter/amb_us_winter_night_tree_rnd_set/amb_us_winter_night_tree_rnd"
+			MinRadius = "5"
+			MaxRadius = "25"
+			MinInterval = "15"
+			MaxInterval = "30"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+		/>
+		<RandomSet
+			Sound="amb/amb_ru_winter/amb_ru_winter_night_forest_owl_rnd_set/amb_ru_winter_night_forest_owl_rnd"
+			MinRadius = "10"
+			MaxRadius = "30"
+			MinInterval = "20"
+			MaxInterval = "40"
+			MinVolume = "0.8"
+			MaxVolume = "1.0"
+			WeatherIntensityThreshold="0.6"
+		/>
+	</NightForest>
+	<NightWind Sound="amb/amb_yukon/amb_yukon_night_open_loop">
+	</NightWind>
+	<WaterFlow
+		Sound2D="amb/amb_river_medium_rnd_set/amb_river_medium_near_loop"
+		Sound3D="amb/amb_river_medium_rnd_set/amb_river_medium_far_loop"
+		MaxDist="150"
+		Dist2D="0"
+		Dist3D="45"
+	/>
+</AmbientSounds>

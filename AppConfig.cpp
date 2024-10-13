@@ -79,7 +79,7 @@ bool AppConfig::loaded()
 
 bool AppConfig::saveConfig()
 {
-    saveConfig(m_configFullFileName);
+    return saveConfig(m_configFullFileName);
 }
 
 bool AppConfig::saveConfig(std::string _fullFileName)

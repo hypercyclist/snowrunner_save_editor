@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/dan_96320_stuff/sticker_inside_1x1_01_dan_96320" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket Type="Dan96320Sticker_1x1_01" />
+	</GameData>
+</TruckAddon>

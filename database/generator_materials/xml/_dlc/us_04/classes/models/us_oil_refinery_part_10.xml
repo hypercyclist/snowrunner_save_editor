@@ -1,0 +1,13 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(13.0; 13.0)" 
+		Texture="occlusion_us_oil_refinery_part_10.tga"
+	/>
+</ModelBrand>

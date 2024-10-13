@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aac_58dw_stuff/sticker_door_l_1x1_aac_58dw" />
+	<GameData CameraPreset="door_l_sticker">
+		<InstallSocket Type="Aac58dwSticker_Door_L" />
+	</GameData>
+</TruckAddon>

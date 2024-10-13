@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aramatsu_forester_stuff/sticker_roof_1x1_aramatsu_forester" />
+	<GameData>
+		<InstallSocket Type="AramatsuForesterSticker_Roof" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_stuff/sticker_inside_1x1_06_derry_special_15c177" />
+	<GameData CameraPreset="sticker_5">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket _noinherit="true" Type="DerrySpecial15C177Sticker_1x1_06" />
+	</GameData>
+</TruckAddon>

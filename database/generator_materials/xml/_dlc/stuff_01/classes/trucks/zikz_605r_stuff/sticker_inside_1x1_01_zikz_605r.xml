@@ -1,0 +1,19 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_stuff/sticker_inside_1x1_01_zikz_605r" />
+	<GameData
+		CameraPreset="sticker"
+		Category="sticker"
+		Price="100"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"
+		/>
+		<InstallSocket Type="zikz605RSticker_1x1_01" />
+	</GameData>
+</TruckAddon>

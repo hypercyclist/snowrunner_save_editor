@@ -1,0 +1,60 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+			<Multiplier Multiplier="0.9" Type="Gearbox" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_protection_01">
+		<Body ImpactType="Truck" Mass="350" ModelFrame="BoneProjection_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="17" ModelFrame="BoneWinch_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+				>
+					<Motor Damping="4" Spring="10" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+		</Ignition>
+		<HeadLight>
+			
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; 0.190)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; 0.120)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; 0.069)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; 0.008)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; -0.052)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; -0.112)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(7.156; 2.311; -0.173)" />
+			<Model _template="HeadLightRay" Color="g(215; 215; 215) x 1.5" Org="(7.156; 2.311; 0.120)" />
+			<Model _template="HeadLightRay" Color="g(215; 215; 215) x 1.5" Org="(7.156; 2.311; -0.112)" />
+			<Model _template="HeadLightRay" Org="(7.073; 1.86; 0.389)" />
+			<Model _template="HeadLightRay" Org="(7.073; 1.86; -0.389)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(7.073; 1.86; 0.389)"/>
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(7.073; 1.86; -0.389)"/>
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="top"
+		IsCustomizable="true"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_SAVIOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_SAVIOR_NAME"
+		/>
+		<InstallSocket Type="Femm37AtProtection" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,77 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.25" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData
+		FuelCapacity="40"
+		WheelRepairsCapacity="4"
+	>
+		<LimitedFluid Center="(0.05; 2.08; 0.306)" SizeX="0.352" SizeY="0.159" SizeZ="0.455" Type="Box" />
+		<LimitedFluid Center="(-0.34; 2.08; 0.312)" SizeX="0.352" SizeY="0.162" SizeZ="0.455" Type="Box" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tuz_166_tuning/tuz_166_roofrack_1">
+		<Body Mass="10">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="15"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.06;0)" LinearLimitsZ="(-0.02;0)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="15"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(0;0.08)" />
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="10"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.05;0)" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Org="(0.424; 2.042; -0.451)" />
+			<Model _template="HeadLightRay" Org="(0.424; 2.042; 0.451)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="100" Size="0.30" Pos="(0.424; 2.042; -0.451)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="100" Size="0.30" Pos="(0.424; 2.042; 0.451)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 0.6" DirAngle="135" Size="0.25" Pos="(0.446; 2.059; -0.153)" />
+			<Flare _template="HeadLight" Color="g(245; 235; 215) x 0.6" DirAngle="135" Size="0.25" Pos="(0.446; 2.059; 0.153)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1500"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="Tuz166Roofrack" />
+	</GameData>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+</TruckAddon>

@@ -131,6 +131,7 @@
 		<CompatibleWheels OffsetZ="0.36" Scale="0.78" Type="wheels_zikz_612h_mastodont" />
 		<CompatibleWheels OffsetZ="0.34" Scale="0.77" Type="wheels_heavy_single_zikz_612h" />
 		<CompatibleWheels OffsetZ="0.34" Scale="0.77" Type="wheels_heavy_single2_zikz_612h" />
+		<CompatibleWheels  OffsetZ="0.36" Scale="0.78" Type="wheels_superheavy_mudtires" />
 		<!--<LimitedFluid
 			Center="(5.483; 1.498; 1.235)"
 			SizeX="0.773"
@@ -598,7 +599,7 @@
 		<CraneSocket Pos="(2.5; 1.15; 0.55)" />
 		<CraneSocket Pos="(2.5; 1.15; -0.55)" />
 		<AddonSockets>
-			<Socket Names="Trailer, MastodonLogPoleTrailer" NamesBlock="MastodonSideboard, MastodonWatertank, FrameAddonSeismicVibratorZikz, FrameAddonLogMediumMastodon" Offset="(-2.33; 0.93; 0)" />
+			<Socket Names="Trailer, LogTrailer, MastodonLogPoleTrailer" NamesBlock="MastodonSideboard, MastodonWatertank, FrameAddonSeismicVibratorZikz" Offset="(-2.33; 0.93; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-0.4; 1.85; 0)" />
 			<Socket Names="Semitrailer, SemitrailerOiltank" NamesBlock="SaddleHigh" Offset="(-1; 1.65; 0)" />
 		</AddonSockets>
@@ -614,7 +615,7 @@
 			<Socket Names="MastodonSideboard" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
 			<Socket Names="MastodonWatertank" ParentFrame="BoneChassis_cdt" Offset="(-0.17; 0; 0)" />
 			<Socket Names="MastodonBigCrane" Offset="(3; 0.08; 0)" ParentFrame="BoneChassis_cdt" />
-			<Socket Names="MastodonLongBigCrane" Offset="(0.5; 1.54; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="Trailer, MastodonLogPoleTrailer, LargeSemitrailer, LargeSemitrailerOiltank, Semitrailer, SemitrailerOiltank"/>
+			<Socket Names="MastodonLongBigCrane" Offset="(0.5; 1.41; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="Trailer, LogTrailer, MastodonLogPoleTrailer, LargeSemitrailer, LargeSemitrailerOiltank, Semitrailer, SemitrailerOiltank"/>
 			<Socket Names="SaddleHigh" Offset="(-0.4; 1.3; 0)" ParentFrame="BoneChassis_cdt">
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.149)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.149)" />
@@ -678,6 +679,10 @@
 		<AddonSockets>
 			<Socket Names="MastodonHorns" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
 		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="HeavyRepair" NamesBlock="MastodonSpareWheel, MastodonElectricbox, SaddleHigh, SaddleLow, FrameAddonKungZikz, MastodonBunkLog, ZikzLogLift, ZikzFrameAddon, MastodonFrameAddonTowPlatform, MastodonSideboard, MastodonWatertank, MinicraneRU, MastodonBigCrane, MastodonLongBigCrane, FrameAddonSeismicVibratorZikz, FrameAddonTankZikz, FrameAddonLogShortMastodon, FrameAddonLogMediumMastodon"
+			Offset="(1.35; 1.522; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
 		<!-- stuff -->
 		<AddonSockets>
 			<Socket
@@ -715,7 +720,7 @@
 			<Socket
 				InCockpit="true"
 				Names="StuffZikz612h_1x1_02"
-				Offset="(0; 0; 0)"
+				Offset="(-0.001; 0; 0)"
 				ParentFrame="BoneCabin_cdt"
 			/>
 		</AddonSockets>

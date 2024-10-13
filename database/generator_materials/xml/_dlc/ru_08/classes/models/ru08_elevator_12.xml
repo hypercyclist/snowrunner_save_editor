@@ -1,0 +1,19 @@
+<ModelBrand
+	DayShadowOffsetMult="3.0"
+	NightLightingShadowsAllowCap="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/elevator_12_lmk" />
+
+	<Occlusion
+		Size="(23.0; 14.0)" 
+		Texture="occlusion_ru08_elevator_12.tga"
+		/>
+
+
+</ModelBrand>

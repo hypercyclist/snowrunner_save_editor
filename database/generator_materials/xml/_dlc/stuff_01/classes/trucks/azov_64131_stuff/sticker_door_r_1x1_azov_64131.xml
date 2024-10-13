@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_stuff/sticker_door_r_1x1_azov_64131" />
+	<GameData>
+			<InstallSocket Type="azov64131Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

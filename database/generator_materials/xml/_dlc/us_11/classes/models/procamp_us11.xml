@@ -1,0 +1,11 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(16.0; 14.0)" Texture="occlusion_procamp.tga" />
+	<Landmark Mesh="landmarks/procamp_us11_lmk" />
+</ModelBrand>

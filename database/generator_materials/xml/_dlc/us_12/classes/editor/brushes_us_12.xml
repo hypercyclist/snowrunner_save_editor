@@ -1,0 +1,262 @@
+<DistributionBrushes>
+	<Plants>	
+			<AspensNC PlantsPerBlock="25">
+			<PlantType
+				Brand="aspen_01_rus"
+				Divergence="0.06"
+				MinSize="0.7"
+				MaxSize="1"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="aspen_02_rus"
+				Divergence="0.06"
+				MinSize="0.7"
+				MaxSize="1"
+				Perpendicularity="0.1"
+			/>
+			<PlantType
+				Brand="birch_01_rus"
+				Divergence="0.06"
+				MinSize="0.8"
+				MaxSize="1.1"
+				Perpendicularity="0.1"
+			/>
+		</AspensNC>
+		<AshThree PlantsPerBlock="55">
+			<PlantType
+				Brand="ash_tree_1_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+			/>			
+			<PlantType
+				Brand="ash_tree_2_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.2"
+			/>		
+			<PlantType
+				Brand="ash_tree_3_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.2"
+			/>				
+		</AshThree>
+		<Chestnut PlantsPerBlock="55">
+			<PlantType
+				Brand="chestnut_1_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+			/>			
+			<PlantType
+				Brand="chestnut_2_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+			/>			
+						<PlantType
+				Brand="chestnut_3_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+			/>			
+		</Chestnut>
+		<Rhododendron PlantsPerBlock="155">
+			<PlantType
+				Brand="bush_1_us12"
+				Divergence="0.1"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>			
+			<PlantType
+				Brand="bush_2_us12"
+				Divergence="0.1"
+				MinMapScale="0.8"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>			
+
+		</Rhododendron>
+		<Azalia PlantsPerBlock="155">
+			<PlantType
+				Brand="bush_3_us12"
+				Divergence="0.1"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>			
+			<PlantType
+				Brand="bush_4_us12"
+				Divergence="0.1"
+				MinMapScale="0.8"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>			
+			<PlantType
+				Brand="bush_5_us12"
+				Divergence="0.1"
+				MinMapScale="0.8"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>		
+			<PlantType
+				Brand="bush_6_us12"
+				Divergence="0.1"
+				MinMapScale="0.8"
+				MinSize="0.9"
+				MaxSize="1.4"
+				Perpendicularity="0.8"
+			/>		
+		</Azalia>
+		<SpruceDark PlantsPerBlock="55">
+			<PlantType
+				Brand="spruce_01_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="1.4"
+				MaxSize="1.8"
+			/>			
+			<PlantType
+				Brand="spruce_02_us12"
+				Divergence="0.04"
+				MinMapScale="0.6"
+				MinSize="0.9"
+				MaxSize="1.2"
+			/>		
+		</SpruceDark>
+
+		<BushesNC PlantsPerBlock="128">
+			<PlantType
+				Brand="bush_b_rus"
+				Divergence="0.1"
+				MinSize="0.3"
+				MaxSize="0.6"
+				Perpendicularity="0.8"
+			/>
+			<PlantType
+				Brand="birch_bush_a_rus"
+				Divergence="0.1"
+				MinSize="0.3"
+				MaxSize="0.6"
+				Perpendicularity="0.8"
+			/>			
+		</BushesNC>
+		
+				<SwampChunksNC LinkedGrassBrush="" PlantsPerBlock="900">
+			<PlantType
+				Brand="swamp_grass_01_us12"
+				MinSize="1.0"
+				MaxSize="1.8"
+				Perpendicularity="1.0"
+				PlaceOnlyOutsideSnow="false"
+			/>
+		</SwampChunksNC>
+		
+				<CanesNC PlantsPerBlock="400">
+			<PlantType
+				Brand="cane_c_us12"
+				Divergence="0.1"
+				MinSize="0.6"
+				MaxSize="1.2"
+				Perpendicularity="0.3"
+				PlaceOnlyOutsideWater="false"
+			/>
+			<PlantType
+				Brand="cane_d_us12"
+				Divergence="0.1"
+				MinSize="0.6"
+				MaxSize="1.2"
+				Perpendicularity="0.3"
+				PlaceOnlyInWater="false"
+			/>
+		</CanesNC>	
+		
+		<BushesGRN PlantsPerBlock="128">
+			<PlantType
+				Brand="bush_b_rus"
+				Divergence="0.1"
+				MinSize="0.4"
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>			
+
+			<PlantType
+				Brand="birch_bush_a_rus"
+				Divergence="0.1"
+				MinSize="0.4"
+				MaxSize="1.2"
+				Perpendicularity="0.8"
+			/>					
+		</BushesGRN>
+		<SunflowersGreen PlantsPerBlock="250">
+			<PlantType
+				Brand="sunflower_01_us12"
+				Divergence="0"
+				MinSize="0.8"
+				MaxSize="1.2"
+				Perpendicularity="0.05"
+			/>
+		</SunflowersGreen>
+		<Tobacco PlantsPerBlock="300">
+		<PlantType
+				Brand="tobacco_01_us12"
+				Divergence="0"
+				MinSize="1.2"
+				MaxSize="1.6"
+				Perpendicularity="0.05"
+			/>
+		</Tobacco>
+	</Plants>
+	<Grass>
+		<GrassWheatNC PlantsPerBlock="1524">
+			<PlantType Brand="wheat_01_us12_green" />
+		</GrassWheatNC>
+		<GrassShortUS PlantsPerBlock="512">
+			<PlantType Brand="grass_short_us12" />
+		</GrassShortUS>
+		<GrassShortUS_d PlantsPerBlock="1024">
+			<PlantType Brand="grass_short_us12_d" />
+			<PlantType Brand="grass_short_us12_c" />
+			<PlantType Brand="grass_short_us12" />
+		</GrassShortUS_d>
+		<GrassWeedUs PlantsPerBlock="512">
+			<PlantType Brand="grass_weed_us12_f" />
+			<PlantType Brand="grass_flower_us12_a" />
+		</GrassWeedUs>
+		<GrassWild PlantsPerBlock="1024">
+			<PlantType Brand="grass_short_us12_a" />
+			<PlantType Brand="grass_short_us12_b" />
+			<PlantType Brand="grass_weed_us12_a"  />
+			<PlantType Brand="grass_tall_us12_a" />
+			<PlantType Brand="grass_tall_us12_b" />
+			<PlantType Brand="grass_tall_us12_a" />
+			<PlantType Brand="grass_tall_us12_b" />
+			<PlantType Brand="grass_flower_rus_a" />
+			<PlantType Brand="grass_flower_rus_c" />
+			<PlantType Brand="grass_flower_rus_d" />
+			<PlantType Brand="grass_flower_rus_e" />
+			<PlantType Brand="grass_flower_rus_f" />
+			<PlantType Brand="grass_weed_us12_b" />	
+			<PlantType Brand="grass_weed_us12_c" />
+			<PlantType Brand="grass_weed_us12_e" />
+			<PlantType Brand="grass_weed_us12_d" />
+		</GrassWild>
+		<GrassTallUs_b PlantsPerBlock="512">
+			<PlantType Brand="grass_tall_us12_b" />
+		</GrassTallUs_b>
+	</Grass>
+</DistributionBrushes>

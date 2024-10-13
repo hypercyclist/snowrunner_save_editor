@@ -99,7 +99,7 @@
 		Category="top"
 		Price="2100"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="12"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"

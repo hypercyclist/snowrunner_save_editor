@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_tank_stuff/sticker_door_r_1x1_rezvani_tank" />
+	<GameData>
+			<InstallSocket Type="RezvaniTankSticker_Door_R" />
+	</GameData>
+</TruckAddon>

@@ -149,9 +149,21 @@
 			<DamageArea Type="FuelTank" Min="(-1.15; 0.55; -1)" Max="(-0.1; 0.95; 1)" ParentFrame="BoneChassis_cdt" />
 		</Damage>
 		<CompatibleWheels Scale="0.5" Type="wheels_step_3364_crocodile" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.53" Type="wheels_step_3364_crocodile" />
 		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.13" Scale="0.52" Type="wheels_heavy_mudtires_tayga" />
-		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_double" />
-		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.5" Type="wheels_medium_mudtires_double" />
+		
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.16" RearOffsetZ="0.03" Scale="0.53" Type="wheels_medium_mudtires_double" />
+
 		<Camera Center="(-1; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
 			<Cockpit
 				_template="Default"
@@ -307,7 +319,7 @@
 		<AddonSockets>
 			<Socket Names="Semitrailer, SemitrailerOiltank" NamesBlock="SaddleHigh, MinicraneRU" Offset="(-2; 1.156; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow, MinicraneRU" Offset="(-2; 1.325; 0)" />
-			<Socket Names="Trailer" Offset="(-3.63; 0.793; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-3.63; 0.793; 0)" />
 		</AddonSockets>
 		<AddonSockets>
 			<!--<Socket Names="BunkLog" Offset="()" />-->

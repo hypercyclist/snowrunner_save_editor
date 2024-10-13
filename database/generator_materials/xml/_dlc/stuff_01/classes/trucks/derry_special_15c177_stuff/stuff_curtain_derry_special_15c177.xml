@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/derry_special_15c177_stuff/stuff_curtain_derry_special_15c177" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainDerrySpecial15C177" />
+	</GameData>
+</TruckAddon>

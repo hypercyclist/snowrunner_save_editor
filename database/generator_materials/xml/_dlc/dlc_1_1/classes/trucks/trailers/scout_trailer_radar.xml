@@ -406,7 +406,7 @@
 		UnlockByRank="1"
 	>
 		<WinchSocket WinchableWhenAttached="false" Pos="(3.869; 0.76; 0)" ParentFrame="BoneHandle_cdt" />
-		<WinchSocket Pos="(0.349; 2.18; -0.794)" />
+		<WinchSocket Pos="(0.349; 2.18; 0.794)" />
 		<WinchSocket Pos="(0.349; 2.18; -0.794)" />
 		<WinchSocket Pos="(0.349; 0.765; 0.884)" />
 		<WinchSocket Pos="(0.349; 0.765; -0.884)" />

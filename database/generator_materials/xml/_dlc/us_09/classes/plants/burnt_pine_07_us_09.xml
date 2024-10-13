@@ -1,0 +1,22 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" CheckNoGrass="false">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch1">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch2">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" DebrisType="FoliageNeedles" ModelFrame="BoneBranch3">
+				<Constraint _template="BranchSoft" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.45" Size="(8.0; 8.0)" />
+	<Landmark Mesh="landmarks/burnt_pine_07_us_09_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0.081; 0.492; 0.025)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

@@ -1,0 +1,30 @@
+<_templates Include="trucks" >
+</_templates>
+
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="earthroamer_sx_wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<TruckData WheelRepairsCapacity="1" />
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_wheel">
+		<Body Mass="15" ModelFrame="BoneChassis_cdt" ImpactType="Truck">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="wheel_addon"
+		Category="wheel_addon"
+		IsCustomizable="true"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SPARE_WHEEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SPARE_WHEEL_NAME"
+		/>
+		<InstallSocket Offset="(0; 0; 0)" Type="EarthroamerSxSpareWheel" />
+	</GameData>
+</TruckAddon>

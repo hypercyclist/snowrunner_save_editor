@@ -1,0 +1,25 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+>
+	<PhysicsModel>
+		
+	</PhysicsModel>
+
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+	</Subset>
+	
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="cdt_stage_1" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_stage_1" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+	</AnimSubset>
+</ModelBrand>

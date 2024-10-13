@@ -1,0 +1,19 @@
+<_templates Include="environment" />
+<PlantBrand 
+	_template="Corn" 
+	UsePhysicsForInstancing="true" 
+	DeactivationPhantomExt="2" 
+	PlantingMinSpacing="0.3"
+	BreakType="Dandelion"
+	DeleteOnBreak="true"
+
+>
+	<PhysicsModel>
+	<Body _template="Corn" DamageMult="0" ModelFrame="BoneRoot">
+		<Constraint _template="CornRoot" BreakOffThreshold="1" />
+		<Body _template="Corn" DamageMult="0" ModelFrame="BoneTrunk">
+			<Constraint _template="Corn2" />
+		</Body>
+	</Body>
+	</PhysicsModel>
+</PlantBrand>

@@ -1,0 +1,32 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="True"
+>
+	<PhysicsModel>
+		<Body Mass="100" ModelFrame="BoneRoot" Collisions="Dynamic" ImpactType="Bell" >
+			<Constraint Type="Fixed" BreakOffThreshold="200"  />
+			<Body Mass="100" ModelFrame="BoneHandlebar" ImpactType="Bell" >
+				<Constraint Type="Hinge" AxisLocal="(0; 0; 1)" MinLimit="-75" MaxLimit="75" />
+				<Body Mass="100" ModelFrame="BoneWheelFront" ImpactType="Bell" >
+					<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" BreakOffThreshold="400" />
+				</Body>
+			</Body>
+			<Body Mass="100" ModelFrame="BoneWheelBack" ImpactType="Bell" >
+				<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)"/>
+			</Body>
+			<Body Mass="100" ModelFrame="BoneStand" AngularDamping="5.0" ImpactType="Bell" >
+				<Constraint Type="Hinge" AxisLocal="(0; 1; 0)" MinLimit="0" MaxLimit="60" />
+			</Body>
+			<Body Mass="100" ModelFrame="BonePedals01" ImpactType="Bell" >
+				<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" />
+				<Body Mass="100" ModelFrame="BonePedals02" ImpactType="Bell" >
+					<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" />
+				</Body>
+				<Body Mass="100" ModelFrame="BonePedals03" ImpactType="Bell" >
+					<Constraint Type="UnlimitedHinge" AxisLocal="(0; 1; 0)" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

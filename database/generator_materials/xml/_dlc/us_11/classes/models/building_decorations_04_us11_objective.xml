@@ -1,0 +1,26 @@
+<ModelBrand
+	DayShadowOffsetMult="2.0"
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+    <Subset IsDefault="true" Name="build_stage_0">
+	<Mesh Name="state_start_1" />
+	<Mesh Name="state_start_2" />
+	<Mesh Name="state_start_3" />
+	<CdtMesh Name="state_start" />
+    </Subset>
+    <Subset Name="build_stage_1">
+	<Mesh Name="state_end" />
+        <CdtMesh Name="cdt_state_end" />
+        <OnSubsetActivateEvent>
+            <Sound Name="actors/actor_construction/actor_deconstruct_wood" Range="200" Volume="1"/>
+            <SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(-0.107; 0.562; -0.11)"/>
+        </OnSubsetActivateEvent>
+    </Subset>
+    <PhysicsModel>
+        <Body Collisions="Dynamic" ModelFrame="state_start_1">
+		<Body Collisions="Dynamic" ModelFrame="state_end"/>
+        </Body>
+    </PhysicsModel>
+    <Landmark Mesh="landmarks/building_decorations_04_us11_objective_lmk" />
+</ModelBrand>

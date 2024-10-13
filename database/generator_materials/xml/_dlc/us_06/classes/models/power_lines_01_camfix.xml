@@ -1,0 +1,52 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+>
+	<SnapPoint Pos="(6.243; 22.844; 0)" />
+	<SnapPoint Pos="(-6.32; 22.844; -0)" />
+	<PhysicsModel>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(-0.037; 40.077; -0.033)"
+			Size="1.4"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.3"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.4"
+			Pos="(6.801; 28.225; -1.863)"
+			Size="1.4"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(-6.708; 28.209; 1.969)"
+			Size="1.4"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/power_lines_01_lmk" />
+	<GameData>
+		<WinchSocket Pos="(3.5; 1.5; 3.5)" />
+		<WinchSocket Pos="(-3.5; 1.5; 3.5)" />
+		<WinchSocket Pos="(3.5; 1.5; -3.5)" />
+		<WinchSocket Pos="(-3.5; 1.5; -3.5)" />
+	</GameData>
+</ModelBrand>

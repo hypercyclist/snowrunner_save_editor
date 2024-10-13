@@ -28,7 +28,6 @@
 			<Constraint Type="Rigid" />
 			<Body
 				_template="LimitsZ"
-				LinearDamping="2"
 				Mass="40"
 				ModelFrame="BoneWheel_cdt"
 			>

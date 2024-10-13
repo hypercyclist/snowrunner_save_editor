@@ -1,0 +1,11 @@
+<MaterialType 
+	Texture="tiles/ground_rus_01__d_a.tga" 
+	Normal="tiles/ground_rus_01_relief__d_a.tga"
+	GenerateDust="true"
+	GrassBrush="DebrisStonesCan"
+	NoGrass="true"
+	AllowHiddenExtrudes="1"
+	Sound="surfaces/surf_ground_rnd"
+	SkidSound="surfaces/skidding/skidding_ground_loop"
+	MinViscosity="10.0"
+/>

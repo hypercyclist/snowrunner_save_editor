@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_39331_pike_stuff/sticker_glass_bottom_step_39331_pike" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_CUT_DRAGONS_NAME" />
+		<InstallSocket Type="Step39331PikeSticker_GlassBottom" />
+	</GameData>
+</TruckAddon>

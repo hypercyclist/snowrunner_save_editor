@@ -151,6 +151,7 @@
 			<DamageArea Type="FuelTank" Min="(-1.631; 0.55; -0.822)" Max="(-0.6; 1.351; 0.822)" />
 		</Damage>
 		<CompatibleWheels Scale="0.78" Type="wheels_zikz_605r_1" />
+		<CompatibleWheels Scale="0.68" Type="wheels_superheavy_mudtires" />
 		<Camera Center="(-1.7; 0; 0)" ParentFrame="BoneChassis_cdt">
 			<Cockpit
 				_template="Default"

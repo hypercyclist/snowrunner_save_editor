@@ -1,0 +1,11 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			IsStaticSoil="true"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ice_hummock_01snow_lmk" />
+</ModelBrand>

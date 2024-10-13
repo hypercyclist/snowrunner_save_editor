@@ -11,10 +11,18 @@
 			<Model _template="HeadLightRay" Org="(1.997; 3.642; 0)" />
 			<Model _template="HeadLightRay" Org="(1.997; 3.642; -0.407)" />
 			
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0.407)" />
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0)" />
-			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.2" DirAngle="135" Size=".25" Pos="(1.997; 3.642; -0.407)" />
-		</HeadLight>	
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0.407)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".4" Pos="(1.997; 3.642; 0)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" DirAngle="135" Size=".25" Pos="(1.997; 3.642; -0.407)" />
+		</HeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; 0.047)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; -0.047)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; 0.357)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; 0.456)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; -0.357)" />
+			<Flare _template="IgnitionSignalWhite" Size="0.1" Pos="(1.997; 3.642; -0.456)" />
+		</Ignition>
 	</ModelAttachments>
 	<MainHeadLight _template="Multiply1"/>
 	<GameData

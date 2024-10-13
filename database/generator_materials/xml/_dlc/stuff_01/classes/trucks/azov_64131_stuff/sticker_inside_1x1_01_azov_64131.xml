@@ -1,0 +1,10 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_64131_stuff/sticker_inside_1x1_01_azov_64131" />
+	<GameData
+		CameraPreset="sticker"
+	>
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket _noinherit="true" Type="Azov64131Sticker_1x1_01" />
+	</GameData>
+</TruckAddon>

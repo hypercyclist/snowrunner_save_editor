@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/aac_58dw_stuff/sticker_inside_1x2_01_aac_58dw" />	
+	<GameData CameraPreset="sticker_2">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"/>
+		<InstallSocket _noinherit="true" Type="Aac58dwSticker_1x2_01" />
+	</GameData>
+</TruckAddon>

@@ -8,7 +8,7 @@
 </_templates>
 <TruckWheels DamageCapacity="100" Radius="1" Width="1.57">
 	<TruckTires>
-		<TruckTire _template="Mudtires" Mesh="wheels/tire_extend_kirovets_k7m" Name="tire">
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_extend_kirovets_k7m" Name="tire" Mass="1200">
 			<GameData
 				Price="7500"
 				UnlockByExploration="true"

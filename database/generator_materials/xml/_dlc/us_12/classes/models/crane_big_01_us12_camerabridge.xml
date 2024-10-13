@@ -1,0 +1,15 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCameraBridge="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(35.0; 16.0)" 
+		Texture="occlusion_crane_big_01.tga"
+	/>
+	<Landmark Mesh="landmarks/crane_big_01_lmk" />
+</ModelBrand>

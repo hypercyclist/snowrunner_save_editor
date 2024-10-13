@@ -1,0 +1,12 @@
+<ModelBrand
+	DayShadowOffsetMult="2.0"
+	NightLightingShadowsAllowCap="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(64.0; 27.0)" Texture="occlusion_us_port_building_01_us06.tga" />
+	<Landmark Mesh="landmarks/us_port_building_01_us06_lmk" />
+</ModelBrand>

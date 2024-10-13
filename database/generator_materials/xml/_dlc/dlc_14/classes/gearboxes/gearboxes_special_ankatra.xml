@@ -1,0 +1,29 @@
+<_parent File="gearboxes_special" />
+<GearboxVariants>
+	<Gearbox>
+		<ReverseGear AngVel="0.7" FuelModifier="0.9" />
+		<HighGear AngVel="5.0" FuelModifier="1.5" />
+		<Gear AngVel="1.6" FuelModifier="1.6" />
+		<Gear AngVel="2.7" FuelModifier="1.4" />
+		<Gear AngVel="4.1" FuelModifier="1.2" />
+		<Gear AngVel="5.6" FuelModifier="1.1" />
+	</Gearbox>
+	<Gearbox>
+		<ReverseGear AngVel="0.9" FuelModifier="0.9" />
+		<HighGear AngVel="6.8" FuelModifier="1.6" />
+		<Gear AngVel="1.6" FuelModifier="1.7" />
+		<Gear AngVel="2.8" FuelModifier="1.5" />
+		<Gear AngVel="4.2" FuelModifier="1.3" />
+		<Gear AngVel="5.7" FuelModifier="1.1" />
+		<Gear AngVel="6.9" FuelModifier="1.0" />
+	</Gearbox>
+	<Gearbox>
+		<ReverseGear AngVel="0.9" FuelModifier="0.9" />
+		<HighGear AngVel="7.0" FuelModifier="1.6" />
+		<Gear AngVel="1.6" FuelModifier="1.7" />
+		<Gear AngVel="2.6" FuelModifier="1.5" />
+		<Gear AngVel="4.0" FuelModifier="1.3" />
+		<Gear AngVel="5.5" FuelModifier="1.1" />
+		<Gear AngVel="7.1" FuelModifier="1.0" />
+	</Gearbox>
+</GearboxVariants>

@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dinosaur_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_6900xd_twin_stuff/stuff_hood_dinosaur_ws_6900xd_twin" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodWS6900XDTwin" />
+	</GameData>
+</TruckAddon>

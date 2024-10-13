@@ -1,0 +1,34 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="2.1" ParentFrame="BoneExhaust" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_670963n_tuning/azov_670963n_exhaust_default">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Azov670963nExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-0.830; 0; 0.557)"
+		IsLight="true"
+		Origin="(3.003; 3.664; 0.945)"
+		Speed="3.82"
+		ParentFrame="BoneCabin_cdt"
+	/>		
+</TruckAddon>

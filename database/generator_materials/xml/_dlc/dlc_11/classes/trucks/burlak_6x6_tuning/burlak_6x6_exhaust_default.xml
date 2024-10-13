@@ -1,0 +1,33 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.5; 0.5; 0.5)"
+				MaxAngle="(1.8; 1.8; 1.8)"
+				MaxFrequency="2.5"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_exhaust_default">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_r"
+		Category="exhaust"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="BurlakExhaust" />
+	</GameData>
+	<Exhaust Dir="(0; -1; -0.5)" Origin="(1.362; 1.170; -1.163)" Speed="1.82" />
+</TruckAddon>

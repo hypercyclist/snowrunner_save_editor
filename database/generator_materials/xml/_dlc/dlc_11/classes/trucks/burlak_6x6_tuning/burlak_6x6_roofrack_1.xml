@@ -1,0 +1,93 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="250" Spring="0.75" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData
+		FuelCapacity="80"
+		RepairsCapacity="300"
+	>
+		<LimitedFluid Center="-0.164;3.597;0.23" SizeX="0.587" SizeY="0.197" SizeZ="0.414" Type="Box" ParentFrame="BoneFuel3_cdt" />
+		<LimitedFluid Center="0.655;3.597;0.452" SizeX="0.401" SizeY="0.197" SizeZ="0.578" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="0.654;3.597;-0.337" SizeX="0.403" SizeY="0.197" SizeZ="0.58" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="-0.179;3.597;-0.236" SizeX="0.587" SizeY="0.197" SizeZ="0.414" Type="Box" ParentFrame="BoneFuel4_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repairL" HideThreshold="0.0" />
+		<Mesh Frame="repairR" HideThreshold="0.5" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel1" HideThreshold="0.0" />
+		<Mesh Frame="fuel2" HideThreshold="0.25" />
+		<Mesh Frame="fuel3" HideThreshold="0.5" />
+		<Mesh Frame="fuel4" HideThreshold="0.75" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_roofrack_1">
+		<Body Mass="40" ModelFrame="BoneRoofrack_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneRepairL_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.008)" LinearLimitsY="(0; 0)" LinearLimitsZ="(-0.007; 0.005)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="30"
+				ModelFrame="BoneRepairR_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.008)" LinearLimitsY="(0; 0)" LinearLimitsZ="(-0.007; 0.005)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.03)" LinearLimitsZ="(0; 0.006)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.004; 0.032)" LinearLimitsZ="(0; 0.006)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneFuel3_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.005; 0.03)" LinearLimitsZ="(0; 0.006)" LinearLimitsY="(0; 0)"/>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneFuel4_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.004; 0.032)" LinearLimitsZ="(0; 0.006)" LinearLimitsY="(0; 0)"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="3400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="BurlakRoofrack" />
+	</GameData>
+</TruckAddon>

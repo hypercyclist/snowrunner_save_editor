@@ -1,0 +1,42 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="2.1" ParentFrame="BoneExhaustLeft" />
+			<Shaker Frame="BoneExhaustRight" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.5; 0.5; 0.5)" MaxFrequency="2.1" ParentFrame="BoneExhaustRight" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_exhaust_default">
+		<Body Collisions="None" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="exhaust"
+		Category="exhaust"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="KenworthW990Exhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(-1.000; 0.000; 0.000)"
+		IsLight="true"
+		Origin="(1.636; 3.418; -1.145)"
+		Speed="3.82"
+		ParentFrame="BoneChassis_cdt"
+	/>
+	<Exhaust
+		Dir="(-1.000; 0.000; 0.000)"
+		IsLight="true"
+		Origin="(1.636; 3.418; 1.145)"
+		Speed="3.82"
+		ParentFrame="BoneChassis_cdt"
+	/>
+</TruckAddon>

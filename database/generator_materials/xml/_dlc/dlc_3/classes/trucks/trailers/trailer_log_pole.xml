@@ -84,6 +84,8 @@
 		<TractorCargoSlotsOverride InitialOffset="(0.0, 2.0, 0.0)" OffsetStep="(-5.0; 0; 0)" />
 		<WinchSocket Pos="(-3.086; 0.948; 0)" />
 		<WinchSocket WinchableWhenAttached="false" Pos="(1.922; 1.105; 0)" />
+		<CraneSocket Pos="(1.922; 1.105; 0)" />
+		<CraneSocket Pos="(-3.086; 0.948; 0)" />
 		<UiDesc
 			UiDesc="UI_TRAILER_LOGPOLE_DESC"
 			UiIcon30x30="trailerLogPole30"

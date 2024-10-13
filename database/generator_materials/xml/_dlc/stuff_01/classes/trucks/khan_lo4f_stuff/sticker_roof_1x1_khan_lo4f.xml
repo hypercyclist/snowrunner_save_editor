@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_lo4f_stuff/sticker_roof_1x1_khan_lo4f" />
+	<GameData>
+			<InstallSocket Type="khanLo4FSticker_Roof" />
+	</GameData>
+</TruckAddon>

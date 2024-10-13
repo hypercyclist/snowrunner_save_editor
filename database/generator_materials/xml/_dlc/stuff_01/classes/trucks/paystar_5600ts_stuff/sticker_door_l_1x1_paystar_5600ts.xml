@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_stuff/sticker_door_l_1x1_paystar_5600ts" />
+	<GameData>
+			<InstallSocket Type="paystar5600TsSticker_Door_L" />
+	</GameData>
+</TruckAddon>

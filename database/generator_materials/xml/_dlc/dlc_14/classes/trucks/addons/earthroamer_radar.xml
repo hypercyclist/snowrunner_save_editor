@@ -1,0 +1,135 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData
+		FuelCapacity="0"
+		RepairsCapacity="0"
+		WheelRepairsCapacity="0"
+	/>
+	<PoweredConstraints>
+		<Chain
+			Action="1"
+			LocaleUid="UI_SCAN_WATCHPOINT"
+			Name="Watchpoint_Addon"
+			ParentBodies="BoneRadarBaseKung_cdt, BoneRadarBaseCabin_cdt, BoneRadarShift_cdt, BoneRadarRotator_cdt, BoneRadarTop_cdt, BoneRadarDoorShift_cdt"
+			ResetOnLoad="true"
+		>
+			<Group FoldingDelay=".2" Id="activate_watchpoint_radar" UnfoldingDelay=".2">
+				<SoundBrand Name="addons/er_radar/er_radar_stage_1" Range="20" Type="Start" />
+				<SoundBrand Name="addons/er_radar/er_radar_stage_6" Range="20" Type="Stop" />
+				<Constraint
+					Name="RadarDoor"
+					SpeedMultFolding=".5"
+					SpeedMultUnfolding=".5"
+					Position="0.3"
+				/>
+				<Constraint
+					InitialFix="true"
+					Name="ScreenShift"
+					SpeedMult="0.1"
+					SpeedMultFolding=".01"
+					SpeedMultUnfolding=".01"
+					Position="0.001"
+				/>
+			</Group>
+			<Group FoldingDelay=".4" Id="activate_watchpoint_radar2" UnfoldingDelay=".4">
+				<SoundBrand Name="addons/er_radar/er_radar_stage_2" Range="20" Type="Start" />
+				<SoundBrand Name="addons/er_radar/er_radar_stage_5" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="RadarShift"
+					SpeedMultFolding=".5"
+					SpeedMultUnfolding=".5"
+					Position="0.3"
+				/>
+			</Group>
+			<Group FoldingDelay="1" Id="activate_watchpoint_radar4" UnfoldingDelay="1">
+				<SoundBrand Name="addons/er_radar/er_radar_stage_3" Range="20" Type="Start" />
+				<SoundBrand Name="addons/er_radar/er_radar_stage_4" Range="20" Type="Stop" />
+				<Constraint
+					InitialFix="true"
+					Name="RadarRotator"
+					SpeedMult="1.2"
+					Position="360"
+				/>
+			</Group>
+		</Chain>
+	</PoweredConstraints>
+	<PhysicsModel Mesh="trucks/addons/earthroamer_radar">
+		<NetSync Legacy="true" />
+		<Body ImpactType="Truck" Mass="50">
+			<Constraint Type="Fixed" />
+			<Body Mass="10" ModelFrame="BoneRadarBaseCabin_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+				<Body Mass="1" ModelFrame="BoneScreen_cdt">
+					<Constraint 
+						AxisLocal="(-1; 0; 0)"
+						Name="ScreenShift"
+						Type="Prismatic"
+						MinLimit="0"
+						MaxLimit="0.1"
+					>
+						<Motor
+							Damping="1"
+							Force="60000"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="10" ModelFrame="BoneRadarShift_cdt">
+				<Constraint 
+					AxisLocal="(0; 1; 0)"
+					Name="RadarShift"
+					Type="Prismatic"
+					MinLimit="0"
+					MaxLimit="0.8"
+				>
+					<Motor
+						Damping="1"
+						Force="60000"
+						Type="Position"
+					/>
+				</Constraint>
+				<Body Mass="5" ModelFrame="BoneRadarRotator_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Name="RadarRotator"
+						Type="Hinge"
+						MinLimit="0"
+						MaxLimit="360"
+					>
+						<Motor
+							Damping="1"
+							Force="2000"
+							Tau=".99"
+							Type="Position"
+						/>
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Mass="2" ModelFrame="BoneRadarTop_cdt">
+				<Constraint Type="Prismatic" MinLimit="0" MaxLimit="0.3" Name="RadarDoor" AxisLocal="(-1; 0; 0)">
+					<Motor Damping="1" Force="60000" Type="Position" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		Price="6600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		SoundByGroups="true"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_RADAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_RADAR_NAME"
+		/>
+		<InstallSocket Type="EarthroamerRadar" />
+		<AddonType Name="Watchtower" />
+		<Watchtower radius="200" radiusTransp="350" fuelCostsPerActivation="15" />
+	</GameData>
+</TruckAddon>

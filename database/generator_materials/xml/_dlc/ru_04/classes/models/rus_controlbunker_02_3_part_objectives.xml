@@ -1,0 +1,37 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DynamicModel="true">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="build_start" IsDefault="true">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<AnimTrack Name="stage_1_anim"/>
+        <AnimSubset Name="build_animation_0"/>
+	</Subset>
+	<Subset Name="build_end">
+		<Mesh Name="stage_2" />
+		<CdtMesh Name="stage_2" />
+        <AnimSubset Name="build_animation_1"/>
+	</Subset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="100">
+			<SFX Name="rus_controlbunker_02_3_part_objectives" Dir="(0; 1; 0)" Pos="(22.226; 0.475; 29.086)"/>
+		</AnimEvent>
+	</TrackEvents>
+    <AnimSubset Name="build_animation_0">
+		<Mesh Name="animated_mesh_1" />
+		<Mesh Name="animated_mesh_2" />
+    </AnimSubset>
+    <AnimSubset Name="build_animation_1">
+		<Mesh Name="animated_mesh_3" />
+		<Mesh Name="animated_mesh_4" />
+    </AnimSubset>
+	<Landmark Mesh="landmarks/rus_controlbunker_02_3_part_objectives_lmk" />
+</ModelBrand>

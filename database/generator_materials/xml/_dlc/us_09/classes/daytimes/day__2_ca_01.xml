@@ -1,0 +1,76 @@
+<DayTimeState
+	ColorLUT="lut/day_us_01__vol_uncmp.tga"
+	FogColor="g(175; 218; 250) x 3.0"
+	FogScatterColor="g(255; 240; 217) x 0.2"
+	HorizonColor="g(220; 242; 255) x 3"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="3"
+	SkySharpness="2"
+	SSAOColor="g(0; 0; 0; 255) x 0.001"
+	SkyBloomColor="g(211; 239; 255; 140) x 0.8"
+	SkyColor="g(177; 211; 255) x 1.8"
+	SunColor="g(255; 239; 200) x 6"
+	SunDir="(1; -0.65; 0)"
+	WaterCubeMapIntensity="1.0"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 255; 255; 10)"
+	
+	EnvMap="env/day_mich_01__d_ggxrefl.tga"
+	CubeMapScale="1.5"
+	
+	HdrAdaptationMinLum="0.02"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="0.65"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.75"
+	TonemapB="0.19"
+	TonemapC="0.3"
+	TonemapD="0.2"
+	TonemapE="0.014"
+	TonemapF="0.16"
+	
+	BloomEnabled="true"
+	BloomPoint="0.6"
+	BloomIntensity="0.5"
+	BloomGamma="0.6"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="0.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+	ShadowMapResolution="2048"
+	TerrainHideDist="800"
+>
+
+	<Sky>
+		<Lightshaft
+			Tint="g(255; 151; 84)"
+			Intensity="0.2"
+			BlurRadius="10"
+			FalloffRadius="0.5"
+			FalloffInnerRadius="0.04"
+		/>
+		<Flare
+			AspectRatio="1"
+			Color="g(255; 245; 180; 5) x 0.05"
+			Size="5.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.002" StartDist="100" ScatterAngle="50" Alpha="0.9" Height="50" UpperScale="0.9" LowerScale="0.0"/>
+	<SecondaryFog Density="0.002" Height="100" UpperScale="0.05" LowerScale="0.0"/>
+	<DistantFog StartDistance="300" EndDistance="3000" Height="250" DensityMultiplier="1.8"/>
+	<VolumeFog Density="0.1" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(233; 233; 233) x 1.5" MidY="g(231; 246; 255) x 1.7" PosY="g(219; 226; 238) x 1.9" />
+</DayTimeState>

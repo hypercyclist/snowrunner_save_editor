@@ -1,0 +1,38 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+
+<StaticLights>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="50"
+			Pos="(2.8; 3.49; 9.44)"
+			Shadows="true"
+		/>
+	</StaticLights>
+
+	<PhysicsModel>
+	<Flare
+			AttenEnd="300"
+			AttenStart="27"
+			Color="g(249; 239; 193) x 0.1"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.2"
+			Pos="(2.247; 3.528; 9.415)"
+			Size="1.2"
+			SizeMultAtDay="0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/tatra_checkpoint_lmk" />
+</ModelBrand>

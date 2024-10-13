@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_sunpanel">
+		<Body Mass="15" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof_sunpanel"
+		Category="frame_addons"
+		Price="400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNPANEL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNPANEL_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxSunpanel" />
+		<RequiredAddonType Type="EarthroamerSxSunpanel" TypeUiName="UI_REQUIRED_ADDON_SUNPANEL" />
+	</GameData>
+</TruckAddon>

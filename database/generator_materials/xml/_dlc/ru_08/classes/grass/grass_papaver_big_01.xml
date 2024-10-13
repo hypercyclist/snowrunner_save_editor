@@ -1,0 +1,8 @@
+<GrassBrand
+	ApplyScaleMask="false"
+	PlantingGroup="Grass"
+	PlantingMinSpacing="0.3"
+	ParticlesType="fragments_grass_red"
+	FadeDistances="7, 15, 70"
+	FadeInterval="15"
+/>

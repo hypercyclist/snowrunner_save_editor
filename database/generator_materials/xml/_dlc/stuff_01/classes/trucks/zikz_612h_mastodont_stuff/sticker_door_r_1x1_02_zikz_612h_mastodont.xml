@@ -1,0 +1,19 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_612h_mastodont_stuff/sticker_door_r_1x1_02_zikz_612h_mastodont" />
+	<GameData
+		CameraPreset="out_sticker05"
+		Category="sticker_exterior"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_DOOR_R_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_DOOR_R_STICKER_1x1_NAME"
+		/>
+		<InstallSocket Type="StuffZikz612hDoorR_1x1_2" />
+	</GameData>
+</TruckAddon>

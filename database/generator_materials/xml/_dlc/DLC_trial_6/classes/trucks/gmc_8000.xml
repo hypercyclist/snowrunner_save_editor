@@ -145,6 +145,19 @@
 		<CompatibleWheels Scale="0.5" Type="wheels_medium_double" />
 		<CompatibleWheels Scale="0.55" Type="wheels_medium_double" />
 		<CompatibleWheels RearOffsetZ="0.02" Scale="0.58" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.002" Scale="0.5" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.5" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.5" Type="wheels_medium_allterrain_double" />
+		
+		<CompatibleWheels OffsetZ="0.002" Scale="0.55" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.55" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.55" Type="wheels_medium_allterrain_double" />
+
+		<CompatibleWheels OffsetZ="0.002" Scale="0.58" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.58" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.002" Scale="0.58" Type="wheels_medium_allterrain_double" />
+
 		<Camera Center="(-2.3; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -293,7 +306,7 @@
 	<Landmark Mesh="landmarks/gmc_8000_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(2.513; 1.167; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="90000"
 		UnlockByExploration="false"
 		UnlockByRank="1"
@@ -347,7 +360,7 @@
 		<AddonSockets>
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-3.814; 1.47; 0)" />
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-3.188; 1.47; 0)" />
-			<Socket Names="Trailer" Offset="(-5.921; 0.828; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-5.921; 0.828; 0)" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="LogLift" NamesBlock="SaddleLow1, SaddleHigh, BigCraneUs, MinicraneUS, MetalDetector, FrameAddonLogShort, FrameAddon, FrameAddonKung, FrameAddonTank, FrameAddonSeismicVibrator, FrameAddonMaintainer, FrameAddonTow" Offset="(-0.509; 0.992; 0)" />
@@ -369,7 +382,7 @@
 				<AddonsShift Offset="(-0.95; 0; 0)" Types="MinicraneUS" />
 				<AddonsShift Offset="(-0.9; 0; 0)" Types="MetalDetector" />
 			</Socket>
-			<Socket Names="FrameAddonTow" Offset="(-3.5; 0.987; 0)" NamesBlock="MinicraneUS, MetalDetector, Trailer" >				
+			<Socket Names="FrameAddonTow" Offset="(-3.5; 0.987; 0)" NamesBlock="MinicraneUS, MetalDetector, Trailer, LogTrailer" >				
 			</Socket>
 			<Socket Names="FrameAddonKung" Offset="(-3.35; 1.073; 0)" ParentFrame="BoneChassis_cdt">
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.06)" />
@@ -384,7 +397,7 @@
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.01; -0.057)" />
 			</Socket>
 			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="MetalDetector, MinicraneUS" Offset="(-0.887; 0.987; 0)" ParentFrame="BoneChassis_cdt" />
-			<Socket Names="FrameAddonMaintainer" NamesBlock="MetalDetector, MinicraneUS, Trailer" Offset="(-3.55; -0.042; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MetalDetector, MinicraneUS, Trailer, LogTrailer" Offset="(-3.55; -0.042; 0)" ParentFrame="BoneChassis_cdt" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="MetalDetector" NamesBlock="FrameAddonKung, FrameAddonTank" Offset="(-1.124; -0.06; 0)" ParentFrame="BoneChassis_cdt" />

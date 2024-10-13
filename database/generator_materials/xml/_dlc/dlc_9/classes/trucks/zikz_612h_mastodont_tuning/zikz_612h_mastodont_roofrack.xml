@@ -6,7 +6,7 @@
 	</Constraint>
 </_templates>
 <TruckAddon>
-	<TruckData FuelCapacity="140" RepairsCapacity="150">
+	<TruckData FuelCapacity="180" RepairsCapacity="300">
 		<LimitedFluid Center="(8.248; 3.11; 0.165)" SizeX="0.43" SizeY="0.158" SizeZ="0.355" Type="Box" ParentFrame="BoneFuel_cdt" />
 		<LimitedFluid Center="(8.248; 3.11; 0.577)" SizeX="0.43" SizeY="0.158" SizeZ="0.355" Type="Box" ParentFrame="BoneFuel_cdt" />
 		<LimitedFluid Center="(8.248; 3.11; 0.982)" SizeX="0.43" SizeY="0.158" SizeZ="0.355" Type="Box" ParentFrame="BoneFuel_cdt" />

@@ -1,0 +1,60 @@
+<ModelBrand
+Instanced="true"
+InstancedAsModel="true"
+NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+			<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 72; 0) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(0.962; 18.33; -0.017)"
+			Size="0.4"
+			SizeMultAtDay="0"
+			OcclusionOffset="-0.2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+			<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 72; 0) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(-0.038; 18.33; 0.956)"
+			Size="0.4"
+			SizeMultAtDay="0"
+			OcclusionOffset="-0.2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+			<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 72; 0) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(-1.00; 18.33; -0.024)"
+			Size="0.4"
+			SizeMultAtDay="0"
+			OcclusionOffset="-0.2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+			<Flare
+			AttenEnd="500"
+			AttenStart="27"
+			Color="g(255; 72; 0) x 0.5"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			Pos="(-0.031; 18.33; -1.008)"
+			Size="0.4"
+			SizeMultAtDay="0"
+			OcclusionOffset="-0.2"
+			Texture="sfx/flare_simple__s_d.tga"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/smoke_pipe_ru13_lmk" />
+</ModelBrand>

@@ -1,0 +1,20 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/dirt_road_01_rus__d_a.tga"
+	TextureRelief="overlays/dirt_road_01_rus_relief__d_a.tga"
+	MinViscosity="8.0"
+>
+	<Prebuild
+		DefaultWidth="7"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_dirt_road__s.tga"
+		SnowmapMask="overlay_dirt_road_pbr__s_d.tga"
+		Layer="2"
+		LandmarkUseAverageWidth="true"
+		LandmarkColor="(140; 115; 90)"
+		LandmarkPart="0.8"
+		LandmarkBorderWidth="1"
+		LandmarkBorderColor="(80;80;80)"
+		MinViscosity="8.0"
+	/>
+</OverlayBrand>

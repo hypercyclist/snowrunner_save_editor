@@ -1,0 +1,45 @@
+<_templates Include="trucks">
+	<Body>
+		<Hitch AngularDamping="2.0" Collisions="None" Mass="1">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-70"
+				MaxLimit="20"
+			/>
+		</Hitch>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.8" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_bumper_rear_2">
+		<Body ImpactType="Truck" Mass="20">
+			<Constraint Type="Rigid" />
+			<Body _template="Hitch" ModelFrame="BoneHitchLeft_cdt" />
+			<Body _template="Hitch" ModelFrame="BoneHitchRight_cdt"> 
+				<Constraint AxisLocal="(0; 0; 1)" MinLimit="-50" MaxLimit="20" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="rear"
+		Category="rear"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_REAR_BUMPER_TOWLOOPS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_REAR_BUMPER_TOWLOOPS_NAME"
+		/>
+		<InstallSocket Type="RezvaniTankBumperRear" />
+	</GameData>
+	<Exhaust Dir="(-0.926; -0.268; 0.264)" IsLight="true" Origin="(-2.3; 0.754; 0.707)" Speed="2.0" />
+	<Exhaust Dir="(-0.926; -0.268; -0.264)" IsLight="true" Origin="(-2.3; 0.754; -0.707)" Speed="2.0" />
+</TruckAddon>

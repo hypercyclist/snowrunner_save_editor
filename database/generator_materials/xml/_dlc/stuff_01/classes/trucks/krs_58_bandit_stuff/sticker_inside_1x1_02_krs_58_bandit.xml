@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/krs_58_bandit_stuff/sticker_inside_1x1_02_krs_58_bandit" />
+	<GameData CameraPreset="sticker">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME" />
+		<InstallSocket Type="Krs58BanditSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

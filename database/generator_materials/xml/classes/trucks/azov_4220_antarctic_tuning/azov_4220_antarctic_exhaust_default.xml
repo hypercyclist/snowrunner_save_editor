@@ -1,0 +1,39 @@
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker
+				Frame="BoneExhaust"
+				MinAngle="(0.1; 0.1; 0.1)"
+				MaxAngle="(0.7; 0.7; 0.7)"
+				MaxFrequency="3.9"
+				ParentFrame="BoneFront_cdt"
+			/>
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/azov_4220_antarctic_tuning/azov_4220_antarctic_exhaust_default">
+		<Body ImpactType="Truck" Mass="100">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="side_l_default"
+		Category="exhaust"
+		Price="900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_DEFAULT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_DEFAULT_NAME"
+		/>
+		<InstallSocket Type="Azov4220AntarcticExhaust" />
+	</GameData>
+	<Exhaust
+		Dir="(0; 0; -1)"
+		IsLight="false"
+		Origin="(3; 4.196; -0.892)"
+		Speed="3.00"
+	/>
+</TruckAddon>

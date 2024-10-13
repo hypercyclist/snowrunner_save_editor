@@ -1,0 +1,94 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.7" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_bumper_1">
+		<Body ImpactType="Truck" Mass="25" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!-- Flares -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.840; 0.962; -0.834)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.840; 0.962; 0.834)" />
+			<!-- Beam Flares -->
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; -0.365)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; 0.365)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; -0.243)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; 0.243)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; -0.122)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; 0.122)" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 245; 215) x 0.2" Dir="(1; 0; 0)" Size="0.3" Pos="(3.912; 1.373; 0.000)" />
+			<!--Beacons Flares -->
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.85" Size="0.1" Pos="(3.711; 0.959; -1.099)" Dir="(0; 0; -1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.85" Size="0.1" Pos="(3.711; 0.959; 1.099)" Dir="(0; 0; 1)" DirAngle="90" />
+		</Ignition>
+		
+		<HeadLight>
+			<!-- Bumper Beam Flares right -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.342)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.388)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.388)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.342)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.266)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.220)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.220)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.266)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.144)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.099)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.099)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.144)" />
+			<!-- Bumper Beam Flares left -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.342)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.388)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.388)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.342)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.266)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.220)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.220)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.266)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.144)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.099)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.099)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.144)" />
+			<!-- Bumper Beam Flares center -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; -0.023)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.395; 0.023)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; 0.023)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.8" Size=".05" Pos="(3.912; 1.350; -0.023)" />
+			<!-- Bumper Flares -->
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.981; 0.814)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.981; 0.853)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.942; 0.853)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.942; 0.814)" />
+			
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.981; -0.814)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.981; -0.853)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.942; -0.853)" />
+			<Flare _template="LED" Color="g(230; 230; 235) x 0.6" Size=".05" Pos="(3.840; 0.942; -0.814)" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxBumper" />
+	</GameData>
+</TruckAddon>

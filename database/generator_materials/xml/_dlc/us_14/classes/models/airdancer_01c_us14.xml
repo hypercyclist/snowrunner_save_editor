@@ -1,0 +1,16 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body NoSoftContacts="true" ModelFrame="BoneRoot">
+    			<Body AngularDamping="2.2" DamageMult="0" Mass="150" NoSoftContacts="true" ModelFrame="BoneRagdoll" >
+                    		<Constraint
+                        		Type="Ragdoll"
+					Cone="45"
+                    		>
+			                <AllMotor Damping="800" Spring="7200" Type="Spring" />
+                    		</Constraint>
+            		</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

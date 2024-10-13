@@ -1,0 +1,59 @@
+<ModelBrand 
+	Instanced="true" 
+	NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body 
+			Collisions="Dynamic" 
+			Mass="100.0" 
+			ModelFrame="BoneRoot">
+			<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+			<Body 
+				Collisions="Dynamic" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				ModelFrame="Bone.001">
+				<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					NoSoftContacts="True" 
+					ModelFrame="Bone.005">
+					<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+				</Body>
+			</Body>
+			<Body 
+				Collisions="Dynamic" 
+				Mass="100.0" 
+				ModelFrame="Bone.002">
+				<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+				<Body 
+					Collisions="Dynamic" 
+					Mass="100.0" 
+					ModelFrame="Bone.003">
+					<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+					<Body 
+						Collisions="Dynamic" 
+						Mass="100.0" 
+						NoSoftContacts="True" 
+						ModelFrame="Bone.007">
+						<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+					</Body>
+				</Body>
+			</Body>
+			<Body 
+				Collisions="Dynamic" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				ModelFrame="Bone.004">
+				<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+			</Body>
+			<Body 
+				Collisions="Dynamic" 
+				Mass="100.0" 
+				NoSoftContacts="True" 
+				ModelFrame="Bone.006">
+				<Constraint Type="Fixed" BreakOffThreshold="500.0" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

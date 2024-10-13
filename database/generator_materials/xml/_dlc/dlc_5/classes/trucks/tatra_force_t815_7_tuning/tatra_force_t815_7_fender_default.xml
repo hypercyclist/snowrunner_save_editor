@@ -28,17 +28,17 @@
 		</Ignition>
 	</ModelAttachments>
 	<GameData
-		CameraPreset="addon_1"
+		CameraPreset="side_r"
 		Category="fender_rear"
 		Price="800"
 		UnlockByExploration="false"
 		UnlockByRank="1"
 	>
 		<UiDesc
-			UiDesc="UI_TUNING_REAR_FENDERS_STOCK_DESC"
+			UiDesc=""
 			UiIcon30x30=""
 			UiIcon40x40=""
-			UiName="UI_TUNING_REAR_FENDERS_STOCK_NAME"
+			UiName="UI_TUNING_WINGS_DEFAULT_NAME"
 		/>
 		<InstallSocket Type="TatraForceT8157Fender" />
 	</GameData>

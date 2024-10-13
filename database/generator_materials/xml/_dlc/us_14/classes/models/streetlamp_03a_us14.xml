@@ -1,0 +1,46 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	DynamicModel="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="true"
+>
+	<StaticLights>
+		<StaticLight
+			Dir="(0; -0.707; -0.707)"
+			Pos="(0.0; 0.0; -0.6)"
+			AttenEnd="20"
+			Color="g(230; 250; 255) x 1.2"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="60"
+			Shadows="true"
+		/>
+		<StaticLight
+			Dir="(0; -0.707; -0.707)"
+			Pos="(0.0; 0.0; -1)"
+			AttenEnd="8"
+			Color="g(220; 234; 249) x 0.14"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="240"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+		<Flare
+			_template="Red"
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(230; 254; 255) x 0.3"
+			Dir="(0; -1; 0)"
+			Pos="(0; -0.028; -0.155)"
+			Size="0.6"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+	</PhysicsModel>
+</ModelBrand>

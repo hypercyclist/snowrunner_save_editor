@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(18.0; 24.0)" 
+		Texture="occlusion_countryside_04_old.tga"
+	/>
+	<Landmark Mesh="landmarks/countryside_04_old_lmk" />
+</ModelBrand>

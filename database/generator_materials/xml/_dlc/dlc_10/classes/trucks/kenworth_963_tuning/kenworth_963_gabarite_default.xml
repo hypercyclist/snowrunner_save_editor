@@ -8,6 +8,12 @@
 			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.853; 3.577; 0)" />
 			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.854; 3.56; -0.652)" />
 			<Flare _template="MarkerBeacon" Dir="(1; 0; 0)" DirAngle="130" Size="0.4" Pos="(1.853; 3.577; -0.145)" />
+			
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0.13)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; -0.13)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; 0.65)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="MarkerBeacon" AspectRatio="1.5" Color="g(255; 140; 0) x 0.5" Dir="(1; 0; 0)" Size="0.08" Pos="(1.84; 3.58; -0.65)" ParentFrame="BoneCabin_cdt" />
 		</Ignition>
 	</ModelAttachments>
 	<GameData

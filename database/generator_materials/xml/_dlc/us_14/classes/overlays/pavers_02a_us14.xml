@@ -1,0 +1,9 @@
+<OverlayBrand 
+	IsAsphalt="true"
+	GenerateDust="true"
+	NoVeryFar="true"
+	IsNotStaticSoil="true"
+	AcceptZoneBorderDecals="true"
+>
+	<Prebuild OverlayType="GeometricConform" />
+</OverlayBrand>

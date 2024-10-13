@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Average" />
+		</Offroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.611" WidthRear="1.254">
+	<TruckTires>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_kenworth_990" Name="offroad">
+			<WheelFriction 
+				_template="Offroad"
+				BodyFriction="3.1"
+				BodyFrictionAsphalt="0.8"
+				SubstanceFriction="3.4"
+			/>
+			<GameData
+				Price="6000"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_KENWORTH_990_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_kenworth_990" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_KENWORTH_990_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

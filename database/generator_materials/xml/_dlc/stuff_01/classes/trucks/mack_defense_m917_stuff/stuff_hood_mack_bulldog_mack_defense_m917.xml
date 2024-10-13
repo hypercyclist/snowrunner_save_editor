@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mack_defense_m917_stuff/stuff_hood_mack_bulldog_mack_defense_m917"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+		Category="hood_ornament"
+	>
+		<InstallSocket Type="StuffHoodMackDefense" />
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_BULLDOG_KING_NAME"
+		/>
+	</GameData>
+</TruckAddon>

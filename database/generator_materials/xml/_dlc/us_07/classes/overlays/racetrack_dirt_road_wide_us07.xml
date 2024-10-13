@@ -1,0 +1,19 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/racetrack_dirt_road_wide__d.tga"
+	TextureRelief="overlays/racetrack_dirt_road_wide__n_d.tga"
+	>
+	<Prebuild
+		DefaultWidth="9"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_dirt_road__s.tga"
+		SnowmapMask="overlay_snow_road_wide__s_d.tga"
+		Layer="2"
+		LandmarkUseAverageWidth="true"
+		LandmarkColor="(140; 115; 90)"
+		LandmarkPart="0.8"
+		LandmarkBorderWidth="1"
+		LandmarkBorderColor="(80;80;80)"
+
+	/>
+</OverlayBrand>

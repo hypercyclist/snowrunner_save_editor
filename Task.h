@@ -2,6 +2,7 @@
 #define TASK_H
 
 #include <map>
+#include <string>
 
 enum class Language;
 

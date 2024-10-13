@@ -1,0 +1,15 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body 
+			Collisions="Dynamic"
+			Friction="1.8"
+
+ 		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rock_01_ru13_lmk" />
+</ModelBrand>

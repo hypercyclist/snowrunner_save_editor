@@ -16,6 +16,7 @@
 
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 GameAtlas::GameAtlas() :
     m_regions(),
@@ -209,7 +210,7 @@ void GameAtlas::createUpgradesData(std::string _saveFileName,
     QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
 
-    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
+    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
     for (QFileInfo folder : addonsXmlFolderContent)
@@ -399,7 +400,7 @@ void GameAtlas::createTrucksData()
     QFileInfoList xmlFolderContent = xmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
 
-    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
+    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
     for (QFileInfo folder : addonsXmlFolderContent)
@@ -450,10 +451,17 @@ void GameAtlas::createTrucksData()
 
             std::string truckCode = nestedFileInfo.fileName().toStdString().substr(0, nestedFileInfo.fileName().toStdString().length() - 4);
             std::string translationCode = "";
-            rapidxml::xml_node<> *gameDataNode = node->first_node("GameData");
+            rapidxml::xml_node<>* gameDataNode = node->first_node("GameData");
             if (gameDataNode)
             {
-                translationCode = gameDataNode->first_node("UiDesc")->first_attribute("UiName")->value();
+                rapidxml::xml_node<>* uiDescNode = gameDataNode->first_node("UiDesc");
+                rapidxml::xml_attribute<>* uiDescAttribute = uiDescNode->first_attribute("UiName");
+                if (uiDescAttribute) {
+                    translationCode = uiDescAttribute->value();
+                }
+                else {
+                    translationCode = uiDescNode->first_node("region:default")->first_attribute("UiName")->value();
+                }
             }
 
             Truck* truck = new Truck(truckCode);
@@ -502,17 +510,32 @@ void GameAtlas::createTrucksData()
 
             for(auto filesIt = files.begin(); filesIt != files.end(); filesIt++)
             {
+                std::string filePathString = QDir::currentPath().toStdString()
+                                             + "/database/generator_materials/xml/classes/" + filesIt->first + "/"
+                                             + filesIt->second + ".xml";
+                qDebug() << QString::fromStdString(filePathString);
+            }
+
+            for(auto filesIt = files.begin(); filesIt != files.end(); filesIt++)
+            {
                 QFileInfo file;
                 std::string filePathString = QDir::currentPath().toStdString()
                     + "/database/generator_materials/xml/classes/" + filesIt->first + "/"
                     + filesIt->second + ".xml";
+
+                qDebug() << QString::fromStdString(filePathString);
+                if (Utils::contains(filePathString, "e_us_truck_modern_longhorn_4520.xml"))
+                {
+                    std::cout << "here";
+                }
+
                 if (QFileInfo::exists(QString::fromStdString(filePathString)))
                 {
                     file.setFile(QString::fromStdString(filePathString));
                 }
                 else
                 {
-                    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/classes/_dlc");
+                    QDir addonsXmlFolder(QDir::currentPath() + "/database/generator_materials/xml/_dlc");
                     QFileInfoList addonsXmlFolderContent = addonsXmlFolder.entryInfoList(
                         QStringList(), QDir::Dirs | QDir::NoDotAndDotDot);
                     for (QFileInfo folder : addonsXmlFolderContent)
@@ -539,6 +562,10 @@ void GameAtlas::createTrucksData()
                 if (filesIt->first == "engines")
                 {
                     upgradeVariantsNode = xmlDocument.first_node("EngineVariants");
+                    if (!upgradeVariantsNode)
+                    {
+                        std::cout << "here";
+                    }
                     upgradeNode = upgradeVariantsNode->first_node("Engine");
                 }
                 else if (filesIt->first == "gearboxes")

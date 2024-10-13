@@ -1,0 +1,57 @@
+<_templates>
+	<Engine>
+		<USSpecialEngine BrakesDelay="0.5" MaxDeltaAngVel="0.01" />
+	</Engine>
+</_templates>
+<EngineVariants>
+	<Engine
+		_template="USSpecialEngine"
+		CriticalDamageThreshold="0.35"
+		DamageCapacity="210"
+		DamagedConsumptionModifier="1.45"
+		EngineResponsiveness="0.045"
+		FuelConsumption="9.5"
+		Name="us_futom_7290ra_engine_0"
+		Torque="130000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.6"
+	>
+		<GameData
+			Price="14100"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_SPECIAL_PASS500_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_SPECIAL_PASS500_NAME"
+			/>
+		</GameData>
+	</Engine>
+	
+	<Engine
+		_template="USSpecialEngine"
+		CriticalDamageThreshold="0.65"
+		DamageCapacity="290"
+		DamagedConsumptionModifier="1.32"
+		FuelConsumption="10.5"
+		Name="us_futom_7290ra_engine_1"
+		Torque="180000"
+		DamagedMinTorqueMultiplier="1.0"
+		DamagedMaxTorqueMultiplier="0.8"
+	>
+		<GameData
+			Price="21600"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_ENGINE_US_SPECIAL_PASS530_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_ENGINE_US_SPECIAL_PASS530_NAME"
+			/>
+		</GameData>
+	</Engine>
+</EngineVariants>

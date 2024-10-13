@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(5.0; 7.0)" 
+		Texture="occlusion_us_lightbox_greenlake.tga"
+	/>
+	<Landmark Mesh="landmarks/us_lightbox_greenlake_lmk" />	
+</ModelBrand>

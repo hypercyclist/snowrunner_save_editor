@@ -1,0 +1,7 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ws_4964_white_stuff/sticker_roof_1x1_ws_4964_white" />
+	<GameData>
+		<InstallSocket Type="WS4964WhiteSticker_Roof" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,18 @@
+<_templates Include="environment" />
+<PlantBrand _template="SmallTree" PlantingMinSpacing="0.4" EraseBySnowThreshold="0.5">
+	<PhysicsModel>
+		<Body _template="SmallTreeRoot" ModelFrame="BoneRoot">
+			<Constraint _template="SmallTreeRoot" BreakOffThreshold="200"/>
+			<Body _template="BranchWithLeaves" ModelFrame="BoneTrunk3">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="BoneTrunk">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="BoneTrunk2">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.3" Size="(6.0; 6.0)" />
+</PlantBrand>

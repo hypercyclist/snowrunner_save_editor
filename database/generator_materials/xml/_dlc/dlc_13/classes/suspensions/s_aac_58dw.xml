@@ -1,0 +1,45 @@
+<_templates Include="trucks" />
+<SuspensionSetVariants>
+	<SuspensionSet
+		_template="Normal"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="120"
+		Name="aac_58dw_suspension_default"
+	>
+		<Suspension Damping="0.45" Height="0.11" Strength="0.11" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.25" />
+		<Suspension Damping="0.45" Height="0.1" Strength="0.09" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.22" />
+		<GameData
+			Price="4000"
+			UnlockByExploration="false"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_DEFAULT_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_DEFAULT_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+	<SuspensionSet
+		_template="High"
+		CriticalDamageThreshold="0.7"
+		DamageCapacity="140"
+		Name="aac_58dw_suspension_high"
+	>
+		<Suspension Damping="0.4" Height="0.22" Strength="0.07" WheelType="front" BrokenSuspensionMax="0.15" SuspensionMin="-0.33" />
+		<Suspension Damping="0.4" Height="0.19" Strength="0.08" WheelType="rear" BrokenSuspensionMax="0.15" SuspensionMin="-0.36" />
+		<GameData
+			Price="5500"
+			UnlockByExploration="true"
+			UnlockByRank="1"
+		>
+			<UiDesc
+				UiDesc="UI_SUSPENSION_HIGH_DESC"
+				UiIcon30x30=""
+				UiIcon40x40=""
+				UiName="UI_SUSPENSION_HIGH_NAME"
+			/>
+		</GameData>
+	</SuspensionSet>
+</SuspensionSetVariants>

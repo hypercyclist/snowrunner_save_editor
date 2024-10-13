@@ -225,6 +225,11 @@
 		<CompatibleWheels Scale="0.7" Type="wheels_derry_special_15c177" />
 		<CompatibleWheels Scale="0.7" Type="wheels_heavy_single" />
 		<CompatibleWheels Scale="0.7" Type="wheels_heavy_single2" />
+
+		<CompatibleWheels Scale="0.7" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels Scale="0.7" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels Scale="0.7" Type="wheels_heavy_mudtires_single2" />
+		
 		<Camera Center="(-3.5; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -281,7 +286,7 @@
 		</Axles>
 	</TruckData>
 	<Rotator EngineTorqueFactor="0" Frame="BoneEngineFanRotator" RotationAxis="(0; 1; 0)" RotationSpeed="10" />
-	<Snorkel Origin="(1.180; 1.751; 1.173)" ParentFrame="BoneChassis_cdt" />
+	<!-- <Snorkel Origin="(1.180; 1.751; 1.173)" ParentFrame="BoneChassis_cdt" /> -->
 	<PhysicsModel Mesh="trucks/derry_special_15c177">
 		<NetSync Legacy="false" />
 		<Body
@@ -499,7 +504,7 @@
 	<Landmark Mesh="landmarks/derry_special_15c177_lmk" MinScale="1.5" MaxScale="2.5" />
 	<HeadLight _template="Default" Pos="(5; 1.287; 0)" ParentFrame="BoneCabin_cdt" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="150000"
 		UnlockByExploration="true"
 		UnlockByRank="1"
@@ -590,24 +595,25 @@
 			<Socket Names="DerrySpecial15c177SpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
 		</AddonSockets>
 		<AddonSockets>
-			<Socket Names="Trailer" Offset="(-6.84; 1.060; 0)">
-				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer" Types="MinicraneRU, FrameAddon" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-6.84; 1.060; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="Trailer, LogTrailer" Types="MinicraneRU, FrameAddon" />
 			</Socket>
 			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" NamesBlock="SaddleLow" Offset="(-4.85; 1.755; 0)" />
 		</AddonSockets>
 		<AddonSockets>
+			<Socket Names="HeavyRepairSmall" NamesBlock="FrameAddonDerryFirefighter, MinicraneUS" Offset="(-4.4; 1.67; 0)"/>
 			<Socket Names="BunkLog" Offset="(-8.269; 1.48; 0)" />
 			<Socket Names="FrameAddonLogShort" NamesBlock="MinicraneUS" Offset="(-3.831; 1.482; 0)" />
 			<Socket Names="FrameAddon" Offset="(-4.031; 1.479; 0)">
 				<AddonsShift Offset="(-0.6; 0; 0)" Types="MinicraneUS" />
 			</Socket>
-			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneUS, Trailer" Offset="(-4.5; 0.45; 0)" ParentFrame="BoneChassis_cdt" />
-			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer" Offset="(-2.123; 1.482; 0)" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneUS, Trailer, LogTrailer" Offset="(-4.5; 0.45; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, LogTrailer" Offset="(-2.123; 1.482; 0)" />
 			<Socket Names="BigCraneUs" Offset="(-4.2; 1.574; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="FrameAddonDerryFirefighter">
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.095; -0.05)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.095; 0.05)" />
 			</Socket>
-			<Socket Names="BigCrane" Offset="(-4.15; 1.574; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="BigCraneUs, FrameAddonDerryFirefighter">
+			<Socket Names="BigCrane" Offset="(-4.15; 1.676; 0)" ParentFrame="BoneChassis_cdt" NamesBlock="BigCraneUs, FrameAddonDerryFirefighter">
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.095; -0.05)" />
 				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.095; 0.05)" />
 			</Socket>

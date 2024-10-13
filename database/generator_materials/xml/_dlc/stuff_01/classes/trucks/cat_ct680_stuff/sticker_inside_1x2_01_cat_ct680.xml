@@ -1,0 +1,15 @@
+<_parent File="sticker_inside_1x1_01_cat_ct680" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct680_stuff/sticker_inside_1x2_01_cat_ct680" />
+	<GameData
+		CameraPreset="sticker_1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="catCt680Sticker_1x2_01" />
+	</GameData>
+</TruckAddon>

@@ -152,6 +152,19 @@
 		<CompatibleWheels Scale="0.49" Type="wheels_scout1" />
 		<CompatibleWheels Scale="0.47" Type="wheels_scout2" />
 		<CompatibleWheels Scale="0.49" Type="wheels_scout2" />
+
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_offroad" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_highway" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_offroad" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.47" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_allterrain" />
+		<CompatibleWheels Scale="0.49" Type="wheels_scout_allterrain_chain" />
 		<Camera Center="(0.3; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -287,7 +300,7 @@
 	</ModelAttachments>
 	<Landmark Mesh="landmarks/rezvani_hercules_6x6_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(2.842; 1.041; 0)" />
-	<GameData Country="US" Price="25800" UnlockByRank="1">
+	<GameData Country="US,NE,CE" Price="25800" UnlockByRank="1">
 		<WinchSocket Pos="(4.657; 0.605; 0)" />
 		<WinchSocket Pos="(2.051; 0.589; -0.901)" />
 		<WinchSocket Pos="(2.051; 0.589; 0.901)" />

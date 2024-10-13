@@ -4,6 +4,7 @@
 			ConnectedToHandbrake="true"
 			Location="rear"
 			Torque="default"
+			ConnectedToHandbrake="true"
 		/>
 		<FrontWheel
 			Location="front"
@@ -12,6 +13,7 @@
 			SteeringJointOffset="0.25"
 			Torque="default"
 			ParentFrame="BoneCabin_cdt"
+			ConnectedToHandbrake="true"
 		/>
 	</Wheel>
 	<Socket>
@@ -155,6 +157,11 @@
 		</Damage>
 		<CompatibleWheels Scale="0.6" Type="wheels_azov_43_191_sprinter" />
 		<CompatibleWheels Scale="0.6" Type="wheels_heavy_single" />
+
+		<CompatibleWheels Scale=".6" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels Scale=".6" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels Scale=".6" Type="wheels_heavy_mudtires_single2" />
+
 		<Camera Center="(-1.5; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"

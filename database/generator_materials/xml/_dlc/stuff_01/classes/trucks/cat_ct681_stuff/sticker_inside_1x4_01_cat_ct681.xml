@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/cat_ct681_stuff/sticker_inside_1x4_01_cat_ct681" />
+	<GameData CameraPreset="sticker_1">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME" />
+		<InstallSocket Type="CatCT681Sticker_1x4_01" />
+	</GameData>
+</TruckAddon>

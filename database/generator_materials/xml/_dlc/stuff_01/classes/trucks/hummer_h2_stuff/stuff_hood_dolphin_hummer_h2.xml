@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dolphin_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/hummer_h2_stuff/stuff_hood_dolphin_hummer_h2" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodHummerH2" />
+	</GameData>
+</TruckAddon>

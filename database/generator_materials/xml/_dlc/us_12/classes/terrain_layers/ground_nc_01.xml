@@ -1,0 +1,11 @@
+<MaterialType 
+	Texture="tiles/ground_kuban_01__d_a.tga" 
+	Normal="tiles/ground_kuban_01_relief__d_a.tga"
+	GenerateDust="true"
+	GrassBrush="MudChunksKuban"
+	NoGrass="true"
+	AllowHiddenExtrudes="0.2"
+	Sound="surfaces/surf_ground_rnd"
+	SkidSound="surfaces/skidding/skidding_ground_loop"
+	MinViscosity="3.0"
+/>

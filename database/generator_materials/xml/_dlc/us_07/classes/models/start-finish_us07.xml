@@ -1,0 +1,98 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	DynamicModel="true"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 7; -6.686)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 6.637; -3.150)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 6.637; -1.052)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 6.637; 1.053)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 6.637; 3.160)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(2; 7; 6.656)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(-2; 7; 6.656)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="10"
+			Color="g(249; 210; 129) x 1"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="30"
+			Pos="(-2; 7; -6.686)"
+			Shadows="true"
+		/>
+	</StaticLights>
+
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/start-finish_us07_lmk" />
+</ModelBrand>

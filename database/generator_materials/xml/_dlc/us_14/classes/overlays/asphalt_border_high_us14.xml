@@ -1,0 +1,3 @@
+<OverlayBrand NoVeryFar="true" IsNotStaticSoil="true" AcceptZoneBorderDecals="true">
+	<Prebuild OverlayType="GeometricConform" />
+</OverlayBrand>

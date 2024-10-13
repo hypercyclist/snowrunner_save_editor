@@ -1,0 +1,56 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Superheavy">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>   
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.62">
+	<TruckTires>
+        <!-- Offroad tires -->
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_13" Name="JAT OHS I">
+			<WheelFriction _template="Offroad" BodyFriction="3" BodyFrictionAsphalt="0.8" SubstanceFriction="1.6"/>
+			<GameData
+				Price="4900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_13_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_14" Name="JAT OHS II">
+			<WheelFriction _template="Offroad" BodyFriction="3.2" BodyFrictionAsphalt="1" SubstanceFriction="1.3"/>
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_14_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_single_15" Name="JAT OHS III">
+			<WheelFriction _template="Offroad" BodyFriction="3" BodyFrictionAsphalt="0.9" SubstanceFriction="1.7"/>
+			<GameData
+				Price="6200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_15_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_12" Name="JAT OHS I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_12_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_heavy_offroad_single_13" Name="JAT OHS II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_13_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

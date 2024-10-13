@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_legion_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/paystar_5600ts_stuff/stuff_hood_legion_paystar_5600ts" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodPaystar5600Ts" />
+	</GameData>
+</TruckAddon>

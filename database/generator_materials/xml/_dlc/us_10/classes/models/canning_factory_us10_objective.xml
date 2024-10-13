@@ -1,0 +1,180 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<StaticLights>
+	<!--lamp_1-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-19.008; 2.209; -6.135)"
+			Shadows="true"
+		/>
+		<!--lamp_2-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-13.005; 3.712; -17.557)"
+			Shadows="true"
+		/>
+			<!--lamp_3-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(-5.990; 3.712; -17.557)"
+			Shadows="true"
+		/>
+		<!--lamp_4-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(1.022; 3.712; -17.557)"
+			Shadows="true"
+		/>
+		<!--lamp_5-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(8.023; 3.712; -17.557)"
+			Shadows="true"
+		/>
+			<!--lamp_6-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(14.986; 3.712; -17.557)"
+			Shadows="true"
+		/>
+			<!--lamp_7-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(24.989; 2.597; -13.561)"
+			Shadows="true"
+		/>
+				<!--lamp_8-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(27.176; 2.597; -13.561)"
+			Shadows="true"
+		/>
+				<!--lamp_9-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(34.754; 2.597; -1.095)"
+			Shadows="true"
+		/>
+				<!--lamp_10-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(34.754; 2.597; 1.093)"
+			Shadows="true"
+		/>
+				<!--lamp_11-->
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="60"
+			Pos="(7.561; 2.344; 11.519)"
+			Shadows="true"
+		/>
+</StaticLights>
+
+	<Subset IsDefault="true" Name="stage_1">
+		<Mesh Name="stage_1" />
+		<Mesh Name="stage_1_1" />
+		<CdtMesh Name="stage_1" />
+	</Subset>
+	<Subset Name="stage_2">
+		<Mesh Name="stage_2" />
+		<Mesh Name="stage_2_2" />
+		<CdtMesh Name="stage_2" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_2_anim" />
+	</Subset>
+	<Subset Name="stage_3">
+		<Mesh Name="stage_3" />
+		<CdtMesh Name="stage_3" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_3_anim" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+	    <Mesh Name="animated_stage_1"/>
+		<Mesh Name="animated_stage_1_1"/>
+		<Mesh Name="animated_stage_2"/>
+		<Mesh Name="animated_stage_2_1"/>
+		<Mesh Name="animated_stage_3"/>
+		<Mesh Name="mesh_0_for_anim"/>
+		<CdtMesh Name="mesh_0_for_anim"/>
+	</AnimSubset>
+	<TrackEvents TrackName="stage_2_anim">
+		<AnimEvent Key="58">
+			<Sound Name="actors/actor_construction/actor_deconstruct_metal" Range="200" Volume="1"/>
+			<SFX Name="constr_metal_01" Dir="(0; 1; 0)" Pos="(0.07; 1.216; -3.796)"/>
+			<SFX Name="constr_metal_01" Dir="(0; 1; 0)" Pos="(25.0; 1.216; 0.0)"/>
+		</AnimEvent>
+	</TrackEvents>
+	<TrackEvents TrackName="stage_3_anim">
+		<AnimEvent Key="58">
+			<Sound Name="actors/actor_construction/actor_deconstruct_metal" Range="200" Volume="1"/>
+			<SFX Name="constr_metal_01" Dir="(0; 1; 0)" Pos="(0.07; 1.216; -3.796)"/>
+			<SFX Name="constr_metal_01" Dir="(0; 1; 0)" Pos="(25.0; 1.216; 0.0)"/>
+		</AnimEvent>
+	</TrackEvents>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_1">
+			<Body Collisions="Dynamic" ModelFrame="stage_1_1"/>
+			<Body Collisions="Dynamic" ModelFrame="stage_2"/>
+			<Body Collisions="Dynamic" ModelFrame="stage_2_2"/>
+			<Body Collisions="Dynamic" ModelFrame="stage_3"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_0_for_anim" />
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/canning_factory_us10_objective_lmk"/>
+</ModelBrand>

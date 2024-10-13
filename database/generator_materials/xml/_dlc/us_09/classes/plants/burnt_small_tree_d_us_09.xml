@@ -1,0 +1,12 @@
+<_templates Include="environment" />
+<PlantBrand _template="SmallTree" PlantingMinSpacing="0.4">
+	<PhysicsModel>
+		<Body _template="SmallTreeRoot" ModelFrame="BoneRoot">
+			<Constraint _template="SmallTreeRoot" />
+			<Body _template="SecondTrunk" ModelFrame="BoneTrunk">
+				<Constraint _template="SecondTrunk" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.3" Size="(6.0; 6.0)" />
+</PlantBrand>

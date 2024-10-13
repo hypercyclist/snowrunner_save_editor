@@ -153,9 +153,22 @@
 			<DamageArea Type="FuelTank" Min="(-1.727; 0.541; -0.824)" Max="(-1.137; 1.13; -0.087)" />
 		</Damage>
 		<CompatibleWheels Scale="0.4" Type="wheels_land_rover_defender_90" />
+		<CompatibleWheels OffsetZ="0.06" Scale="0.42" Type="wheels_land_rover_defender_90" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout1" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout2" />
 		<CompatibleWheels OffsetZ="0.04" Scale="0.42" Type="wheels_scout2" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.04" Scale="0.42" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.42" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.4" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.42" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.04" Scale="0.42" Type="wheels_scout_allterrain_chain" />
 		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -175,20 +188,17 @@
 	</TruckData>
 	<Snorkel Origin="(1.491; 0.839; 0)" />
 	<PhysicsModel Mesh="trucks/land_rover_defender_90">
-		<NetSync Legacy="false" />
 		<Body
 			CenterOfMassOffset="(-1; 0; 0)"
 			ImpactType="Truck"
 			Mass="1000"
 			ModelFrame="BoneChassis_cdt"
-			NetSync="pv"
 		>
 			<Body
 				CenterOfMassOffset="(0.9; -0.3; 0)"
 				ImpactType="Truck"
 				Mass="750"
 				ModelFrame="BoneCabin_cdt"
-				NetSync="pv"
 			>
 				<Constraint Type="Fixed" />
 				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
@@ -210,7 +220,7 @@
 			</Body>
 			<Body _template="Mudguard" ModelFrame="BoneMudguardFrontRight_cdt" />
 			<Body _template="Mudguard" ModelFrame="BoneMudguardFrontLeft_cdt" />
-			<Body _template="TieRod" ModelFrame="BoneTieRod1_cdt">
+			<Body _template="TieRod" NetSync="pv" ModelFrame="BoneTieRod1_cdt">
 				<Constraint
 					AxisLocal="(0; -1; 0)"
 					Name="TieRodSteer"
@@ -261,7 +271,7 @@
 	<Landmark Mesh="landmarks/land_rover_defender_90_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(1.49; 0.853; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="2500"
 		Recallable="true"
 		UnlockByExploration="false"

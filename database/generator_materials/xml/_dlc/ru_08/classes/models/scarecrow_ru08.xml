@@ -1,0 +1,36 @@
+<_templates Include="models" />
+
+<ModelBrand Instanced="true" AcceptZoneBorderDecals="true" >
+
+	<PhysicsModel>
+		<Body ModelFrame="Bone_Base" Mass="60" DamageMult="0.1" NoSoftContacts="True">
+			<Constraint Type="Fixed" BreakOffThreshold="800"/>
+
+			<Body AngularDamping="0.1" ModelFrame="Bone_Torso" Mass="60" DamageMult="0.1" AngularDamping="10" NoSoftContacts="True">
+				<Constraint AxisLocal="(0;1;0)" Type="Hinge" MinLimit="-3" MaxLimit="3">
+					<Motor Damping="50" Spring="5000" Type="Spring" />
+				</Constraint>
+
+				
+				<Body Collisions="Dynamic" _template="LightWeight" ModelFrame="Bone_Hat" Mass="10" DamageMult="0" NoSoftContacts="True">
+					<Constraint Type="Fixed" BreakOffThreshold="40"/>
+				</Body>
+
+				<Body AngularDamping="0.1" ModelFrame="Bone_Arm-R" Mass="60" DamageMult="0.1" AngularDamping="10" NoSoftContacts="True">
+					<Constraint AxisLocal="(0;1;0)" Type="Hinge" MinLimit="-3" MaxLimit="3">
+						<Motor Damping="50" Spring="5000" Type="Spring" />
+					</Constraint>
+				</Body>
+				
+				<Body AngularDamping="0.1" ModelFrame="Bone_Arm-L" Mass="60" DamageMult="0.1" AngularDamping="10" NoSoftContacts="True">
+					<Constraint AxisLocal="(0;1;0)" Type="Hinge" MinLimit="-3" MaxLimit="3">
+						<Motor Damping="50" Spring="5000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			
+		</Body>
+	</PhysicsModel>
+
+
+</ModelBrand>

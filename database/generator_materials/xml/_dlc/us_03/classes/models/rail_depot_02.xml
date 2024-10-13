@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(45.0; 23.0)" 
+		Texture="occlusion_rail_depot_02.tga"
+	/>
+	<Landmark Mesh="landmarks/rail_depot_02_lmk" />
+</ModelBrand>

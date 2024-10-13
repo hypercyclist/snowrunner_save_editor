@@ -1,0 +1,20 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_solarpanel_1">
+		<NetSync Legacy="false" />
+		<Body Mass="2500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds 
+			InstallSound="cargo_manual/cargo_manual_bags"
+			ManualSound="cargo_manual/cargo_manual_bags"
+		/>
+		<InstallSlot
+			CargoLength="1"
+			CargoType="CargoSolarPanel"
+			CargoValue="1"
+			Offset="(0; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

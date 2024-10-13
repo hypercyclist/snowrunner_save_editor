@@ -190,9 +190,15 @@
 			<DamageArea Type="Engine" Min="(1.441; 0.652; -0.55)" Max="(2.982; 1.688; 0.584)" ParentFrame="BoneCabin_cdt" />
 			<DamageArea Type="FuelTank" Min="(-0.291; 0.502; -0.412)" Max="(-1.238; 0.881; -0.9)" ParentFrame="BoneCabin_cdt" />
 		</Damage>
-		<CompatibleWheels OffsetZ="0.42" Scale="0.6" Type="wheels_zikz_566a" />
-		<CompatibleWheels OffsetZ="0.45" Scale="0.6" Type="wheels_medium_double" />
-		<CompatibleWheels OffsetZ="0.52" Scale="0.55" Type="wheels_heavy_mudtires_tayga" />
+		<CompatibleWheels OffsetZ="0.42" RearOffsetZ="0.37" Scale="0.6" Type="wheels_zikz_566a" />
+		<CompatibleWheels OffsetZ="0.45" RearOffsetZ="0.5" Scale="0.6" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.52" RearOffsetZ="0.5" Scale="0.55" Type="wheels_heavy_mudtires_tayga" />
+
+		<CompatibleWheels OffsetZ="0.45" RearOffsetZ="0.5" Scale="0.6" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.45" RearOffsetZ="0.5" Scale="0.6" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.45" RearOffsetZ="0.5" Scale="0.6" Type="wheels_medium_allterrain_double" />
+		<CompatibleWheels OffsetZ="0.45" RearOffsetZ="0.5" Scale="0.6" Type="wheels_medium_mudtires_double" />
+
 		<!-- <CompatibleWheels OffsetZ="0.49" Scale="0.65" Type="wheels_heavy_single3" /> -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<Camera Center="(-0.9; 0; 0)" ParentFrame="BoneCabin_cdt">
@@ -399,7 +405,9 @@
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<AddonSockets>
 			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-2.6; 1.4; 0)" />
-			<Socket Names="Trailer" Offset="(-3.747; 0.604; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-3.747; 0.604; 0)">
+				<AddonsShift Offset="(-0.64; 0.02; 0)" Types="ZiKZ566aFirefighterAddon" />
+			</Socket>
 		</AddonSockets>
 		<AddonSockets DefaultAddon="zikz_566a_repair_kit_addon" >
 			<Socket	Names="MinicraneRU"	Offset="(-0.15; 0.862; 0)" ParentFrame="BoneCabin_cdt" />

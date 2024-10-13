@@ -1,0 +1,16 @@
+<_parent File="semitrailer_for_rocket" />
+<Truck>
+	<PhysicsModel Mesh="trucks/trailers/semitrailer_wind_blade" />
+	<GameData Price="20000">
+		<UiDesc
+			_noinherit="true"
+			UiDesc="UI_SEMITRAILER_ROCKET_DESC"
+			UiIcon30x30="trailerImgRocketFull30"
+			UiIcon40x40="trailerImgRocketFull"
+			UiName="UI_SEMITRAILER_ROCKET_NAME"
+		/>
+		
+
+	</GameData>
+	<Landmark Mesh="landmarks/semitrailer_wind_blade_lmk" MinScale="0.8" MaxScale="1.0" />
+</Truck>	

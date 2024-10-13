@@ -1,0 +1,54 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.85" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_bumper_2">
+		<Body ImpactType="Truck" Mass="50" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				AngularDamping="0.5"
+				Collisions="None"
+				Mass="15"
+				ModelFrame="BoneHook_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-3"
+					MaxLimit="6"
+				/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+	<Ignition>
+	<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.255; 0.899; 1.024)" ParentFrame="BoneCabin_cdt" />
+	<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.255; 0.899; -1.024)" ParentFrame="BoneCabin_cdt" />
+	<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.205; 0.897; 1.088)" ParentFrame="BoneCabin_cdt" />
+	<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.3" Size="0.2" Pos="(5.205; 0.897; -1.088)" ParentFrame="BoneCabin_cdt" />
+	</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(5.249 0.886; -1.069)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(5.249 0.886; 1.069)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="hoods"
+		Category="bumper"
+		Price="1800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_HEAVYDUTY_PIPE_NAME"
+		/>
+		<InstallSocket Type="KenworthW990Bumper" />
+	</GameData>
+</TruckAddon>

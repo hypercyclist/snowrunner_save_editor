@@ -1,0 +1,48 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="Bush"
+	LocalYOcclusionOffset="0.2"
+	PlantingGroups="Bush,SmallTree"
+	PlantingMinSpacing="1.4"
+>
+	<PhysicsModel>
+		<Body _template="BushRoot" ModelFrame="BoneRoot" DebrisType="FoliageSummer">
+			<Constraint
+				Cone="1"
+            	TwistAxisLocal="(0; 1; 0)"
+            	Type="Ragdoll"	
+				>
+				<PlaneConeMotor Damping="550" Spring="400" Type="Spring" />
+				</Constraint>
+			<Body _template="BushBranch" ModelFrame="BoneBranch1" DebrisType="FoliageSummer">
+				<Constraint
+				Cone="80"
+            	TwistAxisLocal="(0; 1; 0)"
+            	Type="Ragdoll"	
+				>
+				<PlaneConeMotor Damping="30" Spring="150" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch2">
+				<Constraint
+				Cone="80"
+            	TwistAxisLocal="(0; 1; 0)"
+            	Type="Ragdoll"	
+				>
+				<PlaneConeMotor Damping="30" Spring="150" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body _template="BushBranch" ModelFrame="BoneBranch3" >
+				<Constraint
+				Cone="80"
+            	TwistAxisLocal="(0; 1; 0)"
+            	Type="Ragdoll"	
+				>
+				<PlaneConeMotor Damping="30" Spring="150" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(8.0; 8.0)" />
+		<Landmark Mesh="landmarks/bush_6_us12_lmk" />
+</PlantBrand>

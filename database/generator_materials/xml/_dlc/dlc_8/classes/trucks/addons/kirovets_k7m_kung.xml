@@ -35,7 +35,6 @@
 			<Body
 				Mass="30"
 				ModelFrame="Bonewheel1_cdt"
-				LinearDamping="4"
 			>
 				<Constraint
 					Type="Fixed"
@@ -47,7 +46,6 @@
 			<Body
 				Mass="30"
 				ModelFrame="Bonewheel2_cdt"
-				LinearDamping="4"
 			>
 				<Constraint
 					Type="Fixed"
@@ -58,7 +56,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="4"
 				Mass="20"
 				ModelFrame="Bonefuel1_cdt"
 			>
@@ -70,7 +67,6 @@
 			</Body>
 				<Body
 				_template="Limits"
-				LinearDamping="4"
 				Mass="20"
 				ModelFrame="Bonefuel2_cdt"
 			>
@@ -82,7 +78,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="4"
 				Mass="30"
 				ModelFrame="Bonerepair1_cdt"
 			>
@@ -94,7 +89,6 @@
 			</Body>
 			<Body
 				_template="Limits"
-				LinearDamping="4"
 				Mass="30"
 				ModelFrame="Bonerepair2_cdt"
 			>

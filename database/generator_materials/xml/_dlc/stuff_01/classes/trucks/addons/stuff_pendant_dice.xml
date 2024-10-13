@@ -1,0 +1,67 @@
+<_templates Include="trucks">
+	<Body>
+		<Rope Collisions="None" Mass="0.1">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="30"
+			>
+				<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+			</Constraint>
+		</Rope>
+		<PendantRotate Collisions="None" Mass="0.15">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-30"
+				MaxLimit="30"
+			>
+				<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+			</Constraint>
+		</PendantRotate>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_pendant_dice">
+		<Body Collisions="None" Mass="0.5">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.3" ModelFrame="BoneRope_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-30"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+				</Constraint>
+				<Body _template="Rope" Mass="0.2" ModelFrame="BoneRopeLeft_cdt">
+					<Body _template="PendantRotate" ModelFrame="BonePendantLeft_cdt" />
+				</Body>
+				<Body _template="Rope" ModelFrame="BoneRopeRight_cdt">
+					<Constraint MinLimit="-60" MaxLimit="60" />
+					<Body _template="PendantRotate" ModelFrame="BonePendantRight_cdt" />
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="mirror_mount"
+		Category="mirror_mount"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_PENDANT_DESC"
+			UiIcon30x30="interiorMirrorImg30"
+			UiIcon40x40="interiorMirrorImg40"
+			UiName="UI_STUFF_PENDANT_DICE_NAME"
+		/>
+		<!--<InstallSocket Type="StuffPendant" />-->
+		<InstallSocket Type="StuffAirfreshener" />
+	</GameData>
+</TruckAddon>

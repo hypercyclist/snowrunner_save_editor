@@ -1,0 +1,27 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="mesh_end" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_deconstruct_metal" Range="200" Volume="1"/>
+			<SFX Name="constr_metal_01" Dir="(0; 1; 0)" Pos="(0.07; 1.216; -3.796)"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	<Occlusion
+		Size="(29.0; 32.0)" 
+		Texture="occlusion_constr_metal_01_objective.tga"
+	/>
+	<Landmark Mesh="landmarks/constr_metal_01_objective_lmk" />
+</ModelBrand>

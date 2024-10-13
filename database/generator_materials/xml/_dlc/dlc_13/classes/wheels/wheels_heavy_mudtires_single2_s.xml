@@ -1,0 +1,65 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Mudtires _template="Superheavy">
+			<WheelTracks _template="Offroad" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="HeavyMudtires" />
+		</Mudtires>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="100" Radius="1" Width="0.79" Mass="600">
+	<TruckTires>
+		<TruckTire _template="Mudtires" Mesh="wheels/tire_heavy_mudtires_13" Name="JAT MHS IV">
+			<WheelFriction _template="Mudtires" BodyFriction="1.8" BodyFrictionAsphalt="0.4" SubstanceFriction="2.6"/>
+			<GameData
+				Price="5200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_13_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Mudtires" Mesh="wheels/tire_heavy_mudtires_14" Name="JAT MHS V">
+			<WheelFriction _template="Mudtires" BodyFriction="2.4" BodyFrictionAsphalt="0.5" SubstanceFriction="2.1"/>
+			<GameData
+				Price="5600"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_14_NAME" />
+			</GameData>
+		</TruckTire>
+        <TruckTire _template="Mudtires" Mesh="wheels/tire_heavy_mudtires_15" Name="JAT MHS VI">
+			<WheelFriction _template="Mudtires" BodyFriction="1.8" BodyFrictionAsphalt="0.6" SubstanceFriction="2.5"/>
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_MUDTIRES_DESC" UiName="UI_TIRE_HEAVY_MUDTIRES_15_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_1_2" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_single_2_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_SINGLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_12" Name="JAT MHS IV">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_14_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_13" Name="JAT MHS V">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_15_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

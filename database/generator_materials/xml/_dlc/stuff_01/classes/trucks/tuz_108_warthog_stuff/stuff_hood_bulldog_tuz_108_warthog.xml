@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_bulldog_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_stuff/stuff_hood_bulldog_tuz_108_warthog" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodTuz108Warthog" />
+	</GameData>
+</TruckAddon>

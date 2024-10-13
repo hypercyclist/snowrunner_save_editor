@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_boar_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_scout_800_stuff/stuff_hood_boar_international_scout_800" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodInternationalScout800" />
+	</GameData>
+</TruckAddon>

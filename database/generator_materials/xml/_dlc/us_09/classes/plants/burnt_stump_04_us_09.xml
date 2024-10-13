@@ -1,0 +1,12 @@
+<_templates Include="environment" />
+<PlantBrand _template="LyingTree">
+	<PhysicsModel>
+		<Body _template="FallingTreeRoot" ModelFrame="BoneRoot" DamageMult="0.3">
+			<Constraint _template="FallingTreeRoot" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.5" Size="(4.0; 10.0)" Texture="occlusion_vertical.tga" />
+	<GameData>
+		<WinchSocket Pos="(-0.117; 0.055; 0.012)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

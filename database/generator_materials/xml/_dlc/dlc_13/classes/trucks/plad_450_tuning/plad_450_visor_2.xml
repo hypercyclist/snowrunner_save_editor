@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="MarkerBeacon" Pos="(3.140; 3.592; -0.757)" />
+			<Flare _template="MarkerBeacon" Pos="(3.204; 3.592; -0.386)" />
+			<Flare _template="MarkerBeacon" Pos="(3.222; 3.592; 0)" />
+			<Flare _template="MarkerBeacon" Pos="(3.204; 3.592; 0.386)" />
+			<Flare _template="MarkerBeacon" Pos="(3.140; 3.592; 0.757)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1400"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_ANGLED_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_ANGLED_NAME"
+		/>
+		<InstallSocket Type="Plad450VisorRoofrack" />
+		<RequiredAddon Types="plad_450_roofrack_1" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,15 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_49x_stuff/sticker_inside_1x4_02_western_star_49x" >
+		<Body Collisions="None" Mass="1" ModelFrame="BoneOne_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneTwo_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData CameraPreset="sticker_2">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"/>
+		<InstallSocket Type="WesternStar49xSticker_1x4_02" />
+	</GameData>
+</TruckAddon>

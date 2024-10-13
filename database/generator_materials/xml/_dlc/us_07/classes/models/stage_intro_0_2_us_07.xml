@@ -1,0 +1,34 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+>
+	<PhysicsModel>
+		
+	</PhysicsModel>
+
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="stage_intro_0_2" />
+		<CdtMesh Name="stage_intro_0_2" />
+	</Subset>
+	
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_intro_0_2" />
+		<CdtMesh Name="stage_intro_0_2" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_stage_1" />
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+	</AnimSubset>
+
+	<TrackEvents TrackName="anim_stage_1">
+		<AnimEvent Key="154">
+            <Fade Time="0.6" />
+        </AnimEvent>
+		<AnimEvent Key="264">
+            <Fade Time="0.6" />
+        </AnimEvent>
+	</TrackEvents>
+</ModelBrand>

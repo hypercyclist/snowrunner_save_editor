@@ -1,0 +1,47 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<Rotator
+		EngineTorqueFactor="0"
+		RotationAxis="(0; -1; 0)"
+		Frame="BoneRotator1"
+		RotationSpeed="3.7"
+	/>
+	<Rotator
+		EngineTorqueFactor="0"
+		RotationAxis="(0; 1; 0)"
+		Frame="BoneRotator2" 
+		RotationSpeed="4"
+	/>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_beacon_default" />
+	<ModelAttachments>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.55; 0.071; 0.829)" Org="(2.548; 3.858; 0.850)" ParentFrame="BoneRotator1" />
+			<Light Dir="(0.55; 0.071; 0.829)" Pos="(2.548; 3.858; 0.850)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.55; 0.071; 0.829)" Pos="(2.548; 3.858; 0.850)" ParentFrame="BoneRotator1" />
+			<Flare Dir="(0.55; 0.071; 0.829)" Pos="(2.548; 3.858; 0.850)" ParentFrame="BoneRotator1" />
+			<Flare Pos="(2.548; 3.931; 0.792)" />
+		</Ignition>
+		<Ignition _template="Flasher">
+			<Model Dir="(0.55; 0.071; -0.829)" Org="(2.548; 3.858; -0.850)" ParentFrame="BoneRotator2" />
+			<Light Dir="(0.55; 0.071; -0.829)" Pos="(2.548; 3.858; -0.850)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.55; 0.071; -0.829)" Pos="(2.548; 3.858; -0.850)" ParentFrame="BoneRotator2" />
+			<Flare Dir="(0.55; 0.071; -0.829)" Pos="(2.548; 3.858; -0.850)" ParentFrame="BoneRotator2" />
+			<Flare Pos="(2.548; 3.931; -0.792)" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BEACONS_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BEACONS_STOCK_NAME"
+		/>
+		<InstallSocket Type="Plad450Beacon" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,35 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<ScoutOffroad _template="Light">
+			<WheelTracks _template="Default" />
+			<WheelSoftness _template="ScoutDefault" />
+			<WheelFriction _template="ScoutOffroad" />
+		</ScoutOffroad>
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.7">
+	<TruckTires>
+		<TruckTire _template="ScoutOffroad" Mesh="wheels/tire_aac_58dw" Name="tire">
+			<WheelFriction
+				_template="ScoutOffroad"
+				BodyFriction="2.1"
+				BodyFrictionAsphalt="1"
+				SubstanceFriction="1.2"
+			/>
+			<GameData
+				Price="4200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_AAC_58DW_TIRE_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_aac_58dw" Name="rim">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_SCOUT_OFFROAD_1_DESC" UiName="UI_RIM_AAC_58DW_RIM_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

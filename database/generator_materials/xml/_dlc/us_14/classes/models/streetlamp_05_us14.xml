@@ -1,0 +1,28 @@
+<ModelBrand
+	ApplyNormalInReference="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	ClipCamera="false"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<StaticLights>
+
+		<StaticLight
+			AttenEnd="5"
+			Color="g(255; 241; 203) x 1.45"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="65"
+			Pos="(2.0; 0.1; 0.0)"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(0; 0.8; 0)" />
+	</GameData>
+</ModelBrand>

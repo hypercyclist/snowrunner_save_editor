@@ -1,0 +1,11 @@
+<MaterialType 
+	Texture="tiles/grass_spring__d_a.tga" 
+	Normal="tiles/grass_pbr_test_relief__d_a.tga"
+	GrassBrush="Dandelion,GrassShortCanA,GrassShortCan,GrassTallCanA,GrassTallCanB,GrassFlowerCanC,GrassFlowerCanE,GrassFlowerCanF,GrassWeedCanA,GrassWeedCanD" 
+	IsThickGrass="false"
+	Sound="surfaces/surf_grass_mix_loop"
+	EndEffectSound="surfaces/hit/hit_grass_rnd"
+	SkidSound="surfaces/skidding/skidding_grass_loop"
+	MinViscosity="7.0"
+	AllowHiddenExtrudes="1.0"
+/>

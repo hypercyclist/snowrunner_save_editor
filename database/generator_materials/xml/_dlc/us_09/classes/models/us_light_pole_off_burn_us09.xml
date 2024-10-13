@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<SnapPoint Pos="(0; 7.165; -0.533)" />
+	<SnapPoint Pos="(0; 7.71; -0.52)" />
+	<SnapPoint Pos="(0; 7.17; 0.269)" />
+	<SnapPoint Pos="(-0; 7.706; 0.273)" />
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/us_light_pole_off_burn_us09_lmk" />
+</ModelBrand>

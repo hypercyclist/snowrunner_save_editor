@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_crab_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/royal_bm17_stuff/stuff_hood_crab_royal_bm17" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodRoyalBm17" />
+	</GameData>
+</TruckAddon>

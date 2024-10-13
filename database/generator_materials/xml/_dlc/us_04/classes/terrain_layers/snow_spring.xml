@@ -1,0 +1,19 @@
+<MaterialType
+	AllowHiddenExtrudes="1"
+	MinViscosity="2"
+	NoGrass="false"
+	Normal="tiles/snow_01_relief__d_a.tga"
+	Texture="tiles/snow_01__d_a.tga"
+	Sound="surfaces/surf_snow_rnd"
+	SkidSound="surfaces/skidding/skidding_snow_loop"
+	IsSnowParticles="true"
+	WetnessAlbedoMultiplier="0.1"
+	WetnessRoughnessMultiplier="0.1"
+	SnowAlbedoColor="(230; 230; 230)"
+	SnowDetailFactor="0.25"
+	SnowDetailNormal="tiles/snow_detail__n_d.tga"
+	SnowDetailTiling="3.0"
+	SnowTintBrightness="0.55"
+	IsSnowParticles="true"
+	
+/>

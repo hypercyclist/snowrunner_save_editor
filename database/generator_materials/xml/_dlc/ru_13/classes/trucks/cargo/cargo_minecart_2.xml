@@ -1,0 +1,91 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_minecart_2">
+		<NetSync Legacy="false" />
+		<Body Mass="3500" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="900" ModelFrame="BoneCargo_1_cdt" > 
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.008"
+					MaxLimit="0.008"
+				>
+					<Motor Damping="0.1" Spring="100" Type="Spring" />
+				</Constraint>
+				<Body Mass="10" ModelFrame="wheel1_cdt" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-120"
+						MaxLimit="220"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="10" ModelFrame="wheel2_cdt" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-120"
+						MaxLimit="220"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="10" ModelFrame="wheel3_cdt" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-120"
+						MaxLimit="220"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="10" ModelFrame="wheel4_cdt" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-120"
+						MaxLimit="220"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="30" ModelFrame="cs_cdt1" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-4.75"
+						MaxLimit="3.27"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+				<Body Mass="30" ModelFrame="cs_cdt2" >
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-4.75"
+						MaxLimit="3.27"
+					>
+						<Motor Damping="0.001" Spring="0.01" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+        </Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_big_drill"
+			TransportedSound="load/metal_small/metal_small_rnd"
+			ManualSound="cargo_manual/cargo_manual_big_drill"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoMinecart"
+			CargoValue="1"
+			Offset="(1.24; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

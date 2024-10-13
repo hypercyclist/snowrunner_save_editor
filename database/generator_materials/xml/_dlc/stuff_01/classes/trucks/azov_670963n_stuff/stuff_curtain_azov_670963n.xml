@@ -1,0 +1,33 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_670963n_stuff/stuff_curtain_azov_670963n">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneCurtain_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+				>
+					<Motor Damping="0.05" Spring="0.01" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="curtain"
+		Category="curtain"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_CURTAIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_CURTAIN_01_NAME"
+		/>
+		<InstallSocket Type="StuffCurtainAzov670963n" />
+	</GameData>
+</TruckAddon>

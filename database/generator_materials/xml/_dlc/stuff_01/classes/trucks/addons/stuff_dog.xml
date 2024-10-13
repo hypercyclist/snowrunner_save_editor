@@ -1,0 +1,58 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_dog">
+		<Body Collisions="None" Mass=".5">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0.01; 0)"
+				Collisions="None"
+				Mass="10"
+				ModelFrame="BoneHead1_cdt"
+			>
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-40"
+					MaxLimit="40"
+				>
+					<Motor Damping=".001" Spring="10" Type="Spring" />
+				</Constraint>
+				<Body
+					CenterOfMassOffset="(0; 0.01; 0)"
+					Collisions="None"
+					Mass="5"
+					ModelFrame="BoneHead2_cdt"
+				>
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="30"
+					>
+						<Motor Damping=".01" Spring=".2" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass=".5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="bubble_head"
+		Category="bubble_head"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_DOG_DESC"
+			UiIcon30x30="interiorBubbleImg30"
+			UiIcon40x40="interiorBubbleImg40"
+			UiName="UI_STUFF_DOG_NAME"
+		/>
+		<InstallSocket Type="StuffDashboard" />
+	</GameData>
+</TruckAddon>

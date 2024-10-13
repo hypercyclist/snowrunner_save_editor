@@ -1,0 +1,19 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" ModelFrame="BoneRoot_c">
+			<Body _template="LightWeight" ModelFrame="Bone1">
+				<Constraint _template="LightWeight" />
+			</Body>
+			<Body _template="LightWeight" ModelFrame="Bone4">
+				<Constraint _template="LightWeight" />
+			</Body>
+			<Body _template="LightWeight" ModelFrame="Bone5">
+				<Constraint _template="LightWeight" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

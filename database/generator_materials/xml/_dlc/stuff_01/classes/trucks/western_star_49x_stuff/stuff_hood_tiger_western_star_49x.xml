@@ -1,0 +1,18 @@
+<_parent File="stuff_hood_tiger_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_49x_stuff/stuff_hood_tiger_western_star_49x">
+		<Body Collisions="None" Mass="1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodWesternStar49X" />
+	</GameData>
+</TruckAddon>

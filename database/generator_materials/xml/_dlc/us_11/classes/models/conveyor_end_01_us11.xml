@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(32.0; 20.0)" 
+		Texture="occlusion_conveyor_objective_01.tga"
+	/>
+	<Landmark Mesh="landmarks/conveyor_end_01_lmk" />
+</ModelBrand>

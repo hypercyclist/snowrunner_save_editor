@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_bulldog_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_stuff/stuff_hood_bulldog_burlak" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodBurlak" />
+	</GameData>
+</TruckAddon>

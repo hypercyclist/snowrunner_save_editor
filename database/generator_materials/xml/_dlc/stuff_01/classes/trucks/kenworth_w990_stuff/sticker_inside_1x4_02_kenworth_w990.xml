@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_w990_stuff/sticker_inside_1x4_02_kenworth_w990" />
+	<GameData CameraPreset="sticker_06">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"/>
+		<InstallSocket _noinherit="true" Type="Kenworth990Sticker_1x4_02" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,7 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_stuff/sticker_glass_top_mtb_8106" />
+	<GameData CameraPreset="sticker_5">
+		<InstallSocket Type="MTB8106Sticker_GlassTop" />
+	</GameData>
+</TruckAddon>

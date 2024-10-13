@@ -1,0 +1,13 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" CheckNoGrass="false">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" DebrisType="FoliageNeedles" ModelFrame="BoneRoot">
+			<Constraint _template="BigTreeRoot" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.45" Size="(8.0; 8.0)" />
+	<Landmark Mesh="landmarks/pine_03_rus_lmk"/>
+	<GameData>
+		<WinchSocket Pos="(0.081; 0.492; 0.025)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

@@ -1,0 +1,25 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/azov_670963n_tuning/azov_670963n_visor_2" />
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(5.422; 3.303; -0.824)" DirAngle="110" />
+			<Flare _template="IgnitionSignalOrange" AspectRatio="1" Color="g(255; 140; 0) x 0.5" Dir="(0; 0; -1)" Size="0.5" Pos="(5.422; 3.303; 0.824)" DirAngle="110" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="roof"
+		Category="fender_front"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_NAME"
+		/>
+		<InstallSocket Type="Azov670963nVisor" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,12 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/wooden_bridge_small_01_lmk" />
+	<Occlusion Size="(13.0; 19.0)" Texture="occlusion_city_building_rus_04.tga" />
+</ModelBrand>
+

@@ -1,0 +1,11 @@
+<_parent File="stuff_curtain_azov_73210" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_fleetstar_f2070a_stuff/stuff_curtain_international_fleetstar_f2070a" />
+	<GameData
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffCurtainInternationalFleetstarF2070a" />
+	</GameData>
+</TruckAddon>

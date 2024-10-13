@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(16.0; 15.0)" 
+		Texture="occlusion_procamp_old.tga"
+	/>
+	<Landmark Mesh="landmarks/procamp_old_lmk" />
+</ModelBrand>

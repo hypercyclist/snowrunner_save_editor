@@ -1,0 +1,16 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallTree"
+	LocalYOcclusionOffset="0.2"
+	PlantingMinSpacing="1.2"
+>
+	<PhysicsModel>
+		<Body _template="HugeTrunk" ModelFrame="BoneRoot">
+			<Constraint _template="HugeTrunk" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(4.0; 4.0)" />
+	<GameData>
+		<WinchSocket Pos="(0; 0.459; 0)" />
+	</GameData>
+</PlantBrand>

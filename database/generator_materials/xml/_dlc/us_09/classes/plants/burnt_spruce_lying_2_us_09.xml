@@ -1,0 +1,17 @@
+<_templates Include="environment" />
+<PlantBrand _template="LyingTree">
+	<PhysicsModel>
+		<Body _template="FallingTreeRoot" ModelFrame="BoneRoot" DamageMult="0.4">
+			<Constraint _template="FallingTreeRoot"/>
+			<Body _template="LyingBranch" ModelFrame="BoneBranch1" DamageMult="0.0">
+				<Constraint _template="BranchSoft"/>
+			</Body>
+			<Body _template="LyingTrunk" ModelFrame="BoneEnd" DamageMult="0.3">
+				<Constraint _template="BranchHard"/>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<WinchSocket Pos="(-2.3; 0.1; 0.054)" ParentFrame="BoneRoot" />
+	</GameData>	
+</PlantBrand>

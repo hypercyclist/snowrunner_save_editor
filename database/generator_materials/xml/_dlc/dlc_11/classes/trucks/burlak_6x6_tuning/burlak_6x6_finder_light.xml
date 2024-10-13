@@ -1,0 +1,26 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_finder_light" />
+	<ModelAttachments>
+		<HeadLight>
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.35" Pos="(1.951; 3.475; 0)" />
+			<Model _template="HeadLightRay" Org="(1.951; 3.475; 0)" />
+		</HeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SEARCHLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SEARCHLIGHT_NAME"
+		/>
+		<InstallSocket Type="BurlakFinderLight" />
+	</GameData>
+</TruckAddon>

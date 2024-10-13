@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_POTATO_GMO_NAME"
+		UiDesc="UI_CARGO_POTATO_GMO_DESC"
+		UiIcon20x20="cargoTypePotato20"
+		UiIcon40x40="cargoTypePotato40"
+		UiIcon100x100="cargoTypePotato"
+	/>
+</CargoType>

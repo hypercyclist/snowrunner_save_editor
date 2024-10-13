@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dolphin_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/boar_45318_stuff/stuff_hood_dolphin_boar_45318" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodBoar45318" />
+	</GameData>
+</TruckAddon>

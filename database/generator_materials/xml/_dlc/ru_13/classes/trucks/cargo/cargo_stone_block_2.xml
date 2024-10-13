@@ -1,0 +1,24 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_stone_block_2">
+		<NetSync Legacy="false" />
+		<Body Mass="3500">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="3500" ModelFrame="BoneCargo_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_concrete_blocks"
+			TransportedSound="load/concrete_blocks/concrete_blocks_rnd"
+			ManualSound="cargo_manual/cargo_manual_concrete_blocks"
+		/>
+		<InstallSlot
+			CargoLength="2"
+			CargoType="CargoStoneBlock"
+			CargoValue="1"
+			Offset="(2.5; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

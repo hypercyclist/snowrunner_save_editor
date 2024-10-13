@@ -1,0 +1,95 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<StaticLights>
+		<StaticLight
+			Dir="(0; -0.707; 0.707)"
+			Pos="(33.638; 8.515; 10.200)"
+			AttenEnd="18"
+			Color="g(230; 254; 255) x 4"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="60"
+			Shadows="true"
+		/>
+		<StaticLight
+			Dir="(0; -0.707; 0.707)"
+			Pos="(31.177; 8.515; 10.200)"
+			AttenEnd="18"
+			Color="g(230; 254; 255) x 4"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="60"
+			Shadows="true"
+		/>
+		<StaticLight
+			Dir="(0; -0.707; 0.707)"
+			Pos="(28.61; 8.515; 10.200)"
+			AttenEnd="18"
+			Color="g(230; 254; 255) x 4"
+			CreateSuperLight="true"
+			InnerCone="0"
+			OuterCone="60"
+			Shadows="true"
+		/>
+
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(26.521; 4.173; 9.166)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(34.952; 4.173; -20.24)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(42.586; 4.173; -20.24)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(47.047; 4.173; -5.831)"
+			Shadows="true"
+		/>
+		<StaticLight
+			AttenEnd="5"
+			Color="g(246; 242; 209) x 2"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0)"
+			InnerCone="0"
+			OuterCone="45"
+			Pos="(35.744; 4.173; 9.166)"
+			Shadows="true"
+		/>
+	</StaticLights>
+
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/tatra_station_lmk" />
+</ModelBrand>

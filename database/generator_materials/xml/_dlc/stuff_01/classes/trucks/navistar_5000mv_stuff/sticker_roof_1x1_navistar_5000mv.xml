@@ -1,0 +1,14 @@
+<_parent File="sticker_roof_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/navistar_5000mv_stuff/sticker_roof_1x1_navistar_5000mv">
+		<Body Collisions="None" Mass="0.1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Navistar5000MvSticker_Roof" />
+	</GameData>
+</TruckAddon>

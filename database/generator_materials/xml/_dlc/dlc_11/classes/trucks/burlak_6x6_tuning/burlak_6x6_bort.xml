@@ -1,0 +1,42 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData RepairsCapacity="120"/>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_bort" >
+		<Body Mass="220" ModelFrame="BoneBurlakBort_cdt" ImpactType="Truck">
+				<Constraint Type="Fixed"/>
+			</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; -1.182)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>			
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; -1.1)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>			
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; -1.018)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>
+
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; 1.182)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>			
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; 1.1)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>			
+			<Flare _template="IgnitionSignalWhite" Color="g(245; 35; 35) x 0.3" Size="0.2" Pos="(-3.185; 2.013; 1.018)" ColorMultAtDay="0.1" Dir="(-1; 0; 0)"  ParentFrame="BoneBurlakBort_cdt"/>
+		</Ignition>
+		<HeadLight>
+			<Light _template="ReverseSignal" Color="(255; 235; 215)" Dir="(-1; -0.13; 0)" Pos="(-0.697; 3.212; 0.887)" ParentFrame="BoneChassis_cdt" />
+			<Light _template="ReverseSignal" Color="(255; 235; 215)" Dir="(-1; -0.13; 0)" Pos="(-0.697; 3.212; -0.887)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" ColorMultAtDay="0.3" Dir="(-1; 0; 0)" DirAngle="180" Size="0.35" Pos="(-0.697; 3.212; 0.887)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 215) x 0.5" ColorMultAtDay="0.3" Dir="(-1; 0; 0)" DirAngle="180" Size="0.35" Pos="(-0.697; 3.212; -0.887)" ParentFrame="BoneChassis_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="addon_1"
+		Category="frame_addons"
+		Price="1900"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_ADDON_FRAME_FLATBED_2_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_ADDON_FRAME_FLATBED_2_NAME"
+		/>
+		<AddonSlots InitialOffset="(-1.88; 2.055; 0.0)" OffsetStep="(-3.198; 0; 0)" Quantity="1" />
+		<InstallSocket Type="BurlakBort" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,25 @@
+<_templates>
+	<Body>
+		<box_01a_us14
+			Collisions="Dynamic"
+			Mass="20"
+			NoSoftContacts="False"
+			ModelFrame="BoneRoot"
+		>
+			<Constraint Type="Fixed" BreakOffThreshold="100" />
+		</box_01a_us14>
+	</Body>
+</_templates>
+<ModelBrand 
+	Instanced="true"  
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body _template="box_01a_us14" ModelFrame="BoneRoot" >
+			<Body _template="box_01a_us14" ModelFrame="Bone.001" />
+			<Body _template="box_01a_us14" ModelFrame="Bone.002" />
+			<Body _template="box_01a_us14" ModelFrame="Bone.003" />
+			<Body _template="box_01a_us14" ModelFrame="Bone.004" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,12 @@
+<_templates Include="models" />
+<ModelBrand
+	Instanced="True"
+	NightLightingShadowsAllowCap="True"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="130" NoSoftContacts="true" ModelFrame="BoneRoot_cdt">
+			<Constraint BreakOffThreshold="8000" Type="Fixed"/>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/banner_factory_08a_lmk" />
+</ModelBrand>

@@ -1,0 +1,12 @@
+<ModelBrand
+Instanced="true"
+InstancedAsModel="true"
+NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/rus_city_building_1_ru13_lmk" />
+</ModelBrand>

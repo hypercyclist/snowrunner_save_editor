@@ -1,0 +1,13 @@
+<_templates Include="environment" />
+<PlantBrand
+	DisableShadows="true"
+	DistSkipPercentage="0.4"
+	LocalYOcclusionOffset="0.1"
+	PlantingGroups="Flower"
+	PlantingMinSpacing="0.2"
+	PlantingMaxWaterFlow="0.2"
+	IsEraseSnow="true"
+>
+	
+	
+</PlantBrand>

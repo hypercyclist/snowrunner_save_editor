@@ -40,5 +40,22 @@
 				<UiDesc UiDesc="UI_RIM_HEAVY_MUDTIRES_SINGLE_2_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_2_NAME" />
 			</GameData>
 		</TruckRim>
+
+		<!-- New Rims -->
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_10_3" Name="JAT MHS I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_10_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_13_3" Name="JAT MHS III">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_12_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_mudtires_11_3" Name="JAT MHS II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_MUDTIRES_SINGLE_11_NAME" />
+			</GameData>
+		</TruckRim>
 	</TruckRims>
 </TruckWheels>

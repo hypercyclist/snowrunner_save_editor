@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(44.0; 24.0)" 
+		Texture="occlusion_rail_station_01.tga"
+	/>
+	<Landmark Mesh="landmarks/rail_station_01_lmk" />
+</ModelBrand>

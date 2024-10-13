@@ -1,0 +1,108 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="1.0" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_bumper_default">
+		<Body ImpactType="Truck" Mass="20" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Mass="1" ModelFrame="BoneHook_cdt" Collisions="None">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-80"
+					MaxLimit="20"
+				>
+					<Motor Damping="0.001" Spring="0.05" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<HeadLight>		
+			<!-- up row -->
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.404)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.378)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.351)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.325)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.298)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.272)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.246)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.22)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.194)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.168)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.142)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.116)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.09)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.064)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; 0.012)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.014)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.04)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.066)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.118)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.144)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.17)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.196)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.222)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.248)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.275)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.301)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.327)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.353)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.379)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.729; -0.405)" ParentFrame="BoneChassis_cdt" />
+			<!-- donw row -->
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.404)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.378)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.351)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.325)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.298)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.272)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.246)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.22)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.194)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.168)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.142)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.116)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.09)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.064)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.038)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; 0.012)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.014)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.04)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.066)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.092)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.118)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.144)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.17)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.196)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.222)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.248)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.275)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.301)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.327)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.353)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.379)" ParentFrame="BoneChassis_cdt" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.4" Size="0.05" Pos="(3.296; 1.702; -0.405)" ParentFrame="BoneChassis_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_STOCK_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_STOCK_NAME"
+		/>
+		<InstallSocket Type="BurlakBumper" />
+	</GameData>
+</TruckAddon>

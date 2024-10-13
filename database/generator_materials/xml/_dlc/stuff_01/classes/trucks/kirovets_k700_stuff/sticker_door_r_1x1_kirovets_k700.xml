@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kirovets_k700_stuff/sticker_door_r_1x1_kirovets_k700" />
+	<GameData>
+		<InstallSocket Type="KirovetsK700Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

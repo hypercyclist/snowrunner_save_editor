@@ -1,0 +1,140 @@
+<_templates Include="trucks">
+	<Body>
+		<Limits Collisions="None">
+			<Constraint
+				LinearLimitsX="(-0.01;0.01)"
+				LinearLimitsY="(0;0.01)"
+				LinearLimitsZ="(0;0)"
+				Type="Fixed"
+			>
+				<Motor Damping="10" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0.0" />
+	</WheelRepairsHide>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<TruckData
+		FuelCapacity="130"
+		RepairsCapacity="150"
+		WheelRepairsCapacity="1"
+	>
+		<LimitedFluid Center="(-1.661; 2.166; 0.532)" SizeX="0.416" SizeY="0.160" SizeZ="0.326" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		<LimitedFluid Center="(-1.654; 2.166; 0.178)" SizeX="0.416" SizeY="0.160" SizeZ="0.326" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		<LimitedFluid Center="(-1.661; 2.166; -0.171)" SizeX="0.416" SizeY="0.160" SizeZ="0.326" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		<LimitedFluid Center="(-1.654; 2.166; -0.521)" SizeX="0.416" SizeY="0.160" SizeZ="0.326" Type="Box" ParentFrame="BoneFuel3_cdt"/>
+		
+		<LimitedFluid Center="(-1.185; 2.166; -0.486)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+		<LimitedFluid Center="(-0.836; 2.166; -0.487)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel2_cdt"/>
+
+		<LimitedFluid Center="(-0.374; 2.166; 0.492)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+		<LimitedFluid Center="(-0.017; 2.166; 0.490)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel1_cdt"/>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_roofrack">
+		<Body ImpactType="Truck" Mass="60" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="40"
+				ModelFrame="BoneFuel1_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.030"
+					MaxLimit="0.004"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="40"
+				ModelFrame="BoneFuel2_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.024"
+					MaxLimit="0.005"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="80"
+				ModelFrame="BoneFuel3_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.014"
+				>
+					<Motor Damping="2000" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			
+			<Body Collisions="None" Mass="50" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.01"
+					MaxLimit="0.026"
+				>
+					<Motor Damping="2100" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body
+				_template="Limits"
+				Mass="50"
+				ModelFrame="BoneWheel_cdt"
+			>
+				<Constraint LinearLimitsX="(-0.01;0)" />
+			</Body>
+			<Body
+				CenterOfMassOffset="(0; 0; 0)"
+				Collisions="None"
+				Mass="5"
+				ModelFrame="BoneShovel_cdt"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-5"
+					MaxLimit="5"
+				>
+					<Motor Damping=".3" Spring=".3" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2700"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SCOUT_TRUNK_SUPPLIES_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SCOUT_TRUNK_SUPPLIES_NAME"
+		/>
+		<InstallSocket Type="MTB8106Roofrack" />
+	</GameData>
+</TruckAddon>

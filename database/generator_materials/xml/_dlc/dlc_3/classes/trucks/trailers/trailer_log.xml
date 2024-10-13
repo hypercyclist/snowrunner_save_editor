@@ -159,6 +159,10 @@
 		<WinchSocket Pos="(0.759; 0.961; 1.181)" ParentFrame="BoneFront_cdt" />
 		<WinchSocket Pos="(0.759; 0.961; -1.181)" ParentFrame="BoneFront_cdt" />
 		<WinchSocket WinchableWhenAttached="false" Pos="(5.433; 0.747; 0)" ParentFrame="BoneHandle_cdt" />
+		<CraneSocket Pos="(-3.333; 0.926; 0.574)" ParentFrame="BoneRear_cdt" />
+		<CraneSocket Pos="(-3.333; 0.926; -0.574)" ParentFrame="BoneRear_cdt" />
+		<CraneSocket Pos="(0.759; 0.961; 1.181)" ParentFrame="BoneFront_cdt" />
+		<CraneSocket Pos="(0.759; 0.961; -1.181)" ParentFrame="BoneFront_cdt" />
 		<UiDesc
 			UiDesc="UI_TRAILER_LOGTRAILER_DESC"
 			UiIcon30x30="loggingImg30"

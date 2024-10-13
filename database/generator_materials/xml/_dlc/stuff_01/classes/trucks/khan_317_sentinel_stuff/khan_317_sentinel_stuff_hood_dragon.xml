@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_dragon_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_stuff/khan_317_sentinel_stuff_hood_dragon" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="stuffHoodKhan317Sentinel" />
+	</GameData>
+</TruckAddon>

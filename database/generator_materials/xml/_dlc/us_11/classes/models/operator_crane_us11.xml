@@ -1,0 +1,11 @@
+<ModelBrand
+	Instanced="True"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="150" NoSoftContacts="true" ModelFrame="BoneRoot_cdt">
+			<Constraint BreakOffThreshold="100" Type="Fixed"/>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/operator_crane_us11_lmk"/>
+</ModelBrand>

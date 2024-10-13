@@ -1,0 +1,148 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.7" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_bumper_02">
+		<Body ImpactType="Truck" Mass="120">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Size="0.1" Pos="(7.047; 1.09; 0)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.79; 1.089; 0.94)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.82; 1.074; 0.795)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.719; 1.527; 1.144)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.79; 1.089; -0.94)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.82; 1.074; -0.795)" />
+			<Flare _template="IgnitionSignalWhite" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.35" Pos="(6.719; 1.527; -1.144)" />			
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(6.719; 1.527; 1.144)" />
+			<Model _template="HeadLightRay" Org="(6.719; 1.527; -1.144)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(6.719; 1.527; 1.144)"/>
+			<Flare _template="HeadLight" Color="g(255; 235; 215) x 1" Size="0.1" Pos="(6.719; 1.527; -1.144)"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.515; 0.845)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.519; 0.867)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.523; 0.889)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.527; 0.912)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.531; 0.934)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.535; 0.957)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.539; 0.979)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.542; 1)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.542; 1)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.546; 1.024)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.55; 1.046)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.702; 1.553; 1.069)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.49; 0.835)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.495; 0.857)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.499; 0.878)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.502; 0.902)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.506; 0.924)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.51; 0.947)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.514; 0.969)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.518; 0.99)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.522; 1.014)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.526; 1.036)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.704; 1.5307; 1.059)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.451; 0.822)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.456; 0.846)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.459; 0.8716)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.463; 0.8955)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.467; 0.9205)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.471; 0.945)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.476; 0.969)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.48; 0.9938)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.485; 1.018)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.489; 1.043)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.703; 1.494; 1.065)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.431; 0.811)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.432; 0.8354)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.436; 0.86)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.44; 0.8854)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.444; 0.91)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.448; 0.9353)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.453; 0.959)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.456; 0.9842)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.461; 1.011)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.466; 1.035)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.703; 1.471; 1.059)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.701; 1.475; 1.082)" SizeMultAtDay="1"/>
+			
+			
+			
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.515; -0.845)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.519; -0.867)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.523; -0.889)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.527; -0.912)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.531; -0.934)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.535; -0.957)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.539; -0.979)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.542; -1)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.546; -1.024)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.55; -1.046)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.702; 1.553; -1.069)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.49; -0.835)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.495; -0.857)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.499; -0.878)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.502; -0.902)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.506; -0.924)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.51; -0.947)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.514; -0.969)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.518; -0.99)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.522; -1.014)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.526; -1.036)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.704; 1.5307; -1.059)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.451; -0.822)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.456; -0.846)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.459; -0.8716)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.463; -0.8955)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.467; -0.9205)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.471; -0.945)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.476; -0.969)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.48; -0.9938)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.485; -1.018)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.489; -1.043)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.703; 1.494; -1.065)" SizeMultAtDay="1"/>
+			
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.734; 1.431; -0.811)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7322; 1.432; -0.8354)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.7286; 1.436; -0.86)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.725; 1.44; -0.8854)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.721; 1.444; -0.91)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.718; 1.448; -0.9353)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.716; 1.453; -0.959)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.713; 1.456; -0.9842)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.709; 1.461; -1.011)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.706; 1.466; -1.035)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.703; 1.471; -1.059)" SizeMultAtDay="1"/>
+			<Flare _template="HeadLight" Dir="(1; 0; 0)" Color="g(215; 215; 215) x 0.2" Size="0.05" Pos="(6.701; 1.475; -1.082)" SizeMultAtDay="1"/>
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(7.047; 1.09; 0)" />
+	<GameData
+		CameraPreset="default"
+		Category="bumper"
+		Price="1600"
+		UnlockByExploration="false"
+		UnlockByRank="10"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BUMPER_REBAR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BUMPER_REBAR_NAME"
+		/>
+		<InstallSocket Type="Femm37AtBumper" />
+	</GameData>
+</TruckAddon>

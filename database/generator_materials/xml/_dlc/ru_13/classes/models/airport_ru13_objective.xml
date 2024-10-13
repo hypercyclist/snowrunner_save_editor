@@ -1,0 +1,47 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start" />
+		<CdtMesh Name="cdt_mesh_start" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<CdtMesh Name="cdt_mesh_end" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_track_1" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_00"/>
+	    	<Mesh Name="animesh_01"/>
+		<CdtMesh Name="cdt_mesh_end"/>
+	</AnimSubset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start">
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	<TrackEvents TrackName="anim_track_1">
+		<AnimEvent Key="19">
+			<Sound Name="actors/actor_construction/actor_construct_airport_base" Range="200" Volume="1"/>
+		</AnimEvent>
+		<AnimEvent Key="20">
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(-9.717; -1.162; -0.11)"/>
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(-0.107; -1.162; -0.11)"/>
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(0.359; -1.162; 13.35)"/>
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(0.359; -1.162; -13.35)"/>
+		</AnimEvent>
+		<AnimEvent Key="88">
+           		<Fade Time="0.3" />
+       		</AnimEvent>
+		<AnimEvent Key="92" ForceDaytimePreset="true"/>
+		<AnimEvent Key="90">
+			<Sound Name="actors/actor_construction/actor_construct_airport_whoosh" Range="200" Volume="1"/>
+		</AnimEvent>
+		<AnimEvent Key="110">
+			<Sound Name="actors/actor_construction/actor_construct_airport_lights_on" Range="200" Volume="1"/>
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/airport_ru13_objective_lmk" />
+</ModelBrand>

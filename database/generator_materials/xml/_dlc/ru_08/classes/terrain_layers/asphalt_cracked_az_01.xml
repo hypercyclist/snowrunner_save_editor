@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/asphalt_cracked_az_01__d_a.tga" 
+	Normal="tiles/asphalt_cracked_az_01_relief__d_a.tga"
+	NoGrass="true"
+	IsExtrudable="false"
+	IsAsphalt="true"
+	WheelTracks="0"
+	Sound="surfaces/surf_concrete_rnd"
+	SkidSound="surfaces/skidding/skidding_concrete_loop"
+/>

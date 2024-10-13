@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_stuff/sticker_capote_1x1_khan_317_sentinel" />
+	<GameData>
+			<InstallSocket Type="khan317SentinelSticker_Capote" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,26 @@
+<_parent File="kenworth_w990_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustRight" MinAngle="(0.1; 0.1; 0.1)" MaxAngle="(0.25; 0.25; 0.25)" MaxFrequency="4.1" ParentFrame="BoneCabin_cdt" />
+			<Shaker Frame="BoneExhaustCapR"  LimitDirectionZ="Negative" MinAngle="(0; 0; 20)" MaxAngle="(0; 0; 47)" MaxFrequency="0.17" ParentFrame="BoneExhaustRight" />
+			<Shaker Frame="BoneExhaustCapL"  LimitDirectionZ="Negative" MinAngle="(0; 0; 20)" MaxAngle="(0; 0; 47)" MaxFrequency="0.16" ParentFrame="BoneExhaustLeft" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/kenworth_w990_tuning/kenworth_w990_exhaust_1"/>
+	<GameData
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_FLAPCAP_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_FLAPCAP_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(1.819; 3.657; -1.182)" Speed="3.82" />
+	<Exhaust Dir="(0; 1; 0)" IsLight="true" Origin="(1.819; 3.657; 1.182)" Speed="3.82" />
+</TruckAddon>

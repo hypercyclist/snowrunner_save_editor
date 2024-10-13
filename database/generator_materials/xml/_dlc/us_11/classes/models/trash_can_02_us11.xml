@@ -1,0 +1,11 @@
+<ModelBrand 
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+	InstancedAsModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(6.0; 10.0)" Texture="occlusion_trash_can_rus_01.tga" />
+	<Landmark Mesh="landmarks/trash_can_us11_lmk" />
+</ModelBrand>

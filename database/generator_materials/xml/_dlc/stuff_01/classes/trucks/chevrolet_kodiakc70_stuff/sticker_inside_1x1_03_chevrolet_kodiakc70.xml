@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/chevrolet_kodiakc70_stuff/sticker_inside_1x1_03_chevrolet_kodiakc70" />
+	<GameData CameraPreset="sticker">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket _noinherit="true" Type="ChevroletKodiakC70Sticker_1x1_03" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/ankatra_1160_stuff/stuff_hood_dragon_ankatra_1160" />
+	<GameData
+		CameraPreset="hood_figure"
+		Category="hood_ornament"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_DRAGON_NAME"
+		/>
+		<InstallSocket Type="StuffHoodAnkatra1160" />
+	</GameData>
+</TruckAddon>

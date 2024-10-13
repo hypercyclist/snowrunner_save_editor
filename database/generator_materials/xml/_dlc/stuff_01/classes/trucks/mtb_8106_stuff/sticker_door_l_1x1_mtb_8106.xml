@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_stuff/sticker_door_l_1x1_mtb_8106" />
+	<GameData CameraPreset="door_l_sticker">
+		<InstallSocket Type="MTB8106Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,573 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="0"
+			SteeringJointOffset="0.08"
+			Torque="default"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Flare>
+		<ReverseSignal
+			AspectRatio="1.4"
+			Color="g(255; 255; 255) x 0.4"
+			ColorMultAtDay="0.6"
+			Dir="(-1; 0; 0)"
+			DirAngle="90"
+			Reflections="true"
+			Size="0.01"
+		/>
+	</Flare>
+	<Body>
+		<Mudguard Collisions="None" Mass="10">
+			<Constraint Type="Hinge">
+				<Motor Damping="1" Spring="10" Type="Spring" />
+			</Constraint>
+		</Mudguard>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.03"
+		DiffLockType="Always"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.3"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0.9"
+		FuelCapacity="330"
+		Responsiveness="0.15"
+		SteerSpeed="0.03"
+		TruckImage="Tayga6436mchr"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_6"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_heavy_double1"
+		>
+			<Wheel _template="FrontWheel" Pos="(2.801; 0.615; 1.060)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(2.801; 0.615; 1.060)" />
+			<Wheel _template="RearWheel" Pos="(-1.789; 0.615; 1.060)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-1.789; 0.615; 1.060)" />
+			<Wheel _template="RearWheel" Pos="(-3.207; 0.615; 1.060)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.207; 0.615; 1.060)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="tayga_6436_suspension_default"
+			Type="s_tayga_6436"
+			MaxWheelRadiusWithoutSuspension="0.5"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.88"
+		/>
+		<Steam Origin="(0.23; 1.307; 0)" />
+		<Steam Origin="(2.674; 1.307; 0)" Scale="0.5" ParentFrame="BoneCabinDamper_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="false"
+			MinDist="10.0"
+			Origin="(2.86; 1.64; 0)"
+			ParentFrame="BoneCabinDamper_cdt"
+		>
+			<Reverse		Sound="" />
+			<EngineTrans	Sound="" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<BrakesSqueal	Sound="trucks/tayga_6436/tayga_6436_brakes_squeal" />
+			<Handbrake		Sound="trucks/tayga_6436/tayga_6436_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/tayga_6436/tayga_6436_handbrake_off" />
+			<Honk			Sound="trucks/tayga_6436/tayga_6436_honk" />
+			<EngineRev		Sound="trucks/tayga_6436/tayga_6436_rev" />
+			<EngineAccel	Sound="trucks/tayga_6436/tayga_6436_rev" />
+			<EngineStart	Sound="trucks/tayga_6436/tayga_6436_start" />
+			<EngineStop		Sound="trucks/tayga_6436/tayga_6436_stop" />
+			<EngineIdle		Sound="trucks/tayga_6436/tayga_6436_idle" />
+			<EngineIdle_2d	Sound="trucks/tayga_6436/tayga_6436_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/tayga_6436/tayga_6436_low" />
+			<EngineLow_2d	Sound="trucks/tayga_6436/tayga_6436_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/tayga_6436/tayga_6436_high" />
+			<EngineHigh_2d	Sound="trucks/tayga_6436/tayga_6436_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/tayga_6436/tayga_6436_heavy" />
+			<EngineHeavy_2d	Sound="trucks/tayga_6436/tayga_6436_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+			<Shaft SocketPointA="Shaft3a" SocketPointB="Shaft3b" />
+			<Shaft SocketPointA="Shaft4a" SocketPointB="Shaft4b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2.1" MinX="-5" MaxX="4.7" />
+		<LimitedFluid Center="(0.216; 0.911; -0.898)" SizeX="1.38" SizeY="0.6" SizeZ="0.67" Type="Box" />
+		<LimitedFluid Center="(0.455; 0.911; 0.898)" SizeX="0.91" SizeY="0.6" SizeZ="0.67" Type="Box" />
+		<Intake Dir="(1; 0; 0)" Origin="(3.986; 1.624; 0)" Size="1.219" />
+		<GearboxSocket Default="g_truck_default" Type="gearboxes_trucks" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="ru_truck_old_heavy_engine_0" Type="e_ru_truck_old_heavy" />
+		<Driver
+			AnimationSet="HeavyTruck"
+			Pos="(1.35; 1.858; 0.449)"
+			SteeringWheelPos="(1.736; 2.203; 0.45)"
+			ParentFrame="BoneSeat_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.9995" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tayga_6436_arrow_03" Org="(1.921; 2.182; 0.644)" OutputAngles="(-50;10)" />
+			<Gauge Damping="0.99" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tayga_6436_arrow_03" Org="(1.86; 2.089; 0.613)" OutputAngles="(-60;0)" />
+			<Gauge Damping="0.9" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/tayga_6436_arrow_02" Org="(1.928; 2.194; 0.519)" OutputAngles="(-90;90)" />
+			<Gauge Damping="0.9" Dir="(-0.84; 0.542; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/tayga_6436_arrow_02" Org="(1.928; 2.194; 0.384)" OutputAngles="(-135;135)" />
+			<Gauge Damping="0.9" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/tayga_6436_arrow_03" Org="(1.92; 2.182; 0.266)" OutputAngles="(-50;50)" />
+			<Gauge Damping="0.9" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tayga_6436_arrow_03" Org="(1.861; 2.090; 0.293)" OutputAngles="(-50;0)" />
+			<Gauge Damping="0.9" Dir="(-0.84; 0.542; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/tayga_6436_arrow_01" Org="(1.869; 2.101; 0.025)" OutputAngles="(-120;20)" />
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2; 0.9; -0.6)" Max="(4; 2.3; 0.6)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.5; 0.5; -1.3)" Max="(0.95; 1.3; 1.3)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.06" RearOffsetZ="-0.02" Scale="0.6" Type="wheels_heavy_double1" />
+		<CompatibleWheels RearOffsetZ="-0.02" Scale="0.6" Type="wheels_heavy_double2" />
+		<CompatibleWheels Scale="0.6" RearOffsetZ="-0.12" Type="wheels_heavy_single" />
+		<CompatibleWheels Scale="0.6" Type="wheels_heavy_single2" />
+		<CompatibleWheels Scale="0.6" Type="wheels_heavy_mudtires_tayga" />
+		<CompatibleWheels OffsetZ="0.06" RearOffsetZ="0.08" Scale="0.65" Type="wheels_heavy_double1" />
+		<CompatibleWheels RearOffsetZ="0.08" Scale="0.65" Type="wheels_heavy_double2" />
+		<CompatibleWheels Scale="0.65" RearOffsetZ="-0.12" Type="wheels_heavy_single" />
+		<CompatibleWheels Scale="0.65" Type="wheels_heavy_single2" />
+		<CompatibleWheels Scale="0.65" Type="wheels_heavy_mudtires_tayga" />
+
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.02" Scale="0.6" Type="wheels_heavy_highway_double" />
+		<CompatibleWheels RearOffsetZ="-0.02" Scale="0.6" Type="wheels_heavy_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="-0.02" Scale="0.6" Type="wheels_heavy_allterrain_double" />
+
+		<CompatibleWheels Scale="0.6" RearOffsetZ="-0.12" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels Scale="0.6" RearOffsetZ="-0.12" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels Scale="0.6" RearOffsetZ="-0.12" Type="wheels_heavy_mudtires_single2" />
+
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="0.08" Scale="0.65" Type="wheels_heavy_highway_double" />
+		<CompatibleWheels RearOffsetZ="0.08" Scale="0.65" Type="wheels_heavy_offroad_double" />
+		<CompatibleWheels OffsetZ="0.1" RearOffsetZ="0.08" Scale="0.65" Type="wheels_heavy_allterrain_double" />
+
+		<CompatibleWheels Scale="0.65" RearOffsetZ="-0.12" Type="wheels_heavy_offroad_single" />
+		<CompatibleWheels Scale="0.65" RearOffsetZ="-0.12" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels Scale="0.65" RearOffsetZ="-0.12" Type="wheels_heavy_mudtires_single2" />
+
+		<Camera Center="(-1.7; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/tayga_6436_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/tayga_6436_glass__sh_d.tga"
+				ViewPos="(1.254; 2.6; 0.45)"
+			>
+				<Mirror ClipDir="(-0.927; 0; -0.375)" ClipOffset="0.1" FOVScale="2" MeshFrame="mirror_left" ReflectionDir="(-0.927; 0; -0.375)" Size="(0.229; 0.425)" Pos="(1.93; 2.495; 1.352)" />
+				<Mirror ClipDir="(-0.848; 0; 0.530)" ClipOffset="0.1" FOVScale="2" MeshFrame="mirror_right" ReflectionDir="(-0.848; 0; 0.530)" Size="(0.229; 0.425)" Pos="(1.941; 2.495; -1.347)" />
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/tayga_6436">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.3; 0; 0)"
+			ImpactType="Truck"
+			Mass="5000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(-0.5; 0; 0)"
+				ImpactType="Truck"
+				Mass="4000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-22"
+					MaxLimit="22"
+				>
+					<Motor Damping=".001" Spring="600000" Type="Spring" />
+				</Constraint>
+				<Body ImpactType="Truck" Mass="2000" ModelFrame="BoneCabinDamper_cdt">
+					<Constraint
+						Cone="4.5"
+						PlaneAxisLocal="(0; 0; 1)"
+						TwistAxisLocal="(0; 1; 0)"
+						Type="Ragdoll"
+						PlaneMin="-3"
+						PlaneMax="3"
+					>
+						<PlaneMotor Damping="1500000" Spring="3000000" Type="Spring" />
+						<ConeMotor Damping="700000" Spring="1500000" Type="Spring" />
+					</Constraint>
+					<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+					</Body>
+					<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" MinLimit="-20" MaxLimit="30" />
+					</Body>
+					<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt">
+						<Constraint AxisLocal="(0; 1; 0)" />
+					</Body>
+					<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt">
+						<Constraint AxisLocal="(0; 1; 0)" />
+					</Body>
+					<Body Mass="0.2" ModelFrame="BoneKeyRing_cdt">
+						<Constraint
+							Cone="15"
+							PlaneAxisLocal="(-1; 0; 0)"
+							TwistAxisLocal="(0; 1; 0)"
+							Type="Ragdoll"
+							PlaneMin="-15"
+							PlaneMax="5"
+						>
+							<PlaneMotor Damping="1" Spring="0" Type="Spring" />
+							<ConeMotor Damping="1" Spring="0" Type="Spring" />
+						</Constraint>
+						<Body Mass="0.3" ModelFrame="BoneKeyChain_cdt">
+							<Constraint
+								Cone="30"
+								PlaneAxisLocal="(-1; 0; 0)"
+								TwistAxisLocal="(0; 1; 0)"
+								Type="Ragdoll"
+								PlaneMin="-30"
+								PlaneMax="30"
+							>
+								<PlaneMotor Damping="1" Spring="0" Type="Spring" />
+								<ConeMotor Damping="1" Spring="0" Type="Spring" />
+							</Constraint>
+						</Body>
+					</Body>
+					<Body Mass="100" ModelFrame="BoneSeat_cdt">
+						<Constraint
+							AxisLocal="(0; 1; 0)"
+							Type="Prismatic"
+							MinLimit="-0.2"
+							MaxLimit="0.1"
+						>
+							<Motor Damping="10000" Spring="200000" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+				<Body _template="TieRod" ModelFrame="BoneTieRod_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Name="TieRodSteer"
+						MinLimit="-25"
+						MaxLimit="25"
+					/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(2.227; 2.905; 0.005)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(2.227; 2.905; 0.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Dir="(1; 0; 0)" Pos="(2.227; 2.905; -0.114)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(167; 153; 138) x 0.7" Dir="(1; 0; 0)" Size="0.12" Pos="(2.108; 2.888; 0.826)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" Color="g(167; 153; 138) x 0.7" Dir="(1; 0; 0)" Size="0.12" Pos="(2.108; 2.888; -0.826)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/tayga_6436_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(5; 1.131; 0)" />
+	<GameData
+		Country="RU,CAS"
+		Price="57100"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.045; 1.064; -0.444)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(4.045; 1.064; 0.444)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-4.197; 1.064; 0)" />
+		<WinchSocket Pos="(-0.728; 1.064; -0.445)" />
+		<WinchSocket Pos="(-0.728; 1.064; 0.445)" />
+		<UiDesc
+			UiDesc="UI_VEHICLE_TAYGA_6436_DESC"
+			UiIcon30x30="offroadVehicleImg30"
+			UiIcon328x458="shopImgTayga6436"
+			UiIcon40x40="offroadVehicleImg"
+			UiIconLogo="TaygaLogo80"
+			UiName="UI_VEHICLE_TAYGA_6436_NAME"
+		/>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(2.574; 0.363; -0.12)" Position="(7.518; 6.659; -0.663)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(0.697; 1.869; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.265; 3.31; 8.244)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(4.777; 1.589; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.811; 3.681; 4.794)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(6.729; 2.666; -0.34)" Position="(4.147; 2.501; -0.111)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.764; 1.97; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-0.226; 4.969; -4.508)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.729; 1.044; 1.759)" Position="(4.199; 2.517; -0.369)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(6.729; 1.845; 0.266)" Position="(4.38; 2.452; -0.529)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(4.252; 2.181; -0.988)" Position="(8.71; 3.42; 1.018)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(6.426; 0.918; 0)" Position="(3.929; 2.715; 3.395)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.584; 1.615; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.203; 3.854; 5.047)" />
+			<CameraPos FOV="32.0" Interior="true" Name="capote_sticker" InterestPosition="(4.348; 0.1; 0.007)" Position="(8.161; 4.17; -0.723)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.275; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(4.737; 2.557; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.507; 4.376; -3.37)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(6.729; 2.108; 1.201)" Position="(4.573; 2.407; -0.249)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(2.46; 1.133; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.539; 1.488; -5.755)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.275; 1.623; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(12.823; 1.44; -4.73)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.733; 0.896; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-4.606; 3.102; 2.778)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(4.595; 1.16; 0)" Position="(3.968; 2.793; -3.391)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_ornament" InterestPosition="(7.506; 2.039; -1.174)" Position="(8.557; 2.355; -1.174)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(6.729; 2.666; -0.34)" Position="(4.147; 2.501; -0.111)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.045; 1.064; -0.444)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(4.045; 1.064; 0.444)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-4.197; 1.064; 0)" />
+		<CraneSocket Pos="(-0.728; 1.064; -0.445)" />
+		<CraneSocket Pos="(-0.728; 1.064; 0.445)" />
+		<AddonSockets>
+			<Socket Names="LargeSemitrailer" Offset="(-2; 1.75; 0)" />
+			<Socket Names="LargeSemitrailerOiltank" Offset="(-2; 1.75; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="LargeSemitrailerOiltank" Types="MinicraneRU, Tayga6436WheelAddon" />
+			</Socket>
+			<Socket Names="SemitrailerOiltank" Offset="(-2.5; 1.53; 0)">
+				<AddonsShift Offset="(0; 0; 0)" TrailerNamesBlock="SemitrailerOiltank" Types="MinicraneRU, Tayga6436WheelAddon" />
+			</Socket>
+			<Socket Names="Semitrailer" Offset="(-2.5; 1.58; 0)" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-4.23; 1.060; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="BunkLog" Offset="(-5.958; 1.249; 0)" />
+			<Socket Names="FrameAddonLogShort" NamesBlock="MinicraneRU, Tayga6436WheelAddon, Trailer, LogTrailer" Offset="(-1.97; 1.244; 0)" />
+			<Socket Names="SaddleLow" Offset="(-2.5; 1.245; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.04)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.04)" />
+			</Socket>
+			<Socket Names="SaddleHigh" Offset="(-2; 1.245; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.085)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.085)" />
+			</Socket>
+			<Socket Names="FrameAddon" Offset="(-2; 1.344; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+				<AddonsShift Offset="(-1.12; 0; 0)" Types="MinicraneRU" />
+				<AddonsShift Offset="(-0.530; 0; 0)" Types="Tayga6436WheelAddon" />
+			</Socket>
+			<Socket Names="FrameAddonKung" Offset="(-2.100; 1.32; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.11)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.11)" />
+			</Socket>
+			<Socket Names="FrameAddonTank" Offset="(-3.1; 1.244; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonSeismicVibrator" NamesBlock="Trailer, LogTrailer" Offset="(0.378; 1.244; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket
+				Names="BigCraneRu"
+				NamesBlock="MinicraneRU, Tayga6436WheelAddon, Trailer, LogTrailer"
+				Offset="(-3.152; 1.348; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MinicraneRU" NamesBlock="BunkLog, FrameAddon, FrameAddonTank, FrameAddonKung, FrameAddonSeismicVibrator" Offset="(-0.23; 1.243; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.02)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.02)" />
+				<AddonsShift Offset="(-0.42; 0; 0)" Types="Tayga6436WheelAddon" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="Tayga6436WheelAddon"
+				NamesBlock="FrameAddonKung, FrameAddonSeismicVibrator, FrameAddonTank"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneChassis_cdt"
+			>
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tayga_6436_bumper_default">
+			<Socket Names="Tayga6436Bumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tayga_6436_exhaust_default">
+			<Socket Names="Tayga6436ExhaustDefault" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+			<Socket Names="Tayga6436Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets DefaultAddon="tayga_6436_fender_default">
+			<Socket Names="Tayga6436Fender" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436Horn" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="Tayga6436SpotLight"
+				NamesBlock="Tayga6436AirConditioner"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinDamper_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				Names="Tayga6436SpotLight2"
+				NamesBlock="Tayga6436SpotLight, Tayga6436Beacon"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinDamper_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436Beacon" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436Visor" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436AirConditioner" Offset="(0.18; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436Gabarite" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Tayga6436Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(2.166; 2.299; 0.049)"
+				ParentFrame="BoneCabinDamper_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x1_01" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x1_02" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x1_03" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x1_04" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x2_01" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_1x2_02" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_GlassTop" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="tayga6436Sticker_GlassBottom" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tayga6436Sticker_Door_L" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tayga6436Sticker_Door_R" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tayga6436Sticker_Roof" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="tayga6436Sticker_Capote" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(1.992; 2.763; 0.744)"
+				ParentFrame="BoneCabinDamper_cdt"
+			>
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+			<Socket InCockpit="true" Names="StuffCurtainTayga6436" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodTayga6436" ParentFrame="BoneCabinDamper_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHornsSmall" NamesBlock="StuffHoodTayga6436" Offset="(3.943; 2.030; 0)" ParentFrame="BoneCabinDamper_cdt" />
+		</AddonSockets>
+	</GameData>
+	<ControlledConstraints>
+		<Constraint Id="chassis_steer" IsLinkedSteering="true" Name="TieRodSteer" />
+	</ControlledConstraints>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneTieRodHinge2" ParentFrame="BoneTieRod_cdt">
+			<IKJoint AxisLocal="(1; 0; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackLeft"
+				ModelFrame="BoneTieRodPrismatic"
+			>
+				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

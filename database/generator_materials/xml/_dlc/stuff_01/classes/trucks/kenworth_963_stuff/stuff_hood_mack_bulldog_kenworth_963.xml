@@ -1,0 +1,18 @@
+<_parent File="stuff_hood_bulldog_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kenworth_963_stuff/stuff_hood_mack_bulldog_kenworth_963"/>
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_BULLDOG_KING_NAME"
+		/>
+		<InstallSocket Type="StuffHoodKenworth963" />
+	</GameData>
+</TruckAddon>

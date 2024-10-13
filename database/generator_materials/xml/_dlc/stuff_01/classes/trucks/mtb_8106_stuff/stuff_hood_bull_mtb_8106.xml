@@ -1,0 +1,12 @@
+<_parent File="stuff_hood_bull_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_stuff/stuff_hood_bull_mtb_8106" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		CameraPreset="hood_figure"
+	>
+		<InstallSocket Type="StuffHoodMTB8106" />
+	</GameData>
+</TruckAddon>

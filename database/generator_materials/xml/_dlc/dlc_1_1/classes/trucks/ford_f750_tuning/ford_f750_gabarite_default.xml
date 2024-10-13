@@ -15,9 +15,9 @@
 	<ModelAttachments>
 		<Ignition>
 			<Flare _template="Beacon" Pos="(2.086; 2.24; -0.572)" />
-			<Flare _template="Beacon" Pos="(2.107; 2.245; -0.291)" />
-			<Flare _template="Beacon" Pos="(2.112; 2.247; 0)" />
-			<Flare _template="Beacon" Pos="(2.107; 2.245; 0.291)" />
+			<Flare _template="Beacon" Pos="(2.107; 2.26; -0.291)" />
+			<Flare _template="Beacon" Pos="(2.112; 2.26; 0)" />
+			<Flare _template="Beacon" Pos="(2.107; 2.26; 0.291)" />
 			<Flare _template="Beacon" Pos="(2.086; 2.24; 0.572)" />
 		</Ignition>
 	</ModelAttachments>

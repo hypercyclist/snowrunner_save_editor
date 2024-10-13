@@ -1,0 +1,17 @@
+<OverlayBrand
+	GenerateDust="true"
+	Texture="overlays/snow_road_large__d_a.tga"
+	TextureRelief="overlays/snow_road_large_relief__d_a.tga"
+	IsWetnessAsIce="true"
+	IsSnow="true"
+>
+	<Prebuild
+		DefaultWidth="5"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_dirt_road__s.tga"
+		SnowmapMask="overlay_snow_road_large__s_d.tga"
+		LandmarkColor="(100; 90; 80)"
+		LandmarkPart="0.8"
+		Layer="2"
+	/>
+</OverlayBrand>

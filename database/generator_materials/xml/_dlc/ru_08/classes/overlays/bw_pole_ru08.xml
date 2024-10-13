@@ -1,0 +1,3 @@
+<OverlayBrand IsNotStaticSoil="true" WithTailOffset="false">
+	<Prebuild OverlayType="GeometricConform" />
+</OverlayBrand>

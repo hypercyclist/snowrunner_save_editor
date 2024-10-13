@@ -1,0 +1,11 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(18.0; 14.0)" Texture="occlusion_rus_garage_06.tga" />
+	<Landmark Mesh="landmarks/rus_garage_06_lmk" />
+</ModelBrand>

@@ -1,0 +1,30 @@
+<TruckAddon _noinherit="true">
+	<PhysicsModel Mesh="trucks/cargo/cargo_ironroad_1">
+		<NetSync Legacy="false" />
+		<Body Mass="2500" ModelFrame="BoneRoot_cdt">
+			<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			<Body Mass="2500" ModelFrame="BoneCargo_container_1_cdt">
+				<Constraint ExplicitParentFrame="1" Type="Fixed" />
+				<Body Mass="2500" ModelFrame="BoneCargo_container_2_cdt">
+					<Constraint ExplicitParentFrame="2" Type="Fixed" />
+					<Body Mass="2500" ModelFrame="BoneCargo_container_3_cdt">
+						<Constraint ExplicitParentFrame="3" Type="Fixed" />
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<Sounds
+			InstallSound="cargo_manual/cargo_manual_railway_block"
+			TransportedSound="load/container_large/cargo_manual_pipe_large"
+			ManualSound="cargo_manual/cargo_manual_railway_block"
+		/>
+		<InstallSlot
+			CargoLength="4"
+			CargoType="CargoIronRoad"
+			CargoValue="1"
+			Offset="(3.878; 0; 0)"
+		/>
+	</GameData>
+</TruckAddon>

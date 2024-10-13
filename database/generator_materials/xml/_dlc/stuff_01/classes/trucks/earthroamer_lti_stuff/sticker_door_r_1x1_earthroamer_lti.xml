@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_lti_stuff/sticker_door_r_1x1_earthroamer_lti" />
+	<GameData CameraPreset="side_r_sticker">
+		<InstallSocket Type="EarthroamerLtiSticker_Door_R" />
+	</GameData>
+</TruckAddon>

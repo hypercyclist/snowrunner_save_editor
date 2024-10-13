@@ -1,0 +1,55 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCameraBridge="true"
+	
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_00">
+			<Body Collisions="Dynamic" ModelFrame="stage_01" />
+		</Body>
+	</PhysicsModel>
+	
+    <Subset IsDefault="true" Name="state_start">
+		<Mesh Name="stage_00" />
+		<CdtMesh Name="cdt_stage_00" />
+
+    </Subset>
+	
+	<Subset Name="state_end">
+      	 	<Mesh Name="stage_01" />
+		<CdtMesh Name="cdt_stage_01" />
+		<AnimTrack Name="stage_1_anim" />
+		<AnimSubset Name="build_animation_0" />	
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh"/>	
+	</AnimSubset>
+	
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="30">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(-8.879; 1.348; -9.093)" />
+		</AnimEvent>
+		<AnimEvent Key="35">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Name="constr_wood_01" Dir="(0; 1; 0)" Pos="(4.707; 0.579; 3.662)" />
+		</AnimEvent>
+		<AnimEvent Key="68">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(1.397; 6.555; -4.187)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(3.539; 6.594; -4.548)" />
+		</AnimEvent>
+		<AnimEvent Key="70">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.797; 6.751; 3.677)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(4.864; 6.758; 3.313)" />
+		</AnimEvent>
+		<AnimEvent Key="72">
+			<Sound Name="actors/actor_construction/actor_construct_metal_tube" Range="200" Volume="0.4" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(4.15; 6.909; 11.697)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(6.339; 6.917; 11.344)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/broken_conveyor_01_ru13_objective_lmk" />
+</ModelBrand>

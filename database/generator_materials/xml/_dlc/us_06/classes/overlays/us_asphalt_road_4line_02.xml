@@ -1,0 +1,24 @@
+<OverlayBrand
+	IsClampV="true"
+	IsExtrudable="false"
+	IsAsphalt="true"
+	HeightMapBlendingContrast="0.05"
+	BlendBorderMin="0.0"
+	BlendBorderMax="0.2"
+	Texture="overlays/us_asphalt_road_4line_02__d_a.tga"
+	TextureRelief="overlays/us_asphalt_road_4line_02_relief__d_a.tga"
+	WheelTracks="0"
+>
+	<Prebuild
+		DefaultWidth="14.0"
+		FlattenPart="1"
+		HeightmapOffset="hmoffset_grass_road__s.tga"
+		SnowmapMask="overlay_grass_road_01__s_d.tga"
+		Layer="0"	
+		LandmarkUseAverageWidth="true"
+		LandmarkColor="(100; 100; 100)"
+		LandmarkPart="0.8"
+		LandmarkBorderWidth="1"
+		LandmarkBorderColor="(80;80;80)"
+	/>
+</OverlayBrand>

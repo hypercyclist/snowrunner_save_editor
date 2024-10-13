@@ -1,0 +1,67 @@
+<_templates Include="trucks">
+	<TruckTire>
+		<Offroad _template="Heavy" RearMassScale="2">
+			<WheelTracks _template="Default" />
+			<WheelTracks _template="DefaultDouble" Rear="true" />
+			<WheelSoftness _template="Average" />
+			<WheelFriction _template="Offroad" />
+		</Offroad>    
+	</TruckTire>
+</_templates>
+<TruckWheels DamageCapacity="50" Radius="1" Width="0.62" WidthRear="1.24" Mass="200">
+	<TruckTires>
+        <!-- Offroad tires -->
+        <TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_double_10" Name="JAT OHD I">
+			<WheelFriction _template="Offroad" BodyFriction="3" BodyFrictionAsphalt="1" SubstanceFriction="1.7"/>
+			<GameData
+				Price="5900"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_DOUBLE_10_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_double_11" Name="JAT OHD II">
+			<WheelFriction _template="Offroad" BodyFriction="3.1" BodyFrictionAsphalt="0.8" SubstanceFriction="1.6"/>
+			<GameData
+				Price="6200"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_DOUBLE_11_NAME" />
+			</GameData>
+		</TruckTire>
+		<TruckTire _template="Offroad" Mesh="wheels/tire_heavy_offroad_double_12" Name="JAT OHD III">
+			<WheelFriction _template="Offroad" BodyFriction="3.2" BodyFrictionAsphalt="0.6" SubstanceFriction="1.6"/>
+			<GameData
+				Price="6800"
+				UnlockByExploration="false"
+				UnlockByRank="1"
+			>
+				<UiDesc UiDesc="UI_TIRE_OFFROAD_DESC" UiName="UI_TIRE_HEAVY_OFFROAD_DOUBLE_12_NAME" />
+			</GameData>
+		</TruckTire>
+	</TruckTires>
+	<TruckRims>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_double_10" Name="JAT OHD I">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_10_NAME" />
+			</GameData>
+		</TruckRim>
+        <TruckRim Mesh="wheels/rim_heavy_offroad_double_11" Name="JAT OHD II">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_JAT_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_11_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_double_1" Name="rim_1">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_DOUBLE_1_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_1_NAME" />
+			</GameData>
+		</TruckRim>
+		<TruckRim Mesh="wheels/rim_heavy_offroad_double_2" Name="rim_2">
+			<GameData>
+				<UiDesc UiDesc="UI_RIM_HEAVY_OFFROAD_DOUBLE_2_DESC" UiName="UI_RIM_HEAVY_OFFROAD_DOUBLE_2_NAME" />
+			</GameData>
+		</TruckRim>
+	</TruckRims>
+</TruckWheels>

@@ -1,0 +1,29 @@
+<_templates Include="trucks" />
+<_parent File="plad_450_exhaust_default" />
+<TruckAddon>
+	<TruckData>
+		<Shakers>
+			<Shaker Frame="BoneExhaustLeft" LimitDirectionY="Negative" MinAngle="(0.2; 0.6; 0.2)" MaxAngle="(0.72; 0.72; 0.71)" MaxFrequency="2.2" ParentFrame="BoneExhaustLeft" />
+			<Shaker Frame="BoneExhaustRight" LimitDirectionY="Negative" MinAngle="(0.2; 0.7; 0.2)" MaxAngle="(0.7; 0.7; 0.7)" MaxFrequency="2.1" ParentFrame="BoneExhaustRight" />
+		</Shakers>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/plad_450_tuning/plad_450_exhaust_2">
+		<Body ImpactType="Truck" Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		Price="2200"
+		UnlockByExploration="false"
+		UnlockByRank="12"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_EXHAUST_SLANTCUT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_EXHAUST_SLANTCUT_NAME"
+		/>
+	</GameData>
+	<Exhaust Dir="(-0.695; 0.616; 0.370)" IsLight="true" Origin="(0.571; 4.404; 1.176)" Speed="3.82" ParentFrame="BoneExhaustLeft"/>
+	<Exhaust Dir="(-0.695; 0.616; -0.370)" IsLight="true" Origin="(0.571; 4.404; -1.176)" Speed="3.82" ParentFrame="BoneExhaustRight"/>
+</TruckAddon>

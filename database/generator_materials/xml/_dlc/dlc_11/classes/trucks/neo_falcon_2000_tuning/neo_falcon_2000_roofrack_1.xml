@@ -1,0 +1,77 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<TruckData FuelCapacity="100" RepairsCapacity="150">
+		<LimitedFluid Center="(-0.720; 2.177; 0.279)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-1.214; 2.177; 0.279)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-1.214; 2.177; -0.276)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.764; 2.177; -0.305)" SizeX="0.363" SizeY="0.182" SizeZ="0.519" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.006; 2.177; 0.349)" SizeX="0.519" SizeY="0.182" SizeZ="0.363" Type="Box" ParentFrame="BoneFuel3_cdt" />
+	</TruckData>
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<PhysicsModel Mesh="trucks/neo_falcon_2000_tuning/neo_falcon_2000_roofrack_1">
+		<Body Mass="60">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="60" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.018"
+					MaxLimit="0.008"
+				>
+					<Motor Damping="1400" Spring="2200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel3_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.03"
+					MaxLimit="0"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneRepair_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.0250"
+					MaxLimit="0"
+				>
+					<Motor Damping="2100" Spring="3000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="addon_2"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="2300"
+		UnlockByExploration="false"
+		UnlockByRank="9"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="NeoFalcon2000Roofrack" />
+	</GameData>
+</TruckAddon>

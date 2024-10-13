@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_transtar_4070a_stuff/sticker_glass_top_international_transtar_4070a" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_TOP_DESC" UiName="UI_STUFF_GLASS_STICKER_TOP_CUT_100_PERCENT_MAN_NAME" />
+		<InstallSocket Type="internationalTranstar4070ASticker_GlassTop" />
+	</GameData>
+</TruckAddon>

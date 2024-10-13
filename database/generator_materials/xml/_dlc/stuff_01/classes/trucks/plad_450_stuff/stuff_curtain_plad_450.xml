@@ -1,0 +1,33 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/plad_450_stuff/stuff_curtain_plad_450">
+		<Body Collisions="None" Mass="10">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneCurtain_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Hinge"
+					MinLimit="-25"
+					MaxLimit="25"
+				>
+					<Motor Damping="0.05" Spring="0.01" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="curtain"
+		Category="curtain"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+		IsCustomizable="false"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_CURTAIN_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_CURTAIN_01_NAME"
+		/>
+		<InstallSocket Type="StuffCurtainPlad450" />
+	</GameData>
+</TruckAddon>

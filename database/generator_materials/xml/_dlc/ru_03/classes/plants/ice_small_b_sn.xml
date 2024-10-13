@@ -1,0 +1,22 @@
+<_templates Include="environment" />
+<PlantBrand
+	_template="SmallRock"
+	DistSkipPercentage="0.6"
+	PlantingMinSpacing="0.2"
+	PlantingOffsetY="0.05"
+	BreakType="Ice"
+>
+	<PhysicsModel>
+		<Body
+			AllowedPenetrationDepth="0.5"
+			Mass="190.0"
+			NoSoftContacts="true"
+			IsStaticSoil="true"
+			ImpactType="IceChunk"
+		>
+			<Constraint BreakOffThreshold="1000" Type="Fixed" />
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.6" Size="(0.8; 0.8)" />
+	<Landmark Mesh="landmarks/ice_small_b_sn_lmk" />
+</PlantBrand>

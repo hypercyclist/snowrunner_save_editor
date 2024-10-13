@@ -1,0 +1,10 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body _template="Cars" ModelFrame="BoneRoot">
+			<Constraint _template="Cars" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

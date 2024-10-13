@@ -1,0 +1,8 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_stuff/sticker_glass_top_khan_39_marshall" />
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_TOP_DESC" UiName="UI_STUFF_GLASS_STICKER_TOP_2x16_BIG_N_DIRTY_NAME" />
+		<InstallSocket Type="khan39MarshallSticker_GlassTop" />
+	</GameData>
+</TruckAddon>

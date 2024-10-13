@@ -1,0 +1,6 @@
+<ModelBrand ClipCamera="false">
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/flagpole_us07_lmk"/>
+</ModelBrand>

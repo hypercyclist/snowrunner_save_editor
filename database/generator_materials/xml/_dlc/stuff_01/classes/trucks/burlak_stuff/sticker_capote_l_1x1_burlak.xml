@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_stuff/sticker_capote_l_1x1_burlak" />
+	<GameData>
+		<InstallSocket Type="BurlakSticker_Capote_L" />
+	</GameData>
+</TruckAddon>

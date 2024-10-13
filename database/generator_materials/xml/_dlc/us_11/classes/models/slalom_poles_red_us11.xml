@@ -1,0 +1,39 @@
+<_templates Include="plants" />
+<ModelBrand
+	DisableShadows="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body 
+			DamageMult="0"
+			Mass="10.0"
+			NoSoftContacts="false"
+ 			ModelFrame="BoneRoot_cdt">
+					<Constraint
+						Cone="90"
+						TwistAxisLocal="(0;1;0)"
+						TwistMin="0"
+						TwistMax="0"
+						Type="Ragdoll"
+					>
+					<PlaneConeMotor Damping="90" Spring="1500" Type="Spring" />
+				</Constraint>
+			<Body
+				DamageMult="0"
+				Mass="10.0"
+				NoSoftContacts="false"
+				ModelFrame="Bone1_cdt">
+					<Constraint
+						Cone="90"
+						TwistAxisLocal="(0;1;0)"
+						TwistMin="0"
+						TwistMax="0"
+						Type="Ragdoll"
+					>
+					<PlaneConeMotor Damping="50" Spring="600" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/slalom_poles_red_us11_lmk" />
+</ModelBrand>

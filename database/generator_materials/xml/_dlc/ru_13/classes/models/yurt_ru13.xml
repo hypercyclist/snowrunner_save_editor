@@ -1,0 +1,38 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="BoneRoot">
+			<Body
+				Collisions="Dynamic"
+				Mass="4000"
+				ModelFrame="Bone.001"
+			>
+				<Constraint
+					LinearLimitsX="(-0.04;0.04)"
+						LinearLimitsY="(-0.04;0.04)"
+						LinearLimitsZ="(0.0;0.0)"
+						Type="Fixed"
+				>
+					<Motor Damping="10000" Spring="800000" Type="Spring" />
+				</Constraint>
+				<Body
+					Collisions="None"
+					Mass="400"
+					ModelFrame="Bone.002"
+				>
+					<Constraint
+						LinearLimitsX="(-0.05;0.05)"
+						LinearLimitsY="(-0.05;0.05)"
+						LinearLimitsZ="(-0.05;0.01)"
+						Type="Fixed"
+					>
+						<Motor Damping="100" Spring="80000" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/yurt_ru13_lmk" />
+</ModelBrand>

@@ -1,0 +1,76 @@
+<DayTimeState
+	ColorLUT="lut/day_us_01__vol_uncmp.tga"
+	FogColor="g(92; 95; 117) x 1"
+	FogScatterColor="g(227; 90; 39) x 0.69"
+	HorizonColor="g(255; 156; 102) x 1.6"
+	HorizonHeight="0.15"
+	HorizonAlphaHeight="1"
+	HorizonSharpness="2.3"
+	SceneUiIntensityFactor="1.5"
+	SkySharpness="1"
+	SSAOColor="g(255; 255; 255; 180) x 0.001"
+	SkyBloomColor="g(248; 212; 177; 100)"
+	SkyColor="g(49; 79; 117) x 1"
+	SunColor="g(255; 89; 0) x 1.5"
+	SunDir="(1; -0.2; 0)"	
+	WaterCubeMapIntensity="0.6"
+	LightPbrMult="3.0"
+	ToneMapWhite="3"
+	VignetteFlareColor="g(255; 246; 186; 10)"
+	
+	EnvMap="env/evn_mich_01__d_ggxrefl.tga"
+	CubeMapScale="1.0"
+	
+	HdrAdaptationMinLum="0.02"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2"
+	HdrAdaptationSpeed="2"
+	HdrExposureScale="0.65"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.75"
+	TonemapB="0.19"
+	TonemapC="0.3"
+	TonemapD="0.2"
+	TonemapE="0.014"
+	TonemapF="0.16"
+	
+	BloomEnabled="true"
+	BloomPoint="0.7"
+	BloomIntensity="0.69"
+	BloomGamma="0.7"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+	
+	RadiusMinSSAO="1.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+	ShadowMapResolution="2048"
+>
+    <Sky>
+		<Lightshaft
+			Tint="g(255; 151; 85)"
+			Intensity="0.39"
+			BlurRadius="12"
+			FalloffRadius="0.8"
+			FalloffInnerRadius="0.039"
+		/>
+		<Flare
+			AspectRatio="1.0"
+			Color="g(255; 112; 80) x 0.08"
+			Size="50.0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.003" StartDist="5" ScatterAngle="90" Alpha="0.8" Height="50" UpperScale="0.02" LowerScale="0.01"/>
+	<SecondaryFog Density="0.003" Height="50" UpperScale="0.2" LowerScale="0.0"/>
+	<DistantFog StartDistance="10" EndDistance="2000" Height="90" DensityMultiplier="1"/>
+	<VolumeFog Density="0.5" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(213; 189; 196) x 0.8" MidY="g(157; 184; 229) x 0.9" PosY="g(169; 187; 246) x 1.4" />
+	<WeatherParticles Type="ashes_us_09" MinIntensity="0.1" MaxIntensity="0.33" IntensityChangeInterval="30" />
+</DayTimeState>

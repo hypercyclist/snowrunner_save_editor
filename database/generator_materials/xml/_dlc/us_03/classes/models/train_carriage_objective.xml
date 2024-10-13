@@ -1,0 +1,30 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="false"
+	DynamicModel="true"
+	DynamicModelDistActivation="50"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="carriage" >
+            <Body Collisions="Dynamic" ModelFrame="cargo" />
+        </Body>        
+	</PhysicsModel>
+	<Landmark Mesh="" />
+	<Subset IsDefault="true" Name="empty_carriage">
+		<Mesh Name="carriage" />
+		<CdtMesh Name="carriage" />        
+	</Subset>
+	<Subset Name="cargo_carriage">
+		<Mesh Name="carriage" />
+		<Mesh Name="cargo" />        
+		<CdtMesh Name="cargo" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_construct_train_carriage" Range="200" Volume="1"/>
+		</OnSubsetActivateEvent>		
+ 	</Subset>
+	<Subset Name="hide_cargo_carriage">
+	</Subset>    
+<Landmark Mesh="landmarks/train_carriage_objective_lmk" />	
+</ModelBrand>

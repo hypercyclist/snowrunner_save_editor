@@ -1,0 +1,47 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="house" />
+		<CdtMesh Name="house" />
+	</Subset>
+
+	<Subset Name="build_stage_1">
+		<Mesh Name="wall" />
+		<Mesh Name="wall_lod1" />
+		<Mesh Name="wall_lod2" />
+		<CdtMesh Name="wall" />
+		<AnimTrack Name="anim_state"/>
+		<AnimSubset Name="build_animation_0"/>
+	</Subset>
+
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh_1"/>
+		<Mesh Name="animesh_2"/>
+	</AnimSubset>
+
+
+	<TrackEvents TrackName="anim_state">
+
+	<AnimEvent Key="49">
+			<Sound Name="actors/actor_construction/actor_construct_wooden_bridge" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="us_garage_06_us06_objective" Pos="(0; 0; 0)" />
+		</AnimEvent>
+
+		<AnimEvent Key="50">
+			<Sound Name="actors/actor_construction/actor_construct_us06_garage_06" Range="200" Volume="1" />
+			<SFX Dir="(0; 1; 0)" Name="us_garage_06_us06_objective" Pos="(0; 0; 0)" />
+		</AnimEvent>
+	</TrackEvents>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="wall">
+			<Body Collisions="Dynamic" ModelFrame="house" />
+		</Body>
+	</PhysicsModel>
+
+	<Occlusion Size="(19.0; 18.0)" Texture="occlusion_country_building_03.tga" />
+	<Landmark Mesh="landmarks/country_building_05_old_us12_objective_lmk" />
+</ModelBrand>

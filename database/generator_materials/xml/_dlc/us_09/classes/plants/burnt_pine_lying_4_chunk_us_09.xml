@@ -1,0 +1,24 @@
+<_templates Include="environment" />
+<PlantBrand _template="LyingTreeChunks">
+	<PhysicsModel>
+		<Body _template="FallingTreeRoot" ModelFrame="BoneRoot" DamageMult="0.4" DebrisType="Sparks">
+			<Constraint _template="TreeChunk"/>
+			<Body _template="LyingBranch" ModelFrame="BoneBranch1" DamageMult="0.0">
+				<Constraint _template="TreeChunk"/>
+			</Body>							
+			<Body _template="LyingTrunk" ModelFrame="BoneEnd" DamageMult="0.3">
+				<Constraint _template="BranchHard"/>
+				<Body _template="LyingBranch" ModelFrame="BoneBranch3" DamageMult="0.0">
+					<Constraint _template="TreeChunk"/>
+				</Body>
+				<Body _template="LyingBranch" ModelFrame="BoneBranch4" DamageMult="0.0">
+					<Constraint _template="TreeChunk"/>
+				</Body>
+				<Body _template="LyingBranch" ModelFrame="BoneBranch6" DamageMult="0.0">
+					<Constraint _template="TreeChunk"/>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.3" Size="(4.0; 10.0)" Texture="occlusion_vertical.tga" />
+</PlantBrand>

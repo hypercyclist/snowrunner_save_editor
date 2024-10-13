@@ -1,0 +1,245 @@
+<ModelBrand NightLightingShadowsAllowCap="true" DayShadowOffsetMult="10">
+
+	<Landmark Mesh="landmarks/castle_tower_05_objective_us14_lmk" />
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_start_01" />
+		<Mesh Name="mesh_start_02" />
+		<Mesh Name="mesh_start_03" />
+		<Mesh Name="mesh_start_04" />
+		<Mesh Name="mesh_start_05" />
+		<Mesh Name="mesh_start_06" />
+		<Mesh Name="mesh_start_07" />
+		<CdtMesh Name="cdt_mesh_start_01" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_end" />
+		<Mesh Name="flag" />
+		<CdtMesh Name="cdt_mesh_end" />
+		<AnimSubset Name="build_animation_0" /> 
+		<AnimTrack Name="anim_state" />
+		<AnimTrackSubset Name="anim_loop" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+	   	<Mesh Name="anim_mesh1" />
+		<Mesh Name="anim_mesh2" />
+		<Mesh Name="anim_mesh3" />
+		<Mesh Name="anim_mesh4" />
+		<Mesh Name="anim_mesh5" />
+		<Mesh Name="anim_mesh5" />
+		<Mesh Name="anim_mesh6" />
+		<Mesh Name="anim_mesh7" />
+		<Mesh Name="anim_mesh8" />
+		<Mesh Name="anim_mesh9" />
+		<Mesh Name="anim_mesh10" />
+		<Mesh Name="anim_mesh_static" />
+		<Mesh Name="flag" />
+		<CdtMesh Name="cdt_mesh_start_01" />
+	</AnimSubset>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="mesh_start_01">
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_02"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_03"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_04"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_05"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_06"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_start_07"/>
+			<Body Collisions="Dynamic" ModelFrame="mesh_end"/>
+		</Body>
+	</PhysicsModel>
+	
+	<TrackEvents TrackName="anim_state">
+	<AnimEvent Key="0">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-0.329; 0; 28.948)" />
+	</AnimEvent>
+	<AnimEvent Key="5">
+		<Sound Name="actors/actor_construction/actor_construct_wooden_bridge" Range="200" Volume="1"/>
+		<Sound Name="actors/actor_construction/actor_construct_oil_abandoned_02" Range="200" Volume="0.5"/>
+		<SFX Name="conveyor_smoke_02" Dir="(0; 1; 0)" Pos="(-1.14938; 19.9007; 4.90546)"/>
+	</AnimEvent>
+	<AnimEvent Key="0">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-0.329; 0; 28.948)" />
+	</AnimEvent>
+	<AnimEvent Key="30">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 18.75; 3.861)" />
+	</AnimEvent>
+	<AnimEvent Key="32">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 19.851; 0.245)" />
+	</AnimEvent>
+	<AnimEvent Key="34">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 20.174; -2.184)" />
+	</AnimEvent>
+	<AnimEvent Key="36">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 21.057; -4.208)" />
+	</AnimEvent>
+	<AnimEvent Key="42">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-0.187; 20.808; 4.297)" />
+	</AnimEvent>
+	<AnimEvent Key="44">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.21; 20.838; 4.297)" />
+	</AnimEvent>
+	<AnimEvent Key="46">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 20.304; 1.365)" />
+	</AnimEvent>
+	<AnimEvent Key="50">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(4.295; 22.106; 4.215)" />
+	</AnimEvent>
+	<AnimEvent Key="52">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(0; 22.157; 4.180)" />
+	</AnimEvent>
+	<AnimEvent Key="54">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-2.858; 22.169; 4.297)" />
+	</AnimEvent>
+	<AnimEvent Key="56">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.25; 22.209; 4.261)" />
+	</AnimEvent>
+	<AnimEvent Key="58">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 22.144; 0.022)" />
+	</AnimEvent>
+	<AnimEvent Key="60">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 22.143; -3.006)" />
+	</AnimEvent>
+	<AnimEvent Key="66">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-1.325; 23.932; 4.231)" />
+	</AnimEvent>
+	<AnimEvent Key="68">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.247; 23.932; 4.223)" />
+	</AnimEvent>
+	<AnimEvent Key="70">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.225; 23.932; -0.008)" />
+	</AnimEvent>
+	<AnimEvent Key="72">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.266; 23.932; -2.225)" />
+	</AnimEvent>
+	<AnimEvent Key="96">
+		<Sound Name="actors/actor_construction/actor_construct_concrete_block_03" Range="200" Volume="1.5"/>
+		<SFX Name="water_tower" Dir="(0; 1; 0)" Pos="(0; 0.6; 0)"/>
+	</AnimEvent>
+	<AnimEvent Key="74">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.285; 23.932; -4.224)" />
+	</AnimEvent>
+	<AnimEvent Key="75">
+			<Sound Name="actors/actor_construction/actor_construct_trees_roadblock" Range="200" Volume="1.5"/>
+		</AnimEvent>
+	<AnimEvent Key="79">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-0; 25.717; 4.106)" />
+	</AnimEvent>
+	<AnimEvent Key="83">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.262; 25.721; 4.249)" />
+	</AnimEvent>
+	<AnimEvent Key="85">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.299; 25.71; -1.412)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.157; 22.723; 5.501)" />
+	</AnimEvent>
+	<AnimEvent Key="87">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.297; 25.701; -4.205)" />
+	</AnimEvent>
+	<AnimEvent Key="91">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(0.87; 25.821; -4.299)" />
+	</AnimEvent>
+	<AnimEvent Key="110">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.751; 27.249; 4.737)" />
+	</AnimEvent>
+	<AnimEvent Key="113">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.747; 27.257; -4.726)" />
+	</AnimEvent>
+	<AnimEvent Key="80">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-0.078; 25.353; 5.486)" />
+	</AnimEvent>
+	<AnimEvent Key="90">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-0.094; 21.667; 5.473)" />
+	</AnimEvent>
+	<AnimEvent Key="95">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.143; 20.408; 5.505)" />
+	</AnimEvent>
+	<AnimEvent Key="100">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-0.071; 20.397; 5.505)" />
+	</AnimEvent>
+	<AnimEvent Key="105">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-2.309; 20.416; 5.486)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.178; 18.368; 5.486)" />
+	</AnimEvent>
+	<AnimEvent Key="111">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-0.078; 16.105; 5.486)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-0.078; 18.384; 5.486)" />
+	</AnimEvent>
+	<AnimEvent Key="116">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-2.293; 16.198; 5.486)" />
+	</AnimEvent>
+	<AnimEvent Key="121">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-4.532; 16.174; 5.486)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.652; 20.413; -3.607)" />
+	</AnimEvent>
+	<AnimEvent Key="123">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.121; 14.094; 5.513)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.155; 12.641; 5.485)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(4.382; 12.681; 5.459)" />
+	</AnimEvent>
+	<AnimEvent Key="133">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-2.32; 12.624; 5.486)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-2.301; 14.04; 5.505)" />
+	</AnimEvent>
+	<AnimEvent Key="143">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.171; 10.583; 5.505)" />
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.78; 4.305; 2.053)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(2.208; 9.214; 5.477)" />
+	</AnimEvent>
+	<AnimEvent Key="118">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.66; 19.130; 0.907)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.677; 19.231; 5.428)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.675; 19.225; 3.173)" />
+	</AnimEvent>
+	<AnimEvent Key="124">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.653; 19.103; -8.145)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.677; 14.901; 0.889)" />
+	</AnimEvent>
+	<AnimEvent Key="127">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.663; 14.828; -3.636)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.664; 14.802; -1.366)" />
+	</AnimEvent>
+	<AnimEvent Key="130">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.674; 14.881; -8.183)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.675; 11.804; 3.188)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.666; 11.842; 5.445)" />
+	</AnimEvent>
+	<AnimEvent Key="136">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.679; 11.82; -3.646)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.679; 6.583; 3.201)" />
+	</AnimEvent>
+	<AnimEvent Key="139">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.675; 11.799; -10.456)" />
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.678; 6.871; -3.622)" />
+	</AnimEvent>
+	<AnimEvent Key="142">
+		<SFX Dir="(0; 1; 0)" Name="bridge_sparks_01" Pos="(-5.661; 6.885; -8.155)" />
+	</AnimEvent>
+	<AnimEvent Key="149">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-5.067; 4.305; -4.813)" />
+	</AnimEvent>
+	<AnimEvent Key="153">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.961; 2.238; -7.041)" />
+	</AnimEvent>
+	<AnimEvent Key="160">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-5.885; 0.501; 4.165)" />
+	</AnimEvent>
+	<AnimEvent Key="165">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-5.668; 0.363; -0.339)" />
+	</AnimEvent>
+	<AnimEvent Key="170">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-5.411; 0.315; -4.747)" />
+	</AnimEvent>
+	<AnimEvent Key="180">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-4.945; -0.06; -9.621)" />
+	</AnimEvent>
+	<AnimEvent Key="75">
+		<SFX Dir="(0; 1; 0)" Name="pier_smoke_02" Pos="(-3.919; 23.424; -10.476)" />
+	</AnimEvent>
+	<AnimEvent Key="175">
+           		<Fade Time="0.8" />
+    </AnimEvent>
+	<AnimEvent Key="310">
+           		<Fade Time="1.2" />
+    </AnimEvent>
+</TrackEvents>
+
+
+</ModelBrand>

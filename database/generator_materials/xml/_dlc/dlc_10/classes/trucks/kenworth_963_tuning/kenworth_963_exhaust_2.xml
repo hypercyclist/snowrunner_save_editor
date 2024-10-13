@@ -14,7 +14,7 @@
 		Category="exhaust"
 		Price="2300"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="11"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_EXHAUST_SNUB_HEATSHIELD_DESC"

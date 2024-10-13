@@ -1,0 +1,31 @@
+<_templates Include="environment" />
+<PlantBrand _template="BigTree" CheckNoGrass="true">
+	<PhysicsModel>
+		<Body _template="BigTreeRoot" Mass="7000" ModelFrame="BoneRoot" DebrisType="FoliageChestnut">
+			<Constraint _template="BigTreeRoot" />
+			<Body _template="BranchSoft" ModelFrame="BoneBranch1" DebrisType="FoliageChestnut">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch2" ebrisType="FoliageChestnut">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch3" DebrisType="FoliageChestnut">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch4">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="BranchSoft" ModelFrame="BoneBranch5" DebrisType="FoliageChestnut">
+				<Constraint _template="BranchSoft" />
+			</Body>
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk" DebrisType="FoliageChestnut">
+				<Constraint _template="TrunkHead" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.45" Size="(8.0; 8.0)" />
+	<Landmark Mesh="landmarks/chestnut_2_us12_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0.081; 0.492; 0.025)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

@@ -1,0 +1,15 @@
+<_parent File="sticker_glass_top_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/international_hx_520_stuff/sticker_glass_bottom_international_hx_520">
+		<Body Collisions="None" Mass="0.1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<UiDesc UiDesc="UI_STUFF_GLASS_STICKER_BOTTOM_DESC" UiName="UI_STUFF_GLASS_STICKER_BOTTOM_CUT_DRAGONS_NAME" />
+		<InstallSocket Type="internationalHx520Sticker_GlassBottom" />
+	</GameData>
+</TruckAddon>

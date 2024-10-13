@@ -1,0 +1,11 @@
+<_parent File="stuff_hood_legion_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/land_rover_defender_90_stuff/stuff_hood_legion_land_rover_defender_90" />
+	<GameData
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<InstallSocket Type="StuffHoodLandRoverDef90" />
+	</GameData>
+</TruckAddon>

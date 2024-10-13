@@ -1,0 +1,31 @@
+<_templates Include="environment" />
+<PlantBrand _template="SmallTree">
+	<PhysicsModel>
+		<Body _template="HugeTrunk" Collisions="None" ModelFrame="BoneRoot">
+			<Constraint _template="HugeTrunk" />
+			<Body _template="Flower" ModelFrame="BoneTrunk1">
+				<Constraint _template="Flower" />
+			</Body>
+			<Body _template="Flower" ModelFrame="BoneTrunk2">
+				<Constraint _template="Flower" />
+			</Body>
+			<Body _template="Flower" ModelFrame="BoneTrunk3">
+				<Constraint _template="Flower" />
+			</Body>
+			<Body _template="Flower" ModelFrame="BoneTrunk4">
+				<Constraint _template="Flower" />
+			</Body>
+			<Body _template="Flower" ModelFrame="BoneTrunk5">
+				<Constraint _template="Flower" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Size="(0.8; 0.8)" />
+	<ChunksBreak
+		_template="Bush"
+		Brands="chunk_flower_b_us12"
+		Offsets="(-0.08; 0.02; 0)"
+		SpawnAngMult="26.0"
+		SpawnLinMult="4"
+	/>
+</PlantBrand>

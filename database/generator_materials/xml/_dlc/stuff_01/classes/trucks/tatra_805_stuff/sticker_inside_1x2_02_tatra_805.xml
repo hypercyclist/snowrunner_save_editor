@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_805_stuff/sticker_inside_1x2_02_tatra_805" />
+	<GameData CameraPreset="sticker_1">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X2_NAME" />
+		<InstallSocket Type="Tatra805Sticker_1x2_02" />
+	</GameData>
+</TruckAddon>

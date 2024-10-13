@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body _template="LightWeight" ModelFrame="Bone_sign_01_f_us11_paddle">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

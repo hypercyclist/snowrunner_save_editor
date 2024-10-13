@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x2_01_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/western_star_57x_stuff/sticker_inside_1x2_02_western_star_57x" />
+	<GameData CameraPreset="sticker_1">
+		<InstallSocket Type="westernStar57XSticker_1x2_02" />
+	</GameData>
+</TruckAddon>

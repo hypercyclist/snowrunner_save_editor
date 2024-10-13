@@ -1,0 +1,38 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_bobblehead_penguin">
+		<Body Collisions="None" Mass="0.5">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.2" ModelFrame="BoneHead_cdt">
+				<Constraint
+					Cone="7"
+					PlaneAxisLocal="(0; 0; 1)"
+					TwistAxisLocal="(0; 1; 0)"
+					Type="Ragdoll"
+					PlaneMin="-20"
+					PlaneMax="20"
+				>
+					<AllMotor Damping="0.0001" Spring="0.2" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="bubble_head"
+		Category="bubble_head"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_BOBBLEHEAD_PENGUIN_DESC"
+			UiIcon30x30="interiorBubbleImg30"
+			UiIcon40x40="interiorBubbleImg40"
+			UiName="UI_STUFF_BOBBLEHEAD_PENGUIN_NAME"
+		/>
+		<InstallSocket Type="StuffDashboard" />
+	</GameData>
+</TruckAddon>

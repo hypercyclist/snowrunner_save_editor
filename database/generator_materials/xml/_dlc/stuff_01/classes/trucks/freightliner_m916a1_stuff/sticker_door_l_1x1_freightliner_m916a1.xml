@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/freightliner_m916a1_stuff/sticker_door_l_1x1_freightliner_m916a1" />
+	<GameData>
+			<InstallSocket Type="freightlinerM916A1Sticker_Door_L" />
+	</GameData>
+</TruckAddon>

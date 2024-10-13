@@ -1,0 +1,9 @@
+<_templates Include="models" />
+<ModelBrand 
+	NightLightingShadowsAllowCap="true" Instanced="True">
+	<PhysicsModel>
+		<Body  ModelFrame="Bone_mesh_03" Mass="100" Collisions="Dynamic" NoSoftContacts="True">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

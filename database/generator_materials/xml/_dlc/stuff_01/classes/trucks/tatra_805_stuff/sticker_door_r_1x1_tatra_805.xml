@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_805_stuff/sticker_door_r_1x1_tatra_805" />
+	<GameData>
+		<InstallSocket Type="Tatra805Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

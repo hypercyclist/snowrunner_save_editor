@@ -1,0 +1,23 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	AcceptZoneBorderDecals="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/bridge_wooden_big_02_lmk"/>
+	<GameData>
+		<WinchSocket Pos="(11; -2.5; -2.4)" />
+		<WinchSocket Pos="(11; -2.5; 2.4)" />
+		<WinchSocket Pos="(5.4; -2.5; -2.4)" />
+		<WinchSocket Pos="(5.4; -2.5; 2.4)" />
+		<WinchSocket Pos="(0.0; -2.5; -2.4)" />
+		<WinchSocket Pos="(0.0; -2.5; 2.4)" />
+		<WinchSocket Pos="(-5.6; -2.5; -2.4)" />
+		<WinchSocket Pos="(-5.6; -2.5; 2.4)" />
+		<WinchSocket Pos="(-11.2; -2.5; -2.4)" />
+		<WinchSocket Pos="(-11.2; -2.5; 2.4)" />
+	</GameData>
+</ModelBrand>

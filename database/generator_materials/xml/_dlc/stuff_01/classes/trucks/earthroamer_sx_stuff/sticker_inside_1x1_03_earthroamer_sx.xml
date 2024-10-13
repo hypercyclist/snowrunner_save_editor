@@ -1,0 +1,7 @@
+<_parent File="sticker_inside_1x1_01_earthroamer_sx"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_stuff/sticker_inside_1x1_03_earthroamer_sx" />
+	<GameData CameraPreset="sticker_1">
+		<InstallSocket _noinherit="true" Type="EarthroamerSxSticker_1x1_03" />
+	</GameData>
+</TruckAddon>

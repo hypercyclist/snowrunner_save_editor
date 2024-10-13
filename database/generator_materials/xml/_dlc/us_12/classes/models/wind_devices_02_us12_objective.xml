@@ -1,0 +1,37 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	
+>
+
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="main_pole" />
+		<Mesh Name="main_vent" />
+		<CdtMesh Name="cdt_main_pole" />
+		<CdtMesh Name="cdt_main_vent" />
+	</Subset>
+
+	<Subset IsDefault="false" Name="build_stage_1">
+		<Mesh Name="main_pole" />
+		<Mesh Name="main_vent"/>
+		<AnimSubset Name="build_animation_0" />
+			<AnimTrack Name="anim_state" />
+		<AnimTrackSubset Name="anim_loop" />
+		<CdtMesh Name="cdt_main_pole" />
+		<CdtMesh Name="cdt_vent_anim" />
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="main_pole" />
+		<Mesh Name="animesh"/>
+		<CdtMesh Name="cdt_main_pole" />
+		<CdtMesh Name="cdt_vent_anim" />
+	</AnimSubset>
+
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="main_pole">
+			<Body Collisions="Dynamic" ModelFrame="main_vent" />
+		</Body>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/wind_devices_02_us12_objective_lmk"/>
+</ModelBrand>

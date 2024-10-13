@@ -1,0 +1,13 @@
+<_parent File="sticker_inside_1x1_01_khan_317_sentinel" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_317_sentinel_stuff/sticker_inside_1x4_01_khan_317_sentinel" />
+	<GameData>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="khan317SentinelSticker_1x4_01" />
+	</GameData>
+</TruckAddon>

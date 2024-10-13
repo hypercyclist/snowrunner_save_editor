@@ -10,7 +10,7 @@
 		/>
 	</Flare>
 	<Body>
-		<Mechanism Mass="2500" >
+		<Mechanism Mass="800" >
 			<Constraint
 				AxisLocal="(-1; 0; 0)"
 				Name="AnchorRot"
@@ -20,7 +20,7 @@
 			>
 				<Motor Force="80000" Tau="0.02" Type="Position" />
 			</Constraint>
-			<Body Mass="2100">
+			<Body Mass="600">
 				<Constraint
 					AxisLocal="(0; 1; 0)"
 					Name="AnchorExt"
@@ -41,7 +41,7 @@
 					>
 						<Motor Force="50000" Type="Position" />
 					</Constraint>
-					<Body Mass="600" ForceBodyParams="true" NoFoliageCollisions="true">
+					<Body Mass="400" ForceBodyParams="true" NoFoliageCollisions="true">
 						<Constraint
 							AxisLocal="(0; -1; 0)"
 							Name="AnchorTrue"
@@ -71,17 +71,17 @@
 
 <TruckAddon IsChassisFullOcclusion="true">
 
-	<PhysicsModel Mesh="trucks/addons/big_crane_us_02_zikz_612h">
+	<PhysicsModel Mesh="trucks/addons/big_crane_us_02">
 		<NetSync Legacy="true" />
-		<Body CenterOfMassOffset="(0; 0; 0)" Mass="2000">
+		<Body CenterOfMassOffset="(1.339; 0.739; 0)" Mass="3800">
 			<Constraint Type="Fixed" />
 			<Body
-				CenterOfMassOffset="(0; 0; 0)"
-				Mass="2000"
+				CenterOfMassOffset="(-1; 0.35; 0)"
+				Mass="800"
 				ModelFrame="BoneCabin_cdt"
 			>
 				<Constraint
-					AxisLocal="(0; 1; 0)"
+					AxisLocal="(0; 0.7; 0)"
 					Name="Crane"
 					Type="Hinge"
 					MinLimit="-355"
@@ -310,6 +310,48 @@
 			</IKBone>
 		</IKBone>
 		
+		<IKBone ModelFrame="BoneFrontLegRotR_cdt" ParentFrame="BoneFrontLegRotR">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFrontRightAnchor_cdt"
+				ModelFrame="BoneFrontRightAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
+		<IKBone ModelFrame="BoneFrontLegRotL_cdt" ParentFrame="BoneFrontLegRotL">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneFrontLeftAnchor_cdt"
+				ModelFrame="BoneFrontLeftAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneRearLegRotR_cdt" ParentFrame="BoneRearLegRotR">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRearRightAnchor_cdt"
+				ModelFrame="BoneRearRightAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneRearLegRotL_cdt" ParentFrame="BoneRearLegRotL">
+			<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRearLeftAnchor_cdt"
+				ModelFrame="BoneRearLeftAnchor"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		
 		<IKBone ModelFrame="BoneRearPistonR1_cdt" ParentFrame="BoneRoot_cdt">
 			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
 			<IKBone
@@ -339,6 +381,16 @@
 			>
 				<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
 			</IKBone>
+		</IKBone>
+				<IKBone ModelFrame="BoneIKShaft" ParentFrame="BoneCabin_cdt">
+				<IKJoint AxisLocal="(0; 0; 1)" Type="Hinge" />
+				<IKBone
+					AttachOffset="(0; 0; 0)"
+					AttachToFrame="BoneShaft1_cdt"
+					ModelFrame="BoneIKShaft1"
+				>
+					<IKJoint AxisLocal="(1; 0; 0)" Type="Slider" />
+				</IKBone>
 		</IKBone>
 	</AutomaticIK>
 	<AddonCamera

@@ -1,0 +1,22 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_threshold_default">
+		<Body Mass="5" ModelFrame="BoneThresold_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="footrest"
+		Category="miscellenious"
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SILLS_STOCK_COVERS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SILLS_STOCK_COVERS_NAME"
+		/>
+		<InstallSocket Type="BurlakThreshold" />
+	</GameData>
+</TruckAddon>

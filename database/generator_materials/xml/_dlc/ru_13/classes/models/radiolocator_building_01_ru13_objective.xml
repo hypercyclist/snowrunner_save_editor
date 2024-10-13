@@ -1,0 +1,122 @@
+<ModelBrand
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="state_01">
+			<Body Collisions="Dynamic" ModelFrame="state_02" />
+			<Body Collisions="Dynamic" ModelFrame="state_03" />
+		</Body>
+	</PhysicsModel>
+	
+    <Subset IsDefault="true" Name="state_start">
+		<Mesh Name="state_01" />
+		<CdtMesh Name="cdt_state_01" />
+    </Subset>
+	
+	<Subset Name="state_end">
+      	 	<Mesh Name="state_02" />
+		<CdtMesh Name="cdt_state_02" />
+		<Mesh Name="state_03" />
+		<CdtMesh Name="cdt_state_03" />
+
+		<AnimTrack Name="stage_1_anim" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrackSubset Name="anim_loop" />
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_locator/actor_locator_rotate_loop" FadeInTime="1.0" FadeOutTime="1.0" RangeMin="25" RangeMax="120" IsLoop="true"/>
+		</OnSubsetActivateEvent>
+	</Subset>
+	
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh"/>	
+	</AnimSubset>
+	
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="30">
+			<Sound Name="actors/actor_construction/actor_construct_radiolocator" Range="200" Volume="1" />
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.125; 3.974; -11.492)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.125; 3.974; -11.465)" />
+
+		</AnimEvent>
+		<AnimEvent Key="35">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.125; 0.356; -11.492)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.125; 0.356; -11.465)" />
+		</AnimEvent>
+		<AnimEvent Key="40">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.108; 3.974; -7.563)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.108; 3.974; -7.563)" />
+		</AnimEvent>
+		<AnimEvent Key="45">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-7.925; 3.974; -11.465)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-7.925; 3.974; -11.465)" />
+		</AnimEvent>
+		<AnimEvent Key="50">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-7.925; 3.974; -11.465)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-7.925; 3.974; -11.465)" />
+		</AnimEvent>
+		<AnimEvent Key="55">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-7.925; 0.356; -11.465)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-7.925; 0.356; -11.465)" />
+		</AnimEvent>
+		<AnimEvent Key="60">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.125; 4.721; -7.267)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.125; 4.721; -7.267)" />
+		</AnimEvent>
+		<AnimEvent Key="65">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.107; 0.356;  -7.267)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.107; 0.356;  -7.267)" />
+		</AnimEvent>
+		<AnimEvent Key="70">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.107; 4.721; 3.583)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.107; 4.721; 3.583)" />
+		</AnimEvent>
+		<AnimEvent Key="75">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(2.107; 0.356;  3.583)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(2.107; 0.356;  3.583)" />
+		</AnimEvent>
+		<AnimEvent Key="80">
+			<SFX Dir="(0; -1; 0)" Name="bridge_sparks_01" Pos="(-2.203; 4.721; -7.267)" />
+			<SFX Dir="(0; -1; 0)" Name="conveyor_smoke_02" Pos="(-2.203; 4.721; -7.267)" />
+		</AnimEvent>
+
+		<AnimEvent Key="90">
+
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.896; 7.906; -1.967)" />
+	
+
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(0; 6.29; -1.471)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(0; 6.29; -5.892)" />
+
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(4.896; 7.906; -1.967)" />
+
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-4.896; 7.906; -1.967)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-4.896; 11.803; -2.645)" />
+
+
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0; 6.29; -1.471)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(0; 6.29; -5.892)" />
+		</AnimEvent>
+		<AnimEvent Key="95">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(4.896; 11.803; -2.645)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(4.896; 11.803; -2.645)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.507; 7.528; -0.974)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(2.507; 7.528; -0.974)" />
+		</AnimEvent>
+		<AnimEvent Key="93">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-4.896; 7.906; -1.967)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(-4.896; 7.906; -1.967)" />
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.485; 12.588; -1.834)" />
+			<SFX Dir="(0; -2; 0)" Name="conveyor_smoke_02" Pos="(2.485; 12.588; -1.834)" />
+		</AnimEvent>
+		<AnimEvent Key="97">
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(-4.896; 11.803; -2.645)" />
+
+			<SFX Dir="(0; -2; 0)" Name="bridge_sparks_01" Pos="(2.507; 7.528; -0.974)" />
+
+
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/radiolocator_building_01_ru13_objective_lmk" />
+</ModelBrand>

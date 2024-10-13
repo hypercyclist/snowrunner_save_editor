@@ -1,0 +1,35 @@
+<ModelBrand
+	DayShadowOffsetMult = "2.0"
+	DynamicModel="true"
+	NightLightingShadowsAllowCap="true"
+	
+>
+	<Subset IsDefault="true" Name="build_stage_0">
+		<Mesh Name="main_pole" />
+		<CdtMesh Name="main_pole" />
+		<Mesh Name="vent_static" />
+		<CdtMesh Name="vent_static" />
+	</Subset>
+
+	<Subset Name="build_complete">
+		<OnSubsetActivateEvent>
+			<Sound Name="actors/actor_construction/actor_construct_wind_turbine" Range="200" Volume="1" />
+			<Sound Name="actors/actor_wind_turbine/actor_wind_turbine_04_loop" FadeInTime="1.5" FadeOutTime="1.0" RangeMin="30" RangeMax="150" IsLoop="true"/>
+		</OnSubsetActivateEvent>
+		<Mesh Name="main_pole" />
+		<CdtMesh Name="main_pole" />
+		<Mesh Name="vent_anim" />
+		<CdtMesh Name="vent_anim" />
+		<AnimTrackSubset Name="anim_loop" />
+	</Subset>
+	
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="main_pole">
+			<Body Collisions="Dynamic" ModelFrame="vent_static" />
+			<Body Collisions="Dynamic" ModelFrame="vent_anim" />
+		</Body>
+	</PhysicsModel>
+
+	<Landmark Mesh="landmarks/wind_turbine_ru08_lmk" />
+	
+</ModelBrand>

@@ -1,0 +1,23 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/mtb_8106_tuning/mtb_8106_threshold_default">
+		<Body Mass="10" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="default"
+		Category="fenders"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SILLS_STOCK_COVERS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SILLS_STOCK_COVERS_NAME"
+		/>
+		<RequiredAddonType Type="MTB8106Threshold" />
+		<InstallSocket Type="MTB8106Threshold" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,578 @@
+<_templates Include="trucks">
+	<Wheel>
+		<RearWheel
+			ConnectedToHandbrake="true"
+			Location="rear"
+			Torque="default"
+		/>
+		<FrontWheel
+			Location="front"
+			SteeringAngle="40"
+			SteeringCastor="8"
+			SteeringJointOffset="0.2"
+			Torque="none"
+			ParentFrame="BoneCabin_cdt"
+		/>
+	</Wheel>
+	<Body>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="1" Spring="250" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.01"
+		DiffLockType="None"
+		EngineIconMesh="env/engine_default"
+		EngineIconScale="1.3"
+		EngineStartDelay="0.8"
+		ExhaustStartTime="0.9"
+		FuelCapacity="280"
+		Responsiveness="0.2"
+		SteerSpeed="0.017"
+		TruckImage="fordclt9000v2mchr"
+		TruckType="HIGHWAY"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim_1"
+			DefaultTire="highway_1"
+			DefaultWheelType="wheels_medium_double"
+		>
+			<Wheel _template="FrontWheel" Pos="(3.529; 0.55; 1.007)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(3.529; 0.55; 1.007)" />
+			<Wheel _template="RearWheel" Pos="(-2.062; 0.55; 0.905)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-2.062; 0.55; 0.905)" />
+			<Wheel _template="RearWheel" Pos="(-3.381; 0.55; 0.905)" />
+			<Wheel _template="RearWheel" RightSide="true" Pos="(-3.381; 0.55; 0.905)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="ford_clt_suspension_default"
+			Type="s_ford_clt9000"
+			MaxWheelRadiusWithoutSuspension="0.7"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack
+			Frame="BoneRack"
+			FrameSteerLeft="BoneRackLeft"
+			FrameSteerRight="BoneRackRight"
+			RackHalfSizeZ="0.8"
+		/>
+		<Steam Origin="(2.206; 0.946; 0)" ParentFrame="BoneCabin_cdt" />
+		<Steam Origin="(3.753; 1.221; 0)" Scale="0.5" ParentFrame="BoneCabin_cdt" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			AirHissInterval="12.0"
+			DisableReversePitch="true"
+			Origin="(3.1; 1.55; 0)"
+			MinDist="10.0"
+			ParentFrame="BoneCabin_cdt"
+		>
+			<EngineTrans	Sound="" />
+			<Reverse		Sound="trucks/ws_6900xd_twin/ws_6900xd_twin_back_beeper" />
+			<Honk			Sound="trucks/ford_clt9000/ford_clt9000_horn" />
+			<BrakeRelease	Sound="trucks/ford_clt9000/ford_clt9000_brake_release" />
+			<EngineRev		Sound="trucks/ford_clt9000/ford_clt9000_rev" />
+			<EngineAccel	Sound="trucks/ford_clt9000/ford_clt9000_acc" />
+			<EngineStart	Sound="trucks/ford_clt9000/ford_clt9000_start" />
+			<EngineStop		Sound="trucks/ford_clt9000/ford_clt9000_stop" />
+			<EngineIdle		Sound="trucks/ford_clt9000/ford_clt9000_idle" />
+			<EngineIdle_2d	Sound="trucks/ford_clt9000/ford_clt9000_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ford_clt9000/ford_clt9000_low" />
+			<EngineLow_2d	Sound="trucks/ford_clt9000/ford_clt9000_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ford_clt9000/ford_clt9000_high" />
+			<EngineHigh_2d	Sound="trucks/ford_clt9000/ford_clt9000_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="trucks/ford_clt9000/ford_clt9000_heavy" />
+			<EngineHeavy_2d	Sound="trucks/ford_clt9000/ford_clt9000_heavy_2d"	IsSound2D="true" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+			<Shaft SocketPointA="Shaft2a" SocketPointB="Shaft2b" />
+		</Shafts>
+		<OcclusionMap HalfSizeZ="2" MinX="-4.462" MaxX="4.809" />
+		<LimitedFluid Center="(1.527; 0.579; 0.818)" LengthX="1.58" RadiusY="0.37" RadiusZ="0.37" Type="Cylinder" />
+		<LimitedFluid Center="(1.527; 0.579; -0.818)" LengthX="1.58" RadiusY="0.37" RadiusZ="0.37" Type="Cylinder" />
+		<Intake Dir="(1; 0; 0)" Origin="(4.203; 1.441; 0)" Size="1" />
+		<GearboxSocket Default="g_truck_default" Type="gearboxes_trucks" />
+		<FuelTank DamageCapacity="50" />
+		<EngineSocket Default="us_truck_old_engine_0" Type="e_us_truck_old, e_us_truck_old_clt" />
+		<Driver Pos="(3.166; 2.072; 0.793)" SteeringWheelPos="(3.551; 2.396; 0.788)" ParentFrame="BoneCabinPrismatic_cdt" />
+		<Dashboard>
+			<region:default>
+				<Gauge Damping="0.9" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 1.031)" OutputAngles="(-50;90)" />
+				<Gauge Damping="0.9996" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.963)" OutputAngles="(-120;80)" />
+				<Gauge Damping="0.9" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.893)" OutputAngles="(-40;70)" />
+				<Gauge Damping="0.9" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.822)" OutputAngles="(-135;100)" />
+				<Gauge Damping="0.9997" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.753)" OutputAngles="(-120;95)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.683)" OutputAngles="(20;150)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.613)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.438; 0.613)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.437; 0.545)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.822; 2.438; 0.545)" OutputAngles="(-85;100)" />
+				<Gauge Damping="0.5" Dir="(-2; 1; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/ford_clt9000_arrow_02" Org="(3.791; 2.354; 0.859)" OutputAngles="(-135;100)" />
+				<Gauge Dir="(-2; 1; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/ford_clt9000_arrow_02" Org="(3.791; 2.354; 0.717)" OutputAngles="(-135;100)" />
+				<Gauge Damping="0.9994" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.722; 2.438; 0.283)" OutputAngles="(-90;100)" />
+				<Gauge Damping="0.9992" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.666; 2.438; 0.233)" OutputAngles="(-90;100)" />
+				<Gauge Damping="0.9992" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ford_clt9000_arrow_01" Org="(3.612; 2.438; 0.184)" OutputAngles="(20;110)" />
+			</region:default>
+			<region:cis>
+				<Gauge Damping="0.9" Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 1.031)" OutputAngles="(-50;90)" />
+				<Gauge Damping="0.9996" Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.963)" OutputAngles="(-120;80)" />
+				<Gauge Damping="0.9" Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.893)" OutputAngles="(-40;70)" />
+				<Gauge Damping="0.9" Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.822)" OutputAngles="(-135;100)" />
+				<Gauge Damping="0.9997" Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.752)" OutputAngles="(-120;95)" />
+				<Gauge Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.683)" OutputAngles="(20;150)" />
+				<Gauge Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.613)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.410; 0.613)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.409; 0.545)" OutputAngles="(-85;100)" />
+				<Gauge Dir="(-0.927; 0.376; 0)" InputRange="(0;1)" InputType="none" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.824; 2.410; 0.545)" OutputAngles="(-85;100)" />
+				
+				<Gauge Damping="0.5" Dir="(-0.927;0.376; 0)" InputRange="(0;1)" InputType="rpm" Mesh="trucks/arrows/awmg_ac1610_arrow_02" Org="(3.794; 2.325; 0.858)" OutputAngles="(-135;100)" />
+				<Gauge Dir="(-0.927;0.376; 0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/awmg_ac1610_arrow_02" Org="(3.794; 2.325; 0.717)" OutputAngles="(-135;100)" />
+				<Gauge Damping="0.9994" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.723; 2.409; 0.282)" OutputAngles="(-90;100)" />
+				<Gauge Damping="0.9992" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.667; 2.409; 0.232)" OutputAngles="(-90;100)" />
+				<Gauge Damping="0.9992" Dir="(-0.626; 0.359; 0.692)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/awmg_ac1610_arrow_01" Org="(3.612; 2.409; 0.182)" OutputAngles="(20;110)" />
+			</region:cis>
+		</Dashboard>
+		<Damage>
+			<DamageArea Type="Engine" Min="(2.5; 0.52; -0.6)" Max="(4.200; 2; 0.6)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(0.7; 0.2; -1.21)" Max="(2.4; 1; 1.21)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<CompatibleWheels OffsetZ="0.02" Scale="0.50" Type="wheels_medium_double" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.55" Type="wheels_medium_double" />
+
+		<CompatibleWheels OffsetZ="0.02" Scale="0.50" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.50" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.50" Type="wheels_medium_allterrain_double" />
+
+		<CompatibleWheels OffsetZ="0.02" Scale="0.55" Type="wheels_medium_offroad_double" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.55" Type="wheels_medium_highway_double" />
+		<CompatibleWheels OffsetZ="0.02" Scale="0.55" Type="wheels_medium_allterrain_double" />
+
+		<Camera Center="(-1.5; 0; 0)" ParentFrame="BoneCabin_cdt">
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/ford_clt9000_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/ford_clt9000_glass__sh_d.tga"
+				ViewPos="(3.169; 2.799; 0.752)"
+			>
+				<Rear ViewPosOffset="(0.08; -0.1; 0.575)" />
+				<Mirror
+					ClipDir="(-0.902; 0; -0.431)"
+					ClipOffset="0.12"
+					FOVScale="2"
+					MeshFrame="mirror_left"
+					ReflectionDir="(-0.902; 0; -0.431)"
+					Size="(0.193; 0.462)"
+					Pos="(3.472; 2.726; 1.466)"
+				>
+					<SecondaryView
+						ClipDir="(-0.902; 0; -0.431)"
+						ClipOffset="0.1"
+						CurveAngle="10"
+						FOVScale="1"
+						MeshFrame="mirror_left_1"
+						Size="(0.219; 0.219)"
+						Pos="(3.397; 2.434; 1.478)"
+					/>
+				</Mirror>
+				<Mirror
+					ClipDir="(-0.764; 0; 0.645)"
+					ClipOffset="0.2"
+					FOVScale="2.5"
+					MeshFrame="mirror_right"
+					ReflectionDir="(-0.764; 0; 0.645)"
+					Size="(0.193; 0.462)"
+					Pos="(3.354; 2.726; -1.456)"
+				>
+					<SecondaryView
+						ClipDir="(-0.764; 0; 0.645)"
+						ClipOffset="0.2"
+						CurveAngle="10"
+						FOVScale="1.2"
+						MeshFrame="mirror_right_1"
+						Size="(0.219; 0.219)"
+						Pos="(3.265; 2.435; -1.427)"
+					/>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+			<Axle Frame="BoneAxle2" />
+			<Axle Frame="BoneAxle3" />
+		</Axles>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/ford_clt9000">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(-0.8; 0; 0)"
+			ImpactType="Truck"
+			Mass="4000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.4; 0.7; 0)"
+				ForceBodyParams="true"
+				ImpactType="Truck"
+				Mass="3000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					PivotOffset="(0; 0; 0)"
+					Type="Hinge"
+					MinLimit="-22"
+					MaxLimit="22"
+				>
+					<Motor Damping="24000" Spring="240000" Type="Spring" />
+				</Constraint>
+				<Body Mass="150" ModelFrame="BoneCabinPrismatic_cdt">
+					<Constraint
+						AxisLocal="(0; 1; 0)"
+						Type="Prismatic"
+						MinLimit="-0.1"
+						MaxLimit="0.02"
+					>
+						<Motor Damping="3500" Spring="80000" Type="Spring" />
+					</Constraint>
+					<Body
+						Collisions="None"
+						LinearDamping="20"
+						Mass=".3"
+						ModelFrame="BoneBeltPrismatic_cdt"
+					>
+						<Constraint
+							AxisLocal="(1; 0; 0)"
+							PivotOffset="(0; 0; 0)"
+							Type="Prismatic"
+							MinLimit="-0.07"
+							MaxLimit="0.20"
+						>
+							<Motor Damping="500" Spring="500" Type="Spring" />
+						</Constraint>
+						<Body Collisions="None" Mass="1" ModelFrame="BoneBeltHinge_cdt">
+							<Constraint
+								AxisLocal="(0; 1; 0)"
+								PivotOffset="(0; 0; 0)"
+								Type="Hinge"
+								MinLimit="-15"
+								MaxLimit="-2"
+							>
+								<Motor Damping="1" Spring="1" Type="Spring" />
+							</Constraint>
+						</Body>
+					</Body>
+					<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+					<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+					<Body _template="Mudguard" ModelFrame="BoneLeftMudguard_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" MinLimit="4" MaxLimit="22" />
+					</Body>
+					<Body _template="Mudguard" ModelFrame="BoneRightMudguard_cdt">
+						<Constraint AxisLocal="(1; 0; 0)" MinLimit="4" MaxLimit="22" />
+					</Body>
+					<Body _template="Mudguard" ModelFrame="BoneCabinTrinket01_cdt">
+						<Constraint AxisLocal="(0; 0; 1)" MinLimit="-40" MaxLimit="40" />
+					</Body>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						ImpactType="Truck"
+						Mass="5"
+						ModelFrame="BoneSunshieldLeft_cdt"
+					>
+						<Constraint
+							AxisLocal="(0; 0; -1)"
+							PivotOffset="(0; 0; 0)"
+							Type="Hinge"
+							MinLimit="-11"
+							MaxLimit="11"
+						>
+							<Motor Damping="0.010" Spring="100" Type="Spring" />
+						</Constraint>
+					</Body>
+					<Body
+						CenterOfMassOffset="(0; 0; 0)"
+						ImpactType="Truck"
+						Mass="5"
+						ModelFrame="BoneSunshieldRight_cdt"
+					>
+						<Constraint
+							AxisLocal="(0; 0; -1)"
+							PivotOffset="(0; 0; 0)"
+							Type="Hinge"
+							MinLimit="-11"
+							MaxLimit="11"
+						>
+							<Motor Damping="0.011" Spring="110" Type="Spring" />
+						</Constraint>
+					</Body>
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<Light _template="IgnitionSignalWhite" Pos="(4.5; 1.013; 1.1)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalWhite" Pos="(4.5; 1.013; -1.1)" ParentFrame="BoneCabin_cdt" />
+			<Light _template="IgnitionSignalRed" Color="g(255; 10; 10) x 0.5" Pos="(-4.4; 1.025; -0)" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 0) x 0.3" Size="0.3" Pos="(3.835; 3.261; 0.22)" ParentFrame="BoneCabinPrismatic_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 0) x 0.3" Size="0.3" Pos="(3.835; 3.261; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 0) x 0.3" Size="0.3" Pos="(3.835; 3.261; -0.218)" ParentFrame="BoneCabinPrismatic_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 0) x 0.3" Size="0.3" Pos="(3.768; 3.228; 1.053)" ParentFrame="BoneCabinPrismatic_cdt" />
+			<Flare _template="MarkerBeacon" Color="g(255; 165; 0) x 0.3" Size="0.3" Pos="(3.768; 3.228; -1.052)" ParentFrame="BoneCabinPrismatic_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".25" Pos="(4.164; 1.255; 1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".25" Pos="(4.164; 1.255; -1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".25" Pos="(4.164; 1.121; 1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Size=".25" Pos="(4.164; 1.121; -1.083)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<Model _template="HeadLightRay" Org="(4.164; 1.255; 1.083)" ParentFrame="BoneCabin_cdt" />
+			<Model _template="HeadLightRay" Org="(4.164; 1.255; -1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".3" Pos="(4.164; 1.255; 1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.6" Size=".3" Pos="(4.164; 1.255; -1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.164; 1.255; 1.083)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Pos="(4.164; 1.255; -1.083)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<Landmark Mesh="landmarks/ford_clt9000_lmk" MinScale="1.8" MaxScale="3.8" />
+	<HeadLight _template="Default" Pos="(4.21; 0.864; 0)" ParentFrame="BoneCabin_cdt" />
+	<GameData
+		Country="US,NE,CE"
+		Price="26300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(4.200; 0.757; 0.469)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(4.200; 0.757; -0.469)" ParentFrame="BoneCabin_cdt" />
+		<WinchSocket Pos="(-4.181; 0.5; 0)" />
+		<WinchSocket Pos="(0.462; 0.655; 0.431)" />
+		<WinchSocket Pos="(0.462; 0.655; -0.431)" />
+		<UiDesc>
+			<region:default
+				UiDesc="UI_VEHICLE_FORD_CLT9000_DESC"
+				UiIcon30x30="highwayVehicleImg30"
+				UiIcon328x458="shopImgFordCLT9000"
+				UiIcon40x40="highwayVehicleImg"
+				UiIconLogo="FordLogoAlt80"
+				UiName="UI_VEHICLE_FORD_CLT9000_NAME"
+			/>
+			<region:cis
+				UiDesc="UI_VEHICLE_AWMG_AC1610_DESC"
+				UiIcon30x30="highwayVehicleImg30"
+				UiIcon328x458="shopImgAwmgAc1610"
+				UiIcon40x40="highwayVehicleImg"
+				UiIconLogo="AWMGLogo80"
+				UiName="UI_VEHICLE_AWMG_AC1610_NAME"
+				TruckImage="awmgAc1610mchr"
+			/>
+		</UiDesc>
+		<CustomizationCameras>
+			<CameraPos FOV="32.0" Interior="true" Name="roof_sticker" InterestPosition="(3.371; -0.191; -0.371)" Position="(8.408; 5.903; -0.116)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_1" InterestPosition="(8.932; 4.601; 2.01)" Position="(5.997; 2.486; -1.060)" />
+			<CameraPos FOV="32.0" Name="addon_1" InterestPosition="(1.007; 1.843; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-7.665; 3.779; 7.017)" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(2.092; 0.416; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.323; 3.025; -4.631)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(11.10; 2.8; 2.620)" Position="(5.807; 2.8; -0.987)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(5.601; 1.97; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(3.352; 1.747; -7.216)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(10.18; 0.023; 2.76)" Position="(6.142; 3.001; 0.309)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_r_sticker" InterestPosition="(7.103; 1.582; 0.665)" Position="(4.019; 2.313; 3.299)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.727; 2.091; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(0.191; 5.142; -4.634)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(7.351; 2.774; -0.758)" Position="(10.93; 3.574; 0.962)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.997; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.57; 1.44; -3.425)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_3" InterestPosition="(10.261; 0.023; 3.221)" Position="(6.171; 2.697; -0.585)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_2" InterestPosition="(8.504; 4.57; 3.021)" Position="(6.137; 2.424; -0.378)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(6.27; 2.279; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.866; 5.284; -4.55)" />
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" InterestPosition="(10.18; 1.238; 1.973)" Position="(6.149; 2.681; -0.009)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.855; 0.77; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(8.851; 0.966; -4.483)" />
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.997; 1.735; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.57; 1.44; -3.425)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(0.479; 0.992; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-5.767; 1.805; 2.899)" />
+			<CameraPos FOV="32.0" Interior="true" Name="door_l_sticker" InterestPosition="(5.338; 1.639; 0)" Position="(3.961; 2.295; -3.332)" />
+			<CameraPos FOV="32.0" Interior="true" Name="curtain" InterestPosition="(10.18; 2.167; 2.615)" Position="(5.807; 2.8; -0.987)" />
+		</CustomizationCameras>
+		<CraneSocket Pos="(4.200; 0.757; 0.469)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(4.200; 0.757; -0.469)" ParentFrame="BoneCabin_cdt" />
+		<CraneSocket Pos="(-4.181; 0.5; 0)" />
+		<CraneSocket Pos="(0.462; 0.655; 0.431)" />
+		<CraneSocket Pos="(0.462; 0.655; -0.431)" />
+		<AddonSockets>
+			<Socket Names="FordClt9000SpareWheel" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneCabin_cdt" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="LargeSemitrailer, LargeSemitrailerOiltank" Offset="(-1.713; 1.479; 0)" />
+			<Socket Names="Semitrailer, SemitrailerOiltank" Offset="(-2.713; 1.479; 0)" />
+			<Socket Names="Trailer" Offset="(-4.23; 0.51; 0.009)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="MetalDetector" NamesBlock="FrameAddonKung, FrameAddonTank, FrameAddonMaintainer, FrameAddon, BigCraneUs, BigCraneRu" Offset="(0.385; -0.081; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="MinicraneUS" NamesBlock="FrameAddonKung, FrameAddonTank" Offset="(0.95; 0.97; 0)" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FrameAddonTowPlatform" Offset="(-0.45; 0.971; 0)" NamesBlock="MinicraneUS, MetalDetector, Trailer" />		
+			<Socket Names="LogLift" NamesBlock="MetalDetector, MinicraneUS" Offset="(0.836; 0.976; 0)" />
+			<Socket Names="BunkLog" NamesBlock="MinicraneUS, MetalDetector" Offset="(-4.229; 0.976; 0)" />
+			<Socket Names="FrameAddonLogShort" NamesBlock="MinicraneUS, MetalDetector" Offset="(-0.874; 0.972; 0)" />
+			<Socket Names="SaddleLow1" Offset="(-2.71; 0.972; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.02)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.02)" />
+			</Socket>
+			<Socket Names="SaddleHigh" Offset="(-1.71; 0.972; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.02)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.02)" />
+			</Socket>
+			<Socket Names="FrameAddon" Offset="(-0.95; 0.971; 0)" ParentFrame="BoneChassis_cdt">
+				<AddonsShift Offset="(-1; 0; 0)" Types="MinicraneUS" />
+			</Socket>
+			<Socket Names="FrameAddonKung" Offset="(-2.15; 1.050; 0)" ParentFrame="BoneChassis_cdt">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; -0.08)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0.08)" />
+			</Socket>
+			<Socket Names="FrameAddonTank" Offset="(-2; 0.971; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="FrameAddonMaintainer" NamesBlock="MinicraneUS, Trailer" Offset="(-1.81; -0.06; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="BigCraneUs" NamesBlock="MinicraneUS, FordClt9000Top" Offset="(-2; 1.072; 0)">
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; -0.1; 0)" />
+			</Socket>
+			<!-- <Socket Names="BigCraneRu" NamesBlock="MinicraneUS, Semitrailer, FordClt9000Top" Offset="(-1.75; 0.98; 0)" /> -->
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="UsLoadLogsShort" Offset="(0.5; -0.23 0)" />
+			<Socket Names="UsLoadLogsShortLoaderA" Offset="(0.5; -0.23 0)" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_bumper_default">
+			<Socket Names="FordClt9000Bumper" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_front_default">
+			<Socket Names="FordClt9000Front" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_fender_front_default">
+			<Socket Names="FordClt9000FenderFront" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_exhaust_default">
+			<Socket Names="FordClt9000Exhaust" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_rear_default">
+			<Socket Names="FordClt9000Rear" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordClt9000Top" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordClt9000FenderSide" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="FordClt9000Snorkel" Offset="(0; 0; 0)" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="fordClt9000Sticker_Door_L" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="fordClt9000Sticker_Door_R" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="fordClt9000Sticker_Roof" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ford_clt9000_horn">
+			<Socket Names="Ford_Clt9000Horn" Offset="(0; 0; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffDashboard"
+				Offset="(3.944; 2.349; -0.172)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x1_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x1_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x1_03"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x2_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldLeft_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x2_02"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneSunshieldRight_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_1x4_01"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_GlassTop"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="fordClt9000Sticker_GlassBottom"
+				Offset="(0; 0; 0)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(3.648; 3.070; 0.368)"
+				ParentFrame="BoneCabinPrismatic_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="StuffCurtainFordClt9000" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="AddonHorns" NamesBlock="FordClt9000Top" Offset="(3.137; 3.182; 0)" ParentFrame="BoneCabinPrismatic_cdt" />
+		</AddonSockets>
+	</GameData>
+</Truck>

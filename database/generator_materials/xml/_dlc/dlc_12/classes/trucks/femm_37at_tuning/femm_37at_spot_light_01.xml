@@ -1,0 +1,41 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/femm_37at_tuning/femm_37at_spot_light_01" />
+	<ModelAttachments>
+		<Ignition>
+			
+		</Ignition>
+		<MainHeadLight>
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; 0.659)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; 0.592)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; 0.523)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; 0.455)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; -0.659)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; -0.592)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; -0.523)" />
+			<Flare _template="HeadLight" Color="g(215; 215; 215) x 0.5" AspectRatio="1" ColorMultAtDay="0.35" Dir="(1; 0; 0)" Size="0.15" Pos="(6.536; 4.076; -0.455)" />
+			<Model _template="HeadLightRay" Dir="(1; -0.25; 0)" Org="(6.534; 4.077; 0.558)" />
+			<Model _template="HeadLightRay" Dir="(1; -0.25; 0)" Org="(6.534; 4.077; -0.558)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.1" Size="0.30" Pos="(6.534; 4.077; 0.498)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.1" Size="0.3" Pos="(6.534; 4.077; -0.498)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.1" Size="0.3" Pos="(6.534; 4.077; -0.619)" />
+			<Flare _template="HeadLight" Color="g(255; 235; 205) x 0.1" Size="0.3" Pos="(6.534; 4.077; 0.619)" />
+		</MainHeadLight>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="roof"
+		Category="top"
+		Price="1000"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFBAR_FOGLIGHTS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFBAR_FOGLIGHTS_NAME"
+		/>
+		<InstallSocket Type="Femm37AtSpotlight" />
+	</GameData>
+</TruckAddon>

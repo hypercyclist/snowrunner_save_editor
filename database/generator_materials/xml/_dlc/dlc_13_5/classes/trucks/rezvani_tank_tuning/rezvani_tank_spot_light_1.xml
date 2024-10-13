@@ -1,0 +1,60 @@
+<_templates Include="trucks" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_spot_light_1" />
+	<ModelAttachments>
+		<MainHeadLight>
+			<Model _template="HeadLightRay" Mesh="env/light_ray_white" Org="(0.432; 2.042; -0.539)" Scale="(0.4; 0.4; 0.3)" />
+			<Model _template="HeadLightRay" Mesh="env/light_ray_white" Org="(0.432; 2.042; 0.539)" Scale="(0.4; 0.4; 0.3)" />
+		</MainHeadLight>
+		<Ignition>
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.636)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.575)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.540)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.507)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.477)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; -0.443)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.636)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.575)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.540)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.507)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.477)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.056; 0.443)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.636)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.575)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.540)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.507)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.477)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; -0.443)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.636)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.603)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.575)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.540)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.507)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.477)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Dir="(1; 0; 0)" Color="g(197; 233; 250) x 0.15" Size="0.1" Pos="(0.434; 2.028; 0.443)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+	</ModelAttachments>
+	<MainHeadLight _template="Multiply2" />
+	<GameData
+		CameraPreset="addon_2"
+		Category="fender_front"
+		Price="700"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_YAR_87_SPOTLIGHT_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_YAR_87_SPOTLIGHT_NAME"
+		/>
+		<RequiredAddon Types="rezvani_tank_roofrack_1" />
+		<InstallSocket Type="RezvaniTankSpotlight" />
+	</GameData>
+</TruckAddon>

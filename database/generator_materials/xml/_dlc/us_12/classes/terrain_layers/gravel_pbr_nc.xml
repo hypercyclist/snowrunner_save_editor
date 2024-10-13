@@ -1,0 +1,10 @@
+<MaterialType 
+	Texture="tiles/gravel_pbr_test2__d_a.tga" 
+	Normal="tiles/gravel_pbr_test_relief__d_a.tga"
+	NoGrass="true"
+	Sound="surfaces/surf_gravel_rnd"
+	WheelTracks="0"
+	EndEffectSound="surfaces/hit/hit_gravel_rnd"
+	SkidSound="surfaces/skidding/skidding_gravel_loop"
+	IsExtrudable="false"
+/>

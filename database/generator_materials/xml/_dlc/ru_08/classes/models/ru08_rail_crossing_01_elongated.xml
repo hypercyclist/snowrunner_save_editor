@@ -1,0 +1,8 @@
+<ModelBrand NightLightingShadowsAllowCap="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/ru08_rail_crossing_01_elongated_lmk" />
+</ModelBrand>

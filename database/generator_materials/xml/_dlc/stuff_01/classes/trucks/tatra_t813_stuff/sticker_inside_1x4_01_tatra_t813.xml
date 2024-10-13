@@ -1,0 +1,15 @@
+<_parent File="sticker_inside_1x1_01_tatra_t813" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tatra_t813_stuff/sticker_inside_1x4_01_tatra_t813" />
+	<GameData
+		CameraPreset="sticker_2"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_STICKER_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME"
+		/>
+		<InstallSocket _noinherit="true" Type="tatraT813Sticker_1x4_01" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,80 @@
+<DayTimeState
+	ColorLUT="lut/day_us_12__vol_uncmp.tga"
+	FogColor="g(143; 175; 255) x 1.8"
+	FogScatterColor="g(255; 135; 0) x 2.15"
+	HorizonColor="g(192; 202; 255) x 2.5"
+	HorizonHeight="0.2"
+	HorizonAlphaHeight="0.95"
+	HorizonSharpness="3.69"
+	SkySharpness="2.75"
+	SSAOColor="g(193; 205; 239; 160) x 0.01"
+	SkyBloomColor="g(182; 189; 234; 90) x 2"
+	SkyColor="g(172; 175; 187) x 0.8"
+	SunColor="g(255; 169; 153) x 1.14"
+	SunDir="(1; -0.275; 0)"
+	
+	WaterCubeMapIntensity="0.39"
+	VignetteFlareColor="g(255; 255; 255; 10)"
+	LightPbrMult="3"
+	ToneMapWhite="2"
+	
+	EnvMap="env/evn_taim_01__d_ggxrefl.tga"
+	CubeMapScale="2"
+
+	SparklesIntensity="5.0"
+		
+	HdrAdaptationMinLum="1.2"
+	HdrAdaptationMaxLum="800.0"
+	TonemapWhitePoint="2.0"
+	HdrAdaptationSpeed="0.1"
+	HdrExposureScale="1"
+	HdrExposureScaleX="1"
+	
+	TonemapA="0.25"
+	TonemapB="0.03"
+	TonemapC="0.6"
+	TonemapD="0.6"
+	TonemapE="0.2"
+	TonemapF="0.04"
+	
+	BloomEnabled="true"
+	BloomPoint="0.139"
+	BloomIntensity="0.5"
+	BloomGamma="1.2"
+	BloomHarmonicsTint0="(255; 255; 255)"
+	BloomHarmonicsTint1="(255; 255; 255)"
+	BloomHarmonicsTint2="(255; 255; 255)"
+	BloomHarmonicsTint3="(255; 255; 255)"
+	BloomHarmonicsTint4="(255; 255; 255)"
+		
+	RadiusMinSSAO="1.5"
+	RadiusMaxSSAO="4.0"
+	
+	ShadowMapSplitSize="50.0"
+	ShadowMapResolution="2048"
+	TerrainHideDist = "800"
+>
+    <Sky>
+		<Lightshaft
+			Tint="g(255; 70; 10)"
+			Intensity="0.015"
+			BlurRadius="12"
+			FalloffRadius="0.5"
+			FalloffInnerRadius="0.04"
+			IntensityDayNightTransitionOffset="1.0"
+			IntensityDayNightTransitionLength="0.15"
+		/>
+		<Flare
+			AspectRatio="1.0"
+			Color="g(228; 165; 38) x 0.08"
+			Size="0"
+			Texture="sfx/flare_sky__s_d.tga"
+		/>
+	</Sky>
+	<Fog Density="0.0003" StartDist="5" ScatterAngle="90" Alpha="0.33" Height="239" UpperScale="0.039" LowerScale="0.0"/>
+	<SecondaryFog Density="0.0025" Height="10" UpperScale="0.05" LowerScale="0.0"/>
+	<DistantFog StartDistance="50" EndDistance="3000" Height="300" DensityMultiplier="1.5"/>
+	<VolumeFog Density="0.05" />
+	<Dof NearEnd="3.0" NearRange="0.5" />
+	<Ambient NegY="g(179; 179; 179) x 1.2" MidY="g(192; 172; 180) x 1.69" PosY="g(153; 139; 142) x 1.9" />
+</DayTimeState>

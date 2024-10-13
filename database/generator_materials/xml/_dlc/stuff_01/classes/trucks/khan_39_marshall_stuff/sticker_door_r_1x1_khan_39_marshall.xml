@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/khan_39_marshall_stuff/sticker_door_r_1x1_khan_39_marshall" />
+	<GameData>
+		<InstallSocket Type="khan39MarshallSticker_Door_R" />
+	</GameData>
+</TruckAddon>

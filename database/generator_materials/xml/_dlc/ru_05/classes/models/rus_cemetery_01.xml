@@ -1,0 +1,38 @@
+<_templates Include="models" />
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body Collisions="None" Mass="0" ModelFrame="BoneRoot">
+			<Body _template="Sign" ModelFrame="BonePart1">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart2">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart3">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart4">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart5">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart6">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart7">
+				<Constraint _template="Sign" />
+			</Body>
+			<Body _template="Sign" ModelFrame="BonePart8">
+				<Constraint _template="Sign" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion
+		Size="(9.0; 13.0)" 
+		Texture="occlusion_rus_glg_cemetery_01.tga"
+	/>
+</ModelBrand>

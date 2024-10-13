@@ -1,0 +1,16 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(7.0; 16.0)" 
+		Texture="occlusion_rus_estocada_01.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_estocada_01_lmk"/>
+</ModelBrand>

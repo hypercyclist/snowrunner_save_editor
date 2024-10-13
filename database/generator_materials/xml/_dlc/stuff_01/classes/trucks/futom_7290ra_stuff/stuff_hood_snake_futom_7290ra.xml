@@ -1,0 +1,18 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/futom_7290ra_stuff/stuff_hood_snake_futom_7290ra" />
+	<GameData
+		CameraPreset="hood_ornament"
+		Category="hood_ornament"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_HOOD_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_STUFF_HOOD_SNAKE_NAME"
+		/>
+		<InstallSocket Type="StuffHoodFutom7290Ra" />
+	</GameData>
+</TruckAddon>

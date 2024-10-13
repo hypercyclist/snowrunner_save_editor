@@ -1,0 +1,472 @@
+<_templates Include="trucks">
+	<Wheel>
+		<FrontWheel
+			Location="front"
+			ConnectedToHandbrake="true"
+			SteeringAngle="36"
+			SteeringJointOffset="0.45"
+			Torque="full"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<RearWheel
+			Location="rear"
+			ConnectedToHandbrake="true"
+			Torque="default"
+		/>
+	</Wheel>
+	<Body>
+		<Suspension Collisions="None" Mass="1000">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-20"
+				MaxLimit="20"
+			>
+				<Motor Damping="1200" Spring="400" Type="Spring" />
+			</Constraint>
+		</Suspension>
+		<SideMirror Collisions="None" Mass="5">
+			<Constraint
+				AxisLocal="(0; 1; 0)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.7" Spring="200" Type="Spring" />
+			</Constraint>
+		</SideMirror>
+		<Sunshield Collisions="None" Mass="3">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="14"
+			>
+				<Motor Damping=".1" Spring="10" Type="Spring" />
+			</Constraint>
+		</Sunshield>
+	</Body>
+</_templates>
+<Truck>
+	<TruckData
+		BackSteerSpeed="0.02"
+		DiffLockType="Installed"
+		EngineIconMesh="env/engine_ankatra_1160"
+		EngineIconScale="1"
+		EngineStartDelay="0.6"
+		ExhaustStartTime="0.6"
+		FuelCapacity="180"
+		InstallTrailerAddonRequired="ankatra_1160_farkop_trailer, ankatra_1160_coupler"
+		Responsiveness="0.8"
+		SteerSpeed="0.02"
+		TruckImage="ankatramchr"
+		TruckType="OFFROAD"
+	>
+		<WinchUpgradeSocket Default="w_medium_trucks_default" IsUpgradable="true" Type="winches_medium_trucks" />
+		<Wheels
+			DefaultRim="rim"
+			DefaultTire="tire"
+			DefaultWheelType="wheels_ankatra_1160"
+		>
+			<Wheel _template="FrontWheel" Pos="(1.157; 0.561; 0.824)" />
+			<Wheel _template="FrontWheel" RightSide="true" Pos="(1.157; 0.561; 0.824)" />
+			<Wheel _template="RearWheel" ParentFrame="BoneSuspensionRearL_cdt" Pos="(-0.748; 0.561; 0.824)" />
+			<Wheel _template="RearWheel" ParentFrame="BoneSuspensionRearR_cdt" RightSide="true" Pos="(-0.748; 0.561; 0.824)" />
+			<Wheel _template="RearWheel" ParentFrame="BoneSuspensionRearL_cdt" Pos="(-1.972; 0.561; 0.824)" />
+			<Wheel _template="RearWheel" RightSide="true" ParentFrame="BoneSuspensionRearR_cdt" Pos="(-1.972; 0.561; 0.824)" />
+		</Wheels>
+		<SuspensionSocket
+			Default="ankatra_1160_suspension_default"
+			Type="s_ankatra_1160"
+			MaxWheelRadiusWithoutSuspension="1"
+		/>
+		<SteeringWheel Frame="BoneSteering" />
+		<SteeringRack Frame="BoneRack" FrameSteerLeft="BoneRackLeft" FrameSteerRight="BoneRackRight" RackHalfSizeZ="0.547" />
+		<Steam Origin="(0.733; 1.275; 0)" />
+		<LimitedFluid Center="(-0.467; 1.003; -0.000)" SizeX="0.472" SizeY="0.383" SizeZ="0.410" Type="Box" ParentFrame="BoneChassis_cdt"/>
+		<Intake Dir="(1; 0; 0)" Origin="(2.106; 1.258; 0)" Size="1.2" />
+		<SoundsWheels _template="Default" />
+		<SoundsDamage _template="Heavy" />
+		<Sounds
+			_template="Default"
+			DisableReversePitch="false"
+			MinDist="10.0"
+			Origin="(0; 0; -0.025)"
+			ParentFrame="BoneChassis_cdt"
+		>
+			<Reverse		_inheritRemove="true" />
+			<EngineTrans	Sound="" />
+			<BrakeRelease	Sound="trucks/common/truck_brake_release_alt2_rnd_set/truck_brake_release_alt2_rnd" />
+			<Reverse		Sound="" />
+			<BrakesSqueal	Sound="trucks/ankatra_1160/ankatra_1160_brakes_squeal" />
+			<Handbrake		Sound="trucks/ankatra_1160/ankatra_1160_handbrake_on" />
+			<HandbrakeOff	Sound="trucks/ankatra_1160/ankatra_1160_handbrake_off" />
+			<Honk			Sound="trucks/ankatra_1160/ankatra_1160_honk" />
+			<EngineRev		Sound="" />
+			<EngineAccel	Sound="trucks/ankatra_1160/ankatra_1160_acc" />
+			<EngineStart	Sound="trucks/ankatra_1160/ankatra_1160_start" />
+			<EngineStop		Sound="trucks/ankatra_1160/ankatra_1160_stop" />
+			<EngineIdle		Sound="trucks/ankatra_1160/ankatra_1160_idle" />
+			<EngineIdle_2d	Sound="trucks/ankatra_1160/ankatra_1160_idle_2d"	IsSound2D="true" />
+			<EngineLow		Sound="trucks/ankatra_1160/ankatra_1160_low" />
+			<EngineLow_2d	Sound="trucks/ankatra_1160/ankatra_1160_low_2d"	IsSound2D="true" />
+			<EngineHigh		Sound="trucks/ankatra_1160/ankatra_1160_high" />
+			<EngineHigh_2d	Sound="trucks/ankatra_1160/ankatra_1160_high_2d"	IsSound2D="true" />
+			<EngineHeavy	Sound="" />
+			<EngineHeavy_2d	Sound=""	IsSound2D="true" />
+			<ChassisStress	Sound="trucks/ankatra_1160/ankatra_1160_chassis" />
+			<AbruptStop		Sound="trucks/common/truck_swing_big_rnd_set/truck_swing_big_rnd" />
+		</Sounds>
+		<Shakers>
+			<Shaker Frame="BoneExhaust" MinAngle="(0.2; 0.2; 0.2)" MaxAngle="(0.4; 0.4; 0.4)" MaxFrequency="5" />
+		</Shakers>
+		<Shafts>
+			<Shaft SocketPointA="Shaft1a" SocketPointB="Shaft1b" />
+		</Shafts>
+		<OcclusionMap
+			HalfSizeZ="1.6"
+			MinX="-3"
+			MaxX="2.2"
+			ParentFrame="BoneChassis_cdt"
+		/>
+		<GearboxSocket Default="g_special_default" Type="gearboxes_special_ankatra" />
+		<FuelTank DamageCapacity="70" />
+		<EngineSocket Default="us_ankatra_1160_engine_0" Type="e_us_ankatra_1160_special" />
+		<Damage>
+			<DamageArea Type="Engine" Min="(0.109, 0.878, -0.265)" Max="(1.547, 1.608, 0.309)" ParentFrame="BoneCabin_cdt" />
+			<DamageArea Type="FuelTank" Min="(-0.635, 0.791, -0.215)" Max="(-0.253, 1.214, 0.215)" ParentFrame="BoneChassis_cdt" />
+		</Damage>
+		<Exhaust
+			Dir="(0.665; 0.338; 0.665)"
+			IsLight="true"
+			Origin="(0.757; 3.020; 0.262)"
+			Speed="3.00"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Driver
+			AnimationSet="Truck"
+			Pos="(-1.04; 1.701; 0)"
+			SteeringWheelPos="(-0.690; 2.062; 0)"
+			ParentFrame="BoneCabin_cdt"
+		/>
+		<Dashboard>
+			<Gauge Damping="0.99" Dir="(-0.766; 0.642; 0)" InputRange="(0;.8)" InputType="rpm" Mesh="trucks/arrows/ankatra_1160_arrow_01" Org="(-0.485; 1.971; 0)" OutputAngles="(-105; 105)" />
+			<Gauge Damping="0.98" Dir="(-0.766; 0.643; 0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/ankatra_1160_arrow_02" Org="(-0.509; 1.946; -0.095)" OutputAngles="(-42; 42)" />
+			<Gauge Damping="0.99" Dir="(-0.766; 0.642; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ankatra_1160_arrow_02" Org="(-0.557; 1.888; -0.104)" OutputAngles="(-30; 0)" />
+			<Gauge Damping="0.99" Dir="(-0.766; 0.642; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ankatra_1160_arrow_02" Org="(-0.549; 1.899; 0.104)" OutputAngles="(-140; -160)" />
+			<Gauge Damping="0.99" Dir="(-0.766; 0.642; 0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/ankatra_1160_arrow_02" Org="(-0.500; 1.956; 0.095)" OutputAngles="(-140; -174)" />
+		</Dashboard>
+		<CompatibleWheels OffsetZ="0.05" RearOffsetZ="0.05" Scale="0.6" Type="wheels_ankatra_1160" />
+		<CompatibleWheels OffsetZ="0.18" RearOffsetZ="0.28" Scale="0.6" Type="wheels_extend_ankatra_1160" />
+		<CompatibleWheels OffsetZ="0.01" RearOffsetZ="0.08" Scale="0.6" Type="wheels_heavy_single" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.6" Type="wheels_heavy_mudtires_single" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.6" Type="wheels_heavy_offroad_single" />
+		<Camera
+			Center="(-1.6; 0; 0)"
+			Radius="1.2"
+		>
+			<Cockpit
+				_template="Default"
+				WindshieldDiffuseTexture="trucks/ankatra_1160_glass__d_a.tga"
+				WindshieldShadingTexture="trucks/ankatra_1160_glass__sh_d.tga"
+				ViewPos="(-1.15; 2.4; 0)"
+				LimitsVer="(-0.44; 0.2)"
+				LimitsHor="(-2.5; 2.5)"
+			>
+				<Rear _inheritRemove="true" />
+			
+				<Mirror
+					ClipDir="(-0.934; -0.08; -0.36)"
+					FOVScale="2"
+					ClipOffset="0.3"
+					ReflectionDir="(-0.934; -0.08; -0.36)"
+					MeshFrame="mirror_left"
+					Size="(0.190; 0.317)"
+					Pos="(0.152; 2.388; 0.961)"
+				>
+				</Mirror>
+				
+				<Mirror
+					ClipDir="(-0.934; -0.08; 0.36)"
+					FOVScale="2"
+					ClipOffset="0.3"
+					ReflectionDir="(-0.934; -0.08; 0.36)"
+					MeshFrame="mirror_right"
+					Size="(0.190; 0.317)"
+					Pos="(0.152; 2.388; -0.961)"
+				>
+				</Mirror>
+			</Cockpit>
+		</Camera>
+		<Axles>
+			<Axle Frame="BoneAxle1" />
+		</Axles>
+	</TruckData>
+	<Snorkel Origin="(0.376; 1.8; 0)" ParentFrame="BoneChassis_cdt" />
+	<PhysicsModel Mesh="trucks/ankatra_1160">
+		<NetSync Legacy="false" />
+		<Body
+			CenterOfMassOffset="(0; -0.2; 0)"
+			ImpactType="Truck"
+			Mass="4000"
+			ModelFrame="BoneChassis_cdt"
+			NetSync="pv"
+		>
+			<Body
+				CenterOfMassOffset="(0.6; -0.2; 0)"
+				ImpactType="Truck"
+				Mass="5000"
+				ModelFrame="BoneCabin_cdt"
+				NetSync="pv"
+			>
+				<Constraint Type="Fixed" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorRight_cdt" />
+				<Body _template="SideMirror" ModelFrame="BoneMirrorLeft_cdt" />
+				<Body _template="Sunshield" ModelFrame="BoneSunshield_cdt" />
+				<Body Mass="0.2" ModelFrame="BoneKeyFob_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						PivotOffset="(0; 0; 0)"
+						Type="Hinge"
+						MinLimit="-40"
+						MaxLimit="40"
+						>
+							<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body _template="Suspension" ModelFrame="BoneSuspensionRearL_cdt" />
+			<Body _template="Suspension" ModelFrame="BoneSuspensionRearR_cdt" />
+		</Body>
+	</PhysicsModel>
+	
+	<ModelAttachments>
+		<StopSignals>
+			<Light _template="StopSignal" Pos="(-2.157; 1.574; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Pos="(-1.918; 1.577; 0.768)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="StopSignal" Pos="(-1.918; 1.577; -0.768)" ParentFrame="BoneCabin_cdt" />
+		</StopSignals>
+		<ReverseSignals>
+			<Light _template="ReverseSignal" Dir="(-0.95; -0.313; 0)" Pos="(-2.250; 1.519; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.918; 1.577; 0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="ReverseSignal" Size="0.3" Pos="(-1.918; 1.577; -0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 200) x 0.2" Dir="(-1; 0; 0)" Size="0.3" Pos="(-1.746; 2.612; -0.453)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 200) x 0.2" Dir="(-1; 0; 0)" Size="0.3" Pos="(-1.746; 2.612; 0.453)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.918; 1.577; -0.85)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="BlueStreak" Color="g(220; 220; 255) x 0.05" Dir="(-1; 0; 0)" Size="0.4" Pos="(-1.918; 1.577; 0.85)" ParentFrame="BoneCabin_cdt" />
+		</ReverseSignals>
+		<Ignition>
+			<!-- front lights -->
+			<Light _template="IgnitionSignalWhite" Size="0.5" Pos="(2.19; 1.146; 0.345)" />
+			<Light _template="IgnitionSignalWhite" Size="0.5" Pos="(2.19; 1.146; -0.345)" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(1.949; 1.335; 0.338)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 215) x 0.5" Size="0.3" Pos="(1.949; 1.335; -0.338)" ParentFrame="BoneCabin_cdt" />
+			<!-- side gabarite -->
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay="0.2" Color="g(235; 165; 10) x 0.25" Dir="(1; 0; 0)" Size="0.2" Pos="(1.468; 1.571; -0.514)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay="0.2" Color="g(235; 165; 10) x 0.25" Dir="(1; 0; 0)" Size="0.2" Pos="(1.468; 1.571; 0.514)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay="0.2" Color="g(235; 165; 10) x 0.25" Dir="(1; 0; 0)" Size="0.2" Pos="(1.468; 1.510; -0.514)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalOrange" ColorMultAtDay="0.2" Color="g(235; 165; 10) x 0.25" Dir="(1; 0; 0)" Size="0.2" Pos="(1.468; 1.510; 0.514)" ParentFrame="BoneCabin_cdt" />
+			<!-- front lamps -->
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.2" Dir="(1; 0; 0)" Size="0.5" Pos="(0.287; 2.604; 0.566)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.2" Dir="(1; 0; 0)" Size="0.5" Pos="(0.419; 2.758; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.2" Dir="(1; 0; 0)" Size="0.5" Pos="(0.287; 2.604; -0.566)" ParentFrame="BoneCabin_cdt" />
+			
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.22" Dir="(1; 0; 0)" Size="0.3" Pos="(0.287; 2.604; 0.566)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.22" Dir="(1; 0; 0)" Size="0.3" Pos="(0.419; 2.758; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.22" Dir="(1; 0; 0)" Size="0.3" Pos="(0.287; 2.604; -0.566)" ParentFrame="BoneCabin_cdt" />
+			<!-- rear lamps -->
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.32" Dir="(-1; 0; 0)" Size="0.25" Pos="(-1.746; 2.612; -0.453)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" ColorMultAtDay="0.2" Color="g(255; 235; 200) x 0.32" Dir="(-1; 0; 0)" Size="0.25" Pos="(-1.746; 2.612; 0.453)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.2" Size="0.3" Pos="(-1.918; 1.577; -0.768)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalRed" ColorMultAtDay="0.2" Size="0.3" Pos="(-1.918; 1.577; 0.768)" ParentFrame="BoneCabin_cdt" />
+		</Ignition>
+		<HeadLight>
+			<!-- headl ights -->
+			<Model _template="HeadLightRay" Org="(1.949; 1.335; 0.338)" ParentFrame="BoneCabin_cdt"/>
+			<Model _template="HeadLightRay" Org="(1.949; 1.335; -0.338)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="HeadLight" Size="0.25" Color="g(255; 235; 215) x .5" Pos="(1.949; 1.335; 0.338)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="HeadLight" Size="0.25" Color="g(255; 235; 215) x .5" Pos="(1.949; 1.335; -0.338)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="BlueStreak" Size="0.4" Pos="(1.949; 1.335; 0.338)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="BlueStreak" Size="0.4" Pos="(1.949; 1.335; -0.338)" ParentFrame="BoneCabin_cdt"/>
+			<!-- front lamps -->
+			<Model _template="HeadLightRay" Org="(0.287; 2.604; 0.566)" ParentFrame="BoneCabin_cdt"/>
+			<Model _template="HeadLightRay" Org="(0.419; 2.758; 0)" ParentFrame="BoneCabin_cdt"/>
+			<Model _template="HeadLightRay" Org="(0.287; 2.604; -0.566)" ParentFrame="BoneCabin_cdt"/>
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 200) x 0.3" Dir="(1; 0; 0)" Size="0.3" Pos="(0.287; 2.604; 0.566)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 200) x 0.3" Dir="(1; 0; 0)" Size="0.3" Pos="(0.419; 2.758; 0)" ParentFrame="BoneCabin_cdt" />
+			<Flare _template="IgnitionSignalWhite" Color="g(255; 235; 200) x 0.3" Dir="(1; 0; 0)" Size="0.3" Pos="(0.287; 2.604; -0.566)" ParentFrame="BoneCabin_cdt" />
+		</HeadLight>
+	</ModelAttachments>
+	<HeadLight _template="Default" Pos="(2.5; 0.9; 0)" ParentFrame="BoneCabin_cdt" />
+	<Landmark Mesh="landmarks/ankatra_1160_lmk" MinScale="1.8" MaxScale="2.8" />
+	<GameData
+		Country="US,NE,CAS,CE"
+		Price="98500"
+		UnlockByExploration="true"
+		UnlockByRank="1"
+	>
+		<WinchSocket Pos="(2.106; 0.873; -0.249)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(2.106; 0.873; 0.249)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.037; 1.300; -0.880)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-0.037; 1.300; 0.880)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-1.677; 1.478; -0.345)" ParentFrame="BoneChassis_cdt" />
+		<WinchSocket Pos="(-1.677; 1.478; 0.345)" ParentFrame="BoneChassis_cdt" />
+		
+		<CraneSocket Pos="(2.106; 0.873; -0.249)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(2.106; 0.873; 0.249)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-0.037; 1.300; -0.880)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-0.037; 1.300; 0.880)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-1.677; 1.478; -0.345)" ParentFrame="BoneChassis_cdt" />
+		<CraneSocket Pos="(-1.677; 1.478; 0.345)" ParentFrame="BoneChassis_cdt" />
+		
+		<UiDesc
+			UiDesc="UI_VEHICLE_ANKATRA_1160_DESC"
+			UiIcon30x30="offroadVehicleImg30"
+			UiIcon328x458="shopImgAnkatra1160"
+			UiIcon40x40="offroadVehicleImg"
+			UiIconLogo="AnkatraLogo80"
+			UiName="UI_VEHICLE_ANKATRA_1160_NAME"
+		/>
+		<CustomizationCameras>
+			<!-- MAIN CAMERAS -->
+			<CameraPos FOV="32.0" Name="default" InterestPosition="(5.3; 1.5; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.7; 1.2; -3.7)" />
+			<CameraPos FOV="32.0" Name="side_l" InterestPosition="(4.494; 3.503; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(5.841; 5.84; 6.957)" />
+			<CameraPos FOV="32.0" Name="side_r" InterestPosition="(4.494; 3.503; -0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(6.861; 5.817; -6.504)" />
+			<CameraPos FOV="32.0" Name="wheels" InterestPosition="(5.5; 0.561; -0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.629; 1.722; -4.362)" />
+			<CameraPos FOV="32.0" Name="rear" InterestPosition="(2.457; 1.622; -1.058)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(-3.789; 2.434; 3.957)" />
+			<CameraPos FOV="32.0" Name="hoods" InterestPosition="(5.451; 1.818; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(13.951; 1.253; -5.017)" />
+			<CameraPos FOV="32.0" Name="roof" InterestPosition="(5.118; 3.503; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(11.064; 5.516; -4.015)" />
+			<!-- ADDONS -->
+			<CameraPos FOV="32.0" Name="addon_1" Position="(0.1; 3.567; -5.862)" InterestPosition="(4.8; 1.6; 0.0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Name="addon_2" InterestPosition="(5.759; 2.49; 0)" Position="(10.793; 4.409; -3.424)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Interior="true" Name="farkop" Position="(1.179; 1.989; -1.594)" InterestPosition="(3.688; 0.803; 0.704)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<CameraPos FOV="32.0" Interior="true" Name="coupler" Position="(0.186; 2.552; -2.991)" InterestPosition="(1.916; 1.082; 0.259)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" />
+			<!-- STICKERS -->
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_capote" InterestPosition="(5.5; 0.759; 0)" MaxXRotation="360" MaxYRotation="360" MaxZoom="2" Position="(9.8; 3.2; -1.7)" />
+			<CameraPos FOV="32.0" Interior="true" Name="glass_sticker" InterestPosition="(5.509; 1.952; -0.92)" Position="(7.393; 2.786; 1.278)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker" InterestPosition="(6.961; 0.994; 0.703)" Position="(4.384; 2.942; 0)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_roof" Position="(2.838; 5.659; -0.861)" InterestPosition="(3.235; 3.199; -0.043)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_roof_2" Position="(7.078; 5.659; -1.691)" InterestPosition="(5.184; 2.903; -1.233)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_wing_l" Position="(5.084; 2.929; -1.879)" InterestPosition="(5.395; 1.087; -0.273)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_wing_r" Position="(5.084; 2.929; 1.879)" InterestPosition="(7.615; 0.247; 0.467)" />
+			<!-- INSIDE STICKERS -->
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_01" Position="(4.252; 2.181; -0.034)" InterestPosition="(4.968; 0.727; 1.774)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_02" Position="(4.735; 2.128; 0.026)" InterestPosition="(5.451; 3.5; 1.332)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_03" Position="(4.735; 2.128; 0.026)" InterestPosition="(5.451; 3.5; 2)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_04" Position="(4.906; 2.205; -0.023)" InterestPosition="(5.38; 4; 0.059)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x2_01" Position="(4.735; 2.128; 0.026)" InterestPosition="(5.451; 3.5; 0.8)" />
+			<CameraPos FOV="32.0" Interior="true" Name="sticker_inside_1x4_01" Position="(4.735; 2.2; 0.026)" InterestPosition="(6; 4.2; 3)" />
+			<!-- STUFF -->
+			<CameraPos FOV="32.0" Interior="true" Name="bubble_head" Position="(4.298; 2.391; 0.552)" InterestPosition="(5.15; 1.896; 0.706)" />
+			<CameraPos FOV="32.0" Interior="true" Name="mirror_mount" InterestPosition="(5.451; 3; 1.4)" Position="(4.735; 2.128; 0.026)" />
+			<CameraPos FOV="32.0" Interior="true" Name="hood_figure" InterestPosition="(6.326; 1.193; -0.229)" Position="(8.578; 1.902; -0.852)" />
+		</CustomizationCameras>
+		<AddonSockets >
+			<Socket Names="TrailerFarm" Offset="(-3.350; 0.990; 0)" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="Trailer, LogTrailer" Offset="(-2.120; 1.090; 0)" ParentFrame="BoneChassis_cdt">
+				<AddonsShift Offset="(-1.252; -0.1; 0)" Types="Ankatra1160Coupler" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Crane" ParentFrame="BoneChassis_cdt" >
+				<ExtraParent Frame="BoneCabin_cdt" Offset="(0; 0; 0)" />
+				<ExtraParent Frame="BoneChassis_cdt" Offset="(0; 0; 0)" />
+			</Socket>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Counterweight" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ankatra_1160_diff_lock_default">
+			<Socket Names="Ankatra1160DiffLock" Offset="(0; 0; 0)" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<AddonSockets DefaultAddon="ankatra_1160_coupler">
+			<Socket Names="Ankatra1160Coupler" ParentFrame="BoneChassis_cdt" />
+			<Socket Names="Ankatra1160Farkop" ParentFrame="BoneChassis_cdt" />
+		</AddonSockets>
+		<!-- STUFF ADDONS -->
+		<AddonSockets>
+			<Socket
+				InCockpit="true"
+				Names="StuffAirfreshener"
+				Offset="(0.148; 2.65; -0.480)"
+				ParentFrame="BoneCabin_cdt"
+			/>
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="StuffHoodAnkatra1160" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- OUTSIDE STICKERS -->
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_GlassTop" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_GlassBottom" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_Capote" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_Roof" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_Roof_2" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_Wing_L" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket Names="Ankatra1160Sticker_Wing_R" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<!-- INTERIOR STICKERS -->
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x1_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x1_02" ParentFrame="BoneSunshield_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x1_03" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x1_04" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x2_01" ParentFrame="BoneSunshield_cdt" />
+		</AddonSockets>
+		<AddonSockets>
+			<Socket InCockpit="true" Names="Ankatra1160Sticker_1x4_01" ParentFrame="BoneCabin_cdt" />
+		</AddonSockets>
+	</GameData>
+	<AutomaticIK>
+		<IKBone ModelFrame="BoneBackPistonLBase" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneSuspensionRearL_cdt"
+				ModelFrame="BoneBackPistonL"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneBackPistonRBase" ParentFrame="BoneCabin_cdt">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge2" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneSuspensionRearR_cdt"
+				ModelFrame="BoneBackPistonR"
+			>
+				<IKJoint AxisLocal="(0; 1; 0)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+		<IKBone ModelFrame="BoneFrontPiston1_1" ParentFrame="BoneAxle1">
+			<IKJoint AxisLocal="(0; 1; 0)" Type="Hinge" />
+			<IKBone
+				AttachOffset="(0; 0; 0)"
+				AttachToFrame="BoneRackRight"
+				ModelFrame="BoneFrontPiston1_2"
+			>
+				<IKJoint AxisLocal="(0; 0; -1)" Type="Slider" />
+			</IKBone>
+		</IKBone>
+	</AutomaticIK>
+</Truck>

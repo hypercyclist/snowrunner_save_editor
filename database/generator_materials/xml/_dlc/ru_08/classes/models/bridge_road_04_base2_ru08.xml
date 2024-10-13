@@ -1,0 +1,15 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	
+	<Landmark Mesh="landmarks/bridge_road_04_base2_ru08_lmk" />
+	
+</ModelBrand>

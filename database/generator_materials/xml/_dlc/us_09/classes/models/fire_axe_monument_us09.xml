@@ -1,0 +1,13 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Occlusion Size="(27.0; 7.0)" Texture="occlusion_pipe_01_crossroad.tga" />
+	<Landmark Mesh="landmarks/fire_axe_monument_us09_lmk" />
+</ModelBrand>
+

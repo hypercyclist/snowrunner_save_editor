@@ -169,16 +169,30 @@
 			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0.0)" InputRange="(0;160)" InputType="speed" Mesh="trucks/arrows/jeep_wrangler_arrow_01" Org="(0.709; 1.299; 0.294)" OutputAngles="(-110;110)" />
 			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0.0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_wrangler_arrow_02" Org="(0.705; 1.288; 0.215)" OutputAngles="(-40;10)" />
 			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0.0)" InputRange="(0;1)" InputType="fuel" Mesh="trucks/arrows/jeep_wrangler_arrow_02" Org="(0.69; 1.247; 0.506)" OutputAngles="(-40;40)" />
-			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0.0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_wrangler_arrow_02" Org="(0.689; 1.247; 0.209)" OutputAngles="(-40;0)" />>
+			<Gauge Damping="0.9" Dir="(-0.93; 0.36; 0.0)" InputRange="(0;1)" InputType="engineEnabled" Mesh="trucks/arrows/jeep_wrangler_arrow_02" Org="(0.689; 1.247; 0.209)" OutputAngles="(-40;0)" />
 		</Dashboard>
 		<Damage>
 			<DamageArea Type="Engine" Min="(1.15; 0.433; 0.4)" Max="(2.2; 1.2; -0.4)" ParentFrame="BoneEngine_cdt" />
 			<DamageArea Type="FuelTank" Min="(-0.5; 0.34; -0.6)" Max="(1; 0.64; 0.6)" ParentFrame="BoneChassis_cdt" />
 		</Damage>
 		<CompatibleWheels Scale="0.41" Type="wheels_scout_offroad2_jeep_wrangler" />
+		<CompatibleWheels OffsetZ="0.12" Scale="0.46" Type="wheels_scout_offroad2_jeep_wrangler" />
 		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout1" />
 		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout2" />
 		<CompatibleWheels OffsetZ="0.05" Scale="0.46" Type="wheels_scout2" />
+
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_highway" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.165" Scale="0.41" Type="wheels_scout_mudtires" />
+
+		<CompatibleWheels OffsetZ="0.05" Scale="0.46" Type="wheels_scout_offroad" />
+		<CompatibleWheels OffsetZ="0.16" Scale="0.46" Type="wheels_scout_mudtires" />
+		
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.05" Scale="0.41" Type="wheels_scout_allterrain_chain" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.46" Type="wheels_scout_allterrain" />
+		<CompatibleWheels OffsetZ="0.08" Scale="0.46" Type="wheels_scout_allterrain_chain" />
+		
 		<Camera Center="(-1.2; 0; 0)" RadiusMultiplier="0.8">
 			<Cockpit
 				_template="Default"
@@ -288,7 +302,7 @@
 	<Landmark Mesh="landmarks/jeep_wrangler_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(2.5; 0.979; 0)" />
 	<GameData
-		Country="US"
+		Country="US,NE,CE"
 		Price="2900"
 		Recallable="true"
 		UnlockByExploration="false"

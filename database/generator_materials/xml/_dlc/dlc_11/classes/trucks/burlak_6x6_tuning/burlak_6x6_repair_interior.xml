@@ -1,0 +1,44 @@
+<_templates Include="trucks" >
+	<Body>
+		<Limits Collisions="None">
+			<Constraint Type="Fixed">
+				<Motor Damping="1000" Spring="8000" Type="Spring" />
+			</Constraint>
+		</Limits>
+	</Body>
+</_templates>
+<TruckAddon>
+	<TruckData RepairsCapacity="150" />
+	<RepairsHide>
+		<Mesh Frame="repair" HideThreshold="0.0" />
+	</RepairsHide>
+	<PhysicsModel Mesh="trucks/burlak_6x6_tuning/burlak_6x6_repair_interior">
+		<Body Mass="20" Collisions="None">
+			<Constraint Type="Rigid" />
+			<Body
+				_template="Limits"
+				Mass="20"
+				ModelFrame="BoneRepair_cdt"
+			>
+				<Constraint Type="Fixed" LinearLimitsZ="(-0.01;0)" LinearLimitsY="(0;0.0015)" LinearLimitsX="(-0.01;0.01)">
+					<Motor Damping="2000" Spring="5000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="repair"
+		Category="miscellenious"
+		Price="1300"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_BURLAK_6X6_REPAIR_INTERIOR_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_BURLAK_6X6_REPAIR_INTERIOR_NAME"
+		/>
+		<InstallSocket Type="BurlakRepairInterior" />
+	</GameData>
+</TruckAddon>

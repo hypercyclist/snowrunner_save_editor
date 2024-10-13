@@ -1,0 +1,14 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(25.0; 27.0)" 
+		Texture="occlusion_water_mill_01.tga"
+	/>
+	<Landmark Mesh="landmarks/water_mill_01_lmk" />	
+</ModelBrand>

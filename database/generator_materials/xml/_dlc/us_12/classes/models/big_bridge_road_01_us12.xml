@@ -1,0 +1,35 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	ClipCameraBridge="true"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="15"
+			Color="g(205; 241; 255) x 1.4"
+			CreateSuperLight="true"
+			Dir="(0; -1; 1)"
+			InnerCone="0"
+			OuterCone="50"
+			Pos="(0; 8.2; -29.0)"
+			Shadows="true"
+		/>
+
+		<StaticLight
+			AttenEnd="15"
+			Color="g(205; 241; 255) x 1.4"
+			CreateSuperLight="true"
+			Dir="(0; -1; 1)"
+			InnerCone="0"
+			OuterCone="50"
+			Pos="(0; 8.2; -14.0)"
+			Shadows="true"
+		/>
+	</StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel> 
+
+	<Landmark Mesh="landmarks/big_bridge_road_01_us12_lmk" />
+</ModelBrand>

@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_39331_pike_stuff/sticker_inside_1x4_01_step_39331_pike" />
+	<GameData CameraPreset="sticker">
+		<UiDesc UiName="UI_STUFF_STICKER_INSIDE_1X4_NAME" />
+		<InstallSocket Type="Step39331PikeSticker_1x4_01" />
+	</GameData>
+</TruckAddon>

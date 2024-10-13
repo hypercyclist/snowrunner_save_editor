@@ -1,0 +1,7 @@
+<_parent File="sticker_capote_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/zikz_605r_stuff/sticker_capote_1x1_zikz_605r" />
+	<GameData>
+			<InstallSocket Type="zikz605RSticker_Capote" />
+	</GameData>
+</TruckAddon>

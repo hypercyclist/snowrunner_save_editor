@@ -1,0 +1,7 @@
+<_parent File="sticker_door_r_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/kolob_74941_stuff/sticker_door_r_1x1_kolob_74941" />
+	<GameData>
+			<InstallSocket Type="kolob74941Sticker_Door_R" />
+	</GameData>
+</TruckAddon>

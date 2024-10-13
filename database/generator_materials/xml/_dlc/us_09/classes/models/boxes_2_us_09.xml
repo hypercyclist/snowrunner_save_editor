@@ -1,0 +1,32 @@
+<_templates Include="models" />
+<ModelBrand
+	Instanced="true"
+	NightLightingShadowsAllowCap="True">
+	<PhysicsModel>
+		<Body _template="LightWeight" ModelFrame="BoneRoot">
+			<Constraint _template="LightWeight" />
+			<Body _template="LightWeight" ModelFrame="Bone1">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone2">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone3">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone4">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone5">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone6">
+			<Constraint _template="LightWeight" />
+		    </Body>
+			<Body _template="LightWeight" ModelFrame="Bone7">
+			<Constraint _template="LightWeight" />
+		    </Body>
+		</Body>
+		
+	</PhysicsModel>
+</ModelBrand>

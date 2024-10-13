@@ -1,0 +1,11 @@
+<MaterialType 
+	AllowHiddenExtrudes="0.25"
+	Texture="tiles/grass_rus_02__d_a.tga" 
+	Normal="tiles/grass_rus_02_relief__d_a.tga"
+	GrassBrush="GrassShortRusA, GrassShortRusA"
+	IsThickGrass="false"
+	Sound="surfaces/surf_grass_mix_loop"
+	EndEffectSound="surfaces/hit/hit_grass_rnd"
+	SkidSound="surfaces/skidding/skidding_grass_loop"
+	MinViscosity="2.0"
+/>

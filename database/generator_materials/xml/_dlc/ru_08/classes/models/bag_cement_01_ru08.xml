@@ -1,0 +1,11 @@
+<_templates Include="models" />
+<ModelBrand DayShadowOffsetMult="2.0"
+	NightLightingShadowsAllowCap="true"
+	Instanced="true"
+>
+	<PhysicsModel>
+		<Body _template="LightWeight" ModelFrame="BoneRoot">
+			<Constraint _template="LightWeight" />
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

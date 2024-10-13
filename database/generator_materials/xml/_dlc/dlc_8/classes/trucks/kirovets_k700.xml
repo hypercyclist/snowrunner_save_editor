@@ -29,7 +29,7 @@
 <Truck>
 	<TruckData
 		BackSteerSpeed="0.02"
-		DiffLockType="Always"
+		DiffLockType="Installed"
 		EngineIconMesh="env/engine_default"
 		EngineIconScale="1.6"
 		EngineStartDelay="0.6"
@@ -142,6 +142,7 @@
 		</Damage>
 		<CompatibleWheels Scale="0.8" Type="wheels_kirovets_k700" />
 		<CompatibleWheels Scale="0.8" Type="wheels_superheavy_single" />
+		<CompatibleWheels Scale="0.8" Type="wheels_superheavy_mudtires" />
 		<Camera
 			Center="(-1; 0; 0)"
 			RadiusMultiplier="1.1"
@@ -215,7 +216,7 @@
 						MinLimit="-12"
 						MaxLimit="12"
 					>
-						<Motor Damping="800000" Spring="10000" Type="Spring" />
+						<Motor Damping="800" Spring="1000" Type="Spring" />
 					</Constraint>
 				</Body>
 			</Body>
@@ -263,7 +264,7 @@
 	<Landmark Mesh="landmarks/kirovets_k700_lmk" MinScale="1.8" MaxScale="2.8" />
 	<HeadLight _template="Default" Pos="(3.6; 1.2; 0)" ParentFrame="BoneFront_cdt" />
 	<GameData
-		Country="RU,CAS"
+		Country="RU,CAS,CE"
 		Price="126100"
 		UnlockByExploration="true"
 		UnlockByRank="1"
@@ -315,13 +316,16 @@
 			<Socket Names="K700Coupler" Offset="(0; 0; 0)" ParentFrame="BoneBack_cdt" />
 			<Socket Names="KirovetsK700Manipulator" ParentFrame="BoneBack_cdt" />
 		</AddonSockets>
+		<AddonSockets DefaultAddon="kirovets_k700_diff_lock_default">
+			<Socket Names="KirovetsK700DiffLock" />
+		</AddonSockets>
 		<AddonSockets DefaultAddon="kirovets_k700_fender">
 			<Socket Names="KirovetsK700Fender" NamesBlock="KirovetsK700Manipulator" ParentFrame="BoneBack_cdt" />
 		</AddonSockets>
 		<AddonSockets>
 			<Socket Names="TrailerFarm" Offset="(-3.578; 1.033; 0)" ParentFrame="BoneBack_cdt" />
 			<Socket
-				Names="Trailer"
+				Names="Trailer, LogTrailer"
 				NamesBlock="KirovetsK700Manipulator"
 				Offset="(-3.578; 1.033; 0)"
 				ParentFrame="BoneBack_cdt"

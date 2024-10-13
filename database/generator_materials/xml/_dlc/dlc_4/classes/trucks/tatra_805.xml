@@ -151,6 +151,11 @@
 		</Damage>
 		<CompatibleWheels Scale="0.47" Type="wheels_medium_double_front" />
 		<CompatibleWheels OffsetZ="0.13" RearOffsetZ="0.08" Scale="0.47" Type="wheels_medium_mudtires_actaeon" />
+
+		<CompatibleWheels Scale="0.47" Type="wheels_medium_offroad_single" />
+		<CompatibleWheels Scale="0.47" Type="wheels_medium_highway_single" />
+		<CompatibleWheels Scale="0.47" Type="wheels_medium_allterrain_single" />
+
 		<Camera Center="(-1.5; 0; 0)" ParentFrame="BoneCabin_cdt">
 			<Cockpit
 				_template="Default"
@@ -247,7 +252,7 @@
 	<Landmark Mesh="landmarks/tatra_805_lmk" MinScale="1.8" MaxScale="3.8" />
 	<HeadLight _template="Default" Pos="(2.577; 0.917; 0)" ParentFrame="BoneCabin_cdt" />
 	<GameData
-		Country="RU,CAS"
+		Country="RU,CAS,NE,CE"
 		ExcludeAddons="trailer_log_pole"
 		Price="22500"
 		UnlockByExploration="false"

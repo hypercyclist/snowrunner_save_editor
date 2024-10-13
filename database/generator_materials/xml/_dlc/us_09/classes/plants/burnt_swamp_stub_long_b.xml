@@ -1,0 +1,53 @@
+<_templates Include="environment" />
+<PlantBrand BreakType="SmallTree" PlantingMinSpacing="0.3">
+	<PhysicsModel>
+		<Body
+			DamageMult="0.1"
+			Friction="0.1"
+			Mass="500.0"
+			ModelFrame="BoneRoot_cdt"
+			NoSoftContacts="true"
+		>
+			<Constraint
+				BreakOffThreshold="1000"
+				Cone="10"
+				TwistAxisLocal="(0; 1; 0)"
+				Type="Fixed"
+			>
+				<PlaneConeMotor Damping="5000" Spring="5000" Type="Spring" />
+			</Constraint>
+			<Body _template="SwampBranch" ModelFrame="Bone4_cdt">
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+			<Body _template="SwampBranch" ModelFrame="Bone5_cdt">
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+			<Body _template="SwampBranch" ModelFrame="Bone6_cdt">
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+			<Body _template="SwampBranch" ModelFrame="Bone7_cdt">
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+			<Body _template="SwampBranch" ModelFrame="Bone8_cdt">
+				<Constraint BreakOffThreshold="20" Type="Fixed" />
+			</Body>
+			<Body _template="SwampTrunk" Mass="200.0" ModelFrame="BoneBody0_cdt">
+				<Constraint BreakOffThreshold="500" Type="Fixed" />
+				<Body _template="SwampBranch" ModelFrame="Bone2_cdt">
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone3_cdt">
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+				</Body>
+				<Body _template="SwampBranch" ModelFrame="Bone1_cdt">
+					<Constraint BreakOffThreshold="20" Type="Fixed" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.8" Size="(2.0; 2.0)" />
+	<Landmark Mesh="landmarks/swamp_stub_long_a_lmk"/>
+	<GameData>
+		<WinchSocket Pos="(-0.027; 1.307; -0.037)" ParentFrame="BoneRoot_cdt" />
+	</GameData>
+</PlantBrand>

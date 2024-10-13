@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_BURNT_LOGS_NAME"
+		UiDesc="UI_CARGO_BURNT_LOGS_DESC"
+		UiIcon20x20="cargoTypeBurntLogs20"
+		UiIcon40x40="cargoTypeBurntLogs40"
+		UiIcon100x100="cargoTypeBurntLogs"
+	/>
+</CargoType>

@@ -1,0 +1,19 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+	ClipCamera="false"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<SnapPoint Pos="(-5.076; 10.325; 1.4)" />
+	<SnapPoint Pos="(0.018; 10.343; 1.4)" />
+	<SnapPoint Pos="(4.696; 10.343; 1.4)" />
+	<SnapPoint Pos="(-5.075; 9.325; 0.187)" />
+	<SnapPoint Pos="(0.017; 9.325; 0.208)" />
+	<SnapPoint Pos="(4.695; 9.325; 0.208)" />
+	<Landmark Mesh="landmarks/station_04a_lmk" />
+</ModelBrand>

@@ -1,0 +1,36 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>	
+	<StaticLights>
+		<StaticLight
+			Dir="(0; 15; -10)"
+			Pos="(0; 3.9; -0.639)"
+			AttenEnd="25"
+			Color="g(255; 255; 250) x 3.9"
+			InnerCone="50"
+			OuterCone="100"
+			Shadows="true"
+			CreateSuperLight="true"
+		/>
+	</StaticLights>
+	
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>	
+		<Flare
+			_template="Red"
+			AttenEnd="300"
+			AttenStart="27"
+			ColorMultAtDay="0"
+			Color="g(255; 255; 250) x 0.15"
+			Dir="(0; -1; 0)"
+			Pos="(0; 3.796; -0.390)"
+			Size="1.1"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/lamp_generator_us07_lmk" />
+</ModelBrand>

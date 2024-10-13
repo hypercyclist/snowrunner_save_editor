@@ -1,0 +1,40 @@
+<TruckAddon>
+	<TruckData>
+		<Damage>
+			<Multiplier Multiplier="0.9" Type="Engine" />
+		</Damage>
+	</TruckData>
+	<PhysicsModel Mesh="trucks/earthroamer_sx_tuning/earthroamer_sx_threshold_1">
+		<Body Mass="15" ModelFrame="BoneChassis_cdt">
+			<Constraint Type="Rigid" />
+		</Body>
+	</PhysicsModel>
+	<ModelAttachments>
+		<Ignition>
+			<!-- Tresholds Beacons Flares -->
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(0.285; 0.695; -1.118)" Dir="(0; 0; -1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(0.285; 0.695; 1.118)" Dir="(0; 0; 1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(0.932; 0.695; -1.118)" Dir="(0; 0; -1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(0.932; 0.695; 1.118)" Dir="(0; 0; 1)" DirAngle="90" />			
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(1.215; 0.695; -1.118)" Dir="(0; 0; -1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(1.215; 0.695; 1.118)" Dir="(0; 0; 1)" DirAngle="90" />		
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(2.071; 0.695; -1.118)" Dir="(0; 0; -1)" DirAngle="90" />
+			<Flare _template="IgnitionSignalOrange" Color="g(255; 165; 80) x 0.35" Size="0.1" ColorMultAtDay="0.2" Pos="(2.071; 0.695; 1.118)" Dir="(0; 0; 1)" DirAngle="90" />
+		</Ignition>
+	</ModelAttachments>
+	<GameData
+		CameraPreset="default"
+		Category="miscellenious"
+		Price="1200"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_SIDE_PIPE_THRESHOLDS_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_SIDE_PIPE_THRESHOLDS_NAME"
+		/>
+		<InstallSocket Type="EarthroamerSxThreshold" />
+	</GameData>
+</TruckAddon>

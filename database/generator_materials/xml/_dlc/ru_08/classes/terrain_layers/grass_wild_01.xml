@@ -1,0 +1,11 @@
+<MaterialType 
+	AllowHiddenExtrudes="0.25"
+	Texture="tiles/grass_wild_01__d_a.tga" 
+	Normal="tiles/grass_wild_01_relief__d_a.tga"
+	GrassBrush="GrassShortRusA,GrassShortRus,GrassTallRusA,GrassTallRusB,GrassFlowerRusA,GrassFlowerRusC,GrassFlowerRusD,GrassFlowerRusE,GrassFlowerRusF,GrassWeedRusA,GrassWeedRusD,GrassWeedRusE"
+	IsThickGrass="false"
+	Sound="surfaces/surf_grass_mix_loop"
+	EndEffectSound="surfaces/hit/hit_grass_rnd"
+	SkidSound="surfaces/skidding/skidding_grass_loop"
+	MinViscosity="2.0"
+/>

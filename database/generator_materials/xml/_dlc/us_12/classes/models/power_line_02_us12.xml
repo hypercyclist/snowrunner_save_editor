@@ -1,0 +1,69 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<SnapPoint Pos="(0; 26.607; 10.204)"/>
+	<SnapPoint Pos="(0; 26.607; -10.204)"/>
+	<SnapPoint Pos="(0; 26.607; 0)"/>
+	<Landmark Mesh="landmarks/power_line_02_us12_lmk" />
+
+	<GameData>
+		<WinchSocket Pos="(3.5; 1.5; 3.5)" />
+		<WinchSocket Pos="(-3.5; 1.5; 3.5)" />
+		<WinchSocket Pos="(3.5; 1.5; -3.5)" />
+		<WinchSocket Pos="(-3.5; 1.5; -3.5)" />
+	</GameData>
+
+	<PhysicsModel>
+
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(1.4; 33.45; -6.4)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.3"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.4"
+			Pos="(-1.4; 31.755; -10.209)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(-1.39; 33.45; 6.42)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+
+		<Flare
+			AttenEnd="350"
+			AttenStart="27"
+			Color="g(255; 0; 0) x 0.4"
+			ColorMultAtDay="0"
+			Dir="(0; -1; 0)"
+			OcclusionOffset="-0.3"
+			Pos="(1.41; 31.755; 10.19)"
+			Size="1.0"
+			Texture="sfx/flare_lamp_01__s_d.tga"
+		/>
+
+
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+</ModelBrand>

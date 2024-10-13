@@ -1,0 +1,16 @@
+<ModelBrand 
+	Instanced="true"  
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" Mass="100" NoSoftContacts="True" ModelFrame="cheese_02b_us14_BoneRoot" >
+			<Constraint Type="Fixed" BreakOffThreshold="100" />
+			<Body Collisions="Dynamic" Mass="100" NoSoftContacts="True" ModelFrame="cheese_02b_us14_Bone.001" >
+				<Constraint Type="Fixed" BreakOffThreshold="100" />
+				<Body Collisions="Dynamic" Mass="100" NoSoftContacts="True" ModelFrame="cheese_02b_us14_Bone.002" >
+					<Constraint Type="Fixed" BreakOffThreshold="100" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+</ModelBrand>

@@ -1,0 +1,14 @@
+<ModelBrand ClipCamera="false" DynamicModel="true">
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+			Friction="1.8"
+			Mass="1000.0"
+			NoSoftContacts="true"
+		/>
+	</PhysicsModel>
+	<GameData LoadType="CargoGold" PackSlotsNumber="1">
+		<CraneSocket Pos="(0; 1.472; 0)" />
+	</GameData>
+	<Landmark Mesh="landmarks/cargo_gold_us09_lmk" />
+</ModelBrand>

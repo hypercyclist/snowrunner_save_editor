@@ -1,0 +1,9 @@
+<CargoType>
+	<UiDesc
+		UiName="UI_CARGO_RUBBISH_NAME"
+		UiDesc="UI_CARGO_RUBBISH_DESC"
+		UiIcon20x20="cargoTypeRubbish20"
+		UiIcon40x40="cargoTypeRubbish40"
+		UiIcon100x100="cargoTypeRubbish"
+	/>
+</CargoType>

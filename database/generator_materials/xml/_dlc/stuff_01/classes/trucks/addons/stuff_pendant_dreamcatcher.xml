@@ -1,0 +1,77 @@
+<_templates Include="trucks">
+	<Body>
+		<FeatherSide Collisions="None" Mass="0.05">
+			<Constraint
+				AxisLocal="(1; 0; 0)"
+				Type="Hinge"
+				MinLimit="-5"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</FeatherSide>
+		<Feather Collisions="None" Mass="0.05">
+			<Constraint
+				AxisLocal="(0; 0; 1)"
+				Type="Hinge"
+				MinLimit="-15"
+				MaxLimit="15"
+			>
+				<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+			</Constraint>
+		</Feather>
+	</Body>
+</_templates>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_pendant_dreamcatcher">
+		<Body Collisions="None" Mass="0.5">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.3" ModelFrame="BoneRope_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-30"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.01" Spring="0.01" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="0.1" ModelFrame="BonePendant_cdt">
+					<Constraint
+						AxisLocal="(0; 0; 1)"
+						Type="Hinge"
+						MinLimit="-5"
+						MaxLimit="5"
+					>
+						<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+					<Body _template="Feather" ModelFrame="BoneRopeFeather_cdt">
+						<Body _template="Feather" ModelFrame="BoneFeather_cdt" />
+					</Body>
+					<Body _template="Feather" ModelFrame="BoneFeatherL1_cdt" />
+					<Body _template="Feather" ModelFrame="BoneFeatherR1_cdt" />
+					<Body _template="FeatherSide" ModelFrame="BoneFeatherL2_cdt" />
+					<Body _template="FeatherSide" ModelFrame="BoneFeatherR2_cdt" />
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="mirror_mount"
+		Category="mirror_mount"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_PENDANT_DESC"
+			UiIcon30x30="interiorMirrorImg30"
+			UiIcon40x40="interiorMirrorImg40"
+			UiName="UI_STUFF_PENDANT_DREAMCATCHER_NAME"
+		/>
+		<!--<InstallSocket Type="StuffPendant" />-->
+		<InstallSocket Type="StuffAirfreshener" />
+	</GameData>
+</TruckAddon>

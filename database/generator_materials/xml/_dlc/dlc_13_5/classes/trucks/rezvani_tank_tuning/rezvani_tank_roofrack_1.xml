@@ -1,0 +1,69 @@
+<_templates Include="trucks"/>
+<TruckAddon>
+	<WheelRepairsHide>
+		<Mesh Frame="wheel" HideThreshold="0" />
+	</WheelRepairsHide>
+	<FuelHide>
+		<Mesh Frame="fuel" HideThreshold="0.0" />
+	</FuelHide>
+	<TruckData
+		FuelCapacity="80"
+		WheelRepairsCapacity="1"
+	>
+		<LimitedFluid Center="(-0.887; 2.224; -0.328)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-1.304; 2.224; -0.250)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel2_cdt" />
+		<LimitedFluid Center="(-0.887; 2.224; 0.265)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel1_cdt" />
+		<LimitedFluid Center="(-1.296; 2.224; 0.265)" SizeX="0.326" SizeY="0.160" SizeZ="0.416" Type="Box" ParentFrame="BoneFuel1_cdt" />
+	</TruckData>
+	<PhysicsModel Mesh="trucks/rezvani_tank_tuning/rezvani_tank_roofrack_1">
+		<Body ImpactType="Truck" Mass="80" ModelFrame="BoneCabin_cdt">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="60" ModelFrame="BoneFuel1_cdt">
+				<Constraint
+					AxisLocal="(0; 0; 1)"
+					Type="Prismatic"
+					MinLimit="-0.018"
+					MaxLimit="0.008"
+				>
+					<Motor Damping="1400" Spring="2200" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="40" ModelFrame="BoneFuel2_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0"
+				>
+					<Motor Damping="1600" Spring="2500" Type="Spring" />
+				</Constraint>
+			</Body>
+			<Body Collisions="None" Mass="50" ModelFrame="BoneWheel_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Prismatic"
+					MinLimit="-0.025"
+					MaxLimit="0"
+				>
+					<Motor Damping="2700" Spring="4000" Type="Spring" />
+				</Constraint>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="roof"
+		Category="frame_addons"
+		IsCustomizable="true"
+		Price="1800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_TUNING_ROOFRACK_SMALL_DESC"
+			UiIcon30x30=""
+			UiIcon40x40=""
+			UiName="UI_TUNING_ROOFRACK_SMALL_NAME"
+		/>
+		<InstallSocket Type="RezvaniTankRoofrack" />
+	</GameData>
+</TruckAddon>

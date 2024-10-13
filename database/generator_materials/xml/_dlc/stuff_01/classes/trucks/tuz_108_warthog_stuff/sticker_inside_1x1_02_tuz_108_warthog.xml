@@ -1,0 +1,8 @@
+<_parent File="sticker_inside_1x1_01_chevrolet_ck1500"/>
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tuz_108_warthog_stuff/sticker_inside_1x1_02_tuz_108_warthog" />
+	<GameData CameraPreset="sticker_1">
+		<UiDesc	UiName="UI_STUFF_STICKER_INSIDE_1X1_NAME"/>
+		<InstallSocket Type="tuz108warthogSticker_1x1_02" />
+	</GameData>
+</TruckAddon>

@@ -1,0 +1,23 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+<StaticLights>
+            <StaticLight
+                Dir="(0; -1; 1)"	
+                Pos="(0.0; 5.955; 4,470)"
+                AttenEnd="10"
+                Color="g(255; 255; 255) x 3"
+                CreateSuperLight="true"
+                InnerCone="0"
+                OuterCone="50"
+                Shadows="true"
+            />
+        </StaticLights>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/lighting_on_the_counter_us11_lmk" />
+    </ModelBrand>

@@ -1,0 +1,7 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/step_310e_stuff/sticker_door_l_1x1_step_310e" />
+	<GameData>
+			<InstallSocket Type="step310ESticker_Door_L" />
+	</GameData>
+</TruckAddon>

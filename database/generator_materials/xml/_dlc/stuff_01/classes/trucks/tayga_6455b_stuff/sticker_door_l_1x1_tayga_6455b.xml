@@ -1,0 +1,14 @@
+<_parent File="sticker_door_l_1x1_ford_f750" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/tayga_6455b_stuff/sticker_door_l_1x1_tayga_6455b">
+		<Body Collisions="None" Mass="0.1">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="0.1" ModelFrame="BoneChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData>
+		<InstallSocket Type="Tayga6455bSticker_Door_L" />
+	</GameData>
+</TruckAddon>

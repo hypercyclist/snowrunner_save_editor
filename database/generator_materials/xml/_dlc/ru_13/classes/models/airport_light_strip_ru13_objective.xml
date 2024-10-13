@@ -1,0 +1,23 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" />
+	</PhysicsModel>
+	<Subset IsDefault="true" Name="state_start">
+		<Mesh Name="mesh_stage_00" />
+		<Mesh Name="postion_helper" />
+		<CdtMesh Name="cdt" />
+	</Subset>
+	<Subset Name="state_end">
+		<Mesh Name="mesh_stage_01" />
+		<Mesh Name="postion_helper" />
+		<CdtMesh Name="cdt" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="anim_track_1" />
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="animesh"/>
+	</AnimSubset>
+</ModelBrand>

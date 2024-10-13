@@ -1,0 +1,46 @@
+<_templates Include="environment" />
+<PlantBrand _template="SmallTree">
+	<PhysicsModel>
+		<Body _template="MediumTreeRoot" DebrisType="FoliageAutumn" ModelFrame="BoneRoot">
+			<Constraint _template="MediumTreeRoot" />
+			<Body _template="BranchWithLeaves" ModelFrame="BoneBranch6">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch3">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="BoneBranch8">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch1">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="BranchWithLeaves" ModelFrame="BoneBranch2">
+				<Constraint _template="BranchWithLeaves" />
+			</Body>
+			<Body _template="TrunkHead" ModelFrame="BoneTrunk">
+				<Constraint _template="TrunkHead" />
+			</Body>
+			<Body _template="SecondTrunk" ModelFrame="BoneTrunk2">
+				<Constraint _template="SecondTrunk" />
+				<Body _template="TrunkHead" ModelFrame="BoneHead">
+					<Constraint _template="TrunkHead" />
+				</Body>
+				<Body _template="BranchWithLeaves" DebrisType="FoliageAutumn" ModelFrame="BoneBranch5">
+					<Constraint _template="BranchWithLeaves" />
+				</Body>
+				<Body _template="BranchWithLeaves" ModelFrame="BoneBranch7">
+					<Constraint _template="BranchWithLeaves" />
+				</Body>
+				<Body _template="BranchWithLeaves" ModelFrame="BoneBranch4">
+					<Constraint _template="BranchWithLeaves" />
+				</Body>
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<Occlusion Intensity="0.32" Size="(10.0; 10.0)" />
+	<Landmark Mesh="landmarks/birch_01_driedup_lmk" />
+	<GameData>
+		<WinchSocket Pos="(0.023; 0.394; -0.004)" ParentFrame="BoneRoot" />
+	</GameData>
+</PlantBrand>

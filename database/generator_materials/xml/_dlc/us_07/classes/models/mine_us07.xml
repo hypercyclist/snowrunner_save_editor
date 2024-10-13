@@ -1,0 +1,17 @@
+<ModelBrand
+	AcceptZoneBorderDecals="true"
+	Instanced="true"
+	InstancedAsModel="true"
+	NightLightingShadowsAllowCap="true"
+>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Occlusion
+		Size="(37.0; 12.0)" 
+		Texture="occlusion_rus_mine_lift_01.tga"
+	/>
+	<Landmark Mesh="landmarks/rus_mine_lift_01_lmk"/>
+</ModelBrand>

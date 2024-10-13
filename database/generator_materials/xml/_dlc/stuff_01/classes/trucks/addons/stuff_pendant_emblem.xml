@@ -1,0 +1,46 @@
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_pendant_emblem">
+		<Body Collisions="None" Mass="0.5">
+			<Constraint Type="Rigid" />
+			<Body Collisions="None" Mass="1" ModelFrame="BoneRope_cdt">
+				<Constraint
+					AxisLocal="(1; 0; 0)"
+					Type="Hinge"
+					MinLimit="-30"
+					MaxLimit="30"
+				>
+					<Motor Damping="0.01" Spring="0.1" Type="Spring" />
+				</Constraint>
+				<Body Collisions="None" Mass="0.5" ModelFrame="BonePendant_cdt">
+					<Constraint
+						AxisLocal="(1; 0; 0)"
+						Type="Hinge"
+						MinLimit="-30"
+						MaxLimit="30"
+					>
+						<Motor Damping="0.001" Spring="0.001" Type="Spring" />
+					</Constraint>
+				</Body>
+			</Body>
+			<Body Collisions="None" Mass="0.5" ModelFrame="BoneExtraChassis_cdt">
+				<Constraint ExplicitParentFrame="0" Type="Fixed" />
+			</Body>
+		</Body>
+	</PhysicsModel>
+	<GameData
+		CameraPreset="mirror_mount"
+		Category="mirror_mount"
+		Price="800"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc
+			UiDesc="UI_STUFF_PENDANT_DESC"
+			UiIcon30x30="interiorMirrorImg30"
+			UiIcon40x40="interiorMirrorImg40"
+			UiName="UI_STUFF_PENDANT_EMBLEM_NAME"
+		/>
+		<!--<InstallSocket Type="StuffPendant" />-->
+		<InstallSocket Type="StuffAirfreshener" />
+	</GameData>
+</TruckAddon>

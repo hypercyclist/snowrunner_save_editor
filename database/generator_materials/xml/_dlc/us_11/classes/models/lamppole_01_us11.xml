@@ -1,0 +1,27 @@
+<ModelBrand
+	Instanced="true"
+	InstancedAsModel="true"
+	DynamicModel="false"
+	CastDayLightmapShadow="false"
+	CastNightLightmapShadow="true"
+>
+	<StaticLights>
+		<StaticLight
+			AttenEnd="25"
+			Color="g(205; 241; 255) x 4.0"
+			CreateSuperLight="true"
+			Dir="(0; -1; 0.8)"
+			InnerCone="0"
+			OuterCone="75"
+			Pos="(0; 9.2; 4.0)"
+			Shadows="true"
+		/>
+
+	</StaticLights>
+	<PhysicsModel>
+		<Body
+			Collisions="Dynamic"
+		/>
+	</PhysicsModel>
+	<Landmark Mesh="landmarks/lamppole_01_us11_lmk" />
+</ModelBrand>

@@ -1,0 +1,220 @@
+<ModelBrand
+	NightLightingShadowsAllowCap="true"
+	DynamicModel="true"
+	DayShadowOffsetMult="2.0"
+>
+	<PhysicsModel>
+		<Body Collisions="Dynamic" ModelFrame="stage_0">
+			<Body Collisions="Dynamic" ModelFrame="stage_1" />
+			<Body Collisions="Dynamic" ModelFrame="stage_2" />
+			<Body Collisions="Dynamic" ModelFrame="stage_3" />
+		</Body>
+	</PhysicsModel>
+	<Subset Name="build_stage_0" IsDefault="true">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+	</Subset>
+	<Subset Name="build_stage_1">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />		
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />
+		<Mesh Name="stage_2" />
+		<CdtMesh Name="stage_2" />
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_1_anim"/>
+	</Subset>
+	<Subset Name="build_complete">
+		<Mesh Name="stage_0" />
+		<CdtMesh Name="stage_0" />
+		<Mesh Name="stage_1" />
+		<CdtMesh Name="stage_1" />		
+		<Mesh Name="stage_2" />
+		<CdtMesh Name="stage_2" />
+		<Mesh Name="stage_3" />
+		<CdtMesh Name="stage_3" />			
+		<AnimSubset Name="build_animation_0" />
+		<AnimTrack Name="stage_2_anim"/>
+	</Subset>
+	<AnimSubset Name="build_animation_0">
+		<Mesh Name="stage_0" />
+		<Mesh Name="stage_1" />
+		<Mesh Name="animated_mesh_01" />
+		<Mesh Name="animated_mesh_02" />
+		<Mesh Name="animated_mesh_03" />
+		<Mesh Name="animated_mesh_04" />
+		<Mesh Name="animated_mesh_05" />
+		<Mesh Name="animated_mesh_06" />
+		<CdtMesh Name="stage_0" />
+		<CdtMesh Name="stage_1" />
+	</AnimSubset>
+	<TrackEvents TrackName="stage_1_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_construction/actor_construct_factory_2_stage_1" Range="200" Volume="1" />
+		</AnimEvent>
+		<AnimEvent Key="13">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(8.038; 7.296; -40.941)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(7.795; 6.61; -23.167)" />
+		</AnimEvent>
+		<AnimEvent Key="15">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-37.995; 8.587; -23.824)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-36.682; 7.594; -23.899)" />
+		</AnimEvent>
+		<AnimEvent Key="42">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-56.989; 2.266; -35.25)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-5.279; 2.266; -35.28)" />
+		</AnimEvent>
+		<AnimEvent Key="44">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(8.117; 8.545; -24.702)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-10.932; 7.462; -23.107)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-35.924; 7.522; -3.169)" />
+		</AnimEvent>
+		<AnimEvent Key="71">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-41.047; 19.356; 1.66)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-11.731; 7.511; -33.688)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-37.117; 11.991; -4.112)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-35.912; 10.668; -2.504)" />
+		</AnimEvent>
+		<AnimEvent Key="86">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-14.838; 6.453; -35.229)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-10.781; 6.721; -25)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-1.185; 6.722; -24.224)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(5.187; 6.722; -24.071)" />
+		</AnimEvent>
+		<AnimEvent Key="100">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-18.772; 2.266; -65.123)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(5.255; 16.712; -46.179)" />
+		</AnimEvent>
+		<AnimEvent Key="115">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(7.718; 2.266; -65.541)" />
+		</AnimEvent>
+		<AnimEvent Key="118">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-40.547; 19.478; -4.121)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-42.415; 19.478; 0.141)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.903; 19.433; 0.576)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-48.193; 19.478; -4.115)" />
+		</AnimEvent>
+		<AnimEvent Key="124">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-38.938; 6.453; -35.042)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-31.816; 6.453; -35.266)" />
+		</AnimEvent>
+		<AnimEvent Key="129">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-52.666; 8.457; -35.58)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-52.33; 7.594; -34.492)" />
+		</AnimEvent>
+		<AnimEvent Key="176">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.841; 19.867; -15.682)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-42.172; 19.703; -22.304)" />
+		</AnimEvent>
+		<AnimEvent Key="182">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-56.982; 2.266; -65.388)" />
+		</AnimEvent>
+		<AnimEvent Key="216">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-42.112; 23.926; -22.274)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.886; 23.859; -15.856)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.754; 24.042; -6.097)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-42.193; 23.897; 0.37)" />
+		</AnimEvent>
+	</TrackEvents>
+	<TrackEvents TrackName="stage_2_anim">
+		<AnimEvent Key="0">
+			<Sound Name="actors/actor_construction/actor_construct_factory_2_stage_2" Range="200" Volume="1" />
+		</AnimEvent>
+		<AnimEvent Key="15">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(1.124; 15.289; -40.833)" />
+		</AnimEvent>
+		<AnimEvent Key="63">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-53.014; 15.267; -41.256)" />
+		</AnimEvent>
+		<AnimEvent Key="71">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.672; 15.581; -40.103)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(0.017; 15.6; -39.596)" />
+		</AnimEvent>
+		<AnimEvent Key="79">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.813; 6.781; -13.381)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.329; 7.054; -24.811)" />
+		</AnimEvent>
+		<AnimEvent Key="105">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.812; 19.551; -24.702)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-41.113; 19.531; -14.448)" />
+		</AnimEvent>
+		<AnimEvent Key="113">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.07; 10.408; -38.688)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-18.146; 10.436; -60.905)" />
+		</AnimEvent>
+		<AnimEvent Key="116">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.125; 13.15; -37.916)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.135; 11.52; -38.369)" />
+		</AnimEvent>
+		<AnimEvent Key="132">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-40.022; 16.758; 1.72)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.99; 16.069; 2.283)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.625; 25.217; -27.123)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.104; 25.217; -24.694)" />
+		</AnimEvent>
+		<AnimEvent Key="150">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.476; 16.137; -47.159)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-47.314; 16.114; -46.88)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.813; 6.781; 2.743)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.170; 6.877; -8.619)" />
+		</AnimEvent>
+		<AnimEvent Key="161">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-40.065; 17.42; -2.965)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-48.713; 17.456; -3.006)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-44.57; 17.445; 1.578)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-44.935; 15.955; -7.419)" />
+		</AnimEvent>
+		<AnimEvent Key="174">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.749; 19.543; 2.653)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.324; 19.736; -8.619)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.548; 25.217; -8.684)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-38.975; 25.217; -10.888)" />
+		</AnimEvent>
+		<AnimEvent Key="176">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-53.403; 18.557; -44.361)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-34.866; 18.643; -58.704)" />
+		</AnimEvent>
+		<AnimEvent Key="179">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-33.301; 17.176; -60.679)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-55.088; 17.176; -42.471)" />
+		</AnimEvent>
+		<AnimEvent Key="198">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-46.317; 18.638; -51.244)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.593; 18.551; -53.954)" />
+		</AnimEvent>
+		<AnimEvent Key="208">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-18.051; 17.181; -60.964)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-0.139; 17.173; -38.772)" />
+		</AnimEvent>
+		<AnimEvent Key="219">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-47.564; 17.176; -48.464)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-40.95; 17.176; -54.824)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-49.622; 24.012; -8.505)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.222; 24.068; -11.042)" />
+		</AnimEvent>
+		<AnimEvent Key="224">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(1.993; 17.224; -40.876)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-18.023; 17.215; -60.906)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-15.361; 18.557; -53.933)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-5.786; 18.557; -48.647)" />
+		</AnimEvent>
+		<AnimEvent Key="232">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-45.935; 25.354; -1.221)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-45.96; 25.489; -4.607)" />
+		</AnimEvent>
+		<AnimEvent Key="237">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-52.519; 19.802; -18.702)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-52.805; 19.989; -2.675)" />
+		</AnimEvent>
+		<AnimEvent Key="264">
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-36.908; 18.602; -60.78)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-51.233; 18.557; -42.238)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-48.601; 18.574; -48.983)" />
+			<SFX Name="bridge_sparks_01" Dir="(0; 1; 0)" Pos="(-39.49; 18.574; -54.01)" />
+			<SFX Name="us_factory_full_part2" Dir="(0; 1; 0)" Pos="(-24.312; 0.322; -36.088)" />
+		</AnimEvent>
+	</TrackEvents>
+	<Landmark Mesh="landmarks/us_3part_factory_2_part_objective_lmk" />
+</ModelBrand>

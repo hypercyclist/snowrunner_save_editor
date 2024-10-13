@@ -11,7 +11,7 @@
 		Category="fender_front"
 		Price="1200"
 		UnlockByExploration="false"
-		UnlockByRank="1"
+		UnlockByRank="15"
 	>
 		<UiDesc
 			UiDesc="UI_TUNING_SUNVISOR_NAVISTAR_DOWNWARD_DESC"

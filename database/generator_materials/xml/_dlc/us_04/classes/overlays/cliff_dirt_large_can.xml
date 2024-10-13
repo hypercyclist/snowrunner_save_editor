@@ -1,0 +1,6 @@
+<OverlayBrand GenerateDust="true">
+	<Prebuild
+		OverlayType="GeometricConform"
+	/>
+</OverlayBrand>
+

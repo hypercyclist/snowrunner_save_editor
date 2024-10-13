@@ -1,0 +1,11 @@
+<_parent File="stuff_airfreshener_leaf_fresh" />
+<TruckAddon>
+	<PhysicsModel Mesh="trucks/addons/stuff_airfreshener_leaf_organic" />
+	<GameData
+		Price="600"
+		UnlockByExploration="false"
+		UnlockByRank="1"
+	>
+		<UiDesc UiName="UI_STUFF_AIRFRESHENER_LEAF_ORGANIC_NAME" />
+	</GameData>
+</TruckAddon>
