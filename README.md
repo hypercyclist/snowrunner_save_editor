@@ -34,5 +34,4 @@ Demo screenshot:
 
 Release builds:
 
-[Download release]
-(https://github.com/hypercyclist/snowrunner_save_editor/releases)
+[Download release](https://github.com/hypercyclist/snowrunner_save_editor/releases)
