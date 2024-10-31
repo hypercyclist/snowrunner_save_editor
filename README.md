@@ -34,6 +34,5 @@ Demo screenshot:
 
 Release builds:
 
-[snowrunner_save_editor_release_v1.02 (MinGW 64-bit Windows)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.02)
-
-[snowrunner_save_editor_release_v1.02 (gcc 64-bit Linux)](https://github.com/hypercyclist/snowrunner_save_editor/releases/tag/Release-1.02_Linux)
+[Download release]
+(https://github.com/hypercyclist/snowrunner_save_editor/releases)
