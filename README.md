@@ -19,6 +19,13 @@ App automatically translated in 13 languages with game files. There may be seman
 The app developed with C++, Qt, RapidJSON, RapidXML and ton of crutches.
 It tested by me under Linux and Windows platforms with PC game version save files.
 
+# IF APP BREAKS WITH ERROR, OR "none" WROTE EVERYWHERE, than try this:
+The solution is to place the program with the rest of the files in the root of the disk, so that the path is something like this:
+С:\snowrunner_save_editor\snowrunner_save_editor.exe
+D:\snowrunner_save_editor\snowrunner_save_editor.exe
+This should help.
+Why does this happen - too long paths in the program folder structure. This is somehow related to the fact that the program is trying to read a file, and the path to it is longer than 256 characters and Windows cannot read it.
+
 Always backup your save directory before editing save file. For example if the structure of save file will be changed this app can broke it. If one day your save will be broken with this app it's not my problem. Use on your own risks!
 
 There are issues. For now tasks marked as completed isn't counted in statistics. Trucks upgrades too. I will fix it soon.
