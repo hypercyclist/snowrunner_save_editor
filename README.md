@@ -1,5 +1,5 @@
 # SnowRunner - Save Editor.
-# ![#f03c15]THE EDITOR NO LONGER WORKS. According to one user, IT CRASHES SAVES. So, don't use it.`#f03c15`
+# THE EDITOR NO LONGER WORKS. According to one user, IT CRASHES SAVES. So, don't use it.
 
 It is GUI desktop application for edit SnowRunner save file (PC only).
 For now it supports only editing CompleteSave.cfg.
